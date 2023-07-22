@@ -1757,5 +1757,9 @@ form.oi-toggle {
 }
 }
 
+.content-wrapper hr {
+  display: none;
+}
+
 
 

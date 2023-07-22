@@ -4,6 +4,7 @@ import styles from './styles.css';
 import * as fflate from 'fflate';
 
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import { interpolate } from '@docusaurus/Interpolate';
 
 
 function strToBin(s) {
@@ -71,8 +72,18 @@ export default function Notebook({children, code, name, width, height}) {
             if (data.length > 2) {
                 console.warn('symbols restore');
                 console.log(data);
-                for (const obj of data[2]) {
-                    console.log(obj);
+                for (const key of Object.keys(data[2])) {
+                    const value = data[2][key];
+                    console.warn('restoring... '+key);
+                    if (typeof value === 'string') {
+                        if (value.charAt(0) != "'") {
+                            console.error(key + ' with ' + value + ' is not valid!');
+                            continue;
+                        }
+                    }
+
+                    await interpretate(["FrontEndRestoreSymbol", `'${key}'`, value], {});
+                    console.warn('ok!');
                     //FrontEndRestoreSymbol
                 }
             }
