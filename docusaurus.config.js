@@ -121,23 +121,31 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          /*{
-            title: 'Community',
+          {
+            title: 'Credits',
             items: [
               {
-                label: 'Stack Overflow',
+                label: 'Freeware Wolfram Engine',
                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Wolfram Web Server',
+                href: 'https://github.com/KirillBelovTest/WolframWebServer',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Code Mirror 6',
+                href: 'https://codemirror.net/',
               },
+              {
+                label: 'D3.js',
+                href: 'https://d3js.org/',
+              },
+              {
+                label: 'THREE.js',
+                href: 'https://threejs.org/',
+              },              
             ],
-          },*/
+          },
           {
             title: 'More',
             items: [
