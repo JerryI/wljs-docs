@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-07-22-pratical-integration/index.md",
+                "file": "2023-07-20-rtx/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-07-22-pratical-integration/index.md",
+                "file": "2023-07-20-rtx/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-07-22-pratical-integration/index.md",
+                "file": "2023-07-20-rtx/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-07-22-pratical-integration/index.md"
+                "file": "2023-07-20-rtx/index.md"
               }
             }
           }
@@ -149,10 +149,13 @@
   },
   "active": "664ad1d00a81af99",
   "lastOpenFiles": [
+    "2023-07-20-rtx/screenshot(13).png",
+    "2023-07-20-rtx/screenshot(12).png",
+    "2023-07-20-rtx/screenshot(8) 1.png",
+    "2023-07-22-pratical-integration/index.md",
     "2023-07-22-pratical-integration/ezgif.com-video-to-gif-26.gif",
     "2023-07-22-pratical-integration/Archive.zip",
     "2023-07-15-hydrator.md",
-    "2023-07-22-pratical-integration/index.md",
     "2023-07-22-pratical-integration",
     "2023-07-21-polygon/index.md",
     "2023-07-21-polygon/Cinematographer.wl",
@@ -176,9 +179,6 @@
     "2023-07-13-balls/index.md",
     "2023-05-11-middleware/index.md",
     "2023-05-11-middleware/Baster.wl",
-    "2023-05-11-middleware/ezgif.com-video-to-gif-25.gif",
-    "2023-05-11-middleware/ezgif.com-video-to-gif-24.gif",
-    "2023-05-11-middleware/ezgif.com-video-to-gif-23.gif",
     "2023-04-20-placed/VoxelAutomata.wl"
   ]
 }

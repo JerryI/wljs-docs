@@ -57,6 +57,8 @@ const config = {
         remarkPlugins: [math],
         rehypePlugins: [katex],
 
+        showLastUpdateTime: true,
+
         },
 
         blog: {
@@ -111,11 +113,6 @@ const config = {
             label: 'WSX',            
           },*/              
           {to: '/blog', label: 'Blog', position: 'left'},
-          /*{
-            href: 'https://github.com/JerryI/wolfram-js-frontend',
-            label: 'GitHub',
-            position: 'right',
-          },*/
         ],
       },
       footer: {

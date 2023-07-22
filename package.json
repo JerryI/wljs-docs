@@ -17,6 +17,7 @@
     "@codemirror/language": "^6.7.0",
     "@codemirror/legacy-modes": "^6.3.2",
     "@docusaurus/core": "2.4.1",
+    "@docusaurus/plugin-content-docs": "^2.4.1",
     "@docusaurus/preset-classic": "2.4.1",
     "@docusaurus/theme-mermaid": "^2.4.1",
     "@giscus/react": "^2.3.0",
