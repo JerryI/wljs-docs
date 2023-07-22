@@ -11,28 +11,6 @@
             "id": "664ad1d00a81af99",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "2023-04-20-placed/Screenshot 2023-07-14 at 21.34.42.png"
-              }
-            }
-          },
-          {
-            "id": "2609f46ab1e711e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023-04-20-placed/index.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6726028d3221211e",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
                 "file": "2023-07-15-hydrator.md",
@@ -41,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -170,32 +147,36 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6726028d3221211e",
+  "active": "664ad1d00a81af99",
   "lastOpenFiles": [
-    "2023-07-13-balls/index.md",
+    "2023-07-21-polygon/index.md",
+    "2023-07-20-rtx/index.md",
     "2023-07-15-hydrator.md",
-    "2023-06-10-events.md",
+    "2023-04-20-placed/Screenshot 2023-07-14 at 21.34.42.png",
+    "2023-07-20-rtx/IMG_0556.png",
     "2023-04-20-placed/index.md",
+    "2023-07-20-rtx/IMG_0555.png",
+    "2023-07-20-rtx/IMG_0563 2.png",
+    "2023-07-20-rtx/Screenshot from 2023-07-20 20-04-08.png",
+    "2023-07-21-polygon/Cinematographer.wl",
+    "2023-07-14-curves/index.md",
+    "2023-07-21-polygon",
+    "2023-06-10-events.md",
+    "2023-07-20-rtx/ezgif.com-video-to-gif-18.gif",
+    "2023-07-20-rtx/CurvesFit.wl",
+    "2023-07-20-rtx",
+    "2023-07-14-curves copy/ezgif.com-video-to-gif-18.gif",
+    "2023-07-14-curves copy/index.md",
+    "2023-07-14-curves copy/CurvesFit.wl",
+    "2023-07-14-curves copy",
+    "2023-07-13-balls/index.md",
     "2023-05-11-middleware/index.md",
     "2023-05-11-middleware/Baster.wl",
     "2023-05-11-middleware/ezgif.com-video-to-gif-25.gif",
-    "2023-04-20-placed/Screenshot 2023-07-14 at 21.34.42.png",
     "2023-05-11-middleware/ezgif.com-video-to-gif-24.gif",
     "2023-05-11-middleware/ezgif.com-video-to-gif-23.gif",
-    "2023-05-11-middleware/ezgif.com-video-to-gif-22.gif",
-    "2023-05-11-middleware/ezgif.com-video-to-gif-20.gif",
-    "2023-05-11-middleware/ezgif.com-video-to-gif-19.gif",
-    "2023-07-14-curves/index.md",
     "2023-04-20-placed/VoxelAutomata.wl",
-    "2023-04-20-placed/screenshot(5).png",
-    "2023-04-20-placed/ezgif.com-optimize-10.gif",
-    "2023-04-20-placed/Screenshot 2023-07-14 at 15.37.00.png",
     "2023-04-20-placed",
-    "2023-05-11-middleware",
-    "2023-06-10-events",
-    "2023-07-14-curves/CurvesFit.wl",
-    "2023-07-14-curves",
-    "2023-07-13-balls/Balls.nb",
-    "2023-07-13-balls/Balls.wl"
+    "2023-05-11-middleware"
   ]
 }
