@@ -9,7 +9,7 @@ title: ''
 ***written in Javascript***
 
 </div>
-<h4 style={{'text-align': 'center'}}><a href="https://github.com/JerryI/wolfram-js-frontend">Github repository</a> of the project</h4>
+<h4 style={{'text-align': 'center'}}><a href="https://github.com/JerryI/wljs-interpreter">Github repository</a> of the project</h4>
 
 :::note
 This code is executing in your browser now

@@ -50,7 +50,12 @@ export function loadScript(url) {
 
   const event = new Event("load-wljs");
 
-export default function Component() {
+export default function Component(props) {
+
+    if (list.indexOf(props.children) < 0) {
+      list.push(props.children);
+    }
+
     useEffect(async () => {
         if (ExecutionEnvironment.canUseDOM) {
           

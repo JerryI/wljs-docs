@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/executables.md",
+                "file": "wlx/intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/executables.md",
+                "file": "wlx/intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/executables.md",
+                "file": "wlx/intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/executables.md"
+                "file": "wlx/intro.md"
               }
             }
           }
@@ -179,8 +179,10 @@
   },
   "active": "aba2053324417d39",
   "lastOpenFiles": [
-    "wsx/intro.md",
-    "wsx",
+    "interpreter/intro.md",
+    "wlx/intro.md",
+    "frontend/Advanced/executables.md",
+    "wlx",
     "frontend/Mathematica vs WLJS.md",
     "fullstack/From notebook to a web page.md",
     "fullstack/IO Blocks.md",
@@ -209,7 +211,6 @@
     "blog/2021-08-26-welcome",
     "blog/2021-08-01-mdx-blog-post.mdx",
     "blog",
-    "frontend/Advanced/executables.md",
     "frontend/Advanced/Event-generators.md",
     "frontend/Customizing IO/Boxes.md",
     "frontend/Export/React component.md",
