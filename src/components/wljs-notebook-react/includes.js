@@ -13,7 +13,8 @@ const list = [
     "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@master/dist/kernel.js",
     "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@latest/dist/kernel.js",
     "https://cdn.jsdelivr.net/gh/JerryI/wljs-plotly@latest/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-hydrator@latest/src/kernel.js"
+    "https://cdn.jsdelivr.net/gh/JerryI/wljs-hydrator@latest/src/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/Mathematica-ThreeJS-graphics-engine/master/dist/kernel.js"
 ];
 /*
 const list = [
@@ -53,7 +54,7 @@ export function loadScript(url) {
 export default function Component(props) {
 
     if (list.indexOf(props.children) < 0) {
-      list.push(props.children);
+      //list.push(props.children);
     }
 
     useEffect(async () => {
