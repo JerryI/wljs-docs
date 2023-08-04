@@ -1762,4 +1762,17 @@ form.oi-toggle {
 }
 
 
+.d3-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  opacity: 0;
+}
+
+.d3-controls:hover {
+  opacity: 0.5;
+}
+
 

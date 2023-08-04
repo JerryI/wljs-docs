@@ -5,3 +5,7 @@ See [DOCS](https://jerryi.github.io/wljs-docs/) on WLJS Project
 - and many more
 
 See also dev [Blog](https://jerryi.github.io/wljs-docs/blog)
+
+## License
+GNU GPLv3
+

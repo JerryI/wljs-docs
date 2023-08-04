@@ -14,10 +14,14 @@ It does not mean, that your `Set` statements will be reevaluated on change of a 
 
 <Notebook code="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" name="underpart-030f9">underpart-030f9</Notebook>
 
+:::info
+`Hold` just does a simple trick - provides to a frontend an unknown symbol, which forces frontend to fetch it from the Kernel. Once it fetched, a dynamic link was created. 
+:::
+
 The binding itself happens between `Rectangle` and `a`, but not `Graphics`, therefore only partial reevaluation occurs. To know more about details see [WLJS](../../interpreter/Advanced/symbols.md).
 
 :::note
-Automatic dynamic binding is possible for expressions, that executed inside the [container](../../interpreter/Advanced/containers.md) on WLJS interpreter (on browser), i.e. `Graphics3D`, `Graphics` primitives and others.
+Automatic dynamic binding is possible for expressions, that executed inside the __[container](../../interpreter/Advanced/containers.md)__ on WLJS interpreter (on browser), i.e. `Graphics3D`, `Graphics` primitives and others.
 :::
 
 :::info
@@ -25,7 +29,7 @@ An expression wrapped inside `Hold` will be executed on frontend's side, i.e. on
 :::
 
 :::danger
-Not all functions support dynamic binding or updates. For updates it should have `update` method defined, for dynamic binding - executed inside the container. See more about it there [architecture](../../interpreter/Advanced/architecture.md), [containers](../../interpreter/Advanced/containers.md)
+Not all functions support dynamic binding or updates. For updates it should have `update` method defined, for dynamic binding - executed inside the container. See more about it there __[architecture](../../interpreter/Advanced/architecture.md), [containers](../../interpreter/Advanced/containers.md)__
 :::
 
 ## Event-based approach
@@ -54,14 +58,15 @@ EventHandler[slider, Function[data,
 ]]
 ```
 
-### Performance tips
+## Performance tips
 You can explicitly choose what will be interpreted on the frontend or backend. We have a few possibilities for our function inside `Line` expression
 
-#### All load to backend
-For this one need to change two cells to
+### All load to backend
+For this one need to change code to
 
 ```mathematica
-Function[data, lines = With[{y = data}, Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]]] // slider
+Function[data, lines = With[{y = data}, Table[{Cos[x], Sin[y x]}, {x,0,2Pi, 0.01}]]] // slider
+
 EmittedEvent[slider, 1];
 ```
 
@@ -71,12 +76,16 @@ The last line manually fires an event to initialize symbol `lines`. Then for the
 Graphics[{Cyan, Line[lines // Hold]}]
 ```
 
+One can illustrate this binding as on a picture below
+
+![](../../imgs/dynEx1.excalidraw.svg)
+
 The benefits of this approach
 :::note
 Suitable for heavy calculations, high-load on network transport - large latency
 :::
 
-#### Gradually involving frontend
+### Gradually involving frontend
 One can move an entire `Table` to the browser's side. Let's discard our changes we made to
 
 ```mathematica
@@ -90,7 +99,11 @@ The obvious solution for output could be
 Graphics[{Cyan, Line[Table[{Cos[x], Sin[Hold[v] x]}, {x,0,2$Pi$, 0.01}]]}]
 ```
 
-That will be __a horrible solution__ 👎🏼  Imagine, each time `Table` iterator `x` goes through the range of values, it creates a sublist of `Sin` and `Cos` functions, that contains dynamic variable `v`.  Then you end up with many instances of `v`. 
+That will be __a horrible solution__ 👎🏼  
+
+![](../../imgs/dynEx2.excalidraw.svg)
+
+Imagine, each time `Table` iterator `x` goes through the range of values, it creates a sublist of `Sin` and `Cos` functions, that contains dynamic variable `v`.  Then you end up with many instances of `v`. 
 
 :::danger
 ```mathematica
@@ -110,7 +123,9 @@ Ok lets try to improve a bit
 Graphics[{Cyan, Line[Table[{Cos[x], Sin[v x]}, {x,0,2$Pi$, 0.01}] // Hold]}]
 ```
 
-This is also __horrible__ 👎🏼  Symbol `Table` does the same thing being executed on browser's side as well.
+This is also __horrible__ 👎🏼  Symbol `Table` does the same thing being executed on __browser's side as well__
+
+![](../../imgs/dynEx3.excalidraw.svg)
 
 ##### Optimized version
 One can minimize the number of instances to just 1 using `With`, as it was shown in the example above
@@ -120,6 +135,8 @@ Graphics[{Cyan, Line[With[{y = v}, Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]]
 ```
 
 This __will save up a lot of resources__ 👍🏼 
+
+![](../../imgs/dynEx4.excalidraw.svg)
 
 :::tip
 ```mathematica
@@ -135,10 +152,21 @@ Line[symbol//Hold], ... Line[symbol//Hold]
 This is ok, each `Line` is bounded to its own `symbol` instance. Therefore on update of `symbol`, each `Line` expression will be reevaluated once.
 :::
 
-#### Standalone frontend version 🎡
+### Possible pitfall with `With`
+There might be temptation to wrap `Line` expression inside `With` as well, like that
+
+```mathematica
+Graphics[{Cyan, With[{y = v}, Line[Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]]] // Hold}]
+```
+
+__This will not work at all__ 👎🏼 because the binding will occur between `Graphics` and `v` objects
+
+![](../../imgs/dynEx5.excalidraw.svg)
+
+### Standalone frontend version 🎡
 Since frontend has [WLJS](../../interpreter/intro.md) interpreter, sometimes you can omit the communication with Wolfram Kernel. Therefore it allows to build interactive embeddable notebooks, that can work without `wolframscript` installed. See more [Export notebook](Export%20notebook.md).
 
-Firstly, underneath `InputRange` there is frontend function `RangeView`, which provides low-level access to a slider
+Firstly, underneath `InputRange` there is a frontend function `RangeView`, which provides a low-level access to a slider
 
 ```mathematica
 RangeView[{0,6,0.5, V}]//Hold//CreateFrontEndObject
@@ -157,7 +185,7 @@ You can download both notebook via following links below
 - __[SliderExampleStandalone](files/SliderExampleStandalone.wl)__
 - __[SliderExample](files/SliderExample.wl)__
 
-### Grouping UI elements
+## Grouping UI elements
 Writing event handler function for each input element is a bit cumbersome, therefore you can use `InputGroup` wrapper, that preserves the original data structure you had
 
 <Notebook code="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" name="meanness-637a5">meanness-637a5</Notebook>

@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aba2053324417d39",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wlx/intro.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ab55bbd81d796e0d",
             "type": "leaf",
             "state": {
@@ -45,11 +33,16 @@
             "id": "260bd2dc9bf63fb9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "interpreter/Advanced/symbols.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 339.5
+    "width": 228.5
   },
   "right": {
     "id": "a752dd5ced191c4a",
@@ -115,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wlx/intro.md",
+                "file": "interpreter/Advanced/symbols.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wlx/intro.md",
+                "file": "interpreter/Advanced/symbols.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wlx/intro.md"
+                "file": "interpreter/Advanced/symbols.md"
               }
             }
           }
@@ -177,8 +170,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "aba2053324417d39",
+  "active": "260bd2dc9bf63fb9",
   "lastOpenFiles": [
+    "interpreter/Advanced/meta-markers.md",
+    "frontend/Tutorial/Dynamics.md",
+    "imgs/dynEx5.excalidraw.md",
+    "imgs/dynEx5.excalidraw.svg",
+    "imgs/ezgif.com-crop.gif",
+    "imgs/dynEx3.excalidraw.md",
+    "imgs/dynEx3.excalidraw.svg",
+    "imgs/dynEx4.excalidraw.md",
+    "imgs/dynEx2.excalidraw.md",
+    "imgs/dynEx4.excalidraw.svg",
+    "imgs/dynEx1.excalidraw.md",
+    "imgs/dynEx2.excalidraw.svg",
+    "imgs/dynEx1.excalidraw.svg",
+    "interpreter/Advanced/containers.md",
+    "fullstack/Presentations temlate.md",
+    "imgs/Drawing 2023-08-03 09.29.39.excalidraw.md",
     "interpreter/intro.md",
     "wlx/intro.md",
     "frontend/Advanced/executables.md",
@@ -190,7 +199,6 @@
     "frontend/Tutorial/GUI Overview.md",
     "frontend/Customizing IO/HTML Template.md",
     "frontend/Customizing IO/Canvas.md",
-    "frontend/Tutorial/Dynamics.md",
     "frontend/Tutorial/Export notebook.md",
     "frontend/Tutorial/Input elements.md",
     "frontend/Tutorial/Plotting functions.md",
@@ -201,29 +209,14 @@
     "imgs/Screenshot 2023-07-07 at 22.25.05.png",
     "imgs/Screenshot 2023-07-06 at 19.16.12.png",
     "frontend/Decorations.md",
-    "imgs/Screenshot 2023-07-06 at 18.00.15.png",
     "frontend/instruction.md",
-    "graphics/graphics.md",
-    "frontend/Advanced/front-end-functions.md",
-    "blog/2021-08-26-welcome/index.md",
-    "blog/2021-08-26-welcome/docusaurus-plushie-banner.jpeg",
     "blog/authors.yml",
     "blog/2021-08-26-welcome",
     "blog/2021-08-01-mdx-blog-post.mdx",
     "blog",
-    "frontend/Advanced/Event-generators.md",
-    "frontend/Customizing IO/Boxes.md",
-    "frontend/Export/React component.md",
-    "frontend/Tutorial/Plugins.md",
-    "frontend/Tutorial/Cells structure.md",
-    "frontend/Advanced/frontend-objects.md",
-    "imgs/container-nested-2.excalidraw.svg",
-    "imgs/container-nested-1.excalidraw.svg",
     "frontend/Advanced/files/FunnyView.wl",
     "frontend/Advanced/files/Column.wl",
     "fullstack",
-    "frontend/Advanced/files",
-    "imgs/tutor-1-img-emptycell.png",
-    "imgs/tutor-1-img-contourplot.png"
+    "frontend/Advanced/files"
   ]
 }
