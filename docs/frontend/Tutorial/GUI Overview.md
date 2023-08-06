@@ -21,9 +21,12 @@ Once you open a file it is stored in RAM, even if you close a notebook. Save ope
 The approach on how to organize your directories was inspired by Obsidian, where your notes are located in so-called *vaults*. Once you open a folder it becomes a vault and Wolfram Kernel sets the directory to it. So you can work with files using relative path.
 
 :::note
-You can open the same notebook in multiple tabs, the dynamics and update operations will be synchronized
+You can open the same notebook in multiple tabs, but the Kernel's message transport is assigned to only one active tab, but it automatically switches between tabs.
 :::
 
+:::caution
+Unicode characters in paths are not supported for now. 
+:::
 ## UI
 In general the whole UI is a rip-off from Notion-like web-based editors bringing clarity and minimalistic controls over your document. 
 Let's have a look at the basic UI elements

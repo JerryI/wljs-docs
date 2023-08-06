@@ -14,7 +14,7 @@ const list = [
     "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@latest/dist/kernel.js",
     "https://cdn.jsdelivr.net/gh/JerryI/wljs-plotly@latest/dist/kernel.js",
     "https://cdn.jsdelivr.net/gh/JerryI/wljs-hydrator@latest/src/kernel.js",
-    "https://cdn.statically.io/gh/JerryI/Mathematica-ThreeJS-graphics-engine/master/dist/kernel.js"
+    "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@master/dist/kernel.js"
 ];
 /*
 const list = [

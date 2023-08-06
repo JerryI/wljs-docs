@@ -28,21 +28,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "260bd2dc9bf63fb9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "interpreter/Advanced/symbols.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -108,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "interpreter/Advanced/symbols.md",
+                "file": "frontend/Cell types/Javascript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "interpreter/Advanced/symbols.md",
+                "file": "frontend/Cell types/Javascript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "interpreter/Advanced/symbols.md"
+                "file": "frontend/Cell types/Javascript.md"
               }
             }
           }
@@ -170,10 +158,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "260bd2dc9bf63fb9",
+  "active": "1e0537415f313b66",
   "lastOpenFiles": [
-    "interpreter/Advanced/meta-markers.md",
+    "frontend/Tutorial/Plotting functions.md",
     "frontend/Tutorial/Dynamics.md",
+    "frontend/Tutorial/Plugins.md",
+    "frontend/Tutorial/GUI Overview.md",
+    "frontend/Customizing IO/Boxes.md",
+    "interpreter/Advanced/symbols.md",
+    "interpreter/Advanced/meta-markers.md",
     "imgs/dynEx5.excalidraw.md",
     "imgs/dynEx5.excalidraw.svg",
     "imgs/ezgif.com-crop.gif",
@@ -196,20 +189,15 @@
     "fullstack/From notebook to a web page.md",
     "fullstack/IO Blocks.md",
     "fullstack/intro.md",
-    "frontend/Tutorial/GUI Overview.md",
     "frontend/Customizing IO/HTML Template.md",
     "frontend/Customizing IO/Canvas.md",
     "frontend/Tutorial/Export notebook.md",
     "frontend/Tutorial/Input elements.md",
-    "frontend/Tutorial/Plotting functions.md",
     "frontend/Examples",
-    "frontend/Expressions representation.md",
     "imgs/Screenshot 2023-07-12 at 23.48.08.png",
     "imgs/Screenshot 2023-07-09 at 11.02.53.png",
     "imgs/Screenshot 2023-07-07 at 22.25.05.png",
     "imgs/Screenshot 2023-07-06 at 19.16.12.png",
-    "frontend/Decorations.md",
-    "frontend/instruction.md",
     "blog/authors.yml",
     "blog/2021-08-26-welcome",
     "blog/2021-08-01-mdx-blog-post.mdx",
