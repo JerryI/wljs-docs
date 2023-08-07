@@ -62,6 +62,7 @@ const config = {
         },
 
         blog: {
+          blogSidebarCount: 'ALL',
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },

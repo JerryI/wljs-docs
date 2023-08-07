@@ -2,11 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jerryi.github.io/wljs-docs/blog</id>
     <title>WLJS Blog</title>
-    <updated>2023-07-25T00:00:00.000Z</updated>
+    <updated>2023-08-08T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jerryi.github.io/wljs-docs/blog"/>
     <subtitle>WLJS Blog</subtitle>
     <icon>https://jerryi.github.io/wljs-docs/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[A minor update of Graphics2D]]></title>
+        <id>https://jerryi.github.io/wljs-docs/blog/intro-controls-2d-graphics</id>
+        <link href="https://jerryi.github.io/wljs-docs/blog/intro-controls-2d-graphics"/>
+        <updated>2023-08-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Now regular Graphics expressions has panning/zooming features. Use Controls->True as an option]]></summary>
+        <content type="html"><![CDATA[<p><img loading="lazy" src="/wljs-docs/assets/images/ezgif.com-optimize-12-680c99813e7e3e71594e17f44237d97b.gif" width="600" height="416" class="img_ev3q"></p><p>Now regular <code>Graphics</code> expressions has panning/zooming features. Use <code>Controls-&gt;True</code> as an option </p><div class="language-mathematica codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#000000;--prism-background-color:#ffffff"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-mathematica codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#000000"><span class="token plain">Plot</span><span class="token punctuation" style="color:rgb(4, 81, 165)">[</span><span class="token plain">x</span><span class="token punctuation" style="color:rgb(4, 81, 165)">,</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(4, 81, 165)">{</span><span class="token plain">x</span><span class="token punctuation" style="color:rgb(4, 81, 165)">,</span><span class="token number" style="color:rgb(9, 134, 88)">0</span><span class="token punctuation" style="color:rgb(4, 81, 165)">,</span><span class="token number" style="color:rgb(9, 134, 88)">10</span><span class="token punctuation" style="color:rgb(4, 81, 165)">}</span><span class="token punctuation" style="color:rgb(4, 81, 165)">]</span><span class="token operator" style="color:rgb(0, 0, 0)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain">Insert</span><span class="token punctuation" style="color:rgb(4, 81, 165)">[</span><span class="token plain">%</span><span class="token punctuation" style="color:rgb(4, 81, 165)">,</span><span class="token plain"> Controls</span><span class="token operator" style="color:rgb(0, 0, 0)">-&gt;</span><span class="token boolean">True</span><span class="token punctuation" style="color:rgb(4, 81, 165)">,</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(4, 81, 165)">{</span><span class="token number" style="color:rgb(9, 134, 88)">2</span><span class="token punctuation" style="color:rgb(4, 81, 165)">,</span><span class="token operator" style="color:rgb(0, 0, 0)">-</span><span class="token number" style="color:rgb(9, 134, 88)">1</span><span class="token punctuation" style="color:rgb(4, 81, 165)">}</span><span class="token punctuation" style="color:rgb(4, 81, 165)">]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>Unfortunately, it is not possible to extend option values for the regular functions <code>Plot</code> and etc.</p>]]></content>
+        <author>
+            <name>Kirill Vasin</name>
+            <uri>https://github.com/JerryI</uri>
+        </author>
+        <category label="graphics" term="graphics"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[A major update of Graphics3D]]></title>
         <id>https://jerryi.github.io/wljs-docs/blog/intro-transform-3d</id>
