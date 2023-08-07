@@ -2,32 +2,33 @@ import React, { useEffect } from 'react';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 const list = [
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@latest/src/interpreter.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@latest/src/core.js",
-    "https://cdn.statically.io/gh/JerryI/wljs-cells/main/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@master/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@master/src/boxes.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-markdown-support@master/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@master/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-html-support@master/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@master/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@latest/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-plotly@latest/dist/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/wljs-hydrator@latest/src/kernel.js",
-    "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@master/dist/kernel.js"
+    "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/interpreter.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/core.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/metamarkers.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-cells/master/dist/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-editor/master/dist/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-editor/master/src/boxes.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-markdown-support/master/dist/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-js-support/master/dist/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-html-support/master/dist/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-inputs/master/dist/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-graphics-d3/master/dist/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-plotly/master/dist/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/wljs-hydrator/master/src/kernel.js",
+    "https://cdn.statically.io/gh/JerryI/Mathematica-ThreeJS-graphics-engine/master/dist/kernel.js"
 ];
 /*
 const list = [
   "/wljs-docs/js/interpreter.js",
   "/wljs-docs/js/core.js",
   "/wljs-docs/js/merged.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@master/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@master/src/boxes.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-markdown-support@master/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@master/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-html-support@master/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@master/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@master/dist/kernel.js"
+  "https://cdn.statically.io/gh/JerryI/wljs-editor/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-editor/master/src/boxes.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-markdown-support/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-js-support/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-html-support/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-inputs/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-graphics-d3/master/dist/kernel.js"
 ];
 */
 

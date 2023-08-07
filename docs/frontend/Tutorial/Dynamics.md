@@ -9,6 +9,16 @@ import Notebook from '@site/src/components/wljs-notebook-react';
 <Component></Component>
 
 
+## Architecture
+All dynamics in terms of what you expect from Mathematica's experience happens on the frontend's side, i.e. in your browser (running [WLJS Interpeter](../../interpreter/intro.md)). Have a look at the diagram
+
+![](../../imgs/architecturep.excalidraw.svg)
+
+Some expressions are meant for to be executed on frontend, i.e. not defined on the Kernel, then a user do not need to specify explicitly what and when should happen. In other cases, a user can use `Hold` attribute or `CreateFrontEndObject` to tell explicitly Wolfram Kernel pass an expression without evaluation to the frontend. Therefore one can play around with a way of splitting your code-base to archive the maximum flexibility and performance. 
+
+:::tip
+Always keep in mind, which part of code executes on Wolfram Kernel (server) and what is delegated to the frontend (browser). This is the only way to write predictable and good performing code 
+:::
 ## All symbols are dynamic
 It does not mean, that your `Set` statements will be reevaluated on change of a nested symbol, however, for most graphics primitives it works out of the box
 
@@ -164,7 +174,7 @@ __This will not work at all__ 👎🏼 because the binding will occur between `G
 ![](../../imgs/dynEx5.excalidraw.svg)
 
 ### Standalone frontend version 🎡
-Since frontend has [WLJS](../../interpreter/intro.md) interpreter, sometimes you can omit the communication with Wolfram Kernel. Therefore it allows to build interactive embeddable notebooks, that can work without `wolframscript` installed. See more [Export notebook](Export%20notebook.md).
+Since frontend has [WLJS](../../interpreter/intro.md) interpreter, sometimes you can omit the communication with Wolfram Kernel at all. Therefore it allows to build interactive embeddable notebooks, that can work without `wolframscript` installed. See more [Export notebook](Export%20notebook.md).
 
 Firstly, underneath `InputRange` there is a frontend function `RangeView`, which provides a low-level access to a slider
 
@@ -214,6 +224,11 @@ The following event are available
 - `drag` - provides a list of two coordinates
 - `zoom` - provides one relative scaling number
 - `click` - provides coordinates, where the cursor clicked
+- `mousemove` - provides coordinates of a mouse
+- `mouseover` - provides coordinates once, when a mouse appears at a div
+
+for 3D graphics the following events are provided
+- `transform` - sends an association with a new position of a dragged object
 
 :::note
 Event handlers wrapped around graphics primitives are parts of [wljs-graphics-d3](https://github.com/JerryI/wljs-graphics-d3) library.

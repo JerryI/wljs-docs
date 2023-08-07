@@ -59,14 +59,11 @@ On the left side the file explorer is located, by clicking on a magnification gl
 </div>
 
 
-### Project cell's output to the separate window
-:::caution
-In development
-:::
-Using the keyword
+#### Files upload
+By dragging any files to the area of a sidebar you can upload them to the notebook directory
 
-```mathematica
-// WindowProjector
-```
+<div style={{width: '100%',  margin: 'auto', left: 0, right: 0, display: 'block', background: 'white' }}>
 
-One can redirect the output to a new window maintaining the dynamics and user input intact. [Based on this](https://blog.bitsrc.io/4-ways-to-communicate-across-browser-tabs-in-realtime-e4f5f6cbedca) technology.
+![](../../imgs/ezgif.com-video-to-gif-28.gif)
+
+</div>

@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Cell types/Javascript.md",
+                "file": "frontend/Tutorial/Dynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Cell types/Javascript.md",
+                "file": "frontend/Tutorial/Dynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Cell types/Javascript.md",
+                "file": "frontend/Tutorial/Dynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Cell types/Javascript.md"
+                "file": "frontend/Tutorial/Dynamics.md"
               }
             }
           }
@@ -160,44 +160,44 @@
   },
   "active": "1e0537415f313b66",
   "lastOpenFiles": [
-    "frontend/Tutorial/Plotting functions.md",
+    "frontend/Tutorial/Cells structure.md",
     "frontend/Tutorial/Dynamics.md",
     "frontend/Tutorial/Plugins.md",
+    "frontend/Tutorial/Plotting functions.md",
+    "frontend/Tutorial/Input elements.md",
+    "frontend/Tutorial/Export notebook.md",
+    "frontend/Decorations.md",
+    "frontend/Expressions representation.md",
     "frontend/Tutorial/GUI Overview.md",
+    "imgs/ezgif.com-video-to-gif-28.gif",
+    "imgs/toggle.png",
+    "imgs/text.png",
+    "imgs/ref.gif",
+    "imgs/range.png",
+    "imgs/inouttext.png",
+    "imgs/groups2.png",
+    "imgs/groups1.png",
+    "imgs/file.png",
+    "imgs/feinput.gif",
+    "imgs/feinput.gif.md",
+    "imgs/architecturep.excalidraw.md",
+    "frontend/Cell types/Javascript.md",
+    "frontend/Cell types/Many more....md",
+    "frontend/Cell types/Markdown.md",
+    "frontend/Export/React component.md",
+    "frontend/Export/HTML file.md",
+    "frontend/Export/PDF.md",
+    "frontend/Development/Plugins/Basics.md",
     "frontend/Customizing IO/Boxes.md",
     "interpreter/Advanced/symbols.md",
     "interpreter/Advanced/meta-markers.md",
     "imgs/dynEx5.excalidraw.md",
-    "imgs/dynEx5.excalidraw.svg",
-    "imgs/ezgif.com-crop.gif",
     "imgs/dynEx3.excalidraw.md",
-    "imgs/dynEx3.excalidraw.svg",
     "imgs/dynEx4.excalidraw.md",
     "imgs/dynEx2.excalidraw.md",
-    "imgs/dynEx4.excalidraw.svg",
     "imgs/dynEx1.excalidraw.md",
-    "imgs/dynEx2.excalidraw.svg",
-    "imgs/dynEx1.excalidraw.svg",
-    "interpreter/Advanced/containers.md",
-    "fullstack/Presentations temlate.md",
-    "imgs/Drawing 2023-08-03 09.29.39.excalidraw.md",
-    "interpreter/intro.md",
-    "wlx/intro.md",
-    "frontend/Advanced/executables.md",
     "wlx",
-    "frontend/Mathematica vs WLJS.md",
-    "fullstack/From notebook to a web page.md",
-    "fullstack/IO Blocks.md",
-    "fullstack/intro.md",
-    "frontend/Customizing IO/HTML Template.md",
-    "frontend/Customizing IO/Canvas.md",
-    "frontend/Tutorial/Export notebook.md",
-    "frontend/Tutorial/Input elements.md",
     "frontend/Examples",
-    "imgs/Screenshot 2023-07-12 at 23.48.08.png",
-    "imgs/Screenshot 2023-07-09 at 11.02.53.png",
-    "imgs/Screenshot 2023-07-07 at 22.25.05.png",
-    "imgs/Screenshot 2023-07-06 at 19.16.12.png",
     "blog/authors.yml",
     "blog/2021-08-26-welcome",
     "blog/2021-08-01-mdx-blog-post.mdx",
