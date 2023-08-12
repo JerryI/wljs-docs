@@ -24,13 +24,16 @@ It is assumed you have read an installation guide [install](install.md)
 <details>  
 <summary>A shortcut</summary>  
 If you have git installed. Simply clone 
+
 ```bash
 git clone https://github.com/JerryI/wl-wlx
 cd wl-wlx
 wolframscript -f Examples/WLJSBasic.wls
 ```
+
 that will run the simplest example possible
 </details>
+
 ## Available JS libraries
 
 Then, in __the `<head>` of your HTML__ document you need to put links to the necessary javascript libraries you want to use

@@ -18,6 +18,7 @@ cd wl-wlx
 To get the most of your attention I (@JerryI - maintainer) would like to start with a short demo of this application
 
 ![](../../imgs/ezgif.com-video-to-gif-30.gif)
+
 *a time jitter is due to the recordings issues*
 
 To run this demo 

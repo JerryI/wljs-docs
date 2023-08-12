@@ -71,13 +71,17 @@ We would recommend a high-performance server built by [@KirillBelovTest](https:/
 
 <details>  
 <summary>A shortcut</summary>  
+
 If you have git installed. Simply clone 
+
 ```bash
 git clone https://github.com/JerryI/wl-wlx
 cd wl-wlx
 wolframscript -f Examples/Basic.wls
 ```
+
 that will run the simplest example possible
+
 </details>
 
 Here is a boilerplate code, that just works out from the box

@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wlx/interpeter.md",
+                "file": "wlx/examples/fileexplorer.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wlx/interpeter.md",
+                "file": "wlx/examples/fileexplorer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wlx/interpeter.md",
+                "file": "wlx/examples/fileexplorer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wlx/interpeter.md"
+                "file": "wlx/examples/fileexplorer.md"
               }
             }
           }
@@ -160,16 +160,17 @@
   },
   "active": "1e0537415f313b66",
   "lastOpenFiles": [
-    "wlx/dynamics.md",
-    "wlx/install.md",
-    "wlx/SPA.md",
-    "wlx/interpeter.md",
     "wlx/examples/app.md",
+    "wlx/dynamics.md",
+    "wlx/interpeter.md",
+    "wlx/components.md",
+    "wlx/scoping.md",
+    "wlx/install.md",
+    "wlx/basics.md",
+    "wlx/SPA.md",
     "imgs/ezgif.com-video-to-gif-30.gif",
     "wlx/examples/fileexplorer.md",
     "imgs/ezgif.com-video-to-gif-29.gif",
-    "wlx/scoping.md",
-    "wlx/components.md",
     "wlx/examples/_category_.json",
     "frontend/Tutorial/Input elements.md",
     "imgs/ezgif.com-crop-3.gif",
@@ -178,7 +179,6 @@
     "frontend/Tutorial/Plotting functions.md",
     "interpreter/Advanced/symbols.md",
     "imgs/Screenshot 2023-08-11 at 11.07.17.png",
-    "wlx/basics.md",
     "imgs/container-nested-2.excalidraw.md",
     "wlx/examples",
     "wlx/styles.css",

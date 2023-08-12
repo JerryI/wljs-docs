@@ -22,13 +22,16 @@ If you think it is not enough, then, to handle events that comes from WLJS we al
 <details>  
 <summary>A shortcut</summary>  
 If you have git installed. Simply clone 
+
 ```bash
 git clone https://github.com/JerryI/wl-wlx
 cd wl-wlx
 wolframscript -f Examples/WLJSBasicDyn.wls
 ```
+
 that will run the simplest example possible
 </details>
+
 ### TL;DR Boilerplate code
 This will establish an HTTP and WS listeners at the corresponding addresses mentioned in code and will configure all handlers
 
