@@ -176,6 +176,35 @@ PlottingDevice = ListLinePlot[Data, PlotRange->Full, ImageSize->700];
       </>
     ),
   },
+  {
+    title: 'Dynamic data-binding via websockets',
+    width: 'col col--6',
+    feature: (
+      <>
+      <CodeBlock language="jsx" showLineNumbers>
+{`text     = "nothing";
+View     = TextView[Offload[text]] // WLJS;
+Button   = ButtonView["Press me", "Event"->Secret] // WLJS; 
+
+EventHandler[Secret, Function[void, text = RandomWord[]]];
+
+<div>
+    <View/>
+    <Button/>
+</div>`}
+      </CodeBlock>  
+
+      <img width={"100%"} src={"img/ezgif.com-crop-3.gif"}/>      
+        
+      </>
+    ),
+    description: (
+      <>
+        For example, let us use a button to generate a random word for us
+      </>
+    ),
+  }, 
+
 ];
 
 function Feature({feature, title, description, width}) {
