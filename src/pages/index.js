@@ -12,9 +12,18 @@ import Notebook from '@site/src/components/wljs-notebook-react';
 
 import styles from './index.module.css';
 
+import { useEffect, useRef } from 'react';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   const [isHover, setIsHover] = useState(false);
+
+  useEffect(() => {
+    if (ExecutionEnvironment.canUseDOM) {
+      //document.documentElement.style.setProperty('--ifm-color-primary', '#BF616A');
+    }
+  }, []); 
 
   const handleMouseEnter = () => {
      setIsHover(true);

@@ -81,7 +81,7 @@ const config = {
       remarkPlugins: [math],
       rehypePlugins: [katex],
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo2.svg',
       navbar: {
         title: 'WLJS',
         logo: {
@@ -107,12 +107,7 @@ const config = {
             position: 'left',
             label: 'Frontend',            
           }, 
-          /*{
-            type: 'docSidebar',
-            sidebarId: 'wsxSidebar',
-            position: 'left',
-            label: 'WSX',            
-          },*/              
+          {to: '/wlx', label: 'WLX', position: 'left'},             
           {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },

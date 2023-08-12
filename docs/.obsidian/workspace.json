@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Tutorial/Dynamics.md",
+                "file": "wlx/interpeter.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 228.5
+    "width": 519.5110321044922
   },
   "right": {
     "id": "a752dd5ced191c4a",
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Tutorial/Dynamics.md",
+                "file": "wlx/interpeter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Tutorial/Dynamics.md",
+                "file": "wlx/interpeter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Tutorial/Dynamics.md"
+                "file": "wlx/interpeter.md"
               }
             }
           }
@@ -160,51 +160,51 @@
   },
   "active": "1e0537415f313b66",
   "lastOpenFiles": [
-    "frontend/Tutorial/Cells structure.md",
-    "frontend/Tutorial/Dynamics.md",
-    "frontend/Tutorial/Plugins.md",
-    "frontend/Tutorial/Plotting functions.md",
+    "wlx/dynamics.md",
+    "wlx/install.md",
+    "wlx/SPA.md",
+    "wlx/interpeter.md",
+    "wlx/examples/app.md",
+    "imgs/ezgif.com-video-to-gif-30.gif",
+    "wlx/examples/fileexplorer.md",
+    "imgs/ezgif.com-video-to-gif-29.gif",
+    "wlx/scoping.md",
+    "wlx/components.md",
+    "wlx/examples/_category_.json",
     "frontend/Tutorial/Input elements.md",
-    "frontend/Tutorial/Export notebook.md",
+    "imgs/ezgif.com-crop-3.gif",
+    "imgs/ezgif.com-crop-2.gif",
+    "frontend/Tutorial/Dynamics.md",
+    "frontend/Tutorial/Plotting functions.md",
+    "interpreter/Advanced/symbols.md",
+    "imgs/Screenshot 2023-08-11 at 11.07.17.png",
+    "wlx/basics.md",
+    "imgs/container-nested-2.excalidraw.md",
+    "wlx/examples",
+    "wlx/styles.css",
+    "frontend/Mathematica vs WLJS.md",
+    "imgs/Screenshot 2023-08-10 at 11.38.21.png",
     "frontend/Decorations.md",
+    "frontend/Tutorial/Cells structure.md",
+    "frontend/Tutorial/Plugins.md",
+    "frontend/Tutorial/Export notebook.md",
     "frontend/Expressions representation.md",
     "frontend/Tutorial/GUI Overview.md",
     "imgs/ezgif.com-video-to-gif-28.gif",
     "imgs/toggle.png",
     "imgs/text.png",
     "imgs/ref.gif",
-    "imgs/range.png",
-    "imgs/inouttext.png",
-    "imgs/groups2.png",
-    "imgs/groups1.png",
-    "imgs/file.png",
-    "imgs/feinput.gif",
     "imgs/feinput.gif.md",
     "imgs/architecturep.excalidraw.md",
     "frontend/Cell types/Javascript.md",
     "frontend/Cell types/Many more....md",
     "frontend/Cell types/Markdown.md",
-    "frontend/Export/React component.md",
-    "frontend/Export/HTML file.md",
-    "frontend/Export/PDF.md",
-    "frontend/Development/Plugins/Basics.md",
-    "frontend/Customizing IO/Boxes.md",
-    "interpreter/Advanced/symbols.md",
-    "interpreter/Advanced/meta-markers.md",
-    "imgs/dynEx5.excalidraw.md",
-    "imgs/dynEx3.excalidraw.md",
-    "imgs/dynEx4.excalidraw.md",
-    "imgs/dynEx2.excalidraw.md",
-    "imgs/dynEx1.excalidraw.md",
     "wlx",
     "frontend/Examples",
     "blog/authors.yml",
     "blog/2021-08-26-welcome",
     "blog/2021-08-01-mdx-blog-post.mdx",
     "blog",
-    "frontend/Advanced/files/FunnyView.wl",
-    "frontend/Advanced/files/Column.wl",
-    "fullstack",
-    "frontend/Advanced/files"
+    "frontend/Advanced/files/FunnyView.wl"
   ]
 }
