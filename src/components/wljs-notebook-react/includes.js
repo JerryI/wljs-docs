@@ -12,7 +12,7 @@ const list = [
     "https://cdn.statically.io/gh/JerryI/wljs-js-support/master/dist/kernel.js",
     "https://cdn.statically.io/gh/JerryI/wljs-html-support/master/dist/kernel.js",
     "https://cdn.statically.io/gh/JerryI/wljs-inputs/master/dist/kernel.js",
-    "https://cdn.statically.io/gh/JerryI/wljs-graphics-d3/master/dist/kernel.js",
+    "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@main/dist/kernel.js",
     "https://cdn.statically.io/gh/JerryI/wljs-plotly/master/dist/kernel.js",
     "https://cdn.statically.io/gh/JerryI/wljs-hydrator/master/src/kernel.js",
     "https://cdn.statically.io/gh/JerryI/Mathematica-ThreeJS-graphics-engine/master/dist/kernel.js"

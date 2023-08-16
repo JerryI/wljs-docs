@@ -7,7 +7,7 @@ import HomepageFeatures from '@site/src/components/WLXFeatures';
 import CodeBlock from '@theme/CodeBlock';
 import Sandbox from '@site/src/components/sandbox';
 
-
+import Logo2 from '@site/static/img/logo2.svg';
 
 import Component from '@site/src/components/wljs-notebook-react/includes';
 import Notebook from '@site/src/components/wljs-notebook-react';
@@ -41,7 +41,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)} style={{"background-color": "#3B4252"}}>
       <div className="container">
-        <img width={"50%"} src={"img/logo2.svg"}/>
+        <Logo2 width={"50%"}/>
         <Component></Component>
         <h1 className="hero__title" style={{"color": "#2dd4bf"}}>Wolfram Language XML</h1>
         <p className="hero__subtitle" style={{"color": "white", 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>A syntax extension for Wolfram Language that lets you write HTML-like markup inside a Wolfram Language Script like JSX.</p>
@@ -69,5 +69,5 @@ export default function Home() {
         <HomepageFeatures />
       </main>
     </Layout>
-  );
+  ); 
 }

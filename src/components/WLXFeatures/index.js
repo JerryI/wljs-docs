@@ -6,6 +6,8 @@ import CodeBlock from '@theme/CodeBlock';
 
 import Notebook from '@site/src/components/wljs-notebook-react';
 
+import ezGif from '@site/static/img/ezgif.com-crop-3.gif';
+
 const FeatureList = [
   {
     title: 'Write components with code and markup',
@@ -194,7 +196,7 @@ EventHandler[Secret, Function[void, text = RandomWord[]]];
 </div>`}
       </CodeBlock>  
 
-      <img width={"100%"} src={"img/ezgif.com-crop-3.gif"}/>      
+      <img width={"100%"} src={ezGif}/>      
         
       </>
     ),

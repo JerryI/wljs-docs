@@ -1075,7 +1075,11 @@ code, pre, .cm-editor .cm-scroller {
   padding-bottom: 2em;
   position: relative;
   text-rendering: optimizelegibility;
-  width: 100%
+  width: 100%;
+  background: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom:1em;  
 }
 
 .group-container {

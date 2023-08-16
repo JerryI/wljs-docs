@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import SponsorshipTable from "@site/src/components/sponsorship"
 import CodeBlock from '@theme/CodeBlock';
 import Sandbox from '@site/src/components/sandbox';
 
@@ -68,14 +69,21 @@ function HomepageHeader() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
-  return (
+  return (<>
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className="container">
+        <SponsorshipTable/>
+        </div></header>
       </main>
+      
     </Layout>
+    
+    </>
   );
 }
