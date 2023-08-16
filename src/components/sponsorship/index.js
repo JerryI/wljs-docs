@@ -6,7 +6,7 @@ const SponsorList = [
         bio: 'A medico focusing on the research of clinical and basic medicine.',
         github: "https://github.com/MitsuhaMiyamizu",
         photo: "https://github.com/MitsuhaMiyamizu.png",
-        amount: 10,
+        amount: 40,
     },
 ]
 
@@ -64,10 +64,6 @@ function Sponsor({name, bio, github, photo, amount}) {
             <small className="avatar__subtitle" itemProp="description" style={{"color": "white"}}>
               {bio}
             </small>
-          </div>
-          <div style={{"color": "white"}}>
-
-           {amount}€
           </div>
         </div>
       </div>
