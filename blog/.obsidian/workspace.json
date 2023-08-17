@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-08-08-graphics-2d-update/index.md",
+                "file": "2023-08-17-notestore.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-08-08-graphics-2d-update/index.md",
+                "file": "2023-08-17-notestore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-08-08-graphics-2d-update/index.md",
+                "file": "2023-08-17-notestore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-08-08-graphics-2d-update/index.md"
+                "file": "2023-08-17-notestore.md"
               }
             }
           }
@@ -161,9 +161,12 @@
   },
   "active": "664ad1d00a81af99",
   "lastOpenFiles": [
+    "2023-08-16-axes-label.md",
+    "2023-08-16-axes.md",
+    "2023-08-17-notestore.md",
+    "2023-08-08-graphics-2d-update/index.md",
     "2023-08-08-graphics-2d-update/ezgif.com-optimize-12.gif",
     "2023-07-25-transform-3d/index.md",
-    "2023-08-08-graphics-2d-update/index.md",
     "2023-08-08-graphics-2d-update",
     "2023-07-25-transform-3d/Fig-1-01.svg",
     "2023-07-25-transform-3d/Fig-1-01 1.svg",
@@ -178,7 +181,6 @@
     "2023-07-20-rtx/index.md",
     "2023-07-25-transform-3d",
     "2023-07-20-rtx/screenshot(13).png",
-    "2023-07-20-rtx/screenshot(12).png",
     "2023-07-22-pratical-integration/Archive.zip",
     "2023-07-15-hydrator.md",
     "2023-07-22-pratical-integration",

@@ -1,5 +1,5 @@
 ---
-slug: axes
+slug: axes-label
 title: Axes label and partial LaTeX support
 authors: jerryi
 tags: [frontend, graphics]

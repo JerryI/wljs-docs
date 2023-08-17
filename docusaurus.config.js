@@ -109,6 +109,8 @@ const config = {
           }, 
           {to: '/wlx', label: 'WLX', position: 'left'},             
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: "https://github.com/sponsors/JerryI?o=esb", label: "Sponsor", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
+
         ],
       },
       footer: {
