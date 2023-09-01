@@ -37,7 +37,7 @@ To draw our points and fitted curve, we need one line of a code
 
 ```mathematica
 PointSize[0.1],
-  Red, Point[points//Hold], Cyan, Line[fit//Hold]
+  Red, Point[points//Offload], Cyan, Line[fit//Offload]
 ```
 
 Then, let us define the fitting function

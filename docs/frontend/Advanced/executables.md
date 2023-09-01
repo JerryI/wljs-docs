@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+draft: true
 ---
 # Working with containers
 :::danger
@@ -84,7 +85,7 @@ CreateFrontEndObject[
 The result will be the same.
 
 ## As a way to execute expressions on frontend
-Using it together with `Hold` or `FrontEndOnly` forces Wolfram Kernel to send the expression as it is to the frontend (browser), where it will be executed entirely by WLJS.
+Using it together with `Offload` (or `Hold`) or `FrontEndOnly` forces Wolfram Kernel to send the expression as it is to the frontend (browser), where it will be executed entirely by WLJS.
 
 One can you very far for that. For example, this entire animation is created in this manner and no communication with Wolfram Kernel happens
 
@@ -142,7 +143,7 @@ CreateFrontEndObject[FrontEndOnly[
 Here `ListLinePlotly` will not be visible for Wolfram Kernel (server)
 
 :::tip
-Use `FrontEndOnly` or `Hold` expression inside a frontend object to force Wolfram Kernel evaluation in the browser, i.e. in WLJS Interpreter.
+Use `FrontEndOnly` or `Offload` expression inside a frontend object to force Wolfram Kernel evaluation in the browser, i.e. in WLJS Interpreter.
 :::
 
 or
@@ -200,7 +201,7 @@ If you are looking for __just dynamic binding between variables and plotting fun
 Dynamic symbols like `a`
 ```mathematica
 a = Table[i^2, {i,1,10}];
-ListLinePlotly[Hold[a]]
+ListLinePlotly[Offload[a]]
 ```
 do not create real `FrontEndExecutable`, but __only virtual type of a container__ (see [symbols](../../interpreter/Advanced/symbols.md)), therefore when you export a notebook __the information will be lost__.
 :::
@@ -211,7 +212,7 @@ Let us have a look at two identical examples
 *first cell*
 ```mathematica
 a = Table[i^2, {i, 1, 10}];
-ListLinePlotly[Hold[a]]
+ListLinePlotly[Offload[a]]
 ```
 
 *second cell*

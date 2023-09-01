@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+draft: true
 ---
 If you use Mathematica quite often, you might probably familliar with `MakeBoxes` interface, where you can make a fancy representation for the symbolic expressions
 

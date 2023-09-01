@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 9
 ---
 
 Since all magic happens inside the browser using plain Javascript, it is extremely easy to export notebook to a standalone [HTML file](../Export/HTML%20file.md) or even [React component](../Export/React%20component.md) to embed it on website (blog).

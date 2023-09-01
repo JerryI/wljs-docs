@@ -13,7 +13,12 @@ NotebookStore["key"] = 1+1
 NotebookStore["key"] === 1+1
 ```
 
-As simple as that. In the worst case scenario one can use `Iconize`, but that will make the data to be stored inside a notebook cell, which is recommended.
+As simple as that. This is not real association, but mimics its behavior. To get all keys, use 
+```mathematica
+Keys[NotebookStore]
+```
+
+In the worst case scenario one can use `Iconize`, but that will make the data to be stored inside a notebook cell, which is recommended.
 
 :::tip
 For the arrays of data apply `Compress` / `Uncompress` to save up the space

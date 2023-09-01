@@ -44,8 +44,8 @@ crossBar[handler_: Null, L_: 1000] := Module[{cross, crossMove},
     },
     {
       Opacity[1], RGBColor[0.3,0.5,0.8], 
-      Line[With[{c = cross}, {{c[[1]], -L}, {c[[1]], L}}]] // Hold, 
-      Line[With[{c = cross}, {{-L, c[[2]]}, {L, c[[2]]}}]] // Hold
+      Line[With[{c = cross}, {{c[[1]], -L}, {c[[1]], L}}]] // Offload, 
+      Line[With[{c = cross}, {{-L, c[[2]]}, {L, c[[2]]}}]] // Offload
     }
   }
 ];
@@ -65,7 +65,7 @@ placeLine[marker_String, initial_:{{0,0},{1,1}}] := Module[{left, right, pt1, pt
 
   {pt1, pt2} = initial;
   
-  expr = {Darker[Cyan], Line[{pt1 // Hold, pt2 // Hold}], Opacity[0.2], PointSize[0.1], EventHandler[Point[pt1], {"drag"->left}], EventHandler[Point[pt2], {"drag"->right}]};
+  expr = {Darker[Cyan], Line[{pt1 // Offload, pt2 // Offload}], Opacity[0.2], PointSize[0.1], EventHandler[Point[pt1], {"drag"->left}], EventHandler[Point[pt2], {"drag"->right}]};
   
   FrontSubmit[expr, MetaMarker[marker]];
 ];

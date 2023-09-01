@@ -9,6 +9,13 @@ Frontend __does not require anything installed__ apart from `wolframscript` (see
 Make sure that Wolfram Engine is activated and no other instance of `wolfram` is running on your Mac/PC
 :::
 
+There is two ways you can choose from
+## Using "native" application
+Frontend is also shipped as an Electron cross-platform application, that makes you feel like if you were using a real desktop app. However it takes care about updates and other management, __this is the easiest way__
+
+__[Download Link](https://github.com/JerryI/wolfram-js-frontend/releases)__
+
+## Via console & web-browser
 Then download `.zip` from [master branch](https://github.com/JerryI/wolfram-js-frontend) or
 
 ```bash

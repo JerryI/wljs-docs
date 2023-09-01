@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
 ---
-The whole notebook interface is made using plain Javascript, HTML powered by a [web-server and template engine](https://github.com/JerryI/tinyweb-mathematica) running locally on Wolfram Kernel. It means you can work remotely by running a server anywhere you want. 
+The whole notebook interface is made using plain Javascript, HTML powered by a [Wolfram WebServer](https://github.com/KirillBelovTest/HTTPHandler)  and [template engine](https://github.com/JerryI/wl-wsp) running locally on a Wolfram Kernel. It means you can work remotely by running a server anywhere you want. 
 
-Some calculations are performed partially by your browser, you can have a control over it, if you want. All UI elements, cells operations are written in Javascript and Wolfram Language and performed by [WLJS](../../interpreter/intro.md) interpreter. 
+Some calculations are performed partially by your browser, you can have a control over it, [if you want](Dynamics.md) . All UI elements, cells operations are written in Javascript and Wolfram Language and performed by [WLJS](../../interpreter/intro.md) interpreter. 
 
 :::note
-Frontend saves cell's data every-time you type something to RAM. To unload the data to a file you can click manually on `clock` symbol or wait 3 minutes until autosave feature will fire.
+Frontend saves cell's data every-time you type something to RAM. Serializing to the disk is scheduled with a 3 minutes interval.
 :::
 
 Moving from the native desktop applications to a web stack has some drawbacks in terms of latency in communication between Wolfram Kernel and a browser, performance, however it shows many useful features, which are not possible in Mathematica. Sharing notebooks as `html` files, embedding them into your blog, customizing visualization of data using moderns and flexible tools like any Javascript framework, plain HTML and CSS together with Wolfram Language.
@@ -25,41 +25,53 @@ You can open the same notebook in multiple tabs, but the Kernel's message transp
 :::
 
 :::caution
-Unicode characters in paths are not supported for now. 
+Unicode characters in paths are not fully supported by now. 
 :::
 ## UI
 In general the whole UI is a rip-off from Notion-like web-based editors bringing clarity and minimalistic controls over your document. 
 Let's have a look at the basic UI elements
-### Topbar
-<div style={{width: '100%',  margin: 'auto', left: 0, right: 0, display: 'block', background: 'white' }}>
+### Working area
+This is the first thing you will see
 
-![](../../imgs/Screenshot%202023-06-10%20at%2014.56.41.png)
+![](imgs/notebook.png)
+There is file browser tree on the right side, the left side is your working area, which is be populated by the notebook's content when the last one is open.
 
-</div>
+- __Open vault__ - opens an internal file browser to locate the desired folder or notebook. Or if you are running it as an app (not in a browser), one can also open it from the native window's FILE menu.
+- __New notebook__ - generates a blank notebook with a random name and place it into the current folder
 
-The `path` text box stands for renaming notebook file, by clicking on it you can edit the name and it will save it automatically.
+:::info
+`.nb` format of notebooks __is not supported for now__. Frontend uses regular Wolfram Kernel's `.wl` files to store notebook's data 
+:::
 
-`Local Kernel` is a menu and a status bar for the secondary kernel to which you frontend is connected. It can be `Remote Kernel` as well. Firstly you need to start you local kernel by clicking on it pressing `Create Link`
+When you open an notebook file it shown a lightly different window
 
-Black rectangle is `Abort` button to interrupt the evaluation.
+![](imgs/window%201.png)
+- `Local Kernel` is a menu and a status bar for the secondary kernel to which you frontend is connected. 
+- Black rectangle is `Abort` button to interrupt the evaluation.
+- Small letter `i` stands for evaluation initialization cells group
+- Circular arrow acts like `EvaluateAll` command, that evaluates all cells in the opened notebook
+- Clocks is actually an indicator, that your connection to the frontend is ok, it rotates every second by a command sent via web-sockets protocol. __This is also a save button__.
+- `Share` button stands for exporting you notebook as an `html` standalone file or `react` component to be embedded on you website/blog (see more [React component](../Export/React%20component.md))
 
-Circular arrow acts like `EvaluateAll` command, that evaluates all cells in the opened notebook.
+### Cell control buttons
+All cells are grouped by parent input cell, apart from that the structure of the notebook is flat. The controls are applied to the whole group
 
-Clocks is actually an indicator, that your connection to the frontend is ok, it rotates every second by a command sent via web-sockets protocol. __This is also a save button__.
+![](imgs/left.png)
+- add a new cell after
+- hide the input cell
 
-`Share` button stands for exporting you notebook as an `html` standalone file or `react` component to be embedded on you website/blog (see more [React component](../Export/React%20component.md))
-
-### Sidebar
-On the left side the file explorer is located, by clicking on a magnification glass icon, you can open a dedicated file explorer to locate a particular file or folder on you PC.  
-
-<div style={{width: '100%',  margin: 'auto', left: 0, right: 0, display: 'block', background: 'white' }}>
-
-![](../../imgs/Screenshot%202023-06-10%20at%2015.39.22.png)
-
-</div>
+![](imgs/right.png)
+- clear the output of the input cell
+- mark a cell to be an initializing cell
+- evaluate and project the output to a separate window (__experimental__) 
+- evaluate the cell (or you can also use `Shift-Enter`)
 
 
-#### Files upload
+
+#### Files drag and drop
+:::danger
+Is in development
+:::
 By dragging any files to the area of a sidebar you can upload them to the notebook directory
 
 <div style={{width: '100%',  margin: 'auto', left: 0, right: 0, display: 'block', background: 'white' }}>

@@ -6,13 +6,13 @@ Unordered list of random ideas
 - [x] Make `FrontEndView`
 - [x] Validation of [] before update
 - [x] Generalize ToggleView, RangeView to be both input and outputs
-- [ ] Context menu for evaluation in-place
+- [x] Context menu for evaluation in-place
 - [x] Graphics 2D
 - [ ] EditorView
-- [ ] JSAsk. Ask something on frontend of attached notebook. blocking.
+- [x] JSAsk. Ask something on frontend of attached notebook. blocking.
 - [ ] A button to disable all WIDGETS in WL mode
 - [ ] Expand dynamic variables to frontend. Just if someone used `Hold[a]`, then WLJS will fetch this symbol from the server. So use Unsafe mode when there is no arguments. It will happend automatically.
-- [ ] .wljs type of cells allowsyou to run in a wljs sandbox. (mb IFRAME??)
+- [x] .wljs type of cells allowsyou to run in a wljs sandbox. (mb IFRAME??)
 - [ ] Themes. https://github.com/catppuccin/obsidian
 - [ ] Excalidraw (graphics integraton, mb using SVG)
 - [x] Fix TCP connection btween master and secondary kernel
@@ -21,7 +21,7 @@ Unordered list of random ideas
 - [x] UI bugfixes (Kernel spawns and etc)
 - [ ] TemplateBox
 - [ ] Global searach for FE object if not found in the local notebook
-- [ ] Drag and drop images/files and upload via POST automtically
+- [x] Drag and drop images/files and upload via POST automtically
 - [ ] InterpretationBox boxes,expr interpret boxes as representing the expression expr - replace expressions with a box instead of styling
 - [x] MakeBoxes support
 - [ ] `FrontEndObject` privews for lists
@@ -29,4 +29,4 @@ Unordered list of random ideas
 - [ ] Excel widget (frontendview?) and as a input widget with events generated.
 - [ ] Make presentations, integration with Motion Canvas
 - [ ] Make WebAPPS deploy as a standalone or kernel assisted. No input cells, only output. Add this feature to export button. Initialising cells as well can be implemented.
-- [ ] Zooming https://d3-graph-gallery.com/graph/interactivity_zoom.html#basiczoom
+- [x] Zooming https://d3-graph-gallery.com/graph/interactivity_zoom.html#basiczoom

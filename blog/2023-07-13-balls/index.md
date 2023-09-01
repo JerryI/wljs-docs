@@ -49,11 +49,11 @@ Graphics[{
 	RGBColor[1,1,1],
 	EventHandler[Rectangle[{-10,10},{10,-10}], {"click"->addPoint}],
 	RGBColor[0,0,0], PointSize[0.1],
-	Point[points // Hold]
+	Point[points // Offload]
 }]
 ```
 
-Here it creates a white rectangle in the background to add event-listener for clicks. And a global variable `points` is bounded to `Point` expression using `Hold`.
+Here it creates a white rectangle in the background to add event-listener for clicks. And a global variable `points` is bounded to `Point` expression using `Offload`.
 
 :::danger
 `EventHandler` expression does not fully correspond to the one used in Wolfram Mathematica
@@ -96,7 +96,7 @@ IO operations between the frontend and a server cannot run at full speed giving 
 To capture the transitions we need a `MiddlewareHandler`
 
 ```mathematica
-Point[MiddlewareHandler[points//Hold, "end"->animate, "Threshold"->0.2]]
+Point[MiddlewareHandler[points//Offload, "end"->animate, "Threshold"->0.2]]
 ```
 
 It stands in between the drawing function and an updatable symbol. Threshold value specifies when the event `animate` will be fired, i.e. `1` means after the transition and anything less means, that it will be fired a bit early. It is used to compensate the latency of the network making the animation smoother. 

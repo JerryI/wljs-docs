@@ -4,33 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "077a5c9f24ec1f70",
+        "id": "bd8fa9252e075c15",
         "type": "tabs",
         "children": [
           {
-            "id": "ab55bbd81d796e0d",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "imgs/container-nested-2.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "1e0537415f313b66",
+            "id": "a78a34c9855e0037",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wlx/examples/fileexplorer.md",
+                "file": "frontend/Evaluation/Dynamic.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -60,7 +49,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -80,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 519.5110321044922
+    "width": 377.5
   },
   "right": {
     "id": "a752dd5ced191c4a",
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wlx/examples/fileexplorer.md",
+                "file": "frontend/Evaluation/Dynamic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wlx/examples/fileexplorer.md",
+                "file": "frontend/Evaluation/Dynamic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wlx/examples/fileexplorer.md"
+                "file": "frontend/Evaluation/Dynamic.md"
               }
             }
           }
@@ -158,53 +147,53 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1e0537415f313b66",
+  "active": "a78a34c9855e0037",
   "lastOpenFiles": [
-    "wlx/examples/app.md",
-    "wlx/dynamics.md",
-    "wlx/interpeter.md",
-    "wlx/components.md",
+    "graphics/graphics.md",
     "wlx/scoping.md",
     "wlx/install.md",
-    "wlx/basics.md",
-    "wlx/SPA.md",
+    "wlx/dynamics.md",
+    "wlx/interpeter.md",
+    "frontend/Tutorial/GUI Overview.md",
+    "frontend/Decorations.md",
+    "frontend/Evaluation/Dynamic.md",
+    "frontend/Tutorial/Input elements.md",
+    "frontend/Development/Todo list.md",
+    "frontend/Development/Structure.md",
+    "frontend/Development/Plugins/writting.md",
+    "frontend/Development/Plugins/packing.md",
+    "frontend/Development/Plugins/Basics.md",
+    "frontend/Development/Plugins/Extending editor/vimmode.md",
+    "frontend/Customizing IO/UI elements.md",
+    "frontend/Customizing IO/HTML Template.md",
+    "frontend/Customizing IO/Custom cells.md",
+    "frontend/Customizing IO/Canvas.md",
+    "frontend/Customizing IO/Boxes.md",
+    "frontend/Advanced/front-end-functions.md",
+    "frontend/Advanced/executables.md",
+    "frontend/Advanced/Event-generators.md",
+    "frontend/Development/Plugins/Extending editor",
+    "frontend/Tutorial/Cells structure.md",
+    "frontend/Tutorial/Dynamics.md",
+    "frontend/Tutorial/Export notebook.md",
+    "frontend/Tutorial/imgs/left.png",
+    "frontend/Tutorial/imgs/right.png",
+    "frontend/Tutorial/imgs/window 1.png",
+    "frontend/Tutorial/imgs/window.png",
+    "frontend/Tutorial/imgs/notebook.png",
+    "imgs/Drawing 2023-08-20 22.32.33.excalidraw.svg",
     "imgs/ezgif.com-video-to-gif-30.gif",
-    "wlx/examples/fileexplorer.md",
     "imgs/ezgif.com-video-to-gif-29.gif",
     "wlx/examples/_category_.json",
-    "frontend/Tutorial/Input elements.md",
     "imgs/ezgif.com-crop-3.gif",
     "imgs/ezgif.com-crop-2.gif",
-    "frontend/Tutorial/Dynamics.md",
-    "frontend/Tutorial/Plotting functions.md",
-    "interpreter/Advanced/symbols.md",
-    "imgs/Screenshot 2023-08-11 at 11.07.17.png",
-    "imgs/container-nested-2.excalidraw.md",
     "wlx/examples",
     "wlx/styles.css",
-    "frontend/Mathematica vs WLJS.md",
-    "imgs/Screenshot 2023-08-10 at 11.38.21.png",
-    "frontend/Decorations.md",
-    "frontend/Tutorial/Cells structure.md",
-    "frontend/Tutorial/Plugins.md",
-    "frontend/Tutorial/Export notebook.md",
-    "frontend/Expressions representation.md",
-    "frontend/Tutorial/GUI Overview.md",
-    "imgs/ezgif.com-video-to-gif-28.gif",
-    "imgs/toggle.png",
-    "imgs/text.png",
-    "imgs/ref.gif",
-    "imgs/feinput.gif.md",
-    "imgs/architecturep.excalidraw.md",
-    "frontend/Cell types/Javascript.md",
-    "frontend/Cell types/Many more....md",
-    "frontend/Cell types/Markdown.md",
     "wlx",
     "frontend/Examples",
     "blog/authors.yml",
     "blog/2021-08-26-welcome",
     "blog/2021-08-01-mdx-blog-post.mdx",
-    "blog",
-    "frontend/Advanced/files/FunnyView.wl"
+    "blog"
   ]
 }

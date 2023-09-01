@@ -14,7 +14,7 @@ All dynamics in terms of what you expect from Mathematica's experience happens o
 
 ![](../../imgs/architecturep.excalidraw.svg)
 
-Some expressions are meant for to be executed on frontend, i.e. not defined on the Kernel, then a user do not need to specify explicitly what and when should happen. In other cases, a user can use `Hold` attribute or `CreateFrontEndObject` to tell explicitly Wolfram Kernel pass an expression without evaluation to the frontend. Therefore one can play around with a way of splitting your code-base to archive the maximum flexibility and performance. 
+Some expressions are meant for to be executed on frontend, i.e. not defined on the Kernel, then a user do not need to specify explicitly what and when should happen. In other cases, a user can use `Offload` (or `Hold`, but it is not recommended) attribute or `CreateFrontEndObject` to tell explicitly Wolfram Kernel pass an expression without evaluation to the frontend. Therefore one can play around with a way of splitting your code-base to archive the maximum flexibility and performance. 
 
 :::tip
 Always keep in mind, which part of code executes on Wolfram Kernel (server) and what is delegated to the frontend (browser). This is the only way to write predictable and good performing code 
@@ -25,7 +25,11 @@ It does not mean, that your `Set` statements will be reevaluated on change of a 
 <Notebook code="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" name="underpart-030f9">underpart-030f9</Notebook>
 
 :::info
-`Hold` just does a simple trick - provides to a frontend an unknown symbol, which forces frontend to fetch it from the Kernel. Once it fetched, a dynamic link was created. 
+`Offload` just does a simple trick - provides to a frontend an unknown symbol, which forces frontend to fetch it from the Kernel. Once it fetched, a dynamic link was created. 
+:::
+
+:::warning
+In the early versions of docs `Hold` was used to keep symbols to be evaluated @ frontend, however now it is considered as deprecated method. Please, use `Offload` instead.
 :::
 
 The binding itself happens between `Rectangle` and `a`, but not `Graphics`, therefore only partial reevaluation occurs. To know more about details see [WLJS](../../interpreter/Advanced/symbols.md).
@@ -35,7 +39,7 @@ Automatic dynamic binding is possible for expressions, that executed inside the 
 :::
 
 :::info
-An expression wrapped inside `Hold` will be executed on frontend's side, i.e. on the browser.
+An expression wrapped inside `Offload` will be executed on frontend's side, i.e. on the browser.
 :::
 
 :::danger
@@ -60,7 +64,7 @@ EventBind[slider, Function[data,
 ]]
 ```
 
-or (synonym)
+or (recommended! ) 
 
 ```mathematica
 EventHandler[slider, Function[data,
@@ -83,7 +87,7 @@ EmittedEvent[slider, 1];
 The last line manually fires an event to initialize symbol `lines`. Then for the output we can write
 
 ```mathematica
-Graphics[{Cyan, Line[lines // Hold]}]
+Graphics[{Cyan, Line[lines // Offload]}]
 ```
 
 One can illustrate this binding as on a picture below
@@ -106,7 +110,7 @@ Function[data, v = data] // slider
 The obvious solution for output could be
 
 ```mathematica
-Graphics[{Cyan, Line[Table[{Cos[x], Sin[Hold[v] x]}, {x,0,2$Pi$, 0.01}]]}]
+Graphics[{Cyan, Line[Table[{Cos[x], Sin[Offload[v] x]}, {x,0,2$Pi$, 0.01}]]}]
 ```
 
 That will be __a horrible solution__ 👎🏼  
@@ -117,7 +121,7 @@ Imagine, each time `Table` iterator `x` goes through the range of values, it cre
 
 :::danger
 ```mathematica
-Line[Table[Expression[Hold[symbol]], {i, 10}]]
+Line[Table[Expression[Offload[symbol]], {i, 10}]]
 ```
 Creates `10` instances of `symbol`. `Line` function will be called __10__ times on each update of `symbol`!
 :::
@@ -130,7 +134,7 @@ Do not put dynamic symbols inside large `Table`. Try to minimize the number of i
 Ok lets try to improve a bit
 
 ```mathematica
-Graphics[{Cyan, Line[Table[{Cos[x], Sin[v x]}, {x,0,2$Pi$, 0.01}] // Hold]}]
+Graphics[{Cyan, Line[Table[{Cos[x], Sin[v x]}, {x,0,2$Pi$, 0.01}] // Offload]}]
 ```
 
 This is also __horrible__ 👎🏼  Symbol `Table` does the same thing being executed on __browser's side as well__
@@ -141,7 +145,7 @@ This is also __horrible__ 👎🏼  Symbol `Table` does the same thing being exe
 One can minimize the number of instances to just 1 using `With`, as it was shown in the example above
 
 ```mathematica
-Graphics[{Cyan, Line[With[{y = v}, Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]] // Hold]}]
+Graphics[{Cyan, Line[With[{y = v}, Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]] // Offload]}]
 ```
 
 This __will save up a lot of resources__ 👍🏼 
@@ -157,7 +161,7 @@ Creates only 1 instance of `symbol`. A `Line` function will be called __1__ time
 
 :::tip
 ```mathematica
-Line[symbol//Hold], ... Line[symbol//Hold]
+Line[symbol//Offload], ... Line[symbol//Offload]
 ```
 This is ok, each `Line` is bounded to its own `symbol` instance. Therefore on update of `symbol`, each `Line` expression will be reevaluated once.
 :::
@@ -166,7 +170,7 @@ This is ok, each `Line` is bounded to its own `symbol` instance. Therefore on up
 There might be temptation to wrap `Line` expression inside `With` as well, like that
 
 ```mathematica
-Graphics[{Cyan, With[{y = v}, Line[Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]]] // Hold}]
+Graphics[{Cyan, With[{y = v}, Line[Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]]] // Offload}]
 ```
 
 __This will not work at all__ 👎🏼 because the binding will occur between `Graphics` and `v` objects
@@ -179,13 +183,13 @@ Since frontend has [WLJS](../../interpreter/intro.md) interpreter, sometimes you
 Firstly, underneath `InputRange` there is a frontend function `RangeView`, which provides a low-level access to a slider
 
 ```mathematica
-RangeView[{0,6,0.5, V}]//Hold//CreateFrontEndObject
+RangeView[{0,6,0.5, V}]//Offload//CreateFrontEndObject
 ```
 
 The keyword `CreateFrontEndObject` is used to manually execute inside the container the corresponding function. It detect a symbol `V`, which is undefined as assign to it a value from a slider. Now we can to the same trick with `Graphics`
 
 ```mathematica
-Graphics[{Cyan, Line[With[{y = V}, Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]] // Hold]}]
+Graphics[{Cyan, Line[With[{y = V}, Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]] // Offload]}]
 ```
 
 There is no need in event-handling, since the entire code is executed in a browser
@@ -237,6 +241,8 @@ Event handlers wrapped around graphics primitives are parts of [wljs-graphics-d3
 :::info
 Inline event handlers defined around `Graphics` primitives are executed on Wolfram Kernel
 :::
+
+See also [Components approach](Components%20approach.md)
 
 Download notebook
 __[InteractiveGraphics](files/InteractiveGraphics.wl)__

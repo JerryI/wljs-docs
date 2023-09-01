@@ -109,6 +109,7 @@ const config = {
           }, 
           {to: '/wlx', label: 'WLX', position: 'left'},             
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: "https://github.com/JerryI/wolfram-js-frontend", label: "Github", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
           {to: "https://github.com/sponsors/JerryI?o=esb", label: "Sponsor", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
 
         ],
@@ -121,7 +122,7 @@ const config = {
             items: [
               {
                 label: 'Freeware Wolfram Engine',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://www.wolfram.com/engine/',
               },
               {
                 label: 'Wolfram Web Server',
@@ -155,7 +156,11 @@ const config = {
               {
                 label: 'GitHub WLJS',
                 href: 'https://github.com/JerryI/wljs-interpreter',
-              },              
+              }, 
+              {
+                label: 'GitHub WLX',
+                href: 'https://github.com/JerryI/wl-wlx',
+              },                            
             ],
           },
         ],

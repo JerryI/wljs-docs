@@ -61,7 +61,7 @@ Adds hemisphere light source ([see THREE.js](https://threejs.org/docs/#api/en/li
 
 The position and target object support dynamic updates, i.e. one can do
 ```mathematica
-PointLight["Position"->(pos // Hold)]
+PointLight["Position"->(pos // Offload)]
 ```
 
 :::tip

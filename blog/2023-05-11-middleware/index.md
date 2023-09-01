@@ -27,7 +27,7 @@ Let us have a look at the example __with no interpolation involved__
 
 ```mathematica
 p = {-1,0};
-Graphics[{PointSize[0.1], Point[{p} // Hold]}, "TransitionDuration"->0.1]
+Graphics[{PointSize[0.1], Point[{p} // Offload]}, "TransitionDuration"->0.1]
 ```
 
 By updating the position 
@@ -48,7 +48,7 @@ we will see the following
 To __enable the interpolation__ specify `TransitionDuration`
 
 ```mathematica
-Graphics[{Cyan, PointSize[0.1],Point[{p} // Hold]}, ImageSize->{600,100}, "TransitionDuration"->300, "TransitionType"->"Linear"]
+Graphics[{Cyan, PointSize[0.1],Point[{p} // Offload]}, ImageSize->{600,100}, "TransitionDuration"->300, "TransitionType"->"Linear"]
 ```
 
 Now the transition time overlaps with our `Pause[0.2]` time period, that results in a kinda smooth behaviour. 
@@ -85,7 +85,7 @@ A threshold and transition duration values can be adjusted to get the maximum sm
 One need to have an access to the transition process happening at the particular graphics element? Why not just
 
 ```mathematica
-EventHandler[Point[p // Hold], "transition"->calc] ???
+EventHandler[Point[p // Offload], "transition"->calc] ???
 ```
 
 Here is why.
@@ -94,7 +94,7 @@ For the perspective of Javascript D3.js library used in frontend, when one calls
 
 *regular evaluation*
 ```mathematica
-Point[p // Hold]
+Point[p // Offload]
 ```
 ```javascript
 > d3.Selection<SVGElement, unknown, HTMLElement, any>
@@ -102,7 +102,7 @@ Point[p // Hold]
 
 *update method*
 ```mathematica
-Point[p // Hold]
+Point[p // Offload]
 ```
 ```javascript
 > d3.Transition<GElement extends BaseType, Datum, PElement extends BaseType, PDatum>
@@ -132,7 +132,7 @@ However, there is a problem
 Dynamic binding happens only between containers (virtual or real), i.e. `p` and `Point` expressions
 
 ```mathematica
-OurHandler[Point[p // Hold]] // Graphics
+OurHandler[Point[p // Offload]] // Graphics
 ```
 
 The upper expression `Point` scopes all variables. When `p` updates, `OurHandler` or `Graphics` expression __will not be evaluated__!
@@ -143,7 +143,7 @@ It means, that in general `EventHandler` method, where the event-binding is exec
 __We need to bind from inside__
 
 ```mathematica
-Point[MiddlewareHandler[p // Hold, "end"->calc]] // Graphics
+Point[MiddlewareHandler[p // Offload, "end"->calc]] // Graphics
 ```
 
 Now the whole expression `Point` including all its guts will be evaluated during the dynamic updates of any inner expressions.
@@ -154,19 +154,19 @@ With some tweaked added to the WLJS Interpreter, I (@JerryI) managed to make it 
 There is only one event type has been implemented by now.
 
 ```mathematica
-Point[MiddlewareHandler[data // Hold, "end"->calc, "Threshold"->0.5]] // Graphics
+Point[MiddlewareHandler[data // Offload, "end"->calc, "Threshold"->0.5]] // Graphics
 ```
 
 or
 
 ```mathematica
-Line[MiddlewareHandler[data // Hold, "end"->calc, "Threshold"->0.5]]
+Line[MiddlewareHandler[data // Offload, "end"->calc, "Threshold"->0.5]]
 ```
 
 or even for the transformations
 
 ```mathematica
-Translate[MiddlewareHandler[Point[{0,0}], "end"->calc], data // Hold]
+Translate[MiddlewareHandler[Point[{0,0}], "end"->calc], data // Offload]
 ```
 
 where

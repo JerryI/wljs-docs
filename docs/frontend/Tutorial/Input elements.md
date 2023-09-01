@@ -1,4 +1,6 @@
-
+---
+sidebar_position: 7
+---
 Usually, every UI element in a cell is [Event generator](../Advanced/Event-generators.md), i.e. `EventObject[]` with a field `view`, which is shown on output. Unlike Mathematica, WLJS Frontend uses event-based approach, so you have to bind a handler function to each interactive element you used
 
 ```mathematica
@@ -117,10 +119,14 @@ This is a bit more advanced, since it requires the manual creation of frontend o
 The most practical thing to use it as text display
 ```mathematica
 text = "dude"; 
-TextView[text // Hold] // CreateFrontEndObject
+TextView[text // Offload] // CreateFrontEndObject
 ```
 
 Since `TextView` is not registered in the system, you need to force Wolfram Kernel execute it on the frontend's side - `CreateFrontEndObject` is used for that purpose.
+
+:::info
+`CreateFrontEndObject` forces Wolfram Kernel to pass an expression to be evaluated on the frontend side inside a container.
+:::
 
 The [dynamic binding](Dynamics.md) works as usual, if you change the variable `text`, the output will be updated
 

@@ -8,24 +8,60 @@
         "type": "tabs",
         "children": [
           {
-            "id": "664ad1d00a81af99",
+            "id": "fb0efd5966a06ba2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-08-17-notestore.md",
+                "file": "2023-08-19-advanced-events/index.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "0f58c51e289d8e23",
+            "id": "7953b5c390b07ba5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-07-22-pratical-integration/index.md",
+                "file": "2023-08-22-projector/index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2a054cf4f8883578",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023-08-20-image-raster.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bd98bec5d1456e46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023-08-31-helpers-createfrontendobject/index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "04ad209cc1515f1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023-07-21-polygon/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +97,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -97,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-08-17-notestore.md",
+                "file": "2023-08-19-advanced-events/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-08-17-notestore.md",
+                "file": "2023-08-19-advanced-events/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-08-17-notestore.md"
+                "file": "2023-08-19-advanced-events/index.md"
               }
             }
           }
@@ -159,19 +195,33 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "664ad1d00a81af99",
+  "active": "fb0efd5966a06ba2",
   "lastOpenFiles": [
+    "2023-08-19-advanced-events/Greyness.wl",
+    "2023-08-20-image-raster.md",
+    "2023-08-31-helpers-createfrontendobject/index.md",
+    "2023-08-19-advanced-events/index.md",
+    "2023-08-22-projector/index.md",
+    "2023-06-10-events.md",
+    "2023-07-21-polygon/index.md",
+    "2023-08-31-helpers-createfrontendobject/ezgif.com-optimize-14.gif",
+    "2023-08-31-helpers-createfrontendobject",
     "2023-08-16-axes-label.md",
-    "2023-08-16-axes.md",
-    "2023-08-17-notestore.md",
     "2023-08-08-graphics-2d-update/index.md",
-    "2023-08-08-graphics-2d-update/ezgif.com-optimize-12.gif",
+    "2023-05-11-middleware/index.md",
+    "2023-07-13-balls/index.md",
+    "2023-07-14-curves/index.md",
     "2023-07-25-transform-3d/index.md",
+    "2023-07-25-transform-3d/81DC3898A4B17E87.png",
+    "2023-08-22-projector",
+    "2023-07-22-pratical-integration/index.md",
+    "2023-08-17-notestore.md",
+    "2023-08-19-advanced-events",
+    "2023-08-16-axes.md",
+    "2023-08-08-graphics-2d-update/ezgif.com-optimize-12.gif",
     "2023-08-08-graphics-2d-update",
     "2023-07-25-transform-3d/Fig-1-01.svg",
     "2023-07-25-transform-3d/Fig-1-01 1.svg",
-    "2023-07-25-transform-3d/81DC3898A4B17E87.png",
-    "2023-07-22-pratical-integration/index.md",
     "2023-07-25-transform-3d/ezgif.com-optimize-11.gif",
     "2023-07-25-transform-3d/cTJTG9o.png",
     "2023-07-25-transform-3d/Toon-shader.jpg",
@@ -180,21 +230,12 @@
     "2023-07-25-transform-3d/ezgif.com-optimize.gif",
     "2023-07-20-rtx/index.md",
     "2023-07-25-transform-3d",
-    "2023-07-20-rtx/screenshot(13).png",
     "2023-07-22-pratical-integration/Archive.zip",
     "2023-07-15-hydrator.md",
     "2023-07-22-pratical-integration",
-    "2023-07-21-polygon/index.md",
     "2023-07-21-polygon/Cinematographer.wl",
     "2023-07-21-polygon",
-    "2023-07-20-rtx",
     "2023-04-20-placed/index.md",
-    "2023-07-14-curves/index.md",
-    "2023-06-10-events.md",
-    "2023-07-20-rtx/CurvesFit.wl",
-    "2023-07-14-curves copy/index.md",
-    "2023-07-14-curves copy/CurvesFit.wl",
-    "2023-07-13-balls/index.md",
-    "2023-05-11-middleware/index.md"
+    "2023-07-14-curves copy/index.md"
   ]
 }
