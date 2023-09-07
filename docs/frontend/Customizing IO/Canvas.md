@@ -56,7 +56,7 @@ Working in `.js` cells, always clean up the handlers, timers using `this.ondestr
 :::
 
 Download this notebook via a link
-__[CanvasStepByStep](../Tutorial/files/CanvasStepByStep.wl)__
+__[CanvasStepByStep](../Tutorial/files/CanvasStepByStep.wln)__
 
 ## Making a native Wolfram frontend object
 There is no need in having just one canvas, we can go further and implement sort of a native function, that will behave like `Graphics`, `Plot`.
@@ -117,7 +117,7 @@ Apply `RegisterWebObject` to any expression you want to be executed on frontend 
 :::
 
 Download this notebook
-__[ArrayPlotterAdvanced](../Tutorial/files/ArrayPlotterAdvanced.wl)__
+__[ArrayPlotterAdvanced](../Tutorial/files/ArrayPlotterAdvanced.wln)__
 
 ## Wrapping up into a package
 If you are writing a library it is better to ship it as a package. The package system is a bit different compared to Mathematica's, since it involves at least two languages
@@ -138,7 +138,7 @@ __Open `package.json` file and remove unnecessary lines in `wljs-meta`__, we onl
 ```js
   "wljs-meta": {
     "jsmodule": "src/kernel.js",
-    "wlkernel": "src/kernel.wl",
+    "wlkernel": "src/kernel.wln",
     "autocomplete": "src/autocomplete.js"
   }
 ```
@@ -244,7 +244,7 @@ core.ArrayDraw.update = async (args, env) => {
 }
 ```
 
-Now we need to register a function. __Open a file `src/wlkernel.wl`__
+Now we need to register a function. __Open a file `src/wlkernel.wln`__
 ```mathematica
 RegisterWebObject[ArrayDraw]
 ```

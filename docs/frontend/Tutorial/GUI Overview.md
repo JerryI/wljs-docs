@@ -14,7 +14,7 @@ Moving from the native desktop applications to a web stack has some drawbacks in
 ## File system
 This is not cloud-based project, therefore all notebooks are actual files on you drive. 
 :::info
-Every notebook is stored as human-readable/editable `.wl` file imported by Wolfram Engine. 
+Every notebook is stored as human-readable/editable `.wln` file imported by Wolfram Engine. 
 :::
 Once you open a file it is stored in RAM, even if you close a notebook. Save operations perform serialization and stores the data into a file.
 
@@ -40,7 +40,7 @@ There is file browser tree on the right side, the left side is your working area
 - __New notebook__ - generates a blank notebook with a random name and place it into the current folder
 
 :::info
-`.nb` format of notebooks __is not supported for now__. Frontend uses regular Wolfram Kernel's `.wl` files to store notebook's data 
+`.nb` format of notebooks __is not supported for now__. Frontend uses regular Wolfram Kernel's `.wln` files to store notebook's data 
 :::
 
 When you open an notebook file it shown a lightly different window

@@ -12,7 +12,7 @@ Unordered list of random ideas
 - [x] JSAsk. Ask something on frontend of attached notebook. blocking.
 - [ ] A button to disable all WIDGETS in WL mode
 - [ ] Expand dynamic variables to frontend. Just if someone used `Hold[a]`, then WLJS will fetch this symbol from the server. So use Unsafe mode when there is no arguments. It will happend automatically.
-- [x] .wljs type of cells allowsyou to run in a wljs sandbox. (mb IFRAME??)
+- [x] .wlnjs type of cells allowsyou to run in a wljs sandbox. (mb IFRAME??)
 - [ ] Themes. https://github.com/catppuccin/obsidian
 - [ ] Excalidraw (graphics integraton, mb using SVG)
 - [x] Fix TCP connection btween master and secondary kernel

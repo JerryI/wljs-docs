@@ -24,6 +24,7 @@ import Component from '@site/src/components/wljs-notebook-react/includes';
 import Notebook from '@site/src/components/wljs-notebook-react';
 
 <Component></Component>
+
 ## Thumb rule
 
 One event-object - one handler function
@@ -368,6 +369,6 @@ EventFire["evid", 1+1]
 
 ---
 
-__[Download Notebook](Greyness.wl)__ 
+__[Download Notebook](Greyness.wln)__ 
 
 As well as the most part of WLJS Frontend, an event system was not carefully designed in-advance, but rather it was shaped and expanded iteratively via solving hundreds of practical cases.

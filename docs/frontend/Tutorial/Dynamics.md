@@ -196,8 +196,8 @@ There is no need in event-handling, since the entire code is executed in a brows
 Now you can export a notebook into `.html` file and dynamics will still work.
 
 You can download both notebook via following links below
-- __[SliderExampleStandalone](files/SliderExampleStandalone.wl)__
-- __[SliderExample](files/SliderExample.wl)__
+- __[SliderExampleStandalone](files/SliderExampleStandalone.wln)__
+- __[SliderExample](files/SliderExample.wln)__
 
 ## Grouping UI elements
 Writing event handler function for each input element is a bit cumbersome, therefore you can use `InputGroup` wrapper, that preserves the original data structure you had
@@ -245,7 +245,7 @@ Inline event handlers defined around `Graphics` primitives are executed on Wolfr
 See also [Components approach](Components%20approach.md)
 
 Download notebook
-__[InteractiveGraphics](files/InteractiveGraphics.wl)__
+__[InteractiveGraphics](files/InteractiveGraphics.wln)__
 
 
 

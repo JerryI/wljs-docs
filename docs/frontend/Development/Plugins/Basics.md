@@ -16,8 +16,8 @@ Each plugin/extension is a folder with an arbitrary structure, but in the root t
   "wljs-meta": {
     "css": "dist/styles.css",
     "jsmodule": "dist/kernel.js",
-    "wlkernel": "src/kernel.wl",
-    "wl": "src/frontend.wl",
+    "wlkernel": "src/kernel.wln",
+    "wl": "src/frontend.wln",
     "autocomplete": "src/autocomplete.js"
   },
   "repository": {

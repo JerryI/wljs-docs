@@ -357,7 +357,7 @@ Due to the properties of editable decoration, it spawns two extra embedded edito
 :::
 
 Download notebook
-- __[Columns](files/Column.wl)__
+- __[Columns](files/Column.wln)__
 
 Now let's make an actual nested containers.
 
@@ -372,7 +372,7 @@ Since there is only one `wljs-editor` was spawned, we had to tell to the Kernel 
 In the `SpecialView` we append two more DOM elements with a random rotation applied, on which two more containers are executed. This is a true nested containers structure.
 
 Download notebook
-- __[FunnyView](files/FunnyView.wl)__
+- __[FunnyView](files/FunnyView.wln)__
 
 The dynamic binding is also enabled, but will not be performed, since there is no `update` method defined for `core.SpecialView`. 
 
