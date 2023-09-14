@@ -10,8 +10,6 @@ Generates a raster [`Image`](../Graphics/Image.md) with a given size and distrib
 RandomImage[255, {100, 100}, ColorSpace -> "RGB"]
 ```
 
-<Wl>{`RandomImage[255, {100, 100}, ColorSpace -> "RGB"]`}</Wl>
-
 :::warning
 3D features are not supported
 :::

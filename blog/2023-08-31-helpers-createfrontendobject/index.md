@@ -18,7 +18,7 @@ There is a way of making a compromise between visual and code editing by injecti
 
 Or in a bit simpler cases
 
-![](2023-08-31-helpers-createfrontendobject/ezgif.com-optimize.gif)
+![](ezgif.com-optimize.gif)
 
 
 Here above is two examples of such thing created using Dynamics and tricks with `FrontEndObjects`. The idea is

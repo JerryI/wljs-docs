@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-draft: true
+draft: false
 ---
 # Working with containers
 :::danger
@@ -68,7 +68,7 @@ It can also happen in the opposite direction, where the a new kernel is looking 
 The frontend (in a browser) can ask for those object using `NotebookGetObject["uid"]`, that happens automatically, when the [WLJS Interpreter](https://github.com/JerryI/wljs-interpreter) executes `FrontEndExecutable["uid"]` invoked by CodeMirror editor in a cell. Each call returns Javascript promise object, which makes the whole process fully asynchronous.
 
 :::info
-In general, one has to write a Javascript representation of any symbol, which appears inside the `FrontEndExecutable["uid"]`, otherwise frontend causes an exception. See [front-end-functions](front-end-functions.md)
+In general, one has to write a Javascript representation of any symbol, which appears inside the `FrontEndExecutable["uid"]`, otherwise frontend causes an exception. 
 :::
 
 :::info

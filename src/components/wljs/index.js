@@ -25,10 +25,14 @@ export default function Wl({children, data}) {
   
       let env = {global: global, element: elt}; //Created in CM6
       console.warn('decrypting...');
-      
-      const decoded = atob(data);
 
-      interpretate(['FrontEndVirtual', JSON.parse(decoded)], env);
+      let decoded = Mma.DecompressDecode(data);
+      decoded = Mma.toArray(decoded.parts[0]);
+      console.log(decoded);
+      
+      //const decoded = atob(data);
+
+      interpretate(['FrontEndVirtual', decoded], env);
       
       /*
       console.log('decoded!');

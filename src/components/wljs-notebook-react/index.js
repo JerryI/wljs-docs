@@ -101,7 +101,7 @@ export default function Notebook({children, code, name, width, height}) {
             //window.removeEventListener("load-wljs", func);
         }
 
-        if (window.LoadedWLJSForSure) func(); else window.addEventListener("load-wljs", func);
+        func();
 
         return () => {
             //alert('removed');

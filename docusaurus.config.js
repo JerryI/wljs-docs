@@ -12,20 +12,20 @@ const directoryPath = path.join(__dirname, '');
 
 
 const list = [
-  "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/interpreter.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/core.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/metamarkers.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-cells/master/dist/kernel.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-editor/master/dist/kernel.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-editor/master/src/boxes.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-markdown-support/master/dist/kernel.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-js-support/master/dist/kernel.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-html-support/master/dist/kernel.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-inputs/master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@master/src/interpreter.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@master/src/core.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@master/src/metamarkers.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-cells@master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@master/src/boxes.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-markdown-support@master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-html-support@master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@main/dist/kernel.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-plotly/master/dist/kernel.js",
-  "https://cdn.statically.io/gh/JerryI/wljs-hydrator/master/src/kernel.js",
-  "https://cdn.statically.io/gh/JerryI/Mathematica-ThreeJS-graphics-engine/master/dist/kernel.js"
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-plotly@master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-hydrator@master/src/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@master/dist/kernel.js"
 ].map((link) => {
   return {src: link, type: 'module', async: false}
 });

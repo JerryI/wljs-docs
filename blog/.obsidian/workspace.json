@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-08-31-helpers-createfrontendobject/index.md",
+                "file": "2023-08-16-axes-label.md",
                 "mode": "source",
                 "source": false
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-08-31-helpers-createfrontendobject/index.md",
+                "file": "2023-08-16-axes-label.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-08-31-helpers-createfrontendobject/index.md",
+                "file": "2023-08-16-axes-label.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-08-31-helpers-createfrontendobject/index.md"
+                "file": "2023-08-16-axes-label.md"
               }
             }
           },
@@ -207,12 +207,13 @@
   },
   "active": "fb0efd5966a06ba2",
   "lastOpenFiles": [
+    "2023-08-17-notestore.md",
+    "2023-08-31-helpers-createfrontendobject/index.md",
     "2023-09-14-image-raster/2023-08-20-image-raster.md",
     "2023-07-21-polygon/index.md",
     "2023-08-22-projector/index.md",
     "2023-09-14-image-raster/plot.svg",
     "2023-09-14-image-raster",
-    "2023-08-31-helpers-createfrontendobject/index.md",
     "2023-08-31-helpers-createfrontendobject/ezgif.com-video-to-gif.gif",
     "2023-08-31-helpers-createfrontendobject/Screenshot 2023-09-13 at 22.41.45.png",
     "2023-08-31-helpers-createfrontendobject/ezgif.com-optimize.gif",
@@ -223,7 +224,6 @@
     "2023-06-10-events.md",
     "2023-07-15-hydrator.md",
     "2023-08-16-axes-label.md",
-    "2023-08-17-notestore.md",
     "2023-08-19-advanced-events/Greyness.wl",
     "2023-08-31-helpers-createfrontendobject",
     "2023-08-08-graphics-2d-update/index.md",

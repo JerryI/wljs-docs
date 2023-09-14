@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Raster.md",
+                "file": "frontend/Advanced/depricated-remove-it.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Raster.md",
+                "file": "frontend/Advanced/depricated-remove-it.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Raster.md",
+                "file": "frontend/Advanced/depricated-remove-it.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Raster.md"
+                "file": "frontend/Advanced/depricated-remove-it.md"
               }
             }
           },
@@ -159,32 +159,32 @@
   },
   "active": "d7ed26eb3e18ff9b",
   "lastOpenFiles": [
-    "frontend/Evaluation/Static.md",
-    "frontend/Reference/Plotting/MatrixPlot.md",
-    "frontend/Reference/Graphics/Text.md",
-    "frontend/Reference/Graphics/Line.md",
-    "frontend/Reference/Graphics/Image.md",
-    "frontend/Reference/Graphics/Graphics.md",
-    "frontend/Reference/Graphics/Directive.md",
-    "frontend/Reference/Graphics/Offset.md",
-    "frontend/Reference/Graphics/Style.md",
-    "frontend/Reference/Plotting/Plot.md",
-    "frontend/Reference/Plotting/ListLinePlotly.md",
-    "frontend/Reference/Plotting/Plotly.md",
-    "frontend/Reference/Graphics/Raster.md",
-    "frontend/Reference/Events/Assign.md",
-    "frontend/Reference/Tools/SetInterval.md",
+    "interpreter/Basics/scripts.md",
+    "frontend/Advanced/depricated-remove-it.md",
+    "interpreter/Basics/js-access.md",
+    "frontend/Advanced/executables.md",
+    "frontend/Reference/Dynamics/CreateFrontEndObject.md",
+    "frontend/Reference/WLJS/FrontEndVirtual.md",
+    "frontend/Reference/WLJS/Constant.md",
+    "frontend/Reference/WLJS/Association.md",
+    "frontend/Reference/WLJS/AttachDOM.md",
+    "frontend/Reference/WLJS/Alert.md",
+    "frontend/Reference/Tools/EvaluatingCell.md",
     "frontend/Reference/Tools/SetTimeout.md",
-    "frontend/Reference/Dynamics/DynamicModule.md",
-    "frontend/Reference/Dynamics/Dynamic.md",
-    "frontend/Reference/Dynamics/Manipulate.md",
+    "frontend/Reference/Tools/SetInterval.md",
+    "frontend/Reference/Plotting/RandomImage.md",
+    "frontend/Reference/Input/TextView.md",
+    "frontend/Reference/Dynamics/FrontEndExecutable.md",
+    "interpreter/Advanced/containers.md",
+    "frontend/Reference/Graphics/Text.md",
     "frontend/Reference/Input/Slider.md",
+    "frontend/Reference/Tools/Iconize.md",
+    "frontend/Reference/Tools/NotebookStore.md",
     "frontend/Reference/Graphics3D/Sphere.md",
     "frontend/Reference/Graphics3D/Cuboid.md",
     "frontend/Reference/Graphics3D/Graphics3D.md",
-    "frontend/Reference/WLJS/Sin.md",
-    "frontend/Reference/WLJS/Power.md",
-    "frontend/Reference/WLJS/Cos.md",
+    "frontend/Reference/Graphics/Point.md",
+    "frontend/Reference/Graphics/Untitled.md",
     "frontend/Reference/WLJS",
     "frontend/Reference/Tools",
     "frontend/Reference/Input",
