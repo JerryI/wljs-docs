@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-08-19-advanced-events/index.md",
+                "file": "2023-08-31-helpers-createfrontendobject/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-08-20-image-raster.md",
+                "file": "2023-09-14-image-raster/2023-08-20-image-raster.md",
                 "mode": "source",
                 "source": false
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-08-19-advanced-events/index.md",
+                "file": "2023-08-31-helpers-createfrontendobject/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-08-19-advanced-events/index.md",
+                "file": "2023-08-31-helpers-createfrontendobject/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-08-19-advanced-events/index.md"
+                "file": "2023-08-31-helpers-createfrontendobject/index.md"
+              }
+            }
+          },
+          {
+            "id": "eb90232921bff921",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -197,16 +207,25 @@
   },
   "active": "fb0efd5966a06ba2",
   "lastOpenFiles": [
-    "2023-08-19-advanced-events/Greyness.wl",
-    "2023-08-20-image-raster.md",
-    "2023-08-31-helpers-createfrontendobject/index.md",
-    "2023-08-19-advanced-events/index.md",
-    "2023-08-22-projector/index.md",
-    "2023-06-10-events.md",
+    "2023-09-14-image-raster/2023-08-20-image-raster.md",
     "2023-07-21-polygon/index.md",
+    "2023-08-22-projector/index.md",
+    "2023-09-14-image-raster/plot.svg",
+    "2023-09-14-image-raster",
+    "2023-08-31-helpers-createfrontendobject/index.md",
+    "2023-08-31-helpers-createfrontendobject/ezgif.com-video-to-gif.gif",
+    "2023-08-31-helpers-createfrontendobject/Screenshot 2023-09-13 at 22.41.45.png",
+    "2023-08-31-helpers-createfrontendobject/ezgif.com-optimize.gif",
+    "2023-08-19-advanced-events/index.md",
+    "2023-08-22-projector/Screenshot 2023-08-29 at 12.58.20.png",
     "2023-08-31-helpers-createfrontendobject/ezgif.com-optimize-14.gif",
-    "2023-08-31-helpers-createfrontendobject",
+    "2023-08-22-projector/Screenshot 2023-09-11 at 18.40.52.png",
+    "2023-06-10-events.md",
+    "2023-07-15-hydrator.md",
     "2023-08-16-axes-label.md",
+    "2023-08-17-notestore.md",
+    "2023-08-19-advanced-events/Greyness.wl",
+    "2023-08-31-helpers-createfrontendobject",
     "2023-08-08-graphics-2d-update/index.md",
     "2023-05-11-middleware/index.md",
     "2023-07-13-balls/index.md",
@@ -215,26 +234,16 @@
     "2023-07-25-transform-3d/81DC3898A4B17E87.png",
     "2023-08-22-projector",
     "2023-07-22-pratical-integration/index.md",
-    "2023-08-17-notestore.md",
     "2023-08-19-advanced-events",
     "2023-08-16-axes.md",
     "2023-08-08-graphics-2d-update/ezgif.com-optimize-12.gif",
     "2023-08-08-graphics-2d-update",
     "2023-07-25-transform-3d/Fig-1-01.svg",
-    "2023-07-25-transform-3d/Fig-1-01 1.svg",
-    "2023-07-25-transform-3d/ezgif.com-optimize-11.gif",
-    "2023-07-25-transform-3d/cTJTG9o.png",
-    "2023-07-25-transform-3d/Toon-shader.jpg",
-    "2023-07-25-transform-3d/screenshot-158_111793.jpg",
     "2023-07-25-transform-3d/FMO.wl",
-    "2023-07-25-transform-3d/ezgif.com-optimize.gif",
     "2023-07-20-rtx/index.md",
     "2023-07-25-transform-3d",
     "2023-07-22-pratical-integration/Archive.zip",
-    "2023-07-15-hydrator.md",
     "2023-07-22-pratical-integration",
-    "2023-07-21-polygon/Cinematographer.wl",
-    "2023-07-21-polygon",
     "2023-04-20-placed/index.md",
     "2023-07-14-curves copy/index.md"
   ]

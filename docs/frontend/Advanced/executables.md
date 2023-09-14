@@ -53,7 +53,7 @@ Graphics[...] <-> FrontEndExecutable["uid"]
 
 where, `FrontEndExecutable["uid"]` is a pointer to the storage, with corresponding WL expression created by `CreateFrontEndObject` function.
 
-In principle it looks quite similar to Mathematica's `MakeBoxes` feature, where you can define a view for the any arbitrary object. For example, `EventObject` uses quite similar approach (see [Event-generators](Event-generators.md)), where there is an up-values definition
+In principle it looks quite similar to Mathematica's `MakeBoxes` feature, where you can define a view for the any arbitrary object. For example, `EventObject` uses quite similar approach (see [event-generators](event-generators.md)), where there is an up-values definition
 
 ```mathematica
 CM6Form[EventObject[assoc_]] ^:= CreateFrontEndObject[assoc["view"]] 
@@ -173,7 +173,7 @@ to assign this property to your expression
 :::
 
 :::info
-All input UI elements like __sliders__, __buttons__ are [Event-generators](Event-generators.md), that has a field `view`, on which `CreateFrontEndObject` is also applied automatically
+All input UI elements like __sliders__, __buttons__ are [event-generators](event-generators.md), that has a field `view`, on which `CreateFrontEndObject` is also applied automatically
 :::
 
 ```mathematica

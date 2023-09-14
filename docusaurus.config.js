@@ -4,6 +4,34 @@
 const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 const darkCodeTheme = require('prism-react-renderer/themes/github');
 
+const path = require('path');
+const fs = require('fs');
+//joining path of directory 
+const directoryPath = path.join(__dirname, '');
+//passsing directoryPath and callback function
+
+
+const list = [
+  "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/interpreter.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/core.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-interpreter/master/src/metamarkers.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-cells/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-editor/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-editor/master/src/boxes.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-markdown-support/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-js-support/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-html-support/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-inputs/master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@main/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-plotly/master/dist/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/wljs-hydrator/master/src/kernel.js",
+  "https://cdn.statically.io/gh/JerryI/Mathematica-ThreeJS-graphics-engine/master/dist/kernel.js"
+].map((link) => {
+  return {src: link, type: 'module', async: false}
+});
+
+
+
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
@@ -33,6 +61,12 @@ const config = {
         'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
       crossorigin: 'anonymous',
     },
+  ],
+
+  scripts: list,
+
+  clientModules: [
+    require.resolve('./src/components/wljs-notebook-react/static.js')
   ],
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -176,7 +210,14 @@ const config = {
       mermaid: true,
     },
     themes: ['@docusaurus/theme-mermaid'],
+
+    plugins: [[ require.resolve('docusaurus-lunr-search'), {
+      disableVersioning: true
+    }]]
+
+
 };
+
 
 
 module.exports = config;

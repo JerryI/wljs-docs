@@ -324,7 +324,6 @@ Print // ev
 ```mathematica
 Delete[ev]
 DeleteObject[ev]
-Remove[ev]
 ```
 
 ___Fast event binding___
@@ -356,6 +355,10 @@ EventFire[ev, 1+1]
 or with no-data provided
 ```mathematica
 EventFire[ev]
+```
+or just by using text-string
+```mathematica
+EventFire["event-id"]
 ```
 
 ___Reference by id___

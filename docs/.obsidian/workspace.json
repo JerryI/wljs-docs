@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "bd8fa9252e075c15",
+        "id": "bd9f0d908f33d3c2",
         "type": "tabs",
         "children": [
           {
-            "id": "a78a34c9855e0037",
+            "id": "d7ed26eb3e18ff9b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Evaluation/Dynamic.md",
+                "file": "frontend/Reference/Graphics/Raster.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Evaluation/Dynamic.md",
+                "file": "frontend/Reference/Graphics/Raster.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Evaluation/Dynamic.md",
+                "file": "frontend/Reference/Graphics/Raster.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Evaluation/Dynamic.md"
+                "file": "frontend/Reference/Graphics/Raster.md"
+              }
+            }
+          },
+          {
+            "id": "afe0967b9f64f51c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -147,35 +157,44 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a78a34c9855e0037",
+  "active": "d7ed26eb3e18ff9b",
   "lastOpenFiles": [
-    "graphics/graphics.md",
-    "wlx/scoping.md",
-    "wlx/install.md",
-    "wlx/dynamics.md",
-    "wlx/interpeter.md",
-    "frontend/Tutorial/GUI Overview.md",
-    "frontend/Decorations.md",
-    "frontend/Evaluation/Dynamic.md",
-    "frontend/Tutorial/Input elements.md",
-    "frontend/Development/Todo list.md",
-    "frontend/Development/Structure.md",
-    "frontend/Development/Plugins/writting.md",
-    "frontend/Development/Plugins/packing.md",
-    "frontend/Development/Plugins/Basics.md",
-    "frontend/Development/Plugins/Extending editor/vimmode.md",
-    "frontend/Customizing IO/UI elements.md",
-    "frontend/Customizing IO/HTML Template.md",
-    "frontend/Customizing IO/Custom cells.md",
-    "frontend/Customizing IO/Canvas.md",
-    "frontend/Customizing IO/Boxes.md",
-    "frontend/Advanced/front-end-functions.md",
-    "frontend/Advanced/executables.md",
-    "frontend/Advanced/Event-generators.md",
-    "frontend/Development/Plugins/Extending editor",
-    "frontend/Tutorial/Cells structure.md",
-    "frontend/Tutorial/Dynamics.md",
-    "frontend/Tutorial/Export notebook.md",
+    "frontend/Evaluation/Static.md",
+    "frontend/Reference/Plotting/MatrixPlot.md",
+    "frontend/Reference/Graphics/Text.md",
+    "frontend/Reference/Graphics/Line.md",
+    "frontend/Reference/Graphics/Image.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Reference/Graphics/Directive.md",
+    "frontend/Reference/Graphics/Offset.md",
+    "frontend/Reference/Graphics/Style.md",
+    "frontend/Reference/Plotting/Plot.md",
+    "frontend/Reference/Plotting/ListLinePlotly.md",
+    "frontend/Reference/Plotting/Plotly.md",
+    "frontend/Reference/Graphics/Raster.md",
+    "frontend/Reference/Events/Assign.md",
+    "frontend/Reference/Tools/SetInterval.md",
+    "frontend/Reference/Tools/SetTimeout.md",
+    "frontend/Reference/Dynamics/DynamicModule.md",
+    "frontend/Reference/Dynamics/Dynamic.md",
+    "frontend/Reference/Dynamics/Manipulate.md",
+    "frontend/Reference/Input/Slider.md",
+    "frontend/Reference/Graphics3D/Sphere.md",
+    "frontend/Reference/Graphics3D/Cuboid.md",
+    "frontend/Reference/Graphics3D/Graphics3D.md",
+    "frontend/Reference/WLJS/Sin.md",
+    "frontend/Reference/WLJS/Power.md",
+    "frontend/Reference/WLJS/Cos.md",
+    "frontend/Reference/WLJS",
+    "frontend/Reference/Tools",
+    "frontend/Reference/Input",
+    "frontend/Reference/Events",
+    "frontend/Reference/Dynamics",
+    "frontend/Reference/Plotting",
+    "frontend/Reference/Graphics3D",
+    "frontend/Reference/Graphics",
+    "frontend/Reference",
+    "frontend/Advanced/files/Greyness.wln",
     "frontend/Tutorial/imgs/left.png",
     "frontend/Tutorial/imgs/right.png",
     "frontend/Tutorial/imgs/window 1.png",
@@ -184,16 +203,7 @@
     "imgs/Drawing 2023-08-20 22.32.33.excalidraw.svg",
     "imgs/ezgif.com-video-to-gif-30.gif",
     "imgs/ezgif.com-video-to-gif-29.gif",
-    "wlx/examples/_category_.json",
     "imgs/ezgif.com-crop-3.gif",
-    "imgs/ezgif.com-crop-2.gif",
-    "wlx/examples",
-    "wlx/styles.css",
-    "wlx",
-    "frontend/Examples",
-    "blog/authors.yml",
-    "blog/2021-08-26-welcome",
-    "blog/2021-08-01-mdx-blog-post.mdx",
-    "blog"
+    "imgs/ezgif.com-crop-2.gif"
   ]
 }

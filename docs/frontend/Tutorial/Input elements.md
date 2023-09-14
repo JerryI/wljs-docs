@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 ---
-Usually, every UI element in a cell is [Event generator](../Advanced/Event-generators.md), i.e. `EventObject[]` with a field `view`, which is shown on output. Unlike Mathematica, WLJS Frontend uses event-based approach, so you have to bind a handler function to each interactive element you used
+Usually, every UI element in a cell is [Event generator](../Advanced/event-generators.md), i.e. `EventObject[]` with a field `view`, which is shown on output. Unlike Mathematica, WLJS Frontend uses event-based approach, so you have to bind a handler function to each interactive element you used
 
 ```mathematica
 element = EventObject[<|"id"->..., "view"->...|>];

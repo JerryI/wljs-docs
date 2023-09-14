@@ -54,7 +54,7 @@ export function loadScript(url) {
 
 export default function Component(props) {
 
-    if (list.indexOf(props.children) < 0) {
+    /*if (list.indexOf(props.children) < 0) {
       //list.push(props.children);
     }
 
@@ -80,10 +80,10 @@ export default function Component(props) {
           window.LoadedWLJS = true;
           window.dispatchEvent(event);
         }
-    }, []);
+    }, []);*/
 
     return (
-        <div id="helmet">
+        <div>
         </div>          
     )
   }
