@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-08-31-helpers-createfrontendobject/index.md",
+                "file": "2023-09-20-snippets.md",
                 "mode": "source",
                 "source": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-08-31-helpers-createfrontendobject/index.md",
+                "file": "2023-09-20-snippets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-08-31-helpers-createfrontendobject/index.md",
+                "file": "2023-09-20-snippets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-08-31-helpers-createfrontendobject/index.md"
+                "file": "2023-09-20-snippets.md"
               }
             }
           },
@@ -220,10 +220,10 @@
   },
   "active": "6dfeb2fd8c54f1eb",
   "lastOpenFiles": [
+    "2023-08-31-helpers-createfrontendobject/index.md",
     "2023-09-20-snippets.md",
     "2023-08-17-notestore.md",
     "2023-09-14-image-raster/2023-08-20-image-raster.md",
-    "2023-08-31-helpers-createfrontendobject/index.md",
     "2023-08-16-axes-label.md",
     "2023-07-21-polygon/index.md",
     "2023-08-22-projector/index.md",

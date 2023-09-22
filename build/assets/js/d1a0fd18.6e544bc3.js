@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwljs_docs=self.webpackChunkwljs_docs||[]).push([[9987],{96982:s=>{s.exports=JSON.parse('{"permalink":"/wljs-docs/blog/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":17,"previousPage":"/wljs-docs/blog","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
