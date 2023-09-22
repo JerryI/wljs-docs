@@ -24,9 +24,10 @@ MatrixPlot[PauliMatrix[3]]
 
 <Wl data={`"1:eJy1VL1uFDEQXv4Swk8UhVQ0CImKlopqdUAIke7Q6RwhKiTf7vjOitc+2d4od3Q0eYE0yRsAEhWi4QUooUECGtJTINGkxONNLjlnfRAhLO3s2J75PDOezze7qsNmkyQxF51Y0XTQ55lh53BlxokONRY04PzswYd6NX6m4f/2jRevPr3+mHYXnt59++Fz+u3arXfvt36M9/dGS29W9r6mycQ4icPwIHPeiSY3dnLG0cSLYB1nXtTZn5lY75QCzAWnPNS0AL+0pksIDC4dGjRpF8QkqlceKwljJea8xrN1My2haTNdVWQ/DRI4tvc9rUn6f6DE/KKY+38d2alQfHnnE2xXnje5uwJihwIYIpg5Jx5wDZnlGwdXMudN6bAJGyDGB+rdHRxf0gAYrVcL2gPCRxB00jN3hBeBDzKlBbavcjZTnyuakctOaWxy06Z5zmWvChgdSEYF5Po5kmO0HUREljAlYLQU9p4qZU710CfsQ22UVhXU8ixwun7kdMjqVemoTF1hlKwIHgkTn4MnoI2z03f8+BWGtOgJQ7P1lioNtJXhHvUkQ5BVFdGoMFBz0DJj7q7M1IAwz0e81xfus1XVIpZ4knbVUDUtQ+aPw7QVl/+A5dtMq4HA9os1+LhUTAMwpYv7pTZKt1Qee3I87kDQDAqQUfp5Swx9k2DZGkLU7A1J/cNEFo46oy2U/XMrXUUHt8PlKRv3CipU9iDmV1HwZfob/KhrHg=="`}>{`MatrixPlot[PauliMatrix[3], ImageSize->{350,350}]`}</Wl>
 
+## Options
 :::warning
 `ColorFunction` is not supported option for now
 :::
 
-### Dev notes
+## Dev notes
 It produces [`Raster`](../Graphics/Raster.md) graphics object placed into [`Graphics`](../Graphics/Graphics.md)

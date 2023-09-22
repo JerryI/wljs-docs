@@ -1,17 +1,19 @@
 import React from 'react';
-import DocItem from '@theme-original/DocItem';
-
-import GiscusComponent from '@site/src/components/GiscusComponent';
-import useIsBrowser from '@docusaurus/useIsBrowser';
-
-import {WLJS} from '@site/src/components/wljs';
-
-export default function DocItemWrapper(props) {
+import {HtmlClassNameProvider} from '@docusaurus/theme-common';
+import {DocProvider} from '@docusaurus/theme-common/internal';
+import DocItemMetadata from '@theme/DocItem/Metadata';
+import DocItemLayout from '@theme/DocItem/Layout';
+export default function DocItem(props) {
+  const docHtmlClassName = `docs-doc-id-${props.content.metadata.unversionedId}`;
+  const MDXComponent = props.content;
   return (
-    <>
-      <DocItem {...props} />
-      <br></br>
-      <GiscusComponent />
-    </>
+    <DocProvider content={props.content}>
+      <HtmlClassNameProvider className={docHtmlClassName}>
+        <DocItemMetadata />
+        <DocItemLayout>
+          <MDXComponent />
+        </DocItemLayout>
+      </HtmlClassNameProvider>
+    </DocProvider>
   );
 }

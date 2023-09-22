@@ -4,10 +4,10 @@ env:
 ---
 Creates a [container](../../../interpreter/Advanced/containers.md) for the inner expression and stores it into frontend objects storage shared with Kernel and Notebook
 ```mathematica
-CreateFrontEndObject[expr, "uid" | Empty]
+CreateFrontEndObject[expr, "uid" | Empty, OptionsPattern[]]
 ```
 
-Returns [`FrontEndExecutable`](FrontEndExecutable.md) object with a given id or generated.
+Returns [`FrontEndExecutable`](Internals/FrontEndExecutable.md) object with a given id or generated.
 
 See more about it in __[Executables](../../Advanced/executables.md)__
 
@@ -76,7 +76,7 @@ It can also acts as a reference to any expression
 CreateFrontEndObject[RandomReal[{-1,1}, 2], "data"]
 ```
 
-Then one can create a graph and use it with a reference (using [`FrontEndRef`](FrontEndRef.md)) to it
+Then one can create a graph and use it with a reference (using [`FrontEndRef`](Internals/FrontEndRef.md)) to it
 
 *cell 2*
 ```mathematica
@@ -107,13 +107,14 @@ Only 3 and 2 are effectively connected to each other, 1 and 2 are connected as w
 
 > Back at the times it was the only way of making dynamics possible. Nowadays virtual containers did overtake normal ones and made the process much easier. 
 
-## Private and shared storage
+## Options
+### Private and shared storage
 Taken from [Evaluation / Static](../../Evaluation/Static.md) 
 
 >Each time you evaluate `Graphics` or whatever frontend object, it creates two copies of its representation: one is stored on frontend kernel (master Wolfram Kernel), which is shared with a browser (WLJS), while there is other *private* copy of it on the secondary Wolfram Kernel. When Wolfram Kernel encounters a `FrontEndExecutable` during the evaluation, it uses (if available) its private copy, and if not it downloads the shared one into the private storage.  **See how it can be used [HERE](https://jerryi.github.io/wljs-docs/blog/feobjects-example)**
 
 ```mathematica
-CreateFrontEndObject[expr, "uid", "Override"->True];
+CreateFrontEndObject[expr, "uid", "Type"->"Private"];
 ```
 
 It __will override the private copy__. Consider an example
@@ -122,7 +123,7 @@ It __will override the private copy__. Consider an example
 Magic := With[{uid = CreateUUID[]},
 	With[{o = CreateFrontEndObject[TextView["Hello World"], uid]},
 		(* a trick to sublimate a private copy *)
-		CreateFrontEndObject["Cucumbers", uid, "Override"->True];
+		CreateFrontEndObject["Cucumbers", uid, "Type"->"Private"];
 		o
 	]
 ]

@@ -8,6 +8,7 @@
     "update": "checkbox",
     "virtual": "checkbox",
     "needsContainer": "checkbox",
-    "registered": "checkbox"
+    "registered": "checkbox",
+    "internal": "checkbox"
   }
 }

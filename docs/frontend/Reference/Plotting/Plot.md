@@ -5,16 +5,253 @@ update: false
 virtual: 
 registered: true
 ---
-You should see
+A Swiss knife for displaying 2D data
 
 ```mathematica
-Plot[x, {x,0,1}]
+Plot[expr_, {variable, min, max, step}, opts__]
 ```
 
-now
+has `HoldFirst` attribute. See the list of supported options (`opts`) down below
+## Options
+### `PlotStyle` 
+Works as in Mathematica, i.e. per element in `expr` array, supports color, opacity and etc
 
-<Wl data={`"1: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"`}>{`
-	Plot[x, {x,0,1}]
-`}</Wl>
+```mathematica
+Plot[Table[x^y, {y, 6}]//Evaluate, {x, 0,1}, PlotStyle->Table[Blend[{Red, Blue}, i/6], {i, 6}]]
+```
+
+<Wl>{`Plot[Table[x^y, {y, 6}]//Evaluate, {x, 0,1}, PlotStyle->Table[Blend[{Red, Blue}, i/6], {i, 6}], ImageSize->350]`}</Wl>
+
+### `AxesLabel`
+Place labels on your axes
+```mathematica
+Plot[Sinc[x], {x, 0, 10}, AxesLabel -> {"x", "Sinc[x]"}]
+```
+
+<Wl>{`Plot[Sinc[x], {x, 0, 10}, AxesLabel -> {"x", "Sinc[x]"}, ImageSize->350]`}</Wl>
+
+Labels __accepts only strings__ or numbers unlike Mathematica, where you can put everything. 
+
+Since it is translated into [`Text`](../Graphics/Text.md), one can use sort of TeX math input
+
+```mathematica
+Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {"wavenumber (cm^{-1})", "absorption \\alpha"}, PlotRange->Full]
+```
+
+<Wl>{`Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {"wavenumber (cm^{-1})", "absorption \\alpha"}, PlotRange->Full, ImageSize->350]`}</Wl>
+
+It also supports [Offset](../Graphics/Offset.md) attribute
+
+```mathematica
+Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {Offset["wavenumber (cm^{-1})", {0,0.05}], "absorption \\alpha"}, PlotRange->Full]
+```
+
+<Wl>{`Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {Offset["wavenumber (cm^{-1})", {0,0.05}], "absorption \\alpha"}, PlotRange->Full, ImageSize->350]`}</Wl>
+
+### `Ticks`
+Customize ticks by providing an array of numbers for both axes
+```mathematica
+Plot[x, {x, 0, 1}, Ticks->{{0, 0.5, 1}, {}}]
+```
+
+<Wl>{`Plot[x, {x, 0, 1}, Ticks->{{0, 0.5, 1}, {}}, ImageSize->350]`}</Wl>
+
+Or by providing as pairs `{Number, String}` one can specify the displayed text
+```mathematica
+Plot[x, {x, 0, 1}, Ticks->{{{0, "Zero"}, {0.5, "Half"}, {1,"One"}}, {}}]
+```
+
+<Wl>{`Plot[x, {x, 0, 1}, Ticks->{{{0, "Zero"}, {0.5, "Half"}, {1,"One"}}, {}}, ImageSize->350]`}</Wl>
+
+### `Controls` 💛
+This is more an option for [Graphics](../Graphics/Graphics.md), but with a bit of a hacking it can be used here as well. The features __allows to pan and zoom your plots__, that was never possible in Mathematica
+
+```mathematica
+Plot[Sin[1/x], {x, 0.001, 0.1}, MaxRecursion->1];
+Insert[%, Controls->True, {2,-1}]
+```
+
+<Wl>{`Insert[Plot[Sin[1/x], {x, 0.001, 0.1}, MaxRecursion->1, ImageSize->350], Controls->True, {2,-1}]`}</Wl>
+
+*Try to use your mouse here*
+
+### `Frame`
+Turns plot into the journals-like styled graph. In general it has much more options to customize the look
+
+```mathematica
+Plot[x, {x, 0, 1}, Frame->True]
+```
+
+<Wl>{`Plot[x, {x, 0, 1}, Frame->True, ImageSize->350]`}</Wl>
+
+#### `FrameTicks`
+The same as [`Ticks`](#`Ticks`), but for this regime.
+
+#### `FrameLabels` 
+The same as [`AxesLabel`](#`AxesLabel`)
+```mathematica
+Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{"x-axis", "y-axis"}]
+```
+
+<Wl>{`Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{"x-axis", "y-axis"}, ImageSize->350]`}</Wl>
+
+#### `FrameStyle`
+Affects the style of [`FrameLabels`](#`FrameLabels`). Use `Directive` for changing the style
+```mathematica
+Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{"x-axis", "y-axis"}, FrameStyle->Directive[FontSize->16]]
+```
+
+<Wl>{`Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{"x-axis", "y-axis"}, FrameStyle->Directive[FontSize->16], ImageSize->350]`}</Wl>
+
+#### `FrameTicksStyle`
+Affects the style of [`FrameTicks`](#`FrameTicks`)
+```mathematica
+Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{"x-axis", "y-axis"}, FrameTicksStyle->Directive[FontSize->16]]
+```
+
+<Wl>{`Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{"x-axis", "y-axis"}, FrameTicksStyle->Directive[FontSize->16], ImageSize->350]`}</Wl>
+
+#### `TickLabels`
+:::info
+Since `Plot` options are hardcoded in WL core, we cannot add new options, however using trick with `Insert` any values can be provided to the resulting `Graphics` expression
+:::
+To remove unnecessary ticks, use
+```mathematica
+Plot[x, {x, 0, 1}, Frame->True];
+Insert[%, "TickLabels"->{{True, False}, {True, False}}, {2,-1}]
+```
+
+<Wl>{`Insert[Plot[x, {x, 0, 1}, Frame->True, ImageSize->350], "TickLabels"->{{True, False}, {True, False}}, {2,-1}]`}</Wl>
+
+### `ClippingStyle`
+Show the clipped regions like the rest of the curve and colored
+```mathematica
+Plot[Sin[x]/x^2, {x, -10, 10}, ClippingStyle -> Red]
+```
+
+<Wl>{`Plot[Sin[x]/x^2, {x, -10, 10}, ClippingStyle -> Red, ImageSize->350]`}</Wl>
+
+
+### `Filling`
+Fill the area under, over of between curves
+
+```mathematica
+Plot[Evaluate[Table[BesselJ[n, x], {n, 4}]], {x, 0, 10}, Filling -> Axis]
+```
+
+<Wl>{`Plot[Evaluate[Table[BesselJ[n, x], {n, 4}]], {x, 0, 10}, Filling -> Axis, ImageSize->350]`}</Wl>
+
+Possible options will be
+- `Bottom`
+- `Top`
+- `{1 -> {2}}` from curve 1 to 2
+
+
+### `Baseline`
+Align graphs by the $x$ axis in each plot:
+```mathematica
+{Plot[Im[Zeta[1/2 + I t]], {t, -20, 20}, BaselinePosition -> Axis], 
+ Plot[Re[Zeta[1/2 + I t]], {t, -20, 20}, BaselinePosition -> Axis]} // Row
+```
+
+### `Epilog`
+Puts any graphics object on top of the data plotted
+
+```mathematica
+Plot[Sin[x], {x, 0, 2 Pi}, Epilog -> {PointSize[0.04], Point[{0, 0}], Point[{Pi, 0}], Point[{2 Pi, 0}]}]
+```
+
+<Wl>{`Plot[Sin[x], {x, 0, 2 Pi}, Epilog -> {PointSize[0.04], Point[{0, 0}], Point[{Pi, 0}], Point[{2 Pi, 0}]}, ImageSize->350]`}</Wl>
+
+It opens up many possibilities, since it provides low-level access to the `Graphics` canvas.
+
+### `Prolog`
+The same as [`Epilog`](#`Epilog`), but acts before plotting the data.
+
+### `ExclusionsStyle`
+Use red lines to indicate the vertical asymptotes
+
+```mathematica
+Plot[Tan[x], {x, 0, 10}, Exclusions -> {Cos[x] == 0}, 
+ ExclusionsStyle -> Red]
+```
+
+<Wl>{`Plot[Tan[x], {x, 0, 10}, Exclusions -> {Cos[x] == 0}, 
+ ExclusionsStyle -> Red, ImageSize->350]`}</Wl>
+
+### `ImageSize`
+A common option for any graphics 
+```mathematica
+ImageSize -> Width
+```
+or
+```mathematica
+ImageSize -> {Width, Height}
+```
+It uses pixels as units
+
+### `MaxReqursion`
+Affects the accuracy of the plot when it comes to the sudden changes of a sampled function
+```mathematica
+Plot[Sin[1/x], {x, 0.001, 0.1}, MaxRecursion->1]
+```
+
+<Wl>{`Plot[Sin[1/x], {x, 0.001, 0.1}, MaxRecursion->1, ImageSize->350]`}</Wl>
+
+The lowest values is `0`
+
+### `Mesh`
+Shows sampling points
+```mathematica
+Plot[Sin[1/x], {x, 0.001, 0.1}, Mesh -> All]
+```
+
+<Wl>{`Plot[Sin[1/x], {x, 0.001, 0.1}, Mesh -> All, MaxRecursion->1, ImageSize->350]`}</Wl>
+
+### `PeformanceGoal`
+Affects the number of sampling points to reduce the load
+- `"Speed"`
+- `"Quality"`
+
+### `PlotPoints`
+Change the initial sampling points
+- a number
+
+### `PlotRange`
+Change the lot range to show the whole area
+```mathematica
+Plot[Sqrt[x], {x, -5, 5}, PlotRange -> Full]
+```
+
+<Wl>{`Plot[Sqrt[x], {x, -5, 5}, PlotRange -> Full, MaxRecursion->0,ImageSize->350]`}</Wl>
+
+Or a custom range
+```mathematica
+Plot[Sqrt[x], {x, -5, 5}, PlotRange -> {{-5,5}, {0,1}}]
+```
+
+<Wl>{`Plot[Sqrt[x], {x, -5, 5}, PlotRange -> {{-5,5}, {0,1}}, MaxRecursion->0,ImageSize->350]`}</Wl>
+
+### `RegionFunction`
+Show the specific area only
+```mathematica
+Plot[Sin[x], {x, 0, 8 Pi}, RegionFunction -> Function[{x, y}, Abs[y] > 0.5]]
+```
+
+<Wl>{`Plot[Sin[x], {x, 0, 8 Pi}, 
+ RegionFunction -> Function[{x, y}, Abs[y] > 0.5], ImageSize->350, MaxRecursion->0]`}</Wl>
+
+### `Axes`
+:::caution
+Currently is not supported by [Graphics](../Graphics/Graphics.md) ;(
+:::
+Show or hide axes of the plot
+
+```mathematica
+Plot[Sinc[x], {x, 0, 10}, Axes -> False]
+```
+
+
+
 
 

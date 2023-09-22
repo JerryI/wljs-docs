@@ -35,7 +35,7 @@ Cuboid[]//Graphics3D
 The idea to reproduce full functionality of Mathematica's frontend in this manner is doomed by a few reasons
 
 - frontend functions are poorly documented
-- ~~WYSIWIG editor with mutable WL expressions inside is a mess~~ (see [Decorations](Decorations.md))
+- ~~WYSIWIG editor with mutable WL expressions inside is a mess~~ (see [Decorations](Development/Decorations.md))
 - even with a ~20 years of development, Mathematica frontend is quite laggy
 
 *With some compromises, giving to a user a full control and ability to customize the processes under the hood it might result in an extremely flexible tool.*
@@ -59,7 +59,7 @@ Anyway, since `Plot` and `Plot3D` is an overset of `Graphics` and `Graphics3D` s
 
 *The second one* (__mixed__) is rather tricky to implement fully, since it involves mutable WL expressions. 
 
-However, here also we have a solution. Nowadays developers are using sort-of syntax sugar for the live previews of Markdown, where the code you typing is replaced by the corresponding styled object. A good example is Obsidian - notes making app based on CodeMirror 6 Decorations. Which will require to write a WL tokenizer inside the editor. TL-DR see [Decorations](Decorations.md)
+However, here also we have a solution. Nowadays developers are using sort-of syntax sugar for the live previews of Markdown, where the code you typing is replaced by the corresponding styled object. A good example is Obsidian - notes making app based on CodeMirror 6 Decorations. Which will require to write a WL tokenizer inside the editor. TL-DR see [Decorations](Development/Decorations.md)
 
 ### For the sake of performance
 For the most cases there is no point in interpreting the whole output expression.
@@ -82,5 +82,5 @@ RowBoxAlt[x_List, y___] := StringJoin @@ (ToString[#] & /@ x)
 ( (a b)/Sqrt[2] // ToBoxes ) /. {RowBox -> RowBoxAlt} // ToString
 ```
 
-The issues with styling and etc can also be solved - see [Decorations](Decorations.md)
+The issues with styling and etc can also be solved - see [Decorations](Development/Decorations.md)
 

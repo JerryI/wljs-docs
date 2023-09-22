@@ -184,7 +184,7 @@ When Wolfram Kernel encounters a `FrontEndExecutable` during the evaluation, it 
 Magic := With[{uid = CreateUUID[]},
 	With[{o = CreateFrontEndObject[TextView["Hello World"], uid]},
 		(* a trick to sublimate a private copy *)
-		CreateFrontEndObject["Cucumbers", uid, "Override"->True];
+		CreateFrontEndObject["Cucumbers", uid, "Type"->"Private"];
 		o
 	]
 ]
@@ -222,7 +222,7 @@ PointerAssist[init_:{0,0}] := With[{uid = CreateUUID[]},
     		(* private *)
     		CreateFrontEndObject[With[{g = gizmo[variable, text]},
     			Offload[Static[g]; variable]
-    		], uid, "Override"->True];
+    		], uid, "Type"->"Private"];
 
             (* public *)
             fe

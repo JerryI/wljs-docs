@@ -317,7 +317,7 @@ core.MyFunction = (args, env) => {
 }
 ```
 
-Global memory is created at each widget creating in CM6 editor (see [Decorations](../Decorations.md)) or on each websocket call, i.e. `SendToFrontEnd`. 
+Global memory is created at each widget creating in CM6 editor (see [Decorations](../Development/Decorations.md)) or on each websocket call, i.e. `SendToFrontEnd`. 
 
 Depending, where it is supposed to be executed, one can have an access to various page elements. For instance, if it is called from the CM6 editor it provides `env.element` - an access to DOM placeholder in the editor.
 
@@ -392,7 +392,7 @@ This behaviuor is achived by storing the information about parent `FrontEndExecu
 
 In general there are two main types of events that can happend and fire the evaluation using scepific methods (see [Default methods](#Default%20methods) and [WLJS Interpreter](https://github.com/JerryI/wljs-interpreter))
 
-- Editor's widget held Frontend object was destoryed (see [Decorations](../Decorations.md))
+- Editor's widget held Frontend object was destoryed (see [Decorations](../Development/Decorations.md))
 > fires the evaluation  of the whole three ==from top to the bottom== using `destroy` method
 
 - The data in storage was updated
@@ -433,7 +433,7 @@ The fastest method will be
 ```mathematica
 FrontEndRef["uid_2"] = RandomReal[{0,100}, 10];
 ```
-where our editor will not create a widget with an instance inside (see more [Decorations](../Decorations.md)).
+where our editor will not create a widget with an instance inside (see more [Decorations](../Development/Decorations.md)).
 Or if you are nerd like me (maintener @JerryI) and want full control, one can do it explicitly
 
 ```mathematica

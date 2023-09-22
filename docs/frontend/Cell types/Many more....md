@@ -1,14 +1,10 @@
 ---
 sidebar_position: 5
 ---
-You can extend output cell types via a few lines of code and you favorite framework / package!
+You can extend output cell types via a few lines of code and you favorite framework / package
 
 :::info
-[WSP](https://github.com/JerryI/tinyweb-mathematica) Template engine is supported. Use tags 
-```php
-<?wsp Now//TextString ?>
-```
-to embed any wolfram expressions.
+Please, see [Known packages](../Plugins/Known%20packages.md) page __for more information__
 :::
 
 #### Mermaid

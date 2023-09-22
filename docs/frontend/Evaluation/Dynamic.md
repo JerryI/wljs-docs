@@ -77,7 +77,7 @@ server.talkKernel('Print["Hi!"]')
 ```
 
 #### How to reply back?
-To make fire the chain backwards we rely on the direct communication between frontend and the secondary kernel. Secondary kernel is always aware, to which notebook it is connected. Then to execute any frontend function (see [[Frontend functions]]) one can call
+To make fire the chain backwards we rely on the direct communication between frontend and the secondary kernel. Secondary kernel is always aware, to which notebook it is connected. Then to execute any frontend function (see [[../Advanced/Frontend functions]]) one can call
 
 ```mathematica
 FrontSubmit[ Alert["Hello World"] ];

@@ -8,14 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d7ed26eb3e18ff9b",
+            "id": "7603512ee7ff4fb6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/depricated-remove-it.md",
+                "file": "frontend/Reference/Plotting/VectorPlot3D.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "7328a6aa54f0c365",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.13"
               }
             }
           }
@@ -58,7 +68,7 @@
             }
           },
           {
-            "id": "e65244ca3d2dfa15",
+            "id": "417adf5fb721b03b",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -85,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/depricated-remove-it.md",
+                "file": "frontend/Reference/Plotting/VectorPlot3D.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/depricated-remove-it.md",
+                "file": "frontend/Reference/Plotting/VectorPlot3D.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/depricated-remove-it.md"
+                "file": "frontend/Reference/Plotting/VectorPlot3D.md"
               }
             }
           },
@@ -157,34 +167,37 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d7ed26eb3e18ff9b",
+  "active": "7603512ee7ff4fb6",
   "lastOpenFiles": [
-    "interpreter/Basics/scripts.md",
-    "frontend/Advanced/depricated-remove-it.md",
-    "interpreter/Basics/js-access.md",
-    "frontend/Advanced/executables.md",
-    "frontend/Reference/Dynamics/CreateFrontEndObject.md",
-    "frontend/Reference/WLJS/FrontEndVirtual.md",
-    "frontend/Reference/WLJS/Constant.md",
-    "frontend/Reference/WLJS/Association.md",
-    "frontend/Reference/WLJS/AttachDOM.md",
-    "frontend/Reference/WLJS/Alert.md",
-    "frontend/Reference/Tools/EvaluatingCell.md",
-    "frontend/Reference/Tools/SetTimeout.md",
-    "frontend/Reference/Tools/SetInterval.md",
+    "frontend/Reference/Plotting/ContourPlot.md",
+    "frontend/Reference/Plotting/VectorPlot3D.md",
+    "frontend/Reference/Plotting/ArrayPlot.md",
+    "frontend/Reference/Plotting/VectorPlot.md",
+    "frontend/Reference/Plotting/StreamPlot.md",
+    "frontend/Reference/Plotting/ListVectorPlot.md",
+    "frontend/Reference/Plotting/StackedListPlot.md",
+    "frontend/Reference/Plotting/ListContourPlot.md",
+    "frontend/Reference/Graphics/SVGAttribute.md",
+    "frontend/Reference/Graphics/Arrow.md",
+    "frontend/Reference/Plotting/ListCurvePathPlot.md",
+    "frontend/Reference/Plotting/ListStepPlot.md",
+    "frontend/Reference/Plotting/ListLinePlot.md",
+    "frontend/Reference/Plotting/ListLinePlotly.md",
+    "frontend/Reference/Plotting/MatrixPlot.md",
     "frontend/Reference/Plotting/RandomImage.md",
-    "frontend/Reference/Input/TextView.md",
-    "frontend/Reference/Dynamics/FrontEndExecutable.md",
-    "interpreter/Advanced/containers.md",
-    "frontend/Reference/Graphics/Text.md",
-    "frontend/Reference/Input/Slider.md",
-    "frontend/Reference/Tools/Iconize.md",
-    "frontend/Reference/Tools/NotebookStore.md",
-    "frontend/Reference/Graphics3D/Sphere.md",
-    "frontend/Reference/Graphics3D/Cuboid.md",
-    "frontend/Reference/Graphics3D/Graphics3D.md",
-    "frontend/Reference/Graphics/Point.md",
-    "frontend/Reference/Graphics/Untitled.md",
+    "frontend/Reference/Plotting/Plot.md",
+    "frontend/Reference/Decorations/NoBoxes.md",
+    "frontend/Reference/Decorations/Grid.md",
+    "frontend/Reference/Events/Assign.md",
+    "frontend/Reference/Events/EventJoin.md",
+    "frontend/Reference/Decorations/Style.md",
+    "frontend/Reference/Dynamics/FrontSubmit.md",
+    "frontend/Reference/Dynamics/FrontEndVirtual.md",
+    "frontend/Reference/Dynamics/Offload.md",
+    "frontend/Reference/Decorations/Framed.md",
+    "frontend/Reference/Decorations",
+    "frontend/Plugins",
+    "frontend/Reference/Dynamics/Internals",
     "frontend/Reference/WLJS",
     "frontend/Reference/Tools",
     "frontend/Reference/Input",
@@ -192,9 +205,6 @@
     "frontend/Reference/Dynamics",
     "frontend/Reference/Plotting",
     "frontend/Reference/Graphics3D",
-    "frontend/Reference/Graphics",
-    "frontend/Reference",
-    "frontend/Advanced/files/Greyness.wln",
     "frontend/Tutorial/imgs/left.png",
     "frontend/Tutorial/imgs/right.png",
     "frontend/Tutorial/imgs/window 1.png",

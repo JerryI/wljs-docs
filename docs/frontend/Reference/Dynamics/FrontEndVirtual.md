@@ -1,0 +1,59 @@
+---
+env:
+  - WLJS
+virtual: true
+---
+It is a virtual [container](../../../interpreter/Advanced/containers.md) wrapper for any expressions evaluated on WLJS
+
+```mathematica
+FrontEndVirtual[expr_]
+```
+
+## Examples
+Most use cases comes, when [WLJS](../../../interpreter/intro.md) is used as a standalone interpreter, but you can simulate it from WLJS Frontend as well using [FrontSubmit](FrontSubmit.md)
+
+*cell 1*
+```html
+.html
+<div id="container"></div>
+```
+
+*cell 2*
+```mathematica
+FrontSubmit[With[{},
+	a = Table[{{0,0}, RandomReal[{-1,1}, 2]}, {i, 100}];  
+  
+	FrontEndVirtual[{  
+		AttachDOM["container"];  
+		Graphics[{RGBColor[0.0,1.0,1.0],  
+		  Table[Line[a[[i]]], {i, Length[a]}]
+		}];  
+	}];  
+  
+	(* mix them up *)  
+	i = 0;
+	While[i < 30,
+	  Pause[0.1];
+	  a = RandomSample[a];
+	  i = i + 1;
+	];
+] // Offload]
+```
+
+Without a container [`Graphics`](../Graphics/Graphics.md) just will not work properly.
+
+<Wl>{`Graphics[{RGBColor[0.0,1.0,1.0],  Line[Table[{{0,0}, RandomReal[{-1.4,1.4}, 2]}, {i, 100}]]}, ImageSize->350]`}</Wl>
+
+__Adapted from__ [symbols](../../../interpreter/Advanced/symbols.md)
+
+## Dev notes
+Now you are reading this documentation pages and see examples with graphics and etc. Most of them are made using just
+
+```mathematica
+FrontEndVirtual[With[{},
+	AttachDOM["id"];
+	Graphics[...]	
+]]
+```
+
+embedded as a `script` into the HTML tree.

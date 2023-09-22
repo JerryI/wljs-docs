@@ -9,7 +9,7 @@ Is in development.
 Please, check the page later
 :::
 
-Also see [Decorations](../../Decorations.md)
+Also see [Decorations](../Development/Decorations.md)
 
 ## Low-level implementation
 For example, you have an object like this
@@ -45,7 +45,7 @@ core.Mesh.destroy => {}
 
 ==It becomes [[Frontend Object]]==
 
-To read about it in more details, please see [Frontend functions](Frontend%20functions.md) and [Frontend objects](Frontend%20objects.md). 
+To read about it in more details, please see [Frontend functions](../Advanced/Frontend%20functions.md) and [Frontend objects](Frontend%20objects.md). 
 It principle it gives you much more flexibillity, but is also harder to do.
 
 ✅  flexibillity

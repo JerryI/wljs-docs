@@ -168,14 +168,14 @@ The expression arrives in a form of string and then converts to the Wolfram Expr
 
 To support fully [[Frontend Object]] it replace them with an actual wolfram expressions. If it is not available on the kernel it makes a query to the master kernel and download them.
 
-All non-native boxes, decorations (see [Decorations](../Decorations.md) are replaced with the corresponding Wolfram Expressions.
+All non-native boxes, decorations (see [Decorations](../Development/Decorations.md) are replaced with the corresponding Wolfram Expressions.
 
 The result evaluates normally. However if it encounters the creation function for [[Frontend Object]] or registered Frontend Objects (see [[Writting WebObject]]) like `Graphics`, `Plotly` it replaces them with `FrontEndExecutable` and stores the compressed to JSON data for them into the local storage to be shared lately with the master kernel and a notebook.
 
 ##### Different copies of `FrontEndExecutable`
 Each time you evaluate `Graphics` or whatever frontend object, it creates two copies of its representation: one is stored on frontend kernel (master Wolfram Kernel), which is shared with a browser (WLJS), while there is other *private* copy of it on the secondary Wolfram Kernel. When Wolfram Kernel encounters a `FrontEndExecutable` during the evaluation, it uses (if available) its private copy, and if not it downloads the shared one into the private storage.  **See how it can be used [HERE](https://jerryi.github.io/wljs-docs/blog/feobjects-example)**
 
-On the very last stage it converts the result to sort of `Boxes` (see [Decorations](../Decorations.md)).
+On the very last stage it converts the result to sort of `Boxes` (see [Decorations](../Development/Decorations.md)).
 
 If the resulting string is too long, then instead of a string it returns a pointer to the corresponding data to prevent frontend overloading
 

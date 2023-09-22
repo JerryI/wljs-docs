@@ -70,12 +70,12 @@ Due to the encoding problems there were replaced by an expressions like
 \[Alpha] -> $alpha$
 ```
 
-which are replaced by an  [uneditable decoration](Decorations.md), so you will not see them in real life. Use commands `ESC` + `alpha`  and pick up a macro from the autocomplete menu.
+which are replaced by an  [uneditable decoration](Development/Decorations.md), so you will not see them in real life. Use commands `ESC` + `alpha`  and pick up a macro from the autocomplete menu.
 
 Apart from that, traditional way of writing them is still supported. 
 
 ## Boxes
-Most boxes are not available (for example the output of `Now` will look like a mess) excluding most common that comes with math, i.e. `Grid`, `Column`, `Fraction`... See more @ [Decorations](Decorations.md) 
+Most boxes are not available (for example the output of `Now` will look like a mess) excluding most common that comes with math, i.e. `Grid`, `Column`, `Fraction`... See more @ [Decorations](Development/Decorations.md) 
 
 ## Dynamics
 There is such thing as `Dynamic` and `DynamicModule` in WLJS Frontend compared to Mathematica. The dynamic binding happens between a specific expressions (__if they support__) and does not necessary cause a full reevaluation
