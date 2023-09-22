@@ -109,7 +109,7 @@ registeredTags.registered = (a) => {
   return (<>
      <Link
                 className='envContainer'
-                to="/registered"><div style={{'background': 'var(--ifm-color-info-darkest)'}} className='emphs'>registered</div></Link>
+                to="/registered"><div style={{'background': 'var(--ifm-color-info-darkest)'}} className='emphs'>Registered</div></Link>
   </>);
 }
 
