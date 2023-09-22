@@ -4,7 +4,7 @@ import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { interpolate } from '@docusaurus/Interpolate';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 
-import { Mma } from 'mma-uncompress/src/mma.js';
+//import { Mma } from 'mma-uncompress/src/mma.js';
 
 export default function Wl({children, data}) {
     const ref = useRef(null);
@@ -26,13 +26,19 @@ export default function Wl({children, data}) {
       let env = {global: global, element: elt}; //Created in CM6
       console.warn('decrypting...');
 
-      let decoded = Mma.DecompressDecode(data);
-      decoded = Mma.toArray(decoded.parts[0]);
-      console.log(decoded);
-      
-      //const decoded = atob(data);
+      try {
+        //let decoded = Mma.DecompressDecode(data);
+        //decoded = Mma.toArray(decoded.parts[0]);
+        let decoded = JSON.parse(atob(data));
+        console.log(decoded);
+        
+        //const decoded = atob(data);
 
-      interpretate(['FrontEndVirtual', decoded], env);
+        interpretate(['FrontEndVirtual', decoded], env);
+      } catch(error) {
+        console.warn('Error!');
+        console.warn(error);
+      }
       
       /*
       console.log('decoded!');

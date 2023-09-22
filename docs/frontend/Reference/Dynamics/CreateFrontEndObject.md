@@ -32,7 +32,8 @@ dynText = RandomWord[];
 TextView[dynText // Offload] // CreateFrontEndObject
 ```
 
-<Wl data={`"1:eJxTTMoPSmNkYGAo5gASIakVJWGZqeUQEXYg4Z+WlpOfmBLMCmSXFJUmZwMADLcLhA=="`}>{`TextView[RandomSample[{"apple", "orange", "truck"}] // First // Offload]`}</Wl>
+<Wl data={`WyJUZXh0VmlldyIsWyJPZmZsb2FkIiwiJ2FwcGxlJyJdXQ==
+`}>{`TextView[RandomSample[{"apple", "orange", "truck"}] // First // Offload]`}</Wl>
 
 then, one can update the symbol `dynText` and see that the field above will also be updated
 
@@ -56,7 +57,8 @@ and then in the next cell
 CreateFrontEndObject[MyCustomStuff[]]
 ```
 
-<Wl data={`"1:eJxTTMoPSmNkYGAoFgESzkWpiSWpbkX5eSWueSn+SVmpySUQWQ4gEZJaURKWmVoeDOJ4ZCqklKakKgIAKrgRDw=="`}>{`CreateFrontEndObject[TextView["Hi dude!"]]`}</Wl>
+<Wl data={`WyJDcmVhdGVGcm9udEVuZE9iamVjdCIsWyJUZXh0VmlldyIsIidIaSBkdWRlISciXV0=
+`}>{`CreateFrontEndObject[TextView["Hi dude!"]]`}</Wl>
 
 If you apply it to a regular function, which is already registered in the system to have an automatic container generation, it __it will not have any effect__
 
@@ -83,7 +85,10 @@ Then one can create a graph and use it with a reference (using [`FrontEndRef`](I
 Graphics[{Red, PointSize[0.1], Point[FrontEndRef["data"]]}]
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpzCARFiDhk1lcAuGB5IPcnZzzc/KLMhmBnEwGGJEG4hZzAomA/My8kuDMqtSiWTNBYKc9RI4VJgfhsgMJ/7S0nPzElFSQAMgBMik2T5OtHu2fIGJ0amvzNXuIq0BuCCrNSQWb7pmbmJ4KMj3zC1AXACqTLOA="`}>{`Graphics[{Red, PointSize[0.1], Point[RandomReal[{-1,1}, 2] // Offload]}, ImageSize->500]`}</Wl>
+<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlJHQkNvbG9yIiwxLDAsMF0sWyJQb2ludFNpemUiLDAuMV0s
+WyJQb2ludCIsWyJPZmZsb2FkIixbIkxpc3QiLC0wLjUwMjM3Nzk3NjIzMzYxMDUsLTAuNjQ4MzAy
+OTU2NDUxMzAyOF1dXV0sWyJSdWxlIiwiSW1hZ2VTaXplIiw1MDBdXQ==
+`}>{`Graphics[{Red, PointSize[0.1], Point[RandomReal[{-1,1}, 2] // Offload]}, ImageSize->500]`}</Wl>
 
 If one change the object `data` in other cell, the position of a point will be changed as well dynamically with no reevaluation involved, i.e.
 
@@ -160,7 +165,10 @@ This will send a direct message to evaluate the inner expression on the frontend
 <div id="dom-id"></div>
 ```
 
-<Wl data={`"1:eJxTTMoPSmNkYGAoZgcS/mlpOfmJKWksIAEQ4ZNZXJLGhMzLBNIMCAIiyQEk3IsSCzIyk4vTmFE0M8Pkg9ydnPNz8osyGVENAFvOCSQC8jPzSoIzq1KLZs0EgZ32EDlWmBwuhyDEg0pzUsFmeeYmpqeCzMr8wgizgw1IBJcklgDdCFLrV5qTAwBgyTOG"`}>{`List[dpt = {0,0}, cnt = 0, Graphics[{Red, PointSize[0.1],Point[dpt]}, ImageSize->500], While[Less[cnt,10],
+<Wl data={`WyJPZmZsb2FkIixbIkxpc3QiLFsiTGlzdCIsMCwwXSwwLFsiR3JhcGhpY3MiLFsiTGlzdCIsWyJS
+R0JDb2xvciIsMSwwLDBdLFsiUG9pbnRTaXplIiwwLjFdLFsiUG9pbnQiLFsiTGlzdCIsMCwwXV1d
+LFsiUnVsZSIsIkltYWdlU2l6ZSIsNTAwXV0sWyJTdGF0aWMiLG51bGxdXV0=
+`}>{`List[dpt = {0,0}, cnt = 0, Graphics[{Red, PointSize[0.1],Point[dpt]}, ImageSize->500], While[Less[cnt,10],
     {dpt = RandomReal[{-1,1}, 2],
     cnt = cnt + 1,
     Pause[1]}

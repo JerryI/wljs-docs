@@ -20,7 +20,10 @@ Graphics[{
 }]
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK6A8ViARXFKZkxrMDWR5pObk5CuE5xflpCAUB5XmpIJNdcvPKwnOrErN5ANyEPIgozOBNAOYQNPHCWR45iamp4I1fgG6BwC3ESN5"`}>{`Graphics[{
+<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlRleHQiLFsiU3R5bGUiLCInSGVsbG8gV29ybGQnIixbIlJ1
+bGUiLCJGb250U2l6ZSIsMTRdXSxbIkxpc3QiLDAsMF1dXSxbIlJ1bGUiLCJJbWFnZVNpemUiLDUw
+MF1d
+`}>{`Graphics[{
 	Text[Style["Hello World", FontSize->14], {0,0}]
 }, ImageSize->500]`}</Wl>
 
@@ -37,7 +40,9 @@ Graphics[{
 ```
 
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycUQERYg4ZNZXJLGDJMPcndyzs/JL8pkBHIyGWAEQnlIakVJMDeQ4ZGak5OvEJ5flJOCahg2XUGlOanFnECGZ25iempwZlVq5hegDQAyCx7o"`}>{`Graphics[{
+<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlJHQkNvbG9yIiwxLDAsMF0sWyJUZXh0IiwiJ0hlbGxvIFdv
+cmxkJyIsWyJMaXN0IiwwLDBdXV0sWyJSdWxlIiwiSW1hZ2VTaXplIiw1MDBdXQ==
+`}>{`Graphics[{
 	Red, Text["Hello World", {0,0}]
 }, ImageSize->500]`}</Wl>
 
@@ -72,14 +77,19 @@ Text["wavenumber (cm^{-1})", {0,0}]
 Text["\\alpha (cm^{-1})", {0,0}]
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycUQERYg4ZNZXILghaRWlASLABnliWWpeaW5SalFChrJuXHVuoa1mqiaMoE0A5hA0y4IZMTEJOYUZCTi1Vs0ayYI3NyPkAsqzUkt5gQyPHMT01ODM6tSM78wMjAAALcKLiw="`}>{`Graphics[{Text["wavenumber (cm^{-1})", {0,0}], Text["\\alpha (cm^{-1})", {0,-0.4}]}, ImageSize->500]`}</Wl>
+<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlRleHQiLCInd2F2ZW51bWJlciAoY21eey0xfSknIixbIkxp
+c3QiLDAsMF1dLFsiVGV4dCIsIidcXGFscGhhIChjbV57LTF9KSciLFsiTGlzdCIsMCwtMC40XV1d
+LFsiUnVsZSIsIkltYWdlU2l6ZSIsNTAwXV0=
+`}>{`Graphics[{Text["wavenumber (cm^{-1})", {0,0}], Text["\\alpha (cm^{-1})", {0,-0.4}]}, ImageSize->500]`}</Wl>
 
 A list of features
 - most used Greek symbols like `alpha` and etc are supported
 - subscript `a_1` or `a_{hi}`
 - superscript `a^2` or `a^{23}`
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK0qC5YGMxHhDhfwihcT46ozMWoXEvBSFxDgjsEhctZFxLUIHSH8mkGYAEwjxoNKc1GJOIMMzNzE9NTizKjXzC9BSAOdPICE="`}>{`Graphics[{Text["a_1 or a_{hi} and a^2 or a^{23}", {0,0}]}, ImageSize->500]`}</Wl>
+<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlRleHQiLCInYV8xIG9yIGFfe2hpfSBhbmQgYV4yIG9yIGFe
+ezIzfSciLFsiTGlzdCIsMCwwXV1dLFsiUnVsZSIsIkltYWdlU2l6ZSIsNTAwXV0=
+`}>{`Graphics[{Text["a_1 or a_{hi} and a^2 or a^{23}", {0,0}]}, ImageSize->500]`}</Wl>
 
 In principle, it will anyway ends up in HTML, therefore one can use any special symbol
 
@@ -87,4 +97,6 @@ In principle, it will anyway ends up in HTML, therefore one can use any special 
 "I will display &#10060;"
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK0qCxYEMT4XyzJwchZTM4oKcxEoFNWVDAwMzA2uESpC+TCDNACYQ4kGlOanFnCATchPTU4Mzq1IzvwAtAwCCIRyv"`}>{`Graphics[{Text["I will display &#10060;", {0,0}]}, ImageSize->500]`}</Wl>
+<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlRleHQiLCInSSB3aWxsIGRpc3BsYXkgJiMxMDA2MDsnIixb
+Ikxpc3QiLDAsMF1dXSxbIlJ1bGUiLCJJbWFnZVNpemUiLDUwMF1d
+`}>{`Graphics[{Text["I will display &#10060;", {0,0}]}, ImageSize->500]`}</Wl>

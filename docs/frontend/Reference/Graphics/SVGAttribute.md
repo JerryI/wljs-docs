@@ -21,5 +21,8 @@ Graphics[
 ]
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycUQER4gERzm7lhSUpSZVFqSmsYIEmUBEj6ZeakQNRBecQkqL/M/EIAJNHGQCWACIR5UmpMaLADilRTlZ6fqpiQWZyQWFSVWBoPUGaMqLOYEMjxzE9NTgzOrUjO/AJUAAAEGMA0="`}>{`Graphics[SVGAttribute[Line[{{-1,-1}, {1,1}}], "stroke-dasharray"->"3"], ImageSize->500]`}</Wl>
+<Wl data={`WyJHcmFwaGljcyIsWyJTVkdBdHRyaWJ1dGUiLFsiTGluZSIsWyJMaXN0IixbIkxpc3QiLC0xLC0x
+XSxbIkxpc3QiLDEsMV1dXSxbIlJ1bGUiLCInc3Ryb2tlLWRhc2hhcnJheSciLCInMyciXV0sWyJS
+dWxlIiwiSW1hZ2VTaXplIiw1MDBdXQ==
+`}>{`Graphics[SVGAttribute[Line[{{-1,-1}, {1,1}}], "stroke-dasharray"->"3"], ImageSize->500]`}</Wl>
 

@@ -6,7 +6,7 @@ TextNode /: ToString[TextNode[x_]] := x["data"];
 WLNode /: ToString[WLNode[x_]] := "<Wl data={`"<>x["data"]<>"`}"<>">"<>x["src"]<>"</Wl>";
 
 Enc[expr_] := ExportString[ExportString[expr, "ExpressionJSON", "Compact"->0], "Base64"]
-Enc[expr_] := "\""<>Compress[expr]<>"\"";
+(*Enc[expr_] := "\""<>Compress[expr]<>"\"";*)
 
 compile[str_] := Module[{tokens, open, close},
 open = StringPosition[str, RegularExpression["<Wl[^<|>]*>"]];
