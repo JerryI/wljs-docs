@@ -32,7 +32,7 @@ dynText = RandomWord[];
 TextView[dynText // Offload] // CreateFrontEndObject
 ```
 
-<Wl data={`"1:eJxTTMoPSmNkYGAo5gASIakVJWGZqeUQEXYg4Z+WlpOfmBLMBmTnFyXmpacCABhVC9g="`}>{`TextView[RandomSample[{"apple", "orange", "truck"}] // First // Offload]`}</Wl>
+<Wl data={`"1:eJxTTMoPSmNkYGAo5gASIakVJWGZqeUQEXYg4Z+WlpOfmBLMCmSXFJUmZwMADLcLhA=="`}>{`TextView[RandomSample[{"apple", "orange", "truck"}] // First // Offload]`}</Wl>
 
 then, one can update the symbol `dynText` and see that the field above will also be updated
 
@@ -83,7 +83,7 @@ Then one can create a graph and use it with a reference (using [`FrontEndRef`](I
 Graphics[{Red, PointSize[0.1], Point[FrontEndRef["data"]]}]
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpzCARFiDhk1lcAuGB5IPcnZzzc/KLMhmBnEwGGJEG4hZzAomA/My8kuDMqtSiWTNBYKc9RI4VJgfhsgMJ/7S0nPzElFSQAMgBAQsUb07a8XL/DkdhZ2fF6/YQV4HcEFSakwo23TM3MT0VZHpmHFAXACv4LCM="`}>{`Graphics[{Red, PointSize[0.1], Point[RandomReal[{-1,1}, 2] // Offload]}, ImageSize->350]`}</Wl>
+<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpzCARFiDhk1lcAuGB5IPcnZzzc/KLMhmBnEwGGJEG4hZzAomA/My8kuDMqtSiWTNBYKc9RI4VJgfhsgMJ/7S0nPzElFSQAMgBMik2T5OtHu2fIGJ0amvzNXuIq0BuCCrNSQWb7pmbmJ4KMj3zC1AXACqTLOA="`}>{`Graphics[{Red, PointSize[0.1], Point[RandomReal[{-1,1}, 2] // Offload]}, ImageSize->500]`}</Wl>
 
 If one change the object `data` in other cell, the position of a point will be changed as well dynamically with no reevaluation involved, i.e.
 
@@ -160,7 +160,7 @@ This will send a direct message to evaluate the inner expression on the frontend
 <div id="dom-id"></div>
 ```
 
-<Wl data={`"1:eJxTTMoPSmNkYGAoZgcS/mlpOfmJKWksIAEQ4ZNZXJLGhMzLBNIMCAIiyQEk3IsSCzIyk4vTmFE0M8Pkg9ydnPNz8osyGVENAFvOCSQC8jPzSoIzq1KLZs0EgZ32EDlWmBwuhyDEg0pzUsFmeeYmpqeCzMqMY4TZwQYkgksSS4BuBKn1K83JAQBPyzLw"`}>{`List[dpt = {0,0}, cnt = 0, Graphics[{Red, PointSize[0.1],Point[dpt]}, ImageSize->350], While[Less[cnt,10],
+<Wl data={`"1:eJxTTMoPSmNkYGAoZgcS/mlpOfmJKWksIAEQ4ZNZXJLGhMzLBNIMCAIiyQEk3IsSCzIyk4vTmFE0M8Pkg9ydnPNz8osyGVENAFvOCSQC8jPzSoIzq1KLZs0EgZ32EDlWmBwuhyDEg0pzUsFmeeYmpqeCzMr8wgizgw1IBJcklgDdCFLrV5qTAwBgyTOG"`}>{`List[dpt = {0,0}, cnt = 0, Graphics[{Red, PointSize[0.1],Point[dpt]}, ImageSize->500], While[Less[cnt,10],
     {dpt = RandomReal[{-1,1}, 2],
     cnt = cnt + 1,
     Pause[1]}

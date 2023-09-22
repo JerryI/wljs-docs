@@ -20,9 +20,9 @@ Graphics[{
 }]
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK6A8ViARXFKZkxrMDWR5pObk5CuE5xflpCAUB5XmpIJNdcvPKwnOrErN5ANyEPIgozOBNAOYQNPHCWR45iamp4I1xgHdAwC0uSLj"`}>{`Graphics[{
+<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK6A8ViARXFKZkxrMDWR5pObk5CuE5xflpCAUB5XmpIJNdcvPKwnOrErN5ANyEPIgozOBNAOYQNPHCWR45iamp4I1fgG6BwC3ESN5"`}>{`Graphics[{
 	Text[Style["Hello World", FontSize->14], {0,0}]
-}, ImageSize->350]`}</Wl>
+}, ImageSize->500]`}</Wl>
 
 ### Styling options
 The following options can be provided to [`Style`](Style.md) wrapper
@@ -37,9 +37,9 @@ Graphics[{
 ```
 
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycUQERYg4ZNZXJLGDJMPcndyzs/JL8pkBHIyGWAEQnlIakVJMDeQ4ZGak5OvEJ5flJOCahg2XUGlOanFnECGZ25iempwZlVqZhzQBgAvsx5S"`}>{`Graphics[{
+<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycUQERYg4ZNZXJLGDJMPcndyzs/JL8pkBHIyGWAEQnlIakVJMDeQ4ZGak5OvEJ5flJOCahg2XUGlOanFnECGZ25iempwZlVq5hegDQAyCx7o"`}>{`Graphics[{
 	Red, Text["Hello World", {0,0}]
-}, ImageSize->350]`}</Wl>
+}, ImageSize->500]`}</Wl>
 
 ### Dynamic updates
 For both the position and text content [dynamic updates](../../Tutorial/Dynamics.md) are supported
@@ -72,14 +72,14 @@ Text["wavenumber (cm^{-1})", {0,0}]
 Text["\\alpha (cm^{-1})", {0,0}]
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycUQERYg4ZNZXILghaRWlASLABnliWWpeaW5SalFChrJuXHVuoa1mqiaMoE0A5hA0y4IZMTEJOYUZCTi1Vs0ayYI3NyPkAsqzUkt5gQyPHMT01ODM6tSM+MYGRgAtLItlg=="`}>{`Graphics[{Text["wavenumber (cm^{-1})", {0,0}], Text["\\alpha (cm^{-1})", {0,-0.4}]}, ImageSize->350]`}</Wl>
+<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycUQERYg4ZNZXILghaRWlASLABnliWWpeaW5SalFChrJuXHVuoa1mqiaMoE0A5hA0y4IZMTEJOYUZCTi1Vs0ayYI3NyPkAsqzUkt5gQyPHMT01ODM6tSM78wMjAAALcKLiw="`}>{`Graphics[{Text["wavenumber (cm^{-1})", {0,0}], Text["\\alpha (cm^{-1})", {0,-0.4}]}, ImageSize->500]`}</Wl>
 
 A list of features
 - most used Greek symbols like `alpha` and etc are supported
 - subscript `a_1` or `a_{hi}`
 - superscript `a^2` or `a^{23}`
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK0qC5YGMxHhDhfwihcT46ozMWoXEvBSFxDgjsEhctZFxLUIHSH8mkGYAEwjxoNKc1GJOIMMzNzE9NTizKjUzDmgpAOT3H4s="`}>{`Graphics[{Text["a_1 or a_{hi} and a^2 or a^{23}", {0,0}]}, ImageSize->350]`}</Wl>
+<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK0qC5YGMxHhDhfwihcT46ozMWoXEvBSFxDgjsEhctZFxLUIHSH8mkGYAEwjxoNKc1GJOIMMzNzE9NTizKjXzC9BSAOdPICE="`}>{`Graphics[{Text["a_1 or a_{hi} and a^2 or a^{23}", {0,0}]}, ImageSize->500]`}</Wl>
 
 In principle, it will anyway ends up in HTML, therefore one can use any special symbol
 
@@ -87,4 +87,4 @@ In principle, it will anyway ends up in HTML, therefore one can use any special 
 "I will display &#10060;"
 ```
 
-<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK0qCxYEMT4XyzJwchZTM4oKcxEoFNWVDAwMzA2uESpC+TCDNACYQ4kGlOanFnCATchPTU4Mzq1Iz44CWAQB/yRwZ"`}>{`Graphics[{Text["I will display &#10060;", {0,0}]}, ImageSize->350]`}</Wl>
+<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycVpjCARFiDhk1lcApEH8UJSK0qCxYEMT4XyzJwchZTM4oKcxEoFNWVDAwMzA2uESpC+TCDNACYQ4kGlOanFnCATchPTU4Mzq1IzvwAtAwCCIRyv"`}>{`Graphics[{Text["I will display &#10060;", {0,0}]}, ImageSize->500]`}</Wl>

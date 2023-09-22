@@ -21,5 +21,5 @@ Graphics[
 ]
 ```
 
-<Wl>{`Graphics[SVGAttribute[Line[{{-1,-1}, {1,1}}], "stroke-dasharray"->"3"], ImageSize->350]`}</Wl>
+<Wl data={`"1:eJxTTMoPSmNiYGAo5gAS7kWJBRmZycUQER4gERzm7lhSUpSZVFqSmsYIEmUBEj6ZeakQNRBecQkqL/M/EIAJNHGQCWACIR5UmpMaLADilRTlZ6fqpiQWZyQWFSVWBoPUGaMqLOYEMjxzE9NTgzOrUjO/AJUAAAEGMA0="`}>{`Graphics[SVGAttribute[Line[{{-1,-1}, {1,1}}], "stroke-dasharray"->"3"], ImageSize->500]`}</Wl>
 
