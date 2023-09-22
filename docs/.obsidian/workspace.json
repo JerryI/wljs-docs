@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotting/VectorPlot3D.md",
+                "file": "frontend/Reference/Plotting/ListLinePlotly.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,13 +23,16 @@
             "id": "7328a6aa54f0c365",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.4.13"
+                "file": "frontend/Reference/Plotting/ListLinePlotly.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Plotting/VectorPlot3D.md",
+                "file": "frontend/Reference/Plotting/ListLinePlotly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Plotting/VectorPlot3D.md",
+                "file": "frontend/Reference/Plotting/ListLinePlotly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Plotting/VectorPlot3D.md"
+                "file": "frontend/Reference/Plotting/ListLinePlotly.md"
               }
             }
           },
@@ -167,10 +170,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7603512ee7ff4fb6",
+  "active": "7328a6aa54f0c365",
   "lastOpenFiles": [
-    "frontend/Reference/Plotting/ContourPlot.md",
+    "frontend/Reference/Plotting/ListLinePlot.md",
+    "frontend/Reference/Plotting/ListLinePlotly.md",
+    "frontend/Reference/Plotting/Plotly.md",
+    "frontend/Reference/Plotting/Plot.md",
     "frontend/Reference/Plotting/VectorPlot3D.md",
+    "frontend/Reference/Plotting/ContourPlot.md",
     "frontend/Reference/Plotting/ArrayPlot.md",
     "frontend/Reference/Plotting/VectorPlot.md",
     "frontend/Reference/Plotting/StreamPlot.md",
@@ -181,11 +188,8 @@
     "frontend/Reference/Graphics/Arrow.md",
     "frontend/Reference/Plotting/ListCurvePathPlot.md",
     "frontend/Reference/Plotting/ListStepPlot.md",
-    "frontend/Reference/Plotting/ListLinePlot.md",
-    "frontend/Reference/Plotting/ListLinePlotly.md",
     "frontend/Reference/Plotting/MatrixPlot.md",
     "frontend/Reference/Plotting/RandomImage.md",
-    "frontend/Reference/Plotting/Plot.md",
     "frontend/Reference/Decorations/NoBoxes.md",
     "frontend/Reference/Decorations/Grid.md",
     "frontend/Reference/Events/Assign.md",
@@ -194,7 +198,6 @@
     "frontend/Reference/Dynamics/FrontSubmit.md",
     "frontend/Reference/Dynamics/FrontEndVirtual.md",
     "frontend/Reference/Dynamics/Offload.md",
-    "frontend/Reference/Decorations/Framed.md",
     "frontend/Reference/Decorations",
     "frontend/Plugins",
     "frontend/Reference/Dynamics/Internals",

@@ -2,6 +2,8 @@
 
 SetAttribute[Offload, HoldFirst]
 
+Plotly[f_, range_, op : OptionsPattern[Plot]] := Plot[f, range, op] // Cases[#, Line[x_] :> x, All] & // ListLinePlotly[#, op] & 
+
 TextNode /: ToString[TextNode[x_]] := x["data"];
 WLNode /: ToString[WLNode[x_]] := "<Wl data={`"<>x["data"]<>"`}"<>">"<>x["src"]<>"</Wl>";
 
@@ -29,7 +31,7 @@ tokens = MapIndexed[{
 StringRiffle[ToString /@ tokens, ""]
 ]
 
-files = FileNames["*.md", FileNameJoin[{Directory[], "docs"}], Infinity];
+files = Join[FileNames["*.md", FileNameJoin[{Directory[], "docs"}], Infinity], FileNames["*.md", FileNameJoin[{Directory[], "src", "pages"}], Infinity]];
 files = Select[files, StringMatchQ[Import[#, "String"], ___~~"</Wl>"~~___]&];
 With[{t = Print[#], res = compile[Import[#, "String"]]},
     If[!FailureQ[res] && StringQ[res],

@@ -15,9 +15,12 @@
     margin-right:1em;
     font-size:small;
     font-weight: 600;
-    background: var(--ifm-breadcrumb-item-background-active);
-color: var(--ifm-breadcrumb-color-active);   
+
+    color: var(--ifm-breadcrumb-color-active);   
+    cursor: pointer;
 }
+
+
 
 .envTextInfo {
     /*! font-size: unset; */
@@ -42,6 +45,8 @@ color: var(--ifm-breadcrumb-color-active);
     margin-right: 0.5em;
 }
 
+
+
 .emphs {
     font-weight: normal;
     color: var(--ifm-background-surface-color);
@@ -49,6 +54,8 @@ color: var(--ifm-breadcrumb-color-active);
     padding-left: 0.5em;
     padding-right: 0.5em;
     border-radius: 2px;
+    font-weight: 600;
     text-align: center;
     padding-top: 0.em;
   }
+

@@ -1,3 +1,58 @@
+:root {
+  --sidebar-text-color: rgb(52,51,52);
+  --topbar-text-color: rgb(52,51,52);
+  --filter-buttons-svg: brightness(0.5);
+  --background-frame-color: rgb(236, 236, 236);
+  --borders-color: #d8d4c800;
+  --topbar-background: #eaeaea;
+  --buttons-hover: rgb(255 206 59 / 53%);
+  --filter-frame: none;
+  --sidebar-background: transparent;
+  --buttons-hover-inverted: rgb(255 206 59 / 53%);
+  --background-menu: rgb(236 236 236 / 90%);
+
+  --kernel-best: rgb(17 255 60 / 25%);
+  --kernel-good: rgba(17, 184, 255, 0.35);
+  --kernel-load: rgba(255, 231, 17, 0.35);
+  --kernel-no: none;
+  --kernel-undefined: none;
+  --kernel-bad: rgba(255, 17, 17, 0.35);
+
+  --kernel-animation-bad: linePAnim;
+  --kernel-animation-best: none;
+  --kernel-animation-good: linePAnim;
+  --kernel-animation-load: linePAnim;
+  --kernel-animation-no: none;
+  --kernel-animation-undefined: none;
+  --kernel-animation-bad: none;
+
+  --editor-key-meta: #404740;
+  --editor-key-keyword: #708;
+  --editor-key-atom: #219;
+  --editor-key-literal: #164;
+  --editor-key-string: #a11;
+  --editor-key-escape: #e40;
+  --editor-key-variable: #00f;
+  --editor-local-variable: #30a;
+  --editor-key-type: #085;
+  --editor-key-class: #167;
+  --editor-special-variable: #256;
+  --editor-key-property: #00c;
+  --editor-key-comment: #940;
+  --editor-key-invalid: #f00;
+  
+  --editor-outline: #696969;
+
+
+
+
+}
+
+.frontend-view {
+  display: inline-flex;
+  vertical-align: sub;
+}
+
 .notion-app-inner.notion-light-theme > div {
 	height: 100%;
 }

@@ -5,6 +5,8 @@ import {useDoc} from '@docusaurus/theme-common/internal';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 
+import Link from '@docusaurus/Link'
+
 import css from './styles.css';
 /**
  Title can be declared inside md content or declared through
@@ -34,9 +36,24 @@ registeredTags.env = (a) => {
   console.log('env!!');
   console.log(a);
 
-  const list = a.map((el) => (<>
-    <span className='envBlock'>{el}</span>
-  </>));
+  const list = a.map((el) => {
+    if (el === 'WLJS') {
+      return(<>
+        <Link
+                className='envBlock'
+                to="/exwljs">
+                {el}
+        </Link>
+      </>)
+    } else {
+    return(<>
+    <Link
+            className='envBlock'
+            to="/exwl">
+            {el}
+    </Link>
+  </>)}
+  });
 
   return (<>
     <div className='envContainer'>{list}</div>  
@@ -51,7 +68,11 @@ registeredTags.virtual = (a) => {
   if (a != true) return false;
 
   return (<>
-    <div className='envContainer'><div className='emphs' style={{'background':'var(--ifm-color-primary-light)'}}>virtual</div></div>
+          <Link
+                className='envContainer'
+                to="/virtual">
+                <div className='emphs' style={{'background':'var(--ifm-color-primary-light)'}}>Virtual</div>
+        </Link>
   </>);
 }
 
@@ -61,7 +82,10 @@ registeredTags.needsContainer = (a) => {
   if (a != true) return false;
 
   return (<>
-    <div className='envContainer'><div style={{'background': 'var(--ifm-color-content-secondary)'}} className='emphs'>needs container</div></div>
+  <Link
+                className='envContainer'
+                to="/container"><div style={{'background': 'var(--ifm-color-content-secondary)'}} className='emphs'>Needs container</div></Link>
+
   </>);
 }
 
@@ -71,7 +95,9 @@ registeredTags.update = (a) => {
   if (a != true) return false;
 
   return (<>
-    <div className='envContainer'><div style={{'background': 'var(--ifm-color-success-lightest)'}} className='emphs'>supports updates</div></div>
+    <Link
+                className='envContainer'
+                to="/update"><div style={{'background': 'var(--ifm-color-success-lightest)'}} className='emphs'>Supports updates</div></Link>
   </>);
 }
 
@@ -81,7 +107,9 @@ registeredTags.registered = (a) => {
   if (a != true) return (<></>);
 
   return (<>
-    <div className='envContainer'><div style={{'background': 'var(--ifm-color-info-darkest)'}} className='emphs'>registered</div></div>
+     <Link
+                className='envContainer'
+                to="/registered"><div style={{'background': 'var(--ifm-color-info-darkest)'}} className='emphs'>registered</div></Link>
   </>);
 }
 
