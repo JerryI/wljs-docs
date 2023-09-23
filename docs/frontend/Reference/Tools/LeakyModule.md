@@ -52,8 +52,17 @@ ParametricAnimator[Exp[Sin[t]] - 2 Cos[4t] + Sin[(2t - Pi)/24], t, {0,16, 0.05}]
 we will see this
 ![](../../../imgs/plotb.svg)
 ### Why and how it works
+`Module` provides lexical scoping, i.e. all temporal variables are visible from the global scope, but with modified names like `$332a` instead of `a`.
 
+This is good change to send this variable to frontend wrapped with [`Offload`](../Dynamics/Offload.md), that holds its form. Then frontend seeks for it locally and ask backend to provide the information. Every-time this happens backend start to track the changes of this symbol and shares this information with frontend. This is a core of all dynamics.
 
+Since each time those variables (symbols) are unique, then, they will not mess up with other instances being reevaluated by the user again.
+
+Animation itself happens using asynchronous task spawned by [SetInterval](SetInterval.md). To prevent uncontrollable tasks running in the background [EventHandler](../Events/EventHandler.md) is used on [EvaluatingCell](EvaluatingCell.md) to detect if this cell was removed or reevaluated, and for such case it will kill the task.
+
+:::info
+The major difference between `LeakyModule` and `Module` is that scoped symbols are stored in a dedicated garbage collection, controlled by the user. 
+:::
 
 ## Options
 You can take care about variables by yourself accessing `"Garbage"`  option
