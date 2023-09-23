@@ -9,6 +9,8 @@ Normal evaluation on the frontend's side via `FrontSubmit` will not work.
 
 This is a usual case, when an expression __needs DOM element to display or local memory to store data__, which are available only inside containers.
 
+This is also the case, if you need a function to support dynamic updates from the depending variable, that changes. 
+
 ## Example
 Some of the functions like `Graphics` are registered in the system and will automatically aquire one, however `TextView` is not. Execution inside containers is possible via `CreateFrontEndObject`, for example
 

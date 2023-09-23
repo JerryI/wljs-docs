@@ -16,7 +16,7 @@ The executing takes place inside [WLJS Intepreter](../../../interpreter/intro.md
 
 ## Examples
 ### Execute any WLJS function from WL Kernel
-There are many expressions working exclusively on the frontend's side, for instance [Alert](../WLJS/Alert.md) might be quite useful
+There are many expressions working exclusively on the frontend's side, for instance [Alert](../Tools/Alert.md) might be quite useful
 
 ```mathematica
 FrontSubmit[Alert["Hi"]]

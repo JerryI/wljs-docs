@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotting/ListLinePlotly.md",
+                "file": "frontend/Reference/Tools/Alert.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Plotting/ListLinePlotly.md",
+                "file": "frontend/Reference/Tools/Alert.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Plotting/ListLinePlotly.md",
+                "file": "frontend/Reference/Tools/Alert.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Plotting/ListLinePlotly.md"
+                "file": "frontend/Reference/Tools/Alert.md"
               }
             }
           },
@@ -172,8 +172,19 @@
   },
   "active": "7328a6aa54f0c365",
   "lastOpenFiles": [
-    "frontend/Reference/Plotting/ListLinePlot.md",
+    "frontend/Reference/Tools/AttachDOM.md",
+    "frontend/Reference/Tools/EvaluatingCell.md",
+    "frontend/Reference/Tools/Iconize.md",
+    "frontend/Reference/Tools/WindowScope.md",
+    "frontend/Reference/WLJS/While.md",
+    "frontend/Reference/Tools/LeakyModule.md",
+    "imgs/plotb.svg",
+    "frontend/Reference/Tools/NotebookStore.md",
+    "frontend/Reference/Tools/SetInterval.md",
+    "frontend/Reference/Tools/SetTimeout.md",
+    "frontend/Reference/Tools/SlideEvent.md",
     "frontend/Reference/Plotting/ListLinePlotly.md",
+    "frontend/Reference/Plotting/ListLinePlot.md",
     "frontend/Reference/Plotting/Plotly.md",
     "frontend/Reference/Plotting/Plot.md",
     "frontend/Reference/Plotting/VectorPlot3D.md",
@@ -188,16 +199,6 @@
     "frontend/Reference/Graphics/Arrow.md",
     "frontend/Reference/Plotting/ListCurvePathPlot.md",
     "frontend/Reference/Plotting/ListStepPlot.md",
-    "frontend/Reference/Plotting/MatrixPlot.md",
-    "frontend/Reference/Plotting/RandomImage.md",
-    "frontend/Reference/Decorations/NoBoxes.md",
-    "frontend/Reference/Decorations/Grid.md",
-    "frontend/Reference/Events/Assign.md",
-    "frontend/Reference/Events/EventJoin.md",
-    "frontend/Reference/Decorations/Style.md",
-    "frontend/Reference/Dynamics/FrontSubmit.md",
-    "frontend/Reference/Dynamics/FrontEndVirtual.md",
-    "frontend/Reference/Dynamics/Offload.md",
     "frontend/Reference/Decorations",
     "frontend/Plugins",
     "frontend/Reference/Dynamics/Internals",
@@ -216,7 +217,6 @@
     "imgs/Drawing 2023-08-20 22.32.33.excalidraw.svg",
     "imgs/ezgif.com-video-to-gif-30.gif",
     "imgs/ezgif.com-video-to-gif-29.gif",
-    "imgs/ezgif.com-crop-3.gif",
-    "imgs/ezgif.com-crop-2.gif"
+    "imgs/ezgif.com-crop-3.gif"
   ]
 }
