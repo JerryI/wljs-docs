@@ -94,9 +94,9 @@ PacletRepositories[{
 	Github -> "https://github.com/KirillBelovTest/Objects",
 	Github -> "https://github.com/KirillBelovTest/Internal",
 	Github -> "https://github.com/JerryI/CSocketListener",
-	Github -> "https://github.com/JerryI/TCPServer",
-	Github -> "https://github.com/JerryI/HTTPHandler",
-	Github -> "https://github.com/JerryI/WebSocketHandler",
+	Github -> "https://github.com/KirillBelovTest/TCPServer",
+	Github -> "https://github.com/KirillBelovTest/HTTPHandler",
+	Github -> "https://github.com/KirillBelovTest/WebSocketHandler",
 	Github -> "https://github.com/JerryI/wl-misc",
 	Github -> "https://github.com/JerryI/wl-wlx"
 }]
@@ -104,7 +104,7 @@ PacletRepositories[{
 (* packages for HTTP server *)
 <<KirillBelov`Objects`
 <<KirillBelov`Internal`
-<<KirillBelov`CSocketListener`
+<<KirillBelov`CSockets`
 <<KirillBelov`TCPServer`
 <<KirillBelov`HTTPHandler`
 <<KirillBelov`HTTPHandler`Extensions`
@@ -128,7 +128,7 @@ index := ImportComponent["index.wlx"];
 http = HTTPHandler[];
 http["MessageHandler", "Index"] = AssocMatchQ[<|"Method" -> "GET"|>] -> Function[x, index[x]]
 
-httplistener = Check[CSocketListen["127.0.0.1:8010", tcp@# &], Print["Problem with CSockets, fallback to the native ZMQ"]; SocketListen["127.0.0.1:8010", tcp@# &]];
+SocketListen[CSocketOpen["127.0.0.1:8010"], tcp@# &];
 
 StringTemplate["open http://``:``/"][httplistener[[1]]["Host"], httplistener[[1]]["Port"]] // Print;
 
