@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 ---
 Each plugin/extension is a folder with an arbitrary structure, but in the root there must be a `package.json` file (borrowed from npm) with the following content
 
