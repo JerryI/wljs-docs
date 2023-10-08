@@ -1,8 +1,7 @@
-:::danger
-Is in development
-:::
-
-Each plugin/extension is a folder with an arbitrary structure, but in the root there must be a `package.json` file (from nodejs) with the following content
+---
+draft: true
+---
+Each plugin/extension is a folder with an arbitrary structure, but in the root there must be a `package.json` file (borrowed from npm) with the following content
 
 ```json
 {
@@ -44,5 +43,119 @@ Each plugin/extension is a folder with an arbitrary structure, but in the root t
 
 The most important field here is `"wljs-meta"`, where one can specify file to load for a kernel, master kernel, javascript files, styles and etc. There is no any restrictions, one can load anything into the kernel.
 
-## Easy steps to pack your code into a plugin
-...
+:::info
+All packages are located in `<installationDirectory>/Packages` directory.
+If you are using desktop app, you can locate it using a top-bar menu 
+`File` $\rightarrow$ `Locate AppData`
+:::
+
+__The template can be forked from [wljs-template](https://github.com/JerryI/wljs-template).__
+
+:::note
+GitHub is used as a main source for distributing plugins
+:::
+## Preparations
+Please, make sure, that the package [`wljs-dev-tool`](https://github.com/JerryI/wljs-dev-tools) is installed, that comes very helpful while debugging your extensions.
+
+:::danger
+Always save you packages on Github, since each new update of WLJS Frontend purges `Packages` folder or decline the update before you save all changes.
+:::
+
+For the most cases you do not even need to create a package while developing an extension, expect the cases when it adds modal windows or new cell types.
+
+:::tip
+Initialize Github repo inside `Packages/youpluginname` directory and develop lively from there
+:::
+
+:::tip
+- __Javascript code__ (`"jsmodule"`) does not require full reload of the frontend. 
+	Click `Window`$\rightarrow$ `Force Reload`
+- __WL Kernel__ (`"wlkernel"`) code does require the restart of the secondary kernel
+- __WL code__ for the frontend (`"wl"`) does require the restart of the frontend
+:::
+
+## Roadmap
+Afterwards it does depend what you want to extend, please see the full list of typical cases
+
+- [Library functions](library-functions.md) which extend Wolfram Language
+- New cell types or editors extensions
+- UI/Theme modifications
+
+
+## API functions
+This is just a list, please, follow [Roadmap](#Roadmap) section
+### *to register any function to be executed on frontend*
+```mathematica
+JerryI`WolframJSFrontend`Extensions`RegisterFrontEndObject[Symbol_]
+```
+- must be executed on WL Kernel (not master), i.e. included by `"wlkernel"`
+- note: *used for `Graphics` expression*
+
+### *to add autocomplete item to the editor*
+```mathematica
+JerryI`WolframJSFrontend`Extensions`RegisterAutocomplete[a_Association | _List]
+```
+- must be executed on a master kernel, i.e. included by `"wl"`
+
+where `a` has the following structure
+```mathematica
+a = <|
+	"label"->"<YourSymbol>",
+	"type"-> "keyword",
+	"info"-> "<YourDescription>"
+	|>
+```
+
+### *to add a new section to Settings menu*
+```mathematica
+JerryI`WolframJSFrontend`Extensions`ExtendSettings[function_, title_String]
+```
+- must be executed on a master kernel, i.e. included by `"wl"`
+
+where `function` is a pure function with an empty argument or list of pure functions
+```mathematica
+function = Function[Null, "String"]
+function = {Function[Null, "String"], ...}
+```
+it must return a string, that contains an HTML elements to be inserted into a settings page layout
+
+### *to add new top-bar menu item*
+This is applicable only for desktop app version
+```mathematica
+JerryI`WolframJSFrontend`Extensions`Handlers["Menu"]["<codename>"][assoc_Association] := Module[{},
+	Echo["requested recevied!"];
+	Echo[assoc]
+]
+```
+- must be executed on a master kernel, i.e. included by `"wl"`
+
+in the `assoc` you have `assoc["Client"]` field that stands for the client's socket, which invoked the request. A request is created when a user presses a button in a menu or uses a shortcut key. It is described using `package.json` field
+
+```json
+"wljs-meta": {
+   
+    "menu": [
+      {
+        "label": "<LabelName>",
+        "accelerator": ["Cmd+<KeyMac>", "Ctrl+<Key>"],
+        "internalHandler": "<codename>",
+        "spawnWindow": false,
+        "type": "button"
+      }
+    ]
+]
+```
+
+### *low-level access to Notebook*
+Since any request is created by a user, you can always get its socket using global context, i.e
+
+```mathematica
+Global`client
+```
+
+and every socket is associated with a notebook, so you can get the Notebook data using this trick
+
+```mathematica
+JerryI`WolframJSFrontend`Notebook`Notebooks[JerryI`WolframJSFrontend`Notebook`$AssociationSocket[Global`client]]
+```
+- must be executed on a master kernel, i.e. included by `"wl"`

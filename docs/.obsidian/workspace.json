@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Events/Assign.md",
+                "file": "frontend/Development/Plugins/library-functions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "130ec21bb23bc156",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Tutorial/Plugins.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Events/Assign.md",
+                "file": "frontend/Development/Plugins/library-functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Events/Assign.md",
+                "file": "frontend/Development/Plugins/library-functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Events/Assign.md"
+                "file": "frontend/Development/Plugins/library-functions.md"
               }
             }
           },
@@ -157,72 +169,40 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "floating": {
-    "id": "0fffb044809d94a8",
-    "type": "floating",
-    "children": [
-      {
-        "id": "42d62de939aab708",
-        "type": "window",
-        "children": [
-          {
-            "id": "35bfb38e39be6082",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "92637f50f2ff3d21",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "frontend/Advanced/event-generators.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": -1240,
-        "y": 33,
-        "width": 1178,
-        "height": 752,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "7328a6aa54f0c365",
   "lastOpenFiles": [
-    "frontend/Reference/Events/EventObject.md",
+    "frontend/Tutorial/Components approach.md",
+    "frontend/Development/Plugins/imgs/Dev.wln",
+    "frontend/Development/Plugins/Basics.md",
+    "frontend/Development/Plugins/library-functions.md",
+    "frontend/Development/Plugins/imgs/newplot.png",
+    "frontend/Development/Plugins/imgs",
+    "frontend/Development/Plugins/packing.md",
+    "frontend/Development/Plugins/writting.md",
+    "frontend/Tutorial/Plugins.md",
+    "imgs/gitplugins.png",
+    "frontend/Tutorial/GUI Overview.md",
+    "imgs/settings.png",
+    "frontend/Tutorial/Export notebook.md",
+    "frontend/Tutorial/Dynamics.md",
+    "frontend/Tutorial/Input elements.md",
+    "frontend/Development/Plugins/Known packages.md",
+    "frontend/Development/Plugins/Extending editor/vimmode.md",
+    "frontend/Development/Structure.md",
+    "frontend/Development/Decorations.md",
+    "frontend/Advanced/Frontend functions.md",
     "frontend/Advanced/event-generators.md",
+    "frontend/Advanced/executables.md",
+    "frontend/Advanced/depricated-remove-it.md",
+    "frontend/Reference/Events/Assign.md",
+    "frontend/Reference/Events/EventObject.md",
     "frontend/Reference/Events/EventRemove.md",
     "frontend/Reference/Events/EventJoin.md",
     "frontend/Reference/Graphics/MiddlewareHandler.md",
     "frontend/Reference/Events/EventHandler.md",
     "frontend/Reference/Events/EventClone.md",
     "frontend/Reference/Events/EventFire.md",
-    "frontend/Reference/Events/Assign.md",
-    "frontend/Reference/Dynamics/CreateFrontEndObject.md",
-    "frontend/Reference/Dynamics/Internals/FrontEndView.md",
-    "frontend/Reference/Dynamics/Internals/FrontEndBox.md",
-    "frontend/Reference/Dynamics/Offload.md",
-    "frontend/Reference/Tools/LeakyModule.md",
-    "frontend/Reference/Tools/Alert.md",
-    "frontend/Reference/Tools/AttachDOM.md",
-    "frontend/Reference/Tools/EvaluatingCell.md",
-    "frontend/Reference/Tools/Iconize.md",
-    "frontend/Reference/Tools/WindowScope.md",
-    "frontend/Reference/WLJS/While.md",
     "imgs/plotb.svg",
-    "frontend/Reference/Tools/NotebookStore.md",
-    "frontend/Reference/Tools/SetInterval.md",
-    "frontend/Reference/Tools/SetTimeout.md",
-    "frontend/Reference/Tools/SlideEvent.md",
-    "frontend/Reference/Plotting/ListLinePlotly.md",
-    "frontend/Reference/Plotting/ListLinePlot.md",
     "frontend/Reference/Decorations",
     "frontend/Plugins",
     "frontend/Reference/Dynamics/Internals",
@@ -231,16 +211,11 @@
     "frontend/Reference/Input",
     "frontend/Reference/Events",
     "frontend/Reference/Dynamics",
-    "frontend/Reference/Plotting",
-    "frontend/Reference/Graphics3D",
     "frontend/Tutorial/imgs/left.png",
     "frontend/Tutorial/imgs/right.png",
     "frontend/Tutorial/imgs/window 1.png",
     "frontend/Tutorial/imgs/window.png",
     "frontend/Tutorial/imgs/notebook.png",
-    "imgs/Drawing 2023-08-20 22.32.33.excalidraw.svg",
-    "imgs/ezgif.com-video-to-gif-30.gif",
-    "imgs/ezgif.com-video-to-gif-29.gif",
-    "imgs/ezgif.com-crop-3.gif"
+    "imgs/Drawing 2023-08-20 22.32.33.excalidraw.svg"
   ]
 }

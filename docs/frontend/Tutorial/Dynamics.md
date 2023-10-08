@@ -110,7 +110,9 @@ Function[data, v = data] // slider
 The obvious solution for output could be
 
 ```mathematica
-Graphics[{Cyan, Line[Table[{Cos[x], Sin[Offload[v] x]}, {x,0,2$Pi$, 0.01}]]}]
+Graphics[{Cyan, Line[
+	Table[{Cos[x], Sin[Offload[v] x]}, {x,0,2$Pi$, 0.01}]
+]}]
 ```
 
 That will be __a horrible solution__ 👎🏼  
@@ -134,7 +136,9 @@ Do not put dynamic symbols inside large `Table`. Try to minimize the number of i
 Ok lets try to improve a bit
 
 ```mathematica
-Graphics[{Cyan, Line[Table[{Cos[x], Sin[v x]}, {x,0,2$Pi$, 0.01}] // Offload]}]
+Graphics[{Cyan, Line[
+	Table[{Cos[x], Sin[v x]}, {x,0,2$Pi$, 0.01}] // Offload
+]}]
 ```
 
 This is also __horrible__ 👎🏼  Symbol `Table` does the same thing being executed on __browser's side as well__
@@ -145,7 +149,12 @@ This is also __horrible__ 👎🏼  Symbol `Table` does the same thing being exe
 One can minimize the number of instances to just 1 using `With`, as it was shown in the example above
 
 ```mathematica
-Graphics[{Cyan, Line[With[{y = v}, Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]] // Offload]}]
+Graphics[{Cyan, Line[
+	With[{y = v}, 
+		Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]
+	] // Offload
+  ]
+}]
 ```
 
 This __will save up a lot of resources__ 👍🏼 
@@ -170,33 +179,20 @@ This is ok, each `Line` is bounded to its own `symbol` instance. Therefore on up
 There might be temptation to wrap `Line` expression inside `With` as well, like that
 
 ```mathematica
-Graphics[{Cyan, With[{y = v}, Line[Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]]] // Offload}]
+Graphics[{Cyan, With[{y = v}, 
+	Line[
+		Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]
+	]
+] // Offload}]
 ```
 
 __This will not work at all__ 👎🏼 because the binding will occur between `Graphics` and `v` objects
 
 ![](../../imgs/dynEx5.excalidraw.svg)
 
-### Standalone frontend version 🎡
-Since frontend has [WLJS](../../interpreter/intro.md) interpreter, sometimes you can omit the communication with Wolfram Kernel at all. Therefore it allows to build interactive embeddable notebooks, that can work without `wolframscript` installed. See more [Export notebook](Export%20notebook.md).
+Think about an onion from Shrek movie.
 
-Firstly, underneath `InputRange` there is a frontend function `RangeView`, which provides a low-level access to a slider
-
-```mathematica
-RangeView[{0,6,0.5, V}]//Offload//CreateFrontEndObject
-```
-
-The keyword `CreateFrontEndObject` is used to manually execute inside the container the corresponding function. It detect a symbol `V`, which is undefined as assign to it a value from a slider. Now we can to the same trick with `Graphics`
-
-```mathematica
-Graphics[{Cyan, Line[With[{y = V}, Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]] // Offload]}]
-```
-
-There is no need in event-handling, since the entire code is executed in a browser
-Now you can export a notebook into `.html` file and dynamics will still work.
-
-You can download both notebook via following links below
-- __[SliderExampleStandalone](files/SliderExampleStandalone.wln)__
+You can download the notebook via following link below
 - __[SliderExample](files/SliderExample.wln)__
 
 ## Grouping UI elements

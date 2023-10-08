@@ -4,7 +4,7 @@ sidebar_position: 5
 You can extend output cell types via a few lines of code and you favorite framework / package
 
 :::info
-Please, see [Known packages](../Plugins/Known%20packages.md) page __for more information__
+Please, see [Known packages](../Development/Plugins/Known%20packages.md) page __for more information__
 :::
 
 #### Mermaid

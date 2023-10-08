@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 # Functions
 :::danger
 Is in development

@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "a9c4d7da24d69fa7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023-09-20-snippets.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "7953b5c390b07ba5",
             "type": "leaf",
             "state": {
@@ -80,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -218,14 +230,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6dfeb2fd8c54f1eb",
+  "active": "a9c4d7da24d69fa7",
   "lastOpenFiles": [
-    "2023-08-31-helpers-createfrontendobject/index.md",
-    "2023-09-20-snippets.md",
     "2023-08-17-notestore.md",
+    "2023-07-15-hydrator.md",
+    "2023-07-22-pratical-integration/index.md",
+    "2023-07-21-polygon/index.md",
+    "2023-09-20-snippets.md",
+    "2023-08-31-helpers-createfrontendobject/index.md",
     "2023-09-14-image-raster/2023-08-20-image-raster.md",
     "2023-08-16-axes-label.md",
-    "2023-07-21-polygon/index.md",
     "2023-08-22-projector/index.md",
     "2023-09-14-image-raster/plot.svg",
     "2023-09-14-image-raster",
@@ -237,7 +251,6 @@
     "2023-08-31-helpers-createfrontendobject/ezgif.com-optimize-14.gif",
     "2023-08-22-projector/Screenshot 2023-09-11 at 18.40.52.png",
     "2023-06-10-events.md",
-    "2023-07-15-hydrator.md",
     "2023-08-19-advanced-events/Greyness.wl",
     "2023-08-31-helpers-createfrontendobject",
     "2023-08-08-graphics-2d-update/index.md",
@@ -247,7 +260,6 @@
     "2023-07-25-transform-3d/index.md",
     "2023-07-25-transform-3d/81DC3898A4B17E87.png",
     "2023-08-22-projector",
-    "2023-07-22-pratical-integration/index.md",
     "2023-08-19-advanced-events",
     "2023-08-16-axes.md",
     "2023-08-08-graphics-2d-update/ezgif.com-optimize-12.gif",

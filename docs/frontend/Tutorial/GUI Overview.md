@@ -68,14 +68,10 @@ All cells are grouped by parent input cell, apart from that the structure of the
 
 
 
-#### Files drag and drop
-:::danger
-Is in development
-:::
-By dragging any files to the area of a sidebar you can upload them to the notebook directory
+### Settings
+You can locate a cogwheel on the sidebar or (for desktop app) it is located in `Mics` section of your top-bar menu
 
-<div style={{width: '100%',  margin: 'auto', left: 0, right: 0, display: 'block', background: 'white' }}>
+![](../../imgs/settings.png)
+Here you can manipulate the plugins you have or install a new one by the link to a Github repo.
 
-![](../../imgs/ezgif.com-video-to-gif-28.gif)
-
-</div>
+There is a styles customization available as well, that overrides the default theme.

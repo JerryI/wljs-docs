@@ -2,8 +2,11 @@
 slug: practical-working-withlibs
 title: Developing library function in a notebook
 authors: jerryi
-tags: [frontend, devnotes]
+tags:
+  - frontend
+  - devnotes
 enableComments: true
+draft: true
 ---
 
 import Component from '@site/src/components/wljs-notebook-react/includes';
