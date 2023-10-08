@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "frontend/Development/Plugins/library-functions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0fd38ed7aef45f9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "frontend/Development/Plugins/Basics.md",
                 "mode": "source",
                 "source": false
@@ -30,8 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9f970eb1f8ed18e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Development/Plugins/Basics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,27 +194,29 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7328a6aa54f0c365",
+  "active": "0fd38ed7aef45f9b",
   "lastOpenFiles": [
+    "frontend/Development/Plugins/Themes.md",
+    "frontend/Development/Plugins/Basics.md",
+    "frontend/Development/Plugins/new-celltypes.md",
     "frontend/Development/Plugins/library-functions.md",
+    "frontend/Development/Plugins/Known packages.md",
+    "frontend/Development/Decorations.md",
+    "frontend/Tutorial/Plugins.md",
     "frontend/Tutorial/Components approach.md",
     "frontend/Development/Plugins/imgs/Dev.wln",
-    "frontend/Development/Plugins/Basics.md",
     "frontend/Development/Plugins/imgs/newplot.png",
     "frontend/Development/Plugins/imgs",
     "frontend/Development/Plugins/packing.md",
     "frontend/Development/Plugins/writting.md",
-    "frontend/Tutorial/Plugins.md",
     "imgs/gitplugins.png",
     "frontend/Tutorial/GUI Overview.md",
     "imgs/settings.png",
     "frontend/Tutorial/Export notebook.md",
     "frontend/Tutorial/Dynamics.md",
     "frontend/Tutorial/Input elements.md",
-    "frontend/Development/Plugins/Known packages.md",
     "frontend/Development/Plugins/Extending editor/vimmode.md",
     "frontend/Development/Structure.md",
-    "frontend/Development/Decorations.md",
     "frontend/Advanced/Frontend functions.md",
     "frontend/Advanced/event-generators.md",
     "frontend/Advanced/executables.md",
@@ -200,8 +227,6 @@
     "frontend/Reference/Events/EventJoin.md",
     "frontend/Reference/Graphics/MiddlewareHandler.md",
     "frontend/Reference/Events/EventHandler.md",
-    "frontend/Reference/Events/EventClone.md",
-    "frontend/Reference/Events/EventFire.md",
     "imgs/plotb.svg",
     "frontend/Reference/Decorations",
     "frontend/Plugins",

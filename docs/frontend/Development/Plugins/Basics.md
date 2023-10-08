@@ -1,19 +1,19 @@
 ---
 draft: false
+sidebar_position: 2
 ---
-Each plugin/extension is a folder with an arbitrary structure, but in the root there must be a `package.json` file (borrowed from npm) with the following content
+Each plugin/extension is a folder with an arbitrary structure, but in the root there must be a `package.json` file (borrowed from `npm`) with the following content
 
 ```json
 {
-  "name": "wljs-template",
+  "name": "name-of-your-package",
   "version": "0.0.1",
-  "description": "A template for writting packages",
+  "description": "description",
   "scripts": {
-    "build": "node --max-old-space-size=8192 ./node_modules/.bin/rollup --config rollup.config.mjs",
-    "watch": "node --max-old-space-size=8192 ./node_modules/.bin/rollup --config rollup.config.mjs -w"
+    "build": "node --max-old-space-size=8192 ./node_modules/.bin/rollup --config rollup.config.mjs"
   },
   "wljs-meta": {
-    "css": "dist/styles.css",
+    "styles": "dist/styles.css",
     "jsmodule": "dist/kernel.js",
     "wlkernel": "src/kernel.wln",
     "wl": "src/frontend.wln",
@@ -21,14 +21,14 @@ Each plugin/extension is a folder with an arbitrary structure, but in the root t
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JerryI/wljs-template"
+    "url": "https://github.com/username/gitrepo"
   },
   "author": "Kirill Vasin",
   "license": "GPL",
   "bugs": {
-    "url": "https://github.com/JerryI/wljs-template/issues"
+    "url": "https://github.com/username/gitrepo/issues"
   },
-  "homepage": "https://github.com/JerryI/wljs-template#readme",
+  "homepage": "https://github.com/username/gitrepo#readme",
   "dependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-json": "^6.0.0",
@@ -41,7 +41,19 @@ Each plugin/extension is a folder with an arbitrary structure, but in the root t
 }
 ```
 
-The most important field here is `"wljs-meta"`, where one can specify file to load for a kernel, master kernel, javascript files, styles and etc. There is no any restrictions, one can load anything into the kernel.
+The most important field here is `"wljs-meta"`, where one can specify file to load for a kernel, master kernel, javascript files, styles and etc
+
+```js
+"wljs-meta": {
+    "css": "dist/styles.css", //all styles to be included
+    "jsmodule": "dist/kernel.js", //all js modules (cjs)
+    "wlkernel": "src/kernel.wln", //to be loaded into secondary kernel
+    "wl": "src/frontend.wln", //to be loaded into the master kernel
+    "autocomplete": "src/autocomplete.js" //autocomplete desc.
+  },
+```
+
+There is no any restrictions, one can load anything into the kernel.
 
 :::info
 All packages are located in `<installationDirectory>/Packages` directory.
@@ -70,7 +82,7 @@ Initialize Github repo inside `Packages/youpluginname` directory and develop liv
 :::tip
 - __Javascript code__ (`"jsmodule"`) does not require full reload of the frontend. 
 	Click `Window`$\rightarrow$ `Force Reload`
-- __WL Kernel__ (`"wlkernel"`) code does require the restart of the secondary kernel
+- __WL Kernel code__ (`"wlkernel"`)  does require the restart of the secondary kernel
 - __WL code__ for the frontend (`"wl"`) does require the restart of the frontend
 :::
 
@@ -78,8 +90,8 @@ Initialize Github repo inside `Packages/youpluginname` directory and develop liv
 Afterwards it does depend what you want to extend, please see the full list of typical cases
 
 - [Library functions](library-functions.md) which extend Wolfram Language
-- New cell types or editors extensions
-- UI/Theme modifications
+- [New cell types](new-celltypes.md) or editors extensions
+- [UI/Theme](Themes.md) modifications
 
 
 ## API functions
@@ -146,6 +158,17 @@ in the `assoc` you have `assoc["Client"]` field that stands for the client's soc
 ]
 ```
 
+### *add an cell processor*
+an example from the main guide [new-celltypes](new-celltypes.md)
+```mathematica
+JerryI`WolframJSFrontend`Notebook`NotebookAddEvaluator[(
+	MermaidQ ->  <|"SyntaxChecker"->(True&),               
+					"Epilog"->(#&),
+					"Prolog"->(#&), 
+					"Evaluator"->MermaidProcessor  
+|>), "HighestPriority"];
+
+```
 ### *low-level access to Notebook*
 Since any request is created by a user, you can always get its socket using global context, i.e
 

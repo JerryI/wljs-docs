@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 :::note
 Here the symbol 🔶 means, that the package is shipped together with a basic WLJS Frontend distribution. Anything else can be installed separately from the `Settings` menu
 :::

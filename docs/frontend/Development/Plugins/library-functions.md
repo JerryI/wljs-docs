@@ -1,4 +1,8 @@
-# Library functions
+---
+sidebar_position: 3
+---
+
+# Extending library functions
 
 If you developed a nice library, that helps to view tables or adds new plotting features or whatever, and you want to ship it as shared library this guide is for you.
 
@@ -84,7 +88,7 @@ BarPlotly[RandomReal[{0,1}, 10]] // CreateFrontEndObject
 Since it is not known by Wolfram Kernel, we had to use `CreateFrontEndObject` expression on it to tell that it will be executed in a browser using [WLJS interpreter](../../../interpreter/intro.md), but we will fix it later
 :::
 
-__Optional__
+##### Optional
 You can provide `update` methods to it, if you want to support dynamic updates using `Offload` directive (see [Dynamics](../../Tutorial/Dynamics.md))
 
 *cell 5*
