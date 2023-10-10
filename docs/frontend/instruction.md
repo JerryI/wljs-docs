@@ -42,8 +42,19 @@ Open http://127.0.0.1:8090 in your browser
 UI works well with most modern browsers, except Safari, where one might expect to see some glitches in an equation editor.
 :::
 
+## Updates & real-life applications
+Please consider to check our [Blog](https://jerryi.github.io/wljs-docs/blog) section, that highlights some gems, introduces new plugins and many more!
 
-import Notebook from '@site/src/components/wljs-notebook-react';
+## Video examples
+This is a series of short videos highlighting some functions available in frontend and their application
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e6B1LKES_Og?si=gPH0UmjU7xxE1KF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ka3FFy3X_W8?si=Uxvt8LCRWlYupiRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zRv1qhMtCms?si=R_y-KMpX1AvGVrGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7cEYJG7nk7U?si=Uusa_Cr9Jaa4KDis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Development/Plugins/Basics.md",
+                "file": "frontend/Reference/Decorations/InterpretationBox.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Development/Plugins/Basics.md",
+                "file": "frontend/Reference/Decorations/InterpretationBox.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Development/Plugins/Basics.md",
+                "file": "frontend/Reference/Decorations/InterpretationBox.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Development/Plugins/Basics.md"
+                "file": "frontend/Reference/Decorations/InterpretationBox.md"
               }
             }
           },
@@ -196,8 +196,13 @@
   },
   "active": "0fd38ed7aef45f9b",
   "lastOpenFiles": [
-    "frontend/Development/Plugins/Themes.md",
+    "frontend/Reference/Input/EditorView.md",
+    "frontend/Reference/Decorations/Internals/FrontEndView.md",
+    "frontend/Reference/Decorations/InterpretationBox.md",
+    "frontend/Reference/Decorations/Internals",
+    "frontend/instruction.md",
     "frontend/Development/Plugins/Basics.md",
+    "frontend/Development/Plugins/Themes.md",
     "frontend/Development/Plugins/new-celltypes.md",
     "frontend/Development/Plugins/library-functions.md",
     "frontend/Development/Plugins/Known packages.md",
@@ -223,10 +228,6 @@
     "frontend/Advanced/depricated-remove-it.md",
     "frontend/Reference/Events/Assign.md",
     "frontend/Reference/Events/EventObject.md",
-    "frontend/Reference/Events/EventRemove.md",
-    "frontend/Reference/Events/EventJoin.md",
-    "frontend/Reference/Graphics/MiddlewareHandler.md",
-    "frontend/Reference/Events/EventHandler.md",
     "imgs/plotb.svg",
     "frontend/Reference/Decorations",
     "frontend/Plugins",
@@ -235,7 +236,6 @@
     "frontend/Reference/Tools",
     "frontend/Reference/Input",
     "frontend/Reference/Events",
-    "frontend/Reference/Dynamics",
     "frontend/Tutorial/imgs/left.png",
     "frontend/Tutorial/imgs/right.png",
     "frontend/Tutorial/imgs/window 1.png",
