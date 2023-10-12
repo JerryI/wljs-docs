@@ -1,11 +1,14 @@
 ---
 env:
   - WLJS
-update: 
-needsContainer: 
-virtual:
+update: false
+needsContainer: false
+virtual: true
+origin: https://github.com/JerryI/wljs-graphics-d3/
 ---
 :::danger
-Is still in development
+A draft version. It works, but has limitations
 :::
+
+
 

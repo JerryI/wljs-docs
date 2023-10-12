@@ -86,8 +86,8 @@ Graphics[{Red, PointSize[0.1], Point[FrontEndRef["data"]]}]
 ```
 
 <Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlJHQkNvbG9yIiwxLDAsMF0sWyJQb2ludFNpemUiLDAuMV0s
-WyJQb2ludCIsWyJPZmZsb2FkIixbIkxpc3QiLDAuNTg2MTUxOTMyNjkyODUxOSwwLjU0MjIxNjY2
-MjkxMjc0NzJdXV1dLFsiUnVsZSIsIkltYWdlU2l6ZSIsNTAwXV0=
+WyJQb2ludCIsWyJPZmZsb2FkIixbIkxpc3QiLC0wLjg3NjY0MjE1Mjg5MDExMzgsLTAuMzA2OTgy
+MjY2ODE0MjMyNl1dXV0sWyJSdWxlIiwiSW1hZ2VTaXplIiw1MDBdXQ==
 `}>{`Graphics[{Red, PointSize[0.1], Point[RandomReal[{-1,1}, 2] // Offload]}, ImageSize->500]`}</Wl>
 
 If one change the object `data` in other cell, the position of a point will be changed as well dynamically with no reevaluation involved, i.e.
