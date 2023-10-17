@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7328a6aa54f0c365",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Development/Plugins/library-functions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "0fd38ed7aef45f9b",
             "type": "leaf",
             "state": {
@@ -49,7 +37,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Tutorial/Plugins.md",
+                "file": "frontend/Reference/Input/InputButton.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bc8f85d48bb57cc1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Reference/Decorations/HTMLForm.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -208,33 +208,35 @@
   },
   "active": "2fdfd67bd7e566c8",
   "lastOpenFiles": [
-    "frontend/Reference/Plotting/ContourPlot.md",
-    "frontend/Reference/Plotting/BarChart.md",
-    "imgs/Drawing 2023-10-11 22.01.47.excalidraw.md",
-    "frontend/Reference/Graphics/Arrow.md",
-    "frontend/Reference/Tools/GlobalThrottle.md",
-    "frontend/Reference/Tools/Iconize.md",
-    "frontend/Reference/Tools/FlipSymbols.md",
-    "frontend/Reference/Tools/Alert.md",
-    "frontend/Reference/Tools/WLJSFunction.md",
-    "frontend/Reference/Tools/WindowScope.md",
-    "frontend/Reference/Tools/EmittKernel.md",
-    "frontend/Reference/Tools/ReadClipboard.md",
-    "frontend/Reference/Tools/TalkKernel.md",
-    "frontend/Reference/Tools/FrontEditorSelected.md",
-    "frontend/Reference/Tools/TalkMaster.md",
-    "frontend/Reference/Tools/AttachDOM.md",
-    "frontend/Reference/Tools/EvaluatingCell.md",
-    "frontend/Reference/Decorations/InterpretationBox.md",
+    "frontend/Reference/Input/ButtonView.md",
     "frontend/Reference/Input/EditorView.md",
-    "frontend/Reference/Decorations/Internals/FrontEndView.md",
+    "frontend/Reference/Input/FileUploadView.md",
+    "frontend/Reference/Input/InputFile.md",
+    "frontend/Reference/Input/RangeView.md",
+    "frontend/Reference/Input/Slider.md",
+    "frontend/Reference/Input/ToggleView.md",
+    "frontend/Reference/Input/TextView.md",
+    "frontend/Reference/Input/InputToggle.md",
+    "frontend/Reference/Input/InputText.md",
+    "frontend/Reference/Input/InputButton.md",
+    "frontend/Mathematica vs WLJS.md",
+    "frontend/Reference/Input/InputRange.md",
+    "frontend/Reference/Input/InputTable.md",
+    "frontend/Reference/Input/InputSpoiler.md",
+    "ezgif.com-optimize-7-2 1.gif",
+    "ezgif.com-optimize-7-2.gif",
+    "frontend/Reference/Input/SpoilerView.md",
+    "frontend/Reference/Input/InputGroup.md",
+    "frontend/Troubleshooting.md",
+    "frontend/Reference/Tools/EmittKernel.md",
+    "frontend/Reference/Decorations/ToCM6Boxes.md",
+    "frontend/Reference/Decorations/Style.md",
+    "frontend/Reference/Decorations/Row.md",
+    "frontend/Reference/Decorations/NoBoxes.md",
+    "frontend/Reference/Decorations/HTMLForm.md",
+    "frontend/Reference/Decorations/MatrixForm.md",
+    "frontend/Reference/Decorations/Column.md",
     "frontend/Reference/Decorations/Internals",
-    "frontend/instruction.md",
-    "frontend/Development/Plugins/Basics.md",
-    "frontend/Development/Plugins/Themes.md",
-    "frontend/Development/Plugins/new-celltypes.md",
-    "frontend/Development/Plugins/library-functions.md",
-    "frontend/Development/Plugins/Known packages.md",
     "frontend/Development/Plugins/imgs/Dev.wln",
     "frontend/Development/Plugins/imgs/newplot.png",
     "frontend/Development/Plugins/imgs",
@@ -251,8 +253,6 @@
     "frontend/Tutorial/imgs/left.png",
     "frontend/Tutorial/imgs/right.png",
     "frontend/Tutorial/imgs/window 1.png",
-    "frontend/Tutorial/imgs/window.png",
-    "frontend/Tutorial/imgs/notebook.png",
-    "imgs/Drawing 2023-08-20 22.32.33.excalidraw.svg"
+    "frontend/Tutorial/imgs/window.png"
   ]
 }
