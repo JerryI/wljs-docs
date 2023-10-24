@@ -25,11 +25,11 @@ Specifies an `uid` of an event-object, that will be fired on-change.
 Blocks the editing mode. The default value is `False`
 
 ## Application
-If you want to show the dynamic symbols content, use it together with [ToCM6Boxes](../Decorations/ToCM6Boxes.md)
+If you want to show the dynamic symbols content, use it together with `ToString[expr, StandardForm]`
 
 ```mathematica
 EventHandler[InputRange[1,10,1,1], Function[n,
-  series = Series[Sin[x], {x,0,n}] // Normal // ToCM6Boxes;
+  series = ToString[Series[Sin[x], {x,0,n}] // Normal, StandardForm];
 ]]
 EventFire[%, 1];
 

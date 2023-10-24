@@ -97,8 +97,11 @@ Afterwards it does depend what you want to extend, please see the full list of t
 ## API functions
 This is just a list, please, follow [Roadmap](#Roadmap) section
 ### *to register any function to be executed on frontend*
+this is similar to make boxes
 ```mathematica
-JerryI`WolframJSFrontend`Extensions`RegisterFrontEndObject[Symbol_]
+symbol /: MakeBoxes[symbol[args__], StandardForm] := With[{o = CreateFrontEndObject[symbol[args]]},
+	MakeBoxes[o, StandardForm]
+]
 ```
 - must be executed on WL Kernel (not master), i.e. included by `"wlkernel"`
 - note: *used for `Graphics` expression*

@@ -47,10 +47,10 @@ It might be the sign, that a function you are trying to run was not implemented 
 Usually this is not a big issue, most functions, which experiences this error will still work properly. But if it does bother you, please, leave a message on [Github](https://github.com/JerryI/wolfram-js-frontend/issues).
 
 ### The output of a cell does not look correct
-This might be connected with [InterpretationBox](Reference/Decorations/InterpretationBox.md) or some other decorations did work well, try to evaluate your expression with [NoBoxes](Reference/Decorations/NoBoxes.md)
+This might be connected with [InterpretationBox](Reference/Decorations/InterpretationBox.md) or some other decorations did work well, try to evaluate your expression with [InputForm](Reference/Decorations/InputForm.md)
 
 ```mathematica
-% // NoBoxes
+% // InputForm
 ```
 
 to prevent `DisplayForm` output.

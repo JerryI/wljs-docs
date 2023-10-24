@@ -281,7 +281,9 @@ In our case we need only to register `BarPlotly`, so that we do not need to use 
 
 *kernel.js* simple (__our case__)
 ```mathematica
-JerryI`WolframJSFrontend`Extensions`RegisterFrontEndObject[BarPlotly]
+BarPlotly[args__] /: MakeBoxes[BarPlotly[args], StandardForm] := With[{o = CreateFrontEndObject[BarPlotly[args]]},
+	MakeBoxes[o, StandardForm]
+]
 ```
 
 

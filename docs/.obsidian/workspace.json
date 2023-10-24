@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotting/BarChart.md",
+                "file": "frontend/Reference/Decorations/Interpretation.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "transform",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Plotting/BarChart.md",
+                "file": "frontend/Reference/Decorations/Interpretation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Plotting/BarChart.md",
+                "file": "frontend/Reference/Decorations/Interpretation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Plotting/BarChart.md"
+                "file": "frontend/Reference/Decorations/Interpretation.md"
               }
             }
           },
@@ -208,34 +208,34 @@
   },
   "active": "2fdfd67bd7e566c8",
   "lastOpenFiles": [
-    "frontend/Reference/Input/ButtonView.md",
+    "frontend/Reference/Decorations/InterpretationBox.md",
+    "frontend/Reference/Dynamics/CreateFrontEndObject.md",
+    "frontend/Tutorial/Dynamics.md",
+    "frontend/Reference/Dynamics/Internals/FrontEndExecutableInline.md",
+    "frontend/Troubleshooting.md",
+    "frontend/Reference/Decorations/InputForm.md",
+    "frontend/Advanced/dynamic-decorations.md",
+    "frontend/Reference/Tools/Iconize.md",
+    "frontend/Reference/Decorations/Interpretation.md",
+    "frontend/Reference/Decorations/Grid.md",
+    "frontend/Development/Plugins/library-functions.md",
+    "frontend/Development/Plugins/Basics.md",
     "frontend/Reference/Input/EditorView.md",
+    "frontend/Reference/Decorations/ToCM6Boxes.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Reference/Plotting/ListContourPlot.md",
+    "frontend/Reference/Plotting/ContourPlot.md",
+    "frontend/Reference/Plotting/BubbleChart.md",
+    "frontend/Reference/Plotting/BarChart.md",
+    "frontend/Reference/Graphics/Arrow.md",
+    "frontend/Reference/Plotting/DensityPlot.md",
+    "frontend/Reference/Plotting/Plot.md",
+    "frontend/Reference/Input/ButtonView.md",
     "frontend/Reference/Input/FileUploadView.md",
     "frontend/Reference/Input/InputFile.md",
     "frontend/Reference/Input/RangeView.md",
-    "frontend/Reference/Input/Slider.md",
-    "frontend/Reference/Input/ToggleView.md",
-    "frontend/Reference/Input/TextView.md",
-    "frontend/Reference/Input/InputToggle.md",
-    "frontend/Reference/Input/InputText.md",
-    "frontend/Reference/Input/InputButton.md",
-    "frontend/Mathematica vs WLJS.md",
-    "frontend/Reference/Input/InputRange.md",
-    "frontend/Reference/Input/InputTable.md",
-    "frontend/Reference/Input/InputSpoiler.md",
     "ezgif.com-optimize-7-2 1.gif",
     "ezgif.com-optimize-7-2.gif",
-    "frontend/Reference/Input/SpoilerView.md",
-    "frontend/Reference/Input/InputGroup.md",
-    "frontend/Troubleshooting.md",
-    "frontend/Reference/Tools/EmittKernel.md",
-    "frontend/Reference/Decorations/ToCM6Boxes.md",
-    "frontend/Reference/Decorations/Style.md",
-    "frontend/Reference/Decorations/Row.md",
-    "frontend/Reference/Decorations/NoBoxes.md",
-    "frontend/Reference/Decorations/HTMLForm.md",
-    "frontend/Reference/Decorations/MatrixForm.md",
-    "frontend/Reference/Decorations/Column.md",
     "frontend/Reference/Decorations/Internals",
     "frontend/Development/Plugins/imgs/Dev.wln",
     "frontend/Development/Plugins/imgs/newplot.png",
