@@ -57,13 +57,13 @@ formula /: MakeBoxes[formula[exp_], StandardForm] := With[{p = Plot[exp, {x,-1,1
 ]
 ```
 
-for [Plotly](../Plotting/Plotly.md) and some other user's defined function it works without [CreateFrontEndObject](../Dynamics/CreateFrontEndObject.md) 
+for [Plotly](../Plotting/Plotly.md) and some other user's defined function __it works without__ [CreateFrontEndObject](../Dynamics/CreateFrontEndObject.md) 
 :::
 
 :::tip
 Use explicit `uid`, when creating a front-end objects ([CreateFrontEndObject](../Dynamics/CreateFrontEndObject.md)) based on a hash-value of the decorated expression. It will reduce the load to frontend and will keep all instances with the same `uid` to be up to date with the changing data.
 
-See more in [dynamic-decorations](../../Advanced/dynamic-decorations.md) guide
+See more in [dynamic-decorations](../../Advanced/Boxes%20and%20Decorations/dynamic-decorations.md) guide
 :::
 
 ## Dev notes

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/Interpretation.md",
+                "file": "frontend/Troubleshooting.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Decorations/Interpretation.md",
+                "file": "frontend/Troubleshooting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Decorations/Interpretation.md",
+                "file": "frontend/Troubleshooting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Decorations/Interpretation.md"
+                "file": "frontend/Troubleshooting.md"
               }
             }
           },
@@ -208,32 +208,40 @@
   },
   "active": "2fdfd67bd7e566c8",
   "lastOpenFiles": [
-    "frontend/Reference/Decorations/InterpretationBox.md",
-    "frontend/Reference/Dynamics/CreateFrontEndObject.md",
-    "frontend/Tutorial/Dynamics.md",
-    "frontend/Reference/Dynamics/Internals/FrontEndExecutableInline.md",
-    "frontend/Troubleshooting.md",
-    "frontend/Reference/Decorations/InputForm.md",
-    "frontend/Advanced/dynamic-decorations.md",
-    "frontend/Reference/Tools/Iconize.md",
-    "frontend/Reference/Decorations/Interpretation.md",
-    "frontend/Reference/Decorations/Grid.md",
-    "frontend/Development/Plugins/library-functions.md",
-    "frontend/Development/Plugins/Basics.md",
-    "frontend/Reference/Input/EditorView.md",
-    "frontend/Reference/Decorations/ToCM6Boxes.md",
-    "frontend/Reference/Graphics/Graphics.md",
-    "frontend/Reference/Plotting/ListContourPlot.md",
-    "frontend/Reference/Plotting/ContourPlot.md",
-    "frontend/Reference/Plotting/BubbleChart.md",
-    "frontend/Reference/Plotting/BarChart.md",
-    "frontend/Reference/Graphics/Arrow.md",
-    "frontend/Reference/Plotting/DensityPlot.md",
-    "frontend/Reference/Plotting/Plot.md",
-    "frontend/Reference/Input/ButtonView.md",
-    "frontend/Reference/Input/FileUploadView.md",
-    "frontend/Reference/Input/InputFile.md",
-    "frontend/Reference/Input/RangeView.md",
+    "frontend/Mathematica vs WLJS.md",
+    "frontend/instruction.md",
+    "frontend/Advanced/Boxes and Decorations/dynamic-decorations.md",
+    "frontend/Reference/Javascript API/downloadByURL.md",
+    "frontend/Reference/Javascript API/InstancesHashMap.md",
+    "frontend/Reference/Javascript API/interpretate.md",
+    "frontend/Reference/Javascript API/openawindow.md",
+    "frontend/Reference/Javascript API/server.md",
+    "frontend/Reference/Javascript API/core.md",
+    "frontend/Reference/Javascript API/setInnerHTML.md",
+    "frontend/Reference/Javascript API/CellHashStorage.md",
+    "frontend/Reference/Javascript API/ObjectHashMap.md",
+    "frontend/Reference/Javascript API/ObjectStorage.md",
+    "frontend/Reference/Javascript API/uuidv4.md",
+    "interpreter/Basics/scripts.md",
+    "interpreter/Basics/syntax.md",
+    "interpreter/Extras/implementation.md",
+    "interpreter/Extras/reference.md",
+    "frontend/Reference/Tools/ReadClipboard.md",
+    "frontend/Reference/Javascript API",
+    "frontend/Reference/Tools/TalkKernel.md",
+    "frontend/Reference/Tools/TalkMaster.md",
+    "frontend/Reference/Tools/WindowScope.md",
+    "frontend/Reference/Tools/WLJSFunction.md",
+    "frontend/Reference/Tools/SlideEvent.md",
+    "frontend/Reference/Tools/SetTimeout.md",
+    "frontend/Reference/Tools/SetInterval.md",
+    "Screenshot 2023-11-02 at 10.18.16.png",
+    "frontend/Tutorial/Slides",
+    "frontend/Advanced/Javascript Integration",
+    "frontend/Advanced/Layout",
+    "frontend/Advanced/Snippets",
+    "frontend/Advanced/Frontend and Dynamics",
+    "frontend/Advanced/Boxes and Decorations",
     "ezgif.com-optimize-7-2 1.gif",
     "ezgif.com-optimize-7-2.gif",
     "frontend/Reference/Decorations/Internals",
@@ -243,16 +251,8 @@
     "imgs/gitplugins.png",
     "imgs/settings.png",
     "imgs/plotb.svg",
-    "frontend/Reference/Decorations",
-    "frontend/Plugins",
-    "frontend/Reference/Dynamics/Internals",
-    "frontend/Reference/WLJS",
-    "frontend/Reference/Tools",
-    "frontend/Reference/Input",
-    "frontend/Reference/Events",
     "frontend/Tutorial/imgs/left.png",
     "frontend/Tutorial/imgs/right.png",
-    "frontend/Tutorial/imgs/window 1.png",
-    "frontend/Tutorial/imgs/window.png"
+    "frontend/Tutorial/imgs/window 1.png"
   ]
 }

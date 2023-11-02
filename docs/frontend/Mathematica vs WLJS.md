@@ -65,17 +65,10 @@ EventHandler[#, Function[data, x = data]]&
 :::
 
 ## Greek symbols and etc
-Due to the encoding problems there were replaced by an expressions like
-```mathematica
-\[Alpha] -> $alpha$
-```
-
-which are replaced by an  [uneditable decoration](Development/Decorations.md), so you will not see them in real life. Use commands `ESC` + `alpha`  and pick up a macro from the autocomplete menu.
-
-Apart from that, traditional way of writing them is still supported. 
+Use commands `ESC` + `alpha`  and pick up a macro from the autocomplete menu.
 
 ## Boxes
-Most boxes are not available (for example the output of `Now` will look like a mess) excluding most common that comes with math, i.e. `Grid`, `Column`, `Fraction`... See more @ [Decorations](Development/Decorations.md) 
+Some of the boxes are implemented, so you can enjoy syntax sugar of Mathematica
 
 ## Dynamics
 There is such thing as `Dynamic` and `DynamicModule` in WLJS Frontend compared to Mathematica. The dynamic binding happens between a specific expressions (__if they support__) and does not necessary cause a full reevaluation
@@ -94,7 +87,7 @@ There is such thing as `Dynamic` and `DynamicModule` in WLJS Frontend compared t
 </div>
 
 :::info
-Here `Plot` expression does not support dynamic updates, therefore a user has to implement it manually using `ListLinePlotly` function. 
+Here `Plot` expression does not support dynamic updates, therefore a user has to implement it manually using `ListLinePlotly` function or directly using `Line` and `Graphics`
 :::
 
 

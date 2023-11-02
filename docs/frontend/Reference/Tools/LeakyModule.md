@@ -58,7 +58,7 @@ This is good change to send this variable to frontend wrapped with [`Offload`](.
 
 Since each time those variables (symbols) are unique, then, they will not mess up with other instances being reevaluated by the user again.
 
-Animation itself happens using asynchronous task spawned by [SetInterval](SetInterval.md). To prevent uncontrollable tasks running in the background [EventHandler](../Events/EventHandler.md) is used on [EvaluatingCell](EvaluatingCell.md) to detect if this cell was removed or reevaluated, and for such case it will kill the task.
+Animation itself happens using asynchronous task spawned by [SetInterval](SetInterval.md). To prevent uncontrollable tasks running in the background [EventHandler](../Events/EventHandler.md) is used on [EvaluationCell](EvaluationCell.md) to detect if this cell was removed or reevaluated, and for such case it will kill the task.
 
 :::info
 The major difference between `LeakyModule` and `Module` is that scoped symbols are stored in a dedicated garbage collection, controlled by the user. 

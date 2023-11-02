@@ -18,6 +18,9 @@ ReadClipboard[] // Alert // FrontSubmit
 
 The content of the clipboard will pop up in a window called by [Alert](Alert.md)
 
+:::note
+The data will not be transferred to Wolfram Kernel
+:::
 ### Get the data to WL Kernel
 You might use [TalkKernel](TalkKernel.md) that allows to transfer data back to the WL Kernel
 
@@ -32,4 +35,15 @@ Or use [event-generators](../../Advanced/event-generators.md) system to perform 
 ```mathematica
 EventHandler["uid", Print];
 EmittKernel[ReadClipboard[], "uid"] // FrontSubmit
+```
+
+### Print the content to a new cell
+Consider this example
+
+```mathematica
+textHandler[str_] := CellPrint[str];
+
+EventHandler[InputButton["Read selected text"], Function[Null, 
+  TalkKernel[Global`ReadClipboard[], "textHandler"] // FrontSubmit
+]]
 ```
