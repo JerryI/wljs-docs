@@ -41,7 +41,9 @@
     "react-helmet": "^6.1.0",
     "react-table": "^7.8.0",
     "rehype-katex": "^5.0.0",
-    "remark-math": "^3.0.1"
+    "remark-math": "^3.0.1",
+    "titlebar-react": "^2.0.1",
+    "windowbar-react": "^1.6.5"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.1"

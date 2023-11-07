@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Embedding WL code
 
 Since it support WLX syntax as well, one can combine the copied text from the normal Wolfram Language cell into a [EditorView](../../Reference/Input/EditorView.md) component.
@@ -17,18 +21,19 @@ Then somewhere on your slide
 # Input cell inside a slide
 
 <CodeInset>
-CM6Subscript[B, k_, q_][coords_]:= Sum[ 
+B[coords_]k_,q_:= Sum[ 
   
   With[{\\[Theta] = ToSphericalCoordinates[c][[2]], \\[Phi] = ToSphericalCoordinates[c][[3]]},
-    CM6Superscript[(-1), q] CM6Subscript[a, k][Norm[c]] CM6Sqrt[CM6Fraction[4Pi, 2k + 1]] SphericalHarmonicY[k,-q, \\[Theta], \\[Phi]]
+    (*SpB[*)Power[(-1)(*|*),(*|*)q](*]SpB*) (*SbB[*)Subscript[a(*|*),(*|*)k](*]SbB*)[Norm[c]] (*SqB[*)Sqrt[(*FB[*)((4Pi)(*,*)/(*,*)(2k + 1))(*]FB*)](*]SqB*) SphericalHarmonicY[k,-q, \\[Theta], \\[Phi]]
   ]
   
-, {c, coords}]</CodeInset>
+, {c, coords}]
+</CodeInset>
 
 ```
 
 :::info
-There is no need in writing `CM6Subscript` and etc. manually, this is a representation of cell's elements (Boxes) from a normal WL editor. __Just copy the text__ from the corresponding input/output cell
+There is no need in writing `(*whatever*)` and etc. manually, this is a representation of cell's elements (Boxes) from a normal WL editor. __Just copy the text__ from the corresponding input/output cell
 :::
 
 The result will look like this

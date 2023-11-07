@@ -13,6 +13,10 @@ Works only with Wolfram Engine $\geq$ __13.0.0__
 Make sure that Wolfram Engine is activated and no other instance of `wolfram` is running on your Mac/PC
 :::
 
+
+![uilook](../imgs/uilook.png)
+
+
 There is two ways you can choose from
 
 ## Desktop application
@@ -21,16 +25,11 @@ Frontend is also shipped as an Electron cross-platform application, that makes y
 __[Releases](https://github.com/JerryI/wolfram-js-frontend/releases)__
 
 ## Via console & web-browser
-Then download `.zip` from [master branch](https://github.com/JerryI/wolfram-js-frontend) or
+Clone the master branch and run `wolframscript`
 
 ```bash
 git clone https://github.com/JerryI/wolfram-js-frontend
 cd wolfram-js-frontend
-```
-
-then run the script
-
-```bash
 wolframscript -f Scripts/run.wls
 ```
 

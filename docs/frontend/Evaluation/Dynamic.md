@@ -6,6 +6,9 @@ To support dynamics and two-ways data binding it relies on the event-based evalu
 - an event has to be fired by the frontend (browser)
 - a direct request must be send by the frontend
 
+:::info
+Consider to see also [event-generators](../Advanced/event-generators.md), [EventObject](../Reference/Events/EventObject.md), [EventHandler](../Reference/Events/EventHandler.md) and [server](../Reference/Javascript%20API/server.md) from the JS API section in reference.
+:::
 ### Event system
 It uses a very simplified event system, where an event object has an id and the data inside. Each event object can be assigned only to the one handler
 
@@ -49,9 +52,6 @@ subgraph Event1["Event"]
 end
 end
 
-subgraph MasterKernel
-
-end
 
 subgraph SecondaryKernel
 subgraph EventHandler
@@ -59,7 +59,7 @@ subgraph EventHandler
 end
 end
 
-Event1--Fire-->MasterKernel--Fire-->EventHandler
+Event1--Fire-->EventHandler
 
 ```
 
@@ -70,6 +70,9 @@ server.emitt('uid', data)
 
 A slider, a button, an animation on the frontend __are a just event-generators__ with a fancy view boxes (see [Boxes](../Customizing%20IO/Boxes.md)).
 
+:::info
+When an event is fired it bypasses the master kernel and goes directly to your evaluating (secondary) Kernel using a dedicated WebSockets channel for the sake of performance
+:::
 #### A direct request by the frontend to the secondary kernel
 On JS side it is possible to evaluate any arbitrary function on the secondary kernel by calling
 ```js
@@ -77,7 +80,7 @@ server.talkKernel('Print["Hi!"]')
 ```
 
 #### How to reply back?
-To make fire the chain backwards we rely on the direct communication between frontend and the secondary kernel. Secondary kernel is always aware, to which notebook it is connected. Then to execute any frontend function (see [[../Advanced/Frontend functions]]) one can call
+To make fire the chain backwards we rely on the direct communication between frontend and the secondary kernel. Secondary kernel is always aware, to which notebook it is connected. Then to execute any frontend function (see [FrontSubmit](../Reference/Dynamics/FrontSubmit.md)) one can call
 
 ```mathematica
 FrontSubmit[ Alert["Hello World"] ];
@@ -92,16 +95,20 @@ subgraph Frontend
 WLJS --> Alert!
 end
 
-MasterKernel
+
 
 SecondaryKernel
 
 
-SecondaryKernel--Alert-->MasterKernel--Alert-->WLJS
+SecondaryKernel--Alert-->WLJS
 
 ```
 
-One can transfer any arbitrary symbolic or non-symbolic data to it and even perform [[../Heterogenesis computation/Basics]] there. With some syntax sugar it provides a nice interface to interact with [[Frontend objects]].
+:::info
+All events and etc bypasses master kernel and goes directly to your browser.
+:::
+
+One can transfer any arbitrary symbolic or non-symbolic data to it and even perform Heterogenesis computation there.
 
 ### Promises
 The given examples above are focused on the async evaluation and etc. But what if we need get some data from the master or secondary kernel and then, perform some calculations using that?

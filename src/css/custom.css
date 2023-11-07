@@ -40,3 +40,15 @@ html {
 html[data-theme='dark'] {
   --ifm-background-color:rgb(43,49,60);
 }
+
+.container table td {
+  border: none;
+  background-color:none;
+  padding: 0.1em;
+}
+
+.container table tr {
+  border: none;
+  background-color:none;
+  padding: 0.1em;
+}

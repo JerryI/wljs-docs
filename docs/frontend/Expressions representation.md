@@ -35,15 +35,12 @@ Cuboid[]//Graphics3D
 The idea to reproduce full functionality of Mathematica's frontend in this manner is doomed by a few reasons
 
 - frontend functions are poorly documented
-- ~~WYSIWIG editor with mutable WL expressions inside is a mess~~ (see [Decorations](Development/Decorations.md))
-- even with a ~20 years of development, Mathematica frontend is quite laggy
-
-*With some compromises, giving to a user a full control and ability to customize the processes under the hood it might result in an extremely flexible tool.*
+- even with ~30 years of development, Mathematica frontend is quite laggy
 
 Since Mathematica is a paid software, one have to do it from the scratch.
 
 ## Balancing between InputForm and DisplayFrom
-In principle, we do not need to make the whole WL expression mutable and interactive. There are only a few cases, where we really need this
+In principle, we do not need to make the whole WL expression to be mutable and interactive. There are only a few cases, where we really need this
 
 1. Graphics, sliders, buttons and etc - __separate objects__
 2. Syntax sugar for fractions, square roots, matrixes and etc. - __mixed__
@@ -55,7 +52,7 @@ In the simples case one could just replace graphic objects with images (svgs) an
 - Jupyter
 - Wolfram Notebook VS Code extension
 
-Anyway, since `Plot` and `Plot3D` is an overset of `Graphics` and `Graphics3D` symbols with a recipe inside made from other symbols, one need to cook it and display to the user, i.e. __we need a frontend WL interpreter for sure__. Since the portability is great - we should use web-stack, where Javascript rules all computations. See [WLJS Interpreter](../interpreter/intro.md)
+Anyway, since `Plot` and `Plot3D` is a superset of `Graphics` and `Graphics3D` symbols with a recipe inside made from other symbols, one need to cook it and display to the user, i.e. __we need a frontend WL interpreter for sure__. Since the portability is great - we should use web-stack, where Javascript rules all computations. See [WLJS Interpreter](../interpreter/intro.md)
 
 *The second one* (__mixed__) is rather tricky to implement fully, since it involves mutable WL expressions. 
 
@@ -69,18 +66,21 @@ $$\frac{a\times b}{\sqrt{2}}$$
 FractionBox[RowBox[{"a", " ", "b"}], SqrtBox["2"]]
 ```
 
-what I (as @JerryI a maintainer) would like to simplify here - __keep the actual code__ 
+what we would like to simplify here - __keep the actual code__ 
 
 ```mathematica
-FractionBox[a b, SqrtBox[2]]
+(*FractionBox[*)a b(*|*)/(*|*)(*SqrtBox[*)Sqrt[2](*]SqrtBox*)(*]FractionBox*)
 ```
 
-to remove an overhead while editing those expressions. Thankfully, it can easily be done using Wolfram Language
+It does look a bit more complicated, but if you just remove all comments
 
 ```mathematica
-RowBoxAlt[x_List, y___] := StringJoin @@ (ToString[#] & /@ x)
-( (a b)/Sqrt[2] // ToBoxes ) /. {RowBox -> RowBoxAlt} // ToString
+a b / Sqrt[2]
 ```
 
-The issues with styling and etc can also be solved - see [Decorations](Development/Decorations.md)
+- you can copy your cell's text to any WL parsers, use it with `wolframscript` with no changes made!
+- **it does not affect the code structure**
+- it has all markers for the editor (**no need to parse WL on client's side!**), that makes all process of writing equations much safer
+
+It has a big impact on the performance, especially while working with matrixes. `InterpretationBox` and other sweet tools are supported in a similar way using comments.
 

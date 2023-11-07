@@ -14,6 +14,9 @@ FrontSubmit[expr_, _ | MetaMarker["uid"]]
 
 The executing takes place inside [WLJS Intepreter](../../../interpreter/intro.md) running in your browser / Electron App. The second argument __is optional__ and comes as `MetaMarker[]`, please, see examples below.
 
+:::info
+The submitted expression bypasses the master kernel and goes directly to the frontend (browser) using a dedicated WebSockets channel for the sake of performance and low-latency.
+:::
 ## Examples
 ### Execute any WLJS function from WL Kernel
 There are many expressions working exclusively on the frontend's side, for instance [Alert](../Tools/Alert.md) might be quite useful

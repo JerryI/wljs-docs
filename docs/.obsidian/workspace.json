@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Arrow.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2fdfd67bd7e566c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Reference/Graphics3D/SpotLight.md",
+                "file": "frontend/Tutorial/Snippets.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Input/InputButton.md",
+                "file": "frontend/Reference/Decorations/InterpretationBox.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,26 +37,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/HTMLForm.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9f970eb1f8ed18e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Development/Plugins/Basics.md",
+                "file": "frontend/Reference/Decorations/MakeBoxes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "transform",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -134,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics3D/SpotLight.md",
+                "file": "frontend/Tutorial/Snippets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics3D/SpotLight.md",
+                "file": "frontend/Tutorial/Snippets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics3D/SpotLight.md"
+                "file": "frontend/Tutorial/Snippets.md"
               }
             }
           },
@@ -206,35 +181,38 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "2fdfd67bd7e566c8",
+  "active": "0fd38ed7aef45f9b",
   "lastOpenFiles": [
-    "frontend/Troubleshooting.md",
-    "frontend/Reference/Graphics3D/SpotLight.md",
-    "frontend/Mathematica vs WLJS.md",
-    "frontend/instruction.md",
-    "frontend/Advanced/Boxes and Decorations/dynamic-decorations.md",
-    "frontend/Reference/Javascript API/downloadByURL.md",
-    "frontend/Reference/Javascript API/InstancesHashMap.md",
-    "frontend/Reference/Javascript API/interpretate.md",
-    "frontend/Reference/Javascript API/openawindow.md",
-    "frontend/Reference/Javascript API/server.md",
-    "frontend/Reference/Javascript API/core.md",
-    "frontend/Reference/Javascript API/setInnerHTML.md",
-    "frontend/Reference/Javascript API/CellHashStorage.md",
-    "frontend/Reference/Javascript API/ObjectHashMap.md",
-    "frontend/Reference/Javascript API/ObjectStorage.md",
-    "frontend/Reference/Javascript API/uuidv4.md",
-    "interpreter/Basics/scripts.md",
-    "interpreter/Basics/syntax.md",
-    "interpreter/Extras/implementation.md",
-    "interpreter/Extras/reference.md",
-    "frontend/Reference/Tools/ReadClipboard.md",
+    "frontend/Tutorial/Plugins.md",
+    "frontend/Tutorial/Plotting functions.md",
+    "frontend/Tutorial/Math input.md",
+    "frontend/Tutorial/Input elements.md",
+    "frontend/Tutorial/GUI Overview.md",
+    "frontend/Reference/Tools/CellPrint.md",
+    "frontend/Reference/Input/EditorView.md",
+    "frontend/Reference/Decorations/Internals/(BoxBox).md",
+    "frontend/Reference/Decorations/Internals/(ViewBox).md",
+    "frontend/Reference/Decorations/Internals/FrontEndBoxTemporal.md",
+    "frontend/Reference/Decorations/TableForm.md",
+    "frontend/Reference/Decorations/Style.md",
+    "frontend/Reference/Decorations/Row.md",
+    "frontend/Reference/Decorations/MatrixForm.md",
+    "frontend/Reference/Decorations/MakeBoxes.md",
+    "frontend/Reference/Decorations/InterpretationBox.md",
+    "frontend/Reference/Decorations/Interpretation.md",
+    "frontend/Reference/Decorations/InputForm.md",
+    "frontend/Reference/Decorations/HTMLForm.md",
+    "frontend/Reference/Decorations/Grid.md",
+    "frontend/Reference/Decorations/Framed.md",
+    "frontend/Reference/Decorations/CustomBox.md",
+    "frontend/Reference/Decorations/Column.md",
+    "frontend/Tutorial/Cells structure.md",
+    "frontend/Tutorial/Slides/intro.md",
+    "frontend/Tutorial/Slides/embed-wl.md",
+    "imgs/uilook 2.png",
+    "imgs/uilook 1.png",
+    "imgs/uilook.png",
     "frontend/Reference/Javascript API",
-    "frontend/Reference/Tools/TalkKernel.md",
-    "frontend/Reference/Tools/TalkMaster.md",
-    "frontend/Reference/Tools/WindowScope.md",
-    "frontend/Reference/Tools/WLJSFunction.md",
-    "frontend/Reference/Tools/SlideEvent.md",
     "Screenshot 2023-11-02 at 10.18.16.png",
     "frontend/Tutorial/Slides",
     "frontend/Advanced/Javascript Integration",
@@ -250,9 +228,6 @@
     "frontend/Development/Plugins/imgs",
     "imgs/gitplugins.png",
     "imgs/settings.png",
-    "imgs/plotb.svg",
-    "frontend/Tutorial/imgs/left.png",
-    "frontend/Tutorial/imgs/right.png",
-    "frontend/Tutorial/imgs/window 1.png"
+    "imgs/plotb.svg"
   ]
 }

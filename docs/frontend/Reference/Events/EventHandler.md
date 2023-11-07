@@ -20,6 +20,10 @@ to wrap an [EventListener](../Graphics/EventListener.md) or  [EventListener](../
 It does look similar to what you have in Wolfram Mathematica, but built entirely in a different way. There is no backward compatibility possible.
 :::
 
+:::info
+When an event is fired it bypasses the master kernel and goes directly to your evaluating (secondary) Kernel using a dedicated WebSockets channel for the sake of performance
+:::
+
 __Please see the full guide__ on it [event-generators](../../Advanced/event-generators.md)
 ## Examples
 ### Attaching a handler to an arbitrary event
