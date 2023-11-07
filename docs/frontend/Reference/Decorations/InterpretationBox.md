@@ -67,4 +67,4 @@ See more in [dynamic-decorations](../../Advanced/Boxes%20and%20Decorations/dynam
 :::
 
 ## Dev notes
-This is a wrapper for [(ViewBox)](Internals/(ViewBox).md) with a read-only [EditorView](../Input/EditorView.md) inside.
+This is a wrapper for [ViewBox](Low%20level/ViewBox.md) with a read-only [EditorView](../Input/EditorView.md) inside.

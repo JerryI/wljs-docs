@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Tutorial/Snippets.md",
+                "file": "frontend/Development/Decorations.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Tutorial/Snippets.md",
+                "file": "frontend/Development/Decorations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Tutorial/Snippets.md",
+                "file": "frontend/Development/Decorations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Tutorial/Snippets.md"
+                "file": "frontend/Development/Decorations.md"
               }
             }
           },
@@ -183,6 +183,11 @@
   },
   "active": "0fd38ed7aef45f9b",
   "lastOpenFiles": [
+    "frontend/Reference/Decorations/Low level/ViewBox.md",
+    "frontend/Reference/Decorations/CustomBox.md",
+    "frontend/Reference/Decorations/Low level/BoxBox.md",
+    "frontend/Reference/Decorations/Column.md",
+    "frontend/Tutorial/Snippets.md",
     "frontend/Tutorial/Plugins.md",
     "frontend/Tutorial/Plotting functions.md",
     "frontend/Tutorial/Math input.md",
@@ -190,8 +195,6 @@
     "frontend/Tutorial/GUI Overview.md",
     "frontend/Reference/Tools/CellPrint.md",
     "frontend/Reference/Input/EditorView.md",
-    "frontend/Reference/Decorations/Internals/(BoxBox).md",
-    "frontend/Reference/Decorations/Internals/(ViewBox).md",
     "frontend/Reference/Decorations/Internals/FrontEndBoxTemporal.md",
     "frontend/Reference/Decorations/TableForm.md",
     "frontend/Reference/Decorations/Style.md",
@@ -204,11 +207,8 @@
     "frontend/Reference/Decorations/HTMLForm.md",
     "frontend/Reference/Decorations/Grid.md",
     "frontend/Reference/Decorations/Framed.md",
-    "frontend/Reference/Decorations/CustomBox.md",
-    "frontend/Reference/Decorations/Column.md",
     "frontend/Tutorial/Cells structure.md",
     "frontend/Tutorial/Slides/intro.md",
-    "frontend/Tutorial/Slides/embed-wl.md",
     "imgs/uilook 2.png",
     "imgs/uilook 1.png",
     "imgs/uilook.png",
@@ -222,7 +222,7 @@
     "frontend/Advanced/Boxes and Decorations",
     "ezgif.com-optimize-7-2 1.gif",
     "ezgif.com-optimize-7-2.gif",
-    "frontend/Reference/Decorations/Internals",
+    "frontend/Reference/Decorations/Low level",
     "frontend/Development/Plugins/imgs/Dev.wln",
     "frontend/Development/Plugins/imgs/newplot.png",
     "frontend/Development/Plugins/imgs",

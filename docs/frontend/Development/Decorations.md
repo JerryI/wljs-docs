@@ -107,6 +107,11 @@ end
 :::danger
 Early stage of development. `RGBColor`, `DateObject` are supported only!
 :::
+
+:::note
+Also see [ViewBox](../Reference/Decorations/Low%20level/ViewBox.md)
+:::
+
 Such decorations as `TemplateBox` are translated into
 
 ```mathematica
@@ -204,6 +209,11 @@ that looks like a fraction
 It works similar to [Custom replacement view (ViewBox)](#Custom%20replacement%20view%20(ViewBox)), but instead of simple DOM element it places a separate CodeMirror editor inside. It means, each of two boxes inside the fraction __has all features of a normal WL editor__!
 
 ### Wrapper Box view... (BoxBox?)
+
+:::note
+Also see [BoxBox](../Reference/Decorations/Low%20level/BoxBox.md)
+:::
+
 If one needs something more flexible and complex, than just mathematical typesetting, an attempt to bring to live to `StyleBox`, `FrameBox` and etc was made. In principle it can all be just [[Frontend Object]] aka [[#Uneditable Replacing decorations]] with an editor inside (see [EditorView](../Reference/Input/EditorView.md)), however image the following case
 
 <Notebook code="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" name="matchless-d0ba3">matchless-d0ba3</Notebook>
