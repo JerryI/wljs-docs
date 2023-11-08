@@ -44,11 +44,11 @@ return dom;
 FrontSubmit[MyFunction[StringTemplate["<h3>``</h3>"][Now]]]
 ```
 
-Please see the tutorial on this topic - [Frontend functions](../../Advanced/Frontend%20functions.md)
+Please see the tutorial on this topic - [Frontend functions](../../Advanced/Frontend%20interpretation/Frontend%20functions.md)
 
 ### Execute an expression inside the existing container
 :::note
-See more about containers [containers](../../../interpreter/Advanced/containers.md) and here [executables](../../Advanced/executables.md) and [meta-markers](../../../interpreter/Advanced/meta-markers.md)
+See more about containers [containers](../../../interpreter/Advanced/containers.md) and here [executables](../../Advanced/Frontend%20interpretation/executables.md) and [meta-markers](../../../interpreter/Advanced/meta-markers.md)
 :::
 The common practical case is to append extra object onto the existing graph/plot with no reevaluation of the cell
 

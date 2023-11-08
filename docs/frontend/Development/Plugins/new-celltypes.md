@@ -5,7 +5,7 @@ sidebar_position: 4
 # Adding a new cell type
 
 :::info
-Please see the details of a static evaluation process [here](../../Evaluation/Static.md)
+Please see the details of a static evaluation process [here](../Evaluation/Static.md)
 :::
 ## Cell processors
 A processor is a so-called handler function, which is called one-by one from the pool for every cell, that is undergoing the evaluation process.

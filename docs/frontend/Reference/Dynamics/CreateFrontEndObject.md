@@ -9,13 +9,13 @@ CreateFrontEndObject[expr, "uid" | Empty, OptionsPattern[]]
 
 Returns [`FrontEndExecutable`](Internals/FrontEndExecutable.md) object with a given id or generated.
 
-See more about it in __[Executables](../../Advanced/executables.md)__
+See more about it in __[Executables](../../Advanced/Frontend%20interpretation/executables.md)__
 
 :::info
 Is used to force Wolfram Kernel to execute an expression on the frontend ([WLJS](../../../interpreter/intro.md)) with an HTML element provided to the output cell
 :::
 
-This is a fundament  for serving `Graphics`, `InputRange`... and other interactive elements. Event `EventObject` that comes from [event-generators](../../Advanced/event-generators.md) use it to show the UI element.
+This is a fundament  for serving `Graphics`, `InputRange`... and other interactive elements. Event `EventObject` that comes from [event-generators](../../Advanced/Events%20system/event-generators.md) use it to show the UI element.
 
 In general, containers is a huge fundamental building blocks for almost everything. 
 
@@ -114,7 +114,7 @@ Only 3 and 2 are effectively connected to each other, 1 and 2 are connected as w
 
 ## Options
 ### Private and shared storage
-Taken from [Evaluation / Static](../../Evaluation/Static.md) 
+Taken from [Evaluation / Static](../../Development/Evaluation/Static.md) 
 
 >Each time you evaluate `Graphics` or whatever frontend object, it creates two copies of its representation: one is stored on frontend kernel (master Wolfram Kernel), which is shared with a browser (WLJS), while there is other *private* copy of it on the secondary Wolfram Kernel. When Wolfram Kernel encounters a `FrontEndExecutable` during the evaluation, it uses (if available) its private copy, and if not it downloads the shared one into the private storage.  **See how it can be used [HERE](https://jerryi.github.io/wljs-docs/blog/feobjects-example)**
 

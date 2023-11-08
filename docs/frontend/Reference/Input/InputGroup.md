@@ -7,10 +7,10 @@ update: false
 ```mathematica
 InputGroup[events_List | _Association] _EventObject
 ```
-groups different [event-generators](../../Advanced/event-generators.md) such as [InputRange](InputRange.md), [InputButton](InputButton.md) or in general [EventObject](../Events/EventObject.md) into a new `EventObject`
+groups different [event-generators](../../Advanced/Events%20system/event-generators.md) such as [InputRange](InputRange.md), [InputButton](InputButton.md) or in general [EventObject](../Events/EventObject.md) into a new `EventObject`
 
 :::info
-Please consider to read the full guide [event-generators](../../Advanced/event-generators.md)
+Please consider to read the full guide [event-generators](../../Advanced/Events%20system/event-generators.md)
 :::
 
 ## Event generation

@@ -19,13 +19,14 @@ const list = [
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@master/src/boxes.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-markdown-support@master/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@master/src/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-html-support@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-plotly@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-hydrator@master/src/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@master/dist/kernel.js"
+  "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@master/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-revealjs@master/dist/kernel.js"
 ].map((link) => {
   return {src: link, type: 'module', async: false}
 });

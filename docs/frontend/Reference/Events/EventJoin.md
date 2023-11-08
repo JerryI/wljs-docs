@@ -15,7 +15,7 @@ joined = Join[ev1_EventObject, ev2_EventObject, ...]
 ```
 
 ::note
-Please, see the full guide on events [event-generators](../../Advanced/event-generators.md)
+Please, see the full guide on events [event-generators](../../Advanced/Events%20system/event-generators.md)
 :::
 
 :::info

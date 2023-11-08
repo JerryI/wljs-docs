@@ -13,7 +13,7 @@ clones an instance of `ev` event object passed as [`EventObject`](EventObject.md
 In order to violate the thumb rule #1 
 > One event-object - one handler function
 
-you need to clone an event object to be able to assign more than 1 handler function to the event. Please see the full guide [event-generators](../../Advanced/event-generators.md)
+you need to clone an event object to be able to assign more than 1 handler function to the event. Please see the full guide [event-generators](../../Advanced/Events%20system/event-generators.md)
 
 ## Example
 Let us artificially create an event object and clone it

@@ -43,7 +43,7 @@ Navigation between mathematical expressions is currently in development. It does
 :::
 
 ## Input elements
-`Slider` and most Mathematica's input elements are replaced with [wljs-inputs](https://github.com/JerryI/wljs-inputs) and event-based approach. Please see [Dynamics](Tutorial/Dynamics.md) and [event-generators](Advanced/event-generators.md) for more information.
+`Slider` and most Mathematica's input elements are replaced with [wljs-inputs](https://github.com/JerryI/wljs-inputs) and event-based approach. Please see [Dynamics](Tutorial/Dynamics.md) and [event-generators](Advanced/Events%20system/event-generators.md) for more information.
 ## Greek symbols and etc
 Use commands `ESC` + `a` (for $\alpha$ symbol)  and pick up a macro from the autocomplete menu.
 

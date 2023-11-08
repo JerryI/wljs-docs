@@ -1,9 +1,10 @@
 ---
 sidebar_position: 1
+draft: true
 ---
 The whole notebook interface is made using plain Javascript, HTML powered by a [Wolfram WebServer](https://github.com/KirillBelovTest/HTTPHandler)  and [template engine](https://github.com/JerryI/wl-wsp) running locally on a Wolfram Kernel. It means you can work remotely by running a server anywhere you want. 
 
-Some calculations are performed partially by your browser, you can have a control over it, [if you want](Dynamics.md) . All UI elements, cells operations are written in Javascript and Wolfram Language and performed by [WLJS](../../interpreter/intro.md) interpreter. 
+Some calculations are performed partially by your browser, you can have a control over it, [if you want](Dynamics.md) . All UI elements, cells operations are written in Javascript and Wolfram Language and performed by [WLJS Interpreter](../../interpreter/intro.md). 
 
 :::note
 Frontend saves cell's data every-time you type something to RAM. Serializing to the disk is scheduled with a 3 minutes interval.
@@ -13,45 +14,28 @@ Moving from the native desktop applications to a web stack has some drawbacks in
 
 ## File system
 This is not cloud-based project, therefore all notebooks are actual files on you drive. 
+
 :::info
 Every notebook is stored as human-readable/editable `.wln` file imported by Wolfram Engine. 
 :::
+
 Once you open a file it is stored in RAM, even if you close a notebook. Save operations perform serialization and stores the data into a file.
 
-The approach on how to organize your directories was inspired by Obsidian, where your notes are located in so-called *vaults*. Once you open a folder it becomes a vault and Wolfram Kernel sets the directory to it. So you can work with files using relative path.
+The approach on how to organize your directories was inspired by Obsidian, where your notes are located in so-called *vaults*. Once you open a folder it becomes a vault and Wolfram Kernel __sets the directory to it__. So you can work with files using relative path.
 
 :::note
 You can open the same notebook in multiple tabs, but the Kernel's message transport is assigned to only one active tab, but it automatically switches between tabs.
 :::
 
-:::caution
-Unicode characters in paths are not fully supported by now. 
-:::
 ## UI
 In general the whole UI is a rip-off from Notion-like web-based editors bringing clarity and minimalistic controls over your document. 
+
 Let's have a look at the basic UI elements
 ### Working area
 This is the first thing you will see
 
 ![](imgs/notebook.png)
 There is file browser tree on the right side, the left side is your working area, which is be populated by the notebook's content when the last one is open.
-
-- __Open vault__ - opens an internal file browser to locate the desired folder or notebook. Or if you are running it as an app (not in a browser), one can also open it from the native window's FILE menu.
-- __New notebook__ - generates a blank notebook with a random name and place it into the current folder
-
-:::info
-`.nb` format of notebooks __is not supported for now__. Frontend uses regular Wolfram Kernel's `.wln` files to store notebook's data 
-:::
-
-When you open an notebook file it shown a lightly different window
-
-![](imgs/window%201.png)
-- `Local Kernel` is a menu and a status bar for the secondary kernel to which you frontend is connected. 
-- Black rectangle is `Abort` button to interrupt the evaluation.
-- Small letter `i` stands for evaluation initialization cells group
-- Circular arrow acts like `EvaluateAll` command, that evaluates all cells in the opened notebook
-- Clocks is actually an indicator, that your connection to the frontend is ok, it rotates every second by a command sent via web-sockets protocol. __This is also a save button__.
-- `Share` button stands for exporting you notebook as an `html` standalone file or `react` component to be embedded on you website/blog (see more [React component](../Export/React%20component.md))
 
 ### Cell control buttons
 All cells are grouped by parent input cell, apart from that the structure of the notebook is flat. The controls are applied to the whole group
@@ -72,6 +56,6 @@ All cells are grouped by parent input cell, apart from that the structure of the
 You can locate a cogwheel on the sidebar or (for desktop app) it is located in `Mics` section of your top-bar menu
 
 ![](../../imgs/settings.png)
-Here you can manipulate the plugins you have or install a new one by the link to a Github repo.
+Here you can manipulate the plugins you have or install a new one by the link to a Github repo - see [Plugins](Plugins.md)
 
 There is a styles customization available as well, that overrides the default theme.

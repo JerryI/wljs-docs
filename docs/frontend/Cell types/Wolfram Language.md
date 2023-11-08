@@ -19,7 +19,7 @@ To specify the type of a cell - use a prefix in the first line of the cell
 .md
 # Hello
 ```
-it can be anything `**.**` the behavior is defined by language processors shipped via packages installed (see [Static Evaluation](../Evaluation/Static.md))
+it can be anything `**.**` the behavior is defined by language processors shipped via packages installed (see [Static Evaluation](../Development/Evaluation/Static.md))
 
 **Think about it if it was an anonymous file**
 :::

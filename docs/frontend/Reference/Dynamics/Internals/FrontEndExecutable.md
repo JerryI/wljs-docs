@@ -17,4 +17,4 @@ It will not be seen in this form in the cell's editor, since this is a [decorati
 
 It is used as a compact representation for the most graphics and other interactive objects.
 
-See more about it in __[Decorations](../../../Development/Decorations.md) and [Executables](../../../Advanced/executables.md)__
+See more about it in __[Decorations](../../../Development/Decorations.md) and [Executables](../../../Advanced/Frontend%20interpretation/executables.md)__

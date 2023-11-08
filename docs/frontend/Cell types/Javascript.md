@@ -50,6 +50,6 @@ Do not forget to `cancelAnimationFrame` using `this.ondestroy` method
 ## Communication with Wolfram Kernel
 In general one can define any function for WLJS Interpreter using Javascript cells, please see guide here [js-access](../../interpreter/Basics/js-access.md). 
 
-For the most applications event-based system is used, see [Dynamic](../Evaluation/Dynamic.md)
+For the most applications event-based system is used, see [Dynamic](../Development/Evaluation/Dynamic.md)
 
 WSP Template engine is also working.

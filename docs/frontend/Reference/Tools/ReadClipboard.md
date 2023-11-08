@@ -30,7 +30,7 @@ TalkKernel[ReadClipboard[], "Print"] // FrontSubmit
 
 It will call a standard `Print` function on WL Side. Instead of a `Print` you can use your own handler function.
 
-Or use [event-generators](../../Advanced/event-generators.md) system to perform data transferring as well. For that
+Or use [event-generators](../../Advanced/Events%20system/event-generators.md) system to perform data transferring as well. For that
 
 ```mathematica
 EventHandler["uid", Print];

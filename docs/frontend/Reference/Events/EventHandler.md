@@ -24,7 +24,7 @@ It does look similar to what you have in Wolfram Mathematica, but built entirely
 When an event is fired it bypasses the master kernel and goes directly to your evaluating (secondary) Kernel using a dedicated WebSockets channel for the sake of performance
 :::
 
-__Please see the full guide__ on it [event-generators](../../Advanced/event-generators.md)
+__Please see the full guide__ on it [event-generators](../../Advanced/Events%20system/event-generators.md)
 ## Examples
 ### Attaching a handler to an arbitrary event
 This is somewhat like a bread and a butter of `EventHandler`

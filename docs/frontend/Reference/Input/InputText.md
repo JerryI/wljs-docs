@@ -6,7 +6,7 @@ origin: https://github.com/JerryI/wljs-inputs
 ```mathematica
 InputText[initial_String, opts___] _EventObject
 ```
-creates an [event-generator](../../Advanced/event-generators.md) for an input-text field and returns [EventObject](../Events/EventObject.md)
+creates an [event-generator](../../Advanced/Events%20system/event-generators.md) for an input-text field and returns [EventObject](../Events/EventObject.md)
 
 ## Event generation
 Every-time user changes the content, an event __in a form of string__ will be generated

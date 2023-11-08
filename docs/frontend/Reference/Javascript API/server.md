@@ -19,7 +19,7 @@ server.kernel.socket.send('Print["2 is the result"]')
 ```
 
 ### Emit event
-This is used in [event-generators](../../Advanced/event-generators.md) quite widely
+This is used in [event-generators](../../Advanced/Events%20system/event-generators.md) quite widely
 
 *cell 1*
 ```mathematica

@@ -8,12 +8,12 @@ source: https://github.com/JerryI/wl-misc/
 EventObject[a_Association]
 ```
 
-a local representation of event entity used in [Dynamics](../../Tutorial/Dynamics.md),  [Input elements](../../Tutorial/Input%20elements.md) and [event-generators](../../Advanced/event-generators.md). It does provide extra feature to an event system such as listed below
+a local representation of event entity used in [Dynamics](../../Tutorial/Dynamics.md),  [Input elements](../../Tutorial/Input%20elements.md) and [event-generators](../../Advanced/Events%20system/event-generators.md). It does provide extra feature to an event system such as listed below
 
 :::info
 The object itself does not have a constructor or destructor in terms of OOP and is not stored anywhere else, expect the expression you are working with.
 
-__It is not mandatory to use `EventObject` construction__ to attach event handling function to it and fire an event. A user can also use plain strings. __Please see__ complete guide [event-generators](../../Advanced/event-generators.md) and [EventHandler](EventHandler.md) pages
+__It is not mandatory to use `EventObject` construction__ to attach event handling function to it and fire an event. A user can also use plain strings. __Please see__ complete guide [event-generators](../../Advanced/Events%20system/event-generators.md) and [EventHandler](EventHandler.md) pages
 :::
 
 Usually you do not face them directly, but as a product of generators such as [`InputRange`](../Input/InputRange.md), [`InputButton`](../Input/InputButton.md) and etc.

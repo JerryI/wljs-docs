@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 ---
-Usually, every UI element in a cell is [Event generator](../Advanced/event-generators.md), i.e. `EventObject[]` with a field `view`, which is shown on output. Unlike Mathematica, WLJS Frontend uses event-based approach, so you have to bind a handler function to each interactive element you used
+Usually, every UI element in a cell is [Event generator](../Advanced/Events%20system/event-generators.md), i.e. `EventObject[]` with a field `view`, which is shown on output. Unlike Mathematica, WLJS Frontend uses event-based approach, so you have to bind a handler function to each interactive element you used
 
 ```mathematica
 element = EventObject[<|"id"->..., "view"->...|>];
@@ -37,7 +37,7 @@ Each type of an input is shipped with two components
 - __event generator__ (like `InputButton`, `InputText`)
 - __view__ component (like `ButtonView`, `TextView`), which are executed on the frontend
 
-An __event generator__ is just a wrapper of __view component__, that automatically generates an event object and attaches it to the input view. The reason, why they are still separate thing is that __view component__ can act on both sides as an indicator or a display and as an input device.
+An __event generator__ is just a wrapper for __view component__, that automatically generates an event object and attaches it to the input view. The reason, why they are still separate thing is that __view component__ can act on both sides as an indicator or a display and as an input device.
 ## Basic usage | Event-generators
 ### Range input
 A basic combo of a slider and numerical input field
@@ -64,13 +64,15 @@ text = InputText["Hi"]
 🚧 in dev 
 
 ### Wolfram Language Input
-🚧 in dev
-
-### Matrix input
-🚧 in dev
+Please, use [EditorView](../Reference/Input/EditorView.md)
 
 ### Color picker
 🚧 in dev
+Please, use [Snippets](../Advanced/Snippets/Snippets.md) and type `color pick...`
+
+### Input Matrix
+Please, use [Snippets](../Advanced/Snippets/Snippets.md) and type `insert matrix...`
+
 ### Radio
 🚧 in dev
 
@@ -148,7 +150,7 @@ group = InputGroup[<|
 
 ![File](imgs/groups1.png)
 
-On each update it generates the data fro the handler function in a form
+On each update it generates the data for the handler function in a form
 
 ```mathematica
 <|"left"->5, "right"->7|>
@@ -166,7 +168,7 @@ group = InputGroup[{
 
 ![File](imgs/groups2.png)
 
-On each update it generates the data fro the handler function in a form
+On each update it generates the data for the handler function in a form
 
 ```mathematica
 {5, 7, "Hi"}
