@@ -73,8 +73,8 @@ export default function Home() {
         </div>
   </header>*/}
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container" style={{display: 'flex', 'padding-top':'2rem', 'padding-bottom':'2rem'}}>
-        <div style={{width:'50%', 'display':'flex'}}>
+      <div className="container wljscols" style={{display: 'flex', 'padding-top':'2rem', 'padding-bottom':'2rem'}}>
+        <div style={{'display':'flex'}}>
           <div
               style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'left',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
               >
@@ -84,7 +84,7 @@ export default function Home() {
              
           </div>
         </div>
-        <div style={{width:'50%', 'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
+        <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
           <h1 className="hero__title">WLJS Frontend</h1>
           <p className="hero__subtitle" style={{ 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Freeware web-based Notebook Interface for Wolfram Language</p>
           <div className={styles.buttons} style={{display:'flex', 'flex-direction':'column'}}>
@@ -113,8 +113,8 @@ export default function Home() {
       </main>
 
       <header className={clsx('hero hero--primary', styles.heroBanner)} >
-      <div className="container" style={{display: 'flex', 'padding-top':'1rem'}}>
-      <div style={{width:'50%', 'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
+      <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
+      <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
           <h1 className="hero__title">Interactive and fast</h1>
           <p className="hero__subtitle" style={{ 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>No more static SVG's! Sliders, data-binding, realtime smooth transitions</p>
           <div className={styles.buttons}>
@@ -126,9 +126,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div style={{width:'50%'}}>
+        <div >
           <div
-              style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'left',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
+              style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'center',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
               >
 
               <img src={ezDYN}/>
@@ -146,17 +146,17 @@ export default function Home() {
 
 
     <header className={clsx('hero hero--primary', styles.heroBanner)} style={{background: 'initial'}}>
-      <div className="container" style={{display: 'flex', 'padding-top':'1rem'}}>
-      <div style={{width:'50%'}}>
+      <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
+      <div >
           <div
-              style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'left',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
+              style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'center',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
               >
               
                   <img src={ezPPT}/>
           </div>
         </div>
 
-      <div style={{width:'50%', 'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
+      <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
           <h1 className="hero__title" style={{color: 'var(--ifm-navbar-link-color)'}}>Data-driven slides</h1>
           <p className="hero__subtitle" style={{color: 'var(--ifm-navbar-link-color)', 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Use RevealJS and Wolfram Language to create component-based interactive presentations!</p>
           <div className={styles.buttons}>
@@ -177,10 +177,10 @@ export default function Home() {
 
 
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container" style={{display: 'flex', 'padding-top':'1rem'}}>
+      <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
 
 
-      <div style={{width:'50%', 'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
+      <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
           <h1 className="hero__title" >Export to HTML</h1>
           <p className="hero__subtitle" style={{'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Share your work with the community keeping all graphics interactive</p>
           <div className={styles.buttons}>
@@ -188,7 +188,7 @@ export default function Home() {
           </div>
         </div>
 
-      <div style={{width:'50%'}}>
+      <div >
           <div
               style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'left',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
               >

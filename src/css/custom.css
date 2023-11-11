@@ -53,6 +53,20 @@ html[data-theme='dark'] {
   padding: 0.1em;
 }
 
+.wljscols {
+  flex-direction: row;
+}
+
+@media screen and (max-width: 996px) {
+
+
+  .wljscols {
+    flex-direction: column;
+  }
+}
+
+
+
 /*!
 * reveal.js 4.5.0
 * https://revealjs.com
