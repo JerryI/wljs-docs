@@ -25,6 +25,14 @@ To merge the all slides into a single fat presentation use
 
 It will merge and print slides from all cells in the notebook into a single one.
 
+:::tip
+Use projector feature
+
+![](../../Screenshot%202023-11-09%20at%2010.42.58.png)
+
+to show slides in a separate window
+:::
+
 ## Plugins
 The package uses also some external plugins
 - [pointer](https://github.com/burnpiro/reveal-pointer) (use `q` to toggle)

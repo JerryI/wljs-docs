@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-
+import Link from '@docusaurus/Link';
 import Notebook from '@site/src/components/wljs-notebook-react';
 
 const FeatureList = [
@@ -103,7 +103,7 @@ const FeatureList = [
         Share your notebook as a standalone .html file or React component keeping graphs interactive.
       </>
     ),
-  },  
+  },   
 ];
 
 function Feature({notebook, title, description}) {
@@ -128,6 +128,14 @@ export default function HomepageFeatures() {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+
+<div className={styles.buttons} style={{padding:'0', margin: 'auto'}}>
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/frontend/instruction">
+              Overview ☄️
+            </Link>
+          </div>
         </div>
       </div>
     </section>
