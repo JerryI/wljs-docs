@@ -84,7 +84,7 @@ export default function Home() {
              
           </div>
         </div>
-        <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
+        <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'1em'}}>
           <h1 className="hero__title">WLJS Frontend</h1>
           <p className="hero__subtitle" style={{ 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Freeware web-based Notebook Interface for Wolfram Language</p>
           <div className={styles.buttons} style={{display:'flex', 'flex-direction':'column'}}>
