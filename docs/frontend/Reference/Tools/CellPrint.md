@@ -23,9 +23,8 @@ Delete[cell]
 ```
 :::
 ## Options
-:::warning
-In development
-:::
+### `"Type"`
+default is `"Output"`  or `"output"` cell type. Possible value is also `"Input"`
 
 ## Applications
 To make a temporal cell with a custom output use

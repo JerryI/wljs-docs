@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Indicators and monitoring.md",
+                "file": "frontend/Advanced/Editor manipulation.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Indicators and monitoring.md",
+                "file": "frontend/Advanced/Editor manipulation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Indicators and monitoring.md",
+                "file": "frontend/Advanced/Editor manipulation.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Indicators and monitoring.md"
+                "file": "frontend/Advanced/Editor manipulation.md"
               }
             }
           },
@@ -160,7 +160,20 @@
   },
   "active": "4db1fa87d2ee7100",
   "lastOpenFiles": [
+    "frontend/Advanced/JS Tools/Canvas.md",
+    "frontend/Advanced/Editor manipulation.md",
+    "frontend/Advanced/Cells manipulation",
+    "frontend/Advanced/Boxes and Decorations/dynamic-decorations.md",
+    "frontend/Advanced/Dynamics/Performance tips.md",
     "frontend/Cell types/Slides.md",
+    "frontend/Cell types/WLX.md",
+    "frontend/Reference/Input/InputText.md",
+    "frontend/Reference/Input/InputSpoiler.md",
+    "frontend/Reference/Tools/CellPrint.md",
+    "frontend/Advanced/Frontend interpretation/executables.md",
+    "frontend/Advanced/Frontend interpretation/Frontend functions.md",
+    "frontend/Advanced/Dynamics/Components approach.md",
+    "frontend/Advanced/Dynamics/Indicators and monitoring.md",
     "Screenshot 2023-11-09 at 10.42.58.png",
     "frontend/Tutorial/Overview.md",
     "frontend/Advanced/Snippets/Snippets.md",
@@ -168,9 +181,6 @@
     "frontend/Advanced/Slides/embed-wl.md",
     "frontend/Advanced/Slides/components.md",
     "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Dynamics/Components approach.md",
-    "frontend/Advanced/Dynamics/Indicators and monitoring.md",
-    "frontend/Advanced/Dynamics/Performance tips.md",
     "frontend/Tutorial/Export notebook.md",
     "frontend/Tutorial/Plugins.md",
     "frontend/Tutorial/Input elements.md",
@@ -180,18 +190,9 @@
     "imgs/ezgif.com-video-to-gif-7.gif",
     "frontend/Tutorial/Math input.md",
     "imgs/green light.png",
-    "frontend/Reference/Input/EditorView.md",
-    "frontend/Advanced/Frontend interpretation/Frontend functions.md",
-    "frontend/Advanced/Frontend interpretation/executables.md",
-    "frontend/Mathematica vs WLJS.md",
-    "frontend/Advanced/Boxes and Decorations/dynamic-decorations.md",
-    "frontend/Advanced/Events system/event-generators.md",
     "frontend/Advanced/Events system",
-    "frontend/Advanced/depricated-remove-it.md",
-    "frontend/Advanced/JS Tools/Canvas.md",
     "frontend/Advanced/JS Tools",
     "frontend/Advanced/Dynamics",
-    "frontend/Cell types/Chatbook.md",
     "imgs/ezgif.com-optimize-15.gif",
     "imgs/uilook 2.png",
     "imgs/uilook 1.png",
@@ -203,7 +204,6 @@
     "frontend/Advanced/Layout",
     "frontend/Advanced/Snippets",
     "frontend/Advanced/Frontend interpretation",
-    "frontend/Advanced/Boxes and Decorations",
     "ezgif.com-optimize-7-2 1.gif",
     "ezgif.com-optimize-7-2.gif"
   ]
