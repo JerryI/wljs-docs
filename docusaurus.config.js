@@ -28,9 +28,11 @@ const list = [
   "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-revealjs@master/dist/kernel.js"
 ].map((link) => {
-  return {src: link, type: 'module', async: false}
+  return {tagName: 'script', attributes: {
+    type: 'module',
+    src: link
+  }}
 });
-
 
 
 const math = require('remark-math');
@@ -64,7 +66,7 @@ const config = {
     },
   ],
 
-  scripts: list,
+  headTags: list,
 
   clientModules: [
     require.resolve('./src/components/wljs-notebook-react/static.js')
