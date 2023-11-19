@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Editor manipulation.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Editor manipulation.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Editor manipulation.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Editor manipulation.md"
+                "file": "frontend/Reference/Graphics/Line.md"
               }
             }
           },
@@ -160,8 +160,24 @@
   },
   "active": "4db1fa87d2ee7100",
   "lastOpenFiles": [
-    "frontend/Advanced/JS Tools/Canvas.md",
+    "frontend/Reference/Graphics/Polygon.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Reference/Graphics3D/SpotLight.md",
+    "frontend/Reference/Graphics3D/Sphere.md",
+    "frontend/Reference/Graphics3D/Graphics3D.md",
+    "frontend/Reference/Graphics/Image.md",
+    "frontend/Reference/Graphics/Arrow.md",
+    "frontend/Reference/Graphics/Text.md",
+    "frontend/Reference/Graphics/SVGAttribute.md",
+    "frontend/Reference/Graphics/Style.md",
+    "frontend/Reference/Graphics/Raster.md",
+    "frontend/Reference/Graphics/Point.md",
+    "frontend/Reference/Graphics/Offset.md",
+    "frontend/Reference/Graphics/Line.md",
+    "frontend/Reference/Graphics/Directive.md",
+    "frontend/Reference/Graphics/Internal",
     "frontend/Advanced/Editor manipulation.md",
+    "frontend/Advanced/JS Tools/Canvas.md",
     "frontend/Advanced/Cells manipulation",
     "frontend/Advanced/Boxes and Decorations/dynamic-decorations.md",
     "frontend/Advanced/Dynamics/Performance tips.md",
@@ -172,23 +188,8 @@
     "frontend/Reference/Tools/CellPrint.md",
     "frontend/Advanced/Frontend interpretation/executables.md",
     "frontend/Advanced/Frontend interpretation/Frontend functions.md",
-    "frontend/Advanced/Dynamics/Components approach.md",
-    "frontend/Advanced/Dynamics/Indicators and monitoring.md",
     "Screenshot 2023-11-09 at 10.42.58.png",
-    "frontend/Tutorial/Overview.md",
-    "frontend/Advanced/Snippets/Snippets.md",
-    "frontend/Advanced/Slides/intro.md",
-    "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Advanced/Slides/components.md",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Tutorial/Export notebook.md",
-    "frontend/Tutorial/Plugins.md",
-    "frontend/Tutorial/Input elements.md",
-    "frontend/Tutorial/GUI Overview.md",
-    "frontend/Tutorial/Dynamics.md",
-    "frontend/Tutorial/Plotting functions.md",
     "imgs/ezgif.com-video-to-gif-7.gif",
-    "frontend/Tutorial/Math input.md",
     "imgs/green light.png",
     "frontend/Advanced/Events system",
     "frontend/Advanced/JS Tools",
@@ -203,7 +204,6 @@
     "frontend/Advanced/Javascript Integration",
     "frontend/Advanced/Layout",
     "frontend/Advanced/Snippets",
-    "frontend/Advanced/Frontend interpretation",
     "ezgif.com-optimize-7-2 1.gif",
     "ezgif.com-optimize-7-2.gif"
   ]

@@ -14,7 +14,7 @@ assigns an `handler` function to an event object provided as a string or [EventO
 EventHandler[expr_, handlers_List]
 ```
 
-to wrap an [EventListener](../Graphics/EventListener.md) or  [EventListener](../Graphics3D/EventListener.md) over an arbitrary expression and attach listeners listed in `handlers` list if an `expr` supports it.
+to wrap an [EventListener](../Graphics/Internal/EventListener.md) or  [EventListener](../Graphics3D/EventListener.md) over an arbitrary expression and attach listeners listed in `handlers` list if an `expr` supports it.
 
 :::warning
 It does look similar to what you have in Wolfram Mathematica, but built entirely in a different way. There is no backward compatibility possible.
@@ -43,7 +43,7 @@ EventHandler["myid", Print];
 ```
 
 ### Attaching listeners to a graphics object
-Not all of expressions support listeners, but `Graphics3D` and `Graphics` do, please see their [EventListener](../Graphics3D/EventListener.md), [EventListener](../Graphics/EventListener.md)
+Not all of expressions support listeners, but `Graphics3D` and `Graphics` do, please see their [EventListener](../Graphics3D/EventListener.md), [EventListener](../Graphics/Internal/EventListener.md)
 
 ```mathematica
 p = {0,0};
