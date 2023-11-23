@@ -158,7 +158,7 @@ export default function Home() {
           <div className={styles.buttons}>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/frontend/Cell%20types/Slides">
+              to="/docs/frontend/Advanced/Slides/intro">
               See tutorial
             </Link>
           </div>

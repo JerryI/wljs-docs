@@ -65,7 +65,9 @@ html[data-theme='dark'] {
   }
 }
 
-
+a {
+  text-decoration: underline !important;
+}
 
 /*!
 * reveal.js 4.5.0
