@@ -7,6 +7,9 @@ EvaluationCell[] _CellObj
 ```
 takes an identifier of an output cell generated after the evaluation. Can be used as [EventObject](../Events/EventObject.md) for [EventHandler](../Events/EventHandler.md) to attach handlers to an output cell or to print another cell after.
 
+:::info
+You do not need to clone [EvaluationCell](../../Reference/Tools/EvaluationCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
+:::
 ## Application
 ### Fire an event after the cell has been reevaluated or removed
 This is a common case, if you need to purge event listeners or clean up memory after every evaluation of the same cell

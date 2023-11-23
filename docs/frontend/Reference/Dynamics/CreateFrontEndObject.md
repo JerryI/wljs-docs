@@ -32,7 +32,7 @@ dynText = RandomWord[];
 TextView[dynText // Offload] // CreateFrontEndObject
 ```
 
-<Wl data={`WyJUZXh0VmlldyIsWyJPZmZsb2FkIiwiJ3RydWNrJyJdXQ==
+<Wl data={`WyJUZXh0VmlldyIsWyJPZmZsb2FkIiwiJ29yYW5nZSciXV0=
 `}>{`TextView[RandomSample[{"apple", "orange", "truck"}] // First // Offload]`}</Wl>
 
 then, one can update the symbol `dynText` and see that the field above will also be updated
@@ -86,8 +86,8 @@ Graphics[{Red, PointSize[0.1], Point[FrontEndRef["data"]]}]
 ```
 
 <Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlJHQkNvbG9yIiwxLDAsMF0sWyJQb2ludFNpemUiLDAuMV0s
-WyJQb2ludCIsWyJPZmZsb2FkIixbIkxpc3QiLC05LjE2NjAwODc1NjE1Mzk4N2UtMiwwLjcwMzgw
-MTQyMDc5MTY5MDNdXV1dLFsiUnVsZSIsIkltYWdlU2l6ZSIsNTAwXV0=
+WyJQb2ludCIsWyJPZmZsb2FkIixbIkxpc3QiLDAuNzM0NzAyMzg0NDY4NzAzNSwwLjU5MjEwOTIw
+MjUyOTYxNTVdXV1dLFsiUnVsZSIsIkltYWdlU2l6ZSIsNTAwXV0=
 `}>{`Graphics[{Red, PointSize[0.1], Point[RandomReal[{-1,1}, 2] // Offload]}, ImageSize->500]`}</Wl>
 
 If one change the object `data` in other cell, the position of a point will be changed as well dynamically with no reevaluation involved, i.e.

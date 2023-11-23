@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# Embedding WL code
+# Code highlighting
 
-Since it support WLX syntax as well, one can combine the copied text from the normal Wolfram Language cell into a [EditorView](../../Reference/Input/EditorView.md) component.
+Since it support WLX syntax as well, one can combine the copied text from the normal Wolfram Language cell into a [EditorView](../../Reference/Input/EditorView.md) component
 
 *prototype*
 ```jsx
@@ -33,7 +33,7 @@ Then somewhere on your slide
 ```
 
 :::info
-There is no need in writing `(*whatever*)` and etc. manually, this is a representation of cell's elements (Boxes) from a normal WL editor. __Just copy the text__ from the corresponding input/output cell
+There is no need in writing `(*funny comments*)` and etc. manually, this is a representation of cell's elements (Boxes) from a normal WL editor. __Just copy the text from it__  (input/output cell)
 :::
 
 The result will look like this

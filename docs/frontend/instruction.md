@@ -6,7 +6,7 @@ enableComments: true
 Frontend __does not require anything installed__ apart from `wolframscript` (see Freeware [Wolfram Engine](https://www.wolfram.com/engine/) or Wolfram Kernel). 
 
 :::warning
-Works only with Wolfram Engine $\geq$ __13.0.0__ 
+Works only with Wolfram Engine $\geq$ __13.0.0__. The version __13.0.1__ is more preferable.
 :::
 
 :::info

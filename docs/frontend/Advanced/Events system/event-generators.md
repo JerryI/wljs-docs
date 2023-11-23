@@ -5,7 +5,7 @@ draft: false
 As a short summary - where you can use event-handlers / listeners 
 
 - on `Graphics2D` elements to listen users interactions 
-	- drag, click, zoom, mousemove
+	- `drag`, `click`, `zoom`, `mousemove`
 - on `Graphics3D` elements
 	- transform
 - on any `EventObject` 
@@ -237,6 +237,10 @@ Then, one can assign any expression to it
 EventHandler[EvaluationCell[], {"destroy"->Print, "evaluation"->Print}]
 ```
 
+:::info
+You do not need to clone [EvaluationCell](../../Reference/Tools/EvaluationCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
+:::
+
 One should not that those event are assigned to __the output cell__ generated after the evaluation. Therefore mostly useful will be to use `"destroy"`, while `"evaluation"` is called only if one tries to evaluate the output cell as an input cell.
 
 ### GUI elements
@@ -273,6 +277,8 @@ EventHandler["evid", Print];
 ```
 
 By clicking on the appeared button you will see the message from the Kernel. This is how all GUI elements are made, apart from wrapping them into a functions, that generate uid's by its own. 
+
+See also the reference on [server](../../Reference/Javascript%20API/server.md) object
 
 #### Making things fancier | View & Generator
 Taking the previous example, we can improve it a bit starting from the __view component__

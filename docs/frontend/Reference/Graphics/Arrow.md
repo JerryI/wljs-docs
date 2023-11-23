@@ -15,7 +15,9 @@ Graphics[{
 }]
 ```
 
-<Wl>{`Graphics[{Arrow[{{0,0}, {1,1}}]}, ImageSize->350]`}</Wl>
+<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIkFycm93IixbIkxpc3QiLFsiTGlzdCIsMCwwXSxbIkxpc3Qi
+LDEsMV1dXV0sWyJSdWxlIiwiSW1hZ2VTaXplIiwzNTBdXQ==
+`}>{`Graphics[{Arrow[{{0,0}, {1,1}}]}, ImageSize->350]`}</Wl>
 
 :::Warning
 Does work only with [Graphics](Graphics.md) (2D). Dynamics is not supported for now

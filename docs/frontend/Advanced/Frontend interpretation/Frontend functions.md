@@ -2,6 +2,10 @@
 draft: false
 ---
 
+:::caution
+This is a hardcore stuff, don't go here with a clear purpose
+:::
+
 Let us start from the simplest stuff
 
 ## Quick and Dirty

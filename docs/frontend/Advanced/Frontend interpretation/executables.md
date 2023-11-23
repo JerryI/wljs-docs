@@ -4,6 +4,9 @@ draft: false
 ---
 # Working with containers
 
+:::caution
+This is a hardcore stuff, don't go here with a clear purpose
+:::
 
 import Component from '@site/src/components/wljs-notebook-react/includes';
 import Notebook from '@site/src/components/wljs-notebook-react';
