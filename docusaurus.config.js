@@ -34,6 +34,11 @@ const list = [
   }}
 });
 
+list.push({tagName: 'script', attributes: {
+  type: 'module',
+  src: '/wljs-docs/img/init.js'
+}});
+
 
 const math = require('remark-math');
 const katex = require('rehype-katex');

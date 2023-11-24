@@ -101,7 +101,17 @@ export default function Notebook({children, code, name, width, height}) {
             //window.removeEventListener("load-wljs", func);
         }
 
-        func();
+        const reload = () => {
+            console.warn('RELOAD');
+            if (window.NotebookPackagesLoaded) {
+                func();
+            } else {
+                setTimeout(reload, 300);
+            }
+        }
+
+        reload();
+        //func();
 
         return () => {
             //alert('removed');
