@@ -142,7 +142,7 @@ Please, save your notebook or `.wls` script to some directory
 This code will run an http server at `127.0.0.1:8010` and serve a single file `index.wlx`. Therefore you should __open the root folder of your script or notebook__ and create the following file
 
 ```mathematica title="yourproject/index.wlx"
-Main = ImportComponent["main.wlx"];
+Main := ImportComponent["main.wlx"];
 <Main Request={$FirstChild}/>
 ```
 

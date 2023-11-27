@@ -6,6 +6,10 @@ sidebar_position: 4
 import Theme from './theme.js';
 <Theme></Theme>
 
+In general it is not opinionated on how you organize your components as files or as functions. This sub-package is optional and represents on of the possible ways.
+
+---
+
 One of the key features is idea of reusable components borrowed from React. There is an in-build structure to embed other WLX scripts into the each other as sort of Wolfram Language expressions
 
 ```mathematica
@@ -18,6 +22,8 @@ Then you can import other `wlx` scripts as so-called components into your other 
 Let us start from the example. We have a component, that makes italic labels
 
 ```jsx title="label.wlx"
+Text = $Options["Text"];
+
 <i>
 	<TextString>
 		<Text/>
@@ -27,21 +33,27 @@ Let us start from the example. We have a component, that makes italic labels
 
 Then, one can import it in some other `.wlx` file
 ```jsx
-Label = ImportComponent["label.wlx"]
+Label := ImportComponent["label.wlx"]
 
 <body>
 	<Label Text={"Hello World"}/>
 </body>
 ```
 
+:::tip
+You should use `SetDelayed` in a case if you have something to pass as an option to a component. If there is nothing - keep simple `Set`, since it lowers memory consumption and CPU load.
+:::
+
+It looks similar to what we had in [Basics / Options](basics.md#Options).
+
 :::info
-Use curly braces without double quotes to pass any WL expression to the imported component as __a named argument__.
+Use curly braces without double quotes to pass any WL expression to the imported component as __as an option__, which can be accessed using `$Options` variable
 :::
 
 This is done in a way, that feels like a regular XML attribute. Or one can pass any Wolfram Expression as well
 
 ```jsx
-Label = ImportComponent["label.wlx"]
+Label := ImportComponent["label.wlx"]
 
 <body>
 	<Label Text={Now}/>
@@ -82,11 +94,14 @@ Label[Now]
 ```
 
 There are a few predefined keywords to have an access to the child elements
-### $FirstChild
+### `$FirstChild`
 Gets __the first__ passed argument
 
-### $Children
+### `$Children`
 Gets __all passed arguments as a list__
+
+### `$Options`
+Get all options passed to a component
 
 ## Scoping
 By the default it parses a script with `Localize` option (see [scoping](scoping.md)), but one the importing function accepts this option pattern as well, so you can override it.
@@ -111,7 +126,10 @@ To overcome an issue with different path representation implementations, a unive
 `ImportComponent` requires a symbol to be assigned, since it uses a special up-values pattern
 
 ```mathematica
+(* if there is no arguments or options to be passed *)
 A  = ImportComponent["...1"]
+
+(* if there is  *)
 B := ImportComponent["...2"]
 ```
 

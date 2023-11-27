@@ -56,11 +56,13 @@ The additional `-fragment-[index]` is added implicitly by [SlideEvent](../../Ref
 Now let us make a simple figure
 
 ```mathematica
-Figure := With[{event = EventClone[id]},
+Figure[OptionsPattern[]] := With[{event = EventClone[OptionValue["id"]]},
 	EventHandler[EvaluationCell[], {"destroy" -> Function[Null, Delete[event]]}];
 	
 	...
 ]
+
+Options[Figure] = {"id"->""}
 ```
 
 Here we clone a slide event (this is a safe way, if more than 1 handlers will be involved). Afterwards we need to make sure that if one reevaluate the cell, the handler will be removed automatically. That's how you can clean-up handlers after the evaluation.
@@ -68,7 +70,7 @@ Here we clone a slide event (this is a safe way, if more than 1 handlers will be
 Now the content
 
 ```mathematica
-Figure := With[{event = EventClone[id]},
+Figure[OptionsPatten[]] := With[{event = EventClone[OptionValue["id"]]},
 	EventHandler[EvaluationCell[], {"destroy" -> Function[Null, Delete[event]]}];
 	
 	LeakyModule[{points},
@@ -83,6 +85,8 @@ Figure := With[{event = EventClone[id]},
 		Graphics[{Red, Line[points // Offload]}]
 	]
 ]
+
+Options[Figure] = {"id"->""}
 ```
 
 This little script will plot randomly distributed points as lines for its initial state. When the `event` is fired, it changes the distribution of `points` to a circle. The animation is done by [Graphics](../../Reference/Graphics/Graphics.md)  (i.e. it is a native feature of it and has nothing to do with slides).

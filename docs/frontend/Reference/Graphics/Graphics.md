@@ -42,6 +42,9 @@ specifies the actual size in pixels of a canvas
 "ImageSize"->300 or "ImageSize"->{300,200}
 ```
 
+### `"ImagePadding"`
+specifies
+
 ### `Axes`
 Show or hide axes 
 

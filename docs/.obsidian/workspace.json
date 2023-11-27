@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Events system/routing.md",
+                "file": "wlx/dynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Events system/routing.md",
+                "file": "wlx/dynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Events system/routing.md",
+                "file": "wlx/dynamics.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Events system/routing.md"
+                "file": "wlx/dynamics.md"
               }
             }
           },
@@ -160,14 +160,29 @@
   },
   "active": "4db1fa87d2ee7100",
   "lastOpenFiles": [
-    "frontend/Advanced/Events system/event-generators.md",
+    "frontend/Reference/Tools/SlideEvent.md",
+    "wlx/examples/fileexplorer.md",
+    "wlx/examples/app.md",
+    "wlx/dynamics.md",
+    "wlx/interpeter.md",
+    "wlx/components.md",
+    "wlx/scoping.md",
+    "wlx/SPA.md",
+    "wlx/install.md",
+    "wlx/basics.md",
+    "frontend/Tutorial/Overview.md",
+    "frontend/Advanced/Slides/embed-wl.md",
+    "frontend/Advanced/Slides/components.md",
+    "frontend/Advanced/Slides/animations.md",
     "frontend/Advanced/Slides/tables.md",
     "frontend/Advanced/Slides/styling.md",
-    "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Slides/components.md",
     "frontend/Advanced/Slides/intro.md",
+    "frontend/Cell types/WLX.md",
+    "frontend/Cell types/Slides.md",
+    "frontend/Cell types/HTML.md",
+    "frontend/Reference/Graphics/Graphics.md",
     "frontend/Advanced/Events system/routing.md",
+    "frontend/Advanced/Events system/event-generators.md",
     "frontend/Advanced/Dynamics/Performance tips.md",
     "frontend/Advanced/Dynamics/Scoping.md",
     "frontend/Advanced/Dynamics/Simple manipulate.md",
@@ -181,20 +196,6 @@
     "Screenshot 2023-11-23 at 16.03.20.png",
     "Screenshot 2023-11-23 at 15.21.04.png",
     "Screenshot 2023-11-23 at 15.08.20.png",
-    "frontend/Cell types/Slides.md",
-    "frontend/Advanced/Frontend interpretation/Frontend functions.md",
-    "frontend/Advanced/Frontend interpretation/executables.md",
-    "frontend/Reference/Tools/EvaluationCell.md",
-    "frontend/Advanced/Dynamics/Indicators and monitoring.md",
-    "frontend/Reference/Tools/SlideEvent.md",
-    "frontend/instruction.md",
-    "frontend/Reference/Graphics/Line.md",
-    "frontend/Reference/Graphics/Polygon.md",
-    "frontend/Reference/Graphics/Graphics.md",
-    "frontend/Reference/Graphics3D/SpotLight.md",
-    "frontend/Reference/Graphics3D/Sphere.md",
-    "frontend/Reference/Graphics3D/Graphics3D.md",
-    "frontend/Reference/Graphics/Image.md",
     "frontend/Reference/Graphics/Internal",
     "frontend/Advanced/Cells manipulation",
     "frontend/Advanced/Events system",

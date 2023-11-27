@@ -36,7 +36,11 @@ Let us define some hybrid WL function
 ```jsx
 .wlx
 
-Heading[Text_] := <h2 style="color: {Color}"><Text/></h2>;
+Heading[Text_, OptionPattern[]] := With[{color = OptionValue["Color"]},
+	<h2 style="color: {color}"><Text/></h2>;
+]
+
+Options[Heading] = {"Color"->"black"}
 ```
 
 then we can use it in our layout
@@ -93,7 +97,7 @@ Module[{text, View, Button, Secret = CreateUUID[]},
   text     = "nothing";
   View     = TextView[Offload[text]] // WLJS;
   Button   = ButtonView["Press me", "Event"->Secret] // WLJS; 
-  EventHandler[Secret, Function[void, text = RandomWord[]]];
+  EventHandler[Secret, Function[Null, text = RandomWord[]]];
 
 <div>
     <View/>

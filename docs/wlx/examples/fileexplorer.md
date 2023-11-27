@@ -74,7 +74,7 @@ image      := ImportComponent["views/image.wlx"];
 plot       := ImportComponent["views/plot.wlx"];
 none       := ImportComponent["views/none.wlx"];
 
-Breadcrumbs = ImportComponent["components/breadcrumbs.wlx"];
+Breadcrumbs := ImportComponent["components/breadcrumbs.wlx"];
 
 (* /* view router */ *)
 

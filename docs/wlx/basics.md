@@ -174,3 +174,39 @@ counts __as a single argument__ to the expression `Element`. However
 
 is already __two arguments__ passed with a string type (atom).
 :::
+
+## Options
+Traditional Wolfram Language `Options` can be passed as if it was an HTML parameter
+
+```jsx
+<Heading title={"Some title"}/>
+```
+
+where
+```mathematica
+Heading[OptionsPattern[]] := With[{Title = OptionValue["title"]},
+	<h1>This is some <Title/></h1>
+]
+
+Options[Heading] = {"title" -> "empty title"}
+```
+
+This can be done for the [downvalues](#Ownvalues%20and%20Downvalues) as well. The pattern is
+
+```jsx
+<TagName option1={Wolfram Expression} option2={...}/>
+```
+
+or
+
+```jsx
+<TagName option1={Wolfram Expression} option2={...}>
+	whatever
+</TagName>
+```
+
+where all passed arguments go before the `OptionsPattern`, i.e.
+
+```mathematica
+TagName[args__, OptionsPattern[]] := ...
+```

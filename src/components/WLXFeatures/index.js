@@ -119,7 +119,7 @@ const FeatureList = [
       <div className="col align--center padding-horiz--md">
         <div>
       <CodeBlock title="main.wlx" language="jsx" showLineNumbers>
-{`Header = ImportComponent["header.wlx"];
+{`Header := ImportComponent["header.wlx"];
 (* /* use it as WL expression */ *)
 <body>
   <Header Title={"WLX is awesome"} />
@@ -130,7 +130,8 @@ const FeatureList = [
 
       <div>
       <CodeBlock title="header.wlx" language="jsx" showLineNumbers>
-{`<h1>
+{`Title = $Options["Title"];
+<h1>
   <Title/>
 </h1>`}
       </CodeBlock> 
@@ -186,9 +187,9 @@ PlottingDevice = ListLinePlot[Data, PlotRange->Full, ImageSize->700];
       <CodeBlock language="jsx" showLineNumbers>
 {`text     = "nothing";
 View     = TextView[Offload[text]] // WLJS;
-Button   = ButtonView["Press me", "Event"->Secret] // WLJS; 
+Button   = ButtonView["Press me", "Event"->$Options["Secret"]] // WLJS; 
 
-EventHandler[Secret, Function[void, text = RandomWord[]]];
+EventHandler[$Options["Secret"], Function[void, text = RandomWord[]]];
 
 <div>
     <View/>

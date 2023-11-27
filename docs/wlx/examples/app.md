@@ -92,7 +92,7 @@ The interesting thing here __is a mouse listener__, that works purely on WLJS In
 
 ```mathematica title="app.wlx"
 (* /* mouse listener */ *)
-listener = {White, EventHandler[Rectangle[{-10, 10}, {10,-10}], {"mousemove"->append}]};
+listener = {White, EventHandler[Rectangle[{-10, -10}, {10,10}], {"mousemove"->append}]};
 ```
 
 This is a giant rectangle, on which an `EventHandler` was attached, then each time you move your mouse it fires `append` function on Wolfram Kernel.
@@ -120,7 +120,7 @@ and here is the corresponding switch
 
 ```jsx title="components/ui.wlx"
 (* /* custom built component */ *)
-ToggleView = ImportComponent["components/toggle.wlx"];
+ToggleView := ImportComponent["components/toggle.wlx"];
 
 ...
 
@@ -129,7 +129,7 @@ ToggleView = ImportComponent["components/toggle.wlx"];
     <li class="flex justify-between gap-x-6 py-1">
        <div class="flex min-w-0 gap-x-4">
           <div class="min-w-0 flex-auto">    
-            <ToggleView UID={StringJoin[SID, "-gravity"]} Label={"Gravity"}/>
+            <ToggleView UID={StringJoin[$Options["SID"], "-gravity"]} Label={"Gravity"}/>
           </div>
        </div>
     </li>
@@ -142,6 +142,9 @@ where `SID` is passed as an argument from `app.wlx`. `SID` is unique for each cl
 `ToggleView` component was created, because there is no such nice toggle switch in a standard library [wljs-inputs](https://github.com/JerryI/wljs-inputs) and in general it is good to show how you can construct your own UI element from scratch. Here is a code of it
 
 ```jsx title="components/toggle.wlx"
+UID = $Options["UID"];
+Label = $Options["Label"];
+
 <div class="flex items-center" id="{UID}">
     <style>
         .bg-wlx-500 {

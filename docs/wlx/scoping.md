@@ -19,14 +19,6 @@ Word = RandomWord[];
 
 __`Word` is unique every-time__, when a string processor called.
 
-There is no way you can escape from the localized module, unless you wrap it inside `Block` like this
-
-```mathematica
-Block[{anything you want to expose},
-	ProcessString[codeString, "Localize"->True]
-]
-```
-
 ## Garbage collection
 Unfortunately there is no clear way of purging the symbols created by `Module`, therefore they are collected into a symbol
 
@@ -37,5 +29,5 @@ JerryI`WLX`Private`garbageCollection
 It is up to the user when and how clear them. 
 
 :::warning
-There is no built-in method to purge unused symbols  automatically
+There is no built-in method to purge unused symbols  automatically, since symbols might be needed for the current connection or session, which 100% depends on your application.
 :::

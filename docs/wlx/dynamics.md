@@ -7,7 +7,7 @@ sidebar_position: 6
 import Theme from "./theme.js";
 <Theme></Theme>
 
-There is no need in crafting your own API to interact with a working Wolfram Kernel to bring input elements update the data in real-time. 
+**There is no need in crafting your own API to interact with a working Wolfram Kernel to bring input elements update the data in real-time**
 
 :::note
 It is assumed you have read an [interpeter](interpeter.md) page first
@@ -141,7 +141,7 @@ Please, save your notebook or `.wls` script to some directory
 This code will run an http server at `127.0.0.1:8010` and serve a single file `index.wlx`. Therefore you should __open the root folder of your script or notebook__ and create the following file
 
 ```mathematica title="yourproject/index.wlx"
-Main = ImportComponent["main.wlx"];
+Main := ImportComponent["main.wlx"];
 <Main Request={$FirstChild}/>
 ```
 
@@ -163,7 +163,7 @@ App = ImportComponent["app.wlx"];
 			https://cdn.statically.io/gh/JerryI/wljs-inputs/main/dist/kernel.js
 			https://cdn.statically.io/gh/JerryI/Mathematica-ThreeJS-graphics-engine/master/dist/kernel.js
 		</WLJSHeader>
-		<WLJSTransportScript Regime={"Standalone"} Port={ENV["WSPort"]}></WLJSTransportScript>
+		<WLJSTransportScript Regime={"Standalone"} Port={ENV["WSPort"]}/>
     </head>  
     <body> 
         <div class="min-h-full">
@@ -195,7 +195,7 @@ The binding between Wolfram Kernel symbols and variables located at your browser
 
 ```jsx title="youproject/app.wlx"
 p     = {0,0};
-Graph = Graphics[{PointSize[0.05], Magenta, Point[p // Offload]}];
+Graph = Graphics[{PointSize[0.05], Magenta, Point[p // Offload]}, PlotRange->{{-1,1},{-1,1}}];
 
 SessionSubmit[ ScheduledTask[p = RandomReal[{-1,1},2], {Quantity[1, "Seconds"], 3}]];
 
@@ -206,10 +206,6 @@ SessionSubmit[ ScheduledTask[p = RandomReal[{-1,1},2], {Quantity[1, "Seconds"], 
 
 :::tip
 Use `Offload` wrapper to tell, which symbol to keep for WLJS Intepreter, that it will not be evaluated on Wolfram Kernel. 
-:::
-
-:::warning
-In a guide for WLJS Frontend a different wrapper (see [Dynamics](../frontend/Tutorial/Dynamics.md)) is used - `Hold`, we would recommend to always apply `Offload` instead, which does the same thing. 
 :::
 
 The trick is to prevent the evaluation of certain symbols on Wolfram Kernel, so that Javascript in your browser will try to fetch them from the server via Websockets. It will automatically get subscription for every fetched symbol. 
@@ -226,7 +222,8 @@ In the example above every request causes `ScheduledTask` to be evaluated, but i
 Therefore we need somehow identify the client with his opened browser tab. Since the whole App is regenerated for each request we can provide an identifier in the very beginning
 
 ```jsx title="MODIFY yourproject/main.wlx"
-App     = ImportComponent["app.wlx"];
+{ /* highlight-next-line */ }
+App     := ImportComponent["app.wlx"];
 { /* highlight-next-line */ }
 Session = CreateUUID[]; (* /* !!! */ *)
 
@@ -245,7 +242,7 @@ Session = CreateUUID[]; (* /* !!! */ *)
 			https://cdn.statically.io/gh/JerryI/Mathematica-ThreeJS-graphics-engine/master/dist/kernel.js
 		</WLJSHeader>
 		{ /* highlight-next-line */ }
-		<WLJSTransportScript Regime={"Standalone"} Port={ENV["WSPort"]} Secret={Session}></WLJSTransportScript> (* /* !!! */ *)
+		<WLJSTransportScript Regime={"Standalone"} Port={ENV["WSPort"]} Secret={Session}/> (* /* !!! */ *)
     </head>  
     <body> 
         <div class="min-h-full">
@@ -267,9 +264,10 @@ Session = CreateUUID[]; (* /* !!! */ *)
 
 ```jsx title="MODIFY yourproject/app.wlx"
 p     = {0,0};
-Graph = Graphics[{PointSize[0.05], Magenta, Point[p // Offload]}];
+Graph = Graphics[{PointSize[0.05], Magenta, Point[p // Offload]}, PlotRange->{{-1,1},{-1,1}}];
+												  
 { /* highlight-start */ }
-task = With[{Secret = Secret},
+task = With[{Secret = $Options["Secret"]},
     SessionSubmit[ ScheduledTask[
         If[!WLJSAliveQ[Secret], Print["Task is dead"]; TaskRemove[task], Print["Task is alive"]];
         p = RandomReal[{-1,1},2];
@@ -304,9 +302,9 @@ For example, let us use a button to generate a random word for us
 ```mathematica title="yourproject/app.wlx"
 text     = "nothing";
 View     = TextView[Offload[text]] // WLJS;
-Button   = ButtonView["Press me", "Event"->Secret] // WLJS; 
+Button   = ButtonView["Press me", "Event"->$Options["Secret"]] // WLJS; 
 
-EventHandler[Secret, Function[void, text = RandomWord[]]];
+EventHandler[$Options["Secret"], Function[Null, text = RandomWord[]]];
 
 <div>
     <View/>
@@ -330,6 +328,8 @@ Anytime from your javascript code you can emit an event by
 ```js
 server.emitt("uid", "data")
 ```
+
+See more about it in [server](../frontend/Reference/Javascript%20API/server.md)
 
 
 

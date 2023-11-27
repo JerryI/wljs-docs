@@ -9,12 +9,14 @@ To overcome this small issue one can use [WLX](../../Cell%20types/WLX.md) langua
 
 ```jsx
 .wlx
-Heading := With[{Title = title},
+Heading[OptionsPattern[]]] := With[{Title = OptionValue["Title"]},
   <dummy>
     <h1><Title/></h1>
     Some repetative text you need
   </dummy>
 ] 
+
+Options[Heading] = {"Title"->"Nope"}
 ```
 
 :::tip
@@ -39,13 +41,16 @@ Unfortunately it is quite tricky to use normal Markdown inside components, becau
 
 ```jsx
 .wlx
-Heading := With[{Title = title},
+
+Heading[OptionsPattern[]]] := With[{Title = OptionValue["Title"]},
   <dummy>
     <h1><Title/></h1>
     Some repetative text you need
     Here some random equation $x^2 + y^2 + z^2 = r^2 $
   </dummy>
 ] 
+
+Options[Heading] = {"Title"->"Nope"}
 ```
 
 ## Layout helpers

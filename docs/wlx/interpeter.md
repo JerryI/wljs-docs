@@ -52,7 +52,7 @@ Then, in __the `<head>` of your HTML__ document you need to put links to the nec
 Here [statically.io](https://statically.io) CDN is used, but [jsdelivr](https://www.jsdelivr.com) is also fine. The list of all core packages available one can find in the repo of [@JerryI](https://github.com/JerryI?tab=repositories) with a prefix `wljs-*`. 
 
 :::info
-It is important to include firstly `interpreter.js` and then `core.js`. An order of them matters. Usually files are located in `dist` directory of a package, if there is none, use `src` folder.
+It is important to include firstly `interpreter.js` and then `core.js`. An order of them matters. Usually files are located in `dist` directory of a package, if there is none, use `kernel` file from  `src` folder.
 :::
 
 The list of the most essential libraries is following
@@ -63,7 +63,7 @@ The list of the most essential libraries is following
 - [wljs-inputs](https://github.com/JerryI/wljs-inputs) UI elements
 
 :::note
-Since WLJS Frontend actually provides some helper functions, one should use those libraries carefully, because not all features listed can be used without a real frontend.
+Those libraries are borrowed from WLJS Frontend with some limitations.
 :::
 
 ## Usage
