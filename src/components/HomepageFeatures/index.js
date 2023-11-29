@@ -132,7 +132,7 @@ export default function HomepageFeatures() {
 <div className={styles.buttons} style={{padding:'0', margin: 'auto'}}>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/frontend/instruction">
+              to="/docs/frontend/tutorial/Overview">
               Overview ☄️
             </Link>
           </div>

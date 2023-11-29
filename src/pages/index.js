@@ -9,6 +9,7 @@ import CodeBlock from '@theme/CodeBlock';
 import Sandbox from '@site/src/components/sandbox';
 
 import ezPPT from '@site/static/img/ezgif.com-optimize-15.gif';
+import ezFABRIK from '@site/static/img/ezgif.com-optimize-5.gif';
 import ezDYN from '@site/static/img/ezgif.com-optimize-8.gif';
 
 import Component from '@site/src/components/wljs-notebook-react/includes';
@@ -199,20 +200,42 @@ export default function Home() {
 
       </div>
 
-    </header>      
+    </header> 
 
-    <header className={clsx('hero hero--primary', styles.heroBanner)} >
-      <div className="container" style={{display: 'block', 'padding-top':'1rem'}}>
-          {/*<h1 className="hero__title">How it works</h1>*/}
+    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{background: 'initial'}}>
+      <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
+      <div >
+          <div
+              style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'center',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
+              >
+              
+                  <img src={ezFABRIK}/>
+          </div>
+        </div>
+
+      <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
+          <h1 className="hero__title" style={{color: 'var(--ifm-navbar-link-color)'}}>Fun sandbox</h1>
+          <p className="hero__subtitle" style={{color: 'var(--ifm-navbar-link-color)', 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Mix programming languages, play with equations and algorithms in real-time</p>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/frontend/tutorial/Dynamics">
+              Examples
+            </Link>
+          </div>
+        </div>
+      
+
 
 
       </div>
-    </header>   
+
+    </header>            
 
     <header className={clsx('hero hero--primary', styles.heroBanner)} style={{background: 'initial'}} >
       <div className="container" style={{display: 'block', 'padding-top':'1rem', color : 'initial'}}>
-          <h3 className="hero__subtitle" style={{color: 'var(--ifm-navbar-link-color)'}}>Freeware, runs locally without an internet and belongs to You</h3>
-
+          <h3 className="hero__subtitle" style={{color: 'var(--ifm-navbar-link-color)'}}>Freeware*, runs locally without internet, and belongs to you</h3>
+          <small>The Wolfram Language is distributed separately as proprietary software (Wolfram Engine) by Wolfram Inc. with a free license.</small>
 
       </div>
     </header>                

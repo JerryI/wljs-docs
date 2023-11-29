@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wlx/dynamics.md",
+                "file": "frontend/Reference/Graphics/Image.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "373a69c7bac00e51",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Reference/Graphics/Point.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "802f64f295805415",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Reference/Graphics/Line.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wlx/dynamics.md",
+                "file": "frontend/Reference/Graphics/Point.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wlx/dynamics.md",
+                "file": "frontend/Reference/Graphics/Point.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wlx/dynamics.md"
+                "file": "frontend/Reference/Graphics/Point.md"
               }
             }
           },
@@ -158,44 +183,44 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4db1fa87d2ee7100",
+  "active": "373a69c7bac00e51",
   "lastOpenFiles": [
+    "frontend/Reference/Graphics/Line.md",
+    "frontend/Reference/Graphics/AbsoluteThickness.md",
+    "frontend/Tutorial/GUI Overview.md",
+    "frontend/Tutorial/Dynamics.md",
+    "Screenshot 2023-11-29 at 22.20.08.png",
+    "ezgif.com-optimize-6.gif",
+    "frontend/Reference/Graphics/Image.md",
+    "frontend/Reference/Graphics/MiddlewareHandler.md",
+    "ezgif.com-optimize-5.gif",
+    "frontend/Reference/Graphics/Offset.md",
+    "frontend/Reference/Graphics/Polygon.md",
+    "frontend/Reference/Graphics/Raster.md",
+    "frontend/Reference/Graphics/Text.md",
+    "frontend/Reference/Graphics/Style.md",
+    "frontend/Reference/Graphics/RGBColor.md",
+    "frontend/Reference/Graphics/Point.md",
+    "ezgif.com-video-to-gif-3.gif",
+    "frontend/Reference/Graphics/LABColor.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Reference/Graphics/Directive.md",
+    "frontend/Reference/Graphics/Arrow.md",
+    "frontend/Advanced/Editor manipulation.md",
+    "frontend/Advanced/Snippets/Snippets.md",
+    "frontend/Advanced/Dynamics/Simple manipulate.md",
+    "frontend/Advanced/Boxes and Decorations/dynamic-decorations.md",
+    "frontend/Advanced/Dynamics/Performance tips.md",
+    "frontend/Advanced/Dynamics/Indicators and monitoring.md",
+    "wlx/dynamics.md",
     "frontend/Reference/Tools/SlideEvent.md",
     "wlx/examples/fileexplorer.md",
-    "wlx/examples/app.md",
-    "wlx/dynamics.md",
-    "wlx/interpeter.md",
-    "wlx/components.md",
-    "wlx/scoping.md",
-    "wlx/SPA.md",
-    "wlx/install.md",
-    "wlx/basics.md",
-    "frontend/Tutorial/Overview.md",
-    "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Advanced/Slides/components.md",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Slides/tables.md",
-    "frontend/Advanced/Slides/styling.md",
-    "frontend/Advanced/Slides/intro.md",
-    "frontend/Cell types/WLX.md",
-    "frontend/Cell types/Slides.md",
-    "frontend/Cell types/HTML.md",
-    "frontend/Reference/Graphics/Graphics.md",
-    "frontend/Advanced/Events system/routing.md",
-    "frontend/Advanced/Events system/event-generators.md",
-    "frontend/Advanced/Dynamics/Performance tips.md",
-    "frontend/Advanced/Dynamics/Scoping.md",
-    "frontend/Advanced/Dynamics/Simple manipulate.md",
     "ezgif.com-optimize-4.gif",
     "ezgif.com-optimize-3.gif",
     "ezgif.com-optimize-2.gif",
     "Screenshot 2023-11-23 at 16.42.13.png",
     "Screenshot 2023-11-23 at 16.26.27.png",
     "ezgif.com-video-to-gif-2.gif",
-    "Screenshot 2023-11-23 at 16.04.51.png",
-    "Screenshot 2023-11-23 at 16.03.20.png",
-    "Screenshot 2023-11-23 at 15.21.04.png",
-    "Screenshot 2023-11-23 at 15.08.20.png",
     "frontend/Reference/Graphics/Internal",
     "frontend/Advanced/Cells manipulation",
     "frontend/Advanced/Events system",
