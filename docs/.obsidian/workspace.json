@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Image.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "373a69c7bac00e51",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Reference/Graphics/Point.md",
+                "file": "frontend/Reference/Input/InputTable.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Point.md",
+                "file": "frontend/Reference/Input/InputTable.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Point.md",
+                "file": "frontend/Reference/Input/InputTable.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Point.md"
+                "file": "frontend/Reference/Input/InputTable.md"
               }
             }
           },
@@ -183,8 +170,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "373a69c7bac00e51",
+  "active": "4db1fa87d2ee7100",
   "lastOpenFiles": [
+    "frontend/Advanced/Slides/animations.md",
+    "frontend/Reference/Graphics/GraphicsComplex.md",
+    "frontend/Reference/Graphics/Point.md",
+    "frontend/Cell types/Wolfram Language.md",
+    "frontend/Cell types/WLX.md",
+    "frontend/Cell types/Many more....md",
+    "frontend/Cell types/Markdown.md",
     "frontend/Reference/Graphics/Line.md",
     "frontend/Reference/Graphics/AbsoluteThickness.md",
     "frontend/Tutorial/GUI Overview.md",
@@ -200,7 +194,6 @@
     "frontend/Reference/Graphics/Text.md",
     "frontend/Reference/Graphics/Style.md",
     "frontend/Reference/Graphics/RGBColor.md",
-    "frontend/Reference/Graphics/Point.md",
     "ezgif.com-video-to-gif-3.gif",
     "frontend/Reference/Graphics/LABColor.md",
     "frontend/Reference/Graphics/Graphics.md",
@@ -209,12 +202,6 @@
     "frontend/Advanced/Editor manipulation.md",
     "frontend/Advanced/Snippets/Snippets.md",
     "frontend/Advanced/Dynamics/Simple manipulate.md",
-    "frontend/Advanced/Boxes and Decorations/dynamic-decorations.md",
-    "frontend/Advanced/Dynamics/Performance tips.md",
-    "frontend/Advanced/Dynamics/Indicators and monitoring.md",
-    "wlx/dynamics.md",
-    "frontend/Reference/Tools/SlideEvent.md",
-    "wlx/examples/fileexplorer.md",
     "ezgif.com-optimize-4.gif",
     "ezgif.com-optimize-3.gif",
     "ezgif.com-optimize-2.gif",

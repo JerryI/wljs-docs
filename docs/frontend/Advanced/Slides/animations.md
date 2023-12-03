@@ -103,6 +103,11 @@ Sure the state is not reservable in this case. You need to manage it by your own
 
 However, in practice reports are usually linear and do not require to repeat all animations again.
 
+### Append graphics on slide
+[Meta-markers](../../../interpreter/Advanced/meta-markers.md) can work well in a case if one wants to append some data on the existing graphics canvas.
+
+
+
 ## Buttons, sliders etc
 :::caution
 To be written. Check shipped examples (`File`$\rightarrow$ `Open Examples`) for that.

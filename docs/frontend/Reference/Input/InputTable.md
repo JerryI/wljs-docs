@@ -41,7 +41,7 @@ handler = InputTable`EventHelper[list];
 textstr = "";
 EventHandler[InputTable[list, "Height"->150], Function[data, 
   handler[data];
-  textstr = list //MatrixForm // ToCM6Boxes;
+  textstr = ToString[list // MatrixForm, StandardForm];
 ]]
 
 EditorView[textstr // Offload] // CreateFrontEndObject

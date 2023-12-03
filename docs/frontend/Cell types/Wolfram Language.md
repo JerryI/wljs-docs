@@ -50,16 +50,6 @@ FrontEndExecutable["uid"]
 
 where `uid` is an identifier for the Objects storage. In the normal conditions you will never see it. Basically any `Graphics`, `Graphics3D` are packed to such construction to prevent slow-down caused by many symbols stored in the editor.
 
-For the lightweight objects it uses inline representation, for example
-```mathematica
-data // Iconize
-```
-
-will result in
-```mathematica
-FrontEndInlineExecutable["compressed data"]
-```
-
 All mathematical expressions, colors, dates objects are wrapped using specific tags, allowing to emulate 2D equation typing 
 
 ```mathematica

@@ -12,6 +12,8 @@ import ezPPT from '@site/static/img/ezgif.com-optimize-15.gif';
 import ezFABRIK from '@site/static/img/ezgif.com-optimize-5.gif';
 import ezDYN from '@site/static/img/ezgif.com-optimize-8.gif';
 
+import ezCELL from '@site/static/img/ezgif.com-video-to-gif-4-cdeae5baf206018d7f65081efe4fe3ff.gif';
+
 import Component from '@site/src/components/wljs-notebook-react/includes';
 import Notebook from '@site/src/components/wljs-notebook-react';
 
@@ -78,7 +80,7 @@ export default function Home() {
         </div>
 
         <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'1em'}}>
-          <h1 className="hero__title">WLJS Frontend</h1>
+          <h1 className="hero__title">WLJS Notebook</h1>
           <p className="hero__subtitle" style={{ 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Freeware web-based Notebook Interface for Wolfram Language</p>
           <div className={styles.buttons} style={{display:'flex', 'flex-direction':'column'}}>
             <Link
@@ -107,7 +109,7 @@ export default function Home() {
       <header className={clsx('hero hero--primary', styles.heroBanner)} >
       <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
       <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
-          <h1 className="hero__title">Interactive and fast</h1>
+          <h1 >Interactive and fast</h1>
           <p className="hero__subtitle" style={{ 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>No more static SVG's! Sliders, data-binding, realtime smooth transitions</p>
           <div className={styles.buttons}>
             <Link
@@ -132,11 +134,6 @@ export default function Home() {
     </header>       
 
  
-
-    
-
-
-
     <header className={clsx('hero hero--primary', styles.heroBanner)} style={{background: 'initial'}}>
       <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
       <div >
@@ -144,13 +141,32 @@ export default function Home() {
               style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'center',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
               >
               
-                  <img src={ezPPT}/>
+                  <img src={ezCELL}/>
           </div>
         </div>
 
       <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
-          <h1 className="hero__title" style={{color: 'var(--ifm-navbar-link-color)'}}>Data-driven slides</h1>
-          <p className="hero__subtitle" style={{color: 'var(--ifm-navbar-link-color)', 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Use RevealJS and Wolfram Language to create component-based interactive presentations!</p>
+          <h1  style={{color: 'var(--ifm-navbar-link-color)'}}>One cell is everything</h1>
+          <p className="hero__subtitle" style={{color: 'var(--ifm-navbar-link-color)', 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Wolfram Language, Javascript, HTML, Markdown, Mermaid, WLX, ChatGPT, RevealJS</p>
+        </div>
+      
+
+
+
+      </div>
+
+    </header>  
+    
+
+
+
+    <header className={clsx('hero hero--primary', styles.heroBanner)} >
+      <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
+
+
+      <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
+          <h1  >Data-driven slides</h1>
+          <p className="hero__subtitle" style={{ 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Use RevealJS and Wolfram Language to create component-based interactive presentations!</p>
           <div className={styles.buttons}>
             <Link
               className="button button--secondary button--lg"
@@ -160,7 +176,14 @@ export default function Home() {
           </div>
         </div>
       
-
+        <div >
+          <div
+              style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'center',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
+              >
+              
+                  <img src={ezPPT}/>
+          </div>
+        </div>
 
 
       </div>
@@ -168,17 +191,11 @@ export default function Home() {
     </header>  
 
 
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{color: 'var(--ifm-navbar-link-color)', background: 'initial'}}>
       <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
 
 
-      <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
-          <h1 className="hero__title" >Export to HTML</h1>
-          <p className="hero__subtitle" style={{'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Share your work with the community keeping all graphics interactive</p>
-          <div className={styles.buttons}>
-            Try to drag this →
-          </div>
-        </div>
+
 
       <div >
           <div
@@ -189,7 +206,13 @@ export default function Home() {
           </div>
         </div>
 
-
+        <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
+          <h1 >Export to HTML</h1>
+          <p className="hero__subtitle" style={{'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Share your work with the community keeping all graphics interactive</p>
+          <div className={styles.buttons}>
+            Try to drag this →
+          </div>
+        </div>
 
 
 
@@ -197,20 +220,13 @@ export default function Home() {
 
     </header> 
 
-    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{background: 'initial'}}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container wljscols" style={{display: 'flex', 'padding-top':'1rem'}}>
-      <div >
-          <div
-              style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'center',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
-              >
-              
-                  <img src={ezFABRIK}/>
-          </div>
-        </div>
+
 
       <div style={{'display':'flex', 'align-items':'center', 'flex-direction': 'column', 'margin':'auto', 'padding':'2rem'}}>
-          <h1 className="hero__title" style={{color: 'var(--ifm-navbar-link-color)'}}>Fun sandbox</h1>
-          <p className="hero__subtitle" style={{color: 'var(--ifm-navbar-link-color)', 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Mix programming languages, play with equations and algorithms in real-time</p>
+          <h1 >Fun sandbox</h1>
+          <p className="hero__subtitle" style={{ 'marginTop': '-0.6em', 'paddingBottom': '0.6em' }}>Mix programming languages, play with equations and algorithms in real-time</p>
           <div className={styles.buttons}>
             <Link
               className="button button--secondary button--lg"
@@ -220,7 +236,14 @@ export default function Home() {
           </div>
         </div>
       
-
+        <div >
+          <div
+              style={{width: '100%','margin':'auto', 'max-height':'64vh', 'overflow-y':'scroll', 'border-radius':'4px', 'background':'white', 'scale':'1','text-align':'center',  'position':'relative', 'border-radius': '6px', 'padding': '0em'}}
+              >
+              
+                  <img src={ezFABRIK}/>
+          </div>
+        </div>
 
 
       </div>

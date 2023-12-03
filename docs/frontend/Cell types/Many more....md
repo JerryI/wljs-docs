@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 22
 ---
 You can extend output cell types via a few lines of code and you favorite framework / package
 
@@ -44,6 +44,11 @@ Hello World
 ![](../../imgs/Screenshot%202023-03-31%20at%2016.07.58.png)
 
 ##### SVG Art
+
+:::warning
+This plugin is not shipped together with WLJS Frontend. One need to install it manually from Github repo
+:::
+
 __[Github repo](https://github.com/JerryI/wljs-svgbob-support)__
 This feature was added mostly for fun. If you like to draw using symbols, you should definitely try a new creating - [SVGBob](https://github.com/ivanceras/svgbob). Written in Rust and packed as a WASM module
 
