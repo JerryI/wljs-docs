@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Disk.md",
+                "file": "frontend/Reference/Decorations/Low level/ViewBox.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,6 +26,18 @@
               "type": "markdown",
               "state": {
                 "file": "frontend/Reference/Dynamics/MetaMarker.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "35c54fc9664a5a25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Reference/Tools/Frontend/TalkKernel.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Disk.md",
+                "file": "frontend/Reference/Decorations/Low level/ViewBox.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Disk.md",
+                "file": "frontend/Reference/Decorations/Low level/ViewBox.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Disk.md"
+                "file": "frontend/Reference/Decorations/Low level/ViewBox.md"
               }
             }
           },
@@ -172,10 +184,24 @@
   },
   "active": "802f64f295805415",
   "lastOpenFiles": [
-    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Reference/Decorations/Low level/BoxBox.md",
+    "frontend/Reference/Decorations/Low level/ViewBox.md",
+    "frontend/Reference/Decorations/Column.md",
+    "frontend/Reference/Decorations/InputForm.md",
+    "frontend/Reference/Decorations/Interpretation.md",
+    "frontend/Reference/Decorations/InterpretationBox.md",
+    "frontend/Reference/Decorations/MakeBoxes.md",
+    "frontend/Reference/Graphics/Circle.md",
     "frontend/Reference/Graphics/Disk.md",
-    "ezgif.com-optimize-7.gif",
     "frontend/Reference/Graphics/Rectangle.md",
+    "frontend/Reference/Graphics/Translate.md",
+    "frontend/Reference/Graphics/Rotate.md",
+    "Screenshot 2023-12-10 at 16.59.28.png",
+    "frontend/Reference/Tools/Frontend/TalkKernel.md",
+    "ezgif.com-video-to-gif-6.gif",
+    "Screenshot 2023-12-10 at 15.44.56.png",
+    "frontend/Reference/Graphics/Graphics.md",
+    "ezgif.com-optimize-7.gif",
     "frontend/Reference/Graphics/Inset.md",
     "frontend/Reference/Graphics/Arrow.md",
     "frontend/Reference/Graphics/Directive.md",
@@ -188,30 +214,16 @@
     "frontend/Reference/Graphics/Offset.md",
     "frontend/Reference/Graphics/MiddlewareHandler.md",
     "frontend/Reference/Graphics/Line.md",
-    "frontend/Reference/Graphics/Image.md",
-    "frontend/Reference/Graphics/GraphicsComplex.md",
     "ezgif.com-video-to-gif-5.gif",
     "ezgif.com-video-to-gif-4.gif",
-    "frontend/Reference/Dynamics/MetaMarker.md",
-    "frontend/Reference/Dynamics/FrontSubmit.md",
-    "frontend/Cell types/Files.md",
     "Screenshot 2023-12-05 at 10.29.43.png",
-    "frontend/Cell types/Many more....md",
-    "frontend/Reference/Dynamics/DynamicModule.md",
-    "frontend/Reference/Dynamics/Dynamic.md",
     "frontend/Reference/Tools/Slides",
     "frontend/Reference/Tools/Frontend",
     "frontend/Reference/Tools/Notebook",
     "frontend/Reference/Tools/Timers",
-    "frontend/Reference/Graphics/AbsoluteThickness.md",
-    "frontend/Reference/Input/InputTable.md",
-    "frontend/Advanced/Slides/animations.md",
     "Screenshot 2023-11-29 at 22.20.08.png",
     "ezgif.com-optimize-6.gif",
     "ezgif.com-optimize-5.gif",
-    "ezgif.com-video-to-gif-3.gif",
-    "ezgif.com-optimize-4.gif",
-    "ezgif.com-optimize-3.gif",
     "frontend/Reference/Graphics/Internal",
     "frontend/Advanced/Cells manipulation",
     "frontend/Advanced/Events system",

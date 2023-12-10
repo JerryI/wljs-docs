@@ -22,6 +22,10 @@ where `display` will be shown in the output cell, instead of `expr`, keeping `ex
 `display` must be Boxes, if you want to use regular WL expressions, consider [Interpretation](Interpretation.md)
 :::
 
+:::tip
+Please see [BoxBox](Low%20level/BoxBox.md) and [ViewBox](Low%20level/ViewBox.md) for an advanced expression decorations
+:::
+
 ## Applications
 One of the examples is to make some definitions shorter by setting `UpValues` to  `MakeBoxes`, since the last one is recursively applied to everything in the output cell 
 

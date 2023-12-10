@@ -12,6 +12,10 @@ is a general expression used in `UpValues` of other expressions to change the vi
 :::info
 `MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](../Tools/Notebook/CellPrint.md), and [EditorView](../Input/EditorView.md) for various applications
 :::
+
+:::tip
+Please see [BoxBox](Low%20level/BoxBox.md) and [ViewBox](Low%20level/ViewBox.md) for an advanced expression decorations
+:::
 ## Applications
 
 ### Styling symbols | Custom representation
