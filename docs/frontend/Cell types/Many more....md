@@ -19,30 +19,6 @@ pie title NETFLIX
 
 ![](../../imgs/Screenshot%202023-03-31%20at%2016.01.28.png)
 
-##### Image/File viewer/editor
-__[Github repo](https://github.com/JerryI/wljs-magic-support)__
-It is questionable if it a good idea to implement it in the following syntax. The prefix itself defines the urls and the type of the processor. 
-
-However, for now you can drop any image available in the folder of your notebook
-```shell
-randompic.png
-```
-
-![](../../imgs/Screenshot%202023-03-31%20at%2016.06.38.png)
-
-to print the content of any file
-```
-filename.txt
-```
-
-to create or to write to a file
-```
-filename.txt
-Hello World
-```
-
-![](../../imgs/Screenshot%202023-03-31%20at%2016.07.58.png)
-
 ##### SVG Art
 
 :::warning

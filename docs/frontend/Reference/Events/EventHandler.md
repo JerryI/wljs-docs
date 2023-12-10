@@ -61,7 +61,7 @@ Graphics[{
 In this example a cyan dot will follow your cursor, since there is a function attached to `mousemove` property. 
 
 ### Listening an event of an output cell
-It comes handy, when you, for instance, [cloned](EventClone.md) events and need to purge the handlers before each reevaluation. There is an access to any output cell via [EvaluationCell](../Tools/EvaluationCell.md)
+It comes handy, when you, for instance, [cloned](EventClone.md) events and need to purge the handlers before each reevaluation. There is an access to any output cell via [EvaluationCell](../Tools/Notebook/EvaluationCell.md)
 
 ```mathematica
 EvaluationCell[]

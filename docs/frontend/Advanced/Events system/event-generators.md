@@ -238,7 +238,7 @@ EventHandler[EvaluationCell[], {"destroy"->Print, "evaluation"->Print}]
 ```
 
 :::info
-You do not need to clone [EvaluationCell](../../Reference/Tools/EvaluationCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
+You do not need to clone [EvaluationCell](../../Reference/Tools/Notebook/EvaluationCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
 :::
 
 One should not that those event are assigned to __the output cell__ generated after the evaluation. Therefore mostly useful will be to use `"destroy"`, while `"evaluation"` is called only if one tries to evaluate the output cell as an input cell.

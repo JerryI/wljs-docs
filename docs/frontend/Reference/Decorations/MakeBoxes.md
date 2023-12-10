@@ -10,7 +10,7 @@ MakeBoxes[expr_, form_]
 is a general expression used in `UpValues` of other expressions to change the visual representation (see [Decorations](../../Development/Decorations.md)) in the notebook.
 
 :::info
-`MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](../Tools/CellPrint.md), and [EditorView](../Input/EditorView.md) for various applications
+`MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](../Tools/Notebook/CellPrint.md), and [EditorView](../Input/EditorView.md) for various applications
 :::
 ## Applications
 

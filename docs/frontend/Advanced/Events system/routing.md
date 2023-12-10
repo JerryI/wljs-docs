@@ -37,7 +37,7 @@ handler[uid_String, func_:Print] := With[{ev = EventClone[uid]},
 ```
 
 :::info
-You do not need to clone [EvaluationCell](../../Reference/Tools/EvaluationCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
+You do not need to clone [EvaluationCell](../../Reference/Tools/Notebook/EvaluationCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
 :::
 
 The cool thing, that we can have many of those `handler`s attached to the same event, since it clones it every-time and removes handler function, when you reevaluate the cell. Let us see it on the following example

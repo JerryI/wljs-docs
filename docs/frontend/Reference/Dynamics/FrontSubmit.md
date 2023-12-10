@@ -19,7 +19,7 @@ The submitted expression bypasses the master kernel and goes directly to the fro
 :::
 ## Examples
 ### Execute any WLJS function from WL Kernel
-There are many expressions working exclusively on the frontend's side, for instance [Alert](../Tools/Alert.md) might be quite useful
+There are many expressions working exclusively on the frontend's side, for instance [Alert](../Tools/Frontend/Alert.md) might be quite useful
 
 ```mathematica
 FrontSubmit[Alert["Hi"]]
@@ -724,7 +724,7 @@ dCIsOS45NzI1NDI1MDI4NDQyMjQsLTUuMjIyMTQwMTA3ODU2ODM5NWUtMl0sWyJMaXN0Iiw5Ljk3
 OTQwNjc3NTA5MjM1MiwtNS4yNzcxNDUyNzQzNDQ1NzllLTJdLFsiTGlzdCIsOS45ODYyNzEwNDcz
 NDA0OCwtNS4zMzE4MjYzNDUwNTYzM2UtMl0sWyJMaXN0Iiw5Ljk5MzEzNTMxOTU4ODYwNywtNS4z
 ODYxODEyNDIzNjI5MjZlLTJdLFsiTGlzdCIsOS45OTk5OTk1OTE4MzY3MzUsLTUuNDQwMjA3OTA2
-MTYwNzk5ZS0yXV1dXSwiJ0NoYXJ0aW5nYFByaXZhdGVgVGFnJDY4MjIjMSciXV1dLFsiTGlzdCJd
+MTYwNzk5ZS0yXV1dXSwiJ0NoYXJ0aW5nYFByaXZhdGVgVGFnJDcwMTEjMSciXV1dLFsiTGlzdCJd
 XSxbIkxpc3QiLFsiUnVsZSIsIkRpc3BsYXlGdW5jdGlvbiIsIklkZW50aXR5Il0sWyJSdWxlIiwi
 VGlja3MiLFsiTGlzdCIsIkF1dG9tYXRpYyIsIkF1dG9tYXRpYyJdXSxbIlJ1bGUiLCJBeGVzT3Jp
 Z2luIixbIkxpc3QiLDAsMF1dLFsiUnVsZSIsIkZyYW1lVGlja3MiLFsiTGlzdCIsWyJMaXN0Iiwi

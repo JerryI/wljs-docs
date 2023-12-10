@@ -270,7 +270,7 @@ Custom transitions are not supported, unless it is made using [Graphics](../../R
 :::
 
 ### Events
-To capture the events from a slide (revealing the slide or revealing individual fragments) - use [SlideEvent](../../Reference/Tools/SlideEvent.md)
+To capture the events from a slide (revealing the slide or revealing individual fragments) - use [SlideEvent](../../Reference/Tools/Slides/SlideEvent.md)
 
 It attaches itself to the slide, where it has been placed
 
@@ -297,7 +297,7 @@ EventHandler["myEvent", Print["Hey there!"]&]
 EventHandler["myEvent-fragment-1", Print["Hey there from fragment!"]&]
 ```
 
-The identifier of [SlideEvent](../../Reference/Tools/SlideEvent.md) acts as an event object. There are two patterns on how you can capture certain event
+The identifier of [SlideEvent](../../Reference/Tools/Slides/SlideEvent.md) acts as an event object. There are two patterns on how you can capture certain event
 
 - `uid` - is fired when a slide has been revealed
 - `uid-fragment-INDEX` - is fired when a fragment number `INDEX` has been revealed
