@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/Low level/ViewBox.md",
+                "file": "frontend/Reference/Graphics/Directive.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Decorations/Low level/ViewBox.md",
+                "file": "frontend/Reference/Graphics/Directive.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Decorations/Low level/ViewBox.md",
+                "file": "frontend/Reference/Graphics/Directive.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Decorations/Low level/ViewBox.md"
+                "file": "frontend/Reference/Graphics/Directive.md"
               }
             }
           },
@@ -184,8 +184,8 @@
   },
   "active": "802f64f295805415",
   "lastOpenFiles": [
-    "frontend/Reference/Decorations/Low level/BoxBox.md",
     "frontend/Reference/Decorations/Low level/ViewBox.md",
+    "frontend/Reference/Decorations/Low level/BoxBox.md",
     "frontend/Reference/Decorations/Column.md",
     "frontend/Reference/Decorations/InputForm.md",
     "frontend/Reference/Decorations/Interpretation.md",

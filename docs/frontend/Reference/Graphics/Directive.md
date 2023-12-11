@@ -19,10 +19,7 @@ One can provide a font-size parameters
 Plot[Sin[x], {x,0,2Pi}, FrameTicksStyle->Directive[FontSize->16], Frame->True]
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIkxpc3QiLFsiTGlzdCIsWyJMaXN0Il0sWyJMaXN0Il0sWyJB
-bm5vdGF0aW9uIixbIkxpc3QiLFsiRGlyZWN0aXZlIixbIk9wYWNpdHkiLDEuMF0sWyJSR0JDb2xv
-ciIsMC4zNjg0MTcsMC41MDY3NzksMC43MDk3OThdLFsiQWJzb2x1dGVUaGlja25lc3MiLDEuNl1d
-LFsiTGluZSIsWyJMaXN0IixbIkxpc3QiLDEuMjgyMjgyNzE1NzUwOTM1OGUtNywxLjI4MjI4Mjcx
+<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIkxpc3QiLFsiTGlzdCIsWyJMaXN0Il0sWyJMaXN0Il0sWyJBbm5vdGF0aW9uIixbIkxpc3QiLFsiRGlyZWN0aXZlIixbIk9wYWNpdHkiLDEuMF0sWyJSR0JDb2xvciIsMC4zNjg0MTcsMC41MDY3NzksMC43MDk3OThdLFsiQWJzb2x1dGVUaGlja25lc3MiLDEuNl1dLFsiTGluZSIsWyJMaXN0IixbIkxpc3QiLDEuMjgyMjgyNzE1NzUwOTM1OGUtNywxLjI4MjI4Mjcx
 NTc1MDkzMjRlLTddLFsiTGlzdCIsMS45MjcxNjU1MzE5MDg5MjIzZS0zLDEuOTI3MTY0MzM5MDA0
 MjgzZS0zXSxbIkxpc3QiLDMuODU0MjAyODM1NTQ2MjY5NWUtMywzLjg1NDE5MzI5MzI2NjkxZS0z
 XSxbIkxpc3QiLDcuNzA4Mjc3NDQyODIwOTY0ZS0zLDcuNzA4MjAxMTA4NTY1NzM4ZS0zXSxbIkxp
@@ -1513,3 +1510,26 @@ c3QiLFsiU2NhbGVkIiwyLjBlLTJdLFsiU2NhbGVkIiwyLjBlLTJdXSxbIkxpc3QiLFsiU2NhbGVk
 IiwyLjBlLTJdLFsiU2NhbGVkIiwyLjBlLTJdXV1dLFsiUnVsZSIsIlRpY2tzIixbIkxpc3QiLCJB
 dXRvbWF0aWMiLCJBdXRvbWF0aWMiXV1dXQ==
 `}>{`Plot[Sin[x], {x,0,10 Pi}, FrameStyle->Directive[FontSize->16], Frame->True, FrameLabel->{"x-axis", "y-axis"}, ImageSize->350]`}</Wl>
+
+
+### Transitions
+One can specify the local transitions parameters. For example
+
+```mathematica
+p1 = {0,0};
+p2 = {0,0};
+
+Graphics[{
+	Directive[TransitionDuration->500], Red, Disk[p1 // Offload, 0.2],
+	{Directive[TransitionDuration->100], Blue, Disk[p2 // Offload, 0.2]}}
+, PlotRange->{{-1,1}, {-1,1}}]
+```
+
+then try
+
+```mathematica
+p1 = {1,1};
+p2 = {-1,-1};
+```
+
+You will find that they are animated with a different duration. __The same applies to `TransitionType` as well__
