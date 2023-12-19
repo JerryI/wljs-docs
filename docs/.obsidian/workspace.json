@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Directive.md",
+                "file": "frontend/Reference/Graphics/Arrow.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Dynamics/MetaMarker.md",
+                "file": "wlx/install.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 212.5
   },
   "right": {
     "id": "a752dd5ced191c4a",
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Directive.md",
+                "file": "frontend/Reference/Graphics/Arrow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Directive.md",
+                "file": "frontend/Reference/Graphics/Arrow.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Directive.md"
+                "file": "frontend/Reference/Graphics/Arrow.md"
               }
             }
           },
@@ -184,6 +184,19 @@
   },
   "active": "802f64f295805415",
   "lastOpenFiles": [
+    "frontend/Reference/Graphics/Circle.md",
+    "frontend/Reference/Graphics/Directive.md",
+    "frontend/Reference/Graphics/Disk.md",
+    "frontend/instruction.md",
+    "wlx/install.md",
+    "frontend/Reference/Dynamics/MetaMarker.md",
+    "frontend/Development/Plugins/Themes.md",
+    "frontend/Development/Plugins/new-celltypes.md",
+    "frontend/Development/Plugins/Basics.md",
+    "frontend/Development/Evaluation/Static.md",
+    "frontend/Development/Evaluation/Dynamic.md",
+    "frontend/Reference/Tools/Notebook/ParentCell.md",
+    "frontend/Reference/Tools/Notebook/CellPrint.md",
     "frontend/Reference/Decorations/Low level/ViewBox.md",
     "frontend/Reference/Decorations/Low level/BoxBox.md",
     "frontend/Reference/Decorations/Column.md",
@@ -191,8 +204,6 @@
     "frontend/Reference/Decorations/Interpretation.md",
     "frontend/Reference/Decorations/InterpretationBox.md",
     "frontend/Reference/Decorations/MakeBoxes.md",
-    "frontend/Reference/Graphics/Circle.md",
-    "frontend/Reference/Graphics/Disk.md",
     "frontend/Reference/Graphics/Rectangle.md",
     "frontend/Reference/Graphics/Translate.md",
     "frontend/Reference/Graphics/Rotate.md",
@@ -203,17 +214,6 @@
     "frontend/Reference/Graphics/Graphics.md",
     "ezgif.com-optimize-7.gif",
     "frontend/Reference/Graphics/Inset.md",
-    "frontend/Reference/Graphics/Arrow.md",
-    "frontend/Reference/Graphics/Directive.md",
-    "frontend/Reference/Graphics/SVGAttribute.md",
-    "frontend/Reference/Graphics/Style.md",
-    "frontend/Reference/Graphics/Show.md",
-    "frontend/Reference/Graphics/Raster.md",
-    "frontend/Reference/Graphics/Polygon.md",
-    "frontend/Reference/Graphics/Point.md",
-    "frontend/Reference/Graphics/Offset.md",
-    "frontend/Reference/Graphics/MiddlewareHandler.md",
-    "frontend/Reference/Graphics/Line.md",
     "ezgif.com-video-to-gif-5.gif",
     "ezgif.com-video-to-gif-4.gif",
     "Screenshot 2023-12-05 at 10.29.43.png",

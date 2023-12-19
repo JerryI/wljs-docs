@@ -30,7 +30,7 @@ Begin["Private`"];
 
 MermaidQ[str_] := StringMatchQ[str, ".mermaid\n"~~___];
 
-MermaidProcessor[expr_String, signature_String, callback_] := Module[{str = StringDrop[expr, StringLength[First[StringSplit[expr, "\n"]]] ]},
+MermaidProcessor[expr_String, signature_String, parentCell_String, callback_] := Module[{str = StringDrop[expr, StringLength[First[StringSplit[expr, "\n"]]] ]},
   Print["MermaidProcessor!"];
   callback[
       str,
@@ -79,11 +79,12 @@ A syntax checking (optionally) function must be provided. If you are lazy like m
 #### Evaluator
 This is the most important part of a structure. It has 3 arguments
 ```mathematica
-MermaidProcessor[expr_String, signature_String, callback_] := ...
+MermaidProcessor[expr_String, signature_String, parentcell_String, callback_] := ...
 ```
 
 `expr` is a string, that represents a data from the input cell (including the first line!).
 `signature` is basically a notebook identifier.
+`parentCell` is an uid of the input cell from which the code was called for evaluation
 `callback` is a function, that must be called, when the evaluation is done.
 
 The simplest step by step workflow will be
@@ -93,7 +94,7 @@ The simplest step by step workflow will be
 In our example of Mermaid diagrams, there is no need in evaluating the code on the secondary kernel, since mermaid engine works on browser's side only, i.e. 
 
 ```mathematica
-MermaidProcessor[expr_String, signature_String, callback_] := Module[{str = StringDrop[expr, StringLength[First[StringSplit[expr, "\n"]]] ]},
+MermaidProcessor[expr_String, signature_String, parent_String, callback_] := Module[{str = StringDrop[expr, StringLength[First[StringSplit[expr, "\n"]]] ]},
 
   callback[
       str,
@@ -135,7 +136,7 @@ Of course there is a way to perform handling on a secondary kernel like normal. 
 
 **normal wolfram language evaluation**
 ```mathematica
-JerryI`WolframJSFrontend`Notebook`Notebooks[signature]["kernel"][JerryI`WolframJSFrontend`Evaluator`WolframEvaluator[data_, block_, signature], callback, "Link"->"WSTP"];
+JerryI`WolframJSFrontend`Notebook`Notebooks[signature]["kernel"][JerryI`WolframJSFrontend`Evaluator`WolframEvaluator[data_, block_, signature, Null], callback, "Link"->"WSTP"];
 ```
 here `data` is a string with an expression you want to evaluate, and `block` is a boolean parameter that tell if you need an output to be printed or not (the default should be `False`). Wolfram Kernel will provide all types to `callback` automatically. 
 
@@ -143,7 +144,7 @@ The view component is `codemirror`. As an example, please have a look at [wljs-e
 
 **template engine**
 ```mathematica
-JerryI`WolframJSFrontend`Notebook`Notebooks[signature]["kernel"][JerryI`WolframJSFrontend`Evaluator`TemplateEvaluator[data_, signature, view_], callback, "Link"->"WSTP"];
+JerryI`WolframJSFrontend`Notebook`Notebooks[signature]["kernel"][JerryI`WolframJSFrontend`Evaluator`TemplateEvaluator[data_, signature, view_, Null], callback, "Link"->"WSTP"];
 ```
 here it is almost the same, but is uses [WSP template engine](https://github.com/JerryI/wl-wsp) to process the string and calls `callback` with a given `view` parameter provided.
 

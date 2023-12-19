@@ -24,7 +24,10 @@ Delete[cell]
 :::
 ## Options
 ### `"Type"`
-default is `"Output"`  or `"output"` cell type. Possible value is also `"Input"`
+default is `"Output"`  cell type. Possible value is also `"Input"`
+
+### `"After"`
+Specify a `CellObj`, that points to the cell after which it will be placed. 
 
 ## Applications
 To make a temporal cell with a custom output use

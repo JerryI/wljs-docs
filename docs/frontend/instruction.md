@@ -9,20 +9,39 @@ Frontend __does not require anything installed__ apart from `wolframscript` (see
 Works only with Wolfram Engine $\geq$ __13.0.0__. The version __13.0.1__ is more preferable.
 :::
 
-:::info
-Make sure that Wolfram Engine is activated and no other instance of `wolfram` is running on your Mac/PC
-:::
-
 
 ![uilook](../imgs/uilook.png)
 
 
 There is two ways you can choose from
 
+import Tabs from '@theme/Tabs';  
+import TabItem from '@theme/TabItem';
+
 ## Desktop application
 Frontend is also shipped as an Electron cross-platform application, that makes you feel like if you were using a real desktop app. However it also takes care about updates and other management, and provides context menu. __This is the easiest way__
 
-__[Releases](https://github.com/JerryI/wolfram-js-frontend/releases)__
+
+<Tabs  
+defaultValue="x86"  
+values={[  
+{label: 'x86-x64', value: 'x86'},  
+{label: 'M1', value: 'M1'},  
+]}>  
+<TabItem value="x86">
+
+- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook.Setup.0.7.0.exe)
+- [MacOS](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook-0.7.0-Intel.dmg)
+- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/wljs-frontend_0.7.0_amd64.deb)
+- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook-0.7.0.AppImage)
+
+</TabItem>  
+<TabItem value="M1">
+
+- [MacOS](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook-0.7.0-M1.dmg)
+
+</TabItem>  
+</Tabs>
 
 ## Via console & web-browser
 Clone the master branch and run `wolframscript`

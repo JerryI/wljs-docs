@@ -100,3 +100,35 @@ a {
   margin-right: 1em;
   margin-bottom: 0.5em;
 }
+
+:root {
+  --markdown-h5: rgb(133, 0, 120);
+  --markdown-h4: darkgreen;
+  --markdown-h3: darkblue;  
+  --markdown-h2: darkred;      
+     
+ }
+ 
+ html[data-theme='dark'] {
+  --markdown-h5: rgb(255, 173, 247);
+  --markdown-h4: rgb(172, 255, 172);
+  --markdown-h3: rgb(133, 133, 255);  
+  --markdown-h2: rgb(255, 159, 159);      
+ }
+ 
+ 
+ .markdown>h5 {
+  color: var(--markdown-h5) !important;   
+ }
+ 
+ .markdown>h4 {
+  color: var(--markdown-h4) !important;   
+ }
+ 
+ .markdown>h3 {
+  color: var(--markdown-h3) !important;   
+ }
+ 
+ .markdown>h2 {
+  color: var(--markdown-h2) !important;   
+ }
