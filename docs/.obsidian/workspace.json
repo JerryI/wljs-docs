@@ -13,9 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Arrow.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "8a6012b8c41fb6ed",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.3"
               }
             }
           },
@@ -43,7 +53,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Arrow.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Arrow.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Arrow.md"
+                "file": "frontend/Reference/Graphics/Line.md"
               }
             }
           },
@@ -159,7 +170,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -182,8 +195,9 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "802f64f295805415",
+  "active": "8a6012b8c41fb6ed",
   "lastOpenFiles": [
+    "frontend/Reference/Graphics/Arrow.md",
     "frontend/Reference/Graphics/Circle.md",
     "frontend/Reference/Graphics/Directive.md",
     "frontend/Reference/Graphics/Disk.md",
@@ -213,7 +227,6 @@
     "Screenshot 2023-12-10 at 15.44.56.png",
     "frontend/Reference/Graphics/Graphics.md",
     "ezgif.com-optimize-7.gif",
-    "frontend/Reference/Graphics/Inset.md",
     "ezgif.com-video-to-gif-5.gif",
     "ezgif.com-video-to-gif-4.gif",
     "Screenshot 2023-12-05 at 10.29.43.png",

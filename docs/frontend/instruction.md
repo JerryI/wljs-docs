@@ -38,7 +38,7 @@ values={[
 </TabItem>  
 <TabItem value="M1">
 
-- [MacOS](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook-0.7.0-M1.dmg)
+- [MacOS](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook-0.7.2-universal.dmg)
 
 </TabItem>  
 </Tabs>
