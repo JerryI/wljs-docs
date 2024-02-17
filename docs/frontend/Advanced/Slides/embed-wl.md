@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Code highlighting
 
-Since it support WLX syntax as well, one can combine the copied text from the normal Wolfram Language cell into a [EditorView](../../Reference/Input/EditorView.md) component
+Since it support WLX syntax as well, one can combine the copied text from the normal Wolfram Language cell into a [EditorView](../../Reference/Inputs/EditorView.md) component
 
 *prototype*
 ```jsx

@@ -10,7 +10,7 @@ An alternative plotting function to [Plot](Plot.md) that uses Plotly.js
 Plotly[expr_, {variable, min, max, step}]
 ```
 
-It mimics the syntax of `Plot` and provides legend, pan/zoom features out of the box. Despite this convenience it does not rely on [Graphics](../Graphics/Graphics.md) functionality, therefore is hard to customize.
+It mimics the syntax of `Plot` and provides legend, pan/zoom features out of the box. Despite this convenience it does not rely on [Graphics](../Graphics-D3/Graphics.md) functionality, therefore is hard to customize.
 
 ```mathematica
 Plotly[Evaluate[Table[BesselJ[n, x], {n, 4}]], {x, 0, 10}]

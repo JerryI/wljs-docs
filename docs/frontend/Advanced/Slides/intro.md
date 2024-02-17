@@ -266,7 +266,7 @@ Fragment changes the color <!-- .element: class="fragment highlight-red" data-fr
 See more available transitions at [RevealJS](https://revealjs.com/fragments/).
 
 :::note
-Custom transitions are not supported, unless it is made using [Graphics](../../Reference/Graphics/Graphics.md) using [animations](animations.md) approach
+Custom transitions are not supported, unless it is made using [Graphics](../../Reference/Graphics-D3/Graphics.md) using [animations](animations.md) approach
 :::
 
 ### Events

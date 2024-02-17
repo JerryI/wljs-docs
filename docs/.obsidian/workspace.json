@@ -8,34 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "802f64f295805415",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Reference/Graphics/Line.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8a6012b8c41fb6ed",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.3"
-              }
-            }
-          },
-          {
             "id": "f218d939e8949300",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wlx/install.md",
+                "file": "frontend/Expressions representation.md",
                 "mode": "source",
                 "source": false
               }
@@ -53,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212.5
+    "width": 359.5
   },
   "right": {
     "id": "a752dd5ced191c4a",
@@ -120,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Line.md",
+                "file": "frontend/Expressions representation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Line.md",
+                "file": "frontend/Expressions representation.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Line.md"
+                "file": "frontend/Expressions representation.md"
               }
             }
           },
@@ -195,37 +172,37 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "8a6012b8c41fb6ed",
+  "active": "f218d939e8949300",
   "lastOpenFiles": [
-    "frontend/Reference/Graphics/Arrow.md",
-    "frontend/Reference/Graphics/Circle.md",
-    "frontend/Reference/Graphics/Directive.md",
-    "frontend/Reference/Graphics/Disk.md",
-    "frontend/instruction.md",
+    "frontend/Troubleshooting.md",
+    "frontend/Mathematica vs WLJS.md",
+    "frontend/Development/Plugins/Known packages.md",
+    "frontend/Development/Structure.md",
+    "frontend/Development/Decorations.md",
     "wlx/install.md",
-    "frontend/Reference/Dynamics/MetaMarker.md",
-    "frontend/Development/Plugins/Themes.md",
-    "frontend/Development/Plugins/new-celltypes.md",
-    "frontend/Development/Plugins/Basics.md",
-    "frontend/Development/Evaluation/Static.md",
-    "frontend/Development/Evaluation/Dynamic.md",
-    "frontend/Reference/Tools/Notebook/ParentCell.md",
-    "frontend/Reference/Tools/Notebook/CellPrint.md",
-    "frontend/Reference/Decorations/Low level/ViewBox.md",
-    "frontend/Reference/Decorations/Low level/BoxBox.md",
-    "frontend/Reference/Decorations/Column.md",
-    "frontend/Reference/Decorations/InputForm.md",
-    "frontend/Reference/Decorations/Interpretation.md",
-    "frontend/Reference/Decorations/InterpretationBox.md",
-    "frontend/Reference/Decorations/MakeBoxes.md",
-    "frontend/Reference/Graphics/Rectangle.md",
-    "frontend/Reference/Graphics/Translate.md",
-    "frontend/Reference/Graphics/Rotate.md",
+    "frontend/Reference/Javascript API/uuidv4.md",
+    "frontend/Reference/Javascript API/setInnerHTML.md",
+    "frontend/Reference/Javascript API/server.md",
+    "frontend/Reference/Javascript API/openawindow.md",
+    "frontend/Reference/Javascript API/ObjectHashMap.md",
+    "frontend/Reference/Javascript API/interpretate.md",
+    "frontend/Reference/Javascript API/InstancesHashMap.md",
+    "frontend/Reference/Javascript API/downloadByURL.md",
+    "frontend/Reference/Javascript API/core.md",
+    "frontend/Reference/Javascript API/CellHashStorage.md",
+    "interpreter/Advanced/symbols.md",
+    "interpreter/Advanced/meta-markers.md",
+    "interpreter/Advanced/containers.md",
+    "interpreter/Advanced/architecture.md",
+    "frontend/Reference/Graphics-D3/Line.md",
+    "frontend/Reference/Graphics-D3/Arrow.md",
+    "frontend/Reference/Graphics-D3/Circle.md",
+    "frontend/Reference/Graphics-D3/Directive.md",
+    "frontend/Reference/Graphics-D3/Disk.md",
+    "frontend/instruction.md",
     "Screenshot 2023-12-10 at 16.59.28.png",
-    "frontend/Reference/Tools/Frontend/TalkKernel.md",
     "ezgif.com-video-to-gif-6.gif",
     "Screenshot 2023-12-10 at 15.44.56.png",
-    "frontend/Reference/Graphics/Graphics.md",
     "ezgif.com-optimize-7.gif",
     "ezgif.com-video-to-gif-5.gif",
     "ezgif.com-video-to-gif-4.gif",
@@ -237,7 +214,7 @@
     "Screenshot 2023-11-29 at 22.20.08.png",
     "ezgif.com-optimize-6.gif",
     "ezgif.com-optimize-5.gif",
-    "frontend/Reference/Graphics/Internal",
+    "frontend/Reference/Graphics-D3/Internal",
     "frontend/Advanced/Cells manipulation",
     "frontend/Advanced/Events system",
     "frontend/Advanced/JS Tools",

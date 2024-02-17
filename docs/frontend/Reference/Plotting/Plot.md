@@ -802,7 +802,7 @@ VGlja3MiLFsiTGlzdCIsIkF1dG9tYXRpYyIsIkF1dG9tYXRpYyJdXV1d
 
 Labels __accepts only strings__ or numbers unlike Mathematica, where you can put everything. 
 
-Since it is translated into [`Text`](../Graphics/Text.md), one can use sort of TeX math input
+Since it is translated into [`Text`](../Graphics-D3/Text.md), one can use sort of TeX math input
 
 ```mathematica
 Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {"wavenumber (cm^{-1})", "absorption \\alpha"}, PlotRange->Full]
@@ -1998,7 +1998,7 @@ WyJTY2FsZWQiLDIuMGUtMl0sWyJTY2FsZWQiLDIuMGUtMl1dXV0sWyJSdWxlIiwiVGlja3MiLFsi
 TGlzdCIsIkF1dG9tYXRpYyIsIkF1dG9tYXRpYyJdXV1d
 `}>{`Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {"wavenumber (cm^{-1})", "absorption \\alpha"}, PlotRange->Full, ImageSize->500]`}</Wl>
 
-It also supports [Offset](../Graphics/Offset.md) attribute
+It also supports [Offset](../Graphics-D3/Offset.md) attribute
 
 ```mathematica
 Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {Offset["wavenumber (cm^{-1})", {0,0.05}], "absorption \\alpha"}, PlotRange->Full]
@@ -3435,7 +3435,7 @@ IiwxLCInT25lJyJdXSxbIkxpc3QiXV1dXV0=
 `}>{`Plot[x, {x, 0, 1}, Ticks->{{{0, "Zero"}, {0.5, "Half"}, {1,"One"}}, {}}, ImageSize->500]`}</Wl>
 
 ### `Controls` 💛
-This is more an option for [Graphics](../Graphics/Graphics.md), but with a bit of a hacking it can be used here as well. The features __allows to pan and zoom your plots__, that was never possible in Mathematica
+This is more an option for [Graphics](../Graphics-D3/Graphics.md), but with a bit of a hacking it can be used here as well. The features __allows to pan and zoom your plots__, that was never possible in Mathematica
 
 ```mathematica
 Plot[Sin[1/x], {x, 0.001, 0.1}, MaxRecursion->1];
@@ -6687,7 +6687,7 @@ dXRvbWF0aWMiXV1dXQ==
 
 ### `Axes`
 :::caution
-Currently is not supported by [Graphics](../Graphics/Graphics.md) ;(
+Currently is not supported by [Graphics](../Graphics-D3/Graphics.md) ;(
 :::
 Show or hide axes of the plot
 

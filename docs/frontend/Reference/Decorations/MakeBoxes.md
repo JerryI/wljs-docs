@@ -10,7 +10,7 @@ MakeBoxes[expr_, form_]
 is a general expression used in `UpValues` of other expressions to change the visual representation (see [Decorations](../../Development/Decorations.md)) in the notebook.
 
 :::info
-`MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](../Tools/Notebook/CellPrint.md), and [EditorView](../Input/EditorView.md) for various applications
+`MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](../Tools/Notebook/CellPrint.md), and [EditorView](../Inputs/EditorView.md) for various applications
 :::
 
 :::tip
@@ -41,7 +41,7 @@ Please check the official Wolfram Language documentation on `MakeBoxes`
 :::
 
 ### Force expressions to be executed on WLJS Interpreter
-This is basically the way on how to automatically apply [CreateFrontEndObject](../Dynamics/CreateFrontEndObject.md) on some common objects like [Graphics](../Graphics/Graphics.md), [ListLinePlotly](../Plotting/ListLinePlotly.md) meant for executing on WLJS Interpreter
+This is basically the way on how to automatically apply [CreateFrontEndObject](../Dynamics/CreateFrontEndObject.md) on some common objects like [Graphics](../Graphics-D3/Graphics.md), [ListLinePlotly](../Plotting/ListLinePlotly.md) meant for executing on WLJS Interpreter
 
 This is how it is done for [ListLinePlotly](../Plotting/ListLinePlotly.md)
 

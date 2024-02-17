@@ -54,7 +54,7 @@ Some of the boxes are implemented, so you can enjoy syntax sugar of Mathematica.
 There is such thing as `Dynamic` and `DynamicModule` in WLJS Frontend compared to Mathematica. The dynamic binding happens between a specific expressions (__if they support__) and does not cause a full reevaluation - see [Dynamics](Tutorial/Dynamics.md).
 
 It has some its own pros and cons
-- `Plot`, `ListLintPlot` __cannot be used directly in dynamic evaluation__, instead [Line](Reference/Graphics/Line.md) and other primitives combined with [Offload](Reference/Dynamics/Offload.md) must be used. Or one can take advantage of modularity and use [ListLinePlotly](Reference/Plotting/ListLinePlotly.md) from the completely different library, that natively supports dynamic updates;
+- `Plot`, `ListLintPlot` __cannot be used directly in dynamic evaluation__, instead [Line](Reference/Graphics-D3/Line.md) and other primitives combined with [Offload](Reference/Dynamics/Offload.md) must be used. Or one can take advantage of modularity and use [ListLinePlotly](Reference/Plotting/ListLinePlotly.md) from the completely different library, that natively supports dynamic updates;
 - in general `Line`, `Point` perform faster than in Mathematica;
 - dedicated `update` methods for each function gives to a user more flexibility to tune the performance;
 - having event-based approach for sliders and other interactive elements allows to construct more complicated pipelines and handle the data efficiently

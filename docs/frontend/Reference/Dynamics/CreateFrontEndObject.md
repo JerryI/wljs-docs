@@ -22,7 +22,7 @@ In general, containers is a huge fundamental building blocks for almost everythi
 ## Applications
 
 ### To execute WLJS functions, which are not registered
-Some of build-in expressions that represent some low-level UI elements, such as [TextView](../Input/TextView.md) __require a container__ before being executed on frontend's side (WLJS).
+Some of build-in expressions that represent some low-level UI elements, such as [TextView](../Inputs/TextView.md) __require a container__ before being executed on frontend's side (WLJS).
 
 For instance, normally `TextView` is an element that shows editable text on frontend, and is not registered in Wolfram Kernel to have a container being in the output cell. Therefore we can make one manually for the purpose to show some [dynamic](../../Tutorial/Dynamics.md) text
 

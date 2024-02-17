@@ -144,7 +144,7 @@ fabrik[lengths_, target_, origin_] := Module[{buffer, prev},
 ]
 ```
 
-To show the result will will use a simple [Line](../Reference/Graphics/Line.md) primitive coupled to a `chain` symbol and an inline event-handler coupled to a target point of a chain
+To show the result will will use a simple [Line](../Reference/Graphics-D3/Line.md) primitive coupled to a `chain` symbol and an inline event-handler coupled to a target point of a chain
 
 ```mathematica title="cell 3"
 Graphics[{

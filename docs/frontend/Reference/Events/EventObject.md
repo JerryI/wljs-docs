@@ -16,7 +16,7 @@ The object itself does not have a constructor or destructor in terms of OOP and 
 __It is not mandatory to use `EventObject` construction__ to attach event handling function to it and fire an event. A user can also use plain strings. __Please see__ complete guide [event-generators](../../Advanced/Events%20system/event-generators.md) and [EventHandler](EventHandler.md) pages
 :::
 
-Usually you do not face them directly, but as a product of generators such as [`InputRange`](../Input/InputRange.md), [`InputButton`](../Input/InputButton.md) and etc.
+Usually you do not face them directly, but as a product of generators such as [`InputRange`](../Inputs/InputRange.md), [`InputButton`](../Inputs/InputButton.md) and etc.
 ## Properties
 Each property is presented as a key in `a` association
 

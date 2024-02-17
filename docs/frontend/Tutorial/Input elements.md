@@ -64,7 +64,7 @@ text = InputText["Hi"]
 🚧 in dev 
 
 ### Wolfram Language Input
-Please, use [EditorView](../Reference/Input/EditorView.md)
+Please, use [EditorView](../Reference/Inputs/EditorView.md)
 
 ### Color picker
 🚧 in dev

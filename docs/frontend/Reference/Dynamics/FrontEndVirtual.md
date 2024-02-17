@@ -40,7 +40,7 @@ FrontSubmit[With[{},
 ] // Offload]
 ```
 
-Without a container [`Graphics`](../Graphics/Graphics.md) just will not work properly.
+Without a container [`Graphics`](../Graphics-D3/Graphics.md) just will not work properly.
 
 <Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlJHQkNvbG9yIiwwLjAsMS4wLDEuMF0sWyJMaW5lIixbIkxp
 c3QiLFsiTGlzdCIsWyJMaXN0IiwwLDBdLFsiTGlzdCIsLTYuMDk5MjQ3NjcxODc0Njg2ZS0yLDAu

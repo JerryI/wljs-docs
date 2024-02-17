@@ -1,7 +1,7 @@
 # Graphics animation & interaction
 
 ## Interactive plots
-__By the default__, everything you plot using [Plot](../../Reference/Plotting/Plot.md) or [Graphics](../../Reference/Graphics/Graphics.md) or [Graphics3D](../../Reference/Graphics3D/Graphics3D.md) can be dragged or panned or rotated. This behavior is controlled by the options and can be switched off if necessary. For example
+__By the default__, everything you plot using [Plot](../../Reference/Plotting/Plot.md) or [Graphics](../../Reference/Graphics-D3/Graphics.md) or [Graphics3D](../../Reference/Graphics-ThreeJS/Graphics3D.md) can be dragged or panned or rotated. This behavior is controlled by the options and can be switched off if necessary. For example
 
 ```mathematica
 Figure = Plot[{x, Sin[x], Sin[x]^2}, {x,0,2Pi}];
@@ -89,10 +89,10 @@ Figure[OptionsPatten[]] := With[{event = EventClone[OptionValue["id"]]},
 Options[Figure] = {"id"->""}
 ```
 
-This little script will plot randomly distributed points as lines for its initial state. When the `event` is fired, it changes the distribution of `points` to a circle. The animation is done by [Graphics](../../Reference/Graphics/Graphics.md)  (i.e. it is a native feature of it and has nothing to do with slides).
+This little script will plot randomly distributed points as lines for its initial state. When the `event` is fired, it changes the distribution of `points` to a circle. The animation is done by [Graphics](../../Reference/Graphics-D3/Graphics.md)  (i.e. it is a native feature of it and has nothing to do with slides).
 
 :::note
-Consider options `TransitionType` and `TransitionDuration` of [Graphics](../../Reference/Graphics/Graphics.md) to control the transition animation.
+Consider options `TransitionType` and `TransitionDuration` of [Graphics](../../Reference/Graphics-D3/Graphics.md) to control the transition animation.
 :::
 
 The expected result will be
