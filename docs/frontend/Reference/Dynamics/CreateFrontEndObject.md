@@ -2,7 +2,7 @@
 env:
   - Wolfram Kernel
 ---
-Creates a [container](../../../interpreter/Advanced/containers.md) for the inner expression and stores it into frontend objects storage shared with Kernel and Notebook
+Creates a [container](../../../../interpreter/Advanced/containers.md) for the inner expression and stores it into frontend objects storage shared with Kernel and Notebook
 ```mathematica
 CreateFrontEndObject[expr, "uid" | Empty, OptionsPattern[]]
 ```
@@ -12,7 +12,7 @@ Returns [`FrontEndExecutable`](Internals/FrontEndExecutable.md) object with a gi
 See more about it in __[Executables](../../Advanced/Frontend%20interpretation/executables.md)__
 
 :::info
-Is used to force Wolfram Kernel to execute an expression on the frontend ([WLJS](../../../interpreter/intro.md)) with an HTML element provided to the output cell
+Is used to force Wolfram Kernel to execute an expression on the frontend ([WLJS](../../../../interpreter/intro.md)) with an HTML element provided to the output cell
 :::
 
 This is a fundament  for serving `Graphics`, `InputRange`... and other interactive elements. Event `EventObject` that comes from [event-generators](../../Advanced/Events%20system/event-generators.md) use it to show the UI element.
@@ -86,8 +86,8 @@ Graphics[{Red, PointSize[0.1], Point[FrontEndRef["data"]]}]
 ```
 
 <Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlJHQkNvbG9yIiwxLDAsMF0sWyJQb2ludFNpemUiLDAuMV0s
-WyJQb2ludCIsWyJPZmZsb2FkIixbIkxpc3QiLC0wLjExODY3NTU0MTYxNzI4OTc3LC0wLjM1OTcz
-MjQ1NDQ4MzY2Nl1dXV0sWyJSdWxlIiwiSW1hZ2VTaXplIiw1MDBdXQ==
+WyJQb2ludCIsWyJPZmZsb2FkIixbIkxpc3QiLC0wLjk3Mzk0NTczNDQzOTgzODgsNy4xNzQ3NTY5
+OTQxNDE2NTFlLTJdXV1dLFsiUnVsZSIsIkltYWdlU2l6ZSIsNTAwXV0=
 `}>{`Graphics[{Red, PointSize[0.1], Point[RandomReal[{-1,1}, 2] // Offload]}, ImageSize->500]`}</Wl>
 
 If one change the object `data` in other cell, the position of a point will be changed as well dynamically with no reevaluation involved, i.e.
@@ -105,7 +105,7 @@ FrontEndRef["data"] = RandomReal[{-1,1}, 2];
 
 Basically, there are three containers involved
 1. Graphics - normal container (automatically created)
-2. Point - virtual container (automatically implicitly created, see [containers](../../../interpreter/Advanced/containers.md))
+2. Point - virtual container (automatically implicitly created, see [containers](../../../../interpreter/Advanced/containers.md))
 3. data - normal container (manually created)
 
 Only 3 and 2 are effectively connected to each other, 1 and 2 are connected as well, but it does not make sense, since 1 does not support updates.

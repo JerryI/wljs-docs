@@ -123,4 +123,4 @@ __This will not work at all__ 👎🏼 because the binding will occur between `G
 Think about an onion from Shrek movie.
 
 You can download the notebook via following link below
-- __[SliderExample](files/SliderExample.wln)__
+- __[SliderExample](../../Tutorial/files/SliderExample.wln)__

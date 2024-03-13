@@ -1,6 +1,5 @@
 ---
 sidebar_position: 4
-draft: true
 ---
 # Meta markers
 You can think about them as a unique property assigned to the expression in order to use selectors on them. Sometimes it comes handy to attach or evaluate new object inside the existing instance

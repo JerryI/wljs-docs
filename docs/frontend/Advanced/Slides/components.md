@@ -20,7 +20,7 @@ Options[Heading] = {"Title"->"Nope"}
 ```
 
 :::tip
-[WLX](../../../wlx/basics.md)  requires always only one parent element if you has defined a function with XML tags. Use `<dummy>` or `<div>` for that.
+[WLX](../../../../wlx/basics.md)  requires always only one parent element if you has defined a function with XML tags. Use `<dummy>` or `<div>` for that.
 :::
 
 and then use it on your slides as if it was a normal tag

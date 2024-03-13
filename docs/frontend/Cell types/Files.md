@@ -43,7 +43,7 @@ SetAttributes[Lexer, HoldAll]
 ...
 ```
 
-![](../../Screenshot%202023-12-05%20at%2010.29.43.png)
+![](../../imgs/Screenshot%202023-12-05%20at%2010.29.43.png)
 
 And then, it can be imported easily
 

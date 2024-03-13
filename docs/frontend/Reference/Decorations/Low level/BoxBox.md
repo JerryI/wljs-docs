@@ -2,7 +2,7 @@
 internal: true
 origin: https://github.com/JerryI/wljs-editor/tree/main
 ---
-import Notebook from '@site/src/components/wljs-notebook-react';
+
 
 Used __to decorate__ Wolfram Expression with custom HTML elements
 
@@ -70,7 +70,7 @@ wrapper[1/2]
 
 __Result__
 
-![](../../../../Screenshot%202023-12-10%20at%2016.59.28.png)
+![](../../../../imgs/Screenshot%202023-12-10%20at%2016.59.28.png)
 
 The neat thing is __you can edit the inner expression__
 

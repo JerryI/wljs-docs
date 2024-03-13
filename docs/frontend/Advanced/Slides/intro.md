@@ -8,7 +8,7 @@ draft: false
 You can use pure __Markdown__, __HTML__, __CSS__ or [WLX](../../Cell%20types/WLX.md) languages while making slides
 :::
 
-This is provided by [wljs-revealjs](https://github.com/JerryI/wljs-revealjs), that integrates an amazing framework [RevealJS](https://revealjs.com) and [WLX](WLX.md) language to provide components approach on making presentations as well as adding interactivity to them and basically all features of frontend's cells.
+This is provided by [wljs-revealjs](https://github.com/JerryI/wljs-revealjs), that integrates an amazing framework [RevealJS](https://revealjs.com) and [WLX](../../Cell%20types/WLX.md) language to provide components approach on making presentations as well as adding interactivity to them and basically all features of frontend's cells.
 
 The aim of this approach is to simplify the process of making slides, decouple the content from its appearance and embrace the power of data-driven slides. 
 
@@ -66,7 +66,7 @@ The position of `.slides` cell in the notebook does not play any role.
 :::tip
 Use projector feature
 
-![Screenshot 2023-11-09 at 10.42.58](../../../Screenshot%202023-11-09%20at%2010.42.58.png)
+![](../../../Screenshot%202024-03-13%20at%2019.33.58.png)
 
 to show slides in a separate window
 :::
@@ -105,7 +105,7 @@ To use Markdown in HTML, please, add line breaks before and after
 
 The result looks like this
 
-![](../../../Screenshot%202023-11-23%20at%2015.08.20.png)
+![](../../../imgs/Screenshot%202023-11-23%20at%2015.08.20.png)
 
 ### Using WLX
 Of course one can make a helper function for it
@@ -162,7 +162,11 @@ RevealJS uses standard Markdown notations for images
 ![desc](https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg)
 ```
 
-![](../../../Screenshot%202023-11-23%20at%2015.21.04.png)
+![](../../../imgs/Screenshot%202023-11-23%20at%2015.21.04.png)
+
+You can drag and drop them from anywhere
+
+![](../../../Dropfiles-ezgif.com-optipng%201.png)
 
 Local files are also supported
 
@@ -219,7 +223,7 @@ We have a full power of HTML. To embed a local PDF document from the folder of y
 <embed width="800" height="500" src="antisymmetry.pdf"/>
 ```
 
-![](../../../Screenshot%202023-11-23%20at%2016.03.20.png)
+![](../../../imgs/Screenshot%202023-11-23%20at%2016.03.20.png)
 
 or the whole website
 
@@ -229,7 +233,7 @@ or the whole website
 <iframe width="800" height="500" src="https://chat.openai.com"/>
 ```
 
-![](../../../Screenshot%202023-11-23%20at%2016.04.51.png)
+![](../../../imgs/Screenshot%202023-11-23%20at%2016.04.51.png)
 
 and to make a __nicer corners__
 
@@ -261,16 +265,16 @@ Fragment appear <!-- .element: class="fragment" data-fragment-index="2" -->
 Fragment changes the color <!-- .element: class="fragment highlight-red" data-fragment-index="3" -->
 ```
 
-![](../../../ezgif.com-video-to-gif-2.gif)
+![](../../../imgs/ezgif.com-video-to-gif-2%201.gif)
 
 See more available transitions at [RevealJS](https://revealjs.com/fragments/).
 
 :::note
-Custom transitions are not supported, unless it is made using [Graphics](../../Reference/Graphics-D3/Graphics.md) using [animations](animations.md) approach
+Custom transitions are not supported, unless it is made using [Graphics](../../Reference/Graphics/Graphics.md) using [animations](animations.md) approach
 :::
 
 ### Events
-To capture the events from a slide (revealing the slide or revealing individual fragments) - use [SlideEvent](../../Reference/Tools/Slides/SlideEvent.md)
+To capture the events from a slide (revealing the slide or revealing individual fragments) - use [SlideEventListener](../../Reference/Tools/Slides/SlideEventListener.md)
 
 It attaches itself to the slide, where it has been placed
 
@@ -287,7 +291,7 @@ A message pops up
 
 Another message <!-- .element: class="fragment" data-fragment-index="1" -->
 
-<SlideEvent id={"myEvent"}/>
+<SlideEventListener Id={"myEvent"}/>
 ```
 
 Before evaluation, you should attach an event handler ([EventHandler](../../Reference/Events/EventHandler.md)) to it
@@ -297,7 +301,7 @@ EventHandler["myEvent", Print["Hey there!"]&]
 EventHandler["myEvent-fragment-1", Print["Hey there from fragment!"]&]
 ```
 
-The identifier of [SlideEvent](../../Reference/Tools/Slides/SlideEvent.md) acts as an event object. There are two patterns on how you can capture certain event
+The identifier of [SlideEventListener](../../Reference/Tools/Slides/SlideEventListener.md) acts as an event object. There are two patterns on how you can capture certain event
 
 - `uid` - is fired when a slide has been revealed
 - `uid-fragment-INDEX` - is fired when a fragment number `INDEX` has been revealed
@@ -307,7 +311,7 @@ To learn more about on how to utilize it for animations and etc, please, read [a
 :::
 
 ## WL expressions and data-driven slides
-This is just a simple demonstration. Using [WLX](../../../wlx/basics.md) one can directly write and execute any WL expressions on a slide
+This is just a simple demonstration. Using [WLX](../../../../wlx/basics.md) one can directly write and execute any WL expressions on a slide
 
 ```md
 .slide
@@ -318,7 +322,7 @@ Allow you to do some cool stuff
 Your local time is __<TextString><Now/></TextString>__
 ```
 
-![](../../../Screenshot%202023-11-23%20at%2016.26.27.png)
+![](../../../imgs/Screenshot%202023-11-23%20at%2016.26.27.png)
 
 Or embed any graphics object
 
@@ -339,7 +343,7 @@ Even 3D
 Try to move it using your mouse
 ```
 
-![](../../../ezgif.com-optimize-2.gif)
+![](../../../imgs/ezgif.com-optimize-2.gif)
 
 as well __as some figures plotted from a local `CSV` file__. In the example below we use random list of points to do some simple computations
 
@@ -356,17 +360,17 @@ Compute and plot the shortest tour through 100 random points:
 <Figure/>
 ```
 
-![](../../../ezgif.com-optimize-3.gif)
+![](../../../imgs/ezgif.com-optimize-3.gif)
 
 For more advanced stuff see [animations](animations.md)
 
 ## Drawing board and pointer
 Pointer is provided by a separate [plugin](https://github.com/burnpiro/reveal-pointer) used by RevealJS. To toggle it press `q` when the focus is on a slide
 
-![](../../../Screenshot%202023-11-23%20at%2014.03.17.png)
+![](../../../imgs/Screenshot%202023-11-23%20at%2014.03.17.png)
 
 For a drawing board there is [another plugin](https://github.com/burnpiro/reveal-drawer) for the same author. The board is toggled by pressing `t` on a slide
 
-![](../../../Screenshot%202023-11-23%20at%2014.04.42.png)
+![](../../../imgs/Screenshot%202023-11-23%20at%2014.04.42.png)
 
 To toggle a pen use `d` key. There is no cleaning method implemented, but you can help the author and [contribute](https://github.com/burnpiro/reveal-drawer) to the repo.

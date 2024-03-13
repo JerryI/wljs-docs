@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwljs_docs=self.webpackChunkwljs_docs||[]).push([[1592],{66096:s=>{s.exports=JSON.parse('{"label":"events","permalink":"/wljs-docs/blog/tags/events","allTagsPath":"/wljs-docs/blog/tags","count":2}')}}]);

@@ -36,7 +36,7 @@ adds a label at the left side to the input text field
 
 ## Application
 ### User's input & output
-It can be used without WLJS frontend on a web page to act as a slider. For instance using [WLX](../../../wlx/install.md) 
+It can be used without WLJS frontend on a web page to act as a slider. For instance using [WLX](../../../../wlx/install.md) 
 
 ```mathematica
 var = "Hello World!";

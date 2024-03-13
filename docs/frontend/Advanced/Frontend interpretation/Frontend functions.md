@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 ---
 
 :::caution
@@ -37,7 +37,7 @@ it should produce a pop-up message with a given text.
 Firstly one need to understand the way how it was called. There are a few different ways
 
 - direct calls as it is
-- indirect using containers (see [executables](Frontend%20interpretation/executables.md))
+- indirect using containers (see [executables](executables.md))
 
 The first one is rather straighforward, where basically most UI functions and core built-in functions are written.
 
@@ -159,7 +159,7 @@ See more about JS cells in [Cell types](Cell%20types.md)
 Of course this is not the best example of making animations, better will be to let js run the animation on its own and wait for a new data or ask for a new data using system of events.
 
 #### A remark about sub symbols | Methods
-Sometimes a function or a three of them can be called as a reaction on some event. Then this information is stored in `env.method` - see also [symbols](../../../interpreter/Advanced/symbols.md)
+Sometimes a function or a three of them can be called as a reaction on some event. Then this information is stored in `env.method` - see also [symbols](../../../../interpreter/Advanced/symbols.md)
 
 If there is an update of a data, i.e. `env.method = 'update'`, then interpreter will try to find a sub-symbols or a function (read more about how interpreter handles them [WLJS Interpreter](https://github.com/JerryI/wljs-interpreter)). 
 
@@ -308,7 +308,7 @@ Therefore, all frontend objects aka [FrontEndExecutable](../../Reference/Dynamic
 
 This behavior is achieved by storing the information about parent `FrontEndExecutable` instance and a child as well as all references from the instances to the storage. I.e. if there is a change of the data in the storage it will update all associated instances.
 
-In general there are two main types of events that can happen and fire the evaluation using specific methods (see [Default methods](#Default%20methods) and [Interpreter](../../../interpreter/intro.md))
+In general there are two main types of events that can happen and fire the evaluation using specific methods (see [Default methods](#Default%20methods) and [Interpreter](../../../../interpreter/intro.md))
 
 - Editor's widget held Frontend object was destroyed (see [Decorations](../../Development/Decorations.md))
 > fires the evaluation  of the whole three **from top to the bottom** using `destroy` method
@@ -381,7 +381,7 @@ core.MyFunction.destroy = async (args, env) => {}
 ```
 
 #### Async
-Since our containers are located in the storage, which might not be on the frontend (if one reloads a page), if you are working with a nested frontend objects, you should make your function to be async. [intro](../../../interpreter/intro.md) might return a promise object instead of an actual data
+Since our containers are located in the storage, which might not be on the frontend (if one reloads a page), if you are working with a nested frontend objects, you should make your function to be async. [intro](../../../../interpreter/intro.md) might return a promise object instead of an actual data
 
 ```js
 core.MyFunction = async (args, env) => {
@@ -598,7 +598,7 @@ ListLinePlotly[data // Offload]
 data = RandomReal[{-1,1}, 10];
 ```
 
-It is possible if we threat `data` on [WLJS Interpreter](../../../interpreter/intro.md) as a container. Therefore it binds automatically to its parent and can poke it once an update event arrived.
+It is possible if we threat `data` on [WLJS Interpreter](../../../../interpreter/intro.md) as a container. Therefore it binds automatically to its parent and can poke it once an update event arrived.
 
 :::info
 See more about this [Dynamics](../../Tutorial/Dynamics.md) and [Offload](../../Reference/Dynamics/Offload.md)
@@ -653,7 +653,7 @@ Wolfram Kernel __tracks any changes of a symbol put inside `Offload` wrapper aut
 Can be very handy if one want to modify 2D 3D scene without reevaluating anything. This is anyway a `env.scene` object, that it principle can be populated with new graphics in realtime. For that one need to attach to some particular instance of Frontend Object and evaluate inside it the desired expression with spheres and etc.
 
 #### 🎡 Example with lines
-Let us define some typical plot and apply a __meta-marker__ (see more [MetaMarker](../../Reference/Dynamics/MetaMarker.md) and [meta-markers](../../../interpreter/Advanced/meta-markers.md)) on it
+Let us define some typical plot and apply a __meta-marker__ (see more [MetaMarker](../../Reference/Dynamics/MetaMarker.md) and [meta-markers](../../../../interpreter/Advanced/meta-markers.md)) on it
 
 ```mathematica
 Plot[x, {x,0,1}, Epilog->{MetaMarker["label"]}]

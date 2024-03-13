@@ -9,7 +9,7 @@ Due to the caching issues, please use __hard reload__ on a webpage, when you ope
 :::
 
 :::note
-In theory since Wolfram Language interpreter also runs in browser, it is possible to implement sort of compiler to run some lightweight calculations on [WLJS](../../interpreter/intro.md).
+In theory since Wolfram Language interpreter also runs in browser, it is possible to implement sort of compiler to run some lightweight calculations on [WLJS](../../../interpreter/intro.md).
 :::
 
 To export you notebook using specific procedure - click on a top bar

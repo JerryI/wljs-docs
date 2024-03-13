@@ -1,5 +1,6 @@
-It allows to use [Wolfram Language XML](../../wlx/basics.md) in your cell. It comes handy when making a a complex cell structure or stylizing it using the power of HTML/CSS/JS.
+It allows to use [Wolfram Language XML](https://jerryi.github.io/wlx-docs/docs/Reference/WLX/) in your cell. It comes handy when making a a complex cell structure or stylizing it using the power of HTML/CSS/JS.
 
+![](../../Screenshot%202024-03-13%20at%2019.28.47.png)
 ## Embed figures into a custom layout
 Plot a figure into a symbol __starting from the capital letter__
 
@@ -87,21 +88,3 @@ Module[{Slider = InputRange[0.1,1,0.1,0.5], Figure, lines},
 ```
 
 
-## Low-level form with buttons
-This is standard example from [basics](../../wlx/basics.md) of WLX
-
-```jsx
-.wlx
-
-Module[{text, View, Button, Secret = CreateUUID[]},
-  text     = "nothing";
-  View     = TextView[Offload[text]] // WLJS;
-  Button   = ButtonView["Press me", "Event"->Secret] // WLJS; 
-  EventHandler[Secret, Function[Null, text = RandomWord[]]];
-
-<div>
-    <View/>
-    <Button/>
-</div>    
-]
-```

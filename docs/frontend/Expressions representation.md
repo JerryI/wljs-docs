@@ -52,11 +52,11 @@ In the simples case one could just replace graphic objects with images (svgs) an
 - Jupyter
 - Wolfram Notebook VS Code extension
 
-Anyway, since `Plot` and `Plot3D` is a superset of `Graphics` and `Graphics3D` symbols with a recipe inside made from other symbols, one need to cook it and display to the user, i.e. __we need a frontend WL interpreter for sure__. Since the portability is great - we should use web-stack, where Javascript rules all computations. See [WLJS Interpreter](../interpreter/intro.md)
+Anyway, since `Plot` and `Plot3D` is a superset of `Graphics` and `Graphics3D` symbols with a recipe inside made from other symbols, one need to cook it and display to the user, i.e. __we need a frontend WL interpreter for sure__. Since the portability is great - we should use web-stack, where Javascript rules all computations. See [WLJS Interpreter](../../interpreter/intro.md)
 
 *The second one* (__mixed__) is rather tricky to implement fully, since it involves mutable WL expressions. 
 
-However, here also we have a solution. Nowadays developers are using sort-of syntax sugar for the live previews of Markdown, where the code you typing is replaced by the corresponding styled object. A good example is Obsidian - notes making app based on CodeMirror 6 Decorations. Which will require to write a WL tokenizer inside the editor. TL-DR see [Decorations](Development/Decorations.md)
+However, here also we have a solution. Nowadays developers are using sort-of syntax sugar for the live previews of Markdown, where the code you typing is replaced by the corresponding styled object. A good example is Obsidian - notes making app based on CodeMirror 6 Decorations. Which will require to write a WL tokenizer inside the editor. TL-DR see [Decorations](Outdated/Development/Decorations.md)
 
 ### For the sake of performance
 For the most cases there is no point in interpreting the whole output expression.
@@ -80,7 +80,7 @@ a b / Sqrt[2]
 
 - you can copy your cell's text to any WL parsers, use it with `wolframscript` with no changes made!
 - **it does not affect the code structure**
-- it has all markers for the editor (**no need to parse WL on client's side!**), that makes all process of writing equations much safer
+- it has all markers for the editor (**no need to parse WL on client's side**), that makes all process of writing equations much safer
 
-It has a big impact on the performance, especially while working with matrixes. `InterpretationBox` and other sweet tools are supported in a similar way using comments.
+It has a big impact on the performance (in a good way), especially while working with matrixes. `InterpretationBox` and other sweet tools are supported in a similar way using comments.
 

@@ -49,7 +49,7 @@ EditorView[textstr // Offload] // CreateFrontEndObject
 
 the result should look like this
 
-![](../../../ezgif.com-optimize-7-2%201.gif)
+![](../../../imgs/ezgif.com-optimize-7-2%201.gif)
 
 :::tip
 If you want to __just view__ your data, do not apply `EventHandler` 

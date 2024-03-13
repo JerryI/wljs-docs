@@ -1,31 +1,21 @@
 ---
 draft: false
 ---
-# Event objects, views and -generators
-As a short summary - where you can use event-handlers / listeners 
+As a short summary - where you can use event-handlers 
 
 - on `Graphics2D` elements to listen users interactions 
 	- `drag`, `click`, `zoom`, `mousemove`
 - on `Graphics3D` elements
-	- transform
-- on any `EventObject` 
-- on the output cell using `EvaluationCell[]` to attach to cell's events
-	- evaluation, destroy
+	- `transform`
+- on socket object (`CSocketObject` only)
+- on any `EventObject` or its string equivalent 
 
-An event-driven approach was inspired by Javascript language, where one can subscribe to any changes of any objects. Here it is way more simplified compared to JS, but covers all practical cases.
-
-
-import Component from '@site/src/components/wljs-notebook-react/includes';
-import Notebook from '@site/src/components/wljs-notebook-react';
-
-<Component></Component>
-
+An event-driven approach was inspired by Javascript language, where one can subscribe to any changes of any objects. Here it was expanded in a way to utilize the full power of pattern matching features of Wolfram Language.
 ## Thumb rule
-
-One event-object - one handler function
+__One event-object__ - __one handler__ function
 
 ```mathematica
-ev = EventObject[<|"id"->"evid", ...|>]
+ev = EventObject[<|"Id"->"evid"|>]
 EventHandler[ev, Print]
 ```
 
@@ -35,53 +25,123 @@ i.e.
 flowchart LR
 
 subgraph EventObject
-	id=evid
-	...
+	Id
 end
 
 subgraph EventHandler
 	Print
 end
 
-EventObject --"By id"-->EventHandler
+EventObject --"By Id"-->EventHandler
 ```
-
-to remove our handler
+And then to fire 
+```mathematica
+EventFire[ev, "Hello World!"];
+```
+In order to remove handler from event object use
 ```mathematica
 Delete[ev]
+```
+or more universal
+```mathematica
+EventRemove[ev]
 ```
 where it deletes a handler function, but not an `EventObject`.
 
 :::tip
-To assign more event handlers, you need to __clone an event object__ 
+To assign more event handlers, you need to __clone an event object__ or use different pattern on the same event object (see [Pattern matching](#Pattern%20matching)).
 :::
-### Cloning events
-Considering the previous example we had
+
+### String equivalent
+The actual binding is done only by `"Id"` field, therefore, one can omit `EventObject` head
+```mathematica
+ev = "evid";
+EventHandler[ev, Print]
+```
+is the same as
+```mathematica
+ev = EventObject[<|"Id"->"evid"|>]
+EventHandler[ev, Print]
+```
+
+## Pattern matching
+In general an event entity can carry an additional information using Wolfram Language Patterns. It can distribute messages across different handler functions based on type of event fired (or its topic lets say). Using regular syntax for replacing patterns with `Rule` and `RuleDelayed` one can write a much more detailed handler function
 
 ```mathematica
-ev = EventObject[<|"id"->"evid", ...|>]
+EventHandler["evid", {
+	"Topic" -> Function[data,
+		Echo["Topic::"];
+		Echo[data];
+	],
+	any_String :> Function[data,
+		Echo[StringJoin[any, "::"]];
+		Echo[data];
+	]	
+}];
+```
+
+And to fire an event on a specific pattern - add extra argument to the middle of a sequence
+```mathematica
+EventFire["evid", "Topic", "Hi!"];
+EventFire["evid", "Whatever", "Hi!"];
+```
+However, it is not limited to `String`
+
+```mathematica
+EventHandler["evid", {
+	_Abrakadabra -> Function[Null,
+		Echo["Got it!"];
+	],
+	
+	_ -> Function[Null,
+		Echo["Wrong one"];
+	]
+}];
+
+EventFire["evid", Abrakadabra[], Null]
+```
+
+One should note, that effectively those are the same records
+```mathematica
+EventHandler[ev, Print]
+EventHandler[ev, {_ -> Print}]
+```
+while
+```mathematica
+EventFire[ev, data]
+EventFire[ev, "Default", data]
+```
+are also the same.
+
+## Cloning events
+In the previous examples we had only one handler function per pattern. If you want more, there is a way to clone an `EventObject` or its string equivalent 
+
+```mathematica
+ev = EventObject[<|"Id"->"evid"|>]
 (* first handler *)
 EventHandler[ev, Print]; 
 
 (* second handler *)
-clone = EventClone[ev];
-EventHandler[clone, Print];
+{ /* highlight-start */ }
+cloned = EventClone[ev];
+{ /* highlight-end */ }
+EventHandler[cloned, Print];
 ```
 
-What it does, it converts a simple `EventObject` into something like an event router, which is populated by two new event-objects
+What it does, it creates something like an event router subscribed to the original event-object, a router, then, is populated by the two new event-objects
 
 ```mermaid
 flowchart LR
 
 subgraph EventObject
-	id=evid
+	id1["id=evid"]
 	prop1["props"]
 end
 
 subgraph EventRouter
 	subgraph List
-		id=new1
-		id=new2
+		id2["id=new1"]
+		id3["id=new2"]
 	end
 	prop2["props"]
 end
@@ -96,26 +156,76 @@ end
 
 EventObject --"By id"--> EventRouter
 
-id=new1 --"By id"-->EventHandler1
-id=new2 --"By id"-->EventHandler2
+id2 --"By id"-->EventHandler1
+id3 --"By id"-->EventHandler2
 ```
 
-Anything you do with `clone` will not affect the `ev`
+Anything you do with `cloned` event will not affect the original entitiy
 
 ```mathematica
-Delete[clone]
+Delete[cloned] or EventRemove[cloned]
 ```
 
 :::info
 Cloned object inherits all properties (i.e. initial data), that the original object has.
 :::
 
-## Merging
-For example you want to update the state of something based on two events, that may happen independently, then
+:::tip
+If you are sure, that two `EventHandler` function does not intersect with their patterns attached to the same event-object, there is no need in cloning, i.e.
 
 ```mathematica
-ev1 = EventObject[<|"id"->"evid1"|>]
-ev2 = EventObject[<|"id"->"evid2"|>]
+EventHandler[ev, {
+	"Pattern 1" -> func1
+}];
+EventHandler[ev, {
+	"Pattern 2" -> func2
+}];
+
+EventFire[ev, ..., data];
+```
+
+is valid. Patterns will be merged.
+:::
+
+## Return value
+Each handling function can return some value back, that again carries extra information
+
+```mathematica
+EventHandler[ev, Function[Null,
+	Now
+]];
+
+EventFire[ev, Null] // Echo
+```
+
+an `Echo` from the last line will print current date. The same can be done with a chain of cloned events, i.e.
+
+```mathematica
+EventHandler[ev, Function[Null,
+	Now
+]];
+EventHandler[ev // EventClone, Function[Null,
+	Now
+]];
+EventHandler[ev // EventClone, Function[Null,
+	Now
+]];
+
+EventFire[ev, Null] // Echo
+```
+
+The returned value will be a list of three semi-identical dates.
+
+:::tip
+Use return values to provide [Promise](Reference/Misc/Promise.md) objects, when one or more of your chained handlers asks the side, which fired a chain, to wait for some deferred event be happen (see [`Then`](Reference/Misc/Promise.md#`Then`)). 
+:::
+
+## Merging
+For example you want to update the state of something based on two events, that may happen independently, then use
+
+```mathematica
+ev1 = EventObject[<|"Id"->"evid1"|>]
+ev2 = EventObject[<|"Id"->"evid2"|>]
 
 joined = Join[ev1, ev2]
 ```
@@ -128,12 +238,12 @@ You do not have to clone your events before joining them, since it does it autom
 flowchart LR
 
 subgraph EventObject1[EventObject]
-	id=evid1
+	id1["id=evid1"]
 	prop1["props1"]
 end
 
 subgraph EventObject2[EventObject]
-	id=evid2
+	id2["id=evid2"]
 	prop2["props2"]
 end
 
@@ -141,7 +251,7 @@ subgraph EventRouter
 end
 
 subgraph EventObject3[EventObject]
-	id=new
+	id3["id=new"]
 	prop3["merged props"]
 end
 
@@ -151,13 +261,13 @@ EventObject2 --> EventRouter
 EventRouter --Fire--> EventObject3
 ```
 ## Properties
-There is a simple association wrapped inside `EventObject`. By its nature this is not a classical object in the sense of OOP, since the handler function has no access to the their properties and only `id`  field is stored in global a memory. 
+There is a possibility to carry an additional keys wrapped inside `EventObject`. By its nature this is not a classical object in the sense of OOP, since the handler function has no access to the their properties and only `Id`  field is stored in global a memory. 
 ### Inheritable
-There is a property `"initial"`, that specifies the initial value of the data shipped when the event is fired, when you apply `Join` or `EventClone` the final initial conditions will be merged from the different event objects or just copied
+There is a property `"Initial"`, that specifies the initial value of the data shipped when the event is fired, when you apply `Join` or `EventClone` the final initial conditions will be merged from the different event objects or just copied
 
 ```mathematica
-ev1 = EventObject[<|"id"->"ev1", "initial"-><|"x"->1|>|>]
-ev2 = EventObject[<|"id"->"ev1", "initial"-><|"y"->2|>|>]
+ev1 = EventObject[<|"Id"->"ev1", "Initial"-><|"x"->1|>|>]
+ev2 = EventObject[<|"Id"->"ev1", "Initial"-><|"y"->2|>|>]
 
 Join[ev1, ev2]
 ```
@@ -165,218 +275,42 @@ Join[ev1, ev2]
 the result will be
 
 ```mathematica
-EventObject[<|"id"->"random", "initial"-><|"x"->1, "y"->2|>|>]
-```
-### Non-inheritable
-A very useful property, that comes handy when making GUI elements `"view"`
-
-```mathematica
-EventObject[<|"id"->"evid", "view"->Graphics3D[Sphere[]]|>]
+EventObject[<|"Id"->"generatedId", "Initial"-><|"x"->1, "y"->2|>|>]
 ```
 
-it acts only when the object is printed to the output cell, then, we will see
+What also makes field `"Initial"` so special is that it can be automatically substituted to `EventFire` method, when no other data is provided
 
-<Notebook code="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" name="self-respect-214ad">self-respect-214ad</Notebook>
-
-This is where the *body* of all input elements is located.
-
-:::info
-When an event is fired it bypasses the master kernel and goes directly to your evaluating (secondary) Kernel using a dedicated WebSockets channel for the sake of performance
-:::
-## Applications
-The most interesting part is coming below
-### Event listener for Graphics
-An `EventHandler` expression always returns the original object, therefore it comes very handy to use it as a wrapper for buttons, sliders and most `Graphics` objects
-
-```mathematica
-p = {0,0};
-Graphics[{
-	White,
-	EventHandler[
-		Rectangle[{-2,2}, {2,-2}],
-		{"mousemove"->Function[xy, p = xy]}
-	],
-	PointSize[0.05], Cyan,
-	Point[p // Offload]
-}]
-```
-
-Here we are listening for `mousemove` event attached to a wide white rectangle and translate the coordinates to a cyan point.
-
-:::info
-An event-handling functions must be in __a list of rules__ with corresponding names of the events for `EventHandler` being attached to a standard graphical object
-
-```mathematica
-EventHandler[GraphicsPrimitive_, {""->...}]
-```
-I.e. the following
-```mathematica
-EventHandler[GraphicsPrimitive_, Print]
-```
-__will not work__, because `Point` does produce only named events
-:::
-
-There are following event available for 2D primitives
-- drag
-- mousemove
-- click
-- zoom
-
-and for 3D primitives
-- transform - similar to drag, but with gizmos 
-
-### Cells events
-It comes handy, when you for instance clone events and need to purge the handlers before each reevaluation. There is an access to any output cell via
-
-```mathematica
-EvaluationCell[]
-```
-
-Then, one can assign any expression to it
-```mathematica
-EventHandler[EvaluationCell[], {"destroy"->Print, "evaluation"->Print}]
-```
-
-:::info
-You do not need to clone [EvaluationCell](../../Reference/Tools/Notebook/EvaluationCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
-:::
-
-One should not that those event are assigned to __the output cell__ generated after the evaluation. Therefore mostly useful will be to use `"destroy"`, while `"evaluation"` is called only if one tries to evaluate the output cell as an input cell.
-
-### GUI elements
-The most common place to deal with `EventObject`s is
-
-```mathematica
-InputButton["Click me"]
-```
-
-that evaluates into 
-```mathematica
-EventObject[<|"id"->"generated...", "view"->ButtonView[...], "initial"->False|>]
-```
-
-but __you will never see it__, because on output it shows only `view` field, that contains actual representation of a button as an interactive object, that fires an event with `id`. 
-### Javascript binding
-Think about it as a superset of the previous one. Let us try with an example of a...
-
-Button
-```javascript
-.js
-const button = document.createElement('input');
-button.type = "button";
-button.value = "Click me";
-button.addEventListener('click', ()=>{
-  server.emitt('evid', '"Clicked!"');
-});
-
-return button;
-```
-
-```mathematica
-EventHandler["evid", Print];
-```
-
-By clicking on the appeared button you will see the message from the Kernel. This is how all GUI elements are made, apart from wrapping them into a functions, that generate uid's by its own. 
-
-See also the reference on [server](../../Reference/Javascript%20API/server.md) object
-
-#### Making things fancier | View & Generator
-Taking the previous example, we can improve it a bit starting from the __view component__
-
-```js
-.js
-core.CustomButtonView = async (args, env) => {
-  const options = await core._getRules(args, env);
-  const button = document.createElement('input');
-  button.type = "button";
-  button.value = options.Label;
-  button.addEventListener('click', ()=>{
-    server.emitt(options.Event, '"Clicked!"');
-  });
-
-  env.element.appendChild(button);
-}
-
-return null;
-```
-
-Now this is a proper frontend function. Now it comes to __event-generator__
-
-```mathematica
-CustomButton[label_] := With[{uid = CreateUUID[]},
-  EventObject[<|"id"->uid, "initial"->False, "view"->CustomButtonView["Label"->label, "Event"->uid]|>]
-]
-```
-
-Then we can use `CustomButton` as a real GUI component for user's input
-
-```mathematica
-EventHandler[CustomButton["Woo"], Print]
-```
-
-## Cutting corners
-For lazy people there are many shortcuts implemented
-
-___Aliases___
-There are many ways to tell the same
-
-```mathematica
-EventBind[ev, Print]
-EventHandlet[ev, Print]
-Print // ev
-```
-
-```mathematica
-Delete[ev]
-DeleteObject[ev]
-```
-
-___Fast event binding___
-There is an another, sorter way of writing `EventHandler`
-```mathematica
-Print // ev
-```
-which is basically 
-```mathematica
-EventHandler[ev, Print]
-```
-
-___Assignment handler function___ 
-Sometimes it is too repetitive to write every-time `var = # &`, instead
-```mathematica
-ev // Assign[x]
-```
-is basically an equivalent of 
-```mathematica
-EventHandler[ev, (x = # &)]
-```
-
-___Fire an event manually___
-sometimes comes handy, when you want to initialize the data
-```mathematica
-ev = EventObject[<|"id"->"evid", ...|>]
-EventFire[ev, 1+1]
-```
-or with no-data provided
 ```mathematica
 EventFire[ev]
 ```
-or just by using text-string
+
+is effectively 
+
 ```mathematica
-EventFire["event-id"]
+EventFire[ev, ev[[1]]["Initial"]]
 ```
 
-___Reference by id___
-if you know an `uid` of the event, but don't have a real `EventObject`
+### Non-inheritable
+A very useful property, that comes handy when making GUI elements `"View"`
+
+```mathematica
+EventObject[<|"Id"->"evid", "View"->Graphics3D[Sphere[]]|>]
+```
+
+it acts only when the object is printed to the output cell or displayed on a page (see [`WLJS`](Reference/WLX/WLJS.md#`WLJS`)), then, we will see `Graphics3D` output instead of  `EventObject`.
+
+### Integration with server / client via WebSockets
+A framework of [WLJSTransport](Reference/Misc/WLJSTransport.md) redirects calls from Javascript code to event system as well. A global `server` object provides a corresponding method
+
+```js
+server.kernel.emitt('evid', 'message')
+//or
+server.kernel.emitt('evid', 'message', 'pattern')
+```
+
+and on server's side one can do as usual
+
 ```mathematica
 EventHandler["evid", Print]
-EventRemove["evid"]
-EventFire["evid"]
-EventFire["evid", 1+1]
 ```
 
----
-
-__[Download Notebook](files/Greyness.wln)__ 
-
-As well as the most part of WLJS Frontend, an event system was not carefully designed in-advance, but rather shaped iteratively and expanded through solving hundreds of practical cases.

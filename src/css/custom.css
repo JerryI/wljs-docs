@@ -8,27 +8,33 @@
 
 
 :root {
-  --ifm-color-primary: #BF616A;
+  --ifm-color-primary: #c4421a;
   --ifm-color-primary-dark: #4C566A;
   --ifm-color-primary-darker: #3B4252;
   --ifm-color-primary-darkest: #2E3440;
   --ifm-color-primary-light:  #B48EAD;
   --ifm-color-primary-lighter:    #5E81AC;
   --ifm-color-primary-lightest: #88C0D0;
+  --ifm-color-primary-text: #242424;
+  --ifm-color-primary-text-alt: #242424;
+  --ifm-color-primary-button: #fffafa;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #5E81AC;
+  --ifm-color-primary: #2dd4bf;
   --ifm-color-primary-dark: #434C5E;
   --ifm-color-primary-darker: #3B4252;
   --ifm-color-primary-darkest: #f32626;
   --ifm-color-primary-light: #BF616A;
   --ifm-color-primary-lighter: #88C0D0;
   --ifm-color-primary-lightest: #88C0D0;
+  --ifm-color-primary-text: #ade1ef;
+  --ifm-color-primary-text-alt: #2E3440;
   --ifm-background-color: #2E3440;
+  --ifm-color-primary-button: #ade1ef;
   --docusaurus-highlighted-code-line-bg:#ade1ef;
 }
 
@@ -132,3 +138,89 @@ a {
  .markdown>h2 {
   color: var(--markdown-h2) !important;   
  }
+
+ .d3-controls {
+  position: absolute;
+  right: -1rem;
+  padding: 0;
+  opacity: 0.7;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.frontend-view:hover .d3-controls {
+  opacity: 0.6;
+}
+
+.graphics2d-controller {
+  position:absolute;
+  right:0;
+  opacity:0;
+}
+
+.graphics2d-controller:hover {
+  opacity:1;
+}
+
+.graphics3d-controller {
+  position:absolute;
+  right:0;
+  opacity:0;
+}
+
+.graphics3d-controller:hover {
+  opacity:1;
+}
+
+.dg.main {
+  color:#777;
+  text-shadow: none;
+  border-radius: 4px;
+  max-width:200px;
+}
+
+
+.dg.main li.cr.function {
+  border-radius: 4px;
+  border-bottom: none;
+  margin-bottom:0.25rem;
+  background-color: rgb(0 0 0 / 5%) !important;
+  
+}
+
+.dg.main li.title {
+  background-color: rgb(0 0 0 / 5%) !important;
+  border-radius: 4px;
+  border-bottom: none;
+  margin-bottom:0.25rem;
+  color: #777;
+  text-shadow: none;
+}
+
+.dg.main .close-button.close-bottom {
+  background-color: rgb(0 0 0 / 5%) !important;
+  border-radius: 4px;
+  border-bottom: none;
+  font-weight: 500;
+  color: #777;
+  text-shadow: none;   
+  max-width:200px; 
+}
+
+.dg.main li.cr.string {
+  border-radius: 4px;
+  border-bottom: none;
+  margin-bottom:0.25rem;
+  background-color: rgb(0 0 0 / 5%) !important; 
+  color:#777;
+  text-shadow: none;
+}
+
+.dg.main li.cr.boolean {
+      border-radius: 4px;
+  border-bottom: none;
+  margin-bottom:0.25rem;
+  background-color: rgb(0 0 0 / 5%) !important; 
+  color:#777;
+  text-shadow: none;
+}

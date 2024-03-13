@@ -38,5 +38,5 @@ There is no need in writing `(*funny comments*)` and etc. manually, this is a re
 
 The result will look like this
 
-![](../../../Screenshot%202023-11-02%20at%2010.18.16.png)
+![](../../../imgs/Screenshot%202023-11-02%20at%2010.18.16.png)
 

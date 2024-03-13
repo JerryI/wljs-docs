@@ -4,7 +4,7 @@ One can utilize component [InputTable](../../Reference/Inputs/InputTable.md), th
 
 *statistics on CPU*
 ```mathematica
-TB = ExampleData[{"Statistics", "CPUPerformance"}] // InputTable;
+TB = ExampleData[{"Statistics", "CPUPerformance"}] // TableView // CreateFrontEndObject;
 ```
 
 *slide*
@@ -20,4 +20,4 @@ An example list
 
 The expected result
 
-![](../../../ezgif.com-optimize-4.gif)
+![](../../../imgs/ezgif.com-optimize-4.gif)

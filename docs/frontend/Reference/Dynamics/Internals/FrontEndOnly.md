@@ -2,4 +2,4 @@
 internal: true
 ---
 
-An synonym for [`Offload`](Offload.md)
+An synonym for [`Offload`](../Offload.md)
