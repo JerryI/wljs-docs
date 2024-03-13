@@ -24,22 +24,23 @@ Notebook interface is shipped as an Electron application, which is cross-platfor
 [Releases](https://github.com/JerryI/wolfram-js-frontend/releases)
 
 <Tabs  
-defaultValue="x86"  
+defaultValue="Windows"  
 values={[  
-{label: 'x86-x64', value: 'x86'},  
-{label: 'M1', value: 'M1'},  
+{label: 'Windows', value: 'Windows'},  
+{label: 'Linux', value: 'Linux'},  
+{label: 'Mac', value: 'Mac'},  
 ]}>  
-<TabItem value="x86">
-
-- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook.Setup.0.7.0.exe)
-- [MacOS](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook-0.7.0-Intel.dmg)
-- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/wljs-frontend_0.7.0_amd64.deb)
-- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook-0.7.0.AppImage)
-
+<TabItem value="Windows">
+- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/WLJS.Notebook.Setup.2.1.9.exe)
 </TabItem>  
-<TabItem value="M1">
+<TabItem value="Linux">
+- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/wljs-notebook_2.1.9_amd64.deb)
+- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/WLJS.Notebook-2.1.9.AppImage)
+</TabItem> 
+<TabItem value="Mac">
 
-- [MacOS](https://github.com/JerryI/wolfram-js-frontend/releases/download/1.0.7/WLJS.Notebook-0.7.2-universal.dmg)
+- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/WLJS.Notebook-2.1.9-arm64.dmg)
+- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/WLJS.Notebook-2.1.9.dmg)
 
 </TabItem>  
 </Tabs>
