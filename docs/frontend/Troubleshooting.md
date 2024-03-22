@@ -1,14 +1,14 @@
 ---
 sidebar_position: 12
 ---
-If something is not working as intended, please, post an [__issue on a Github__](https://github.com/JerryI/wolfram-js-frontend/issues) with the data evaluated on your Wolfram Kernel, such as
+If something is not working as intended, please, post an [__issue on a Github__](https://github.com/JerryI/wolfram-js-frontend/issues) with the data evaluated on your Wolfram Engine, such as
 
 ```mathematica
 $Version
 $SystemID
 ```
 
-and specify how you run an app (via Electron Wrapper or as a script)
+and specify how you run an app (via Desktop App or as a script)
 
 ## Browsers console
 Please locate the developer console (typically `Window` $\rightarrow$  `Toggle Developer Tools` or using a right click with a mouse `Inspect element`) and copy the error messages and a few above it (5-10).
@@ -23,7 +23,7 @@ Please feel free to join [Telegram Group](https://t.me/+PBotB9UJw-hiZDEy).
 
 ## Common cases
 ### UI was not loaded properly
-It might be an issue with sockets, try `Window` $\rightarrow$ `Force reload`
+It might be an issue with sockets, try `Window` or Top-Menu $\rightarrow$ `Force reload`
 
 ### The output of a cell does not look correct
 This might be connected with [InterpretationBox](Outdated/Reference/Decorations/InterpretationBox.md) or some other decorations did work well, try to evaluate your expression with [InputForm](Outdated/Reference/Decorations/InputForm.md)

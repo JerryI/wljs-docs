@@ -219,7 +219,7 @@ core.GrantSymbol = (args, env) => {
 
  
 ### Executing inside a container | Frontend Object
-This is a bit more advanced, since it stores the data inside the notebook and provides local memory for user - you can think about [FrontEndExecutable](../../Reference/Dynamics/Internals/FrontEndExecutable.md)  *as a sort of container or sandbox, where the code can be executed*
+This is a bit more advanced, since it stores the data inside the notebook and provides local memory for user - you can think about [FrontEndExecutable](../../Reference/Packages/Editor/Frontend%20Objects/FrontEndExecutable.md)  *as a sort of container or sandbox, where the code can be executed*
 
 ![](../../../imgs/Calling%20as%20FE.excalidraw.svg)
 
@@ -260,7 +260,7 @@ core.PlaceholderClock.destroy = async (args, env) => {
 }
 ```
 
-Then we can execute in inside the container like any piece of data (see [Frontend objects](Frontend%20objects.md))
+Then we can execute in inside the container like any piece of data (see [CreateFrontEndObject](../../Reference/Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md))
 
 ```mathematica
 CreateFrontEndObject[PlaceholderClock[]]
@@ -286,7 +286,7 @@ To know how to register your custom objects in the system, so you won't need to 
 #### Storage
 The number of `FrontEndExcecutable` containers can be arbitrary large and execute the same wolfram language expression. Then their `uid`, i.e. that one, which `FrontEndExecutable["uid"]` is assigned to the storage object, is not unique anymore
 
-Every time you to do something like creating a container or updating (see [FrontEndExecutable](../../Reference/Dynamics/Internals/FrontEndExecutable.md)) - you operate with the storage in the first place, but not executable instance.
+Every time you to do something like creating a container or updating (see [FrontEndExecutable](../../Reference/Packages/Editor/Frontend%20Objects/FrontEndExecutable.md)) - you operate with the storage in the first place, but not executable instance.
 
 The data obtained from the server will be stored in cache.
 
@@ -302,7 +302,7 @@ The ideas for WLJS Frontend were inspired by an amazing project [Observable](htt
 If you came here for `Dynamics` stuff, please consider [Offload](../../Reference/Dynamics/Offload.md) and see [Dynamics](../../Tutorial/Dynamics.md) sections. 
 :::
 
-Therefore, all frontend objects aka [FrontEndExecutable](../../Reference/Dynamics/Internals/FrontEndExecutable.md) are dynamic by the default. The change in one will cause the updates to ones, which depends on it. 
+Therefore, all frontend objects aka [FrontEndExecutable](../../Reference/Packages/Editor/Frontend%20Objects/FrontEndExecutable.md) are dynamic by the default. The change in one will cause the updates to ones, which depends on it. 
 
 ![](../../../imgs/FE%20data%20binding.excalidraw.svg)
 
@@ -340,7 +340,7 @@ FrontEndExecutable["uid_2"] = RandomReal[{0,100}, 10];
 ```
 
 :::note
-[ListLinePlotly](../../Reference/Plotting/ListLinePlotly.md) is a registered function, on output the expression [CreateFrontEndObject](../../Reference/Dynamics/CreateFrontEndObject.md) is applied automatically.
+[ListLinePlotly](../../Reference/Plotting%20Functions/ListLinePlotly.md) is a registered function, on output the expression [CreateFrontEndObject](../../Reference/Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md) is applied automatically.
 :::
 
 :::warning
@@ -588,7 +588,7 @@ CreateFrontEndObject[Sphere[FrontEndRef["coords"]]] // FrontEndRef // Graphics3D
 __To use local memory we need a container!__ Other wise the function has no idea about its previous state despite the fact that is was called using `update` method. 
 
 #### User-case example | Simplification of dynamics
-Using [CreateFrontEndObject](../../Reference/Dynamics/CreateFrontEndObject.md) all the time looks too complicated! Why not something like this?
+Using [CreateFrontEndObject](../../Reference/Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md) all the time looks too complicated! Why not something like this?
 
 ```mathematica
 ListLinePlotly[data // Offload]

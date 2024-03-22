@@ -1,5 +1,6 @@
 ---
 sidebar_position: 8
+draft: true
 ---
 The aim is to make a compromise between `DisplayForm` and `InputForm` representations Wolfram Expressions on the frontend's side.
 

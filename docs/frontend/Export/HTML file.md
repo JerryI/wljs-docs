@@ -11,12 +11,15 @@ Do not forget to save your notebook before exporting! It is important for garbag
 :::
 
 ## Portability 
-Once exported, it can be __unpacked back to a normal notebook__ once opened using WLJS Notebook app.
+Once exported, it can be __unpacked back to a normal notebook__ once opened using WLJS Notebook app. There are some limitations
 
-### Offline computations
-:::danger
-To be implemented...
-:::
+- no dynamic symbols (used [Offload](../Reference/Dynamics/Offload.md) or [FrontSubmit](../Reference/Packages/Editor/Frontend%20IO/FrontSubmit.md)) will be preserved
+- no external files, except images will be packaged 
+- iconized expressions to a file will be lost
 
-It is possible to move the code from Wolfram Kernel onto frontend with some limitations, thus it allows to perform calculations purely on the frontends [WLJS Interpreter](https://github.com/JerryI/wljs-interpreter) with no running Wolfram Engine in the background.
+However,
 
+- all static graphs, 2D, 3D graphics are kept
+- all external images are kept and embedded to a document
+- [NotebookStore](../Reference/Packages/Editor/NotebookStore.md) data is embedded as well
+- slides as well as all cell are kept

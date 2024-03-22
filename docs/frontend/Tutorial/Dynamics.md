@@ -10,6 +10,8 @@ The way how dynamics work is quite different compared to Wolfram Mathematica. Th
 ## Architecture
 All dynamics in terms of what you expect from Mathematica's experience happens on the frontend's side, i.e. in your browser.
 
+The core engine for that is used from [WLX Library](https://jerryi.github.io/wlx-docs/docs/WLX/dynamics#dynamic-symbols) (WLJSTransport package).
+
 Some expressions are meant for to be executed on frontend, i.e. not defined on the Kernel, then a user do not need to specify explicitly what and when should happen. In other cases, a user can use `Offload` attribute or `CreateFrontEndObject` to tell explicitly Wolfram Kernel pass an expression without evaluation to the frontend. Therefore one can play around with a way of splitting your code-base to archive the maximum flexibility and performance. 
 
 :::tip 
@@ -32,7 +34,7 @@ Graphics[{Cyan,
 ```
 
 :::info
-`Offload` just does a simple trick - provides to a frontend an unknown symbol, which forces frontend to fetch it from the Kernel. Once it fetched, a dynamic link would be created. 
+`Offload` just does a simple trick - provides to a frontend an unknown symbol, which forces frontend to fetch it from the Kernel. Once it has been fetched, a dynamic link is created. 
 :::
 
 The binding itself happens between `Rectangle` and `length`, but not `Graphics`, therefore only partial reevaluation occurs. To know more about details see [WLJS](../../../interpreter/Advanced/symbols.md).
@@ -49,17 +51,28 @@ slider = InputRange[-1,1,0.1, "Label"->"Length"]
 EventHandler[slider, Function[l, length = l]];
 ```
 
-:::note
-A library that provides UI elements used is [wljs-input](https://github.com/JerryI/wljs-inputs). See dedicated docs of it.
-:::
 
 Once event was fired, the assigned handler function will be called.
-
 
 
 ![](../../imgs/ezgif.com-optimize-6.gif)
 
 `slider` symbol is actually a special object, that stores the representation of a slider and an ID for the event, that will be fired when a user drags a knob. 
+
+#### 🍪 Example 0
+A simple rotation with a slider
+
+```mathematica
+EventHandler[InputRange[0, 2.0 Pi, 0.1], Function[a,
+  angle = a
+]]
+% // EventFire;
+
+Graphics[Rotate[Rectangle[{-1,-1}, {1,1}], angle // Offload]]
+```
+
+![](../../Rotator-ezgif.com-optipng.png)
+
 #### 🍪 Example 1
 Let us demonstrate how a wave packet travels though space and time
 
@@ -80,7 +93,7 @@ EventHandler[InputRange[0,5,0.5, 0], Function[t,
 
 The desired result looks line this
 
-![](../../imgs/ezgif.com-video-to-gif-3%201.gif)
+![](../../moving-ezgif.com-optipng.png)
 
 ### Event handlers for graphics primitives
 It looks similar to Mathematica's implementation, where one can add an event handler to a random graphics primitive
@@ -95,7 +108,7 @@ Graphics[{
 	],
 	PointSize[0.05], Cyan,
 	Point[p // Offload]
-}, TransitionDuration->40, TransitionType->"Linear"]
+}]
 ```
 
 The following event are available
@@ -148,7 +161,7 @@ fabrik[lengths_, target_, origin_] := Module[{buffer, prev},
 ]
 ```
 
-To show the result will will use a simple [Line](../Reference/Graphics/Line.md) primitive coupled to a `chain` symbol and an inline event-handler coupled to a target point of a chain
+To show the result will will use a simple [Line](../Reference/Packages/Graphics/Line.md) primitive coupled to a `chain` symbol and an inline event-handler coupled to a target point of a chain
 
 ```mathematica title="cell 3"
 Graphics[{
@@ -158,7 +171,7 @@ Graphics[{
   EventHandler[Point[{-1,-1}], {"drag"->Function[xy, chain = fabrik[lengths, xy, chain // First]]}], 
   Blue, Point[origin // Offload]
   
-}, PlotRange->{{-2,2}, {-2,2}}, ImageSize->500, TransitionType->"Linear", TransitionDuration->30]
+}, PlotRange->{{-2,2}, {-2,2}}, ImageSize->500, "TransitionType"->"Linear", "TransitionDuration"->30]
 ```
 
 By dragging the red point you update all positions joints

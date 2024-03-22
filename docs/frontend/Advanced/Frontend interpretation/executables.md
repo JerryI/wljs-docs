@@ -40,7 +40,7 @@ See in action
 CodeMirror 6 (the core of the cell's editor) finds this pattern and replace it with a corresponding frontend object as a [Decorations](../../Development/Decorations.md) and executes it immediately using [WLJS Interpreter](../../../../interpreter/intro.md). 
 
 :::info
-__Frontend object__ aka [FrontEndExecutable](../../Reference/Dynamics/Internals/FrontEndExecutable.md) is a normal [container](../../../../interpreter/Advanced/containers.md) with a storage ([ObjectHashMap](../../Reference/Javascript%20API/ObjectHashMap.md))
+__Frontend object__ aka [FrontEndExecutable](../../Reference/Packages/Editor/Frontend%20Objects/FrontEndExecutable.md) is a normal [container](../../../../interpreter/Advanced/containers.md) with a storage ([ObjectHashMap](../../Reference/Javascript%20API/ObjectHashMap.md))
 :::
 
 For example, when you use `Graphics`, on output an expression will be converted to `Boxes` using [MakeBoxes](../../Reference/Decorations/MakeBoxes.md) procedure like that 
@@ -104,7 +104,7 @@ Each executable has its own unique identifier and can act as a reference
 FrontEndExecutable["uid"]
 ```
 
-In the code editor of Wolfram JS Frontend it will immediately cause an execution, when this symbol appears as a line of code. If you want to use them inside other expression, consider [FrontEndRef](../../Reference/Dynamics/Internals/FrontEndRef.md) instead
+In the code editor of Wolfram JS Frontend it will immediately cause an execution, when this symbol appears as a line of code. If you want to use them inside other expression, consider [FrontEndRef](../../Reference/Packages/Editor/Frontend%20Objects/FrontEndRef.md) instead
 
 ```mathematica
 FrontEndRef["uid"]
@@ -112,7 +112,7 @@ FrontEndRef["uid"]
 
 that will block an editor from executing it in-place.
 
-You can create them from Wolfram Kernel __as well as directly from the WLJS interpreter__ using following expression [CreateFrontEndObject](../../Reference/Dynamics/CreateFrontEndObject.md)
+You can create them from Wolfram Kernel __as well as directly from the WLJS interpreter__ using following expression [CreateFrontEndObject](../../Reference/Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md)
 
 ```mathematica
 CreateFrontEndObject[

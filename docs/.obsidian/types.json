@@ -9,6 +9,7 @@
     "virtual": "checkbox",
     "needsContainer": "checkbox",
     "registered": "checkbox",
-    "internal": "checkbox"
+    "internal": "checkbox",
+    "": "checkbox"
   }
 }

@@ -1,6 +1,6 @@
 # Large tables of data
 
-One can utilize component [InputTable](../../Reference/Inputs/InputTable.md), that originally stands for editing table, but can be used just to view them as well. The good thing about it that it supports __infinitely large tables__ since the actual content is loaded by parts (and unloads if no longer needed)
+One can utilize component [InputTable](../../Reference/Packages/GUI/InputTable.md), that originally stands for editing table, but can be used just to view them as well. The good thing about it that it supports __infinitely large tables__ since the actual content is loaded by parts (and unloads if no longer needed)
 
 *statistics on CPU*
 ```mathematica
