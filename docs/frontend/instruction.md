@@ -54,6 +54,10 @@ values={[
 </Tabs>
 
 It comes with a launcher, that takes care about all updates, files extension association and etc.
+
+### Remark for Mac M1/M2 users
+It might throw an error `App is damaged`, please, follow the guide [Apple Silicon](Troubleshooting/Apple%20Silicon.md) to fix it.
+
 ## Server application
 Since this is a web-based application, you can also run on a server. User interface is  reachable from any modern browser. Clone a master branch and run `wolframscript`
 

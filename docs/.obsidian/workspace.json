@@ -173,9 +173,13 @@
   },
   "active": "b9278553cc687bb9",
   "lastOpenFiles": [
+    "frontend/Troubleshooting/Troubleshooting.md",
+    "frontend/Troubleshooting/Apple Silicon.md",
+    "frontend/Reference/Graphics3D/Graphics3D.md",
+    "frontend/Troubleshooting",
+    "frontend/instruction.md",
     "frontend/Tutorial/Overview.md",
     "frontend/Tutorial/Dynamics.md",
-    "frontend/instruction.md",
     "frontend/Reference/Decorations/ViewBox.md",
     "frontend/Reference/Decorations/TableForm.md",
     "frontend/Reference/Decorations/SVGForm.md",
@@ -196,9 +200,6 @@
     "frontend/Advanced/Slides/embed-wl.md",
     "frontend/Advanced/Slides/components.md",
     "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Events system/event-generators.md",
-    "frontend/Reference/Graphics/Offset.md",
-    "frontend/Reference/Graphics/Line.md",
     "imgs/3dmoves-ezgif.com-optipng.png",
     "imgs/UploadACSII-ezgif.com-optipng.png",
     "imgs/PlotlyAnimate-ezgif.com-optipng.png",
@@ -217,7 +218,6 @@
     "frontend/Reference/Packages/Editor/Untitled",
     "frontend/Reference/Packages/Editor/Editor",
     "frontend/Reference/Interpreter",
-    "frontend/Reference/Sound",
-    "frontend/Reference/Cells and Notebook"
+    "frontend/Reference/Sound"
   ]
 }

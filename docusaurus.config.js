@@ -11,12 +11,18 @@ const math = require('remark-math');
 const katex = require('rehype-katex');
 
 const scripts = [
+/*  "/wljs-interpreter/src/interpreter.js",
+  "/wljs-interpreter/src/core.js",
+  "/wljs-sharedlib-d3/dist/kernel.js",
+  "/wljs-graphics-d3/dist/kernel.js",
+  "/Mathematica-ThreeJS-graphics-engine/dist/kernel.js",
+  "/wljs-revealjs/dist/kernel.js"*/
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/interpreter.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/core.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-sharedlib-d3@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@dev/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@dev/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-revealjs@dev/dist/kernel.js"
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-revealjs@dev/dist/kernel.js"  
 ].map((link) => {
   return {tagName: 'script', attributes: {
     type: 'module',
@@ -29,6 +35,11 @@ const config = {
   title: 'WLJS Notebook',
   tagline: 'Documentation',
   favicon: 'img/favicon.ico',
+  /*
+  url: 'http://127.0.0.1:20540',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/',*/
 
   url: 'https://jerryi.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
