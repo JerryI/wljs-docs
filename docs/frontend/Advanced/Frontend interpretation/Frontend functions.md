@@ -44,7 +44,7 @@ The first one is rather straighforward, where basically most UI functions and co
 ### Simple direct call
 As simple as that
 
-![](../../../imgs/Simple%20call.excalidraw.svg)
+![](./../../../imgs/Simple%20call.excalidraw.svg)
 
 A called function has no persistent memory (call and forget) except from the `env` variable, which can share the data with other functions from the subthree - see more in [architecture](architecture.md) (Meta Data). 
 
@@ -163,7 +163,7 @@ Sometimes a function or a three of them can be called as a reaction on some even
 
 If there is an update of a data, i.e. `env.method = 'update'`, then interpreter will try to find a sub-symbols or a function (read more about how interpreter handles them [WLJS Interpreter](https://github.com/JerryI/wljs-interpreter)). 
 
-![](../../../imgs/Simple%20call%202dn.excalidraw.svg)
+![](./../../../imgs/Simple%20call%202dn.excalidraw.svg)
 
 Imagine if any defined function was a class declaration with a constructor (if no `env.method` is specified) and methods (subsymbols). For example
 
@@ -219,7 +219,7 @@ core.GrantSymbol = (args, env) => {
 
  
 ### Executing inside a container | Frontend Object
-This is a bit more advanced, since it stores the data inside the notebook and provides local memory for user - you can think about [FrontEndExecutable](../../Reference/Packages/Editor/Frontend%20Objects/FrontEndExecutable.md)  *as a sort of container or sandbox, where the code can be executed*
+This is a bit more advanced, since it stores the data inside the notebook and provides local memory for user - you can think about [FrontEndExecutable](../../Reference/Frontend%20Objects/FrontEndExecutable.md)  *as a sort of container or sandbox, where the code can be executed*
 
 ![](../../../imgs/Calling%20as%20FE.excalidraw.svg)
 
@@ -260,7 +260,7 @@ core.PlaceholderClock.destroy = async (args, env) => {
 }
 ```
 
-Then we can execute in inside the container like any piece of data (see [CreateFrontEndObject](../../Reference/Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md))
+Then we can execute in inside the container like any piece of data (see [CreateFrontEndObject](../../Reference/Frontend%20Objects/CreateFrontEndObject.md))
 
 ```mathematica
 CreateFrontEndObject[PlaceholderClock[]]
@@ -286,7 +286,7 @@ To know how to register your custom objects in the system, so you won't need to 
 #### Storage
 The number of `FrontEndExcecutable` containers can be arbitrary large and execute the same wolfram language expression. Then their `uid`, i.e. that one, which `FrontEndExecutable["uid"]` is assigned to the storage object, is not unique anymore
 
-Every time you to do something like creating a container or updating (see [FrontEndExecutable](../../Reference/Packages/Editor/Frontend%20Objects/FrontEndExecutable.md)) - you operate with the storage in the first place, but not executable instance.
+Every time you to do something like creating a container or updating (see [FrontEndExecutable](../../Reference/Frontend%20Objects/FrontEndExecutable.md)) - you operate with the storage in the first place, but not executable instance.
 
 The data obtained from the server will be stored in cache.
 
@@ -299,10 +299,10 @@ Each time you call in the cell, for example `Plot[x,{x,0,1}]` , this __automatic
 The ideas for WLJS Frontend were inspired by an amazing project [Observable](https://observablehq.com/@jerryi) - JS notebook interface working in the browser, where the dynamics was polished perfectly.
 
 :::tip
-If you came here for `Dynamics` stuff, please consider [Offload](../../Reference/Dynamics/Offload.md) and see [Dynamics](../../Tutorial/Dynamics.md) sections. 
+If you came here for `Dynamics` stuff, please consider [Offload](../../Reference/Interpreter/Offload.md) and see [Dynamics](../../Tutorial/Dynamics.md) sections. 
 :::
 
-Therefore, all frontend objects aka [FrontEndExecutable](../../Reference/Packages/Editor/Frontend%20Objects/FrontEndExecutable.md) are dynamic by the default. The change in one will cause the updates to ones, which depends on it. 
+Therefore, all frontend objects aka [FrontEndExecutable](../../Reference/Frontend%20Objects/FrontEndExecutable.md) are dynamic by the default. The change in one will cause the updates to ones, which depends on it. 
 
 ![](../../../imgs/FE%20data%20binding.excalidraw.svg)
 
@@ -340,11 +340,11 @@ FrontEndExecutable["uid_2"] = RandomReal[{0,100}, 10];
 ```
 
 :::note
-[ListLinePlotly](../../Reference/Plotting%20Functions/ListLinePlotly.md) is a registered function, on output the expression [CreateFrontEndObject](../../Reference/Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md) is applied automatically.
+[ListLinePlotly](../../Reference/Plotly/ListLinePlotly.md) is a registered function, on output the expression [CreateFrontEndObject](../../Reference/Frontend%20Objects/CreateFrontEndObject.md) is applied automatically.
 :::
 
 :::warning
-This can be considered as a very low-level and deprecated method for making dynamics - please consider [Offload](../../Reference/Dynamics/Offload.md) instead
+This can be considered as a very low-level and deprecated method for making dynamics - please consider [Offload](../../Reference/Interpreter/Offload.md) instead
 :::
 ##### Perfomance remark
 However, one should take into account the performance issues. Since our `FrontEndExecutable["uid_2"]` will be replaced in the editor by the instance of this object, therefore it will also be updated (i.e. reevaluated) even if there is no parent of this node. 
@@ -522,7 +522,7 @@ Do[
 Then you will see a nice animation and each instance you copied will be updated as well
 
 :::tip
-One can do it a much easier way considering [Virtual containers](#Virtual%20containers) and [Offload](../../Reference/Dynamics/Offload.md)
+One can do it a much easier way considering [Virtual containers](#Virtual%20containers) and [Offload](../../Reference/Interpreter/Offload.md)
 :::
 
 ### Virtual containers
@@ -588,7 +588,7 @@ CreateFrontEndObject[Sphere[FrontEndRef["coords"]]] // FrontEndRef // Graphics3D
 __To use local memory we need a container!__ Other wise the function has no idea about its previous state despite the fact that is was called using `update` method. 
 
 #### User-case example | Simplification of dynamics
-Using [CreateFrontEndObject](../../Reference/Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md) all the time looks too complicated! Why not something like this?
+Using [CreateFrontEndObject](../../Reference/Frontend%20Objects/CreateFrontEndObject.md) all the time looks too complicated! Why not something like this?
 
 ```mathematica
 ListLinePlotly[data // Offload]
@@ -601,7 +601,7 @@ data = RandomReal[{-1,1}, 10];
 It is possible if we threat `data` on [WLJS Interpreter](../../../../interpreter/intro.md) as a container. Therefore it binds automatically to its parent and can poke it once an update event arrived.
 
 :::info
-See more about this [Dynamics](../../Tutorial/Dynamics.md) and [Offload](../../Reference/Dynamics/Offload.md)
+See more about this [Dynamics](../../Tutorial/Dynamics.md) and [Offload](../../Reference/Interpreter/Offload.md)
 :::
 
 #### Virtual frontend objects | Virtual containers | Virtual functions

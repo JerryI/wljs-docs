@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-![](../../Mathinput-ezgif.com-optipng%201.png)
+![](../../imgs/Mathinput-ezgif.com-optipng%201.png)
 
 
 __[Github repo](https://github.com/JerryI/wljs-editor)__

@@ -1,7 +1,7 @@
 # Graphics animation & interaction
 
 ## Interactive plots
-__By the default__, everything you plot using [Plot](../../Reference/Plotting%20Functions/Plot.md) or [Graphics](../../Reference/Packages/Graphics/Graphics.md) or [Graphics3D](../../Reference/Packages/Graphics3D/Graphics3D.md) can be dragged or panned or rotated. This behavior is controlled by the options and can be switched off if necessary. For example
+__By the default__, everything you plot using [Plot](../../Reference/Plotting%20Functions/Plot.md) or [Graphics](../../Reference/Graphics/Graphics.md) or [Graphics3D](../../Reference/Graphics3D/Graphics3D.md) can be dragged or panned or rotated. This behavior is controlled by the options and can be switched off if necessary. For example
 
 ```mathematica
 Figure = Plot[{x, Sin[x], Sin[x]^2}, {x,0,2Pi}];
@@ -19,7 +19,7 @@ Try to drag it using you mouse
 
 The result will look like following
 
-![](../../../imgs/ezgif.com-optimize%201.gif)
+![](./../../../imgs/ezgif.com-optimize%201.gif)
 
 ## Animation
 In general all visuals can be done in the same way as in regular cells, since it uses the same components.
@@ -41,7 +41,7 @@ Let us see the simples example
 
 # Animation example
 
-<Figure id={"routed-event-fragment-1"}/>
+<Figure Id={"routed-event"}/>
 
 The figure will be changed, when the fragment below is revealed
 
@@ -51,18 +51,18 @@ The figure will be changed, when the fragment below is revealed
 
 ```
 
-The additional `-fragment-[index]` is added implicitly by [SlideEventListener](../../Reference/Tools/Slides/SlideEventListener.md) function to all fragments on a slide. While `SlideEventListener` is attached only to the slide, where it has been placed.
+`SlideEventListener` is attached only to the slide, where it has been placed.
 
 Now let us make a simple figure
 
 ```mathematica
-Figure[OptionsPattern[]] := With[{event = EventClone[OptionValue["id"]]},
-	EventHandler[EvaluationCell[], {"destroy" -> Function[Null, Delete[event]]}];
+Figure[OptionsPattern[]] := With[{event = EventClone[OptionValue["Id"]]},
+	EventHandler[EvaluationCell[], {"Destroy" -> Function[Null, Delete[event]]}];
 	
 	...
 ]
 
-Options[Figure] = {"id"->""}
+Options[Figure] = {"Id"->""}
 ```
 
 Here we clone a slide event (this is a safe way, if more than 1 handlers will be involved). Afterwards we need to make sure that if one reevaluate the cell, the handler will be removed automatically. That's how you can clean-up handlers after the evaluation.
@@ -70,29 +70,29 @@ Here we clone a slide event (this is a safe way, if more than 1 handlers will be
 Now the content
 
 ```mathematica
-Figure[OptionsPatten[]] := With[{event = EventClone[OptionValue["id"]]},
-	EventHandler[EvaluationCell[], {"destroy" -> Function[Null, Delete[event]]}];
+Figure[OptionsPatten[]] := With[{event = EventClone[OptionValue["Id"]]},
+	EventHandler[EvaluationCell[], {"Destroy" -> Function[Null, Delete[event]]}];
 	
 	LeakyModule[{points},
 		(* initial state *)
 		points = RandomReal[{-1,1}, {40,2}];
 		
-		EventHandler[event, Function[Null, 
+		EventHandler[event, {"fragment-1" -> Function[Null, 
 			(* act when the event happend *)
 			points = {Sin[#], Cos[#]} &/@ Range[40]
-		]];
+		]}];
 		
 		Graphics[{Red, Line[points // Offload]}]
 	]
 ]
 
-Options[Figure] = {"id"->""}
+Options[Figure] = {"Id"->""}
 ```
 
-This little script will plot randomly distributed points as lines for its initial state. When the `event` is fired, it changes the distribution of `points` to a circle. The animation is done by [Graphics](../../Reference/Packages/Graphics/Graphics.md)  (i.e. it is a native feature of it and has nothing to do with slides).
+This little script will plot randomly distributed points as lines for its initial state. When the `event` is fired, it changes the distribution of `points` to a circle. The animation is done by [Graphics](../../Reference/Graphics/Graphics.md)  (i.e. it is a native feature of it and has nothing to do with slides).
 
 :::note
-Consider options `TransitionType` and `TransitionDuration` of [Graphics](../../Reference/Packages/Graphics/Graphics.md) to control the transition animation.
+Consider options `"TransitionType"` and `"TransitionDuration"` of [Graphics](../../Reference/Graphics/Graphics.md) to control the transition animation.
 :::
 
 The expected result will be

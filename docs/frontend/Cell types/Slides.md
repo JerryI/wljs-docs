@@ -28,7 +28,7 @@ It will merge and print slides from all cells in the notebook into a single one.
 :::tip
 Use projector feature
 
-![](../../Screenshot%202024-03-13%20at%2019.25.16.png)
+![](../../imgs/Screenshot%202024-03-13%20at%2019.25.16.png)
 
 to show slides in a separate window
 :::

@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-![](../../Screenshot%202024-03-13%20at%2019.30.35.png)
+![](../../imgs/Screenshot%202024-03-13%20at%2019.30.35.png)
 
 *WebGL demo*
 
@@ -48,7 +48,7 @@ Do not forget to `cancelAnimationFrame` using `this.ondestroy` method
 :::
 
 ## Communication with Wolfram Kernel
-In general one can define any function for WLJS Interpreter using Javascript cells, please see guide here [FrontSubmit](FrontSubmit) and [Integration with server / client via WebSockets](../Advanced/Events%20system/event-generators.md#Integration%20with%20server%20/%20client%20via%20WebSockets)
+In general one can define any function for WLJS Interpreter using Javascript cells, please see guide here [FrontSubmit](../Reference/Frontend%20IO/FrontSubmit.md) and [Integration with server / client via WebSockets](../Advanced/Events%20system/event-generators.md#Integration%20with%20server%20/%20client%20via%20WebSockets)
 
 For the most applications event-based system is used, see [Dynamic](../Development/Evaluation/Dynamic.md)
 

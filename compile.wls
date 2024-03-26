@@ -2,6 +2,8 @@
 
 SetAttribute[Offload, HoldFirst]
 
+Offload = Hold
+
 Plotly[f_, range_, op : OptionsPattern[Plot]] := Plot[f, range, op] // Cases[#, Line[x_] :> x, All] & // ListLinePlotly[#, op] & 
 
 TextNode /: ToString[TextNode[x_]] := x["data"];

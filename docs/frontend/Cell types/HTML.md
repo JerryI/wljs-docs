@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-![](../../Screenshot%202024-03-13%20at%2019.26.09.png)
+![](../../imgs/Screenshot%202024-03-13%20at%2019.26.09.png)
 
 
 

@@ -32,17 +32,18 @@
   }
 
 .envBlock {
-    background: var(--ifm-breadcrumb-color-active);
+  background: var(--ifm-breadcrumb-color-active);
   border-radius: 2px;
-  padding: 0.1em;
-    padding-right: 0.1em;
-    padding-left: 0.1em;
+  /* padding: 0.1em; */
+  padding-right: 0.1em;
+  padding-left: 0.1em;
   padding-left: 0.5em;
   padding-right: 0.5em;
   text-align: center;
-  height: 2em;
-    color: var(--ifm-background-surface-color);
-    margin-right: 0.5em;
+  /* height: 2em; */
+  color: var(--ifm-background-surface-color);
+  margin-right: 0.5em;
+  display: inline-block;
 }
 
 

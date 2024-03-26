@@ -14,7 +14,7 @@ An instance ^MFfmi0h7
 
 
 # Embedded files
-4f800226d92baa8787bbfbbff9c3fbdc0e42914f: [[Screenshot 2023-04-10 at 14.11.08.png]]
+4f800226d92baa8787bbfbbff9c3fbdc0e42914f: [[../imgs/Screenshot 2023-04-10 at 14.11.08.png]]
 
 %%
 # Drawing

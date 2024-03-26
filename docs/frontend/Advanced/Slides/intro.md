@@ -66,7 +66,7 @@ The position of `.slides` cell in the notebook does not play any role.
 :::tip
 Use projector feature
 
-![](../../../Screenshot%202024-03-13%20at%2019.33.58.png)
+![](../../../imgs/Screenshot%202024-03-13%20at%2019.33.58.png)
 
 to show slides in a separate window
 :::
@@ -166,7 +166,7 @@ RevealJS uses standard Markdown notations for images
 
 You can drag and drop them from anywhere
 
-![](../../../Dropfiles-ezgif.com-optipng%201.png)
+![](../../../imgs/Dropfiles-ezgif.com-optipng%201.png)
 
 Local files are also supported
 
@@ -270,7 +270,7 @@ Fragment changes the color <!-- .element: class="fragment highlight-red" data-fr
 See more available transitions at [RevealJS](https://revealjs.com/fragments/).
 
 :::note
-Custom transitions are not supported, unless it is made using [Graphics](../../Reference/Packages/Graphics/Graphics.md) using [animations](animations.md) approach
+Custom transitions are not supported, unless it is made using [Graphics](../../Reference/Graphics/Graphics.md) using [animations](animations.md) approach
 :::
 
 ### Events
@@ -297,14 +297,16 @@ Another message <!-- .element: class="fragment" data-fragment-index="1" -->
 Before evaluation, you should attach an event handler ([EventHandler](../../Reference/Events/EventHandler.md)) to it
 
 ```mathematica
-EventHandler["myEvent", Print["Hey there!"]&]
-EventHandler["myEvent-fragment-1", Print["Hey there from fragment!"]&]
+EventHandler["myEvent", {
+	"Slide" -> (Print["Hey there!"]&),
+	"fragment-1" -> (Print["Hey there from fragment!"]&)
+}]
 ```
 
 The identifier of [SlideEventListener](../../Reference/Tools/Slides/SlideEventListener.md) acts as an event object. There are two patterns on how you can capture certain event
 
-- `uid` - is fired when a slide has been revealed
-- `uid-fragment-INDEX` - is fired when a fragment number `INDEX` has been revealed
+- `"Slide"` - is fired when a slide has been revealed
+- `"fragment-INDEX"` - is fired when a fragment number `INDEX` has been revealed
 
 :::info
 To learn more about on how to utilize it for animations and etc, please, read [animations](animations.md) section.

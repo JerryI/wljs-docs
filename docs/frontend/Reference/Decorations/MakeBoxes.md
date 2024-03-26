@@ -10,11 +10,11 @@ MakeBoxes[expr_, form_]
 is a general expression used in `UpValues` of other expressions to change the visual representation (see [Decorations](../../Development/Decorations.md)) in the notebook.
 
 :::info
-`MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](../Tools/Notebook/CellPrint.md), and [EditorView](../Packages/Editor/Editor/EditorView.md) for various applications
+`MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](../Tools/Notebook/CellPrint.md), and [EditorView](../GUI/EditorView.md) for various applications
 :::
 
 :::tip
-Please see [BoxBox](../Packages/Editor/Boxes/BoxBox.md) and [ViewBox](../Packages/Editor/Boxes/ViewBox.md) for an advanced expression decorations
+Please see [BoxBox](BoxBox.md) and [ViewBox](ViewBox.md) for an advanced expression decorations
 :::
 ## Applications
 
@@ -41,9 +41,9 @@ Please check the official Wolfram Language documentation on `MakeBoxes`
 :::
 
 ### Force expressions to be executed on WLJS Interpreter
-This is basically the way on how to automatically apply [CreateFrontEndObject](../Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md) on some common objects like [Graphics](../Packages/Graphics/Graphics.md), [ListLinePlotly](../Plotting%20Functions/ListLinePlotly.md) meant for executing on WLJS Interpreter
+This is basically the way on how to automatically apply [CreateFrontEndObject](../Frontend%20Objects/CreateFrontEndObject.md) on some common objects like [Graphics](../Graphics/Graphics.md), [ListLinePlotly](../Plotly/ListLinePlotly.md) meant for executing on WLJS Interpreter
 
-This is how it is done for [ListLinePlotly](../Plotting%20Functions/ListLinePlotly.md)
+This is how it is done for [ListLinePlotly](../Plotly/ListLinePlotly.md)
 
 ```mathematica
 sym /: MakeBoxes[sym[agrs__], StandardForm] := With[{o = CreateFrontEndObject[sym[agrs]]},

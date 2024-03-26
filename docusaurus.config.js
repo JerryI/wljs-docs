@@ -15,7 +15,6 @@ const scripts = [
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/core.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-sharedlib-d3@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@dev/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-plotly@dev/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@dev/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-revealjs@dev/dist/kernel.js"
 ].map((link) => {
@@ -111,9 +110,9 @@ const config = {
             position: 'left',
             label: 'Notebook',
           },
-          {to: "https://github.com/JerryI/wl-wlx/discussions", label: "Discuss", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
+          {to: "https://github.com/JerryI/wolfram-js-frontend/discussions", label: "Discuss", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
           {
-            href: 'https://github.com/JerryI/wl-wlx',
+            href: 'https://github.com/JerryI/wolfram-js-frontend',
             label: 'GitHub',
             position: 'right',
           },
@@ -123,25 +122,16 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Docs',
-                to: '/docs/WLX/install',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Twitter',
+                label: 'Telegram',
                 href: 'https://twitter.com/docusaurus',
               },
             ],
           },
         ],
-        copyright: `WLX Project is open-source and licensed under GPL3`,
+        copyright: `WLJS Notebook Project is open-source and licensed under GPL3`,
       },
       prism: {
         theme: prismThemes.github,

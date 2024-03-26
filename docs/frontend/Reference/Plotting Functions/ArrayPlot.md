@@ -8,7 +8,7 @@ origin: https://reference.wolfram.com/language/ref/ArrayPlot.html
 Generates a plot, where values are shown in a discrete array of blocks
 
 :::danger
-Since [Graphics](../Packages/Graphics/Graphics.md) in this implementation cannot guess the plot range, you need to provide this explicitly. Use [MatrixPlot](MatrixPlot.md) if you want it to happen automatically.
+Since [Graphics](../Graphics/Graphics.md) in this implementation cannot guess the plot range, you need to provide this explicitly. Use [MatrixPlot](MatrixPlot.md) if you want it to happen automatically.
 :::
 
 ```mathematica

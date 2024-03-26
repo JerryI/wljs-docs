@@ -7,6 +7,7 @@ The way how dynamics work is quite different compared to Wolfram Mathematica. Th
 
 
 
+
 ## Architecture
 All dynamics in terms of what you expect from Mathematica's experience happens on the frontend's side, i.e. in your browser.
 
@@ -23,7 +24,7 @@ Always keep in mind, which part of code executes on Wolfram Kernel (server) and 
 :::
 
 ## Automatic tracking of held symbols
-It does not mean, that your `Set` statements will be reevaluated on change of a nested symbol, however, for most graphics primitives it works out of the box. Use [Offload](../Reference/Dynamics/Offload.md) wrapper to hold symbols for the frontend
+It does not mean, that your `Set` statements will be reevaluated on change of a nested symbol, however, for most graphics primitives it works out of the box. Use [Offload](../Reference/Interpreter/Offload.md) wrapper to hold symbols for the frontend
 
 ```mathematica
 length = 1;
@@ -71,7 +72,7 @@ EventHandler[InputRange[0, 2.0 Pi, 0.1], Function[a,
 Graphics[Rotate[Rectangle[{-1,-1}, {1,1}], angle // Offload]]
 ```
 
-![](../../Rotator-ezgif.com-optipng.png)
+![](../../imgs/Rotator-ezgif.com-optipng.png)
 
 #### 🍪 Example 1
 Let us demonstrate how a wave packet travels though space and time
@@ -93,7 +94,7 @@ EventHandler[InputRange[0,5,0.5, 0], Function[t,
 
 The desired result looks line this
 
-![](../../moving-ezgif.com-optipng.png)
+![](../../imgs/moving-ezgif.com-optipng.png)
 
 ### Event handlers for graphics primitives
 It looks similar to Mathematica's implementation, where one can add an event handler to a random graphics primitive
@@ -161,7 +162,7 @@ fabrik[lengths_, target_, origin_] := Module[{buffer, prev},
 ]
 ```
 
-To show the result will will use a simple [Line](../Reference/Packages/Graphics/Line.md) primitive coupled to a `chain` symbol and an inline event-handler coupled to a target point of a chain
+To show the result will will use a simple [Line](../Reference/Graphics/Line.md) primitive coupled to a `chain` symbol and an inline event-handler coupled to a target point of a chain
 
 ```mathematica title="cell 3"
 Graphics[{

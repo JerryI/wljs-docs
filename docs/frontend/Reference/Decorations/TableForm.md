@@ -12,5 +12,5 @@ shows the given `table` (list) in a traditional form using [Grid](Grid.md) decor
 
 
 :::info
-For an editable formatted table, please see [InputTable](../Packages/GUI/InputTable.md). It fits especially for a large datasets
+For an editable formatted table, please see [InputTable](../GUI/InputTable.md). It fits especially for a large datasets
 :::

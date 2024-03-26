@@ -37,8 +37,8 @@ a variable was assigned ^rb7qcco3
 
 
 # Embedded files
-6897411790fc8f5a7ffdae89c827c8ec0120437b: [[Pasted Image 20230807131405_526.svg]]
-5563eb2745f74971516ee0536e3d2a8e5f096c9d: [[Pasted Image 20230807132333_749.svg]]
+6897411790fc8f5a7ffdae89c827c8ec0120437b: [[../imgs/Pasted Image 20230807131405_526.svg]]
+5563eb2745f74971516ee0536e3d2a8e5f096c9d: [[../imgs/Pasted Image 20230807132333_749.svg]]
 
 %%
 # Drawing

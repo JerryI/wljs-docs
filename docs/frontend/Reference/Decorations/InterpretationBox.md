@@ -23,7 +23,7 @@ where `display` will be shown in the output cell, instead of `expr`, keeping `ex
 :::
 
 :::tip
-Please see [BoxBox](../Packages/Editor/Boxes/BoxBox.md) and [ViewBox](../Packages/Editor/Boxes/ViewBox.md) for an advanced expression decorations
+Please see [BoxBox](BoxBox.md) and [ViewBox](ViewBox.md) for an advanced expression decorations
 :::
 
 ## Applications
@@ -45,30 +45,6 @@ AVeryLongFunction[expr__] := SpecialList[expr]
 
 You can use it with the created alias `Ashort`
 
-### Display graphics
-Or one could use it as a data-preview
-
-
-
-
-
-:::danger
-There is a bug with `Graphics`, `Graphics3D` and `Image`. You should apply [`CreateFrontEndObject`](../Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md) before, i.e.
-
-```mathematica
-formula /: MakeBoxes[formula[exp_], StandardForm] := With[{p = Plot[exp, {x,-1,1}, ImageSize->200] // CreateFrontEndObject},
-  InterpretationBox[MakeBoxes[p, StandardForm], formula[exp]]
-]
-```
-
-for [Plotly](../Plotting%20Functions/Plotly.md) and some other user's defined function __it works without__ [CreateFrontEndObject](../Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md) 
-:::
-
-:::tip
-Use explicit `uid`, when creating a front-end objects ([CreateFrontEndObject](../Packages/Editor/Frontend%20Objects/CreateFrontEndObject.md)) based on a hash-value of the decorated expression. It will reduce the load to frontend and will keep all instances with the same `uid` to be up to date with the changing data.
-
-See more in [dynamic-decorations](../../Advanced/Boxes%20and%20Decorations/dynamic-decorations.md) guide
-:::
 
 ## Dev notes
-This is a wrapper for [ViewBox](../Packages/Editor/Boxes/ViewBox.md) with a read-only [EditorView](../Packages/Editor/Editor/EditorView.md) inside.
+This is a wrapper for [ViewBox](ViewBox.md) with a read-only [EditorView](../GUI/EditorView.md) inside.

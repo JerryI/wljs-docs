@@ -39,19 +39,19 @@ registeredTags.env = (a) => {
   const list = a.map((el) => {
     if (el === 'WLJS') {
       return(<>
-        <Link
+        <div
                 className='envBlock'
-                to="/exwljs">
+                >
                 {el}
-        </Link>
+        </div>
       </>)
     } else {
     return(<>
-    <Link
+    <div
             className='envBlock'
-            to="/exwl">
+         >
             {el}
-    </Link>
+    </div>
   </>)}
   });
 
@@ -62,32 +62,8 @@ registeredTags.env = (a) => {
   </>);
 }
 
-registeredTags.virtual = (a) => {
-  console.log('virtual!!');
 
-  if (a != true) return false;
 
-  return (<>
-          <Link
-                className='envContainer'
-                to="/virtual">
-                <div className='emphs' style={{'background':'var(--ifm-color-primary-light)'}}>Virtual</div>
-        </Link>
-  </>);
-}
-
-registeredTags.needsContainer = (a) => {
-  console.log('virtual!!');
-
-  if (a != true) return false;
-
-  return (<>
-  <Link
-                className='envContainer'
-                to="/container"><div style={{'background': 'var(--ifm-color-content-secondary)'}} className='emphs'>Needs container</div></Link>
-
-  </>);
-}
 
 registeredTags.update = (a) => {
   console.log('virtual!!');
@@ -95,23 +71,38 @@ registeredTags.update = (a) => {
   if (a != true) return false;
 
   return (<>
-    <Link
+    <div
                 className='envContainer'
-                to="/update"><div style={{'background': 'var(--ifm-color-success-lightest)'}} className='emphs'>Supports updates</div></Link>
+                ><div style={{'background': 'var(--ifm-color-success-lightest)'}} className='emphs'>Supports dynamics</div></div>
   </>);
 }
 
-registeredTags.registered = (a) => {
+registeredTags.source = (a, fm) => {
   console.log('virtual!!');
 
-  if (a != true) return (<></>);
+  //if (a != true) return false;
 
   return (<>
-     <Link
+    <Link
                 className='envContainer'
-                to="/registered"><div style={{'background': 'var(--ifm-color-info-darkest)'}} className='emphs'>Registered</div></Link>
+                to = {a}
+                ><div style={{'background': 'var(--ifm-color-info-dark)'}} className='emphs'>{fm.package}</div><div className='envTextInfo'>Package</div></Link>
   </>);
 }
+
+registeredTags.context = (a, fm) => {
+
+
+  //if (a != true) return false;
+
+  return (<>
+    <div
+                 
+               
+                ><div style={{ 'font-weight': '500', 'background': 'none', color : 'var(--ifm-font-color-base)'}} >{a}</div><div className='envTextInfo'>Context</div></div>
+  </>);
+}
+
 
 function ShowTags({fm}) {
   console.log(fm);
@@ -119,7 +110,7 @@ function ShowTags({fm}) {
 
   Object.keys(fm).forEach((el) => {
     if (Object.keys(registeredTags).indexOf(el) > -1) {
-      const k = registeredTags[el](fm[el]);
+      const k = registeredTags[el](fm[el], fm);
       if (k) {
         list.push(<><div className='refTagsHolder-item'>{k}</div></>);
       }

@@ -5,7 +5,7 @@ The whole notebook interface is made using plain Javascript, HTML powered by a [
 
 Some calculations are performed partially by your browser, you can have a control over it, [if you want](Dynamics.md) . All UI elements, cells operations are written in Javascript and Wolfram Language and performed by WLJS Interpreter
 
-![](../../Interface-1.png)
+![](../../imgs/Interface-1.png)
 
 :::info
 Compared to Mathematica the cell design has mostly flat structure similar to Jupyter Notebook. Only `input` and `output` cells are joined into groups.
@@ -18,7 +18,7 @@ Output cells are editable
 ### Cell control buttons
 All cells are grouped by parent input cell, apart from that the structure of the notebook is flat. The controls are applied to the whole group
 
-![](../../Screenshot%202024-03-13%20at%2018.53.13.png)
+![](../../imgs/Screenshot%202024-03-13%20at%2018.53.13.png)
 
 From left to right
 - add new cell below
@@ -28,14 +28,14 @@ From left to right
 
 The last options expands into
 
-![](../../Screenshot%202024-03-13%20at%2018.54.44.png)
+![](../../imgs/Screenshot%202024-03-13%20at%2018.54.44.png)
 
 Project to a window is the most interesting feature here, that allows to evaluate a cell in a new window. It comes handy while demonstrating [presentations](../Advanced/Slides/intro.md).
 
 ## Wolfram Language
 When you start typing the language you are using assumed to be WL. By pressing `Shift-Enter` you can start evaluation
 
-![](../../Screenshot%202024-03-13%20at%2018.58.12.png)
+![](../../imgs/Screenshot%202024-03-13%20at%2018.58.12.png)
 
 Output cells are joined to the input and the last one can be hidden by clicking on the $\rightarrow$ sign on the left side from the cell.
 
@@ -45,7 +45,7 @@ Once you change something inside the output cell, it loses its parent and become
 
 Syntax sugar, fractions and other 2D input are supported 
 
-![](../../Mathinput-ezgif.com-optipng.png)
+![](../../imgs/Mathinput-ezgif.com-optipng.png)
 
 The most useful commands are listed below
 
@@ -59,7 +59,7 @@ Now let us move to some other gems
 ## Snippets
 To help in writing matrixes, colors, and some other useful stuff are accessible by the shortcut `Super/Cmd`+`P`
 
-![](../../Gizmo-ezgif.com-optipng.png)
+![](../../imgs/Gizmo-ezgif.com-optipng.png)
 
 All snippets are just special kind of notebooks including all UI elements.
 
@@ -67,7 +67,7 @@ All snippets are just special kind of notebooks including all UI elements.
 ## Editor of Power
 A single input cell can produce Wolfram Language output, HTML page, Javascript window or a slide of a presentation
 
-![](../../Dropfiles-ezgif.com-optipng.png)
+![](../../imgs/Dropfiles-ezgif.com-optipng.png)
 
 
 ## Graphics 2D & 3D
@@ -6679,19 +6679,23 @@ XV1dXV0sWyJSdWxlIiwiQm94ZWQiLGZhbHNlXV0=
 Try to drag and pan using your mouse!
 :::
 
-![](../../Screenshot%202024-03-13%20at%2019.07.00.png)
+![](../../imgs/Screenshot%202024-03-13%20at%2019.07.00.png)
 
 :::note
 Graphics elements are not exported SVG. All primitives are recreated using d3.js and THREE.js from scratch
 :::
 
+## Realtime calculations
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LNP1S4-rX3k?si=CcmzvBy2rNlHpajR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Other languages
 Of course the notebook interface is impossible to use without text annotation, here you do not need to switch to a different cell type. To use you favorite (or not) Markdown type in the first line of a cell `.md` and magic happens
 
-![](../../Screenshot%202024-03-13%20at%2019.05.40.png)
+![](../../imgs/Screenshot%202024-03-13%20at%2019.05.40.png)
 
 By clicking on an arrow on the right, you can hide the source cell and only the output will be displayed. An editor is very flexible you can quite easily add your custom output cell support. 
 
 Or combine WL together with Javascript to visualize your data in incredible way
 
-![](../../Spark-ezgif.com-speed.png)
+![](../../imgs/Spark-ezgif.com-speed.png)
