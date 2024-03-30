@@ -4,7 +4,7 @@ One can utilize component [InputTable](../../Reference/GUI/InputTable.md), that 
 
 *statistics on CPU*
 ```mathematica
-TB = ExampleData[{"Statistics", "CPUPerformance"}] // TableView // CreateFrontEndObject;
+TB = TableView[ExampleData[{"Statistics", "CPUPerformance"}], "Height"->600] // CreateFrontEndObject;
 ```
 
 *slide*

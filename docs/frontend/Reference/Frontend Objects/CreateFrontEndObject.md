@@ -6,7 +6,7 @@ source: https://github.com/JerryI/wljs-editor/blob/dev/src/FrontendObject.wl
 package: wljs-editor
 ---
 
-creates a [container](../../../../../interpreter/Advanced/containers.md) for the inner expression and stores it into frontend objects storage shared with Kernel and Notebook
+creates a reference to the inner expression and stores it into frontend objects storage __as JSON expression__ shared with Kernel and Notebook
 
 ```mathematica
 CreateFrontEndObject[expr_, id_String | Null, opts___Rule] _FrontEndExecutable
@@ -14,7 +14,7 @@ CreateFrontEndObject[expr_, id_String | Null, opts___Rule] _FrontEndExecutable
 
 Returns [`FrontEndExecutable`](FrontEndExecutable.md) object with a given `id` or generated.
 
-See more about it in __[Executables](../../Advanced/Frontend%20interpretation/executables.md)__
+See more about it in __[WLJS Functions](../../Advanced/Frontend%20interpretation/WLJS%20Functions.md)__
 
 :::info
 Is used to force Wolfram Kernel to execute an expression on the frontend (WLJS / browser's side) with an HTML element provided if needed for showing the data.

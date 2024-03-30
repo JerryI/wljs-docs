@@ -9,12 +9,12 @@ acts as an option and a context modifier for [Graphics](Graphics.md) that tells 
 
 __global__
 ```mathematica
-Graphics[..., "TransitionDuration"->timems_Integer]
+Graphics[..., TransitionDuration->timems_Integer]
 ```
 
 __local__
 ```mathematica
-Graphics[{TransitionDuration[timems_Integer], ...}]
+Graphics[{Directive[TransitionDuration->timems_Integer], ...}]
 ```
 
 Value `timems` is __in milliseconds__.

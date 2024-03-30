@@ -11,9 +11,19 @@ One can also make presentations using WLJS Frontend. This is provided by [wljs-r
 
 see full demo video [here](https://www.youtube.com/watch?si=IzYInhddG66pNUHp&v=7cEYJG7nk7U&feature=youtu.be).
 
-:::info
-Advanced tutorials are available by links [Advanced Slides Using WLX](../Advanced/Slides/intro.md) and [animations](../Advanced/Slides/animations.md) etc.
+## See [slides tutorial](../Advanced/Slides/Slides.md)
+
+:::tip
+To __go fullscreen__ mode - press `f` key after focusing on the content of a slide
 :::
+
+```jsx
+.slide
+
+# Title
+
+Paragraph
+```
 
 ## Merge slides from different cells
 To merge the all slides into a single fat presentation use
@@ -32,6 +42,10 @@ Use projector feature
 
 to show slides in a separate window
 :::
+
+## Autoupload images
+Drag and drop a file to the editor
+
 
 ## Plugins
 The package uses also some external plugins

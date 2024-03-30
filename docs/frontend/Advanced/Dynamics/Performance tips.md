@@ -1,17 +1,20 @@
 ---
-draft: true
+draft: false
 ---
 
 ## Performance tips
 You can explicitly choose what will be interpreted on the frontend or backend. We have a few possibilities for our function inside `Line` expression
 
-### All load to backend
+### All load to Kernel
 For this one need to change code to
 
 ```mathematica
-Function[data, lines = With[{y = data}, Table[{Cos[x], Sin[y x]}, {x,0,2Pi, 0.01}]]] // slider
-
-EmittedEvent[slider, 1];
+EventHandler[InputRange[0,4,0.1], Function[data, 
+	lines = With[{y = data}, 
+		Table[{Cos[x], Sin[y x]}, {x,0,2Pi, 0.01}]
+	]
+]];
+% // EventFire (* just to initialize *)
 ```
 
 The last line manually fires an event to initialize symbol `lines`. Then for the output we can write
@@ -24,16 +27,15 @@ One can illustrate this binding as on a picture below
 
 ![](../../../imgs/dynEx1.excalidraw.svg)
 
-The benefits of this approach
-:::note
-Suitable for heavy calculations, high-load on network transport - large latency
-:::
 
-### Gradually involving frontend
+### Using frontend
 One can move an entire `Table` to the browser's side. Let's discard our changes we made to
 
 ```mathematica
-Function[data, v = data] // slider
+EventHandler[InputRange[0,4,0.1], Function[data, 
+	v = data
+]];
+% // EventFire
 ```
 
 ##### Naive approach 1
@@ -41,7 +43,7 @@ The obvious solution for output could be
 
 ```mathematica
 Graphics[{Cyan, Line[
-	Table[{Cos[x], Sin[Offload[v] x]}, {x,0,2$Pi$, 0.01}]
+	Table[{Cos[x], Sin[Offload[v] x]}, {x,0,2$Pi$, 0.1}]
 ]}]
 ```
 
@@ -52,6 +54,7 @@ That will be __a horrible solution__ 👎🏼
 Imagine, each time `Table` iterator `x` goes through the range of values, it creates a sublist of `Sin` and `Cos` functions, that contains dynamic variable `v`.  Then you end up with many instances of `v`. 
 
 :::danger
+
 ```mathematica
 Line[Table[Expression[Offload[symbol]], {i, 10}]]
 ```
@@ -67,7 +70,7 @@ Ok lets try to improve a bit
 
 ```mathematica
 Graphics[{Cyan, Line[
-	Table[{Cos[x], Sin[v x]}, {x,0,2$Pi$, 0.01}] // Offload
+	Table[{Cos[x], Sin[v x]}, {x,0,2Pi, 0.1}] // Offload
 ]}]
 ```
 
@@ -81,7 +84,7 @@ One can minimize the number of instances to just 1 using `With`, as it was shown
 ```mathematica
 Graphics[{Cyan, Line[
 	With[{y = v}, 
-		Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]
+		Table[{Cos[x], Sin[y x]}, {x,0,2Pi, 0.01}]
 	] // Offload
   ]
 }]
@@ -93,7 +96,7 @@ This __will save up a lot of resources__ 👍🏼
 
 :::tip
 ```mathematica
-Line[With[{y = symbol}, Table[Expression[y], {i, 10}]]]
+Line[With[{y = symbol}, Table[AnyExpression[y], {i, 10}]]]
 ```
 Creates only 1 instance of `symbol`. A `Line` function will be called __1__ time per update of a `symbol`.
 :::
@@ -111,7 +114,7 @@ There might be temptation to wrap `Line` expression inside `With` as well, like 
 ```mathematica
 Graphics[{Cyan, With[{y = v}, 
 	Line[
-		Table[{Cos[x], Sin[y x]}, {x,0,2$Pi$, 0.01}]
+		Table[{Cos[x], Sin[y x]}, {x,0,2Pi, 0.01}]
 	]
 ] // Offload}]
 ```
@@ -120,7 +123,6 @@ __This will not work at all__ 👎🏼 because the binding will occur between `G
 
 ![](../../../imgs/dynEx5.excalidraw.svg)
 
-Think about an onion from Shrek movie.
+*Think about an onion from the Shrek movie*
 
-You can download the notebook via following link below
-- __[SliderExample](../../Tutorial/files/SliderExample.wln)__
+

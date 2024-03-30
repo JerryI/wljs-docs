@@ -20,6 +20,6 @@ Once exported, it can be __unpacked back to a normal notebook__ once opened usin
 However,
 
 - all static graphs, 2D, 3D graphics are kept
-- all external images are kept and embedded to a document
+- all external images are kept and embedded to a document (including slides and md)
 - [NotebookStore](../Reference/Cells%20and%20Notebook/NotebookStore.md) data is embedded as well
-- slides as well as all cell are kept
+- slides as well as all cell are kept **press `f` to go fullscreen**

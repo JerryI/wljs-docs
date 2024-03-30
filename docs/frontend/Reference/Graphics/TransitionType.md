@@ -9,18 +9,21 @@ acts as an option and a context modifier for [Graphics](Graphics.md) that tells 
 
 __global__
 ```mathematica
-Graphics[..., "TransitionType"->type_String]
+Graphics[..., TransitionType->type_String]
 ```
 
 __local__
 ```mathematica
-Graphics[{TransitionType[type_String], ...}]
+Graphics[{Directive[TransitionType->type_String], ...}]
 ```
 
 ## Types
 ### `"Linear"`
 
 ### `"CubicInOut"`
+
+### `None`
+No transition. Works best for fast animation
 
 
 ## Example
@@ -29,9 +32,10 @@ Let us see how it works with a moving object
 ```mathematica title="cell 1"
 object = {-1.,0.};
 Graphics[{
-	{TransitionType["Linear"], Disk[(object + {0,0.5}) // Offload, 0.2]},
-	{TransitionType["CubicInOut"], Disk[(object - {0,0.5}) // Offload, 0.2]}
-}, PlotRange->{{-1,1}, {-1,1}}, "TransitionDuration"->500]
+	{Directive[TransitionType -> "Linear"], Disk[(object + {0,0.5}) // Offload, 0.2]},
+	{Directive[TransitionType -> "CubicInOut"], Disk[(object - {0,0}) // Offload, 0.2]},
+   {Directive[TransitionType -> None], Disk[(object - {0,0.5}) // Offload, 0.2]}
+}, PlotRange->{{-1,1}, {-1,1.5}}, "TransitionDuration"->500]
 ```
 
 and then in the next cell

@@ -63,9 +63,9 @@ All WL expressions __are accessible from there as well__
 ```jsx
 .wlx
 
-<TextString>
-	<Now/>
-</TextString>
+GetTime := TextString[Now]
+
+<GetTime/>
 ```
 
 ## Two-columns layout using Flexbox
@@ -87,4 +87,4 @@ Module[{Slider = InputRange[0.1,1,0.1,0.5], Figure, lines},
 ]
 ```
 
-
+![](./../../WLXwidget-ezgif.com-video-to-apng-converter.png)

@@ -15,7 +15,7 @@ Offload[expr_, opts___]
 It has `HoldFirst` attribute. 
 
 :::info
-Please, see the tutorial [Dynamics](../../Tutorial/Dynamics.md)
+Please, see the tutorial [Dynamics](../../Dynamics.md)
 :::
 
 ## Options

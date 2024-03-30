@@ -8,31 +8,30 @@
         "type": "tabs",
         "children": [
           {
-            "id": "46a06ea209ea1791",
+            "id": "30db96a64910fe3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotting Functions/Plot3D.md",
+                "file": "frontend/Advanced/Slides/animations.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b9278553cc687bb9",
+            "id": "14a7bd4f4f6b83e7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Advanced/Slides/animations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Advanced/Slides/animations.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/instruction.md"
+                "file": "frontend/Advanced/Slides/animations.md"
               }
             }
           },
@@ -171,45 +170,46 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b9278553cc687bb9",
+  "active": "30db96a64910fe3e",
   "lastOpenFiles": [
-    "frontend/Troubleshooting/Troubleshooting.md",
-    "frontend/Troubleshooting/Apple Silicon.md",
-    "frontend/Reference/Graphics3D/Graphics3D.md",
-    "frontend/Troubleshooting",
-    "frontend/instruction.md",
-    "frontend/Tutorial/Overview.md",
-    "frontend/Tutorial/Dynamics.md",
-    "frontend/Reference/Decorations/ViewBox.md",
-    "frontend/Reference/Decorations/TableForm.md",
-    "frontend/Reference/Decorations/SVGForm.md",
-    "frontend/Reference/Decorations/Style.md",
-    "frontend/Reference/Decorations/StandardForm.md",
-    "frontend/Reference/Decorations/Row.md",
-    "frontend/Reference/Decorations/MatrixForm.md",
-    "frontend/Reference/Decorations/MakeBoxes.md",
-    "frontend/Reference/Decorations/InterpretationBox.md",
-    "frontend/Reference/Decorations/InputForm.md",
-    "frontend/Reference/Decorations/Iconize.md",
-    "frontend/Reference/Decorations/Grid.md",
-    "frontend/Reference/Decorations/Framed.md",
-    "frontend/Reference/Decorations/Column.md",
+    "frontend/Reference/Plotting Functions/Plot.md",
+    "frontend/Advanced/Slides/animations.md",
+    "frontend/Tutorial/Working with Images.md",
     "frontend/Advanced/Slides/tables.md",
     "frontend/Advanced/Slides/styling.md",
-    "frontend/Advanced/Slides/intro.md",
+    "frontend/Advanced/Slides/Slides.md",
+    "frontend/Export/HTML file.md",
     "frontend/Advanced/Slides/embed-wl.md",
+    "frontend/Cell types/Slides.md",
+    "frontend/Troubleshooting/Troubleshooting.md",
+    "frontend/instruction.md",
+    "frontend/Expressions representation.md",
+    "frontend/Dynamics.md",
+    "frontend/Advanced/Javascript/Communication.md",
+    "frontend/Overview.md",
     "frontend/Advanced/Slides/components.md",
-    "frontend/Advanced/Slides/animations.md",
-    "imgs/3dmoves-ezgif.com-optipng.png",
-    "imgs/UploadACSII-ezgif.com-optipng.png",
-    "imgs/PlotlyAnimate-ezgif.com-optipng.png",
-    "imgs/plotlydin-ezgif.com-optipng.png",
-    "imgs/test1123.png",
-    "imgs/scatter.png",
-    "imgs/new3Dplot.png",
-    "imgs/newddplot.png",
-    "imgs/newpheatlot.png",
-    "imgs/bubble.png",
+    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
+    "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
+    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
+    "frontend/Advanced/Events system/promises.md",
+    "frontend/Advanced/Dynamics/Performance tips.md",
+    "frontend/Advanced/Dynamics/Scoping.md",
+    "frontend/Advanced/Dynamics/Continuous animation.md",
+    "frontend/Advanced/Dynamics/Indicators.md",
+    "Screenshot 2024-03-29 at 20.55.44.png",
+    "Screenshot 2024-03-29 at 20.38.46.png",
+    "Screenshot 2024-03-29 at 20.37.00.png",
+    "Draggable-ezgif.com-optipng.png",
+    "frontend/Reference/Graphics/AnimationFrameListener.md",
+    "frontend/Reference/Decorations/StandardForm.md",
+    "Screenshot 2024-03-29 at 20.22.02.png",
+    "Disk-ezgif.com-video-to-gif-converter.gif",
+    "GOL-ezgif.com-optimize.gif",
+    "Screenshot 2024-03-29 at 18.27.39.png",
+    "Screenshot 2024-03-29 at 17.41.43.png",
+    "RotationMatriix3D-ezgif.com-optipng.png",
+    "frontend/Advanced/Snippets",
+    "frontend/Troubleshooting",
     "imgs/neattt",
     "frontend/Reference/Packages/Graphics/RGBColor,md",
     "frontend/Reference/Slides",
@@ -217,7 +217,6 @@
     "frontend/Reference/Packages/Editor/Remote Cells/Untitled",
     "frontend/Reference/Packages/Editor/Untitled",
     "frontend/Reference/Packages/Editor/Editor",
-    "frontend/Reference/Interpreter",
-    "frontend/Reference/Sound"
+    "frontend/Reference/Interpreter"
   ]
 }

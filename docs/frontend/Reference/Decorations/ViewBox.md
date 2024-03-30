@@ -44,9 +44,6 @@ This mode is still is development
 In general it is possible to update the expression underneath indirectly. For this reason, there are multiple way of accessing this feature
 
 ### From Wolfram Kernel
-:::caution
-This mode is still is development
-:::
 
 Please see methods below
 
@@ -77,7 +74,7 @@ FrontSubmit[ViewBox`OuterExpression["Hello World"], MetaMarker["pp"]]
 ```
 
 ### From Javascript function
-An expression `displayView` is evaluated on [WLJS Interpreter](../../../../../interpreter/intro.md) in the browser with special property provided (see [core](../../Javascript%20API/core.md) and tutorial [Frontend functions](../../Advanced/Frontend%20interpretation/Frontend%20functions.md))
+An expression `displayView` is evaluated on [WLJS Interpreter](../../../../../interpreter/intro.md) in the browser with special property provided (see [core](../../Javascript%20API/core.md) and tutorial [WLJS Functions](../../Advanced/Frontend%20interpretation/WLJS%20Functions.md))
 
 ```js
 core.displayView = async (args, env) => {
@@ -192,9 +189,6 @@ This is basically how `RGBColor`, `DateObject` are implemented
 
 ## Dev notes
 Not all required features are implemented. TODO list:
-- provide `Head` or `Template` options to specify the position of a head and etc
-- [Differed view](#Differed%20view) 
-- [From Wolfram Kernel 1](#From%20Wolfram%20Kernel%201) 
 
 :::warning
 This is just a concept, not a real code

@@ -1,7 +1,6 @@
 ---
 env:
   - WLJS
-  - Wolfram Kernel
 internal: true
 context: Notebook`Editor`FrontendObject`
 package: wljs-editor

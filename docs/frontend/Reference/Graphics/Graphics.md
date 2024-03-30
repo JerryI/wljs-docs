@@ -858,7 +858,7 @@ or together with [MetaMarker](../Dynamics/MetaMarker.md).
 ### `Prolog`
 The same as [`Epilog`](#`Epilog`), but acts before plotting the data.
 
-### `"TransitionType"`
+### `TransitionType`
 See [Dynamics](#Dynamics). The possible values
 
 :::info
@@ -866,6 +866,9 @@ It can also be applied locally, see [TransitionType](TransitionType.md)
 :::
 
 #### `"Linear"`
+
+__THE DEFAULT ONE__
+
 For example
 ```mathematica title="cell 1"
 pt = {-1,0};
@@ -888,7 +891,10 @@ Graphics[{PointSize[0.3], Point[pt // Offload]}, ImageSize->350, PlotRange->{{-1
 
 ![](../../../imgs/ezgif.com-video-to-gif-5.gif)
 
-### `"TransitionDuration"`
+### `None`
+No transition. Works great for fast animations
+
+### `TransitionDuration`
 Sets the duration of any transitions of graphics objects on canvas __in milliseconds__. The default value is `300`. 
 
 :::info
@@ -899,7 +905,7 @@ It can also be applied locally, see [TransitionDuration](TransitionDuration.md)
 One can put `Graphics` into another `Graphics` canvas using [[Inset]]
 
 ## Dynamics
-The time-dependent symbols ([Dynamics](../../Tutorial/Dynamics.md)) are supported on the level of graphics primitives such as [Line](Line.md), [Point](Point.md), [Rectangle](Rectangle.md), [Text](Text.md) and etc... Not all primitives do support dynamic updates, please, check individually. 
+The time-dependent symbols ([Dynamics](../../Dynamics.md)) are supported on the level of graphics primitives such as [Line](Line.md), [Point](Point.md), [Rectangle](Rectangle.md), [Text](Text.md) and etc... Not all primitives do support dynamic updates, please, check individually. 
 
 The full reevaluation of `Graphics` does not happen, that allows to gain much more performance. However, since the dynamic binding is established between individual primitives and symbols, one can make nested constructions like this one
 

@@ -1,0 +1,71 @@
+---
+env:
+  - Wolfram Kernel
+context: JerryI`Notebook`ManipulateUtils`
+package: wljs-manipulate
+source: https://github.com/JerryI/wljs-manipulate/blob/main/Kernel.wl
+---
+```mathematica
+ManipulatePlot[f_, {t, min, max}, {p1, min, max}, ..., opts___]
+```
+
+a dynamic alternative to [Plot](Plot.md) and Mathematica's [Manipulate](../Dynamics/Manipulate.md), that uses input elements and [Offload](../Interpreter/Offload.md) technic to make a fast interactive plots of a given function `f[t, p1, p2...]` 
+
+the set of parameters are not limited and accepts the following forms
+
+```mathematica
+ManipulatePlot[f_, {t, min, max}, {p1}, {p2}, ...]
+```
+
+```mathematica
+ManipulatePlot[f_, {t, min, max}, {p1, min, max}, {p2}, ...]
+```
+
+```mathematica
+ManipulatePlot[f_, {t, min, max}, {p1, min, max, step}, {p2}, ...]
+```
+
+```mathematica
+ManipulatePlot[f_, {t, min, max}, {{p1, initial}, min, max}, {p2}, ...]
+```
+
+where `f` can return `_Real` or `{__Real}`
+
+## Options
+### `"SamplingPoints"`
+A number of points used in sampling. The default value is `200`
+
+It inherits some of [Graphics](../Graphics/Graphics.md) options as well
+
+### `TransitionType`
+See [TransitionType](../Graphics/TransitionType.md)
+
+### `TransitionDuration`
+See [TransitionDuration](../Graphics/TransitionDuration.md)
+
+### `ImageSize`
+Accepts `{width, height}`
+
+### `PlotStyle`
+Specifies colors for each curve
+
+### `Epilog`
+### `Prolog`
+Appends graphics primitives to the plot. See [Graphics](../Graphics/Graphics.md)
+
+## Example
+Plot the simplest sine function
+
+```mathematica
+ManipulatePlot[Sin[w z + p], {z,0,10}, {w, 0, 15.1, 1}, {p, 0, Pi, 0.1}]
+```
+
+![](../../../Manipulate-ezgif.com-video-to-gif-converter.gif)
+
+## Issues
+
+:::danger
+Help needed!
+
+There is no adaptive sampling implemented.
+:::

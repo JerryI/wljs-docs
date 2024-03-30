@@ -60,3 +60,6 @@ The following shortcuts are used for equations typing
 - `Ctrl-6` - make a superscript (power)
 
 You can also make your own custom representation of your symbol like in Mathematica using `MakeBoxes`. Please see [InterpretationBox](../Reference/Decorations/InterpretationBox.md), [Interpretation](../Reference/Decorations/Interpretation.md) and [MakeBoxes](../Reference/Decorations/MakeBoxes.md)
+
+## Autoupload files
+Drag and drop a file to the editor

@@ -45,6 +45,8 @@ AVeryLongFunction[expr__] := SpecialList[expr]
 
 You can use it with the created alias `Ashort`
 
+__An expression will not be revealed__
+
 
 ## Dev notes
 This is a wrapper for [ViewBox](ViewBox.md) with a read-only [EditorView](../GUI/EditorView.md) inside.

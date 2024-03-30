@@ -12,7 +12,7 @@ Spawns a grid of WL editors with an arbitrary objects inside
 Grid[Table[x, {4}, {7}]]
 ```
 
-
+![](../../../Screenshot%202024-03-27%20at%2020.27.42.png)
 
 ## Options
 *Temporary not supported*

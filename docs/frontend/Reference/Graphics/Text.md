@@ -61,7 +61,7 @@ where `event` can be
 
 
 ### Dynamic updates
-For both the position and text content [dynamic updates](../../Tutorial/Dynamics.md) are supported
+For both the position and text content [dynamic updates](../../Dynamics.md) are supported
 
 ```mathematica
 txt = RandomWord[];

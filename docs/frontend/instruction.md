@@ -15,7 +15,7 @@ Works only with Wolfram Engine $\geq$ __13.0.0__. The version __13.0.1__ is more
 
 <h2 style={{'text-align':'center'}}> 
 
-[Overview 🚀](Tutorial/Overview.md) 
+[Overview 🚀](Overview.md) 
 
 </h2>
 
@@ -39,16 +39,16 @@ values={[
 {label: 'Mac', value: 'Mac'},  
 ]}>  
 <TabItem value="Windows">
-- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/WLJS.Notebook.Setup.2.2.2.exe)
+- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.2.5/WLJS.Notebook.Setup.2.2.5.exe)
 </TabItem>  
 <TabItem value="Linux">
-- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/wljs-notebook_2.2.2_amd64.deb)
-- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/WLJS.Notebook-2.2.2.AppImage)
+- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.2.5/wljs-notebook_2.2.5_amd64.deb)
+- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.2.5/WLJS.Notebook-2.2.5.AppImage)
 </TabItem> 
 <TabItem value="Mac">
 
-- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/WLJS.Notebook-2.2.2-arm64.dmg)
-- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.0.0/WLJS.Notebook-2.2.2.dmg)
+- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.2.5/WLJS.Notebook-2.2.5-arm64.dmg)
+- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.2.5/WLJS.Notebook-2.2.5.dmg)
 
 </TabItem>  
 </Tabs>
