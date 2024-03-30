@@ -26907,4 +26907,4 @@ YyIsIkF1dG9tYXRpYyJdXV1d
 `}>{`ContourPlot[x^2 - y^2 == x^3, {x, -2, 2}, {y, -2, 2}, ImageSize->500]`}</Wl>
 
 ## Options
-Styling is limited to the current implementation of [Graphics](../Graphics/Graphics.md)
+Styling is limited to the current implementation of [Graphics](frontend/Reference/Graphics/Graphics.md)

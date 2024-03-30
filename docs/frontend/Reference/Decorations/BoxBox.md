@@ -76,5 +76,5 @@ __Result__
 The neat thing is __you can edit the inner expression__
 
 :::note
-This is how [Ket](Ket.md), `Bra` are implemented for instance
+This is how [Ket](frontend/Reference/Decorations/Ket.md), `Bra` are implemented for instance
 :::

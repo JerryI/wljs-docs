@@ -32,7 +32,7 @@ OTA5ODQwNzgxM10sMV1dXQ==
 `}>{`Graphics[Table[Circle[RandomReal[{-1,1}, 2], 1], {i,10}]]`}</Wl>
 
 ## Parameters
-See [Disk](Disk.md)
+See [Disk](frontend/Reference/Graphics/Disk.md)
 
 ## Dynamics
-Fully support for a radius and coordinates. Use [Offload](../Interpreter/Offload.md)
+Fully support for a radius and coordinates. Use [Offload](frontend/Reference/Interpreter/Offload.md)

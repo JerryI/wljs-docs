@@ -315,4 +315,4 @@ LjBlLTJdXV1dXQ==
 :::
 
 ## Dev notes
-It produces [`Raster`](../Graphics/Raster.md) graphics object placed into [`Graphics`](../Graphics/Graphics.md)
+It produces [`Raster`](frontend/Reference/Graphics/Raster.md) graphics object placed into [`Graphics`](frontend/Reference/Graphics/Graphics.md)

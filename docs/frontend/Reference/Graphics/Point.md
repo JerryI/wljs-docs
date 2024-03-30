@@ -545,7 +545,7 @@ absolute size of a point
 
 ## Methods
 ### `EventHandler`
-One can listen to a several events produced by this primitive using [`EventHandler`](../Misc/Events.md#`EventHandler`)
+One can listen to a several events produced by this primitive using [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`)
 
 ```mathematica
 EventHandler[t_Point, {event_ -> handler_, ...}]
@@ -559,7 +559,7 @@ where `event` can be
 
 
 ## Indexed geometry
-Using it inside [GraphicsComplex](GraphicsComplex.md) allows to specify only the indexes of vertices as arguments similar to faces like in [Indexed geometry](Polygon.md#Indexed%20geometry)
+Using it inside [GraphicsComplex](frontend/Reference/Graphics/GraphicsComplex.md) allows to specify only the indexes of vertices as arguments similar to faces like in [Indexed geometry](frontend/Reference/Graphics/Polygon.md#Indexed%20geometry)
 
 
 ## Dynamics

@@ -5,7 +5,7 @@ draft: false
 
 Making presentation is quite repetitive process. It is quite common to have some common element shared between different slides.
 
-To overcome this small issue one can use [WLX](../../Cell%20types/WLX.md) language to define heading for instance
+To overcome this small issue one can use [WLX](frontend/Cell%20types/WLX.md) language to define heading for instance
 
 ```jsx
 .wlx

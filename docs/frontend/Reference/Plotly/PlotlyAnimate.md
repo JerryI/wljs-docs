@@ -9,7 +9,7 @@ source: https://github.com/JerryI/wljs-plotly/blob/dev/src/Kernel.wl
 PlotlyAnimate[p_PlotlyInstance, data_Association, transition_Association]
 ```
 
-animates efficiently any [Plotly](Plotly.md) graph with a new `data` with a specified `transition`. 
+animates efficiently any [Plotly](frontend/Reference/Plotly/Plotly.md) graph with a new `data` with a specified `transition`. 
 
 :::tip
 See the [official reference](https://plotly.com/javascript/plotlyjs-function-reference/)

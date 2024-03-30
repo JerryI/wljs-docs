@@ -13,7 +13,7 @@ EditorView[expr_String, opts___]
 where `expr` is a string, that represents an expression. It can receive updates and emit, when a user change the inner content.
 
 :::danger
-Editor is usually quite slow, when it comes to updates, because of many decoration widgets used there. Please, __do not use it on a rapid changing data__, consider [TextView](TextView.md) instead.
+Editor is usually quite slow, when it comes to updates, because of many decoration widgets used there. Please, __do not use it on a rapid changing data__, consider [TextView](frontend/Reference/GUI/TextView.md) instead.
 :::
 ## Event generation
 When `"Event"` option is provided, it will send a new data in a form of a string.
@@ -38,7 +38,7 @@ EditorView[series // Offload]
 ```
 
 ## Dev notes
-This is used in [InterpretationBox](../Decorations/InterpretationBox.md) implementation to replace a WL expression using a user-provided WL expression in a code editor.
+This is used in [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md) implementation to replace a WL expression using a user-provided WL expression in a code editor.
 
 
 

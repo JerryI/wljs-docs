@@ -57,7 +57,7 @@ Working in `.js` cells, always clean up the handlers, timers using `this.ondestr
 :::
 
 Download this notebook via a link
-__[CanvasStepByStep](../../Tutorial/files/CanvasStepByStep.wln)__
+__[CanvasStepByStep](frontend/Tutorial/files/CanvasStepByStep.wln)__
 
 ## Making a native Wolfram frontend object
 There is no need in having just one canvas, we can go further and implement sort of a native function, that will behave like `Graphics`, `Plot`.
@@ -96,7 +96,7 @@ This is a __one of the key-features__ implemented in this project.
 :::info
 In order to optimize the dynamic evaluation and updates of graphs for each expression, that implies dynamic binding to the changing symbols, there must be an `update` method defined. 
 :::
-You can think about it if it was an `UpValue` for a symbol, which is called when a change to the nested structure happens. The dynamic binding happens between the nearest [containerized](../../../../interpreter/Advanced/containers.md) expressions. See an explanation here [Dynamics](../../Dynamics.md).
+You can think about it if it was an `UpValue` for a symbol, which is called when a change to the nested structure happens. The dynamic binding happens between the nearest [containerized](../../../../interpreter/Advanced/containers.md) expressions. See an explanation here [Dynamics](frontend/Dynamics.md).
 
 
 
@@ -118,7 +118,7 @@ Apply `RegisterWebObject` to any expression you want to be executed on frontend 
 :::
 
 Download this notebook
-__[ArrayPlotterAdvanced](../../Tutorial/files/ArrayPlotterAdvanced.wln)__
+__[ArrayPlotterAdvanced](frontend/Tutorial/files/ArrayPlotterAdvanced.wln)__
 
 ## Wrapping up into a package
 If you are writing a library it is better to ship it as a package. The package system is a bit different compared to Mathematica's, since it involves at least two languages

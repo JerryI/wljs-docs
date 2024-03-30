@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 The whole notebook interface is made using plain Javascript, HTML powered by a [Wolfram WebServer](https://github.com/KirillBelovTest/HTTPHandler)  and [WLX](https://jerryi.github.io/wlx-docs/) running locally on a Wolfram Kernel. It means you can work remotely by running a server anywhere you want. 
 
-Some calculations are performed partially by your browser, you can have a control over it, [if you want](Dynamics.md) . All UI elements, cells operations are written in Javascript and Wolfram Language and performed by WLJS Interpreter
+Some calculations are performed partially by your browser, you can have a control over it, [if you want](frontend/Dynamics.md) . All UI elements, cells operations are written in Javascript and Wolfram Language and performed by WLJS Interpreter
 
 ![](./../imgs/Interface-1.png)
 
@@ -30,7 +30,7 @@ The last options expands into
 
 ![](./../imgs/Screenshot%202024-03-13%20at%2018.54.44.png)
 
-Project to a window is the most interesting feature here, that allows to evaluate a cell in a new window. It comes handy while demonstrating [presentations](Advanced/Slides/Slides.md).
+Project to a window is the most interesting feature here, that allows to evaluate a cell in a new window. It comes handy while demonstrating [presentations](frontend/Advanced/Slides/Slides.md).
 
 ## Wolfram Language
 When you start typing the language you are using assumed to be WL. By pressing `Shift-Enter` you can start evaluation

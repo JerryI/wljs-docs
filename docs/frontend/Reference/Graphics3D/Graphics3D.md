@@ -31,7 +31,7 @@ LTJdLFsiTGlzdCIsMywtMywtMl1dXSxbIlJHQkNvbG9yIiwwLDEsMF0sWyJPcGFjaXR5IiwwLjNd
 LFsiQ3Vib2lkIixbIkxpc3QiLC0yLC0yLC0yXSxbIkxpc3QiLDIsMiwtMV1dXV0=
 `}>{`Graphics3D[{Blue, Cylinder[], Red, Sphere[{0, 0, 2}], Black, Thick, Line[{{-2, 0, 2}, {2, 0, 2}, {0, 0, 4}, {-2, 0, 2}}], Yellow, Polygon[{{-3, -3, -2}, {-3, 3, -2}, {3, 3, -2}, {3, -3, -2}}], Green, Opacity[.3], Cuboid[{-2, -2, -2}, {2, 2, -1}]}]`}</Wl>
 
-Use plot functions to automatically create [Graphics3D](Graphics3D.md) from different types of data
+Use plot functions to automatically create [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md) from different types of data
 
 ```mathematica
 Plot3D[Sin[x y], {x, 0, 3}, {y, 0, 3}, ColorFunction -> "Rainbow", Mesh -> None]
@@ -4653,7 +4653,7 @@ The support of linear interpolation is limited and probably will be removed in t
 Draws a wireframe box around the objects in the scene. Default is `False`.
 
 ### `BoxRatios`
-Sets the 3D aspect ratio of the whole scene. By the default [Graphics3D](Graphics3D.md) does not rescale the scene. It accepts `{sx_Real, sy_Real, sz_Real}`, where `sx` are real positive numbers.
+Sets the 3D aspect ratio of the whole scene. By the default [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md) does not rescale the scene. It accepts `{sx_Real, sy_Real, sz_Real}`, where `sx` are real positive numbers.
 
 ### `"Lightmap"`
 Sets an URL to an HDR light-map. __Currently only remote sources are supported__.
@@ -4667,6 +4667,6 @@ RTX feature requires a corresponding hardware to handle such heavy computations
 
 
 ## Dynamics
-See primitives [Sphere](Sphere.md), [Polygon](Polygon.md) and etc for it 
+See primitives [Sphere](frontend/Reference/Graphics3D/Sphere.md), [Polygon](frontend/Reference/Graphics3D/Polygon.md) and etc for it 
 
 ![](../../../imgs/ScreenRecording2024-03-24at20.50.18-ezgif.com-optipng.png)

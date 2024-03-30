@@ -10,7 +10,7 @@ adds an offset to an inner graphics primitive
 Offset[{dx_,dy_}, position_]
 ```
 
-or acts as an offset to labels in [Graphics](Graphics.md)
+or acts as an offset to labels in [Graphics](frontend/Reference/Graphics/Graphics.md)
 
 ```mathematica
 Offset[label_String, offset_List]

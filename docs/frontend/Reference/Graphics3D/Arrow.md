@@ -31,7 +31,7 @@ MiwwXSxbIkxpc3QiLDMsMywtMV0sWyJMaXN0Iiw0LDQsMF1dXV0=
 
 
 ## Dynamic updates
-It does support updates. Use [Offload](../Interpreter/Offload.md)
+It does support updates. Use [Offload](frontend/Reference/Interpreter/Offload.md)
 
 :::warning
 Changing the length of an array of points is not supported!

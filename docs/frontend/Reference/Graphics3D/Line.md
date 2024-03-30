@@ -26,7 +26,7 @@ XV1dXV0=
 ### `AbsoluteThickness`
 
 ## Indexed geometry
-The most efficient way of using [Line](Line.md) for many vertices is to wrap it into [GraphicsComplex](GraphicsComplex.md). It provides the list of vertices as  a separate list, while `Line` contains only the indexes for a line
+The most efficient way of using [Line](frontend/Reference/Graphics3D/Line.md) for many vertices is to wrap it into [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md). It provides the list of vertices as  a separate list, while `Line` contains only the indexes for a line
 
 ```mathematica
 v = PolyhedronData["Dodecahedron", "Vertices"] // N;
@@ -36,10 +36,10 @@ GraphicsComplex[v, {Black, Line[i]}] // Graphics3D
 ```
 
 ## Dynamic updates
-It does support updates. Use [Offload](../Interpreter/Offload.md)
+It does support updates. Use [Offload](frontend/Reference/Interpreter/Offload.md)
 
 :::tip
-Updates of geometry using [GraphicsComplex](GraphicsComplex.md) is more efficient for many vertices
+Updates of geometry using [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) is more efficient for many vertices
 :::
 
 :::warning

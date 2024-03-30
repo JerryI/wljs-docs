@@ -9,7 +9,7 @@ origin: https://github.com/JerryI/wljs-graphics-d3/
 SpotLight[color_RGBColor, position_:{10,100,10} | {position_, target_}, angle_:Pi/3, intensity_:100, distance_:0, penumbra_:0, decay_:2]
 ```
 
-places a fake source of spot light in a 3D scene (see [Graphics3D](Graphics3D.md)). The default `target` is $\{0,0,0\}$. 
+places a fake source of spot light in a 3D scene (see [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)). The default `target` is $\{0,0,0\}$. 
 
 ```mathematica
 Graphics3D[{Shadows[True], Polygon[ {{-5,5,-1}, {5,5,-1}, {5,-5,-1}, {-5,-5,-1}}], White, Cuboid[{-1,-1,-1}, {1,1,1}], Shadows[False], PointLight[Red, {1.5075, 4.1557, 2.6129}, 100], Shadows[True], SpotLight[Cyan, {-2.268, -2.144, 3.1635}]}, "Lighting"->None]
@@ -25,7 +25,7 @@ NDQsMy4xNjM1XV1dLFsiUnVsZSIsIidMaWdodGluZyciLCJOb25lIl1d
 `}>{`
 Graphics3D[{Shadows[True], Polygon[ {{-5,5,-1}, {5,5,-1}, {5,-5,-1}, {-5,-5,-1}}], White, Cuboid[{-1,-1,-1}, {1,1,1}], Shadows[False], PointLight[Red, {1.5075, 4.1557, 2.6129}, 100], Shadows[True], SpotLight[Cyan, {-2.268, -2.144, 3.1635}]}, "Lighting"->None]`}</Wl>
 
-For the best effect, use [Shadows](Shadows.md) set to `True` 
+For the best effect, use [Shadows](frontend/Reference/Graphics3D/Shadows.md) set to `True` 
 
 
 ## Dynamics

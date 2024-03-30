@@ -226,10 +226,10 @@ Each time interpreter faces a container it creates an unique object, that scopes
 
 Most importantly containers or executables can be destroyed or updated (see [A remark about sub symbols Methods](#A%20remark%20about%20sub%20symbols%20Methods)) unlike expressions under normal evaluation. 
 
-Another feature is that it automatically binds to other nested containers, which allows to reevaluate expressions from the parent container once a change was made to a child. The last one is a fundament for [Dynamics](../../Dynamics.md)
+Another feature is that it automatically binds to other nested containers, which allows to reevaluate expressions from the parent container once a change was made to a child. The last one is a fundament for [Dynamics](frontend/Dynamics.md)
 
 __TLDR How to create?__
-- [CreateFrontEndObject](../../Reference/Frontend%20Objects/CreateFrontEndObject.md)
+- [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md)
 - [Virtual functions](#Virtual%20containers)
 
 
@@ -246,14 +246,14 @@ core.MyFunction = (args, env) => {
 }
 ```
 
-Global memory is created at each widget creating in the cell editor or scope of [FrontSubmit](../../Reference/Frontend%20IO/FrontSubmit.md). Local memory is scoped for each instance of a container.
+Global memory is created at each widget creating in the cell editor or scope of [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md). Local memory is scoped for each instance of a container.
 
 Depending, where it is supposed to be executed, one can have an access to various page elements. For instance, if it is called from the editor it provides `env.element` - an access to DOM placeholder in the editor.
 
 __Let's make an example that can demonstrate local memory usage__
 
 #### Frontend objects
-One of the possible way on how to execute a given function inside a container is to create a frontend object [CreateFrontEndObject](../../Reference/Frontend%20Objects/CreateFrontEndObject.md). Read more about [Frontend Objects](Frontend%20Objects.md)
+One of the possible way on how to execute a given function inside a container is to create a frontend object [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md). Read more about [Frontend Objects](frontend/Advanced/Frontend%20interpretation/Frontend%20Objects.md)
 
 ##### 🎡 Example 2: Clocks
 
@@ -275,7 +275,7 @@ core.PlaceholderClock.destroy = async (args, env) => {
 }
 ```
 
-Then we can execute in inside the container like any piece of data (see [CreateFrontEndObject](../../Reference/Frontend%20Objects/CreateFrontEndObject.md))
+Then we can execute in inside the container like any piece of data (see [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md))
 
 ```mathematica
 CreateFrontEndObject[PlaceholderClock[]]
@@ -298,7 +298,7 @@ core.Graphics3D.destroy = async (args, env) => {
 }
 ```
 
-One can improve an example above by defining [StandardForm](../../Reference/Decorations/StandardForm.md) for our clocks
+One can improve an example above by defining [StandardForm](frontend/Reference/Decorations/StandardForm.md) for our clocks
 
 ```mathematica
 PlaceholderClock /: MakeBoxes[m_PlaceholderClock, StandardForm] := With[{
@@ -404,7 +404,7 @@ and the destructor
 core.MyFunction.destroy = (args, env) => {}
 ```
 
-Then we can use our function with some dynamic symbols using [Offload](../../Reference/Interpreter/Offload.md) wrapper
+Then we can use our function with some dynamic symbols using [Offload](frontend/Reference/Interpreter/Offload.md) wrapper
 
 ```mathematica
 gameOfLife = {224, {2, {{2, 2, 2}, {2, 1, 2}, {2, 2, 2}}}, {1, 1}};
@@ -440,9 +440,9 @@ An interpreter can automatically create a container for any WLJS symbols, when i
 core.MySymbol.virtual = true
 ```
 
-then `MySymbol` takes all benefits of containers even if it was called anonymously from [FrontSubmit](../../Reference/Frontend%20IO/FrontSubmit.md). 
+then `MySymbol` takes all benefits of containers even if it was called anonymously from [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md). 
 
-For example [Sphere](../../Reference/Graphics3D/Sphere.md), [Line](../../Reference/Graphics/Line.md) are virtual function or symbols, since for each instance of a `Sphere` we need to store its data, position in order to be able to update them correctly and couple to dynamic symbols.
+For example [Sphere](frontend/Reference/Graphics3D/Sphere.md), [Line](frontend/Reference/Graphics/Line.md) are virtual function or symbols, since for each instance of a `Sphere` we need to store its data, position in order to be able to update them correctly and couple to dynamic symbols.
 
 ##### Dynamic symbols
 Any defined Wolfram Language symbol with `OwnValue` like
@@ -451,7 +451,7 @@ Any defined Wolfram Language symbol with `OwnValue` like
 radius = 1;
 ```
 
-being wrapped into [Offload](../../Reference/Interpreter/Offload.md) automatically creates `core.radius` __virtual symbol__
+being wrapped into [Offload](frontend/Reference/Interpreter/Offload.md) automatically creates `core.radius` __virtual symbol__
 
 ```mathematica
 Graphics[Disk[{0.,0.}, Offload[radius]]]
@@ -461,7 +461,7 @@ Graphics[Disk[{0.,0.}, Offload[radius]]]
 Wolfram Kernel __tracks any changes of a symbol with own-values put inside `Offload` wrapper automatically__.
 ::
 
-Since [Disk](../../Reference/Graphics/Disk.md) is also __virtual symbol__, then two containers created for `Disk` and `radius` will be coupled together, i.e.
+Since [Disk](frontend/Reference/Graphics/Disk.md) is also __virtual symbol__, then two containers created for `Disk` and `radius` will be coupled together, i.e.
 
 ```mathematica
 EventHandler[InputRange[0,1,0.1], Function[r, radius = r]]
@@ -477,7 +477,7 @@ will cause `.update` method on `Disk`
 ### Injection into the container's instance/env
 Can be very handy if one want to append new objects to a 2D or 3D scene without reevaluating anything. This is anyway a somewhat `env.scene` object, that it principle can be populated with new graphics in realtime. 
 
-For that one need to attach to some particular instance of Frontend Object and evaluate inside it the desired expression with new data. This can be done using [MetaMarker](../../Reference/Frontend%20IO/MetaMarker.md) and [FrontSubmit](../../Reference/Frontend%20IO/FrontSubmit.md)
+For that one need to attach to some particular instance of Frontend Object and evaluate inside it the desired expression with new data. This can be done using [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md) and [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)
 
 #### 🎡 Example with lines
 Let us define some typical plot and apply a __meta-marker__ on it
@@ -495,6 +495,6 @@ FrontSubmit[Line[{{0.2,0.6},{0.1,0.5}}], MetaMarker["label"]]
 ```
 
 :::tip
-Consider to read [FrontSubmit](../../Reference/Frontend%20IO/FrontSubmit.md) and [MetaMarker](../../Reference/Frontend%20IO/MetaMarker.md)
+Consider to read [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) and [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md)
 :::
 

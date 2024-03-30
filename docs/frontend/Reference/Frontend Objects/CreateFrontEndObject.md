@@ -12,15 +12,15 @@ creates a reference to the inner expression and stores it into frontend objects 
 CreateFrontEndObject[expr_, id_String | Null, opts___Rule] _FrontEndExecutable
 ```
 
-Returns [`FrontEndExecutable`](FrontEndExecutable.md) object with a given `id` or generated.
+Returns [`FrontEndExecutable`](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) object with a given `id` or generated.
 
-See more about it in __[WLJS Functions](../../Advanced/Frontend%20interpretation/WLJS%20Functions.md)__
+See more about it in __[WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)__
 
 :::info
 Is used to force Wolfram Kernel to execute an expression on the frontend (WLJS / browser's side) with an HTML element provided if needed for showing the data.
 :::
 
-This is a fundamental component  for `Graphics`, `InputRange`... and other interactive elements. Event `EventObject` that comes from [event-generators](../../Advanced/Events%20system/event-generators.md) use it to show the UI element.
+This is a fundamental component  for `Graphics`, `InputRange`... and other interactive elements. Event `EventObject` that comes from [event-generators](frontend/Advanced/Events%20system/event-generators.md) use it to show the UI element.
 
 In general, containers is a huge fundamental building blocks for almost everything. 
 
@@ -28,14 +28,14 @@ In general, containers is a huge fundamental building blocks for almost everythi
 ### `"Store"`
 Specifies which to storage to use for an expression (`"Frontend"`, `"Kernel"`, or `All`). The default values is `All`.
 
-Each time you create `Graphics` or any other frontend object, it makes two copies of it: the first one is shared with a browser (WLJS), while  the second one is a *private* copy used by Wolfram Kernel once fetched by [FrontEndRef](FrontEndRef.md) or evaluated for a second time (see [ViewBox](../Decorations/ViewBox.md)).
+Each time you create `Graphics` or any other frontend object, it makes two copies of it: the first one is shared with a browser (WLJS), while  the second one is a *private* copy used by Wolfram Kernel once fetched by [FrontEndRef](frontend/Reference/Frontend%20Objects/FrontEndRef.md) or evaluated for a second time (see [ViewBox](frontend/Reference/Decorations/ViewBox.md)).
 
 
 
 ## Applications
 
 :::info
-For `Graphics`, `InputButton` and etc [CreateFrontEndObject](CreateFrontEndObject.md) is applied automatically, once it is converted to a [StandardForm](../Decorations/StandardForm.md) on output. 
+For `Graphics`, `InputButton` and etc [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md) is applied automatically, once it is converted to a [StandardForm](frontend/Reference/Decorations/StandardForm.md) on output. 
 :::
 
 ### Custom WLJS function inside a container
@@ -54,7 +54,7 @@ CreateFrontEndObject[MyCustomStuff[]]
 ```
 
 :::tip
-Use `TagSetDelayed` on [MakeBoxes](../Decorations/MakeBoxes.md) to skip this procedure, i.e.
+Use `TagSetDelayed` on [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) to skip this procedure, i.e.
 
 ```mathematica
 MyCustomStuff /: MakeBoxes[m_MyCustomStuff, StandardForm] := With[{

@@ -7,7 +7,7 @@ source: https://github.com/JerryI/wljs-editor/blob/dev/src/StandardForm.wl
 ---
 A standard form for representing math, colors, dates, graphics, which comes with visual decorations
 
-__This is a default representation__ used in output cells. You can apply it to expressions before using in [EditorView](../GUI/EditorView.md) and [InputEditor](../GUI/InputEditor.md) and [CellPrint](../Cells%20and%20Notebook/CellPrint.md)
+__This is a default representation__ used in output cells. You can apply it to expressions before using in [EditorView](frontend/Reference/GUI/EditorView.md) and [InputEditor](frontend/Reference/GUI/InputEditor.md) and [CellPrint](frontend/Reference/Cells%20and%20Notebook/CellPrint.md)
 
 ## Example
 Stylize an output form of a symbol

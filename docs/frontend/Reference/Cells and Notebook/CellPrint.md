@@ -17,7 +17,7 @@ where `str` is a text representation of an expression to be inserted into a new 
 By the default it prints an output Wolfram Language cell after a current parent input cell, but you can override it
 
 ### `"After"`
-Specifies a [RemoteCellObj](RemoteCellObj.md) after which a new cell will be inserted. A sequence patterns are also supported
+Specifies a [RemoteCellObj](frontend/Reference/Cells%20and%20Notebook/RemoteCellObj.md) after which a new cell will be inserted. A sequence patterns are also supported
 
 ### `"Before"`
 The same as the previous one, but inserts before the given object

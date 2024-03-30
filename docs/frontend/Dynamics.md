@@ -24,12 +24,12 @@ Always keep in mind, which part of code executes on Wolfram Kernel (server) and 
 :::
 
 ## If you are looking for just Manipulate
-There is a short cut, if you need to see how your curves changes with different parameters - see [ManipulatePlot](../Reference/Plotting%20Functions/ManipulatePlot.md)
+There is a short cut, if you need to see how your curves changes with different parameters - see [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md)
 
 ![](./../Manipulate-ezgif.com-video-to-gif-converter%202.gif)
 
 ## Automatic tracking of held symbols
-It does not mean, that your `Set` statements will be reevaluated on change of a nested symbol, however, for most graphics primitives it works out of the box. Use [Offload](../Reference/Interpreter/Offload.md) wrapper to hold symbols for the frontend
+It does not mean, that your `Set` statements will be reevaluated on change of a nested symbol, however, for most graphics primitives it works out of the box. Use [Offload](frontend/Reference/Interpreter/Offload.md) wrapper to hold symbols for the frontend
 
 ```mathematica
 length = 1;
@@ -167,7 +167,7 @@ fabrik[lengths_, target_, origin_] := Module[{buffer, prev},
 ]
 ```
 
-To show the result will will use a simple [Line](../Reference/Graphics/Line.md) primitive coupled to a `chain` symbol and an inline event-handler coupled to a target point of a chain
+To show the result will will use a simple [Line](frontend/Reference/Graphics/Line.md) primitive coupled to a `chain` symbol and an inline event-handler coupled to a target point of a chain
 
 ```mathematica title="cell 3"
 Graphics[{

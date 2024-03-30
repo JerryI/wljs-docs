@@ -3,13 +3,13 @@ context: System`
 ---
 
 
-A standard form used for representing Wolfram expressions on [Slides](../../Advanced/Slides/Slides.md) and in [WLX](../../Cell%20types/WLX.md) cells
+A standard form used for representing Wolfram expressions on [Slides](frontend/Advanced/Slides/Slides.md) and in [WLX](frontend/Cell%20types/WLX.md) cells
 By the default it applies `Indentity` transformation.
 
-The use cases are the same as for [StandardForm](StandardForm.md). 
+The use cases are the same as for [StandardForm](frontend/Reference/Decorations/StandardForm.md). 
 
 ## Example
-Depending on where an expression is displayed, one can change its visual representation using [MakeBoxes](MakeBoxes.md) tagset, i.e.
+Depending on where an expression is displayed, one can change its visual representation using [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) tagset, i.e.
 
 ```mathematica
 SpecialOne /: MakeBoxes[SpecialOne, StandardForm] := With[{

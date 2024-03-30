@@ -9,7 +9,7 @@ source: https://github.com/JerryI/wljs-graphics-d3/blob/dev/src/kernel.js
 Inset[canvas_Graphics, pos_List]
 ```
 
-a graphics object, that allows to put another [Graphics](Graphics.md) into the canvas. `pos` has to be a 2D vector, that specifies the position of the inset.
+a graphics object, that allows to put another [Graphics](frontend/Reference/Graphics/Graphics.md) into the canvas. `pos` has to be a 2D vector, that specifies the position of the inset.
 
 An example
 

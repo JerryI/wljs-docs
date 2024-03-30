@@ -218,7 +218,7 @@ EventFire[ev, Null] // Echo
 The returned value will be a list of three semi-identical dates.
 
 :::tip
-Use return values to provide [Promise](../../Reference/Misc/Promise.md) objects, when one or more of your chained handlers asks the side, which fired a chain, to wait for some deferred event be happen (see [`Then`](../../Reference/Misc/Promise.md#`Then`)). 
+Use return values to provide [Promise](frontend/Reference/Misc/Promise.md) objects, when one or more of your chained handlers asks the side, which fired a chain, to wait for some deferred event be happen (see [`Then`](frontend/Reference/Misc/Promise.md#`Then`)). 
 :::
 
 ## Merging

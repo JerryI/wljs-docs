@@ -55,7 +55,7 @@ then we can use it in our layout
 ```
 
 :::tip
-Utilize the power of WLX while making [Slides](Slides.md) 
+Utilize the power of WLX while making [Slides](frontend/Cell%20types/Slides.md) 
 :::
 
 All WL expressions __are accessible from there as well__

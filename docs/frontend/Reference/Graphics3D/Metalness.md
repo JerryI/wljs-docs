@@ -5,7 +5,7 @@ package: wljs-graphics3d-threejs
 context: JerryI`Notebook`Graphics3DUtils`
 source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/src/kernel.js
 ---
-specifies metallic property of a graphics primitive (see [MeshPhysicalMaterial](MeshPhysicalMaterial.md))
+specifies metallic property of a graphics primitive (see [MeshPhysicalMaterial](frontend/Reference/Graphics3D/MeshPhysicalMaterial.md))
 
 ```mathematica
 Metalness[i_Real]

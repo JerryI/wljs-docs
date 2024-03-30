@@ -23,7 +23,7 @@ A text label for an element
 A description label for an element
 
 ### `"Topic"`
-The default topic/pattern is `"Default"`. Specifies an event-pattern used on emitting (see more on [`EventFire`](../Misc/Events.md#`EventFire`) patterns topics)
+The default topic/pattern is `"Default"`. Specifies an event-pattern used on emitting (see more on [`EventFire`](frontend/Reference/Misc/Events.md#`EventFire`) patterns topics)
 
 ## Application
 A basic GUI element

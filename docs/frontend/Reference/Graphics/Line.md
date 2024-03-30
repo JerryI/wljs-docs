@@ -31,12 +31,12 @@ gives
 Sqrt[2]
 ```
 
-without [Graphics](Graphics.md) used here.
+without [Graphics](frontend/Reference/Graphics/Graphics.md) used here.
 
 ## Parameters
 There are certain parameters, that can affect the style of a line
 
-### [AbsoluteThickness](AbsoluteThickness.md)
+### [AbsoluteThickness](frontend/Reference/Graphics/AbsoluteThickness.md)
 The default is 1
 
 ```mathematica
@@ -44,7 +44,7 @@ The default is 1
 ```
 Absolute thickness is indifferent to scaling or zooming of a graphics object.
 
-### [RGBColor](RGBColor.md)
+### [RGBColor](frontend/Reference/Graphics/RGBColor.md)
 Specifies the color of a stroke
 
 ```mathematica
@@ -52,7 +52,7 @@ Specifies the color of a stroke
 ```
 
 ## Indexed geometry
-Using it inside [GraphicsComplex](GraphicsComplex.md) allows to specify only the indexes of vertices as arguments similar to faces like in [Indexed geometry](Polygon.md#Indexed%20geometry)
+Using it inside [GraphicsComplex](frontend/Reference/Graphics/GraphicsComplex.md) allows to specify only the indexes of vertices as arguments similar to faces like in [Indexed geometry](frontend/Reference/Graphics/Polygon.md#Indexed%20geometry)
 
 ## Examples
 ### Simple primitive
@@ -271,7 +271,7 @@ NTk1MTc1Njk2NjM4ODQ3Nl1dXV1dLFsiUnVsZSIsIkltYWdlU2l6ZSIsMzUwXV0=
 `}>{`With[{f = {Cos[x] + Sin[x], Sin[x]}}, Graphics[Table[{LABColor[t/(2 Pi), 1, .8], Line[{f, Normalize[D[f, x]] + f}]} /. x -> t, {t, 0, 2 Pi, .1}], ImageSize->350]]`}</Wl>
 
 ### Dynamics
-This is a main ingredient for displaying any dynamic plots, since [Plot](../Plotting%20Functions/Plot.md) function works only for the static data.
+This is a main ingredient for displaying any dynamic plots, since [Plot](frontend/Reference/Plotting%20Functions/Plot.md) function works only for the static data.
 
 #### Manipulation
 For example a live plot of traveling  wave-packet
@@ -282,7 +282,7 @@ line = Table[{x, packet[x, 0]}, {x, 0, 10, 0.1}];
 Graphics[Line[line // Offload], Frame->True, FrameLabel->{{"amplitude"}, {"distance"}}]
 ```
 
-and a [InputRange](../GUI/InputRange.md) to control a time variable
+and a [InputRange](frontend/Reference/GUI/InputRange.md) to control a time variable
 
 ```mathematica title="cell 2"
 EventHandler[InputRange[0,5,0.5, 0], Function[t, 

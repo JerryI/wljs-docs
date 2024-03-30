@@ -5,7 +5,7 @@ update:
 needsContainer: 
 origin: https://reference.wolfram.com/language/ref/ListContourPlot.html
 ---
-A list version of [ContourPlot](ContourPlot.md)
+A list version of [ContourPlot](frontend/Reference/Plotting%20Functions/ContourPlot.md)
 ## Example
 Generate contours from an array of heights
 ```mathematica

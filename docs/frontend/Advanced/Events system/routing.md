@@ -37,7 +37,7 @@ handler[uid_String, func_:Print] := With[{ev = EventClone[uid]},
 ```
 
 :::info
-You do not need to clone [EvaluationCell](../../Reference/Tools/Notebook/EvaluationCell.md) or [ResultCell](../../Reference/Cells%20and%20Notebook/ResultCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
+You do not need to clone [EvaluationCell](../../Reference/Tools/Notebook/EvaluationCell.md) or [ResultCell](frontend/Reference/Cells%20and%20Notebook/ResultCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
 :::
 
 The cool thing, that we can have many of those `handler`s attached to the same event, since it clones it every-time and removes handler function, when you reevaluate the cell. Let us see it on the following example
@@ -55,5 +55,5 @@ handler["random-word-you-like", FrontSubmit[Alert[#]]&]
 
 By pressing the button, it will call the whole list of attached handlers.
 
-This approach comes very handy, when you are constructing complex animation on [Slides](../../Cell%20types/Slides.md)
+This approach comes very handy, when you are constructing complex animation on [Slides](frontend/Cell%20types/Slides.md)
 

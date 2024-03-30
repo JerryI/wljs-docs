@@ -14,7 +14,7 @@ Alert[message_String]
 pops up a default alert message on the frontend
 
 ## Example
-This is purely WLJS function, which has to be called either using [FrontSubmit](../Frontend%20IO/FrontSubmit.md) or [CreateFrontEndObject](../Frontend%20Objects/CreateFrontEndObject.md)
+This is purely WLJS function, which has to be called either using [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) or [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md)
 
 ```mathematica
 FrontSubmit[Alert["Hello World"]]

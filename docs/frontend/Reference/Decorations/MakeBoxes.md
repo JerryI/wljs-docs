@@ -13,34 +13,34 @@ an output handler expression acting as `UpValues` for other expression converts 
 __An expression will not be revealed__
 
 
-`MakeBoxes` is applied only to the output expressions in a normal Wolfram cells, [Slides](../../Advanced/Slides/Slides.md) and  [WLX](../../Cell%20types/WLX.md). It will not affect any intermediate operations.
+`MakeBoxes` is applied only to the output expressions in a normal Wolfram cells, [Slides](frontend/Advanced/Slides/Slides.md) and  [WLX](frontend/Cell%20types/WLX.md). It will not affect any intermediate operations.
 
 :::info
-`MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](../Cells%20and%20Notebook/CellPrint.md), and [EditorView](../GUI/EditorView.md) for various applications.
+`MakeBoxes[..., StandardForm]` is applied to any visible output from the cell. It is also a part of a pipeline for `ToString[..., StandardForm]` used in [CellPrint](frontend/Reference/Cells%20and%20Notebook/CellPrint.md), and [EditorView](frontend/Reference/GUI/EditorView.md) for various applications.
 :::
 
 ## Supported forms
-- [StandardForm](StandardForm.md)
-- [WLXForm](WLXForm.md)
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)
 
 ## Used together with
-- [BoxBox](BoxBox.md)
-- [ViewBox](ViewBox.md)
-- [InterpretationBox](InterpretationBox.md)
+- [BoxBox](frontend/Reference/Decorations/BoxBox.md)
+- [ViewBox](frontend/Reference/Decorations/ViewBox.md)
+- [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md)
 
 ## Applications
 It is a core concept of the Notebook interface
 
 ### Creating interactive objects
 #### Used by
-- [Graphics](../Graphics/Graphics.md)
-- [Graphics3D](../Graphics3D/Graphics3D.md)
-- [ListLinePlotly](../Plotly/ListLinePlotly.md)
-- [Plotly](../Plotting%20Functions/Plotly.md)
-- [EventObject](../Misc/Events.md#`EventObject`)
+- [Graphics](frontend/Reference/Graphics/Graphics.md)
+- [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)
+- [ListLinePlotly](frontend/Reference/Plotly/ListLinePlotly.md)
+- [Plotly](frontend/Reference/Plotting%20Functions/Plotly.md)
+- [EventObject](frontend/Reference/Misc/Events.md#`EventObject`)
 - many more
 
-All graphics and interactive objects are running on WLJS interpreter, which is browser'a minimal Wolfram Language interpreter running on Javascript. It draws graphics, handles users interaction via JS. To explicitly run an expression on browser's side you need to apply [CreateFrontEndObject](../Frontend%20Objects/CreateFrontEndObject.md). This is done automatically using [MakeBoxes](MakeBoxes.md) 
+All graphics and interactive objects are running on WLJS interpreter, which is browser'a minimal Wolfram Language interpreter running on Javascript. It draws graphics, handles users interaction via JS. To explicitly run an expression on browser's side you need to apply [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md). This is done automatically using [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) 
 
 for example
 ```mathematica
@@ -58,7 +58,7 @@ ListPlotly /: MakeBoxes[ListPlotly[args__], StandardForm] := With[{o = CreateFro
 ### Styling symbols
 Please consider to use `StandardForm` for `form` argument to achieve those effects. 
 
-__See [ViewBox](ViewBox.md) and [BoxBox](BoxBox.md)__
+__See [ViewBox](frontend/Reference/Decorations/ViewBox.md) and [BoxBox](frontend/Reference/Decorations/BoxBox.md)__
 ### Data preview
 One can make a preview of the data for example
 
@@ -81,9 +81,9 @@ dataHolder[RandomReal[{-1,1}, 100]] // ListLinePLot
 ![](../../../Screenshot%202024-03-27%20at%2021.03.24.png)
 
 :::info
-[ViewBox](ViewBox.md) __is more performant  compared to__ [InterpretationBox](InterpretationBox.md), when it comes to replacing symbols with [Graphics](../Graphics/Graphics.md) or other interactive objects.
+[ViewBox](frontend/Reference/Decorations/ViewBox.md) __is more performant  compared to__ [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md), when it comes to replacing symbols with [Graphics](frontend/Reference/Graphics/Graphics.md) or other interactive objects.
 :::
 
 :::tip
-For just a one-time decoration - use [Interpretation](Interpretation.md)
+For just a one-time decoration - use [Interpretation](frontend/Reference/Decorations/Interpretation.md)
 :::

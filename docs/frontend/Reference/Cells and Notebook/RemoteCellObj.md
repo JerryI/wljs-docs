@@ -25,7 +25,7 @@ With[{cell = EvaluationCell[]},
 *removes an input cell*
 
 ### `EventHandler`
-There is an adapter for [`EventHandler`](../Misc/Events.md#`EventHandler`) method. You can listen a cell's events from the evaluation Kernel  
+There is an adapter for [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`) method. You can listen a cell's events from the evaluation Kernel  
 
 ```mathematica
 With[{cell = EvaluationCell[]},

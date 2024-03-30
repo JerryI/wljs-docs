@@ -10,7 +10,7 @@ allows to alter the displayed expression
 __An expression will be revealed after 1 evaluation__
 
 :::tip
-For the best performance optimization __apply__ [CreateFrontEndObject](../Frontend%20Objects/CreateFrontEndObject.md) if you use interactive objects as `display` value.
+For the best performance optimization __apply__ [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md) if you use interactive objects as `display` value.
 
 For example
 
@@ -25,7 +25,7 @@ Interpretation[TextView["Hello"] // CreateFrontEndObject, 1]
 
 It will help interpreter to bypass extra layers of complexity.
 
-Note that you don't need to do this for [Graphics](../Graphics/Graphics.md), [Graphics3D](../Graphics3D/Graphics3D.md), [Image](../Graphics/Image.md) and input elements, since it is done __automatically__
+Note that you don't need to do this for [Graphics](frontend/Reference/Graphics/Graphics.md), [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md), [Image](frontend/Reference/Graphics/Image.md) and input elements, since it is done __automatically__
 :::
 ## Example
 Have a look at the following example

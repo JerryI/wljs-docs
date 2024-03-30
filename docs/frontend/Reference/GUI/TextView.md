@@ -16,7 +16,7 @@ represents a text field used for displaying dynamic data
 
 ## Options
 ### `"Event"`
-__If specified__ it acts like an [InputText](InputText.md). 
+__If specified__ it acts like an [InputText](frontend/Reference/GUI/InputText.md). 
 
 ## `"Description"`
 adds description label

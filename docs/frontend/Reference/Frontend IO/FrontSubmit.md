@@ -13,10 +13,10 @@ FrontSubmit[expr_, opts___]
 
 ## Options
 ### `"Window"`
-specifies a window socket, to which an expression will be sent. Use [CurrentWindow](CurrentWindow.md) to fetch a window object from the evaluation context.
+specifies a window socket, to which an expression will be sent. Use [CurrentWindow](frontend/Reference/Frontend%20IO/CurrentWindow.md) to fetch a window object from the evaluation context.
 
 ## Usage with Meta-Markers
-Using an extension [MetaMarker](MetaMarker.md), one can execute an expression in the context of a specified container
+Using an extension [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md), one can execute an expression in the context of a specified container
 
 ```mathematica
 FrontSubmit[expr_, m_MetaMarker, opts___]
@@ -39,7 +39,7 @@ With[{win = CurrentWindow[]},
 ```
 
 
-or another example with a timer [`SetTimeout`](../Misc/Async.md#`SetTimeout`)
+or another example with a timer [`SetTimeout`](frontend/Reference/Misc/Async.md#`SetTimeout`)
 
 ```mathematica
 With[{win = CurrentWindow[]},
@@ -79,7 +79,7 @@ FrontSubmit[ShowReversed["Must be reversed..."]];
 ```
 
 ### Controlling ViewBox
-A typical graphics figure is usually a [ViewBox](../Decorations/ViewBox.md). Here we mark its instance with a unique ID using [MetaMarker](MetaMarker.md)
+A typical graphics figure is usually a [ViewBox](frontend/Reference/Decorations/ViewBox.md). Here we mark its instance with a unique ID using [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md)
 
 ```mathematica
 Plot[x, {x,0,1}, Epilog->{MetaMarker["pp"]}]

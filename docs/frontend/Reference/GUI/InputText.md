@@ -13,7 +13,7 @@ InputText[initial_String, opts___] _EventObject
 represents an input-text field and returns [EventObject](../Events/EventObject.md)
 
 :::tip
-For dynamic read-only indication use [TextView](TextView.md)
+For dynamic read-only indication use [TextView](frontend/Reference/GUI/TextView.md)
 :::
 
 ## Event generation
@@ -54,4 +54,4 @@ EventHandler[text, Print];
 ```
 
 ## Dev notes
-This is a wrapper for [TextView](TextView.md) view-component
+This is a wrapper for [TextView](frontend/Reference/GUI/TextView.md) view-component

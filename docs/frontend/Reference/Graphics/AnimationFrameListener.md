@@ -19,7 +19,7 @@ Therefore this provides a balanced load to the system.
 AnimationFrameListener[trigger_Offload, "Event"->event_String]
 ```
 
-where `trigger` can be any dynamic symbol wrapped in [Offload](../Interpreter/Offload.md), that will be changed each frame, it serves the purpose of a signal, that all calculations are done. `event` is a string representation of [`EventObject`](../Misc/Events.md#`EventObject`) to which a handler function, that recalculates `trigger` is assigned.
+where `trigger` can be any dynamic symbol wrapped in [Offload](frontend/Reference/Interpreter/Offload.md), that will be changed each frame, it serves the purpose of a signal, that all calculations are done. `event` is a string representation of [`EventObject`](frontend/Reference/Misc/Events.md#`EventObject`) to which a handler function, that recalculates `trigger` is assigned.
 
 ## Example
 There is [a famous example](https://community.wolfram.com/groups/-/m/t/122095) of 1000 particles "dancing" with each other
@@ -50,7 +50,7 @@ Graphics[{
 
 ![](../../../imgs/dancers-ezgif.com-video-to-apng-converter.png)
 
-Here we used the same symbol `x` used for drawing our points for triggering [AnimationFrameListener](AnimationFrameListener.md). __It does not cost anything__, since it listens only for change of a symbol and does not read or decode an actual value.
+Here we used the same symbol `x` used for drawing our points for triggering [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md). __It does not cost anything__, since it listens only for change of a symbol and does not read or decode an actual value.
 
 
 

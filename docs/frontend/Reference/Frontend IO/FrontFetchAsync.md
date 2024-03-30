@@ -5,17 +5,17 @@ source: https://github.com/JerryI/wljs-editor/blob/dev/src/FrontSubmitKernel.wl
 package: wljs-editor
 context: Notebook`Editor`Kernel`FrontSubmitService`
 ---
-asynchronously evaluates (aka [FrontSubmit](FrontSubmit.md)) and fetches the resulting expression back to the Wolfram Kernel from the frontend (browser)
+asynchronously evaluates (aka [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)) and fetches the resulting expression back to the Wolfram Kernel from the frontend (browser)
 
 ```mathematica
 FrontFetchAsync[expr_, opts___] _Promise
 ```
 
-and returns [Promise](../Misc/Promise.md) object.
+and returns [Promise](frontend/Reference/Misc/Promise.md) object.
 
 ## Options
 ### `"Window"`
-specifies a window socket, to which an expression will be sent. Use [CurrentWindow](CurrentWindow.md) to fetch a window object from the evaluation context explicitly.
+specifies a window socket, to which an expression will be sent. Use [CurrentWindow](frontend/Reference/Frontend%20IO/CurrentWindow.md) to fetch a window object from the evaluation context explicitly.
 
 ### `"Format"`
 The default expression form used to import raw data acquired from the frontend. It effectively applies `ImportString` on raw JSON data. The possible values

@@ -22,7 +22,7 @@ draws a sphere at coordinates `c` or list of spheres if the depth of `c` is 2.
 
 ## Methods
 ### `EventHandler`
-One can listen to a several events produced by this primitive using [`EventHandler`](../Misc/Events.md#`EventHandler`)
+One can listen to a several events produced by this primitive using [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`)
 
 ```mathematica
 EventHandler[t_Sphere, {event_ -> handler_, ...}]

@@ -6,7 +6,7 @@ package: wljs-graphics3d-threejs
 source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/src/kernel.js
 update: false
 ---
-a 3D version of [Polygon](../Graphics/Polygon.md) used in [Graphics3D](Graphics3D.md)
+a 3D version of [Polygon](frontend/Reference/Graphics/Polygon.md) used in [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)
 
 ```mathematica
 Polygon[vertices_List | {vertices__List} | faces_List]
@@ -39,7 +39,7 @@ LDEsMV0sWyJMaXN0IiwwLDAsMV1dXV0=
 
 
 ## Faces
-The most efficient way of using [Polygon](Polygon.md) for constructing complex objects is to wrap it into [GraphicsComplex](GraphicsComplex.md). It provides the list of faces and colors of each vertex as  separate lists, while `Polygon` contains only the indexes, which forms each polygon
+The most efficient way of using [Polygon](frontend/Reference/Graphics3D/Polygon.md) for constructing complex objects is to wrap it into [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md). It provides the list of faces and colors of each vertex as  separate lists, while `Polygon` contains only the indexes, which forms each polygon
 
 
 ```mathematica
@@ -80,5 +80,5 @@ MTYsOCw0LDE1LDFdXV1dXV0=
 `}>{`v = PolyhedronData["Dodecahedron", "Vertices"] // N; i = PolyhedronData["Dodecahedron", "FaceIndices"]; GraphicsComplex[v, {Polygon[i]}] // Graphics3D `}</Wl>
 
 ## Dynamic updates
-It is possible only using [GraphicsComplex](GraphicsComplex.md) and keeping faces unchanged. 
+It is possible only using [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) and keeping faces unchanged. 
 

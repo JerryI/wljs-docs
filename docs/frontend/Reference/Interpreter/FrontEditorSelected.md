@@ -13,7 +13,7 @@ FrontEndEditorSelected[op_String, Null | data_String] Null | _String
 
 
 :::warning
-This has to be executed in WLJS interpreter, i.e. using [FrontSubmit](../Frontend%20IO/FrontSubmit.md) or [FrontFetchAsync](../Frontend%20IO/FrontFetchAsync.md)
+This has to be executed in WLJS interpreter, i.e. using [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) or [FrontFetchAsync](frontend/Reference/Frontend%20IO/FrontFetchAsync.md)
 :::
 ## op
 There are following operations available

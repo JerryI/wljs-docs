@@ -12,13 +12,13 @@ ZoomAt[k_, position_:{0,0}]
 zooms `k` times at the given position `position`.
 
 :::info
-This has to be called inside the instance of [Graphics](Graphics.md) using [FrontSubmit](../Frontend%20IO/FrontSubmit.md)
+This has to be called inside the instance of [Graphics](frontend/Reference/Graphics/Graphics.md) using [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)
 :::
 
 *All transition effects are applied here as well*
 
 ## Example
-Let us make a simple plot and mark it using [MetaMarker](../Frontend%20IO/MetaMarker.md)
+Let us make a simple plot and mark it using [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md)
 
 ```mathematica
 Plot[x, {x,0,1}, Epilog->{MetaMarker["plot"]}]

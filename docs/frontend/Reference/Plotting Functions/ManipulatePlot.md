@@ -9,7 +9,7 @@ source: https://github.com/JerryI/wljs-manipulate/blob/main/Kernel.wl
 ManipulatePlot[f_, {t, min, max}, {p1, min, max}, ..., opts___]
 ```
 
-a dynamic alternative to [Plot](Plot.md) and Mathematica's [Manipulate](../Dynamics/Manipulate.md), that uses input elements and [Offload](../Interpreter/Offload.md) technic to make a fast interactive plots of a given function `f[t, p1, p2...]` 
+a dynamic alternative to [Plot](frontend/Reference/Plotting%20Functions/Plot.md) and Mathematica's [Manipulate](../Dynamics/Manipulate.md), that uses input elements and [Offload](frontend/Reference/Interpreter/Offload.md) technic to make a fast interactive plots of a given function `f[t, p1, p2...]` 
 
 the set of parameters are not limited and accepts the following forms
 
@@ -35,13 +35,13 @@ where `f` can return `_Real` or `{__Real}`
 ### `"SamplingPoints"`
 A number of points used in sampling. The default value is `200`
 
-It inherits some of [Graphics](../Graphics/Graphics.md) options as well
+It inherits some of [Graphics](frontend/Reference/Graphics/Graphics.md) options as well
 
 ### `TransitionType`
-See [TransitionType](../Graphics/TransitionType.md)
+See [TransitionType](frontend/Reference/Graphics/TransitionType.md)
 
 ### `TransitionDuration`
-See [TransitionDuration](../Graphics/TransitionDuration.md)
+See [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md)
 
 ### `ImageSize`
 Accepts `{width, height}`
@@ -51,7 +51,7 @@ Specifies colors for each curve
 
 ### `Epilog`
 ### `Prolog`
-Appends graphics primitives to the plot. See [Graphics](../Graphics/Graphics.md)
+Appends graphics primitives to the plot. See [Graphics](frontend/Reference/Graphics/Graphics.md)
 
 ## Example
 Plot the simplest sine function

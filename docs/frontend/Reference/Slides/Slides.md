@@ -12,7 +12,7 @@ Slides[] _Slides
 an object that represents current window with slides (even if not created)
 
 ## Constructor
-Once evaluated it returns `Slides` as an object with a current window connection (aka [CurrentWindow](../Frontend%20IO/CurrentWindow.md)) and other properties
+Once evaluated it returns `Slides` as an object with a current window connection (aka [CurrentWindow](frontend/Reference/Frontend%20IO/CurrentWindow.md)) and other properties
 
 :::tip
 Always call the constructor on the window, where the slides will be shown
@@ -22,7 +22,7 @@ Always call the constructor on the window, where the slides will be shown
 It provides a direct access to RevealJS engine
 
 ### `EventFire`
-It extends [`EventFire`](../Misc/Events.md#`EventFire`) acting like an event object
+It extends [`EventFire`](frontend/Reference/Misc/Events.md#`EventFire`) acting like an event object
 
 ```mathematica
 EventFire[o_Slides, APICommand_String, data_]

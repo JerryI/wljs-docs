@@ -9,11 +9,11 @@ update: true
 GraphicsComplex[data_List, primitives_, opts___]
 ```
 
-represents an efficient graphics structure for drawing complex 3D objects (or 2D - see [GraphicsComplex](../Graphics/GraphicsComplex.md)) storing vertices data in `data` variable. It replaces indexes found in `primitives` (can be nested) with a corresponding vertices and colors (if specified)
+represents an efficient graphics structure for drawing complex 3D objects (or 2D - see [GraphicsComplex](frontend/Reference/Graphics/GraphicsComplex.md)) storing vertices data in `data` variable. It replaces indexes found in `primitives` (can be nested) with a corresponding vertices and colors (if specified)
 
-Most plotting functions such as [ListPlot3D](../Plotting%20Functions/ListPlot3D.md) and others use this way showing 3D graphics.
+Most plotting functions such as [ListPlot3D](frontend/Reference/Plotting%20Functions/ListPlot3D.md) and others use this way showing 3D graphics.
 
-The implementation of [GraphicsComplex](GraphicsComplex.md) is based on a low-level THREE.js buffer position [attribute](https://threejs.org/docs/#api/en/core/BufferAttribute) directly written to a GPU memory.
+The implementation of [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) is based on a low-level THREE.js buffer position [attribute](https://threejs.org/docs/#api/en/core/BufferAttribute) directly written to a GPU memory.
 
 ## Supported primitives
 ### `Line`
@@ -108,7 +108,7 @@ Defines sets of colors used for shading vertices
 :::
 
 ## Dynamic updates
-It does support dynamic updates for vertices data and colors. Use [Offload](../Interpreter/Offload.md) wrapper.
+It does support dynamic updates for vertices data and colors. Use [Offload](frontend/Reference/Interpreter/Offload.md) wrapper.
 
 :::warning
 Number of points in a mesh cannot be changed

@@ -1,1 +1,1 @@
-the same as [Ket](Ket.md)
+the same as [Ket](frontend/Reference/Decorations/Ket.md)

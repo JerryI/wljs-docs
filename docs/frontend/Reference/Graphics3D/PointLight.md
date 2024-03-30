@@ -26,5 +26,5 @@ bmcnIiwiTm9uZSJdXQ==
 Graphics3D[{Black,Polygon[ {{-5,5,-1}, {5,5,-1}, {5,-5,-1}, {-5,-5,-1}}], White, Cuboid[{-1,-1,-1}, {1,1,1}], PointLight[Red, {1.5075, 4.1557, 2.6129}, 100], PointLight[Cyan, {-2.4489, -1.9012, 2.8386}, 100]}, "Lighting"->None]`}</Wl>
 
 ## Dynamics
-Only `position` field supports dynamic updates. Use gizmo snippet to manipulate the light source position or [Offload](../Interpreter/Offload.md) keyword.
+Only `position` field supports dynamic updates. Use gizmo snippet to manipulate the light source position or [Offload](frontend/Reference/Interpreter/Offload.md) keyword.
 ![](../../../imgs/fdfd.png)

@@ -7,7 +7,7 @@ needsContainer:
 ---
 
 
-Acts like a [Style](Style.md) box, but wrapped into a frame
+Acts like a [Style](frontend/Reference/Decorations/Style.md) box, but wrapped into a frame
 
 ```mathematica
 Framed[expr_, opts__]

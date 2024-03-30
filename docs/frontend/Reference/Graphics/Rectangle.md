@@ -47,7 +47,7 @@ RegionCentroid[Rectangle[{x1, y1}, {x2, y2}]]
 ```
 
 ### `EventHandler`
-One can listen to a several events produced by this primitive using [`EventHandler`](../Misc/Events.md#`EventHandler`)
+One can listen to a several events produced by this primitive using [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`)
 
 ```mathematica
 EventHandler[t_Rectangle, {event_ -> handler_, ...}]
@@ -60,7 +60,7 @@ where `event` can be
 - `"click"` detects mouse clicks
 
 ## Dynamics
-It fully supports dynamics. Use [Offload](../Interpreter/Offload.md) on coordinates.
+It fully supports dynamics. Use [Offload](frontend/Reference/Interpreter/Offload.md) on coordinates.
 
 ## Example
 A simple bar chart

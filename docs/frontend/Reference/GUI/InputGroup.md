@@ -9,10 +9,10 @@ source: https://github.com/JerryI/wljs-inputs/blob/dev/src/Kernel.wl
 ```mathematica
 InputGroup[events_List | _Association, opts___] _EventObject
 ```
-groups different [event-generators](../../Advanced/Events%20system/event-generators.md) such as [InputRange](InputRange.md), [InputButton](InputButton.md) or in general [EventObject](../Events/EventObject.md) into a new `EventObject`
+groups different [event-generators](frontend/Advanced/Events%20system/event-generators.md) such as [InputRange](frontend/Reference/GUI/InputRange.md), [InputButton](frontend/Reference/GUI/InputButton.md) or in general [EventObject](../Events/EventObject.md) into a new `EventObject`
 
 :::info
-Please consider to read the full guide [event-generators](../../Advanced/Events%20system/event-generators.md)
+Please consider to read the full guide [event-generators](frontend/Advanced/Events%20system/event-generators.md)
 :::
 
 ## Options

@@ -18,7 +18,7 @@ it places a sort of small Excel-like table editor for `list` provided. This is a
 :::
 
 :::tip
-For just viewing tables use [TableView](TableView.md)
+For just viewing tables use [TableView](frontend/Reference/GUI/TableView.md)
 :::
 
 ## Event generation

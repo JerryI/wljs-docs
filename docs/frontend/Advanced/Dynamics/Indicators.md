@@ -5,7 +5,7 @@ While evaluating some experimental data, some live indicators comes handy
 ## Crossbar and coordinates field
 If you are an Origin Pro user, this one is an essential tool for picking data points from your graph.
 
-Essentially we need two things [Line](../../Reference/Graphics/Line.md) and [TextView](../../Reference/GUI/TextView.md)
+Essentially we need two things [Line](frontend/Reference/Graphics/Line.md) and [TextView](frontend/Reference/GUI/TextView.md)
 
 ### Normal way
 
@@ -32,10 +32,10 @@ Plot[Sinc[x], {x,-10,10}, Epilog->{
 }]
 ```
 
-It attaches an [`EventHandler`](../../Reference/Misc/Events.md#`EventHandler`) to a [Point](../../Reference/Graphics/Point.md) object and makes it draggable. Every-time user drags it, an event handler is fired and `point` symbol is updated, that causes updates of all lines
+It attaches an [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`) to a [Point](frontend/Reference/Graphics/Point.md) object and makes it draggable. Every-time user drags it, an event handler is fired and `point` symbol is updated, that causes updates of all lines
 
 :::tip
-You can reduce the lag by tuning [TransitionDuration](../../Reference/Graphics/TransitionDuration.md) to a lower value.
+You can reduce the lag by tuning [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) to a lower value.
 :::
 
 ![](../../../Draggable-ezgif.com-optipng.png)
@@ -84,7 +84,7 @@ Now it is much better
 ![](../../../Screenshot%202024-03-29%20at%2020.38.46.png)
 
 ### Dynamically append to a plot
-One can also append it to a plot dynamically afterwards using [MetaMarker](../../Reference/Frontend%20IO/MetaMarker.md). Sometimes it is better, since all variables are scoped
+One can also append it to a plot dynamically afterwards using [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md). Sometimes it is better, since all variables are scoped
 
 ```mathematica
 placeCrossbar[meta_String, pos_:{0.,0.}] := LeakyModule[{point = pos, text = ""},
@@ -128,7 +128,7 @@ placeCrossbar["plt"]
 
 
 ## Progress bar
-During a long evaluation process we need some sort of indication. For this thing we need a couple of ingredients: [Rectangle](../../Reference/Graphics/Rectangle.md), [CellPrint](../../Reference/Cells%20and%20Notebook/CellPrint.md) 
+During a long evaluation process we need some sort of indication. For this thing we need a couple of ingredients: [Rectangle](frontend/Reference/Graphics/Rectangle.md), [CellPrint](frontend/Reference/Cells%20and%20Notebook/CellPrint.md) 
 
 One can think about it if it was a typical OOP. We need a constructor that returns an instance for tracking the evaluation progress
 

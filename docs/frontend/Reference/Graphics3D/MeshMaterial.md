@@ -9,9 +9,9 @@ context: JerryI`Notebook`Graphics3DUtils`
 MeshMaterial[material_]
 ```
 
-specifies the material used for 3D lighting in [Graphics3D](Graphics3D.md)
+specifies the material used for 3D lighting in [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)
 
-__This is scope-type parameter__ like [Opacity](Opacity.md), [RGBColor](RGBColor.md) and can be applied separately for each object.
+__This is scope-type parameter__ like [Opacity](frontend/Reference/Graphics3D/Opacity.md), [RGBColor](frontend/Reference/Graphics3D/RGBColor.md) and can be applied separately for each object.
 
 ## Materials
 

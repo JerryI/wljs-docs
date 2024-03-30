@@ -23,7 +23,7 @@ A text string of CSS classes used for customizing a button
 A text string with CSS styles applied to an element
 
 ### `"Topic"`
-The default topic/pattern is `"Default"`. Specifies an event-pattern used on emitting (see more on [`EventFire`](../Misc/Events.md#`EventFire`) patterns topics)
+The default topic/pattern is `"Default"`. Specifies an event-pattern used on emitting (see more on [`EventFire`](frontend/Reference/Misc/Events.md#`EventFire`) patterns topics)
 
 
 ## Application

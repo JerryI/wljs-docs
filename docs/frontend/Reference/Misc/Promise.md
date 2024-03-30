@@ -1,12 +1,12 @@
 
 ## `Promise`
-A constructor and also representation of [`EventObject`](Events.md#`EventObject`) which __can be fired only once__ (aka resolved) and even before a corresponding handler is attached
+A constructor and also representation of [`EventObject`](frontend/Reference/Misc/Events.md#`EventObject`) which __can be fired only once__ (aka resolved) and even before a corresponding handler is attached
 
 ```mathematica
 Promise[] _Promise (* constructor *)
 ```
 
-To resolve or reject a promise - use [`EventFire`](Events.md#`EventFire`)
+To resolve or reject a promise - use [`EventFire`](frontend/Reference/Misc/Events.md#`EventFire`)
 
 ```mathematica
 EventFire[p_Promise, Resolve | Reject, data_]
@@ -23,7 +23,7 @@ Then[p_Promise | _List | _, resolve_, reject_]
 where `resolve` and `reject` are any arbitrary functions. This is __non-blocking__ function.
 
 :::info
-The key difference between [`EventHandler`](Events.md#`EventHandler`) and [`Then`](#`Then`) is that [`Then`](#`Then`) __can even be applied to already resolved__ `Promise` object (after it was fired), which will cause an immediate evaluation of `resolve` or `reject` functions. 
+The key difference between [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`) and [`Then`](#`Then`) is that [`Then`](#`Then`) __can even be applied to already resolved__ `Promise` object (after it was fired), which will cause an immediate evaluation of `resolve` or `reject` functions. 
 :::
 
 Being applied to a `List` of `_Promise` objects it will wait until all of them are resolved before evaluating `resolve` function.

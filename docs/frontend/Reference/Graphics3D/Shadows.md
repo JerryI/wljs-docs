@@ -9,7 +9,7 @@ source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/s
 Shadows[True | False]
 ```
 
-a scoped parameter like [RGBColor](RGBColor.md) or [Opacity](Opacity.md), that determines if a light source can cast shadows or a primitive can receive shadows as well.
+a scoped parameter like [RGBColor](frontend/Reference/Graphics3D/RGBColor.md) or [Opacity](frontend/Reference/Graphics3D/Opacity.md), that determines if a light source can cast shadows or a primitive can receive shadows as well.
 
 See 
 

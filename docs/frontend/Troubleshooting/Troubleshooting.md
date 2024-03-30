@@ -11,7 +11,7 @@ $SystemID
 and specify how you run an app (via Desktop App or as a script)
 
 ## App is damaged
-Please see [Apple Silicon](Apple%20Silicon.md)
+Please see [Apple Silicon](frontend/Troubleshooting/Apple%20Silicon.md)
 
 ## Browsers console
 Please locate the developer console (typically `Window` $\rightarrow$  `Toggle Developer Tools` or using a right click with a mouse `Inspect element`) and copy the error messages and a few above it (5-10).

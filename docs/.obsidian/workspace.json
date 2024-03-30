@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Advanced/Slides/components.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Advanced/Slides/components.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Advanced/Slides/components.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md"
+                "file": "frontend/Advanced/Slides/components.md"
               }
             }
           },
@@ -172,8 +172,10 @@
   },
   "active": "30db96a64910fe3e",
   "lastOpenFiles": [
-    "frontend/Reference/Plotting Functions/Plot.md",
+    "frontend/Cell types/WLX.md",
+    "frontend/Advanced/Slides/components.md",
     "frontend/Advanced/Slides/animations.md",
+    "frontend/Reference/Plotting Functions/Plot.md",
     "frontend/Tutorial/Working with Images.md",
     "frontend/Advanced/Slides/tables.md",
     "frontend/Advanced/Slides/styling.md",
@@ -187,7 +189,6 @@
     "frontend/Dynamics.md",
     "frontend/Advanced/Javascript/Communication.md",
     "frontend/Overview.md",
-    "frontend/Advanced/Slides/components.md",
     "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
     "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
     "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
@@ -201,7 +202,6 @@
     "Screenshot 2024-03-29 at 20.37.00.png",
     "Draggable-ezgif.com-optipng.png",
     "frontend/Reference/Graphics/AnimationFrameListener.md",
-    "frontend/Reference/Decorations/StandardForm.md",
     "Screenshot 2024-03-29 at 20.22.02.png",
     "Disk-ezgif.com-video-to-gif-converter.gif",
     "GOL-ezgif.com-optimize.gif",

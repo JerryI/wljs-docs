@@ -9,12 +9,12 @@ source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/s
 MeshPhysicalMaterial[]
 ```
 
-a default material used in [MeshMaterial](MeshMaterial.md). The most accurate material, that can be parameterized with
+a default material used in [MeshMaterial](frontend/Reference/Graphics3D/MeshMaterial.md). The most accurate material, that can be parameterized with
 
-### [Roughness](Roughness.md)
-### [Emissive](Emissive.md)
+### [Roughness](frontend/Reference/Graphics3D/Roughness.md)
+### [Emissive](frontend/Reference/Graphics3D/Emissive.md)
 
-### [Metalness](Metalness.md)
+### [Metalness](frontend/Reference/Graphics3D/Metalness.md)
 
 ## Example
 

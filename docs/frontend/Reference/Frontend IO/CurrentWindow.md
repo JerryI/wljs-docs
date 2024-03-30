@@ -17,4 +17,4 @@ CurrentWindow[] := Global`$EvaluationContext["KernelWebSocket"]
 ```
 
 
-It is used by [FrontSubmit](FrontSubmit.md), [FrontFetch](FrontFetch.md) and [FrontFetchAsync](FrontFetchAsync.md)
+It is used by [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md), [FrontFetch](frontend/Reference/Frontend%20IO/FrontFetch.md) and [FrontFetchAsync](frontend/Reference/Frontend%20IO/FrontFetchAsync.md)

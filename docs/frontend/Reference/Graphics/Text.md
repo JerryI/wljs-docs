@@ -5,7 +5,7 @@ package: wljs-graphics-d3
 update: true
 source: https://github.com/JerryI/wljs-graphics-d3/blob/dev/src/kernel.js
 ---
-Represents an arbitrary text label placed as a [Graphics](Graphics.md) object
+Represents an arbitrary text label placed as a [Graphics](frontend/Reference/Graphics/Graphics.md) object
 
 ```mathematica
 Text["String", {0,0}]
@@ -27,7 +27,7 @@ MF1d
 }, ImageSize->500]`}</Wl>
 
 ### Styling options
-The following options can be provided to [`Style`](Style.md) wrapper
+The following options can be provided to [`Style`](frontend/Reference/Graphics/Style.md) wrapper
 - `FontSize->Number` - 10, 12, 14...
 - `FontFamily->String` - this is basically an SVG attribute, please see [here](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-family). If you have imported any font using CSS, you can also use it. 
 
@@ -47,7 +47,7 @@ cmxkJyIsWyJMaXN0IiwwLDBdXV0sWyJSdWxlIiwiSW1hZ2VTaXplIiw1MDBdXQ==
 
 ## Methods
 ### `EventHandler`
-One can listen to a several events produced by this primitive using [`EventHandler`](../Misc/Events.md#`EventHandler`)
+One can listen to a several events produced by this primitive using [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`)
 
 ```mathematica
 EventHandler[t_Text, {event_ -> handler_, ...}]
@@ -61,7 +61,7 @@ where `event` can be
 
 
 ### Dynamic updates
-For both the position and text content [dynamic updates](../../Dynamics.md) are supported
+For both the position and text content [dynamic updates](frontend/Dynamics.md) are supported
 
 ```mathematica
 txt = RandomWord[];

@@ -26,7 +26,7 @@ open your browser using the corresponding link
 ## Bypassing Gatekeeper
 This is a common solution among most Electron developers, who do not have a paid license form Apple. 
 
-1. Install a Desktop app normally from [instruction](../instruction.md)
+1. Install a Desktop app normally from [instruction](frontend/instruction.md)
 2. Open your terminal app and run the command
 
 ```bash

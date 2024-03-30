@@ -9,9 +9,9 @@ It is a virtual [container](../../../../interpreter/Advanced/containers.md) wrap
 FrontEndVirtual[expr_]
 ```
 
-It works similar to [CreateFrontEndObject](../Frontend%20Objects/CreateFrontEndObject.md), but does not allocate memory and does not assign or create DOM element for displaying (you have to do it manually using [AttachDOM](AttachDOM.md))
+It works similar to [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md), but does not allocate memory and does not assign or create DOM element for displaying (you have to do it manually using [AttachDOM](frontend/Reference/Interpreter/AttachDOM.md))
 ## Examples
-Most use cases comes, when [WLJS](../../../../interpreter/intro.md) is used as a standalone interpreter, but you can simulate it from WLJS Frontend as well using [FrontSubmit](../Frontend%20IO/FrontSubmit.md)
+Most use cases comes, when [WLJS](../../../../interpreter/intro.md) is used as a standalone interpreter, but you can simulate it from WLJS Frontend as well using [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)
 
 *cell 1*
 ```html
@@ -41,7 +41,7 @@ FrontSubmit[With[{},
 ] // Offload]
 ```
 
-Without a container [`Graphics`](../Graphics/Graphics.md) just will not work properly.
+Without a container [`Graphics`](frontend/Reference/Graphics/Graphics.md) just will not work properly.
 
 <Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlJHQkNvbG9yIiwwLjAsMS4wLDEuMF0sWyJMaW5lIixbIkxp
 c3QiLFsiTGlzdCIsWyJMaXN0IiwwLDBdLFsiTGlzdCIsMS4wOTY0MTU5MTYyNzk0NzMsLTAuOTk5

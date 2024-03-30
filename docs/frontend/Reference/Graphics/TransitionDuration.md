@@ -5,7 +5,7 @@ package: wljs-graphics-d3
 context: JerryI`Notebook`Graphics2D`
 source: https://github.com/JerryI/wljs-graphics-d3/blob/dev/src/Kernel.wl
 ---
-acts as an option and a context modifier for [Graphics](Graphics.md) that tells the transition duration for graphics primitives (coordinate changes, and etc) once one of dependencies has been updated
+acts as an option and a context modifier for [Graphics](frontend/Reference/Graphics/Graphics.md) that tells the transition duration for graphics primitives (coordinate changes, and etc) once one of dependencies has been updated
 
 __global__
 ```mathematica

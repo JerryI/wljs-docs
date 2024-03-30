@@ -736,7 +736,7 @@ global opacity of an object
 stroke color
 
 ## Indexed geometry
-Using [GraphicsComplex](GraphicsComplex.md) one can specify only faces with indexes for each polygon, while vertex data is stored in a separate array.
+Using [GraphicsComplex](frontend/Reference/Graphics/GraphicsComplex.md) one can specify only faces with indexes for each polygon, while vertex data is stored in a separate array.
 
 For example
 

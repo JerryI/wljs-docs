@@ -12,4 +12,4 @@ Explicitly attaches an DOM element to a [container](../../../../interpreter/Adva
 AttachDOM[id_String]
 ```
 
-It is defined only as WLJS function, you need to use [FrontSubmit](../Frontend%20IO/FrontSubmit.md) or [CreateFrontEndObject](../Frontend%20Objects/CreateFrontEndObject.md) to use it
+It is defined only as WLJS function, you need to use [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) or [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md) to use it

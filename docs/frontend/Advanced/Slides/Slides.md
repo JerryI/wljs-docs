@@ -5,10 +5,10 @@ draft: false
 # Basics
 
 :::info
-You can use pure __Markdown__, __HTML__, __CSS__ or [WLX](../../Cell%20types/WLX.md) languages while making slides
+You can use pure __Markdown__, __HTML__, __CSS__ or [WLX](frontend/Cell%20types/WLX.md) languages while making slides
 :::
 
-This is provided by [wljs-revealjs](https://github.com/JerryI/wljs-revealjs), that integrates an amazing framework [RevealJS](https://revealjs.com) and [WLX](../../Cell%20types/WLX.md) language to provide components approach on making presentations as well as adding interactivity to them and basically all features of frontend's cells.
+This is provided by [wljs-revealjs](https://github.com/JerryI/wljs-revealjs), that integrates an amazing framework [RevealJS](https://revealjs.com) and [WLX](frontend/Cell%20types/WLX.md) language to provide components approach on making presentations as well as adding interactivity to them and basically all features of frontend's cells.
 
 The aim of this approach is to simplify the process of making slides, decouple the content from its appearance and embrace the power of data-driven slides. 
 
@@ -154,7 +154,7 @@ And some content
 The result will be the same. Additional tags we used `div` are necessary to help WLX to differentiate between the first and the second arguments of `Columns` similar to how `li` and `ul` tags are used to make lists.
 
 :::note
-See advanced guide on components by the link [components](components.md)
+See advanced guide on components by the link [components](frontend/Advanced/Slides/components.md)
 :::
 
 ## Images
@@ -218,7 +218,7 @@ m \\mathbf{a} = \\mathbf{F}
 $$
 ```
 
-If you need to highlight WL code, or JS, or HTML - see [embed-wl](embed-wl.md). 
+If you need to highlight WL code, or JS, or HTML - see [embed-wl](frontend/Advanced/Slides/embed-wl.md). 
 
 ## Embedding PDF or websites
 We have a full power of HTML. To embed a local PDF document from the folder of your notebook
@@ -276,7 +276,7 @@ Fragment changes the color <!-- .element: class="fragment highlight-red" data-fr
 See more available transitions at [RevealJS](https://revealjs.com/fragments/).
 
 :::note
-Custom transitions are not supported, unless it is made using [Graphics](../../Reference/Graphics/Graphics.md) using [animations](animations.md) approach
+Custom transitions are not supported, unless it is made using [Graphics](frontend/Reference/Graphics/Graphics.md) using [animations](frontend/Advanced/Slides/animations.md) approach
 :::
 
 ### Events
@@ -315,7 +315,7 @@ The identifier of [SlideEventListener](../../Reference/Tools/Slides/SlideEventLi
 - `"fragment-INDEX"` - is fired when a fragment number `INDEX` has been revealed
 
 :::info
-To learn more about on how to utilize it for animations and etc, please, read [animations](animations.md) section.
+To learn more about on how to utilize it for animations and etc, please, read [animations](frontend/Advanced/Slides/animations.md) section.
 :::
 
 ## WL expressions and data-driven slides
@@ -374,7 +374,7 @@ Compute and plot the shortest tour through 100 random points:
 
 ![](../../../imgs/ezgif.com-optimize-3.gif)
 
-For more advanced stuff see [animations](animations.md)
+For more advanced stuff see [animations](frontend/Advanced/Slides/animations.md)
 
 ## Pointer
 Pointer is provided by a separate [plugin](https://github.com/burnpiro/reveal-pointer) used by RevealJS. To toggle it press `q` when the focus is on a slide

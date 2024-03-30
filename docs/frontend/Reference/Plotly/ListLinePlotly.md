@@ -18,15 +18,15 @@ ListLinePlotly[{{x1,y1}, ... {xn,yn}}]
 ListLinePlotly[{y1, y2, y3 ...}]
 ```
 
-mimics the native function [ListLinePlot](../Plotting%20Functions/ListLinePlot.md) using Plotly library (see [Plotly](../Plotting%20Functions/Plotly.md)). It is limited, there is __no options supported__.
+mimics the native function [ListLinePlot](frontend/Reference/Plotting%20Functions/ListLinePlot.md) using Plotly library (see [Plotly](frontend/Reference/Plotting%20Functions/Plotly.md)). It is limited, there is __no options supported__.
 
-An alternative plotting function to [ListLinePlot](../Plotting%20Functions/ListLinePlot.md), that supports dynamic updates, panning, zoom out of the box
+An alternative plotting function to [ListLinePlot](frontend/Reference/Plotting%20Functions/ListLinePlot.md), that supports dynamic updates, panning, zoom out of the box
 
 ## Dynamics
-It fully supports dynamic updates. This is the first ever high order function, that does this unlike [ListLinePlot](../Plotting%20Functions/ListLinePlot.md). 
+It fully supports dynamic updates. This is the first ever high order function, that does this unlike [ListLinePlot](frontend/Reference/Plotting%20Functions/ListLinePlot.md). 
 
 :::tip
-To use full features of Plotly, please, use [Plotly](../Plotting%20Functions/Plotly.md) and [PlotlyAnimate](PlotlyAnimate.md) or [PlotlyAddTraces](PlotlyAddTraces.md)
+To use full features of Plotly, please, use [Plotly](frontend/Reference/Plotting%20Functions/Plotly.md) and [PlotlyAnimate](frontend/Reference/Plotly/PlotlyAnimate.md) or [PlotlyAddTraces](frontend/Reference/Plotly/PlotlyAddTraces.md)
 :::
 
 ## Example

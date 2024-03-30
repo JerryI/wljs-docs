@@ -5,7 +5,7 @@ package: wljs-graphics-d3
 update: true
 source: https://github.com/JerryI/wljs-graphics-d3/blob/dev/src/kernel.js
 ---
-draws a filled [Circle](Circle.md)
+draws a filled [Circle](frontend/Reference/Graphics/Circle.md)
 
 ```mathematica
 Disk[{x_, y_}, r_]
@@ -38,7 +38,7 @@ ODEwNzM1NDQ5MjA0NSwwLjU3OTY2OTA4NTc3MzYzODhdLDFdLFsiRGlzayIsWyJMaXN0IiwwLjMz
 NjE0NTUzOTk4NzI1MTA1LC0yLjM1Nzg5NDE0MTM4MzA1NDVlLTJdLDFdXV0=
 `}>{`Graphics[Table[Disk[RandomReal[{-1,1}, 2], 1], {i,10}]]`}</Wl>
 ## Dynamics
-Fully support for a radius and coordinates. Use [Offload](../Interpreter/Offload.md)
+Fully support for a radius and coordinates. Use [Offload](frontend/Reference/Interpreter/Offload.md)
 
 ## Parameters
 
@@ -67,7 +67,7 @@ Q29sb3IiLDAsMCwxXSxbIkRpc2siLFsiTGlzdCIsMCwwXSwxXV1d
 
 
 ### `Opacity`
-Defines opacity for a primitive (see [[Opacity]])
+Defines opacity for a primitive (see [[frontend/Reference/Graphics/Opacity]])
 
 ```mathematica
 {Opacity[0.5], Red, Disk[{-0.5,0}, 1], Blue, Disk[{0.5,0}, 1]}
@@ -81,7 +81,7 @@ dCIsMC41LDBdLDFdXV0=
 
 ## Methods
 ### `EventHandler`
-One can listen to a several events produced by this primitive using [`EventHandler`](../Misc/Events.md#`EventHandler`)
+One can listen to a several events produced by this primitive using [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`)
 
 ```mathematica
 EventHandler[t_Disk, {event_ -> handler_, ...}]

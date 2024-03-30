@@ -10,7 +10,7 @@ context: Notebook`Kernel`PlotlyExtension`
 Plotly[f, {x, xmin, xmax}]
 ```
 
-mimics the behaviour of a native [Plot](../Plotting%20Functions/Plot.md) using a well-known [PlotlyJS](https://plotly.com/javascript/) library. It is quite limited and __does not support options__.
+mimics the behaviour of a native [Plot](frontend/Reference/Plotting%20Functions/Plot.md) using a well-known [PlotlyJS](https://plotly.com/javascript/) library. It is quite limited and __does not support options__.
 
 ```mathematica
 Plotly[data_Association, layout_Association:Null] _PlotlyInstance
@@ -28,7 +28,7 @@ This is 1:1 correspondence to a normal Plotly API. Please see [Reference](https:
 Once called it returns `PlotlyInstance`
 
 ## Dynamics
-It fully supports dynamics, but in a different way compared to other functions. Please see for that [PlotlyAddTraces](PlotlyAddTraces.md), [PlotlyAnimate](PlotlyAnimate.md) and etc.
+It fully supports dynamics, but in a different way compared to other functions. Please see for that [PlotlyAddTraces](frontend/Reference/Plotly/PlotlyAddTraces.md), [PlotlyAnimate](frontend/Reference/Plotly/PlotlyAnimate.md) and etc.
 
 ## Examples
 

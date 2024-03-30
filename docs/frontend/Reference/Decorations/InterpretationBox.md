@@ -19,11 +19,11 @@ where `display` will be shown in the output cell, instead of `expr`, keeping `ex
 :::
 
 :::danger
-`display` must be Boxes, if you want to use regular WL expressions, consider [Interpretation](Interpretation.md)
+`display` must be Boxes, if you want to use regular WL expressions, consider [Interpretation](frontend/Reference/Decorations/Interpretation.md)
 :::
 
 :::tip
-Please see [BoxBox](BoxBox.md) and [ViewBox](ViewBox.md) for an advanced expression decorations
+Please see [BoxBox](frontend/Reference/Decorations/BoxBox.md) and [ViewBox](frontend/Reference/Decorations/ViewBox.md) for an advanced expression decorations
 :::
 
 ## Applications
@@ -49,4 +49,4 @@ __An expression will not be revealed__
 
 
 ## Dev notes
-This is a wrapper for [ViewBox](ViewBox.md) with a read-only [EditorView](../GUI/EditorView.md) inside.
+This is a wrapper for [ViewBox](frontend/Reference/Decorations/ViewBox.md) with a read-only [EditorView](frontend/Reference/GUI/EditorView.md) inside.

@@ -24,11 +24,11 @@ LDEsMV1dXV0sWyJSdWxlIiwiSW1hZ2VTaXplIiwzNTBdXQ==
 `}>{`Graphics[{Arrow[{{0,0}, {1,1}}]}, ImageSize->350]`}</Wl>
 
 :::warning
-Does work only with [Graphics](Graphics.md) (2D). Dynamics is not supported for now
+Does work only with [Graphics](frontend/Reference/Graphics/Graphics.md) (2D). Dynamics is not supported for now
 :::
 
 ## Dynamics
-Fully supports. Use [Offload](../Interpreter/Offload.md) keyword for that
+Fully supports. Use [Offload](frontend/Reference/Interpreter/Offload.md) keyword for that
 
 ## Options
 Not available at the moment

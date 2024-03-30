@@ -1,7 +1,7 @@
 
 
 
-One can also make presentations using WLJS Frontend. This is provided by [wljs-revealjs](https://github.com/JerryI/wljs-revealjs), that integrates [RevealJS](https://revealjs.com) and [WLX](WLX.md) language to provide components approach on making presentations as well as add interactivity and all features of frontend's cells like this
+One can also make presentations using WLJS Frontend. This is provided by [wljs-revealjs](https://github.com/JerryI/wljs-revealjs), that integrates [RevealJS](https://revealjs.com) and [WLX](frontend/Cell%20types/WLX.md) language to provide components approach on making presentations as well as add interactivity and all features of frontend's cells like this
 
 <div style={{'text-align':'center'}}>
 
@@ -11,7 +11,7 @@ One can also make presentations using WLJS Frontend. This is provided by [wljs-r
 
 see full demo video [here](https://www.youtube.com/watch?si=IzYInhddG66pNUHp&v=7cEYJG7nk7U&feature=youtu.be).
 
-## See [slides tutorial](../Advanced/Slides/Slides.md)
+## See [slides tutorial](frontend/Advanced/Slides/Slides.md)
 
 :::tip
 To __go fullscreen__ mode - press `f` key after focusing on the content of a slide
