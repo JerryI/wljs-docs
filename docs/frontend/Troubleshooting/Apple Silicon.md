@@ -1,6 +1,6 @@
 > App is damaged, please, move it to the trash bin
 
-We do not have an official license from Apple to distribute an app properly (also no sponsors that could support our project enough to pay for developer subscription)
+__If it is your case__ something went wrong with our notarization process in Apple
 
 There is a few options for Mac M1/M2 users on how to overcome this issue
 

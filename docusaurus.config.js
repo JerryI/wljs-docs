@@ -35,8 +35,8 @@ const config = {
   title: 'WLJS Notebook',
   tagline: 'Documentation',
   favicon: 'img/favicon.ico',
-  
-  /*url: 'http://127.0.0.1:20540',
+  /*
+  url: 'http://127.0.0.1:20540',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
