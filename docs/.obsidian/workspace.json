@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/components.md",
+                "file": "frontend/Reference/Interpreter/FrontEditorSelected.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/components.md",
+                "file": "frontend/Reference/Interpreter/FrontEditorSelected.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/components.md",
+                "file": "frontend/Reference/Interpreter/FrontEditorSelected.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/components.md"
+                "file": "frontend/Reference/Interpreter/FrontEditorSelected.md"
               }
             }
           },
@@ -172,8 +172,8 @@
   },
   "active": "30db96a64910fe3e",
   "lastOpenFiles": [
-    "frontend/Cell types/WLX.md",
     "frontend/Advanced/Slides/components.md",
+    "frontend/Cell types/WLX.md",
     "frontend/Advanced/Slides/animations.md",
     "frontend/Reference/Plotting Functions/Plot.md",
     "frontend/Tutorial/Working with Images.md",
