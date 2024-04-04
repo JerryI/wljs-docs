@@ -194,6 +194,8 @@ Expected low-temperature spin configuration <!-- .element: class="fragment fade-
 <SlideEventListener Id={"sslide"}/>
 ```
 
+![](./../../../SpinAnimation%20from%20ezgif.gif)
+
 
 ### Example 3
 Zoom in to the graph
@@ -230,6 +232,8 @@ Zoom <!-- .element: class="fragment fade-in" data-fragment-index="1" -->
 <SlideEventListener Id={"vslide"}/>
 ```
 
+
+![](./../../../ZoomIn%20video%20to%20gif.gif)
 
 ## Append graphics to a slide
 [Meta-markers](../../../../interpreter/Advanced/meta-markers.md) can work well in a case if one wants to append some data on the existing graphics canvas

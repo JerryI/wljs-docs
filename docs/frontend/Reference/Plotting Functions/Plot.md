@@ -7476,6 +7476,11 @@ Affects the number of sampling points to reduce the load
 Change the initial sampling points
 - a number
 
+
+### `PlotLegends`
+Is quite limited. Accepts `Automatic`, `"Expressions"` or `List` of expressions to show
+
+
 ### `PlotRange`
 Change the lot range to show the whole area
 ```mathematica

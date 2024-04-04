@@ -108,6 +108,29 @@ Line[symbol//Offload], ... Line[symbol//Offload]
 This is ok, each `Line` is bounded to its own `symbol` instance. Therefore on update of `symbol`, each `Line` expression will be reevaluated once.
 :::
 
+### If duplicating is unavoidable
+If you have to update two properties of a dynamic expression such as [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) which are `VertexColors` and list of vertices for this example, it is unavoidable to use two [Offload](frontend/Reference/Interpreter/Offload.md) s there
+
+```mathematica
+GraphicsComplex[vertices // Offload, {Polygon[triangles]}, "VertexColors"->Offload[colors]]
+```
+
+then if later in the code
+
+```mathematica
+vertices = ...;
+colors = ...;
+```
+
+will cause the reevaluation of [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) __two times__ for the same set of data. However, there is a way on how to suppress the second one using options of [Offload](frontend/Reference/Interpreter/Offload.md)
+
+```mathematica
+GraphicsComplex[vertices // Offload, {Polygon[triangles]}, "VertexColors"->Offload[colors, "Static"->True]]
+```
+
+Here `colors` will not be bounded to `GraphicsComplex`. However a new values is going to be read anyway once `vertices` has been updated.
+
+
 ### Possible pitfall with `With`
 There might be temptation to wrap `Line` expression inside `With` as well, like that
 
@@ -126,3 +149,27 @@ __This will not work at all__ 👎🏼 because the binding will occur between `G
 *Think about an onion from the Shrek movie*
 
 
+## Numeric arrays
+When it goes to transfer any points as nested lists, it is better to wrap them into `NumericArray`. It tells WLJS Interpreter on the browser, that we can expect only numbers or lists of numbers, there which reduces the load while parsing them.
+
+For example - [dynamic](frontend/Reference/Interpreter/Offload.md) symbols
+
+```mathematica
+(* every update *)
+symbol = someFunctionThatReturnsList
+```
+
+*20 FPS*
+
+![](./../../../No%20Numeric%20Array.gif)
+
+then using `NumericArray`
+
+```mathematica
+(* every update *)
+symbol = NumericArray[someFunctionThatReturnsList]
+```
+
+*~40 FPS*
+
+![](./../../../NumericArray%20video.gif)

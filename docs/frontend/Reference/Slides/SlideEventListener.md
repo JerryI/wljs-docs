@@ -37,6 +37,17 @@ a string representation of an event identifier, that will be used
 ## Event generation
 It fires an event for a given slide (where it is placed) when it is revealed with a topic `"Slide"` and for each slide-fragment revealed `"fragment-x"` topic / pattern.
 
+i.e.
+
+### Patterns
+#### `"Slide"`
+fires when a slide was revealed (even the first one)
+#### `"fragment-_"`
+where `_` is a number of a fragment revealed on a slide
+#### `"Mounted"`
+fires, once an HTML content for a slide is ready
+
+
 Try
 
 ```mathematica
