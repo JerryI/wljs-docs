@@ -62,7 +62,7 @@ Hamlet's soliloquy, with repeated words successively has more contrast backgroun
 
 ```mathematica
 Take[With[{data = ExampleData[{"Text", "ToBeOrNotToBe"}, "Words"]}, 
-   MapIndexed[Style[#, Background->RGBColor[1 - 2 Count[Take[data, First[#2]], #]/25, 1,1]] &, data]], 50]
+   MapIndexed[Style[#, Background->RGBColor[1 - 2 Count[Take[data, First[#2]], #]/25, 1,1]] &, data]], 40]
 ```
 
-![](../../../Screenshot%202024-03-29%20at%2020.22.02.png)
+![](./../../../Screenshot%202024-04-04%20at%2022.31.03.png)

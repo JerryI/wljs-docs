@@ -2,7 +2,7 @@
 sidebar_position: 1
 draft: false
 ---
-# Basics
+# Slides
 
 :::info
 You can use pure __Markdown__, __HTML__, __CSS__ or [WLX](frontend/Cell%20types/WLX.md) languages while making slides

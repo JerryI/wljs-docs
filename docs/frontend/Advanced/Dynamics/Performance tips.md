@@ -128,8 +128,7 @@ will cause the reevaluation of [GraphicsComplex](frontend/Reference/Graphics3D/G
 GraphicsComplex[vertices // Offload, {Polygon[triangles]}, "VertexColors"->Offload[colors, "Static"->True]]
 ```
 
-Here `colors` will not be bounded to `GraphicsComplex`. However a new values is going to be read anyway once `vertices` has been updated.
-
+Here `colors` __will not be bounded to__ `GraphicsComplex`. That results in __only a single reevaluation__ per updates of `colors` and `vertices`. However a new values is going to be read anyway once `vertices` has been updated.
 
 ### Possible pitfall with `With`
 There might be temptation to wrap `Line` expression inside `With` as well, like that
