@@ -10,9 +10,6 @@ MakeBoxes[expr_, form_]
 
 an output handler expression acting as `UpValues` for other expression converts it to a decorated form, which is then rendered by an editor.
 
-__An expression will not be revealed__
-
-
 `MakeBoxes` is applied only to the output expressions in a normal Wolfram cells, [Slides](frontend/Advanced/Slides/Slides.md) and  [WLX](frontend/Cell%20types/WLX.md). It will not affect any intermediate operations.
 
 :::info

@@ -20,6 +20,7 @@ const scripts = [
   */
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/interpreter.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/core.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/objects.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-sharedlib-d3@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@dev/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@dev/dist/kernel.js"

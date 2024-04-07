@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Performance tips.md",
+                "file": "frontend/Reference/Decorations/Style.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Performance tips.md",
+                "file": "frontend/Reference/Decorations/Style.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Performance tips.md",
+                "file": "frontend/Reference/Decorations/Style.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Performance tips.md"
+                "file": "frontend/Reference/Decorations/Style.md"
               }
             }
           },
@@ -197,12 +197,20 @@
   },
   "active": "f767a23bf114392e",
   "lastOpenFiles": [
-    "frontend/Advanced/Slides/Slides.md",
+    "frontend/Reference/Decorations/ArrangeSummaryBox.md",
+    "Screenshot 2024-04-07 at 18.14.26.png",
+    "Screenshot 2024-04-07 at 18.05.37.png",
+    "frontend/Reference/Decorations/BoxBox.md",
+    "frontend/Reference/Decorations/MakeBoxes.md",
+    "frontend/Reference/Decorations/TableForm.md",
     "frontend/Reference/Decorations/Style.md",
+    "Screenshot 2024-04-07 at 18.00.06.png",
+    "Screenshot 2024-04-07 at 17.59.26.png",
+    "frontend/Advanced/Dynamics/Performance tips.md",
+    "frontend/Advanced/Slides/Slides.md",
     "Screenshot 2024-04-04 at 22.31.03.png",
     "frontend/Advanced/Slides/crypto-text.md",
     "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Dynamics/Performance tips.md",
     "frontend/Reference/Slides/SlideEventListener.md",
     "ZoomIn video to gif.gif",
     "SpinAnimation from ezgif.gif",
@@ -213,7 +221,6 @@
     "frontend/Advanced/Dynamics/Scoping.md",
     "NumericArray video.gif",
     "No Numeric Array.gif",
-    "Screenshot 2024-04-03 at 20.45.35.png",
     "frontend/Reference/Plotting Functions/Plot.md",
     "frontend/Dynamics.md",
     "frontend/Expressions representation.md",
@@ -225,14 +232,6 @@
     "frontend/Cell types/WLX.md",
     "frontend/Advanced/Slides/tables.md",
     "frontend/Advanced/Slides/styling.md",
-    "frontend/Export/HTML file.md",
-    "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Cell types/Slides.md",
-    "frontend/Troubleshooting/Troubleshooting.md",
-    "frontend/Advanced/Javascript/Communication.md",
-    "Screenshot 2024-03-29 at 20.55.44.png",
-    "Screenshot 2024-03-29 at 20.38.46.png",
-    "Screenshot 2024-03-29 at 20.37.00.png",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",

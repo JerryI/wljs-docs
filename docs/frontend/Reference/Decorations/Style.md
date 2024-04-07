@@ -17,23 +17,13 @@ Style[expr_, opts__]
 Expressions are editable
 :::
 
-## Any expressions
-The argument `opts` contains directives for the formatted output. The following options are supported
-- `Background->RGBColor[...]` adds background to the wrapped expression
-
-:::warning
-Styling options are currently quite limited
-:::
-
-## String
-For string there are much more options available
-
-### Options
+The argument `opts` contains directives for the formatted output. 
+## Options
 - `Background`
 - `FontFamily`
 - `FontSize`
 
-### Directives
+## Directives
 - `_Integer` font size
 - `_RGBColor` font color
 - `Bold`
@@ -61,8 +51,17 @@ Style["ddd", Background->LightBlue, FontFamily->"Monospace", Bold, Red, Italic, 
 Hamlet's soliloquy, with repeated words successively has more contrast background
 
 ```mathematica
-Take[With[{data = ExampleData[{"Text", "ToBeOrNotToBe"}, "Words"]}, 
-   MapIndexed[Style[#, Background->RGBColor[1 - 2 Count[Take[data, First[#2]], #]/25, 1,1]] &, data]], 40]
+With[{data = ExampleData[{"Text", "ToBeOrNotToBe"}, "Words"]}, 
+  Take[MapIndexed[Style[#, 4 Count[Take[data, First[#2]], #]] &, data], 100]
+]
 ```
 
-![](./../../../Screenshot%202024-04-04%20at%2022.31.03.png)
+![](./../../../Screenshot%202024-04-07%20at%2017.59.26.png)
+
+Or for a regular expressions
+
+```mathematica
+Style[(*FB[*)((1)(*,*)/(*,*)((*SqB[*)Sqrt[2](*]SqB*)))(*]FB*), 18, Red]
+```
+
+![](./../../../Screenshot%202024-04-07%20at%2018.00.06.png)
