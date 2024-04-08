@@ -1,8 +1,8 @@
 # Routing
 
 :::warning
-Remember the number 1 rule: __1 event object__ = __1 handler__
-To assign more, you need to clone ([EventClone](../../Reference/Events/EventClone.md)) the original object and it will be rewired into a sort of splitter.
+Remember the number 1 rule: __1 pattern of an event object__ = __1 handler__
+To assign more, you need to clone ([`EventClone`](frontend/Reference/Misc/Events.md#`EventClone`)) the original object and it will be rewired into a sort of splitter.
 :::
 
 Since the notebook is usually a playground, you need to have an opportunity to undo actions, when you reevaluate the cell. Therefore there is concept of explicit routing of one event to some other handlers.
@@ -22,7 +22,7 @@ generator[uid_String] := With[{btn = InputButton["Click"]},
 ]
 ```
 
-here we used the representation of events object as a string `uid` (it is also valid) and fire it using a button (which also returns [EventObject](../../Reference/Events/EventObject.md)).
+here we used the representation of events object as a string `uid` (it is also valid) and fire it using a button (which also returns [`EventObject`](frontend/Reference/Misc/Events.md#`EventObject`)).
 
 Now we need an arbitrary handler
 
@@ -37,7 +37,7 @@ handler[uid_String, func_:Print] := With[{ev = EventClone[uid]},
 ```
 
 :::info
-You do not need to clone [EvaluationCell](../../Reference/Tools/Notebook/EvaluationCell.md) or [ResultCell](frontend/Reference/Cells%20and%20Notebook/ResultCell.md) to assign many handlers to it. it is cloned automatically once appeared in [EventHandler](../../Reference/Events/EventHandler.md).
+You do not need to clone [EvaluationCell](frontend/Reference/Cells%20and%20Notebook/EvaluationCell.md) or [ResultCell](frontend/Reference/Cells%20and%20Notebook/ResultCell.md) to assign many handlers to it. it is cloned automatically once appeared in [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`)
 :::
 
 The cool thing, that we can have many of those `handler`s attached to the same event, since it clones it every-time and removes handler function, when you reevaluate the cell. Let us see it on the following example

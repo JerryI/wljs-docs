@@ -31,7 +31,7 @@ Put [SlideEventListener](frontend/Reference/Slides/SlideEventListener.md) anywhe
 :::
 
 :::tip
-Keep the dynamic variables scoped using [../../Reference/Tools/LeakyModule](../../Reference/Tools/LeakyModule) and use explicit event routing like in [routing](frontend/Advanced/Events%20system/routing.md). Later it will allow you to reuse your components for other slides much easier.
+Keep the dynamic variables scoped using [`LeakyModule`](frontend/Reference/Misc/Language.md#`LeakyModule`) and use explicit event routing like in [routing](frontend/Advanced/Events%20system/routing.md). Later it will allow you to reuse your components for other slides much easier.
 :::
 
 ### Example 1
@@ -236,7 +236,7 @@ Zoom <!-- .element: class="fragment fade-in" data-fragment-index="1" -->
 ![](./../../../ZoomIn%20video%20to%20gif.gif)
 
 ## Append graphics to a slide
-[Meta-markers](../../../../interpreter/Advanced/meta-markers.md) can work well in a case if one wants to append some data on the existing graphics canvas
+[MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md) can work well in a case if one wants to append some data on the existing graphics canvas
 
 
 ## Buttons, sliders etc

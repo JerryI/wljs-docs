@@ -853,7 +853,7 @@ bGVkIiwyLjBlLTJdXSxbIkxpc3QiLFsiU2NhbGVkIiwyLjBlLTJdLFsiU2NhbGVkIiwyLjBlLTJd
 XV1dLFsiUnVsZSIsIlRpY2tzIixbIkxpc3QiLCJBdXRvbWF0aWMiLCJBdXRvbWF0aWMiXV1dXQ==
 `}>{`Plot[Sin[x], {x,0,Pi}, Epilog->{Red, Line[{{-1,-1}, {1,1}}]}, ImageSize->350]`}</Wl>
 
-or together with [MetaMarker](../Dynamics/MetaMarker.md).
+or together with [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md)
 
 ### `Prolog`
 The same as [`Epilog`](#`Epilog`), but acts before plotting the data.

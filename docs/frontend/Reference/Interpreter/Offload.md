@@ -88,7 +88,7 @@ TaskRemove[task]
 ```
 
 ### Force WL Kernel to offload an expression 
-Looking back to the previous example, the function  [`RandomReal`](../WLJS/RandomReal.md) implemented on both sides. If you offload it to the `Point` expression
+Looking back to the previous example, the function  `RandomReal` implemented on both sides. If you offload it to the `Point` expression
 
 ```mathematica
 Graphics[{PointSize[0.02], Point[RandomReal[{-1,1}, {64, 2}] // Offload]}]

@@ -280,7 +280,7 @@ Custom transitions are not supported, unless it is made using [Graphics](fronten
 :::
 
 ### Events
-To capture the events from a slide (revealing the slide or revealing individual fragments) - use [SlideEventListener](../../Reference/Tools/Slides/SlideEventListener.md)
+To capture the events from a slide (revealing the slide or revealing individual fragments) - use [SlideEventListener](frontend/Reference/Slides/SlideEventListener.md)
 
 It attaches itself to the slide, where it has been placed
 
@@ -300,7 +300,7 @@ Another message <!-- .element: class="fragment" data-fragment-index="1" -->
 <SlideEventListener Id={"myEvent"}/>
 ```
 
-Before evaluation, you should attach an event handler ([EventHandler](../../Reference/Events/EventHandler.md)) to it
+Before evaluation, you should attach an event handler ([`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`)) to it
 
 ```mathematica
 EventHandler["myEvent", {
@@ -309,7 +309,7 @@ EventHandler["myEvent", {
 }]
 ```
 
-The identifier of [SlideEventListener](../../Reference/Tools/Slides/SlideEventListener.md) acts as an event object. There are two patterns on how you can capture certain event
+The identifier of [SlideEventListener](frontend/Reference/Slides/SlideEventListener.md) acts as an event object. There are two patterns on how you can capture certain event
 
 - `"Slide"` - is fired when a slide has been revealed
 - `"fragment-INDEX"` - is fired when a fragment number `INDEX` has been revealed

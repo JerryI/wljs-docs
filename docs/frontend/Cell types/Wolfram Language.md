@@ -19,7 +19,7 @@ To specify the type of a cell - use a prefix in the first line of the cell
 .md
 # Hello
 ```
-it can be anything `**.**` the behavior is defined by language processors shipped via packages installed (see [Static Evaluation](../Development/Evaluation/Static.md))
+it can be anything `**.**` the behavior is defined by language processors shipped via packages installed 
 
 **Think about it if it was an anonymous file**
 :::
@@ -59,7 +59,7 @@ The following shortcuts are used for equations typing
 - `Ctrl--` - make a subscript
 - `Ctrl-6` - make a superscript (power)
 
-You can also make your own custom representation of your symbol like in Mathematica using `MakeBoxes`. Please see [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md), [Interpretation](frontend/Reference/Decorations/Interpretation.md) and [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md)
+You can also make your own custom representation of your symbol like in Mathematica using `MakeBoxes`. Please see [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md), [Interpretation](frontend/Reference/Decorations/Interpretation.md) and [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) and [ArrangeSummaryBox](frontend/Reference/Decorations/ArrangeSummaryBox.md), [ViewBox](frontend/Reference/Decorations/ViewBox.md), [BoxBox](frontend/Reference/Decorations/BoxBox.md)
 
 ## Autoupload files
 Drag and drop a file to the editor

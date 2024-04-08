@@ -1,6 +1,6 @@
 It allows to use [Wolfram Language XML](https://jerryi.github.io/wlx-docs/docs/Reference/WLX/) in your cell. It comes handy when making a a complex cell structure or stylizing it using the power of HTML/CSS/JS.
 
-![](../../imgs/Screenshot%202024-03-13%20at%2019.28.47.png)
+
 ## Embed figures into a custom layout
 Plot a figure into a symbol __starting from the capital letter__
 

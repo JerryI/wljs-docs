@@ -9,7 +9,7 @@ source: https://github.com/JerryI/wljs-inputs/blob/dev/src/Kernel.wl
 ```mathematica
 InputButton[label_String, opts___] _EventObject
 ```
-creates a button component and returns [EventObject](../Events/EventObject.md).
+creates a button component and returns [`EventObject`](frontend/Reference/Misc/Events.md#`EventObject`)
 
 ## Event generation
 On-click emits `True` to a handler function assigned
@@ -35,7 +35,3 @@ EventHandler[button, Print]
 ```
 
 
-
-
-## Dev note
-This is a wrapper over [ButtonView](ButtonView.md)

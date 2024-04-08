@@ -8,31 +8,43 @@
         "type": "tabs",
         "children": [
           {
-            "id": "30db96a64910fe3e",
+            "id": "1ff0f44cca6f7406",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/Style.md",
+                "file": "broken links output.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f767a23bf114392e",
+            "id": "740b61e21a4e39d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/Style.md",
+                "file": "frontend/Snippets.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "95d9d1110322eb36",
+            "id": "a71d0d6bcbfa9be3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "56df6e01cda1705c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -44,12 +56,12 @@
             }
           },
           {
-            "id": "14a7bd4f4f6b83e7",
+            "id": "648ce6527fdb1265",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
+                "file": "frontend/Reference/Graphics/Graphics.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Decorations/Style.md",
+                "file": "frontend/Snippets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Decorations/Style.md",
+                "file": "frontend/Snippets.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Decorations/Style.md"
+                "file": "frontend/Snippets.md"
               }
             }
           },
@@ -195,43 +207,44 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "f767a23bf114392e",
+  "active": "740b61e21a4e39d2",
   "lastOpenFiles": [
-    "frontend/Reference/Decorations/ArrangeSummaryBox.md",
-    "Screenshot 2024-04-07 at 18.14.26.png",
-    "Screenshot 2024-04-07 at 18.05.37.png",
-    "frontend/Reference/Decorations/BoxBox.md",
-    "frontend/Reference/Decorations/MakeBoxes.md",
-    "frontend/Reference/Decorations/TableForm.md",
-    "frontend/Reference/Decorations/Style.md",
-    "Screenshot 2024-04-07 at 18.00.06.png",
-    "Screenshot 2024-04-07 at 17.59.26.png",
-    "frontend/Advanced/Dynamics/Performance tips.md",
-    "frontend/Advanced/Slides/Slides.md",
-    "Screenshot 2024-04-04 at 22.31.03.png",
-    "frontend/Advanced/Slides/crypto-text.md",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Reference/Slides/SlideEventListener.md",
-    "ZoomIn video to gif.gif",
-    "SpinAnimation from ezgif.gif",
-    "Cryptic video to gif.gif",
-    "frontend/Advanced/Boxes and Decorations/dynamic-decorations.md",
-    "frontend/Reference/Interpreter/Offload.md",
-    "frontend/Reference/Graphics3D/GraphicsComplex.md",
-    "frontend/Advanced/Dynamics/Scoping.md",
-    "NumericArray video.gif",
-    "No Numeric Array.gif",
-    "frontend/Reference/Plotting Functions/Plot.md",
     "frontend/Dynamics.md",
+    "frontend/Overview.md",
+    "frontend/Snippets.md",
+    "GIF speed changer.gif",
+    "Screen Recording Apr 8 (6).gif",
+    "Screen Recording Apr 8 (5).gif",
+    "Screen Recording Apr 8 (4).gif",
+    "Screen Recording Apr 8 (3).gif",
+    "Screen Recording Apr 8 (2).gif",
+    "Screen Recording Apr 8 (1).gif",
+    "Screen Recording Apr 8.gif",
+    "snippetsover.png",
+    "frontend/Troubleshooting/Troubleshooting.md",
+    "broken links output.md",
+    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+    "frontend/Reference/Interpreter/Offload.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Reference/GUI/InputTable.md",
+    "frontend/Reference/GUI/InputRange.md",
+    "frontend/Reference/GUI/InputButton.md",
+    "frontend/Reference/GUI/InputText.md",
+    "frontend/Reference/GUI/InputGroup.md",
+    "frontend/Reference/Decorations/ViewBox.md",
     "frontend/Expressions representation.md",
-    "frontend/instruction.md",
-    "frontend/Tutorial/Working with Images.md",
-    "frontend/Reference/Slides/Slides.md",
-    "frontend/Reference/Interpreter/FrontEditorSelected.md",
+    "frontend/Cell types/Wolfram Language.md",
+    "frontend/Cell types/Many more....md",
+    "frontend/Cell types/Javascript.md",
+    "frontend/Advanced/Slides/animations.md",
     "frontend/Advanced/Slides/components.md",
+    "frontend/Advanced/Slides/Slides.md",
     "frontend/Cell types/WLX.md",
-    "frontend/Advanced/Slides/tables.md",
-    "frontend/Advanced/Slides/styling.md",
+    "frontend/Cell types/Slides.md",
+    "frontend/Advanced/Events system/routing.md",
+    "frontend/Advanced/Events system/event-generators.md",
+    "frontend/Reference/Misc/Promise.md",
+    "Screenshot 2024-04-07 at 18.14.26.png",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",

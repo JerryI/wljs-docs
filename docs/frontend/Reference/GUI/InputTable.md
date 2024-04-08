@@ -42,7 +42,7 @@ if you don't want to mess with them, there is a helper function `InputTable~Even
 InputTable`EventHelper[list_List] _Function
 ```
 
-It will mutate the given symbol `list` according to the transactions. One has to initialize it on the corresponding list and use the resulting generated symbol in your [EventHandler](../Events/EventHandler.md) function like in the example below
+It will mutate the given symbol `list` according to the transactions. One has to initialize it on the corresponding list and use the resulting generated symbol in your [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`) function like in the example below
 
 ```mathematica
 list = Table[i j, {i,5}, {j,5}];

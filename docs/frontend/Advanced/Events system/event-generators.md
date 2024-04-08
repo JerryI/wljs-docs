@@ -298,10 +298,10 @@ A very useful property, that comes handy when making GUI elements `"View"`
 EventObject[<|"Id"->"evid", "View"->Graphics3D[Sphere[]]|>]
 ```
 
-it acts only when the object is printed to the output cell or displayed on a page (see [`WLJS`](Reference/WLX/WLJS.md#`WLJS`)), then, we will see `Graphics3D` output instead of  `EventObject`.
+it acts only when the object is printed to the output cell or displayed on a page, then, we will see `Graphics3D` output instead of  `EventObject`.
 
 ### Integration with server / client via WebSockets
-A framework of [WLJSTransport](Reference/Misc/WLJSTransport.md) redirects calls from Javascript code to event system as well. A global `server` object provides a corresponding method
+A framework of [WLJSTransport](https://jerryi.github.io/wlx-docs/docs/Reference/Misc/WLJSTransport) redirects calls from Javascript code to event system as well. A global `server` object provides a corresponding method
 
 ```js
 server.kernel.emitt('evid', 'message')

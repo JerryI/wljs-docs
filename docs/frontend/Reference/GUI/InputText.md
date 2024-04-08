@@ -10,7 +10,7 @@ context: Notebook`Kernel`Inputs`
 InputText[initial_String, opts___] _EventObject
 ```
 
-represents an input-text field and returns [EventObject](../Events/EventObject.md)
+represents an input-text field and returns [`EventObject`](frontend/Reference/Misc/Events.md#`EventObject`)
 
 :::tip
 For dynamic read-only indication use [TextView](frontend/Reference/GUI/TextView.md)

@@ -9,7 +9,7 @@ source: https://github.com/JerryI/wljs-manipulate/blob/main/Kernel.wl
 ManipulatePlot[f_, {t, min, max}, {p1, min, max}, ..., opts___]
 ```
 
-a dynamic alternative to [Plot](frontend/Reference/Plotting%20Functions/Plot.md) and Mathematica's [Manipulate](../Dynamics/Manipulate.md), that uses input elements and [Offload](frontend/Reference/Interpreter/Offload.md) technic to make a fast interactive plots of a given function `f[t, p1, p2...]` 
+a dynamic alternative to [Plot](frontend/Reference/Plotting%20Functions/Plot.md) and Mathematica's `Manipulate`, that uses input elements and [Offload](frontend/Reference/Interpreter/Offload.md) technic to make a fast interactive plots of a given function `f[t, p1, p2...]` 
 
 the set of parameters are not limited and accepts the following forms
 

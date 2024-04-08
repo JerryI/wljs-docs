@@ -115,5 +115,5 @@ In general one can define any function for WLJS Interpreter using Javascript cel
 
 Also see [Communication](frontend/Advanced/Javascript/Communication.md)
 
-For the most applications event-based system is used, see [Dynamic](../Development/Evaluation/Dynamic.md)
+For the most applications event-based system is used, see [Dynamics](frontend/Dynamics.md)
 

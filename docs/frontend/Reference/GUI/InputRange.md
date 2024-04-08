@@ -9,7 +9,7 @@ source: https://github.com/JerryI/wljs-inputs/blob/dev/src/Kernel.wl
 ```mathematica
 InputRange[min_, max_, step_:1, initial_:(min+max)/2, opts___] _EventObject
 ```
-creates a basic combo of a slider and numerical input field and returns [EventObject](../Events/EventObject.md).
+creates a basic combo of a slider and numerical input field and returns [`EventObject`](frontend/Reference/Misc/Events.md#`EventObject`)
 
 ## Event generation
 Every-time user drags a slider, an event __in a form of number__ will be generated
@@ -55,7 +55,3 @@ EventHandler[InputRange[0,1,0.1], Function[data, pos = data]];
 Graphics[Rectangle[{-1,0}, {1, Offload[pos]}]]
 ```
 
-
-
-## Dev notes
-This is a wrapper over a more fundamental view-component [`RangeView`](RangeView.md)
