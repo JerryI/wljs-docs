@@ -113,6 +113,32 @@ The result looks like this
 
 ![](../../../imgs/Screenshot%202023-11-23%20at%2015.08.20.png)
 
+:::warning
+In order to mix Markdown with HTML or [WLX](frontend/Cell%20types/WLX.md) correctly, remove white spaces from the beginning markdown, i.e.
+
+```html
+.slide
+
+<div>
+	# It wont work
+</div>
+```
+
+but instead
+
+```html
+.slide
+
+<div>
+
+# It will work
+
+</div>
+```
+
+
+:::
+
 ### Using WLX
 Of course one can make a helper function for it
 

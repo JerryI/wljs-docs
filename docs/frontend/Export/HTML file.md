@@ -1,8 +1,5 @@
-:::danger
-Is in development
-:::
 
-Since the interpretation of the output cells happens in JS, then we can pack all data into a single `.html` file and easily share it with other people by clicking on the icon
+Since the interpretation of the output cells happens in a browser, then we can pack all data into a single `.html` file and easily share it with other people by clicking on the icon
 
 ![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
 
@@ -11,7 +8,7 @@ Do not forget to save your notebook before exporting! It is important for garbag
 :::
 
 ## Portability 
-Once exported, it can be __unpacked back to a normal notebook__ once opened using WLJS Notebook app. There are some limitations
+Once exported, an `.html` file can be __unpacked back to a normal notebook__ once opened using WLJS Notebook app. There are some limitations
 
 - no dynamic symbols (used [Offload](frontend/Reference/Interpreter/Offload.md) or [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)) will be preserved
 - no external files, except images will be packaged 

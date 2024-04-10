@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Snippets.md",
+                "file": "frontend/Symbolic nature and syntax sugar.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SlideEventListener",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Snippets.md",
+                "file": "frontend/Symbolic nature and syntax sugar.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Snippets.md",
+                "file": "frontend/Symbolic nature and syntax sugar.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Snippets.md"
+                "file": "frontend/Symbolic nature and syntax sugar.md"
               }
             }
           },
@@ -209,9 +209,20 @@
   },
   "active": "740b61e21a4e39d2",
   "lastOpenFiles": [
+    "frontend/Advanced/Slides/Backgrounds.md",
+    "SlideDynBackground.png",
+    "frontend/Advanced/Dynamics/Continuous animation.md",
+    "frontend/Reference/Graphics3D/AnimationFrameListener.md",
+    "frontend/Advanced/Slides/Styling.md",
+    "Screenshot 2024-04-10 at 09.46.22.png",
+    "frontend/Advanced/Slides/Slides.md",
+    "frontend/Reference/Interpreter/FrontEditorSelected.md",
+    "frontend/Symbolic nature and syntax sugar.md",
+    "frontend/Guidelines.md",
+    "frontend/Snippets.md",
+    "frontend/Export/HTML file.md",
     "frontend/Dynamics.md",
     "frontend/Overview.md",
-    "frontend/Snippets.md",
     "GIF speed changer.gif",
     "Screen Recording Apr 8 (6).gif",
     "Screen Recording Apr 8 (5).gif",
@@ -220,7 +231,6 @@
     "Screen Recording Apr 8 (2).gif",
     "Screen Recording Apr 8 (1).gif",
     "Screen Recording Apr 8.gif",
-    "snippetsover.png",
     "frontend/Troubleshooting/Troubleshooting.md",
     "broken links output.md",
     "frontend/Reference/Plotting Functions/ManipulatePlot.md",
@@ -234,17 +244,6 @@
     "frontend/Reference/Decorations/ViewBox.md",
     "frontend/Expressions representation.md",
     "frontend/Cell types/Wolfram Language.md",
-    "frontend/Cell types/Many more....md",
-    "frontend/Cell types/Javascript.md",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Slides/components.md",
-    "frontend/Advanced/Slides/Slides.md",
-    "frontend/Cell types/WLX.md",
-    "frontend/Cell types/Slides.md",
-    "frontend/Advanced/Events system/routing.md",
-    "frontend/Advanced/Events system/event-generators.md",
-    "frontend/Reference/Misc/Promise.md",
-    "Screenshot 2024-04-07 at 18.14.26.png",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",
