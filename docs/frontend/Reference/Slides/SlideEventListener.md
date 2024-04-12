@@ -46,6 +46,12 @@ fires when a slide was revealed (even the first one)
 where `_` is a number of a fragment revealed on a slide
 #### `"Mounted"`
 fires, once an HTML content for a slide is ready
+#### `"Left"`
+fires, once a user leaves the slide (goes to the next or previous one) with an integer as a payload, that gives the direction
+#### `"Destroy"`
+fires, once a presentation was closed for some reason
+
+
 
 
 Try

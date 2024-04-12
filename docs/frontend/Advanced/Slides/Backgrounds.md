@@ -96,12 +96,22 @@ curveDynamicGenerator[center_, radius_] := With[{cell = ResultCell[]}, LeakyModu
 
 Since our animation is quite simple, therefore we use [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) instead of frame-by-frame animation via [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md)
 
+:::tip
+To make sure that the slide heigh is `100%` of the window, add the attribute
+```html
+.slide
+
+<!-- .slide: style="height:100%" -->
+```
+:::
+
 In order to put it under the content, we need to use an absolute positioning 
 
 ```jsx
 .slide
 
 <!-- .element: data-background-color="black" -->
+<!-- .slide: style="height:100%" -->
 
 <div class="w-full h-full flex flex-col text-white">
   <div class="absolute w-full h-full" style="scale: 1.1; left:-30px; z-index:-100"><BackImageDynamic/></div>

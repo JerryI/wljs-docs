@@ -13,3 +13,12 @@ InputEditor[expr_String] _EventObject
 
 as a result it returns [`EventObject`](frontend/Reference/Misc/Events.md#`EventObject`)
 
+## Event generation
+It fires the following patterns/topics
+
+### `"Input"`
+Fires every time users changes the content with a content as a payload
+
+### `"Evaluate"`
+Fires when a user presses a combination `Shift+Enter`
+

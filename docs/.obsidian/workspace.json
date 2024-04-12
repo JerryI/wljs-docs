@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Symbolic nature and syntax sugar.md",
+                "file": "frontend/Advanced/Slides/Backgrounds.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "SlideEventListener",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Symbolic nature and syntax sugar.md",
+                "file": "frontend/Advanced/Slides/Backgrounds.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Symbolic nature and syntax sugar.md",
+                "file": "frontend/Advanced/Slides/Backgrounds.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Symbolic nature and syntax sugar.md"
+                "file": "frontend/Advanced/Slides/Backgrounds.md"
               }
             }
           },
@@ -209,20 +209,34 @@
   },
   "active": "740b61e21a4e39d2",
   "lastOpenFiles": [
-    "frontend/Advanced/Slides/Backgrounds.md",
-    "SlideDynBackground.png",
-    "frontend/Advanced/Dynamics/Continuous animation.md",
-    "frontend/Reference/Graphics3D/AnimationFrameListener.md",
-    "frontend/Advanced/Slides/Styling.md",
-    "Screenshot 2024-04-10 at 09.46.22.png",
-    "frontend/Advanced/Slides/Slides.md",
-    "frontend/Reference/Interpreter/FrontEditorSelected.md",
-    "frontend/Symbolic nature and syntax sugar.md",
-    "frontend/Guidelines.md",
+    "frontend/Reference/GUI/InputEditor.md",
+    "frontend/Reference/GUI/EditorView.md",
     "frontend/Snippets.md",
-    "frontend/Export/HTML file.md",
-    "frontend/Dynamics.md",
-    "frontend/Overview.md",
+    "frontend/Reference/Decorations/ArrangeSummaryBox.md",
+    "frontend/Cell types/Files.md",
+    "frontend/Cell types/Wolfram Language.md",
+    "frontend/Cell types/WLX.md",
+    "frontend/Cell types/Slides.md",
+    "frontend/Cell types/Markdown.md",
+    "frontend/Cell types/Many more....md",
+    "frontend/Cell types/Javascript.md",
+    "frontend/Cell types/HTML.md",
+    "frontend/Advanced/Slides/Styling.md",
+    "frontend/Advanced/Slides/tables.md",
+    "frontend/Advanced/Slides/Slides.md",
+    "frontend/Advanced/Slides/embed-wl.md",
+    "frontend/Advanced/Slides/crypto-text.md",
+    "frontend/Advanced/Slides/animations.md",
+    "frontend/Advanced/Slides/Backgrounds.md",
+    "frontend/Advanced/Dynamics/Scoping.md",
+    "frontend/Advanced/Dynamics/Performance tips.md",
+    "frontend/Advanced/Dynamics/Indicators.md",
+    "frontend/Advanced/Dynamics/Continuous animation.md",
+    "frontend/Reference/Slides/SlideEventListener.md",
+    "frontend/Symbolic nature and syntax sugar.md",
+    "SlideDynBackground.png",
+    "frontend/Reference/Graphics3D/AnimationFrameListener.md",
+    "Screenshot 2024-04-10 at 09.46.22.png",
     "GIF speed changer.gif",
     "Screen Recording Apr 8 (6).gif",
     "Screen Recording Apr 8 (5).gif",
@@ -231,19 +245,6 @@
     "Screen Recording Apr 8 (2).gif",
     "Screen Recording Apr 8 (1).gif",
     "Screen Recording Apr 8.gif",
-    "frontend/Troubleshooting/Troubleshooting.md",
-    "broken links output.md",
-    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
-    "frontend/Reference/Interpreter/Offload.md",
-    "frontend/Reference/Graphics/Graphics.md",
-    "frontend/Reference/GUI/InputTable.md",
-    "frontend/Reference/GUI/InputRange.md",
-    "frontend/Reference/GUI/InputButton.md",
-    "frontend/Reference/GUI/InputText.md",
-    "frontend/Reference/GUI/InputGroup.md",
-    "frontend/Reference/Decorations/ViewBox.md",
-    "frontend/Expressions representation.md",
-    "frontend/Cell types/Wolfram Language.md",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",
