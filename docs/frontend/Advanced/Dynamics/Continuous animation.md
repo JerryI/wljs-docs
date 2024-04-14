@@ -11,10 +11,10 @@ with [TransitionType](frontend/Reference/Graphics/TransitionType.md) set to `Non
 ## Way 2
 Consider to use [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) for a slow animations and simple stuff. Set [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) and [TransitionType](frontend/Reference/Graphics/TransitionType.md) to a proper value to interpolate the values.
 
-Usually if your [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) is let's say `100 ms`, then [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) should be around `100 ms` as well to get the smoothest animation.
+Usually if your [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) is let's say `100 ms`, then [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) should be around `100 ms` as well to get *the smoothest animation*.
 
 :::info
-See examples in each section
+See examples in each reference
 :::
 
 

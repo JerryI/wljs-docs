@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "broken links output.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "740b61e21a4e39d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Snippets.md",
+                "file": "frontend/Advanced/Dynamics/Offloading calculations.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -134,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Snippets.md",
+                "file": "frontend/Advanced/Dynamics/Offloading calculations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Snippets.md",
+                "file": "frontend/Advanced/Dynamics/Offloading calculations.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Snippets.md"
+                "file": "frontend/Advanced/Dynamics/Offloading calculations.md"
               }
             }
           },
@@ -207,10 +194,18 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "740b61e21a4e39d2",
+  "active": "1ff0f44cca6f7406",
   "lastOpenFiles": [
-    "frontend/instruction.md",
+    "Curves video to gif.gif",
+    "Many_many.svg",
+    "broken links output.md",
+    "frontend/Advanced/Dynamics/Offloading calculations.md",
+    "frontend/Advanced/Dynamics/Indicators.md",
+    "frontend/Advanced/Dynamics/Continuous animation.md",
+    "frontend/Advanced/Slides/Transitions.md",
+    "Screen Recording Apr 14.gif",
     "frontend/Snippets.md",
+    "frontend/instruction.md",
     "ASKAI optimizer.gif",
     "frontend/Advanced/Slides/Backgrounds.md",
     "frontend/Reference/GUI/InputEditor.md",
@@ -230,12 +225,6 @@
     "frontend/Advanced/Slides/embed-wl.md",
     "frontend/Advanced/Slides/crypto-text.md",
     "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Dynamics/Scoping.md",
-    "frontend/Advanced/Dynamics/Performance tips.md",
-    "frontend/Advanced/Dynamics/Indicators.md",
-    "frontend/Advanced/Dynamics/Continuous animation.md",
-    "frontend/Reference/Slides/SlideEventListener.md",
-    "frontend/Symbolic nature and syntax sugar.md",
     "SlideDynBackground.png",
     "Screenshot 2024-04-10 at 09.46.22.png",
     "GIF speed changer.gif",
@@ -243,8 +232,6 @@
     "Screen Recording Apr 8 (5).gif",
     "Screen Recording Apr 8 (4).gif",
     "Screen Recording Apr 8 (3).gif",
-    "Screen Recording Apr 8 (2).gif",
-    "Screen Recording Apr 8 (1).gif",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",
