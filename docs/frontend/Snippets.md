@@ -11,6 +11,26 @@ Snippets are dedicated cells of Wolfram / [WLX](frontend/Cell%20types/WLX.md) / 
 Use a shortcut for command palette `Cmd + P` or `Ctrl + P`
 :::
 
+## AI Assistant
+If nothing is selected, __the given text in the command palette is sent to ChatGPT__ that has __an access to your notebook__
+
+![](./../ASKAI%20optimizer.gif)
+
+:::note
+It will ask you for a OpenAI API Key. You need to issue it first on the official openAI website
+:::
+
+In general AI can do the following
+- __print new cells_
+- __read the current cell__ you dropped a cursor on
+- __read the language used in a cell__
+- __update the full content of a cell__
+
+:::warning
+AI has an access to the content of a cell. `Ctrl+Z` will still work, but just be aware
+:::
+
+
 ## Uploading data
 There are a few snippets used for uploading ASCII data or any arbitrary files to the folder of your notebook
 
@@ -66,16 +86,4 @@ This is also a code formatter available
 
 __It acts on a selected text or on the entire cell__ if nothing is selected
 
-## OpenAI chat
-If nothing is selected, __the given text in the command palette is sent to ChatGPT__ and the result is given as a set of markdown and code cells
-
-![](./../GIF%20speed%20changer.gif)
-
-:::note
-It will ask you for a OpenAI API Key. You need to issue it first on the official openAI website
-:::
-
-:::warning
-This is an experimental feature
-:::
 

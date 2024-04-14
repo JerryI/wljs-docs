@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/Backgrounds.md",
+                "file": "frontend/Snippets.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/Backgrounds.md",
+                "file": "frontend/Snippets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/Backgrounds.md",
+                "file": "frontend/Snippets.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/Backgrounds.md"
+                "file": "frontend/Snippets.md"
               }
             }
           },
@@ -209,9 +209,12 @@
   },
   "active": "740b61e21a4e39d2",
   "lastOpenFiles": [
+    "frontend/instruction.md",
+    "frontend/Snippets.md",
+    "ASKAI optimizer.gif",
+    "frontend/Advanced/Slides/Backgrounds.md",
     "frontend/Reference/GUI/InputEditor.md",
     "frontend/Reference/GUI/EditorView.md",
-    "frontend/Snippets.md",
     "frontend/Reference/Decorations/ArrangeSummaryBox.md",
     "frontend/Cell types/Files.md",
     "frontend/Cell types/Wolfram Language.md",
@@ -227,7 +230,6 @@
     "frontend/Advanced/Slides/embed-wl.md",
     "frontend/Advanced/Slides/crypto-text.md",
     "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Slides/Backgrounds.md",
     "frontend/Advanced/Dynamics/Scoping.md",
     "frontend/Advanced/Dynamics/Performance tips.md",
     "frontend/Advanced/Dynamics/Indicators.md",
@@ -235,7 +237,6 @@
     "frontend/Reference/Slides/SlideEventListener.md",
     "frontend/Symbolic nature and syntax sugar.md",
     "SlideDynBackground.png",
-    "frontend/Reference/Graphics3D/AnimationFrameListener.md",
     "Screenshot 2024-04-10 at 09.46.22.png",
     "GIF speed changer.gif",
     "Screen Recording Apr 8 (6).gif",
@@ -244,7 +245,6 @@
     "Screen Recording Apr 8 (3).gif",
     "Screen Recording Apr 8 (2).gif",
     "Screen Recording Apr 8 (1).gif",
-    "Screen Recording Apr 8.gif",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",
