@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Offloading calculations.md",
+                "file": "frontend/Advanced/Snippets/AI Assistant.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Offloading calculations.md",
+                "file": "frontend/Advanced/Snippets/AI Assistant.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Offloading calculations.md",
+                "file": "frontend/Advanced/Snippets/AI Assistant.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Offloading calculations.md"
+                "file": "frontend/Advanced/Snippets/AI Assistant.md"
               }
             }
           },
@@ -194,17 +194,18 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1ff0f44cca6f7406",
+  "active": "06328218290ccda3",
   "lastOpenFiles": [
+    "frontend/Snippets.md",
+    "frontend/Advanced/Snippets/AI Assistant.md",
+    "frontend/Advanced/Dynamics/Offloading calculations.md",
     "Curves video to gif.gif",
     "Many_many.svg",
     "broken links output.md",
-    "frontend/Advanced/Dynamics/Offloading calculations.md",
     "frontend/Advanced/Dynamics/Indicators.md",
     "frontend/Advanced/Dynamics/Continuous animation.md",
     "frontend/Advanced/Slides/Transitions.md",
     "Screen Recording Apr 14.gif",
-    "frontend/Snippets.md",
     "frontend/instruction.md",
     "ASKAI optimizer.gif",
     "frontend/Advanced/Slides/Backgrounds.md",
@@ -231,7 +232,6 @@
     "Screen Recording Apr 8 (6).gif",
     "Screen Recording Apr 8 (5).gif",
     "Screen Recording Apr 8 (4).gif",
-    "Screen Recording Apr 8 (3).gif",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",
