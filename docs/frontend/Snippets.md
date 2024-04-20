@@ -16,6 +16,8 @@ If nothing is selected, __the given text in the command palette is sent to ChatG
 
 ![](./../ASKAI%20optimizer.gif)
 
+__See more [detailed guide](frontend/Advanced/Snippets/AI%20Assistant.md)__ on our assistant.
+
 :::note
 It will ask you for a OpenAI API Key. You need to issue it first on the official openAI website
 :::
@@ -29,10 +31,6 @@ In general AI can do the following
 - __read the current cell__ you dropped a cursor on
 - __read the language used in a cell__
 - __update the full content of a cell__
-
-:::warning
-AI has an access to the content of a cell. `Ctrl+Z` will still work, but just be aware
-:::
 
 
 ## Uploading data

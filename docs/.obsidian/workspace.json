@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Snippets/AI Assistant.md",
+                "file": "frontend/Advanced/Slides/Fragments.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Snippets/AI Assistant.md",
+                "file": "frontend/Advanced/Slides/Fragments.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Snippets/AI Assistant.md",
+                "file": "frontend/Advanced/Slides/Fragments.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Snippets/AI Assistant.md"
+                "file": "frontend/Advanced/Slides/Fragments.md"
               }
             }
           },
@@ -194,21 +194,28 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "06328218290ccda3",
+  "active": "1ff0f44cca6f7406",
   "lastOpenFiles": [
-    "frontend/Snippets.md",
+    "frontend/Advanced/Slides/animations.md",
+    "frontend/Advanced/Slides/Fragments.md",
     "frontend/Advanced/Snippets/AI Assistant.md",
+    "Screenshot 2024-04-20 at 21.44.25.png",
+    "MovingRectJs video.gif",
+    "MovingBall video to gif.gif",
+    "Screenshot 2024-04-20 at 21.34.20.png",
+    "Screenshot 2024-04-20 at 21.33.06.png",
+    "frontend/Snippets.md",
+    "frontend/Advanced/Slides/Backgrounds.md",
+    "frontend/Advanced/Slides/Transitions.md",
     "frontend/Advanced/Dynamics/Offloading calculations.md",
     "Curves video to gif.gif",
     "Many_many.svg",
     "broken links output.md",
     "frontend/Advanced/Dynamics/Indicators.md",
     "frontend/Advanced/Dynamics/Continuous animation.md",
-    "frontend/Advanced/Slides/Transitions.md",
     "Screen Recording Apr 14.gif",
     "frontend/instruction.md",
     "ASKAI optimizer.gif",
-    "frontend/Advanced/Slides/Backgrounds.md",
     "frontend/Reference/GUI/InputEditor.md",
     "frontend/Reference/GUI/EditorView.md",
     "frontend/Reference/Decorations/ArrangeSummaryBox.md",
@@ -224,14 +231,7 @@
     "frontend/Advanced/Slides/tables.md",
     "frontend/Advanced/Slides/Slides.md",
     "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Advanced/Slides/crypto-text.md",
-    "frontend/Advanced/Slides/animations.md",
     "SlideDynBackground.png",
-    "Screenshot 2024-04-10 at 09.46.22.png",
-    "GIF speed changer.gif",
-    "Screen Recording Apr 8 (6).gif",
-    "Screen Recording Apr 8 (5).gif",
-    "Screen Recording Apr 8 (4).gif",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",
