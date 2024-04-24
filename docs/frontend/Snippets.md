@@ -88,4 +88,17 @@ This is also a code formatter available
 
 __It acts on a selected text or on the entire cell__ if nothing is selected
 
+## Text formatting
+This snippet provides some basic tool for styling Wolfram expression, as well as text on slides, HTML and Markdown (it tries to guess the cell type and use a suitable method for each cell type)
 
+![](./../ToolbarT%20optimizer.gif)
+
+:::warning
+This feature is quite primitive and still in development
+:::
+
+
+## Take a picture
+It uses your active web camera pipes a picture to Wolfram Kernel as [Image](frontend/Reference/Graphics/Image.md) object
+
+![](./../TakeAPic%20speed.gif)

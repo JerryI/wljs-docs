@@ -3,12 +3,12 @@ There is a [built-in engine](https://revealjs.com/transitions/) for transitions 
 ```html
 .slide
 
-# Hey, I am white <!-- .element: style="color:blue" -->
+# Hey, I am blue <!-- .element: style="color:blue" -->
 
 ---
 <!-- .slide: data-transition="zoom" -->
 
-# Wroom <!-- .element: style="color:red" -->
+# Hey, I am red <!-- .element: style="color:red" -->
 ```
 
 here on the next slide we have a line,  that specifies the transition type

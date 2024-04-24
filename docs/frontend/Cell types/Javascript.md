@@ -56,6 +56,8 @@ function drawBall() {
   ctx.closePath();
 }
 
+let uid;
+
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBall();
@@ -69,12 +71,14 @@ function draw() {
 
   x += dx;
   y += dy;
+  
+  uid = requestAnimationFrame(draw);
 }
 
-const interval = setInterval(draw, 10);
+uid = requestAnimationFrame(draw);
 
 this.ondestroy = () => {
-	cancelInterval(interval);
+	cancelAnimationFrame(uid);
 }
 
 

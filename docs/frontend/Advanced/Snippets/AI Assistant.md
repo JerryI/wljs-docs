@@ -186,6 +186,60 @@ graph TD
 ```
 
 
+### Asking to write an entire program
+Quite often it is quite risky, but with more popular languages like Javascript it can work very well. For example
+
+```
+how to capture data from webcam in Javascript and draw it to canvas. Print it to a new cell
+```
+
+which produces a fully working code
+
+```js title="sample output"
+.js
+// First, create elements for the video and canvas
+const video = document.createElement('video');
+const canvas = document.createElement('canvas');
+const context = canvas.getContext('2d');
+
+// Set video constraints
+canvas.width = 640;
+canvas.height = 480;
+
+// Use getUserMedia to access the webcam
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(function(error) {
+            console.log("Error accessing webcam: ", error);
+        });
+}
+
+// Draw the video frame to the canvas
+document.body.appendChild(video);
+video.addEventListener('play', function() {
+    (function draw() {
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        requestAnimationFrame(draw);
+    })();
+});
+
+// Return the canvas element to be rendered
+return canvas;
+```
+
+![](./../../../Screenshot%202024-04-20%20at%2022.25.27.png)
+
+:::warning
+This code does not stop even if you remove a cell. Please ask AI in addition
+
+```
+please modify it so that when i remove a cell it will also stop streaming
+```
+:::
 
 ### Describe the code
 For example asking

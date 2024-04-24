@@ -10,7 +10,7 @@ Don't forget that creating the file from here may create the file in the wrong d
 - [[../../../../wlx/basics]] in [[frontend/Advanced/Slides/Slides]], [[frontend/Advanced/Slides/components]]
 - [[../../Reference/Tools/LeakyModule]] in [[frontend/Advanced/Slides/animations]]
 - [[../Development/Evaluation/Dynamic]] in [[frontend/Cell types/Javascript]]
-- [[../Development/Plugins/Known packages]] in [[frontend/Cell types/Many more...]]
+- [[../Development/Plugins/Known packages]] in [[frontend/Cell types/Many more]]
 - [[../Development/Evaluation/Static]] in [[frontend/Cell types/Wolfram Language]]
 - [[Outdated/Development/Decorations]] in [[frontend/Expressions representation]]
 - [[../../../Development/Decorations]] in [[frontend/Reference/Decorations/ViewBox]]
