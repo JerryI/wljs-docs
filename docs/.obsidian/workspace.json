@@ -13,49 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Cell types/Many more.md",
+                "file": "frontend/Expressions representation.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "a71d0d6bcbfa9be3",
+            "id": "3d17a4fe7a16fe56",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+                "file": "frontend/Reference/Decorations/Iconize.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "56df6e01cda1705c",
+            "id": "61ba188d7a44f909",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Interpreter/Offload.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "648ce6527fdb1265",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Reference/Graphics/Graphics.md",
+                "file": "frontend/Reference/Graphics3D/Cuboid.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -121,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Cell types/Many more.md",
+                "file": "frontend/Reference/Decorations/Iconize.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Cell types/Many more.md",
+                "file": "frontend/Reference/Decorations/Iconize.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Cell types/Many more.md"
+                "file": "frontend/Reference/Decorations/Iconize.md"
               }
             }
           },
@@ -194,17 +183,31 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1ff0f44cca6f7406",
+  "active": "3d17a4fe7a16fe56",
   "lastOpenFiles": [
+    "frontend/Symbolic nature and syntax sugar.md",
+    "frontend/instruction.md",
+    "Screenshot 2024-04-29 at 14.10.11.png",
+    "Screenshot 2024-04-29 at 14.08.42.png",
+    "Screenshot 2024-04-29 at 14.04.41.png",
+    "Screenshot 2024-04-29 at 13.54.12.png",
+    "Screenshot 2024-04-29 at 13.50.28.png",
+    "Screenshot 2024-04-29 at 13.45.13.png",
+    "Screenshot 2024-04-29 at 13.42.56.png",
+    "Screenshot 2024-04-29 at 13.41.50.png",
+    "Screenshot 2024-04-29 at 11.29.32.png",
+    "Screenshot 2024-04-29 at 11.27.22.png",
+    "frontend/Reference/Graphics3D/Cuboid.md",
+    "frontend/Expressions representation.md",
+    "frontend/Guidelines.md",
+    "frontend/Reference/Interpreter/Offload.md",
     "frontend/Snippets.md",
-    "TakeAPic speed.gif",
-    "ToolbarT optimizer.gif",
+    "frontend/Cell types/Many more.md",
     "frontend/Advanced/Slides/Fragments.md",
     "frontend/Advanced/Javascript/Canvas.md",
     "frontend/Advanced/Javascript/Communication.md",
     "frontend/Advanced/Javascript/Realtime data capture.md",
     "frontend/Advanced/Snippets/AI Assistant.md",
-    "Screenshot 2024-04-20 at 22.25.27.png",
     "frontend/Advanced/Dynamics/Raster animation.md",
     "frontend/Advanced/Dynamics/Continuous animation.md",
     "frontend/Advanced/Dynamics/Indicators.md",
@@ -218,19 +221,6 @@
     "frontend/Advanced/Slides/embed-wl.md",
     "frontend/Advanced/Slides/animations.md",
     "frontend/Advanced/Slides/Backgrounds.md",
-    "frontend/Advanced/Slides/components.md",
-    "frontend/Advanced/Slides/crypto-text.md",
-    "Screenshot 2024-04-20 at 21.44.25.png",
-    "MovingRectJs video.gif",
-    "MovingBall video to gif.gif",
-    "Screenshot 2024-04-20 at 21.34.20.png",
-    "Screenshot 2024-04-20 at 21.33.06.png",
-    "frontend/Advanced/Dynamics/Offloading calculations.md",
-    "Curves video to gif.gif",
-    "Many_many.svg",
-    "broken links output.md",
-    "frontend/instruction.md",
-    "frontend/Reference/GUI/InputEditor.md",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",

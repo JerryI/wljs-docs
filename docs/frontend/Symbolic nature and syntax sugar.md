@@ -1,4 +1,222 @@
 ---
 sidebar_position: 4
-draft: true
+draft: false
 ---
+Wolfram Language itself comes with a vast standard library, which is suitable for most problem solving, where Python or Julia are used.
+
+The complexity for some utility tasks such as plotting data in the a given range __might even be comparable with a level of Microsoft Excel__.
+
+Wolfram Language is symbolic programming language, which is in a nutshell 
+- *code and data* are expressions
+- computations are executed by applying rules
+- what you see is one of the forms of interpretation
+
+## Introduction
+Let us have a look at an example
+
+```mathematica
+{1,1,2,2,2,2} /. {2 -> 1, 1 -> 0}
+```
+
+![](./../Screenshot%202024-04-28%20at%2011.21.38.png)
+
+Integer numbers are so-called atoms of the language on which we can apply any transformation rule. Or we can use more general pattern
+
+```mathematica
+{0,0,1,1,1,1} /. {any_Integer :> any / 2}
+```
+
+![](./../Screenshot%202024-04-28%20at%2011.19.42.png)
+
+Here what you see 
+
+$$
+\frac{1}{2}
+$$
+is actually written in the code editor as 
+
+```mathematica title="raw text"
+(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)
+```
+
+Looking closely on it, we can se that the it is still a normal `(1/2)` expression like in any other programming language. However, it is wrapped with some *special* comment blocks, that tells an editor how to render it. One can go quite far with it
+
+![](./../GIF%20speed%20changer%20(1).gif)
+
+__Any output expression is editable and can be reevaluated as well__
+
+One can go even further in exploring the idea of symbolics and syntax sugar of our editor by applying more complicated rule
+
+```mathematica
+{0,0,1/2,1/2,1/2,1/2} /. {any_?NumericQ :> {RGBColor[any, 1-any, 1], any} }
+```
+
+![](./../Screenshot%202024-04-28%20at%2011.27.13.png)
+
+As one can see, Wolfram Language does not differentiate  what you are entering: a color, a function, a number. All of them are normal Wolfram Language expressions.
+
+There are also built-in expression used for styling the output
+
+```mathematica
+% // Transpose // TableForm 
+```
+
+*here % means to use the previous output*
+
+![](./../Screenshot%202024-04-28%20at%2011.30.28.png)
+
+Or something more complicated
+
+```mathematica
+Table[If[PrimeQ[i], Framed[i, Background->Yellow], i], {i, 1, 20}]
+```
+
+*this expression will make an array of numbers and highlight primes*
+
+![](./../Screenshot%202024-04-28%20at%2011.32.07.png)
+
+If you try to evaluate it, all decorations will be gone and you get a normal-looking Wolfram Language array with numbers up to 20.
+
+
+The same symbolic features count for [Graphics](frontend/Reference/Graphics/Graphics.md). For example
+
+```mathematica
+Plot[x, {x,0,1}, PlotStyle -> RGBColor[1/2, 1/2, 1]]
+```
+
+![](./../Screenshot%202024-04-28%20at%2011.36.54.png)
+
+One might think, that this is an image, but not
+
+![](./../Screenshot%202024-04-28%20at%2011.37.46.png)
+
+![](./../Screenshot%202024-04-28%20at%2011.38.19.png)
+
+:::info
+Everything is a set of Wolfram Expressions covered with a decoration. Underneath there is still a working code than can be copied
+:::
+
+:::info
+Most symbols are abstract objects that represent ideas, which, then can be interpreted in many ways.
+:::
+
+This is also valid for 3D graphics
+
+```mathematica
+Graphics3D[Sphere[]]
+```
+
+![](./../Screenshot%202024-04-28%20at%2022.23.34.png)
+
+![](./../Screenshot%202024-04-28%20at%2022.24.14.png)
+
+__This is all a question of interpretation__ 
+
+What you see is only one form, however, taking the same symbol of [Cuboid](frontend/Reference/Graphics3D/Cuboid.md), we can treat it as a an abstract object that represents a corresponding geometric object, i.e.
+
+```mathematica
+Cuboid[{a1,a2,a3}, {b1,b2,b3}] // Volume
+```
+
+```mathematica
+Abs[(-a1+b1) (-a2+b2) (-a3+b3)]
+```
+
+Raster images are also expressions. Try to drag and drop your image to an editor
+
+![](./../Screenshot%202024-04-29%20at%2011.26.13.png)
+
+What can you do with it? Anything! For instance
+
+```mathematica
+i // ColorNegate
+```
+
+![](./../Screenshot%202024-04-29%20at%2011.27.22.png)
+
+or analyze a color distribution in LAB space
+
+```mathematica
+BubbleChart[
+ Append @@@ 
+  Tally[Round[
+    Flatten[ImageData[ColorConvert[i, "LAB"]], 1][[All, {2, 3}]], 
+    10^-1]], ColorFunction -> (LABColor[.6, ##] &), 
+ ColorFunctionScaling -> False, BubbleSizes -> {0.01, 0.1}]
+```
+
+![](./../Screenshot%202024-04-29%20at%2011.29.32.png)
+
+If you like math like me, you will probably find it useful to work in `MatrixForm`
+
+```mathematica
+{{a,b}, {c,d}} // MatrixForm
+```
+
+![](./../Screenshot%202024-04-29%20at%2013.41.50.png)
+
+And it is still fine to work with it like if it was *a normal list of lists* (matrix)
+
+![](./../Screenshot%202024-04-29%20at%2013.42.56.png)
+
+:::tip
+Use [Snippets](frontend/Snippets.md) for easy matrix drawing
+:::
+
+Or combining it with other syntax sugar, one can do quite weird things
+
+```mathematica
+Table[RGBColor[1,a,b], {a,0,1,0.25}, {b,0,1,0.25}]// MatrixForm
+```
+
+![](./../Screenshot%202024-04-29%20at%2013.45.13.png)
+
+Syntax sugar and decorations also serves the purpose of abstracting classical OOP objects providing a short summary
+
+```mathematica
+NumericArray[{1,2,3,4,5,6}]
+```
+
+![](./../Screenshot%202024-04-29%20at%2013.50.28.png)
+
+which is still a normal symbol, which can be copied somewhere else. 
+
+For instance `DateObject` is rendered as a date
+```mathematica
+Now
+```
+
+![](./../Screenshot%202024-04-29%20at%2013.54.12.png)
+
+Time-series has also its own representation
+
+```mathematica
+v = {2, 1, 6, 5, 7, 4};
+t = {1, 2, 5, 10, 12, 15};
+
+ts = TimeSeries[v, {t}]
+```
+
+![](./../Screenshot%202024-04-29%20at%2014.04.41.png)
+
+And the last example of a syntax sugar is [ListPlay](frontend/Reference/Sound/ListPlay.md), which is quite experimental, but allows to play or generate sound right in the notebook
+
+```mathematica
+ListPlay[Table[Sin[2 π 50 t], {t, 0, 1, 1./2000}]]
+```
+
+![](./../Screenshot%202024-04-29%20at%2014.08.42.png)
+
+If you have too much data, then turn it into an icon using [Iconize](frontend/Reference/Decorations/Iconize.md)
+
+```mathematica
+Table[i, {i, 100}] // Iconize
+```
+
+![](./../Screenshot%202024-04-29%20at%2014.10.11.png)
+
+It uses `zlib` to compress it and store as BASE64 string inside the notebook. However, it the size does exceed a few kilobytes the data will be offloaded to a file and an icon will be turned into a short reference. 
+
+:::info
+Those are built-in features, there is no extra privilege for them compared to user's code. You may implement your own objects with beautiful syntax sugar and etc. 
+:::
