@@ -53,6 +53,9 @@ Line[{{0, a // Offload}, {1, Offload[a, "Static"->True]}}]
 
 :::
 
+## Related
+See also [OffloadFromEventObject](frontend/Reference/Interpreter/OffloadFromEventObject.md)
+
 ## Examples
 ### Symbols tracking and deferred evaluation
 Typical example for the dynamic evaluation

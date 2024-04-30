@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Expressions representation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3d17a4fe7a16fe56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Reference/Decorations/Iconize.md",
+                "file": "frontend/Symbolic programming.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -73,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SlideEventListener",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Decorations/Iconize.md",
+                "file": "frontend/Symbolic programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Decorations/Iconize.md",
+                "file": "frontend/Symbolic programming.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Decorations/Iconize.md"
+                "file": "frontend/Symbolic programming.md"
               }
             }
           },
@@ -183,9 +170,31 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3d17a4fe7a16fe56",
+  "active": "1ff0f44cca6f7406",
   "lastOpenFiles": [
-    "frontend/Symbolic nature and syntax sugar.md",
+    "frontend/Advanced/Boxes and Decorations/dynamic-summary-box.md",
+    "frontend/Advanced/Dynamics/Offloading calculations.md",
+    "frontend/Advanced/Dynamics/Prototyping.md",
+    "frontend/Advanced/Slides/embed-wl.md",
+    "frontend/Expressions representation.md",
+    "frontend/Reference/Interpreter/OffloadFromEventObject.md",
+    "Generated.mov to GIF 1.gif",
+    "frontend/Dynamics.md",
+    "Generated.mov to GIF.gif",
+    "Generated video to gif (1).gif",
+    "frontend/Advanced/Events system/Parallel kernels.md",
+    "frontend/Advanced/Events system/event-generators.md",
+    "frontend/Advanced/Events system/Dynamic symbols generation.md",
+    "frontend/Advanced/Dynamics/Scoping.md",
+    "frontend/Advanced/Dynamics/Continuous animation.md",
+    "frontend/Reference/Interpreter/Offload.md",
+    "Generated video to gif.gif",
+    "frontend/Advanced/Dynamics/Raster animation.md",
+    "frontend/Advanced/Dynamics/Inline event listeners.md",
+    "frontend/Advanced/Events system/routing.md",
+    "frontend/Advanced/Events system/promises.md",
+    "frontend/Reference/Decorations/Iconize.md",
+    "frontend/Symbolic programming.md",
     "frontend/instruction.md",
     "Screenshot 2024-04-29 at 14.10.11.png",
     "Screenshot 2024-04-29 at 14.08.42.png",
@@ -193,34 +202,12 @@
     "Screenshot 2024-04-29 at 13.54.12.png",
     "Screenshot 2024-04-29 at 13.50.28.png",
     "Screenshot 2024-04-29 at 13.45.13.png",
-    "Screenshot 2024-04-29 at 13.42.56.png",
-    "Screenshot 2024-04-29 at 13.41.50.png",
-    "Screenshot 2024-04-29 at 11.29.32.png",
-    "Screenshot 2024-04-29 at 11.27.22.png",
     "frontend/Reference/Graphics3D/Cuboid.md",
-    "frontend/Expressions representation.md",
     "frontend/Guidelines.md",
-    "frontend/Reference/Interpreter/Offload.md",
     "frontend/Snippets.md",
     "frontend/Cell types/Many more.md",
     "frontend/Advanced/Slides/Fragments.md",
     "frontend/Advanced/Javascript/Canvas.md",
-    "frontend/Advanced/Javascript/Communication.md",
-    "frontend/Advanced/Javascript/Realtime data capture.md",
-    "frontend/Advanced/Snippets/AI Assistant.md",
-    "frontend/Advanced/Dynamics/Raster animation.md",
-    "frontend/Advanced/Dynamics/Continuous animation.md",
-    "frontend/Advanced/Dynamics/Indicators.md",
-    "frontend/Cell types/Javascript.md",
-    "frontend/Cell types/HTML.md",
-    "frontend/Cell types/Slides.md",
-    "frontend/Cell types/WLX.md",
-    "frontend/Advanced/Slides/Styling.md",
-    "frontend/Advanced/Slides/tables.md",
-    "frontend/Advanced/Slides/Transitions.md",
-    "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Slides/Backgrounds.md",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",

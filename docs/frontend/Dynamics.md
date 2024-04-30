@@ -131,6 +131,12 @@ for 3D graphics the following events are provided
 Event handlers wrapped around graphics primitives are parts of [wljs-graphics-d3](https://github.com/JerryI/wljs-graphics-d3) library.
 :::
 
+### Autogeneration of dynamic symbols
+There is also an extension [OffloadFromEventObject](frontend/Reference/Interpreter/OffloadFromEventObject.md) that allows to turn event objects into dynamic symbols
+
+![](./../Generated.mov%20to%20GIF.gif)
+
+
 #### 🍪 Example 2
 Let us show a fun example - implementation of FABRIK solver.
 
