@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Symbolic programming.md",
+                "file": "frontend/Reference/GUI/Slider.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Symbolic programming.md",
+                "file": "frontend/Reference/GUI/Slider.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Symbolic programming.md",
+                "file": "frontend/Reference/GUI/Slider.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Symbolic programming.md"
+                "file": "frontend/Reference/GUI/Slider.md"
               }
             }
           },
@@ -172,8 +172,17 @@
   },
   "active": "1ff0f44cca6f7406",
   "lastOpenFiles": [
-    "frontend/Advanced/Boxes and Decorations/dynamic-summary-box.md",
+    "frontend/Reference/GUI/InputJoystick.md",
+    "frontend/Reference/GUI/InputRange.md",
+    "Joystikc video to gif.gif",
+    "frontend/Reference/GUI/InputGroup.md",
+    "frontend/Reference/GUI/InputTable.md",
+    "frontend/Advanced/Events system/Parallel kernels.md",
+    "frontend/Advanced/Events system/Dynamic symbols generation.md",
     "frontend/Advanced/Dynamics/Offloading calculations.md",
+    "frontend/Advanced/Dynamics/Inline event listeners.md",
+    "frontend/Symbolic programming.md",
+    "frontend/Advanced/Boxes and Decorations/dynamic-summary-box.md",
     "frontend/Advanced/Dynamics/Prototyping.md",
     "frontend/Advanced/Slides/embed-wl.md",
     "frontend/Expressions representation.md",
@@ -182,32 +191,22 @@
     "frontend/Dynamics.md",
     "Generated.mov to GIF.gif",
     "Generated video to gif (1).gif",
-    "frontend/Advanced/Events system/Parallel kernels.md",
     "frontend/Advanced/Events system/event-generators.md",
-    "frontend/Advanced/Events system/Dynamic symbols generation.md",
     "frontend/Advanced/Dynamics/Scoping.md",
     "frontend/Advanced/Dynamics/Continuous animation.md",
     "frontend/Reference/Interpreter/Offload.md",
     "Generated video to gif.gif",
     "frontend/Advanced/Dynamics/Raster animation.md",
-    "frontend/Advanced/Dynamics/Inline event listeners.md",
     "frontend/Advanced/Events system/routing.md",
     "frontend/Advanced/Events system/promises.md",
     "frontend/Reference/Decorations/Iconize.md",
-    "frontend/Symbolic programming.md",
     "frontend/instruction.md",
     "Screenshot 2024-04-29 at 14.10.11.png",
     "Screenshot 2024-04-29 at 14.08.42.png",
     "Screenshot 2024-04-29 at 14.04.41.png",
     "Screenshot 2024-04-29 at 13.54.12.png",
     "Screenshot 2024-04-29 at 13.50.28.png",
-    "Screenshot 2024-04-29 at 13.45.13.png",
     "frontend/Reference/Graphics3D/Cuboid.md",
-    "frontend/Guidelines.md",
-    "frontend/Snippets.md",
-    "frontend/Cell types/Many more.md",
-    "frontend/Advanced/Slides/Fragments.md",
-    "frontend/Advanced/Javascript/Canvas.md",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",
