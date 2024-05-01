@@ -5,6 +5,10 @@ context: BoxForm`
 package: wljs-editor
 source: https://github.com/JerryI/wljs-editor/blob/dev/src/Boxes.wl
 ---
+```mathematica
+BoxForm`ArrangeSummaryBox[head_Symbol, interpretation_, icon_Graphics | _Graphics3D | _Image | None, summary_List, Null, opts___] _RowBox
+```
+
 A decoration for summarizing internals of any WL expression to a human-readable form
 
 ![](./../../../Screenshot%202024-04-07%20at%2018.05.37.png)
@@ -60,3 +64,7 @@ MyObject[<|
 ![](./../../../Screenshot%202024-04-07%20at%2018.14.26.png)
 
 This expression __is still valid for normal coping and evaluating__ 
+
+## Options
+### `"Event"`
+A string identifier used for attaching event listeners to a widget. Since this is a wrapper over [ViewBox](frontend/Reference/Decorations/ViewBox.md) and `RowBox`,  see more on its page.

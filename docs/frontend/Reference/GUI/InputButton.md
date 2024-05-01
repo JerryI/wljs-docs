@@ -35,3 +35,8 @@ EventHandler[button, Print]
 ```
 
 
+or click to make sound
+
+```mathematica
+EventHandler[InputButton[], Beep]
+```

@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 ---
 While evaluating some experimental data, some live indicators comes handy
 ## Crossbar and coordinates field

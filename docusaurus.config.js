@@ -11,7 +11,7 @@ const math = require('remark-math');
 const katex = require('rehype-katex');
 
 const scripts = [
- /* "/wljs-interpreter/src/interpreter.js",
+  /*"/wljs-interpreter/src/interpreter.js",
   "/wljs-interpreter/src/core.js",
   "/wljs-editor/src/objects.js",
   "/wljs-sharedlib-d3/dist/kernel.js",

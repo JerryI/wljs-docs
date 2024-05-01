@@ -8,24 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1ff0f44cca6f7406",
+            "id": "61ba188d7a44f909",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/GUI/Slider.md",
+                "file": "frontend/Advanced/Objects/Static decorations.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "61ba188d7a44f909",
+            "id": "6adeb44995aaf731",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Cuboid.md",
+                "file": "frontend/Reference/Decorations/ViewBox.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ViewBox",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/GUI/Slider.md",
+                "file": "frontend/Advanced/Objects/Static decorations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/GUI/Slider.md",
+                "file": "frontend/Advanced/Objects/Static decorations.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/GUI/Slider.md"
+                "file": "frontend/Advanced/Objects/Static decorations.md"
               }
             }
           },
@@ -170,43 +170,45 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1ff0f44cca6f7406",
+  "active": "61ba188d7a44f909",
   "lastOpenFiles": [
-    "frontend/Reference/GUI/InputJoystick.md",
-    "frontend/Reference/GUI/InputRange.md",
-    "Joystikc video to gif.gif",
-    "frontend/Reference/GUI/InputGroup.md",
-    "frontend/Reference/GUI/InputTable.md",
-    "frontend/Advanced/Events system/Parallel kernels.md",
-    "frontend/Advanced/Events system/Dynamic symbols generation.md",
-    "frontend/Advanced/Dynamics/Offloading calculations.md",
-    "frontend/Advanced/Dynamics/Inline event listeners.md",
-    "frontend/Symbolic programming.md",
-    "frontend/Advanced/Boxes and Decorations/dynamic-summary-box.md",
-    "frontend/Advanced/Dynamics/Prototyping.md",
-    "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Expressions representation.md",
-    "frontend/Reference/Interpreter/OffloadFromEventObject.md",
-    "Generated.mov to GIF 1.gif",
-    "frontend/Dynamics.md",
-    "Generated.mov to GIF.gif",
-    "Generated video to gif (1).gif",
-    "frontend/Advanced/Events system/event-generators.md",
-    "frontend/Advanced/Dynamics/Scoping.md",
-    "frontend/Advanced/Dynamics/Continuous animation.md",
-    "frontend/Reference/Interpreter/Offload.md",
-    "Generated video to gif.gif",
-    "frontend/Advanced/Dynamics/Raster animation.md",
+    "frontend/Advanced/Objects/Dynamic decorations.md",
+    "frontend/Advanced/Objects/Creating new type.md",
+    "frontend/Advanced/Javascript/Realtime data capture.md",
+    "frontend/Advanced/Javascript/Communication.md",
+    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
+    "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
+    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
     "frontend/Advanced/Events system/routing.md",
     "frontend/Advanced/Events system/promises.md",
-    "frontend/Reference/Decorations/Iconize.md",
-    "frontend/instruction.md",
-    "Screenshot 2024-04-29 at 14.10.11.png",
-    "Screenshot 2024-04-29 at 14.08.42.png",
-    "Screenshot 2024-04-29 at 14.04.41.png",
-    "Screenshot 2024-04-29 at 13.54.12.png",
-    "Screenshot 2024-04-29 at 13.50.28.png",
-    "frontend/Reference/Graphics3D/Cuboid.md",
+    "frontend/Advanced/Events system/Parallel kernels.md",
+    "frontend/Advanced/Events system/event-generators.md",
+    "frontend/Advanced/Events system/Dynamic symbols generation.md",
+    "frontend/Advanced/Dynamics/Scoping.md",
+    "frontend/Advanced/Dynamics/Raster animation.md",
+    "frontend/Advanced/Dynamics/Prototyping.md",
+    "frontend/Advanced/Dynamics/Performance tips.md",
+    "frontend/Advanced/Dynamics/Offloading calculations.md",
+    "frontend/Advanced/Dynamics/Inline event listeners.md",
+    "frontend/Advanced/Dynamics/Indicators.md",
+    "frontend/Advanced/Dynamics/Advanced animation.md",
+    "frontend/Advanced/Objects/Static decorations.md",
+    "frontend/Advanced/Objects/Controllers in decorations.md",
+    "RemovedDeco.gif",
+    "frontend/Reference/Decorations/ViewBox.md",
+    "Screen Recording May 01.gif",
+    "DynamicDeco video.gif",
+    "frontend/Reference/Graphics/Rotate.md",
+    "frontend/Advanced/Boxes and Decorations/Summary decoration.md",
+    "frontend/Advanced/Boxes and Decorations/Static decorations.md",
+    "BallsDecoration video.gif",
+    "AniBox video to gif.gif",
+    "Screenshot 2024-05-01 at 20.06.25.png",
+    "Screenshot 2024-05-01 at 19.55.18.png",
+    "Screenshot 2024-05-01 at 19.51.05.png",
+    "Screenshot 2024-05-01 at 19.50.18.png",
+    "Screenshot 2024-05-01 at 19.31.40.png",
+    "frontend/Advanced/Objects",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
     "imgs/neattt",
@@ -215,7 +217,6 @@
     "frontend/Reference/Plotly",
     "frontend/Reference/Packages/Editor/Remote Cells/Untitled",
     "frontend/Reference/Packages/Editor/Untitled",
-    "frontend/Reference/Packages/Editor/Editor",
-    "frontend/Reference/Interpreter"
+    "frontend/Reference/Packages/Editor/Editor"
   ]
 }
