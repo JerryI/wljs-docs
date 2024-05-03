@@ -12,6 +12,11 @@ As a short summary - where you can use event-handlers
 - on any `EventObject` or its string equivalent 
 
 An event-driven approach was inspired by Javascript language, where one can subscribe to any changes of any objects. Here it was expanded in a way to utilize the full power of pattern matching features of Wolfram Language.
+
+:::tip
+See reference section [Events](frontend/Reference/Misc/Events.md) as well
+:::
+
 ## Thumb rule
 __One event-object__ - __one handler__ function
 

@@ -220,7 +220,16 @@ core.GrantSymbol = (args, env) => {
 }
 ```
 
- 
+If you have multiple prioritized contexts, you __can pass them as an array__
+
+```js
+core.GrantSymbol = (args, env) => {
+	const data = interpretate(args, {...env, context: [library1, library2]});
+	//...
+	//first match should be in `library` object
+}
+```
+
 ### Containers | Executables
 Each time interpreter faces a container it creates an unique object, that scopes `env` variable and provides local memory for all tree of Wolfram Expressions located inside the container. 
 

@@ -264,3 +264,107 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
 ```
 
 ![](./../../../RemovedDeco.gif)
+
+### CSS effects
+One can apply some visuals as well
+
+```html
+.wlx
+
+<style>
+.desintegrate-animation {
+  animation-duration: 2.6s;
+  animation-name: bounceOutRight;
+}
+@keyframes bounceOutRight {
+  50% {
+    opacity: 1; transform: translate3d(0, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0);
+  }
+}
+</style>
+```
+
+```js
+.js
+
+core.Desintagrate = async (args, env) => {
+  env.element.parentNode.classList.add('desintegrate-animation');
+}
+```
+
+And add an animation call to our boxes
+
+```mathematica
+StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (StandardForm | TraditionalForm)] := Module[{
+	state = s["State"] // ToString,
+    instances = 0,
+    eventObject, construct, destruct
+}, With[{
+	textField = EditorView[state // Offload],
+	controller = CreateUUID[],
+    window = CurrentWindow[]
+},
+
+    construct := With[{},
+      (* subscribe to object events and update decoration *)
+      eventObject = EventClone[s];
+      EventHandler[eventObject, {
+        "State" -> Function[new, state = new // ToString],
+        "Destroy" -> Function[Null,
+          FrontSubmit[{Desintagrate[], Pause[2.6], ViewBox`OuterExpression[""]} // Offload, MetaMarker[#], "Window"->window] &/@ s["Instances"];
+        ]
+      }];     
+    ];
+
+    destruct := With[{},
+      Echo["Removed"];
+	  EventRemove[eventObject];    
+    ];
+
+	EventHandler[controller, {
+		"Mounted" -> Function[uid,
+          s["Instances"] = If[ListQ[s["Instances"]], Append[s["Instances"], uid], {uid}];
+          
+          If[instances === 0, construct];
+          instances = instances + 1;
+
+		],
+		
+		"Destroy" -> Function[uid, 
+            s["Instances"] = s["Instances"] /. {uid -> Nothing};
+            
+			instances = instances - 1;
+			
+	        (* unsubscribe when there is no instances *)
+	        If[instances === 0, destruct];
+          ]
+	}];
+
+	With[{
+		summary = {BoxForm`SummaryItem[{"State: ", textField}]}
+	},
+		BoxForm`ArrangeSummaryBox[
+			StateMachine,
+			s,
+			None,
+			summary,
+            Null,
+
+			"Event" -> controller
+		]
+	]
+] ]
+```
+
+The result should be following
+
+![](./../../../Animatedde.gif)

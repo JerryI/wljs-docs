@@ -1,8 +1,9 @@
 # Routing
 
-:::warning
+:::tip
 Remember the number 1 rule: __1 pattern of an event object__ = __1 handler__
-To assign more, you need to clone ([`EventClone`](frontend/Reference/Misc/Events.md#`EventClone`)) the original object and it will be rewired into a sort of splitter.
+
+To assign more, you need to clone ([`EventClone`](frontend/Reference/Misc/Events.md#`EventClone`)) the original object or use other pattern or topic.
 :::
 
 Since the notebook is usually a playground, you need to have an opportunity to undo actions, when you reevaluate the cell. Therefore there is concept of explicit routing of one event to some other handlers.

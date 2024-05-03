@@ -24,6 +24,10 @@ This is a fundamental component  for `Graphics`, `InputRange`... and other inter
 
 In general, containers is a huge fundamental building blocks for almost everything. 
 
+:::tip
+If you do not want to apply [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md) on your symbol manually, consider to define [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) for [StandardForm](frontend/Reference/Decorations/StandardForm.md). Then it can be applied automatically once it goes to the output cell.
+:::
+
 ## Options
 ### `"Store"`
 Specifies which to storage to use for an expression (`"Frontend"`, `"Kernel"`, or `All`). The default values is `All`.

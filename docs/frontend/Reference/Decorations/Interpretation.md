@@ -27,6 +27,10 @@ It will help interpreter to bypass extra layers of complexity.
 
 Note that you don't need to do this for [Graphics](frontend/Reference/Graphics/Graphics.md), [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md), [Image](frontend/Reference/Graphics/Image.md) and input elements, since it is done __automatically__
 :::
+
+:::info
+By the default [Interpretation](frontend/Reference/Decorations/Interpretation.md) applies [StandardForm](frontend/Reference/Decorations/StandardForm.md) to `display` expression before printing it to an output cell
+:::
 ## Example
 Have a look at the following example
 

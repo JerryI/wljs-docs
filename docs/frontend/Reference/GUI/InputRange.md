@@ -22,6 +22,9 @@ slider
 ```
 
 
+:::info
+On MacOS devices it provides a haptic feedback when dragged
+:::
 
 
 ## Options

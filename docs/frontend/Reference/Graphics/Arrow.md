@@ -30,6 +30,17 @@ Does work only with [Graphics](frontend/Reference/Graphics/Graphics.md) (2D). Dy
 ## Dynamics
 Fully supports. Use [Offload](frontend/Reference/Interpreter/Offload.md) keyword for that
 
+
+## Attach to other primitives
+
+### `BezierCurve`
+### `Line`
+
+You can wrap it over the corresponding object to attach an arrow-marker to the end
+```mathematica
+Arrow[Line[...], 0.04]
+```
+
 ## Options
 Not available at the moment
 

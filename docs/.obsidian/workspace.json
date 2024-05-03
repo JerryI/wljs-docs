@@ -8,30 +8,43 @@
         "type": "tabs",
         "children": [
           {
-            "id": "61ba188d7a44f909",
+            "id": "6adeb44995aaf731",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Objects/Static decorations.md",
+                "file": "frontend/Advanced/Syntax sugar/Decorating symbols.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6adeb44995aaf731",
+            "id": "683647e7d7c09cd2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/ViewBox.md",
+                "file": "frontend/Reference/Decorations/Interpretation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4a5c3a06436a28b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Reference/Graphics/BezierCurve.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -60,8 +73,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ViewBox",
-                "matchingCase": true,
+                "query": "inputRange",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Objects/Static decorations.md",
+                "file": "frontend/Reference/Graphics/BezierCurve.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Objects/Static decorations.md",
+                "file": "frontend/Reference/Graphics/BezierCurve.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Objects/Static decorations.md"
+                "file": "frontend/Reference/Graphics/BezierCurve.md"
               }
             }
           },
@@ -170,44 +183,46 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "61ba188d7a44f909",
+  "active": "4a5c3a06436a28b6",
   "lastOpenFiles": [
-    "frontend/Advanced/Objects/Dynamic decorations.md",
-    "frontend/Advanced/Objects/Creating new type.md",
-    "frontend/Advanced/Javascript/Realtime data capture.md",
-    "frontend/Advanced/Javascript/Communication.md",
+    "frontend/Reference/Graphics/Arrow.md",
+    "frontend/Reference/Graphics/BezierCurve.md",
+    "frontend/Reference/Graphics/Hue.md",
+    "frontend/Reference/Graph",
+    "frontend/Reference/Graphics/Raster.md",
+    "frontend/Reference/Graphics/Arrowheads.md",
+    "frontend/Reference/Graphics/GraphicsComplex.md",
     "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
-    "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
-    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
+    "frontend/Reference/Cells and Notebook/HapticFeedback.md",
+    "frontend/Reference/GUI/InputRange.md",
+    "frontend/Reference/Interpreter/OffloadFromEventObject.md",
+    "frontend/Reference/Decorations/Interpretation.md",
+    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+    "frontend/Reference/Frontend Objects/CreateFrontEndObject.md",
+    "Screenshot 2024-05-02 at 23.26.34.png",
+    "Screenshot 2024-05-02 at 23.24.27.png",
+    "frontend/Snippets.md",
+    "Screenshot 2024-05-02 at 23.06.10.png",
+    "frontend/Advanced/Dynamics/Scoping.md",
     "frontend/Advanced/Events system/routing.md",
     "frontend/Advanced/Events system/promises.md",
     "frontend/Advanced/Events system/Parallel kernels.md",
     "frontend/Advanced/Events system/event-generators.md",
     "frontend/Advanced/Events system/Dynamic symbols generation.md",
-    "frontend/Advanced/Dynamics/Scoping.md",
-    "frontend/Advanced/Dynamics/Raster animation.md",
-    "frontend/Advanced/Dynamics/Prototyping.md",
-    "frontend/Advanced/Dynamics/Performance tips.md",
-    "frontend/Advanced/Dynamics/Offloading calculations.md",
-    "frontend/Advanced/Dynamics/Inline event listeners.md",
-    "frontend/Advanced/Dynamics/Indicators.md",
-    "frontend/Advanced/Dynamics/Advanced animation.md",
-    "frontend/Advanced/Objects/Static decorations.md",
-    "frontend/Advanced/Objects/Controllers in decorations.md",
-    "RemovedDeco.gif",
     "frontend/Reference/Decorations/ViewBox.md",
+    "frontend/Reference/Cells and Notebook/NotebookDirectory.md",
+    "frontend/Reference/Cells and Notebook/RemoteCellObj.md",
+    "frontend/Reference/Cells and Notebook/EvaluationNotebook.md",
+    "frontend/Advanced/Objects/Dynamic decorations.md",
+    "frontend/Advanced/Syntax sugar",
+    "Animatedde.gif",
+    "frontend/Advanced/Objects/Static decorations.md",
+    "RemovedDeco.gif",
     "Screen Recording May 01.gif",
     "DynamicDeco video.gif",
-    "frontend/Reference/Graphics/Rotate.md",
-    "frontend/Advanced/Boxes and Decorations/Summary decoration.md",
-    "frontend/Advanced/Boxes and Decorations/Static decorations.md",
     "BallsDecoration video.gif",
     "AniBox video to gif.gif",
     "Screenshot 2024-05-01 at 20.06.25.png",
-    "Screenshot 2024-05-01 at 19.55.18.png",
-    "Screenshot 2024-05-01 at 19.51.05.png",
-    "Screenshot 2024-05-01 at 19.50.18.png",
-    "Screenshot 2024-05-01 at 19.31.40.png",
     "frontend/Advanced/Objects",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",
@@ -215,8 +230,6 @@
     "frontend/Reference/Packages/Graphics/RGBColor,md",
     "frontend/Reference/Slides",
     "frontend/Reference/Plotly",
-    "frontend/Reference/Packages/Editor/Remote Cells/Untitled",
-    "frontend/Reference/Packages/Editor/Untitled",
-    "frontend/Reference/Packages/Editor/Editor"
+    "frontend/Reference/Packages/Editor/Remote Cells/Untitled"
   ]
 }
