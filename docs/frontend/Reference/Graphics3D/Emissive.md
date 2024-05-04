@@ -20,10 +20,7 @@ Graphics3D[{
 }]
 ```
 
-<Wl data={`WyJHcmFwaGljczNEIixbIkxpc3QiLFsiTGlzdCIsWyJFbWlzc2l2ZSIsWyJSR0JDb2xvciIsMSww
-LDBdXSxbIlNwaGVyZSIsWyJMaXN0IiwwLDAsMl1dXSxbIkxpc3QiLFsiR3JheUxldmVsIiwxXSxb
-IlNwaGVyZSIsWyJMaXN0IiwwLDAsMF1dXV1d
-`}>{`Graphics3D[{{Emissive[Red], Sphere[{0,0,2}]}, {White, Sphere[]}}]`}</Wl>
+<Wl >{`Graphics3D[{{Emissive[Red], Sphere[{0,0,2}]}, {White, Sphere[]}}]`}</Wl>
 
 :::tip
 The best looking results can be achieved in a **Path-tracing mode** of [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md). Emissive materials cannot cast light to other objects in a normal rasterization mode, use artificial light sources such as [SpotLight](frontend/Reference/Graphics3D/SpotLight.md) and [PointLight](frontend/Reference/Graphics3D/PointLight.md)...

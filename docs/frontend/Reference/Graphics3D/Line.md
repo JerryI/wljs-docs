@@ -16,10 +16,7 @@ represents a line in 3D space.
 Graphics3D[{Black,Line[{{1, 1, -1}, {2, 2, 1}, {3, 3, -1}, {4, 4, 1}}]}]
 ```
 
-<Wl data={`WyJHcmFwaGljczNEIixbIkxpc3QiLFsiR3JheUxldmVsIiwwXSxbIkxpbmUiLFsiTGlzdCIsWyJM
-aXN0IiwxLDEsLTFdLFsiTGlzdCIsMiwyLDFdLFsiTGlzdCIsMywzLC0xXSxbIkxpc3QiLDQsNCwx
-XV1dXV0=
-`}>{`Graphics3D[{Black,Line[{{1, 1, -1}, {2, 2, 1}, {3, 3, -1}, {4, 4, 1}}]}]`}</Wl>
+<Wl >{`Graphics3D[{Black,Line[{{1, 1, -1}, {2, 2, 1}, {3, 3, -1}, {4, 4, 1}}]}]`}</Wl>
 
 ## Parameters
 ### `RGBColor`

@@ -15,8 +15,5 @@ defines opacity for primitives
 {Opacity[0.5], Red, Disk[{-0.5,0}, 1], Blue, Disk[{0.5,0}, 1]}
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIk9wYWNpdHkiLDAuNV0sWyJSR0JDb2xvciIsMSwwLDBdLFsi
-RGlzayIsWyJMaXN0IiwtMC41LDBdLDFdLFsiUkdCQ29sb3IiLDAsMCwxXSxbIkRpc2siLFsiTGlz
-dCIsMC41LDBdLDFdXV0=
-`}>{`Graphics[{Opacity[0.5], Red, Disk[{-0.5,0}, 1], Blue, Disk[{0.5,0}, 1]}]`}</Wl>
+<Wl >{`Graphics[{Opacity[0.5], Red, Disk[{-0.5,0}, 1], Blue, Disk[{0.5,0}, 1]}]`}</Wl>
 

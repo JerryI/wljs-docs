@@ -36,6 +36,9 @@ const config = {
   title: 'WLJS Notebook',
   tagline: 'Documentation',
   favicon: 'img/favicon.ico',
+
+  staticDirectories: ['static'],
+  
   
   /*url: 'http://127.0.0.1:20540',
   // Set the /<baseUrl>/ pathname under which your site is served

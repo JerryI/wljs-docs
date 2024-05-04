@@ -23,7 +23,4 @@ Graphics[{
 }]
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIkFic29sdXRlVGhpY2tuZXNzIiwzXSxbIlJHQkNvbG9yIiww
-LDEsMV0sWyJMaW5lIixbIkxpc3QiLFsiTGlzdCIsMCwwXSxbIkxpc3QiLDEsMV1dXV0sWyJSdWxl
-IiwiSW1hZ2VTaXplIiwzNTBdXQ==
-`}>{`Graphics[{AbsoluteThickness[3],Cyan, Line[{{0, 0}, {1, 1}}]}, ImageSize->350]`}</Wl>
+<Wl >{`Graphics[{AbsoluteThickness[3],Cyan, Line[{{0, 0}, {1, 1}}]}, ImageSize->350]`}</Wl>

@@ -25,18 +25,7 @@ for example
 Graphics[Table[Disk[RandomReal[{-1,1}, 2], 1], {i,10}]]
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIkRpc2siLFsiTGlzdCIsMC40MDE3NzI1MzA5ODcyOTQ0LC0w
-Ljg0ODIzNTY4MjYwNTcxODldLDFdLFsiRGlzayIsWyJMaXN0IiwtMC43NzA2MDI3NDc2MDczODg3
-LDAuMzU5NDgzNTczMDQwOTU5MV0sMV0sWyJEaXNrIixbIkxpc3QiLDAuNjk0NjYzMzgwMDU1Njk4
-NywwLjM3NjczODExNzIxMTc0MzldLDFdLFsiRGlzayIsWyJMaXN0IiwwLjcxNzc3MTgyOTQ5OTY3
-NTYsMC40OTg1NDI0NTU1NzMzMjUzXSwxXSxbIkRpc2siLFsiTGlzdCIsMC44OTM2NDQ1OTM2ODky
-MzI1LC0wLjM5MDcyMjA5NzE2ODk4MjldLDFdLFsiRGlzayIsWyJMaXN0IiwtMC42ODE0ODEzNzY1
-NzIzMDk2LDAuMTg3NjE2Nzk4OTkyOTMzMzhdLDFdLFsiRGlzayIsWyJMaXN0IiwwLjQxMzk3NTM4
-NjY0Mjg5ODgsMC43NTI2MzM2MDc5Njg4NjIzXSwxXSxbIkRpc2siLFsiTGlzdCIsMC4yMzcwOTU4
-NjU0MjUxMzQ3MiwtMC4zNDQ4NDczMjEzNzEyMTkxXSwxXSxbIkRpc2siLFsiTGlzdCIsLTAuNzUx
-ODEwNzM1NDQ5MjA0NSwwLjU3OTY2OTA4NTc3MzYzODhdLDFdLFsiRGlzayIsWyJMaXN0IiwwLjMz
-NjE0NTUzOTk4NzI1MTA1LC0yLjM1Nzg5NDE0MTM4MzA1NDVlLTJdLDFdXV0=
-`}>{`Graphics[Table[Disk[RandomReal[{-1,1}, 2], 1], {i,10}]]`}</Wl>
+<Wl >{`Graphics[Table[Disk[RandomReal[{-1,1}, 2], 1], {i,10}]]`}</Wl>
 ## Dynamics
 Fully support for a radius and coordinates. Use [Offload](frontend/Reference/Interpreter/Offload.md)
 
@@ -49,9 +38,7 @@ Color of the filling and stroke (if `EdgeForm` is not specified)
 {Blue, Disk[{0,0}, 1]}
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlJHQkNvbG9yIiwwLDAsMV0sWyJEaXNrIixbIkxpc3QiLDAs
-MF0sMV1dXQ==
-`}>{`Graphics[{Blue, Disk[{0,0}, 1]}]`}</Wl>
+<Wl >{`Graphics[{Blue, Disk[{0,0}, 1]}]`}</Wl>
 
 
 ### `EdgeForm`
@@ -61,9 +48,7 @@ Specifies the color of a stroke
 {EdgeForm[Red], Blue, Disk[{0,0}, 1]}
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIkVkZ2VGb3JtIixbIlJHQkNvbG9yIiwxLDAsMF1dLFsiUkdC
-Q29sb3IiLDAsMCwxXSxbIkRpc2siLFsiTGlzdCIsMCwwXSwxXV1d
-`}>{`Graphics[{EdgeForm[Red], Blue, Disk[{0,0}, 1]}]`}</Wl>
+<Wl >{`Graphics[{EdgeForm[Red], Blue, Disk[{0,0}, 1]}]`}</Wl>
 
 
 ### `Opacity`
@@ -73,10 +58,7 @@ Defines opacity for a primitive (see [[frontend/Reference/Graphics/Opacity]])
 {Opacity[0.5], Red, Disk[{-0.5,0}, 1], Blue, Disk[{0.5,0}, 1]}
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIk9wYWNpdHkiLDAuNV0sWyJSR0JDb2xvciIsMSwwLDBdLFsi
-RGlzayIsWyJMaXN0IiwtMC41LDBdLDFdLFsiUkdCQ29sb3IiLDAsMCwxXSxbIkRpc2siLFsiTGlz
-dCIsMC41LDBdLDFdXV0=
-`}>{`Graphics[{Opacity[0.5], Red, Disk[{-0.5,0}, 1], Blue, Disk[{0.5,0}, 1]}]`}</Wl>
+<Wl >{`Graphics[{Opacity[0.5], Red, Disk[{-0.5,0}, 1], Blue, Disk[{0.5,0}, 1]}]`}</Wl>
 
 
 ## Methods

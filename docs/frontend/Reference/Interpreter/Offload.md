@@ -65,10 +65,7 @@ pts = RandomReal[{-1,1}, {64, 2}];
 Graphics[{PointSize[0.02], Point[pts // Offload]}, ImageSize->500]
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJMaXN0IixbIlBvaW50U2l6ZSIsMi4wZS0yXSxbIlBvaW50IixbIkhvbGQi
-LFsiUmFuZG9tUmVhbCIsWyJMaXN0IiwtMSwxXSxbIkxpc3QiLDY0LDJdXV1dXSxbIlJ1bGUiLCJJ
-bWFnZVNpemUiLDUwMF1d
-`}>{`Graphics[{PointSize[0.02], Point[RandomReal[{-1,1}, {64, 2}] // Offload]}, ImageSize->500]`}</Wl>
+<Wl >{`Graphics[{PointSize[0.02], Point[RandomReal[{-1,1}, {64, 2}] // Offload]}, ImageSize->500]`}</Wl>
 
 :::note
 Try to update the page. Each time the distribution of points will be different 

@@ -199,6 +199,13 @@ ts = TimeSeries[v, {t}]
 
 ![](./../Screenshot%202024-04-29%20at%2014.04.41.png)
 
+:::tip
+Read more on how to create such object 
+
+- [Decorating symbols](frontend/Advanced/Syntax%20sugar/Decorating%20symbols.md)
+- [Creating new type](frontend/Advanced/Objects/Creating%20new%20type.md)
+:::
+
 And the last example of a syntax sugar is [ListPlay](frontend/Reference/Sound/ListPlay.md), which is quite experimental, but allows to play or generate sound right in the notebook
 
 ```mathematica

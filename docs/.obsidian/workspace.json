@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+                "file": "frontend/Symbolic programming.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/Interpretation.md",
+                "file": "frontend/Reference/Plotting Functions/DateListPlot.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "79d35d2ac2ca49fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Reference/Decorations/ViewBox.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,14 +49,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/BezierCurve.md",
+                "file": "frontend/Reference/Decorations/InterpretationBox.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "inputRange",
+                "query": "ViewBox",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/BezierCurve.md",
+                "file": "frontend/Reference/Plotting Functions/DateListPlot.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/BezierCurve.md",
+                "file": "frontend/Reference/Plotting Functions/DateListPlot.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/BezierCurve.md"
+                "file": "frontend/Reference/Plotting Functions/DateListPlot.md"
               }
             }
           },
@@ -183,46 +195,46 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4a5c3a06436a28b6",
+  "active": "683647e7d7c09cd2",
   "lastOpenFiles": [
-    "frontend/Reference/Graphics/Arrow.md",
+    "frontend/Advanced/Objects/Static decorations.md",
+    "frontend/Reference/Plotting Functions/DateListPlot.md",
+    "frontend/Symbolic programming.md",
+    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+    "Screenshot 2024-05-04 at 13.51.35.png",
+    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
+    "Screenshot 2024-05-04 at 13.47.06.png",
+    "frontend/Reference/Decorations/InterpretationBox.md",
+    "frontend/Reference/Decorations/ViewBox.md",
+    "frontend/Advanced/Objects/Dynamic decorations.md",
+    "frontend/Reference/Decorations/MakeBoxes.md",
+    "frontend/Reference/Decorations/StandardForm.md",
+    "frontend/Reference/Decorations/Interpretation.md",
+    "frontend/Reference/GUI/InputJoystick.md",
+    "Dragdjoy GIF speed.gif",
+    "Screenshot 2024-05-04 at 13.17.33.png",
     "frontend/Reference/Graphics/BezierCurve.md",
+    "Screenshot 2024-05-04 at 12.54.20.png",
+    "Screenshot 2024-05-04 at 12.48.32.png",
+    "frontend/Reference/Decorations/ArrangeSummaryBox.md",
+    "Screenshot 2024-05-03 at 22.50.34.png",
+    "Screenshot 2024-05-03 at 22.49.27.png",
+    "Screenshot 2024-05-03 at 22.33.28.png",
+    "Screenshot 2024-05-03 at 22.32.11.png",
+    "frontend/Reference/Graphics/Arrow.md",
     "frontend/Reference/Graphics/Hue.md",
     "frontend/Reference/Graph",
     "frontend/Reference/Graphics/Raster.md",
     "frontend/Reference/Graphics/Arrowheads.md",
     "frontend/Reference/Graphics/GraphicsComplex.md",
-    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
     "frontend/Reference/Cells and Notebook/HapticFeedback.md",
     "frontend/Reference/GUI/InputRange.md",
     "frontend/Reference/Interpreter/OffloadFromEventObject.md",
-    "frontend/Reference/Decorations/Interpretation.md",
-    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
     "frontend/Reference/Frontend Objects/CreateFrontEndObject.md",
-    "Screenshot 2024-05-02 at 23.26.34.png",
-    "Screenshot 2024-05-02 at 23.24.27.png",
     "frontend/Snippets.md",
-    "Screenshot 2024-05-02 at 23.06.10.png",
     "frontend/Advanced/Dynamics/Scoping.md",
     "frontend/Advanced/Events system/routing.md",
-    "frontend/Advanced/Events system/promises.md",
-    "frontend/Advanced/Events system/Parallel kernels.md",
-    "frontend/Advanced/Events system/event-generators.md",
-    "frontend/Advanced/Events system/Dynamic symbols generation.md",
-    "frontend/Reference/Decorations/ViewBox.md",
-    "frontend/Reference/Cells and Notebook/NotebookDirectory.md",
-    "frontend/Reference/Cells and Notebook/RemoteCellObj.md",
-    "frontend/Reference/Cells and Notebook/EvaluationNotebook.md",
-    "frontend/Advanced/Objects/Dynamic decorations.md",
     "frontend/Advanced/Syntax sugar",
-    "Animatedde.gif",
-    "frontend/Advanced/Objects/Static decorations.md",
-    "RemovedDeco.gif",
-    "Screen Recording May 01.gif",
-    "DynamicDeco video.gif",
-    "BallsDecoration video.gif",
-    "AniBox video to gif.gif",
-    "Screenshot 2024-05-01 at 20.06.25.png",
     "frontend/Advanced/Objects",
     "frontend/Advanced/Snippets",
     "frontend/Troubleshooting",

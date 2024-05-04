@@ -21,9 +21,7 @@ rotates around `origin`
 Graphics[Rotate[Rectangle[{-1,-1}, {1,1}], 30 Degree]]
 ```
 
-<Wl data={`WyJHcmFwaGljcyIsWyJSb3RhdGUiLFsiUmVjdGFuZ2xlIixbIkxpc3QiLC0xLC0xXSxbIkxpc3Qi
-LDEsMV1dLFsiVGltZXMiLDMwLCJEZWdyZWUiXV1d
-`}>{`Graphics[Rotate[Rectangle[{-1,-1}, {1,1}], 30 Degree]]`}</Wl>
+<Wl >{`Graphics[Rotate[Rectangle[{-1,-1}, {1,1}], 30 Degree]]`}</Wl>
 
 
 ## Dynamics

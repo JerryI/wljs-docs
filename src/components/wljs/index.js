@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 
+import { md5 } from 'js-md5';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { interpolate } from '@docusaurus/Interpolate';
 import useIsBrowser from '@docusaurus/useIsBrowser';
@@ -8,6 +11,9 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 
 export default function Wl({children, data}) {
     const ref = useRef(null);
+
+    const {siteConfig} = useDocusaurusContext();
+    const {baseUrl} = siteConfig;
     
     useEffect( () => {
 
@@ -29,12 +35,19 @@ export default function Wl({children, data}) {
       try {
         //let decoded = Mma.DecompressDecode(data);
         //decoded = Mma.toArray(decoded.parts[0]);
-        let decoded = JSON.parse(atob(data));
-        console.log(decoded);
-        
+        //let decoded = JSON.parse(atob(data));
+        //console.log(decoded);
+      
+        console.log(baseUrl +'/expressions/' + md5(children.trim()) + '.json');
+        fetch(baseUrl +'/expressions/' + md5(children.trim()) + '.json').then(r => {
+          r.json().then((r) => {
+            interpretate(['FrontEndVirtual', r], env);
+          });
+        })
+
         //const decoded = atob(data);
 
-        interpretate(['FrontEndVirtual', decoded], env);
+        //i
       } catch(error) {
         console.warn('Error!');
         console.warn(error);

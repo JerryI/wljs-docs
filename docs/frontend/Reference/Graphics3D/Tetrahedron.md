@@ -16,9 +16,7 @@ represents a polyhedron with 4 vertices
 Graphics3D[Tetrahedron[{{1, 1, 1}, {-1, -1, 1}, {1, -1, -1}, {-1, 1, -1}}]]
 ```
 
-<Wl data={`WyJHcmFwaGljczNEIixbIlRldHJhaGVkcm9uIixbIkxpc3QiLFsiTGlzdCIsMSwxLDFdLFsiTGlz
-dCIsLTEsLTEsMV0sWyJMaXN0IiwxLC0xLC0xXSxbIkxpc3QiLC0xLDEsLTFdXV1d
-`}>{`Graphics3D[Tetrahedron[{{1, 1, 1}, {-1, -1, 1}, {1, -1, -1}, {-1, 1, -1}}]]`}</Wl>
+<Wl >{`Graphics3D[Tetrahedron[{{1, 1, 1}, {-1, -1, 1}, {1, -1, -1}, {-1, 1, -1}}]]`}</Wl>
 
 ## Parameters
 

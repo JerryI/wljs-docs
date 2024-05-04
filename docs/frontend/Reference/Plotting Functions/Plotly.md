@@ -16,8 +16,7 @@ It mimics the syntax of `Plot` and provides legend, pan/zoom features out of the
 Plotly[Evaluate[Table[BesselJ[n, x], {n, 4}]], {x, 0, 10}]
 ```
 
-<Wl data={`WyJMaXN0TGluZVBsb3RseSIsWyJMaXN0Il1d
-`}>{`Plotly[Evaluate[Table[BesselJ[n, x], {n, 4}]], {x, 0, 10}]`}</Wl>
+<Wl >{`Plotly[Evaluate[Table[BesselJ[n, x], {n, 4}]], {x, 0, 10}]`}</Wl>
 
 :::danger
 This is still in development and has __no options for styling__

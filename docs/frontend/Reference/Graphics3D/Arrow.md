@@ -25,9 +25,7 @@ Simple broken line with an arrow on the end
 Graphics3D[Arrow[{{1, 1, -1}, {2, 2, 0}, {3, 3, -1}, {4, 4, 0}}]]
 ```
 
-<Wl data={`WyJHcmFwaGljczNEIixbIkFycm93IixbIkxpc3QiLFsiTGlzdCIsMSwxLC0xXSxbIkxpc3QiLDIs
-MiwwXSxbIkxpc3QiLDMsMywtMV0sWyJMaXN0Iiw0LDQsMF1dXV0=
-`}>{`Graphics3D[Arrow[{{1, 1, -1}, {2, 2, 0}, {3, 3, -1}, {4, 4, 0}}]]`}</Wl>
+<Wl >{`Graphics3D[Arrow[{{1, 1, -1}, {2, 2, 0}, {3, 3, -1}, {4, 4, 0}}]]`}</Wl>
 
 
 ## Dynamic updates

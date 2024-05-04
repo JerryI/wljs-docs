@@ -26,6 +26,11 @@ where `display` will be shown in the output cell, instead of `expr`, keeping `ex
 Please see [BoxBox](frontend/Reference/Decorations/BoxBox.md) and [ViewBox](frontend/Reference/Decorations/ViewBox.md) for an advanced expression decorations
 :::
 
+:::tip
+See more at [Decorating symbols](frontend/Advanced/Syntax%20sugar/Decorating%20symbols.md)
+:::
+
+
 ## Applications
 One of the examples is to make some definitions shorter by setting `UpValues` to  `MakeBoxes`, since the last one is recursively applied to everything in the output cell 
 

@@ -20,18 +20,12 @@ __rough material__
 Graphics3D[{White, Roughness[1], Sphere[], PointLight[Red, {-1,-3,3}]}]
 ```
 
-<Wl data={`WyJHcmFwaGljczNEIixbIkxpc3QiLFsiR3JheUxldmVsIiwxXSxbIlJvdWdobmVzcyIsMV0sWyJT
-cGhlcmUiLFsiTGlzdCIsMCwwLDBdXSxbIlBvaW50TGlnaHQiLFsiUkdCQ29sb3IiLDEsMCwwXSxb
-Ikxpc3QiLC0xLC0zLDNdXV1d
-`}>{`Graphics3D[{White,Roughness[1], Sphere[], PointLight[Red, {-1,-3,3}]}]`}</Wl>
+<Wl >{`Graphics3D[{White,Roughness[1], Sphere[], PointLight[Red, {-1,-3,3}]}]`}</Wl>
 
 __polished__
 ```mathematica
 Graphics3D[{White, Roughness[0], Sphere[], PointLight[Red, {-1,-3,3}]}]
 ```
 
-<Wl data={`WyJHcmFwaGljczNEIixbIkxpc3QiLFsiR3JheUxldmVsIiwxXSxbIlJvdWdobmVzcyIsMF0sWyJT
-cGhlcmUiLFsiTGlzdCIsMCwwLDBdXSxbIlBvaW50TGlnaHQiLFsiUkdCQ29sb3IiLDEsMCwwXSxb
-Ikxpc3QiLC0xLC0zLDNdXV1d
-`}>{`Graphics3D[{White, Roughness[0], Sphere[], PointLight[Red, {-1,-3,3}]}]`}</Wl>
+<Wl >{`Graphics3D[{White, Roughness[0], Sphere[], PointLight[Red, {-1,-3,3}]}]`}</Wl>
 
