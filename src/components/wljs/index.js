@@ -13,7 +13,7 @@ export default function Wl({children, data}) {
     const ref = useRef(null);
 
     const {siteConfig} = useDocusaurusContext();
-    const {baseUrl} = siteConfig;
+    const {baseUrl, url} = siteConfig;
     
     useEffect( () => {
 
@@ -37,13 +37,24 @@ export default function Wl({children, data}) {
         //decoded = Mma.toArray(decoded.parts[0]);
         //let decoded = JSON.parse(atob(data));
         //console.log(decoded);
-      
-        console.log(baseUrl +'/expressions/' + md5(children.trim()) + '.json');
-        fetch(baseUrl +'/expressions/' + md5(children.trim()) + '.json').then(r => {
-          r.json().then((r) => {
-            interpretate(['FrontEndVirtual', r], env);
-          });
-        })
+        console.log(url);
+        if (baseUrl.length < 3) {
+          
+          console.log(url +'/expressions/' + md5(children.trim()) + '.json');
+          fetch(url +'/expressions/' + md5(children.trim()) + '.json').then(r => {
+            r.json().then((r) => {
+              interpretate(['FrontEndVirtual', r], env);
+            });
+          })
+        } else {
+          console.log(baseUrl +'/expressions/' + md5(children.trim()) + '.json');
+          fetch(baseUrl +'/expressions/' + md5(children.trim()) + '.json').then(r => {
+            r.json().then((r) => {
+              interpretate(['FrontEndVirtual', r], env);
+            });
+          })
+        }
+
 
         //const decoded = atob(data);
 

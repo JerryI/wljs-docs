@@ -16,8 +16,8 @@ const scripts = [
   "/wljs-editor/src/objects.js",
   "/wljs-sharedlib-d3/dist/kernel.js",
   "/wljs-graphics-d3/dist/kernel.js",
-  "/wljs-graphics3d-threejs/dist/kernel.js"*/
-  
+  "/wljs-graphics3d-threejs/dist/kernel.js"
+  */
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/interpreter.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/core.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/objects.js",
