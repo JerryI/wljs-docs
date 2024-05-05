@@ -40,3 +40,15 @@ The result will look like this
 
 ![](../../../imgs/Screenshot%202023-11-02%20at%2010.18.16.png)
 
+### Layout fixes
+Sometimes the text is aligned to the center no matter what. To fix this issue, apply this patch by evaluating in a new cell the following
+
+```html
+.wlx
+
+<style>
+	.slide-frontend-object .cm-editor {
+		text-align: left;
+	}
+</style>
+```

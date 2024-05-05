@@ -33,6 +33,13 @@ In general AI can do the following
 - __update the full content of a cell__
 
 
+## Context menu
+If you need to apply `Simplify` or highlight selected expressions in the code 
+
+![](./../Screenshot%202024-05-05%20at%2012.11.27.png)
+
+Highlighting text is not destructive and will not alter an initial expression you had.
+
 ## Uploading data
 There are a few snippets used for uploading ASCII data or any arbitrary files to the folder of your notebook
 

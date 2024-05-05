@@ -15,6 +15,27 @@ FrontSubmit[expr_, opts___]
 ### `"Window"`
 specifies a window socket, to which an expression will be sent. Use [CurrentWindow](frontend/Reference/Frontend%20IO/CurrentWindow.md) to fetch a window object from the evaluation context.
 
+### `"Tracking"`
+by the default it is `False`. See below which benefits it gives to a user
+
+
+## Tracking
+If it is enabled, `FrontSubmit` returns a reference to a group of instances created by this submission on the frontend. It is group into an object `FrontEndInstanceGroup`.
+
+```mathematica
+instanceGroup = FrontSubmit[expr_, opts__, "Tracking"->True];
+```
+
+Why do you need this?
+### Destroy
+It is possible to destroy all instances in the group by simply calling `Delete`
+
+```mathematica
+Delete[instanceGroup, opts___]
+```
+
+where `opts` are the same as for `FrontSubmit`. It can remove graphics primitives (`Disk[]`, `Line[]` ...) you added to an existing graph, or anything else, which is identifiable as an instance.
+
 ## Usage with Meta-Markers
 Using an extension [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md), one can execute an expression in the context of a specified container
 
@@ -54,6 +75,11 @@ With[{win = CurrentWindow[]},
 ]
 ```
 
+:::
+
+
+:::tip
+Please have a look at this guide - [Advanced animation](frontend/Advanced/Dynamics/Advanced%20animation.md)
 :::
 
 ## Examples

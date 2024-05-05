@@ -37,6 +37,15 @@ Provides a head symbol of the wrapper expression, that will be hidden from the i
 Use `Head` option to keep the wrapping expression
 :::
 
+### `"String"`
+Default is false. If it is set to `True`, double quotes will be cut and a simplified version of a widget will be used.
+
+### `"HeadString"`
+Works only if `"String" -> True`. Specifies the opening sequence of a string, that will not be shown in the view.
+
+### `"TailString"`
+Works only if `"String" -> True`. The same as above, but for the ending sequence. 
+
 ## Examples
 ### Change the display value and call arbitrary WLJS function
 This is a dummy example 
