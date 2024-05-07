@@ -16,8 +16,18 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
     eventObject, construct, destruct
 }, With[{
 	textField = EditorView[state // Offload],
-	controller = CreateUUID[]
+	controller = CreateUUID[],
+    notebook = EvaluationNotebook[]
 },
+
+    (* if notebook was closed *)
+    With[{clonedEv = notebook // EventClone},
+      EventHandler[clonedEv, {"OnClose" -> Function[Null,
+          Print["All removed"];
+          EventRemove[clonedEv];
+          destruct;
+      ]}];
+    ];
 
     construct := With[{},
       (* subscribe to object events and update decoration *)
@@ -29,7 +39,8 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
 
     destruct := With[{},
       Echo["Removed"];
-	  EventRemove[eventObject];    
+	  EventRemove[eventObject];  
+	  instances = 0;  
     ];
 
 	EventHandler[controller, {
@@ -91,8 +102,18 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
     eventObject, construct, destruct, slider
 }, With[{
 	textField = EditorView[state // Offload],
-	controller = CreateUUID[]
+	controller = CreateUUID[],
+    notebook = EvaluationNotebook[]
 },
+
+    (* if notebook was closed *)
+    With[{clonedEv = notebook // EventClone},
+      EventHandler[clonedEv, {"OnClose" -> Function[Null,
+          Print["All removed"];
+          EventRemove[clonedEv];
+          destruct;
+      ]}];
+    ];
 
     slider = InputRange[0, 10, 1, s["State"]];
     EventHandler[slider, Function[n, 
@@ -105,11 +126,13 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
       EventHandler[eventObject, {
         "State" -> Function[new, state = new // ToString]
       }];     
+      
     ];
 
     destruct := With[{},
       Echo["Removed"];
 	  EventRemove[eventObject];    
+	  instances = 0;
     ];
 
 	EventHandler[controller, {
@@ -209,8 +232,19 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
 }, With[{
 	textField = EditorView[state // Offload],
 	controller = CreateUUID[],
-    window = CurrentWindow[]
+    window = CurrentWindow[],
+    notebook = EvaluationNotebook[]
 },
+
+    (* if notebook was closed *)
+    With[{clonedEv = notebook // EventClone},
+      EventHandler[clonedEv, {"OnClose" -> Function[Null,
+          Print["All removed"];
+          EventRemove[clonedEv];
+          destruct;
+          s["Instances"] = {};
+      ]}];
+    ];
 
     construct := With[{},
       (* subscribe to object events and update decoration *)
@@ -226,6 +260,7 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
     destruct := With[{},
       Echo["Removed"];
 	  EventRemove[eventObject];    
+	  instances = 0;
     ];
 
 	EventHandler[controller, {
@@ -311,8 +346,19 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
 }, With[{
 	textField = EditorView[state // Offload],
 	controller = CreateUUID[],
-    window = CurrentWindow[]
+    window = CurrentWindow[],
+    notebook = EvaluationNotebook[]
 },
+
+    (* if notebook was closed *)
+    With[{clonedEv = notebook // EventClone},
+      EventHandler[clonedEv, {"OnClose" -> Function[Null,
+          Print["All removed"];
+          EventRemove[clonedEv];
+          destruct;
+          s["Instances"] = {};
+      ]}];
+    ];
 
     construct := With[{},
       (* subscribe to object events and update decoration *)
@@ -327,7 +373,8 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
 
     destruct := With[{},
       Echo["Removed"];
-	  EventRemove[eventObject];    
+	  EventRemove[eventObject];
+	  instances = 0;    
     ];
 
 	EventHandler[controller, {

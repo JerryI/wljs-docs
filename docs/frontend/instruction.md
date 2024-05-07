@@ -39,21 +39,21 @@ values={[
 {label: 'Mac', value: 'Mac'},  
 ]}>  
 <TabItem value="Windows">
-- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.2/WLJS.Notebook.Setup.2.3.2.exe)
+- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.5/WLJS.Notebook.Setup.2.3.5.exe)
 </TabItem>  
 <TabItem value="Linux">
-- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.2/wljs-notebook_2.3.2_amd64.deb)
-- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.2/WLJS.Notebook-2.3.2.AppImage)
+- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.5/wljs-notebook_2.3.5_amd64.deb)
+- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.5/WLJS.Notebook-2.3.5.AppImage)
 </TabItem> 
 <TabItem value="Mac">
 
-- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.2/WLJS.Notebook-2.3.2-arm64.dmg)
-- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.2/WLJS.Notebook-2.3.2.dmg)
+- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.5/WLJS.Notebook-2.3.5-arm64.dmg)
+- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.3.5/WLJS.Notebook-2.3.5.dmg)
 
 </TabItem>  
 </Tabs>
 
-It comes with a launcher, that takes care about all updates, files extension association and etc.
+It comes with a launcher, that takes care about all updates, files extension association and etc. Also see [releases](https://github.com/JerryI/wolfram-js-frontend/releases) page for more portable installation bundles (no docs).
 
 
 ## Server application

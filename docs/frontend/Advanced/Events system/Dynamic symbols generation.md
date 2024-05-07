@@ -87,8 +87,18 @@ oscillator /: MakeBoxes[s: oscillator[_Symbol?AssociationQ], form: (StandardForm
 	controller = CreateUUID[],
     f = s["Freq"],
     win = CurrentWindow[],
-    symbol = s["Symbol"]
+    symbol = s["Symbol"],
+    notebook = EvaluationNotebook[]
 },
+
+    (* if notebook was closed *)
+    With[{clonedEv = notebook // EventClone},
+      EventHandler[clonedEv, {"OnClose" -> Function[Null,
+          Print["All removed"];
+          EventRemove[clonedEv];
+          destruct;
+      ]}];
+    ];
 
 	(* add a slider for a user to drag *)
     slider = InputRange[0.1, 10, 0.1, f];
@@ -96,15 +106,6 @@ oscillator /: MakeBoxes[s: oscillator[_Symbol?AssociationQ], form: (StandardForm
       oscillatorSet[s, n]
     ]];
 
-    (* if a notebook was closed - destroy *)
-    With[{socket = EventClone[win]},
-      EventHandler[socket, {
-        "Closed" -> Function[Null, 
-          EventRemove[socket];
-          destruct;
-        ]
-      }]
-    ];
 
 	(* CONSTRUCTOR *)
     construct := With[{},
@@ -123,6 +124,7 @@ oscillator /: MakeBoxes[s: oscillator[_Symbol?AssociationQ], form: (StandardForm
       Echo["Removed"];
 	  EventRemove[eventObject];    
       TaskRemove[s["Task"]];
+      instances = 0;
     ];
 
 	(* LISTEN TO WIDGETS Events *)
