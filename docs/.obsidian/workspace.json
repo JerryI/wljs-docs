@@ -4,28 +4,40 @@
     "type": "split",
     "children": [
       {
-        "id": "71193483a1dd3648",
+        "id": "545d8c976d506473",
         "type": "tabs",
         "children": [
           {
-            "id": "6adeb44995aaf731",
+            "id": "9240cc80492be2e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Objects/Dynamic decorations.md",
+                "file": "frontend/Symbolic programming.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4a5c3a06436a28b6",
+            "id": "6c07b6313b5cd247",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/InterpretationBox.md",
+                "file": "frontend/Reference/Cells and Notebook/RemoteNotebook.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0563ddd8d7105d7a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Advanced/Graphics/Complex.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,8 +72,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ViewBox",
-                "matchingCase": false,
+                "query": "FrontFetchAs",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -97,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Objects/Dynamic decorations.md",
+                "file": "frontend/Symbolic programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Objects/Dynamic decorations.md",
+                "file": "frontend/Symbolic programming.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Objects/Dynamic decorations.md"
+                "file": "frontend/Symbolic programming.md"
               }
             }
           },
@@ -157,7 +169,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -170,53 +183,53 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6adeb44995aaf731",
+  "active": "9240cc80492be2e6",
   "lastOpenFiles": [
-    "frontend/Advanced/Events system/Dynamic symbols generation.md",
-    "frontend/Reference/Cells and Notebook/RemoteNotebook.md",
-    "frontend/Reference/Graphics/Graphics.md",
-    "frontend/instruction.md",
-    "frontend/Advanced/Dynamics/Scoping.md",
-    "frontend/Advanced/Dynamics/Inline event listeners.md",
-    "frontend/Advanced/Dynamics/Prototyping.md",
-    "frontend/Advanced/Dynamics/Raster animation.md",
-    "frontend/Reference/Frontend IO/FrontSubmit.md",
-    "frontend/Advanced/Slides/Widgets.md",
-    "Ppt.gif",
-    "Widgettest video to gif.gif",
-    "Screenshot 2024-05-05 at 14.25.27.png",
-    "Screenshot 2024-05-05 at 14.25.14.png",
-    "frontend/Advanced/Slides/Slides.md",
-    "frontend/Advanced/Slides/Styling.md",
-    "frontend/Advanced/Slides/Backgrounds.md",
-    "frontend/Advanced/Dynamics/Advanced animation.md",
-    "Bubbles video to gif.gif",
-    "Canvas Buggles1.gif",
-    "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Reference/Graphics/TransitionType.md",
-    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
-    "frontend/Advanced/Events system/promises.md",
-    "frontend/Advanced/Events system/event-generators.md",
-    "Osc.gif",
-    "Sync video.gif",
-    "Screenshot 2024-05-05 at 13.08.46.png",
-    "Screenshot 2024-05-05 at 13.07.13.png",
+    "frontend/Advanced/Events system/Notebook, cells and windows.md",
+    "frontend/Reference/Frontend IO/WindowObj.md",
+    "frontend/Advanced/Events system/Mouse and keyboard.md",
+    "frontend/Advanced/Graphics/Complex.md",
+    "frontend/Advanced/Graphics/Controls.md",
     "frontend/Advanced/Events system/Parallel kernels.md",
-    "frontend/Snippets.md",
-    "frontend/Reference/Decorations/BoxBox.md",
-    "frontend/Reference/Decorations/ViewBox.md",
+    "frontend/Reference/Cells and Notebook/RemoteNotebook.md",
+    "frontend/Reference/Cells and Notebook/EvaluationNotebook.md",
+    "Screenshot 2024-05-12 at 21.16.13.png",
+    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+    "lights-ezgif.com-optimize.gif",
+    "frontend/Advanced/Events system/routing.md",
+    "frontend/Advanced/Dynamics/Advanced animation.md",
+    "gauss-ezgif.com-optimize.gif",
+    "frontend/Command palette.md",
+    "frontend/Advanced/Events system/event-generators.md",
+    "frontend/Advanced/Events system/Dynamic symbols generation.md",
+    "wljstte.svg",
+    "frontend/Reference/Frontend IO/FrontSubmit.md",
     "frontend/Reference/Frontend IO/MetaMarker.md",
-    "frontend/Reference/Plotting Functions/DateListPlot.md",
     "frontend/Advanced/Objects/Static decorations.md",
-    "frontend/Reference/Graph",
-    "frontend/Advanced/Syntax sugar",
-    "frontend/Advanced/Objects",
-    "frontend/Advanced/Snippets",
-    "frontend/Troubleshooting",
-    "imgs/neattt",
-    "frontend/Reference/Packages/Graphics/RGBColor,md",
-    "frontend/Reference/Slides",
-    "frontend/Reference/Plotly",
-    "frontend/Reference/Packages/Editor/Remote Cells/Untitled"
+    "frontend/Overview.md",
+    "frontend/Guidelines.md",
+    "Screenshot 2024-05-17 at 10.08.38.png",
+    "Screenshot 2024-05-17 at 10.02.05.png",
+    "Screenshot 2024-05-17 at 10.01.48.png",
+    "Screenshot 2024-05-17 at 09.54.19.png",
+    "Screenshot 2024-05-17 at 09.53.55.png",
+    "frontend/Advanced/Dynamics/Indicators.md",
+    "frontend/Reference/GUI/InputSelect.md",
+    "Screenshot 2024-05-16 at 20.07.26.png",
+    "frontend/Advanced/Javascript/Communication.md",
+    "frontend/Advanced/Events system/promises.md",
+    "frontend/Advanced/Dynamics/Performance tips.md",
+    "frontend/Advanced/Dynamics/Offloading calculations.md",
+    "frontend/Reference/Misc/Promise.md",
+    "blog/2023-10-10-esm/index._mdx",
+    "blog/2023-10-10-esm/index.mdx",
+    "blog/2023-10-10-esm/NintendoPro.wln",
+    "blog/2023-08-19-advanced-events/Greyness.wln",
+    "blog/2023-07-25-transform-3d/FMO.wl",
+    "blog/2023-07-22-pratical-integration/Archive.zip",
+    "blog/2023-07-21-polygon/Cinematographer.wln",
+    "blog/2023-07-14-curves/CurvesFit.wln",
+    "blog/2023-07-13-balls/Balls.wln",
+    "blog/2023-07-13-balls/Balls.nb"
   ]
 }

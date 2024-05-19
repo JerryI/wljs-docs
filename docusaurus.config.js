@@ -6,6 +6,14 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const matchCM = new RegExp(/^```(?:\w+) @ *\n([\s\S]*?)``` *$/gm);
+
+const replacer = (string, match) => {
+  const wrapped = '<CodeMirror>{`' + match.trim().replaceAll('`', '\\`') + '`}</CodeMirror>'
+  return wrapped 
+}
+
+const workaround = (string) => string.replaceAll(matchCM, replacer)
 
 const math = require('remark-math');
 const katex = require('rehype-katex');
@@ -13,17 +21,24 @@ const katex = require('rehype-katex');
 const scripts = [
   /*"/wljs-interpreter/src/interpreter.js",
   "/wljs-interpreter/src/core.js",
+  "/wljs-cells/src/module.js",
+  "/wljs-editor/dist/kernel.js",
+  "/wljs-editor/src/boxes.js",
   "/wljs-editor/src/objects.js",
   "/wljs-sharedlib-d3/dist/kernel.js",
   "/wljs-graphics-d3/dist/kernel.js",
-  "/wljs-graphics3d-threejs/dist/kernel.js"
-  */
+  "/wljs-graphics3d-threejs/dist/kernel.js"*/
+  
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/interpreter.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/core.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-cells@dev/src/module.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/boxes.js",  
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/objects.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-sharedlib-d3@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@dev/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@dev/dist/kernel.js"
+  "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@dev/dist/kernel.js",
+
 ].map((link) => {
   return {tagName: 'script', attributes: {
     type: 'module',
@@ -40,11 +55,11 @@ const config = {
   staticDirectories: ['static'],
   
   
-  /*url: 'http://127.0.0.1:20540',
+ /* url: 'http://127.0.0.1:20540',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',*/
-
+  baseUrl: '/',
+*/
   url: 'https://jerryi.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
@@ -68,6 +83,9 @@ const config = {
   },
   markdown: {
     mermaid: true,
+    preprocessor: ({filePath, fileContent}) => {
+      return workaround(fileContent);
+    }
   },
   themes: ['@docusaurus/theme-mermaid'],
 
@@ -92,13 +110,32 @@ const config = {
           sidebarPath: './sidebars.js',
           remarkPlugins: [math],
           routeBasePath: '/',
-        rehypePlugins: [katex],
+          rehypePlugins: [katex],
 
-        exclude: ['/docs/Excalidraw', 'Excalidraw', '/blog', '/docs/imgs'],
+        exclude: ['/docs/Excalidraw', 'Excalidraw', '/docs/imgs', '/docs/blog'],
 
         showLastUpdateTime: true,
         },
-        blog: false,
+        blog: {
+          path: 'blog',
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
+          editLocalizedFiles: false,
+          blogTitle: 'Blog title',
+          blogDescription: 'Blog',
+          blogSidebarCount: 50,
+          blogSidebarTitle: 'All our posts',
+          routeBasePath: 'blog',
+          include: ['**/*.{md,mdx}'],
+          postsPerPage: 10,
+          showReadingTime: true,         
+          blogListComponent: '@theme/BlogListPage',
+          blogPostComponent: '@theme/BlogPostPage',
+          blogTagsListComponent: '@theme/BlogTagsListPage',
+          blogTagsPostsComponent: '@theme/BlogTagsPostsPage',
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
+        },     
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -123,8 +160,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Notebook',
+            label: 'Documentation',
           },
+          {to: 'blog', label: 'Blog', position: 'left'}, // or position: 'right'
           {to: "https://github.com/JerryI/wolfram-js-frontend/discussions", label: "Discuss", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
           {
             href: 'https://github.com/JerryI/wolfram-js-frontend',

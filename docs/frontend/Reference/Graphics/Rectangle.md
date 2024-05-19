@@ -56,6 +56,10 @@ where `event` can be
 - `"zoom"` detects zoom / mouse-wheel
 - `"click"` detects mouse clicks
 
+:::tip
+See more in [Mouse and keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
+:::
+
 ## Dynamics
 It fully supports dynamics. Use [Offload](frontend/Reference/Interpreter/Offload.md) on coordinates.
 

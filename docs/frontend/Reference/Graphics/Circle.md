@@ -24,3 +24,13 @@ See [Disk](frontend/Reference/Graphics/Disk.md)
 
 ## Dynamics
 Fully support for a radius and coordinates. Use [Offload](frontend/Reference/Interpreter/Offload.md)
+
+```mathematica
+pt = {0,0};
+Graphics[{
+	EventHandler[Graphics`Canvas[], {
+		"mousemove" -> Function[xy, pt = xy]
+	}], Red,
+	Circle[pt // Offload, 0.08]
+}, PlotRange->{{-1,1}, {-1,1}}]
+```

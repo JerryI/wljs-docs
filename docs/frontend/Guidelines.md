@@ -20,6 +20,14 @@ It improves user experience drastically
 - Abort `Cmd+.`, `Alt+.`
 - Evaluate initialization cells `Cmd+I`, `Alt+I`
 
+### Cells
+- `Ctrl+/` make fraction on selected
+- `Ctrl+6` make superscript on selected
+- `Ctrl+2` make square root on selected
+- `Ctrl+-` make subscript on selected
+
+
+
 ## Keep folders organized
 Various functions may produce [Iconize](frontend/Reference/Decorations/Iconize.md) objects, for storing large chunks of data, which are copied to `./.iconized/` folder in the notebook directory. Any dropped images or files will be uploaded to `./attachments/` directory. Therefore it is important to have a clear separation between your projects.
 

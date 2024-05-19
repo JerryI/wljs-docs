@@ -28,13 +28,13 @@ instanceGroup = FrontSubmit[expr_, opts__, "Tracking"->True];
 
 Why do you need this?
 ### Destroy
-It is possible to destroy all instances in the group by simply calling `Delete`
+It is possible to destroy all instances created in the group by simply calling `Delete`
 
 ```mathematica
-Delete[instanceGroup, opts___]
+Delete[instanceGroup]
 ```
 
-where `opts` are the same as for `FrontSubmit`. It can remove graphics primitives (`Disk[]`, `Line[]` ...) you added to an existing graph, or anything else, which is identifiable as an instance.
+It can remove graphics primitives (`Disk[]`, `Line[]` ...) you added to an existing graph, or anything else, which is identifiable as an instance.
 
 ## Usage with Meta-Markers
 Using an extension [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md), one can execute an expression in the context of a specified container

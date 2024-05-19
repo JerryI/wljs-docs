@@ -127,6 +127,7 @@ function ShowTags({fm}) {
 export default function DocItemContent({children}) {
   const syntheticTitle = useSyntheticTitle();
   const {frontMatter} = useDoc();
+  console.error(children);
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (

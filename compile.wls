@@ -30,7 +30,7 @@ compile[str_] := Module[{tokens, open, close},
 
 DeleteFile /@ FileNames["*.json", FileNameJoin[{"static", "expressions"}] ];
 
-files = Join[FileNames["*.md", FileNameJoin[{Directory[], "docs"}], Infinity], FileNames["*.md", FileNameJoin[{Directory[], "src", "pages"}], Infinity]];
+files = Join[FileNames["*.md", FileNameJoin[{Directory[], "docs"}], Infinity], FileNames["*.md", FileNameJoin[{Directory[], "blog"}], Infinity]];
 files = Select[files, StringMatchQ[Import[#, "String"], ___~~"</Wl>"~~___]&];
 With[{t = Print[#], res = compile[Import[#, "String"] ]},
     Null

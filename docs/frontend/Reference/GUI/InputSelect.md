@@ -7,7 +7,7 @@ package: wljs-inputs
 source: https://github.com/JerryI/wljs-inputs/blob/dev/src/Kernel.wl
 ---
 ```mathematica
-InputSelect[{val1_String -> expr1_, val2_String -> expr2_}, defaultval_String] _EventObject
+InputSelect[{expr1_ -> name1_String, expr2_ -> name2_String}, defaultExpr_] _EventObject
 ```
 
 represents a select field with different choices
@@ -15,7 +15,7 @@ represents a select field with different choices
 or
 
 ```mathematica
-InputSelect[{val1_String, val2_String}, defaultval_String] _EventObject
+InputSelect[{val1_, val2_}, defaultval_] _EventObject
 ```
 
 is also valid

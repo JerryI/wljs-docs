@@ -25,7 +25,7 @@ Decoration itself does not modify the original expression. You can check it by p
 :::
 
 ### Examples in action
-A navigation gizmo [snippet](frontend/Snippets.md) is made using this technique combined with dynamically generated symbols wrapped in [Offload](frontend/Reference/Interpreter/Offload.md)
+A navigation gizmo [snippet](frontend/Command%20palette.md) is made using this technique combined with dynamically generated symbols wrapped in [Offload](frontend/Reference/Interpreter/Offload.md)
 
 <details>
 
@@ -447,3 +447,95 @@ boxObject[33]
 
 One cal also make it dynamic by defining a proper `.update` method for a `customDecorator` (see [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)). 
 
+
+## Deferred
+The major difference is that we create a decoration only, when the symbol appeared in the editor. For this we will construct a dummy [ViewBox](frontend/Reference/Decorations/ViewBox.md) just to emit this event 
+
+```mathematica
+dummy /: MakeBoxes[dummy[handler_], StandardForm] := With[{
+  uid = CreateUUID[]
+},
+  EventHandler[uid, {"Mounted" :> Function[marker,
+    With[{win = WindowObj[<|"Socket"->$Client|>]},
+      FrontSubmit[handler[marker, win], MetaMarker[marker], "Window"->win];
+    ]
+   ]
+  }];
+  
+  ViewBox[Null, Null, "Event"->uid]
+]
+```
+
+where `handler` will be the function, which actually populates the instance of `ViewBox` with a content. Let us show the simples example, where it will generate random shapes
+
+```mathematica
+handler[marker_String, win_] := With[{
+  g = With[{d = 2 Pi/RandomInteger[{2,16}]}, 
+ Graphics[
+  Table[{EdgeForm[Opacity[.6]], Hue[(-11 + q + 10 r)/72, 1, 1], 
+    Polygon[{(8 - r) {Cos[d (q - 1)], 
+        Sin[d (q - 1)]}, (8 - r) {Cos[d (q + 1)], 
+        Sin[d (q + 1)]}, (10 - r) {Cos[d q], Sin[d q]}}]}, {r, 6}, {q,
+     12}], ImageSize->{50,50}, ImagePadding->None]]
+},
+  {PaneBox[], g // CreateFrontEndObject}
+]
+```
+
+If you try to evaluate this
+
+```mathematica
+dummy[handler]
+```
+
+![](./../../../DeferredDeco-ezgif.com-speed.gif)
+
+Even if a widget (or symbol) got copied, It would still be a unique instance. Once a symbol has appeared in the editor a function `handler` is called. 
+
+:::tip
+Use deferred generation of decorations, if you need to differentiate between copies of the same symbol.
+:::
+
+### State preservation
+Where to store the state? The trick can be done using [``ViewBox`InnerExpression``](frontend/Reference/Decorations/ViewBox.md#``ViewBox`InnerExpression``) and keeping the data inside the cell.
+
+Let us have an example with sliders
+
+```mathematica
+handler[state_String, marker_, window_] := Module[{
+	object = InputRange[0,1, 0.1, ToExpression[state]]
+},
+	EventHandler[object, Function[value,
+       FrontSubmit[ViewBox`InnerExpression[ToString[value]], MetaMarker[marker], "Window"->window];
+    ]];
+  
+
+	{PaneBox[], object[[1, "View"]] // CreateFrontEndObject}
+]
+
+slider /: MakeBoxes[slider[initial_:0.5], StandardForm] := With[{
+  uid = CreateUUID[]
+},
+  EventHandler[uid, {"Mounted" :> Function[marker,
+    With[{win = WindowObj[<|"Socket"->$Client|>]},
+	  Then[FrontFetchAsync[ViewBox`InnerExpression[], MetaMarker[marker], "Window"->win], Function[payload,
+        FrontSubmit[handler[{payload}//Flatten//First, marker, win], MetaMarker[marker], "Window"->win];
+      ]]
+    ]
+   ]
+  }];
+  
+  ViewBox[initial, Null, "Event"->uid]
+]
+```
+
+*Try to evaluate this*
+```mathematica
+slider[0.7]
+```
+
+![](./../../../Screenshot%202024-05-12%20at%2014.02.19.png)
+
+When you drag a slider, it updates the original value hidden under the decoration in the cell. If you copy and paste it, for each copy it will create the unique slider
+
+![](./../../../Screenshot%202024-05-12%20at%2014.04.27.png)

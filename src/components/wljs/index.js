@@ -3,13 +3,61 @@ import React, { useEffect, useRef } from 'react';
 import { md5 } from 'js-md5';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
+
+import { useColorMode } from '@docusaurus/theme-common';
+
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { interpolate } from '@docusaurus/Interpolate';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 
 //import { Mma } from 'mma-uncompress/src/mma.js';
 
-export default function Wl({children, data}) {
+export function CodeMirror({children, data}) {
+  
+  const ref = useRef(null);
+
+  const {colorMode, setColorMode} = useColorMode();
+
+  useEffect( () => {
+    const element = ref.current;
+    console.log('Create Codemirror');
+
+    window.CMInitialized = true;
+
+    if (window.CMInitialized) {
+      window.EditorExtensions.push(() => {
+        return window.EditorState.readOnly.of(true)
+      });
+    
+      window.EditorExtensionsMinimal.push(() => {
+        return window.EditorState.readOnly.of(true)
+      });
+    }
+
+    const s = new window.SupportedCells['codemirror'].view({element: element}, children);
+
+    return () => {
+      if (s) {
+        //s.destroy();
+        console.log('Remove Codemirror');
+      }
+    }
+  }, []);
+
+  return (
+<div style={{filter: (colorMode == 'dark' ? 'invert(1) contrast(0.8) hue-rotate(-185deg)' : 'none')}} className="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block">
+   <div className="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">
+      <pre tabIndex="0" className="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style={{color: 'rgb(57, 58, 52)', backgroundColor: 'rgb(246, 248, 250)'}}>
+        <code ref={ref} className="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code>
+      </pre>
+   </div>
+</div>   
+  )
+}
+
+
+
+export function Wl({children, data}) {
     const ref = useRef(null);
 
     const {siteConfig} = useDocusaurusContext();

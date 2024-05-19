@@ -134,6 +134,8 @@ Is used to replace a covered expression by `ViewBox` with a given string.
 It must be evaluated in the context of an instance of `ViewBox`, use [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md) and [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) in order to apply this to a specific box
 :::
 
+__It returns the current content if no string is specified as an argument__. Use it with [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md) and [FrontFetch](frontend/Reference/Frontend%20IO/FrontFetch.md)
+
 #### ``ViewBox`OuterExpression``
 Is used to replace or update the content string within the box (including the box as well)
 

@@ -86,6 +86,34 @@ PrimitivesMisc --> Graphics
 ```
 
 
+## Context
+Here is a list of utility symbols used in `Graphics` context
+
+### ``Graphics`Canvas``
+Is used to have an access to SVG container of `Graphics` function
+#### Methods
+##### `EventHandler`
+Is used to capture various events such as
+- `"mousemove"`
+- `"click"`
+
+For example
+
+```mathematica
+pt = {0,0};
+Graphics[{
+	EventHandler[Graphics`Canvas[], {
+		"mousemove" -> Function[xy, pt = xy]
+	}], Red,
+	Circle[pt // Offload, 0.08]
+}, PlotRange->{{-1,1}, {-1,1}}]
+```
+
+:::tip
+See more in [Mouse and keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
+:::
+
+
 ## Options
 ### `PlotRange`
 manually specifies, where the borders of the visible area (viewport) are

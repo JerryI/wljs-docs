@@ -74,3 +74,7 @@ where `event` can be
 - `"drag"` makes primitive draggable and emits coordinates
 - `"zoom"` detects zoom / mouse-wheel
 - `"click"` detects mouse clicks
+
+:::tip
+See more in [Mouse and keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
+:::

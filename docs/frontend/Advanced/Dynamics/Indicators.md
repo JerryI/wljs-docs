@@ -25,14 +25,14 @@ Plot[Sinc[x], {x,-10,10}, Epilog->{
     {{-10, p}, {10, p}}
   ] // Offload],
 
-  (* draggable point *)	
-  PointSize[0.05], Blue, EventHandler[Point[point], {
-    "drag" -> Function[xy, point = xy]
+  (* attach listener *)	
+  EventHandler[Graphics`Canvas[], {
+    "mousemove" -> Function[xy, point = xy]
   }]
 }]
 ```
 
-It attaches an [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`) to a [Point](frontend/Reference/Graphics/Point.md) object and makes it draggable. Every-time user drags it, an event handler is fired and `point` symbol is updated, that causes updates of all lines
+It attaches an [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`) to a ``Graphics`Canvas[]`` object. Every-time user moves a mouse over it, an event handler is fired and `point` symbol is updated, that causes updates of all lines
 
 :::tip
 You can reduce the lag by tuning [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) to a lower value.
@@ -67,9 +67,9 @@ Plot[Sinc[x], {x,-10,10}, Epilog->{
     {{-10, p}, {10, p}}
   ] // Offload],
 
-  (* draggable point *)	
-  PointSize[0.05], Blue, EventHandler[Point[point], {
-    "drag" -> Function[xy, 
+
+  EventHandler[Graphics`Canvas[], {
+    "mousemove" -> Function[xy, 
 	    point = xy;
 	    text = ToString[Round[xy, 0.01]];
 	]
@@ -100,13 +100,12 @@ placeCrossbar[meta_String, pos_:{0.,0.}] := LeakyModule[{point = pos, text = ""}
       {{-10, p}, {10, p}}
     ] // Offload],
 
-    (* draggable point *)	
-    PointSize[0.05], Blue, EventHandler[Point[point], {
-      "drag" -> Function[xy, 
-  	    point = xy;
-  	    text = ToString[Round[xy, 0.01]];
-  	]
-    }]
+    EventHandler[Graphics`Canvas[], {
+    "mousemove" -> Function[xy, 
+	    point = xy;
+	    text = ToString[Round[xy, 0.01]];
+	]
+  }]
   }, MetaMarker[meta]];
   
   TextView[text // Offload]

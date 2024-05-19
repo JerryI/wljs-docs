@@ -23,6 +23,16 @@ The default expression form used to import raw data acquired from the frontend. 
 - `"ExpressionJSON"`
 - `"Raw"` bypasses and returns a string
 
+
+## Usage with Meta-Markers
+Using an extension [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md), one can execute an expression in the context of a specified container and fetch the result back
+
+```mathematica
+FrontFetchAsync[expr_, m_MetaMarker, opts___] _Promise
+```
+
+See examples on [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md#Usage%20with%20Meta-Markers)
+
 ## Examples
 To read the selected text from a cell and print it to another cell
 

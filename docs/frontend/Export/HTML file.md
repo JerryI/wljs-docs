@@ -20,3 +20,7 @@ However,
 - all external images are kept and embedded to a document (including slides and md)
 - [NotebookStore](frontend/Reference/Cells%20and%20Notebook/NotebookStore.md) data is embedded as well
 - slides as well as all cell are kept **press `f` to go fullscreen**
+
+You can specify what to include to the bundle and what to exclude in `Settings` menu
+
+![](./../../Pasted%20image%2020240510101914.png)

@@ -32,8 +32,23 @@ The last options expands into
 
 Project to a window is the most interesting feature here, that allows to evaluate a cell in a new window. It comes handy while demonstrating [presentations](frontend/Advanced/Slides/Slides.md).
 
+### Shortcuts
+*working in both: browser and desktop application*
+#### UI
+- `Ctrl+S`, `Cmd+S` save notebook
+- `Alt+.`, `Cmd+.` abort evaluation
+- `Ctrl+P`, `Cmd+P` open command palette
+- `Shift+Enter` evaluate current cell
+#### Cells
+- `Ctrl+W`, `Cmd+2` hide/show input cell
+- `Ctrl+/` make fraction on selected
+- `Ctrl+6` make superscript on selected
+- `Ctrl+2` make square root on selected
+- `Ctrl+-` make subscript on selected
+
+
 ## Wolfram Language
-When you start typing the language you are using assumed to be WL. By pressing `Shift-Enter` you can start evaluation
+When you start typing the language you are using assumed to be WL. By pressing `Shift+Enter` you can start evaluation
 
 ![](./../imgs/Screenshot%202024-03-13%20at%2018.58.12.png)
 

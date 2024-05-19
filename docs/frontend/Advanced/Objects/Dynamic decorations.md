@@ -6,6 +6,10 @@ sidebar_position: 3
 
 In this part we will try to synchronize the state of our symbols or objects with corresponding decorations we created in the previous part.
 
+:::tip
+If you are looking for a simpler way, please, see [Deferred mode ❤️](#Deferred%20mode%20❤️)
+:::
+
 ## Dynamic summary item
 We have already explored the possibility of animated icons in [Animated decoration in Summary Item](frontend/Advanced/Objects/Static%20decorations.md#Animated%20decoration%20in%20Summary%20Item), therefore there is no obstacles in doing the same in sync with state changes of our object.
 
@@ -415,3 +419,9 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
 The result should be following
 
 ![](./../../../Animatedde.gif)
+
+## Deferred mode ❤️
+This is a new feature introduced recently for [ViewBox](frontend/Reference/Decorations/ViewBox.md), aimed to solve all hassle required for maintaining the instances of the same object. The idea is to create decorations upon rendering.
+
+Please see on how to implement it in [Decorating symbols](frontend/Advanced/Syntax%20sugar/Decorating%20symbols.md#Deferred)
+

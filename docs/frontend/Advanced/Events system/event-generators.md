@@ -1,15 +1,16 @@
 ---
 draft: false
+sidebar_position: 1
 ---
 # Event system
 As a short summary - where you can use event-handlers 
 
 - on `Graphics2D` elements to listen users interactions 
-	- `drag`, `click`, `zoom`, `mousemove`
+	- `drag`, `click`, `zoom`, `mousemove`, ...
 - on `Graphics3D` elements
 	- `transform`
-- on socket object (`CSocketObject` only)
 - on any `EventObject` or its string equivalent 
+- many more - see [Mouse and keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
 
 An event-driven approach was inspired by Javascript language, where one can subscribe to any changes of any objects. Here it was expanded in a way to utilize the full power of pattern matching features of Wolfram Language.
 

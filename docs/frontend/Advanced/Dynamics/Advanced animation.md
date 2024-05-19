@@ -1,7 +1,7 @@
 ---
 draft: false
 ---
-## Summary
+## Basics
 ### Way 1
 Consider to use __to get the highest frame-rate__ and __smooth animations__
 - [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md) for [Graphics](frontend/Reference/Graphics/Graphics.md) 
@@ -9,14 +9,129 @@ Consider to use __to get the highest frame-rate__ and __smooth animations__
 
 with [TransitionType](frontend/Reference/Graphics/TransitionType.md) set to `None` if the calculation time does not exceed the `1/60` of the second. Otherwise consider to use `"Linear"` interpolation option and a small amount of [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) around 10-100 depending on how long it takes to update the data.
 
+:::tip
+If you animation looks sloppy, you can always cheat asking Javascript to interpolate between data portions over the time. Use [TransitionType](frontend/Reference/Graphics/TransitionType.md) and [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md)
+:::
+
+For example
+
+```mathematica title="cell 1"
+balls = RandomReal[{-1,1}, {100,3}];
+vels  = RandomReal[{-1,1}, {100,3}];
+
+Graphics3D[{
+  Table[With[{i = i},
+    {
+      RGBColor[RandomReal[{0,1}, 3]],
+      Sphere[balls[[i]] // Offload, 0.03]
+    }
+  ], {i, Length[balls]}], 
+  AnimationFrameListener[balls // Offload, "Event"->"frame"]
+}]
+```
+
+*evaluate the cell above. It will create a canvas with randomly scattered balls*
+
+At the start of the browser's frame, an event `"frame"` is triggered to request an update of data from the Kernel. However, after this, you'll need to "recharge" an `AnimationFrameListener`, otherwise it will not trigger the event again. This can be automated to occur whenever a change in the `balls` symbol is detected.
+
+This process ensures the following benefits:
+
+- Synchronization of animation with the browser's engine (eliminating flickering).
+- Ability to skip frames if recalculations take longer than one frame of your browser, adapting to your computing power.
+
+Here is our update function
+
+```mathematica
+EventHandler["frame", Function[Null,
+
+  vels = Table[
+    If[Norm[balls[[i]]] < 0.01, -1, 1] vels[[i]] - 0.08 balls[[i]]
+  , {i, Length[balls]}];
+  
+  balls = Table[balls[[i]] + 0.08 vels[[i]], {i, Length[balls]}];
+]];
+```
+
+To start an animation - reevaluate *cell 1* or use this "kickstarter"
+```mathematica
+EventFire["frame", Null]
+```
+
+![](./../../../ani-ezgif.com-optimize.gif)
+
+
+
 ### Way 2
-Consider to use [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) for a slow animations and simple stuff. Set [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) and [TransitionType](frontend/Reference/Graphics/TransitionType.md) to a proper value to interpolate the values.
+Consider to use [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) for simple or resource intensive animation. Set [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) and [TransitionType](frontend/Reference/Graphics/TransitionType.md) to a proper value to interpolate the values.
 
 Usually if your [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) is let's say `100 ms`, then [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) should be around `100 ms` as well to get *the smoothest animation*.
 
-:::info
-See examples in the each reference page
+:::tip
+If you animation looks sloppy, you can always cheat asking Javascript to interpolate between data portions over the time. Use [TransitionType](frontend/Reference/Graphics/TransitionType.md) and [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md)
 :::
+
+For example 
+
+```mathematica
+ParametricAnimator[equation_, variable_:t, range_:{0, Infinity, 0.1}] := LeakyModule[{time = range[[1]], task, scale = 1, array = {}, scaledArray={}, cell = ResultCell[]},
+
+    (* sample the equation each frame and rescale if needed *)
+	animate := Block[{variable = time},
+        With[{e = {Sin[t], Cos[t]} equation},
+    		scale = If[Norm[e scale] > 1.4, scale 0.95, scale 1];
+            array = Append[array, e];
+    		scaledArray = scale array; 
+            pointer = e scale;
+        ];
+
+		time += range[[3]];
+		If[time >= range[[2]], TaskRemove[task]];
+	];
+
+    animate;
+
+    (* async task to animate every 50 ms *)
+	task = SetInterval[animate, 50];
+
+    (* stop the task if cell was destroyed or reevaluated *)
+	EventHandler[cell, {"Destroy"->Function[Null, TaskRemove[task]; Print["removed"]]}];
+
+	Graphics[{Red, PointSize[0.05], Point[pointer // Offload],
+ Opacity[0.5], Line[scaledArray // Offload]
+  }, TransitionDuration->50, TransitionType->"Linear", Controls->False, PlotRange->{{-1,1}, {-1,1}}]
+]
+```
+
+This will sample a given parametric equation and animate it with `50 ms` time step, while on Javascript's side it will interpolate between frames, so that overall animation will look smooth and will be rendered at 60FPS
+
+```mathematica
+ParametricAnimator[Exp[Sin[t]] - 2 Cos[4t] + Sin[(2t - Pi)/24], t, {0,16, 0.05}]
+```
+
+![](./../../../buterfly-ezgif.com-optimize.gif)
+
+
+### Way 3
+If you animation depends on some interaction with a user, it might be a good idea to run it and update objects attributes only, when some event is fired.
+
+For example
+
+```mathematica
+pt = {0,0};
+Graphics[{
+	White,
+	EventHandler[
+		Rectangle[{-2,-2}, {2,2}],
+		{"mousemove"->Function[xy, pt = xy]}
+	],
+	PointSize[0.05], Cyan,
+	Point[pt // Offload]
+}]
+```
+
+*a mouse follower*
+
+![](./../../../mours-ezgif.com-crop.gif)
 
 ## Creating and removing objects
 The most examples given on the pages [Dynamics](frontend/Dynamics.md), [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md) considers only changing the attributes of created graphics primitives on the screen. One can also use pure raster graphics together with [Image](frontend/Reference/Graphics/Image.md), however, this is quite cumbersome to deal with. 

@@ -14,19 +14,23 @@ Wolfram Language is symbolic programming language, which is in a nutshell
 ## Introduction
 Let us have a look at an example
 
-```mathematica
+```mathematica @
 {1,1,2,2,2,2} /. {2 -> 1, 1 -> 0}
 ```
 
-![](./../Screenshot%202024-04-28%20at%2011.21.38.png)
+```mathematica @
+{0,0,1,1,1,1}
+```
 
 Integer numbers are so-called atoms of the language on which we can apply any transformation rule. Or we can use more general pattern
 
-```mathematica
+```mathematica @
 {0,0,1,1,1,1} /. {any_Integer :> any / 2}
 ```
 
-![](./../Screenshot%202024-04-28%20at%2011.19.42.png)
+```mathematica @
+{0,0,(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*),(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*),(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*),(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)}
+```
 
 Here what you see 
 
@@ -47,40 +51,46 @@ __Any output expression is editable and can be reevaluated as well__
 
 One can go even further in exploring the idea of symbolics and syntax sugar of our editor by applying more complicated rule
 
-```mathematica
+```mathematica @
 {0,0,1/2,1/2,1/2,1/2} /. {any_?NumericQ :> {RGBColor[any, 1-any, 1], any} }
 ```
 
-![](./../Screenshot%202024-04-28%20at%2011.27.13.png)
+```mathematica @
+{{(*VB[*)(RGBColor[0, 1, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxQAGU8cEezgAAAxwUjA=="*)(*]VB*),0},{(*VB[*)(RGBColor[0, 1, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxQAGU8cEezgAAAxwUjA=="*)(*]VB*),0},{(*VB[*)(RGBColor[1/2, 1/2, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEDe3TGB3sAGJkVmw=="*)(*]VB*),(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)},{(*VB[*)(RGBColor[1/2, 1/2, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEDe3TGB3sAGJkVmw=="*)(*]VB*),(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)},{(*VB[*)(RGBColor[1/2, 1/2, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEDe3TGB3sAGJkVmw=="*)(*]VB*),(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)},{(*VB[*)(RGBColor[1/2, 1/2, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEDe3TGB3sAGJkVmw=="*)(*]VB*),(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)}}
+```
 
 As one can see, Wolfram Language does not differentiate  what you are entering: a color, a function, a number. All of them are normal Wolfram Language expressions.
 
 There are also built-in expression used for styling the output
 
-```mathematica
+```mathematica @
 % // Transpose // TableForm 
 ```
 
 *here % means to use the previous output*
 
-![](./../Screenshot%202024-04-28%20at%2011.30.28.png)
+```mathematica @
+(*GB[*){{(*VB[*)(RGBColor[0, 1, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxQAGU8cEezgAAAxwUjA=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0, 1, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxQAGU8cEezgAAAxwUjA=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1/2, 1/2, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEDe3TGB3sAGJkVmw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1/2, 1/2, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEDe3TGB3sAGJkVmw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1/2, 1/2, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEDe3TGB3sAGJkVmw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1/2, 1/2, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEDe3TGB3sAGJkVmw=="*)(*]VB*)}(*||*),(*||*){0(*|*),(*|*)0(*|*),(*|*)(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)(*|*),(*|*)(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)(*|*),(*|*)(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)(*|*),(*|*)(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)}}(*]GB*)
+```
 
 Or something more complicated
 
-```mathematica
+```mathematica @
 Table[If[PrimeQ[i], Framed[i, Background->Yellow], i], {i, 1, 20}]
 ```
 
 *this expression will make an array of numbers and highlight primes*
 
-![](./../Screenshot%202024-04-28%20at%2011.32.07.png)
+```mathematica @
+{1,(*BB[*)(2)(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHArSsxNdcqvgIiA5INKc1KLuYAMp8Tk7PSi/NK8lDRmmPIgdyfn/Jz8okyQcRACiBnQdPMAGcElRZkF/nmeeQWlJcWsIJsSc4pTAcQ1Hcg="*)(*]BB*),(*BB[*)(3)(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHArSsxNdcqvgIiA5INKc1KLuYAMp8Tk7PSi/NK8lDRmmPIgdyfn/Jz8okyQcRACiBnQdPMAGcElRZkF/nmeeQWlJcWsIJsSc4pTAcQ1Hcg="*)(*]BB*),4,(*BB[*)(5)(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHArSsxNdcqvgIiA5INKc1KLuYAMp8Tk7PSi/NK8lDRmmPIgdyfn/Jz8okyQcRACiBnQdPMAGcElRZkF/nmeeQWlJcWsIJsSc4pTAcQ1Hcg="*)(*]BB*),6,(*BB[*)(7)(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHArSsxNdcqvgIiA5INKc1KLuYAMp8Tk7PSi/NK8lDRmmPIgdyfn/Jz8okyQcRACiBnQdPMAGcElRZkF/nmeeQWlJcWsIJsSc4pTAcQ1Hcg="*)(*]BB*),8,9,10,(*BB[*)(11)(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHArSsxNdcqvgIiA5INKc1KLuYAMp8Tk7PSi/NK8lDRmmPIgdyfn/Jz8okyQcRACiBnQdPMAGcElRZkF/nmeeQWlJcWsIJsSc4pTAcQ1Hcg="*)(*]BB*),12,(*BB[*)(13)(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHArSsxNdcqvgIiA5INKc1KLuYAMp8Tk7PSi/NK8lDRmmPIgdyfn/Jz8okyQcRACiBnQdPMAGcElRZkF/nmeeQWlJcWsIJsSc4pTAcQ1Hcg="*)(*]BB*),14,15,16,(*BB[*)(17)(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHArSsxNdcqvgIiA5INKc1KLuYAMp8Tk7PSi/NK8lDRmmPIgdyfn/Jz8okyQcRACiBnQdPMAGcElRZkF/nmeeQWlJcWsIJsSc4pTAcQ1Hcg="*)(*]BB*),18,(*BB[*)(19)(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHArSsxNdcqvgIiA5INKc1KLuYAMp8Tk7PSi/NK8lDRmmPIgdyfn/Jz8okyQcRACiBnQdPMAGcElRZkF/nmeeQWlJcWsIJsSc4pTAcQ1Hcg="*)(*]BB*),20}
+```
 
 If you try to evaluate it, all decorations will be gone and you get a normal-looking Wolfram Language array with numbers up to 20.
 
 
 The same symbolic features count for [Graphics](frontend/Reference/Graphics/Graphics.md). For example
 
-```mathematica
+```mathematica @
 Plot[x, {x,0,1}, PlotStyle -> RGBColor[1/2, 1/2, 1]]
 ```
 
@@ -102,7 +112,7 @@ Most symbols are abstract objects that represent ideas, which, then can be inter
 
 This is also valid for 3D graphics
 
-```mathematica
+```mathematica @
 Graphics3D[Sphere[]]
 ```
 
@@ -114,11 +124,11 @@ __This is all a question of interpretation__
 
 What you see is only one form, however, taking the same symbol of [Cuboid](frontend/Reference/Graphics3D/Cuboid.md), we can treat it as a an abstract object that represents a corresponding geometric object, i.e.
 
-```mathematica
+```mathematica @
 Cuboid[{a1,a2,a3}, {b1,b2,b3}] // Volume
 ```
 
-```mathematica
+```mathematica @
 Abs[(-a1+b1) (-a2+b2) (-a3+b3)]
 ```
 
@@ -128,7 +138,7 @@ Raster images are also expressions. Try to drag and drop your image to an editor
 
 What can you do with it? Anything! For instance
 
-```mathematica
+```mathematica @
 i // ColorNegate
 ```
 
@@ -136,7 +146,7 @@ i // ColorNegate
 
 or analyze a color distribution in LAB space
 
-```mathematica
+```mathematica @
 BubbleChart[
  Append @@@ 
   Tally[Round[
@@ -149,31 +159,41 @@ BubbleChart[
 
 If you like math like me, you will probably find it useful to work in `MatrixForm`
 
-```mathematica
+```mathematica @
 {{a,b}, {c,d}} // MatrixForm
 ```
 
-![](./../Screenshot%202024-04-29%20at%2013.41.50.png)
+```mathematica @
+((*GB[*){{a(*|*),(*|*)b}(*||*),(*||*){c(*|*),(*|*)d}}(*]GB*))
+```
 
 And it is still fine to work with it like if it was *a normal list of lists* (matrix)
 
-![](./../Screenshot%202024-04-29%20at%2013.42.56.png)
+```mathematica @
+((*GB[*){{a(*|*),(*|*)b}(*||*),(*||*){c(*|*),(*|*)d}}(*]GB*)) . ((*GB[*){{a(*|*),(*|*)b}(*||*),(*||*){c(*|*),(*|*)d}}(*]GB*))
+```
+
+```mathematica @
+{{(*SpB[*)Power[a(*|*),(*|*)2](*]SpB*)+b c,a b+b d},{a c+c d,b c+(*SpB[*)Power[d(*|*),(*|*)2](*]SpB*)}}
+```
 
 :::tip
-Use [Snippets](frontend/Snippets.md) for easy matrix drawing
+Use [Command palette](frontend/Command%20palette.md) for easy matrix drawing
 :::
 
 Or combining it with other syntax sugar, one can do quite weird things
 
-```mathematica
+```mathematica @
 Table[RGBColor[1,a,b], {a,0,1,0.25}, {b,0,1,0.25}]// MatrixForm
 ```
 
-![](./../Screenshot%202024-04-29%20at%2013.45.13.png)
+```mathematica @
+((*GB[*){{(*VB[*)(RGBColor[1, 0., 0.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyiDgQHOAAALpBNd"*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0., 0.25])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyiDgQHKuGAPAA2DFGw="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0., 0.5])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyiDgQHKeGAPAA2jFHw="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0., 0.75])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyiDgQHKeGEPAA2zFIQ="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0., 1.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyiDgQEuAgANwxSM"*)(*]VB*)}(*||*),(*||*){(*VB[*)(RGBColor[1, 0.25, 0.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjAozBwAAAFwoUbA=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.25, 0.25])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjAoIBABjpFXs="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.25, 0.5])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjAozxwB4AGQkViw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.25, 0.75])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjAozxwh4AGRkVkw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.25, 1.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjgj1cBAAZKRWb"*)(*]VB*)}(*||*),(*||*){(*VB[*)(RGBColor[1, 0.5, 0.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjAYzBwAAAF7oUfA=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.5, 0.25])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjAYxxwR4AGZkViw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.5, 0.5])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjAYIBABm5FZs="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.5, 0.75])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjAYzxwh4AGckVow=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.5, 1.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjgT1cBAAZ2RWr"*)(*]VB*)}(*||*),(*||*){(*VB[*)(RGBColor[1, 0.75, 0.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjBYzBwAAAGBIUhA=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.75, 0.25])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjBYxxwR4AGfEVkw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.75, 0.5])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjBYzxwB4AGhEVow=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.75, 0.75])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjBYIBABohFas="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 0.75, 1.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHeyjjhT1cBAAaMRWz"*)(*]VB*)}(*||*),(*||*){(*VB[*)(RGBColor[1, 1., 0.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHe3QGAwMAGGoUjA=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 1., 0.25])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHe3TGBXsAGkkVmw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 1., 0.5])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHe3TGA3sAGmkVqw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 1., 0.75])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHe3TGC3sAGnkVsw=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[1, 1., 1.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxgMEHe0wGABqJFbs="*)(*]VB*)}}(*]GB*))
+```
 
 Syntax sugar and decorations also serves the purpose of abstracting classical OOP objects providing a short summary
 
-```mathematica
+```mathematica @
 NumericArray[{1,2,3,4,5,6}]
 ```
 
@@ -182,15 +202,17 @@ NumericArray[{1,2,3,4,5,6}]
 which is still a normal symbol, which can be copied somewhere else. 
 
 For instance `DateObject` is rendered as a date
-```mathematica
+```mathematica @
 Now
 ```
 
-![](./../Screenshot%202024-04-29%20at%2013.54.12.png)
+```mathematica @
+(*VB[*)(DateObject[{2024,5,19,12,39,34.05428},"Instant","Gregorian",2.])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwSSxJ9U/KSk0uCUnNLcgB8oKlgMJKwaV5CoaWCr6JlQpGBkYmCoZGVsaWVsYmSgCu/RIR"*)(*]VB*)
+```
 
 Time-series has also its own representation
 
-```mathematica
+```mathematica @
 v = {2, 1, 6, 5, 7, 4};
 t = {1, 2, 5, 10, 12, 15};
 
@@ -208,7 +230,7 @@ Read more on how to create such object
 
 And the last example of a syntax sugar is [ListPlay](frontend/Reference/Sound/ListPlay.md), which is quite experimental, but allows to play or generate sound right in the notebook
 
-```mathematica
+```mathematica @
 ListPlay[Table[Sin[2 π 50 t], {t, 0, 1, 1./2000}]]
 ```
 
@@ -216,7 +238,7 @@ ListPlay[Table[Sin[2 π 50 t], {t, 0, 1, 1./2000}]]
 
 If you have too much data, then turn it into an icon using [Iconize](frontend/Reference/Decorations/Iconize.md)
 
-```mathematica
+```mathematica @
 Table[i, {i, 100}] // Iconize
 ```
 

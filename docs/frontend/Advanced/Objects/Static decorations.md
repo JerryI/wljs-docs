@@ -237,12 +237,13 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
     calculate,
     controller = CreateUUID[],
     construct,
+    notebook = EvaluationNotebook[],
     destruct
 },
 
 	(* if someone closed notebook *)
-    With[{connection = EventClone[CurrentWindow[]]},
-      EventHandler[connection, {"Closed" -> Function[Null,
+    With[{cloned = EventClone[notebook]},
+      EventHandler[cloned, {"OnClose" -> Function[Null,
         destruct;
       ]}];
     ];

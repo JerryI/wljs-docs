@@ -58,6 +58,10 @@ where `event` can be
 - `"zoom"` detects zoom / mouse-wheel
 - `"click"` detects mouse clicks
 
+:::tip
+See more in [Mouse and keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
+:::
+
 
 ## Indexed geometry
 Using it inside [GraphicsComplex](frontend/Reference/Graphics/GraphicsComplex.md) allows to specify only the indexes of vertices as arguments similar to faces like in [Indexed geometry](frontend/Reference/Graphics/Polygon.md#Indexed%20geometry)
