@@ -147,6 +147,16 @@ Red
 ### InterpretationBox
 This is a low-level symbol used in [Interpretation](frontend/Reference/Decorations/Interpretation.md), however from temporal decoration we can make a permanent one by defining [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) for [StandardForm](frontend/Reference/Decorations/StandardForm.md) 
 
+Advantages ✅
+- high-level, accepts anything as a display expression
+
+Drawbacks ❌
+- spawns another instance of an editor, can lead to an overhead
+
+Neutral 💭
+- immutable
+- preserves original expression in the cell
+
 #### Morse code
 Let us make a syntax sugar for a Morse code! Our __special symbol__ for representing a code will be
 
@@ -265,6 +275,17 @@ secret[Plot[x, {x,0,1}]]
 ### ArrangeSummaryBox
 There is another built-in function for helping representing objects
 
+Advantages ✅
+- high-level, easy to use
+
+Drawbacks ❌
+- display mostly text fields and a single icon
+
+Neutral 💭
+- practically immutable 
+- preserves original expression in the cell
+
+
 :::tip
 If you want to hear more about OOP-like objects in Wolfram Language - check this guide [Creating new type](frontend/Advanced/Objects/Creating%20new%20type.md)
 :::
@@ -349,6 +370,19 @@ See how to make __dynamic decorations__ in a guide [Creating new type](frontend/
 
 ### ViewBox
 *a low-level building block used by `Interpretation`, `InterpretationBox`, `ArrangeSummaryBox` and others*
+
+Advantages ✅
+- fully customizable
+- can emit events
+- usually the fastest approach 
+
+Drawbacks ❌
+- requires a symbol defined as [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md) as display expression
+
+Neutral 💭
+- mutable (see [Mutability](frontend/Reference/Decorations/ViewBox.md#Mutability))
+- preserves original expression in the cell
+
 
 It gives you full control over a decoration. One can event listen events from there and [mutate](frontend/Reference/Decorations/ViewBox.md#From%20Wolfram%20Kernel) inner and outer content of it remotely
 
@@ -439,13 +473,241 @@ core.customDecorator = async (args, env) => {
 
 Let's check it
 
-```mathematica
+```mathematica @
 boxObject[33]
 ```
 
 ![](./../../../Screenshot%202024-05-04%20at%2013.47.06.png)
 
 One cal also make it dynamic by defining a proper `.update` method for a `customDecorator` (see [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)). 
+
+
+### BoxBox
+*a low-level building block used by `Style` and others*
+It accepts decorator functions similar to [ViewBox](#ViewBox), however, __it also renders an inner expression normally__ inside a decorated container and allows editing (**fully mutable**). [BoxBox](frontend/Reference/Decorations/BoxBox.md) can also be nested.
+
+Advantages ✅
+- easy to mutate - spawns an editor inside
+- can partially hide symbols head and expose only the argument
+
+Drawbacks ❌
+- requires a symbol defined as [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md) as display expression
+- requires Javascript in practice
+
+Neutral 💭
+- fully mutable 
+- preserves original expression in the cell
+
+#### Simple example
+Using [PaneBox](frontend/Reference/Decorations/PaneBox.md) and `Head` options one can hide a head of a decorated symbol exposing only an argument for editing
+
+```mathematica
+boxObject /: MakeBoxes[boxObject[s_], StandardForm] := With[{},
+  BoxBox[s, PaneBox[], Head->boxObject]
+]
+```
+
+```mathematica @
+boxObject[22]
+```
+
+and output expression will look like
+
+```mathematica @
+(*BB[*)(boxObject[22])(*,*)(*"1:eJxTTMoPSmNmYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCRYg4ZGfk5LGAOKxg5Ql5qU65VekMcGkg0pzUoPB6lITU4I5gYyk/Ar/pKzU5BI0RaxAhmtZal4JWMivNCcHAI+YHWo="*)(*]BB*)
+```
+
+*you can still edit the content of it. Drop you cursor inside it*
+
+This is how [Ket](frontend/Reference/Decorations/Ket.md) and [Bra](frontend/Reference/Decorations/Bra.md) are implemented. External decorators are also supported.
+
+
+
+### Full interpretation
+So far we either altered the displayed result of an expression or made a summary of the content of a symbol. In such cases the actual content was always inside a cell.
+
+There is an alternative way - [Frontend Objects](frontend/Advanced/Frontend%20interpretation/Frontend%20Objects.md). We can forward the whole symbol and its content for interpreting directly to the frontend keeping inside the cell only the reference to it - [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md). 
+
+It provides some benefits:
+
+- __less load to an editor__, only the reference is stored inside a cell (via [ViewBox](frontend/Reference/Decorations/ViewBox.md) actually)
+- the data is transferred and stored inside notebook, but not on a kernel
+- you do not need to think about Boxes
+
+However, there are also some drawbacks
+
+- all data will be send to the frontend, which might be slow if it reaches several megabytes 
+- __the content is immutable__
+- __you have to program the interpretation function in Javascript__
+
+This is how [Graphics](frontend/Reference/Graphics/Graphics.md), [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md) and [Image](frontend/Reference/Graphics/Image.md) are implemented. 
+
+__As a summary__
+
+Advantages ✅
+- provides only the reference in the editor to an original expression
+- easy to make dynamic features if you read the guide [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)
+- the most direct way of interpreting wolfram expression
+- the data is stored outside the Wolfram Kernel
+
+Drawbacks ❌
+- requires a symbol defined as [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md) as display expression
+- requires Javascript in practice
+- stores data in the notebook, might be slow 
+
+Neutral 💭
+- immutable 100%
+- does not preserve the original expression
+
+
+
+#### Example
+Let us try the simplest demonstration possible
+
+```mathematica
+gauge[level_Real]
+```
+
+This is going to be our gauge meter. Now we need to force Wolfram Kernel to execute this expression on the fronted using [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md) on [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md)
+
+```mathematica
+gauge /: MakeBoxes[g_gauge, StandardForm] := With[{
+  o = CreateFrontEndObject[g]
+},
+  MakeBoxes[o, StandardForm]
+]
+```
+
+Now an actual implementation
+
+```js
+.js
+
+core.gauge = async (args, env) => {
+  // Create a gauge meter element
+  const gauge = document.createElement('div');
+  gauge.style.width = '100px'; // half the original width
+  gauge.style.height = '50px'; // half the original height
+  gauge.style.border = '1px solid #000';
+  gauge.style.borderRadius = '50px 50px 0 0'; // adjusted for smaller size
+  gauge.style.position = 'relative';
+  gauge.style.background = 'linear-gradient(to right, red 0%, yellow 50%, green 100%)';
+
+  // Create a needle for the gauge
+  const needle = document.createElement('div');
+  needle.style.width = '2px';
+  needle.style.height = '40px'; // made the needle longer for better visibility
+  needle.style.background = '#000';
+  needle.style.position = 'absolute';
+  needle.style.bottom = '0';
+  needle.style.left = '50%';
+  needle.style.transformOrigin = 'bottom';
+
+  // Function to set the needle position based on input value
+  function setNeedlePosition(value) {
+    // Ensure value is between 0 and 1
+    value = Math.max(0, Math.min(1, value));
+    // Convert value to angle
+    const angle = value * 180 - 90; // -90 to 90 degrees
+    needle.style.transform = `rotate(${angle}deg)`;
+  }
+
+  // Set initial needle position
+  const pos = await interpretate(args[0], env);
+  setNeedlePosition(pos); // Middle position
+  
+
+  gauge.appendChild(needle);
+
+  env.element.appendChild(gauge);
+}
+```
+
+Now if you evaluate
+
+```mathematica
+gauge[0.3]
+```
+
+![](./../../../Screenshot%202024-05-20%20at%2018.48.35.png)
+
+It is easy to prove, that the original symbol is still there
+
+![](./../../../Screenshot%202024-05-20%20at%2018.48.20.png)
+
+despite the fact, we are working with a reference.
+
+##### Dynamic updates
+We can go further and implement methods for dynamic evaluation
+
+```js
+.js
+
+core.gauge = async (args, env) => {
+  
+  // Create a gauge meter element
+  const gauge = document.createElement('div');
+  gauge.style.width = '100px'; // half the original width
+  gauge.style.height = '50px'; // half the original height
+  gauge.style.border = '1px solid #000';
+  gauge.style.borderRadius = '50px 50px 0 0'; // adjusted for smaller size
+  gauge.style.position = 'relative';
+  gauge.style.background = 'linear-gradient(to right, red 0%, yellow 50%, green 100%)';
+
+  // Create a needle for the gauge
+  const needle = document.createElement('div');
+  needle.style.width = '2px';
+  needle.style.height = '40px'; // made the needle longer for better visibility
+  needle.style.background = '#000';
+  needle.style.position = 'absolute';
+  needle.style.bottom = '0';
+  needle.style.left = '50%';
+  needle.style.transformOrigin = 'bottom';
+
+  // Function to set the needle position based on input value
+  function setNeedlePosition(value) {
+    // Ensure value is between 0 and 1
+    value = Math.max(0, Math.min(1, value));
+    // Convert value to angle
+    const angle = value * 180 - 90; // -90 to 90 degrees
+    needle.style.transform = `rotate(${angle}deg)`;
+  }
+
+  // Set initial needle position
+  const pos = await interpretate(args[0], env);
+  setNeedlePosition(pos); // Middle position
+  
+
+  gauge.appendChild(needle);
+
+  env.element.appendChild(gauge);
+  env.local.update = setNeedlePosition;
+}
+
+core.gauge.update = async (args, env) => {
+  const val = await interpretate(args[0], env);
+  env.local.update(val);
+}
+
+core.gauge.destroy = () => {
+  console.log('Nothing to do');
+}
+```
+
+:::tip
+See more about frontend interpretation [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)
+:::
+
+Then to check it we use a simple slider
+
+```mathematica
+gvalue = 0.1;
+EventHandler[InputRange[0, 1, 0.1, 0.1], (gvalue = #) &]
+
+gauge[gvalue // Offload]
+```
+
+![](./../../../gauge-ezgif.com-video-to-gif-converter.gif)
 
 
 ## Deferred

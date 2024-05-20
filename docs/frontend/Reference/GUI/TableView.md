@@ -19,6 +19,9 @@ Represents a ready-only table preview for a large set of data. For editable tabl
 ### `"Height"`
 specifies the maximum height in pixels
 
+### `TableHeadings`
+accepts a list of headings
+
 ## TODO
 Developers notes
 - [ ] Allows dynamic updates

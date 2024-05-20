@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Symbolic programming.md",
+                "file": "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2e0f97191d38ce12",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Reference/Decorations/BoxBox.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "FrontFetchAs",
+                "query": "HTMLView",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Symbolic programming.md",
+                "file": "frontend/Advanced/Syntax sugar/Decorating symbols.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Symbolic programming.md",
+                "file": "frontend/Advanced/Syntax sugar/Decorating symbols.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Symbolic programming.md"
+                "file": "frontend/Advanced/Syntax sugar/Decorating symbols.md"
               }
             }
           },
@@ -185,6 +197,16 @@
   },
   "active": "9240cc80492be2e6",
   "lastOpenFiles": [
+    "gauge-ezgif.com-video-to-gif-converter.gif",
+    "Screenshot 2024-05-20 at 18.48.35.png",
+    "Screenshot 2024-05-20 at 18.48.20.png",
+    "Screenshot 2024-05-20 at 18.47.30.png",
+    "frontend/Reference/Decorations/BoxBox.md",
+    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+    "frontend/Reference/GUI/HTMLView.md",
+    "frontend/Reference/GUI/TableView.md",
+    "frontend/Reference/Decorations/TableForm.md",
+    "frontend/Symbolic programming.md",
     "frontend/Advanced/Events system/Notebook, cells and windows.md",
     "frontend/Reference/Frontend IO/WindowObj.md",
     "frontend/Advanced/Events system/Mouse and keyboard.md",
@@ -194,7 +216,6 @@
     "frontend/Reference/Cells and Notebook/RemoteNotebook.md",
     "frontend/Reference/Cells and Notebook/EvaluationNotebook.md",
     "Screenshot 2024-05-12 at 21.16.13.png",
-    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
     "lights-ezgif.com-optimize.gif",
     "frontend/Advanced/Events system/routing.md",
     "frontend/Advanced/Dynamics/Advanced animation.md",
@@ -211,16 +232,7 @@
     "Screenshot 2024-05-17 at 10.08.38.png",
     "Screenshot 2024-05-17 at 10.02.05.png",
     "Screenshot 2024-05-17 at 10.01.48.png",
-    "Screenshot 2024-05-17 at 09.54.19.png",
-    "Screenshot 2024-05-17 at 09.53.55.png",
     "frontend/Advanced/Dynamics/Indicators.md",
-    "frontend/Reference/GUI/InputSelect.md",
-    "Screenshot 2024-05-16 at 20.07.26.png",
-    "frontend/Advanced/Javascript/Communication.md",
-    "frontend/Advanced/Events system/promises.md",
-    "frontend/Advanced/Dynamics/Performance tips.md",
-    "frontend/Advanced/Dynamics/Offloading calculations.md",
-    "frontend/Reference/Misc/Promise.md",
     "blog/2023-10-10-esm/index._mdx",
     "blog/2023-10-10-esm/index.mdx",
     "blog/2023-10-10-esm/NintendoPro.wln",
