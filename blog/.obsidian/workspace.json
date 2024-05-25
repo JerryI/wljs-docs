@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "75ac0253bfd954c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2024-04-22-gauge.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "03b4e2e45761d838",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2024-04-22-gauge.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-04-19-spider/index.md",
+                "file": "2024-04-22-gauge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-04-19-spider/index.md",
+                "file": "2024-04-22-gauge.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-04-19-spider/index.md"
+                "file": "2024-04-22-gauge.md"
               }
             }
           }
@@ -146,10 +171,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "337da549353c2185",
+  "active": "03b4e2e45761d838",
   "lastOpenFiles": [
-    "2024-04-13-imagetrace/index.md",
+    "2024-04-24-dynamic-env/index.md",
+    "2024-04-22-gauge.md",
+    "gauge4-ezgif.com-video-to-gif-converter.gif",
+    "Screenshot 2024-05-25 at 09.26.26.png",
     "2024-04-19-spider/index.md",
+    "2024-04-24-dynamic-env/opacitydouble-ezgif.com-optimize.gif",
+    "2024-04-24-dynamic-env/opacity-ezgif.com-video-to-gif-converter.gif",
+    "2024-04-24-dynamic-env/color-ezgif.com-optimize.gif",
+    "2024-04-13-imagetrace/index.md",
+    "2024-04-24-dynamic-env/Statsj.svg",
+    "2024-04-24-dynamic-env/Archive.zip",
+    "2024-04-24-dynamic-env",
     "2024-04-19-spider/Spider.wln",
     "Screenshot 2024-05-19 at 16.10.26.png",
     "tricks-ezgif.com-optimize.gif",
@@ -157,10 +192,7 @@
     "2024-04-19-spider",
     "2024-04-13-imagetrace/Image tracing.wln",
     "dinooo.svg",
-    "Screenshot 2024-05-19 at 13.55.02.png",
-    "dino66-ezgif.com-optimize.gif",
     "2023-10-10-esm/index.md",
-    "giphy.gif",
     "2024-04-13-imagetrace/index.md.md",
     "2024-04-13-imagetrace"
   ]

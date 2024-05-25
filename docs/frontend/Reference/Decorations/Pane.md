@@ -14,6 +14,10 @@ Pane[expr_, {w_, h_}]
 
 displays with a given container size.
 
+## Options
+### `ImageSize`
+The effect is the same as if `{w_, h_}` or `w` were specified as a second argument.
+
 ## Examples
 
 ```mathematica

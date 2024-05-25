@@ -2,6 +2,7 @@
 env:
   - WLJS
   - Wolfram Kernel
+update: true
 ---
 
 represents color

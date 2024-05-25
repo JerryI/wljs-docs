@@ -193,12 +193,35 @@ By dragging the red point you update all positions joints
 *use wheel to zoom and a left click to pan*
 
 
+#### 🍪 Example 3
+Let us show you something more simple
+
+```mathematica
+opacity = 0.5;
+Graphics[{Opacity[Offload[opacity]], Red, Disk[{0,0}, Offload[1-opacity]], Blue, Opacity[Offload[1.0 - opacity]], Disk[{0,0}, Offload[opacity]]}, ImagePadding->None]
+
+EventHandler[InputRange[0,1,0.1], Function[value,
+	opacity = value;
+]]
+```
+
+Here we provide dynamic symbol `opacity` to both [Opacity](frontend/Reference/Graphics3D/Opacity.md) and [Disk](frontend/Reference/Graphics/Disk.md) radius. The effect of two will be following
+
+![](./../opacitydouble-ezgif.com-optimize.gif)
+
 :::info
-All examples shown here are shipped together with a frontend. Locate
+All examples shown here are shipped together with an app . Locate
 <div style={{width:"120px"}}>
 
 ![](./../imgs/Screenshot%202023-11-29%20at%2022.20.08.png)
 
 </div>
 
+or from the top-bar menu
+
 :::
+
+:::tip
+Check out our __Blog__ section 📻 for more examples and dev notes.
+:::
+

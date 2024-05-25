@@ -61,7 +61,7 @@ All installed packages can be found from `Settings` menu of WLJS Notebook
 ![](./../../Screenshot%202024-05-13%20at%2011.55.17.png)
 
 :::warning
-There is no third-party extensions so far. The guide is still development.
+There is no third-party extensions so far. The guide on how to write your own is still in development.
 :::
 
 

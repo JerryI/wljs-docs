@@ -375,6 +375,7 @@ Advantages ✅
 - fully customizable
 - can emit events
 - usually the fastest approach 
+- save up memory - no frontend object is created by the default
 
 Drawbacks ❌
 - requires a symbol defined as [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md) as display expression
@@ -434,7 +435,7 @@ boxObject /: MakeBoxes[boxObject[s_], StandardForm] := With[{
 ]
 ```
 
-#### External decorators
+#### External decorators 1
 One can also use Javascript to decorate a symbol. We will rewrite our `MakeBoxes` for it
 
 ```mathematica
@@ -481,6 +482,177 @@ boxObject[33]
 
 One cal also make it dynamic by defining a proper `.update` method for a `customDecorator` (see [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)). 
 
+#### External decorators 2
+This is an adapted example from section [Full interpretation](#Example)
+
+Let us try the simplest demonstration possible
+
+```mathematica
+gauge[level_Real]
+```
+
+This is going to be our gauge meter. We can decorate it as in the previous example using [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md)
+
+```mathematica
+gauge /: MakeBoxes[g_gauge, StandardForm] := With[{},
+  ViewBox[g, g]
+]
+```
+
+:::note
+If you plan to use it with [Slides](frontend/Reference/Slides/Slides.md) or [WLX](frontend/Cell%20types/WLX.md), define [WLXForm](frontend/Reference/Decorations/WLXForm.md) instead of [StandardForm](frontend/Reference/Decorations/StandardForm.md) in `MakeBoxes` or both.
+:::
+
+Now an actual implementation for our decorator
+
+```js
+.js
+
+core.gauge = async (args, env) => {
+  // Create a gauge meter element
+  const gauge = document.createElement('div');
+  gauge.style.width = '100px'; // half the original width
+  gauge.style.height = '50px'; // half the original height
+  gauge.style.border = '1px solid #000';
+  gauge.style.borderRadius = '50px 50px 0 0'; // adjusted for smaller size
+  gauge.style.position = 'relative';
+  gauge.style.background = 'linear-gradient(to right, red 0%, yellow 50%, green 100%)';
+
+  // Create a needle for the gauge
+  const needle = document.createElement('div');
+  needle.style.width = '2px';
+  needle.style.height = '40px'; // made the needle longer for better visibility
+  needle.style.background = '#000';
+  needle.style.position = 'absolute';
+  needle.style.bottom = '0';
+  needle.style.left = '50%';
+  needle.style.transformOrigin = 'bottom';
+
+  // Function to set the needle position based on input value
+  function setNeedlePosition(value) {
+    // Ensure value is between 0 and 1
+    value = Math.max(0, Math.min(1, value));
+    // Convert value to angle
+    const angle = value * 180 - 90; // -90 to 90 degrees
+    needle.style.transform = `rotate(${angle}deg)`;
+  }
+
+  // Set initial needle position
+  const pos = await interpretate(args[0], env);
+  setNeedlePosition(pos); // Middle position
+  
+
+  gauge.appendChild(needle);
+
+  env.element.appendChild(gauge);
+}
+```
+
+Now if you evaluate
+
+```mathematica
+gauge[0.3]
+```
+
+![](./../../../Screenshot%202024-05-20%20at%2018.48.35.png)
+
+If you copy it to a normal text editor, __you will see the original symbol__
+
+```mathematica
+(*VB[*)(gauge[Offload[gvalue]])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRAeP5BwK8rPK3HNSwnLLCopTcyBSLACifTE0vRUCJcdSPinpeXkJ6YUs4GkyhJzSlMBOCoUGw=="*)(*]VB*)
+```
+
+##### Dynamic updates
+We can go further and implement methods for dynamic evaluation
+
+```js title="change 1"
+.js
+
+core.gauge = async (args, env) => {
+  
+  // Create a gauge meter element
+  const gauge = document.createElement('div');
+  gauge.style.width = '100px'; // half the original width
+  gauge.style.height = '50px'; // half the original height
+  gauge.style.border = '1px solid #000';
+  gauge.style.borderRadius = '50px 50px 0 0'; // adjusted for smaller size
+  gauge.style.position = 'relative';
+  gauge.style.background = 'linear-gradient(to right, red 0%, yellow 50%, green 100%)';
+
+  // Create a needle for the gauge
+  const needle = document.createElement('div');
+  needle.style.width = '2px';
+  needle.style.height = '40px'; // made the needle longer for better visibility
+  needle.style.background = '#000';
+  needle.style.position = 'absolute';
+  needle.style.bottom = '0';
+  needle.style.left = '50%';
+  needle.style.transformOrigin = 'bottom';
+
+  // Function to set the needle position based on input value
+  function setNeedlePosition(value) {
+    // Ensure value is between 0 and 1
+    value = Math.max(0, Math.min(1, value));
+    // Convert value to angle
+    const angle = value * 180 - 90; // -90 to 90 degrees
+    needle.style.transform = `rotate(${angle}deg)`;
+  }
+
+  // Set initial needle position
+  const pos = await interpretate(args[0], env);
+  setNeedlePosition(pos); // Middle position
+  
+
+  gauge.appendChild(needle);
+
+  env.element.appendChild(gauge);
+  env.local.update = setNeedlePosition;
+}
+
+core.gauge.update = async (args, env) => {
+  const val = await interpretate(args[0], env);
+  env.local.update(val);
+}
+
+core.gauge.destroy = () => {
+  console.log('Nothing to do');
+}
+```
+
+:::tip
+See more about frontend interpretation [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)
+:::
+
+Since the dynamics is possible only with [Containers Executables](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md#Containers%20Executables), we can tell WLJS Interpreter to make a virtual one using [FrontEndVirtual](frontend/Reference/Interpreter/FrontEndVirtual.md)
+
+```mathematica title="change 2"
+gauge /: MakeBoxes[g_gauge, StandardForm] := With[{},
+  ViewBox[g, g // FrontEndVirtual]
+]
+```
+
+Then to check it we use a simple slider
+
+```mathematica
+gvalue = 0.1;
+EventHandler[InputRange[0, 1, 0.1, 0.1], (gvalue = #) &]
+
+gauge[gvalue // Offload]
+```
+
+![](./../../../gauge-ezgif.com-video-to-gif-converter.gif)
+
+###### Another option
+You can also remove `FrontEndVirtual` from `MakeBoxes`, if you add one line to your Javascript code
+
+```js title="change"
+...
+
+core.gauge.virtual = true
+```
+
+this will tell WLJS Interpreter to automatically make an instance
+
 
 ### BoxBox
 *a low-level building block used by `Style` and others*
@@ -489,6 +661,7 @@ It accepts decorator functions similar to [ViewBox](#ViewBox), however, __it als
 Advantages ✅
 - easy to mutate - spawns an editor inside
 - can partially hide symbols head and expose only the argument
+- save up memory - no frontend object is created by the default
 
 Drawbacks ❌
 - requires a symbol defined as [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md) as display expression
@@ -548,11 +721,12 @@ Advantages ✅
 - provides only the reference in the editor to an original expression
 - easy to make dynamic features if you read the guide [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)
 - the most direct way of interpreting wolfram expression
-- the data is stored outside the Wolfram Kernel
+- the expression is stored outside the Wolfram Kernel
 
 Drawbacks ❌
 - requires a symbol defined as [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md) as display expression
 - requires Javascript in practice
+- always creates frontend object - memory load
 - stores data in the notebook, might be slow 
 
 Neutral 💭
@@ -577,6 +751,10 @@ gauge /: MakeBoxes[g_gauge, StandardForm] := With[{
   MakeBoxes[o, StandardForm]
 ]
 ```
+
+:::note
+If you plan to use it with [Slides](frontend/Reference/Slides/Slides.md) or [WLX](frontend/Cell%20types/WLX.md), define [WLXForm](frontend/Reference/Decorations/WLXForm.md) instead of [StandardForm](frontend/Reference/Decorations/StandardForm.md) in `MakeBoxes` or both.
+:::
 
 Now an actual implementation
 
@@ -631,11 +809,21 @@ gauge[0.3]
 
 ![](./../../../Screenshot%202024-05-20%20at%2018.48.35.png)
 
-It is easy to prove, that the original symbol is still there
+It is easy to prove, that the original symbol is still there (almost)
 
 ![](./../../../Screenshot%202024-05-20%20at%2018.48.20.png)
 
 despite the fact, we are working with a reference.
+
+:::warning
+This makes you symbol not quite copyable to other notebooks, since it relies on [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md), when in the output form looks like this
+
+```mathematica
+(*VB[*)(FrontEndRef["35fa850e-5bfd-48ab-84b2-dc815f5f2666"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKG5umJVqYGqTqmialpeiaWCQm6VqYJBnppiRbGJqmmaYZmZmZAQCMcRXe"*)(*]VB*)
+```
+
+To fix this you can follows other example [External decorators 2](#External%20decorators%202)
+:::
 
 ##### Dynamic updates
 We can go further and implement methods for dynamic evaluation

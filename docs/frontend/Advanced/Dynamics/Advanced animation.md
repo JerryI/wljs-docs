@@ -133,6 +133,33 @@ Graphics[{
 
 ![](./../../../mours-ezgif.com-crop.gif)
 
+## A remark on color and opacity
+[RGBColor](frontend/Reference/Graphics/RGBColor.md) as well as [Opacity](frontend/Reference/Graphics/Opacity.md) do support dynamic updates in the context of [Graphics](frontend/Reference/Graphics/Graphics.md). Here it is a bit tricky, since all graphics symbols sharing the same scope should bind to them indirectly. The good news, you do not have to think about and just
+
+```mathematica
+color = {1,0,0};
+Graphics[{RGBColor[color // Offload], Disk[{0,0}, 1]}]
+
+EventHandler[InputJoystick[], Function[xy,
+	color = Normalize[{xy[[1]], xy[[2]], 0.5}] // Abs;
+]]
+```
+
+![](./../../../color-ezgif.com-optimize.gif)
+
+Or even more complicated - combining it together with traditional dynamics with nested variables
+
+```mathematica
+opacity = 0.5;
+Graphics[{Opacity[Offload[opacity]], Red, Disk[{0,0}, Offload[1-opacity]], Blue, Opacity[Offload[1.0 - opacity]], Disk[{0,0}, Offload[opacity]]}, ImagePadding->None]
+
+EventHandler[InputRange[0,1,0.1], Function[value,
+	opacity = value;
+]]
+```
+
+![](./../../../opacitydouble-ezgif.com-optimize.gif)
+
 ## Creating and removing objects
 The most examples given on the pages [Dynamics](frontend/Dynamics.md), [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md) considers only changing the attributes of created graphics primitives on the screen. One can also use pure raster graphics together with [Image](frontend/Reference/Graphics/Image.md), however, this is quite cumbersome to deal with. 
 

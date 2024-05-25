@@ -3,13 +3,27 @@ env:
   - WLJS
 virtual: true
 ---
-It is a virtual [container](../../../../interpreter/Advanced/containers.md) wrapper for any expressions evaluated on WLJS
+It is a virtual [containers-executable](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md#Containers%20Executables) wrapper for any expressions evaluated on WLJS
 
 ```mathematica
 FrontEndVirtual[expr_]
 ```
 
-It works similar to [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md), but does not allocate memory and does not assign or create DOM element for displaying (you have to do it manually using [AttachDOM](frontend/Reference/Interpreter/AttachDOM.md))
+It works similar to [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md), but does not allocate memory and does not assign or create DOM element for displaying (you have to do it manually using [AttachDOM](frontend/Reference/Interpreter/AttachDOM.md)) and __keeps the original expression__
+
+###### Another option
+You do not need `FrontEndVirtual` if you add one line to your Javascript code
+
+```js title="change"
+...
+
+core.YouSymbol.virtual = true
+```
+
+this will tell WLJS Interpreter to automatically make an instance
+
+
+
 ## Examples
 Most use cases comes, when [WLJS](../../../../interpreter/intro.md) is used as a standalone interpreter, but you can simulate it from WLJS Frontend as well using [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)
 
