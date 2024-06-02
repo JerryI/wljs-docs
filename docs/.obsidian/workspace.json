@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Offset.md",
+                "file": "frontend/Reference/Plotly/Plotly.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Offset",
+                "query": "Ctrl",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,8 +101,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -122,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Offset.md",
+                "file": "frontend/Reference/Plotly/Plotly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Offset.md",
+                "file": "frontend/Reference/Plotly/Plotly.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Offset.md"
+                "file": "frontend/Reference/Plotly/Plotly.md"
               }
             }
           },
@@ -198,6 +197,16 @@
   },
   "active": "9240cc80492be2e6",
   "lastOpenFiles": [
+    "frontend/Reference/Sound/Audio.md",
+    "frontend/Reference/Sound/ListPlay.md",
+    "frontend/Reference/Sound/Play.md",
+    "frontend/Reference/Sound/PCMPlayer.md",
+    "frontend/Overview.md",
+    "frontend/Guidelines.md",
+    "frontend/Advanced/Cells manipulation.md",
+    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
+    "frontend/Reference/Cells and Notebook/RemoteCellObj.md",
+    "frontend/Reference/Graphics/Offset.md",
     "frontend/Reference/Interpreter/FrontEndVirtual.md",
     "frontend/Advanced/Syntax sugar/Decorating symbols.md",
     "frontend/Reference/GUI/TableView.md",
@@ -222,19 +231,9 @@
     "frontend/Reference/Decorations/TableForm.md",
     "frontend/Symbolic programming.md",
     "frontend/Advanced/Events system/Notebook, cells and windows.md",
-    "frontend/Reference/Frontend IO/WindowObj.md",
-    "frontend/Advanced/Events system/Mouse and keyboard.md",
-    "frontend/Advanced/Graphics/Complex.md",
-    "frontend/Advanced/Graphics/Controls.md",
-    "frontend/Advanced/Events system/Parallel kernels.md",
-    "frontend/Reference/Cells and Notebook/RemoteNotebook.md",
-    "frontend/Reference/Cells and Notebook/EvaluationNotebook.md",
     "Screenshot 2024-05-12 at 21.16.13.png",
     "lights-ezgif.com-optimize.gif",
-    "frontend/Advanced/Events system/routing.md",
     "gauss-ezgif.com-optimize.gif",
-    "frontend/Command palette.md",
-    "frontend/Advanced/Events system/event-generators.md",
     "blog/2023-10-10-esm/index._mdx",
     "blog/2023-10-10-esm/index.mdx",
     "blog/2023-10-10-esm/NintendoPro.wln",

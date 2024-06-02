@@ -45,6 +45,7 @@ Project to a window is the most interesting feature here, that allows to evaluat
 - `Ctrl+6` make superscript on selected
 - `Ctrl+2` make square root on selected
 - `Ctrl+-` make subscript on selected
+- `Ctrl/Cmd+/` comment a line
 
 
 ## Wolfram Language

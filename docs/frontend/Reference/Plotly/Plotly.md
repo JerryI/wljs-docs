@@ -10,18 +10,22 @@ context: Notebook`Kernel`PlotlyExtension`
 Plotly[f, {x, xmin, xmax}]
 ```
 
-mimics the behaviour of a native [Plot](frontend/Reference/Plotting%20Functions/Plot.md) using a well-known [PlotlyJS](https://plotly.com/javascript/) library. It is quite limited and __does not support options__.
+mimics the behavior of a native [Plot](frontend/Reference/Plotting%20Functions/Plot.md) using a well-known [PlotlyJS](https://plotly.com/javascript/) library. It is quite limited and __does not support options__.
 
 ```mathematica
 Plotly[data_Association, layout_Association:Null] _PlotlyInstance
 ```
 
-creates `Plotly` instance object, which __gives a direct API access to a native Plotly Javascript engine__ and returns `PlotlyInstance`
+creates `Plotly` instance object, which __gives a direct API access to a native Plotly Javascript engine__ ✨ and returns `PlotlyInstance`
 
 `data` expression contains the parameters of a default Plotly Javascript constructor
 
 :::tip
 This is 1:1 correspondence to a normal Plotly API. Please see [Reference](https://plotly.com/javascript/)
+:::
+
+:::info
+[RGBColor](frontend/Reference/Graphics/RGBColor.md) will also work normally as well as `ColorData` for coloring the plots. There is no need in JS/CSS-like color specifications
 :::
 
 ## Constructor

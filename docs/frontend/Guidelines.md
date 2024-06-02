@@ -25,6 +25,7 @@ It improves user experience drastically
 - `Ctrl+6` make superscript on selected
 - `Ctrl+2` make square root on selected
 - `Ctrl+-` make subscript on selected
+- `Ctrl/Cmd + /` comment a line
 
 
 

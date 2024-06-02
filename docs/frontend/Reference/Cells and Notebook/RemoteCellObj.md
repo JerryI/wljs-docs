@@ -33,3 +33,12 @@ With[{cell = EvaluationCell[]},
 ]
 ```
 *listen all events from the input cell*
+
+### `Set`
+Use `"Data"` field to mutate the content live
+
+```mathematica
+With[{cell = EvaluationCell[]},
+  cell["Data"] = "1+1"
+]
+```
