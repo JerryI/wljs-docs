@@ -23,15 +23,19 @@ It will ask you for a OpenAI API Key. You need to issue it first on the official
 :::
 
 :::warning
-An initial system prompt that given AI the knowledge of available cells, details of used libraries and etc costs `3500` tokens
+An initial system prompt that given AI the knowledge of available cells, details of used libraries and etc costs `4000` tokens
 :::
 
 In general AI can do the following
-- __print new cells__ in any language
-- __read the current cell__ you dropped a cursor on
-- __read the language used in a cell__
-- __update the full content of a cell__
+- __create, remove, evaluate, edit cells__ in any language
+- __read notebook structure__ 
+- __see your focused cell__ you dropped a cursor on
+- __see your selection__ in any editor area
+- ~~google~~ __use WolframAlpha__ to fetch data from the internet
 
+Shorts
+- YTS 📽️ [We made AI Copilot in your Notebook 🤖](https://youtube.com/shorts/6s9m5ZGPkdE?feature=share)
+- YTS 📽️ [AI Copilot in your Notebook. Part 2 🤖](https://youtube.com/shorts/B_ZVjN9cvQM?feature=share)
 
 ## Context menu
 If you need to apply `Simplify` or highlight selected expressions in the code 
@@ -72,6 +76,9 @@ Not all options are supported for a standard library symbol of Wolfram Mathemati
 This feature is aimed to slightly blur the line between code  and traditional GUI interface approaches for 2D/3D graphics design
 
 ![](./../Screen%20Recording%20Apr%208%20(3).gif)
+
+See __shorts__ on that
+- YTS 📽️ [You don't need to program your figures manually](https://youtube.com/shorts/Z76dMHK8POM?feature=share)
 
 It utilizes the dynamic reevaluation features of WLJS Notebook as well as powerful syntax sugar of an input editor.
 

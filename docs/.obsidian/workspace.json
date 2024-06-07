@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotly/Plotly.md",
+                "file": "frontend/instruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Decorations/BoxBox.md",
+                "file": "frontend/instruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Plotly/Plotly.md",
+                "file": "frontend/instruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Plotly/Plotly.md",
+                "file": "frontend/instruction.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Plotly/Plotly.md"
+                "file": "frontend/instruction.md"
               }
             }
           },
@@ -197,11 +197,22 @@
   },
   "active": "9240cc80492be2e6",
   "lastOpenFiles": [
+    "frontend/Dynamics.md",
+    "frontend/Command palette.md",
+    "frontend/instruction.md",
+    "frontend/Overview.md",
+    "frontend/Symbolic programming.md",
+    "frontend/Troubleshooting/Troubleshooting.md",
+    "frontend/Troubleshooting/Apple Silicon.md",
+    "1_oEnvgJSyL-PNDTW8arOehw.webp",
+    "frontend/Advanced/Command palette/AI Assistant.md",
+    "frontend/Reference/Dataset/Dataset.md",
+    "frontend/Reference/Decorations/NumberForm.md",
+    "frontend/Reference/Plotly/Plotly.md",
     "frontend/Reference/Sound/Audio.md",
     "frontend/Reference/Sound/ListPlay.md",
     "frontend/Reference/Sound/Play.md",
     "frontend/Reference/Sound/PCMPlayer.md",
-    "frontend/Overview.md",
     "frontend/Guidelines.md",
     "frontend/Advanced/Cells manipulation.md",
     "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
@@ -210,30 +221,19 @@
     "frontend/Reference/Interpreter/FrontEndVirtual.md",
     "frontend/Advanced/Syntax sugar/Decorating symbols.md",
     "frontend/Reference/GUI/TableView.md",
-    "frontend/Dynamics.md",
     "frontend/Advanced/Dynamics/Advanced animation.md",
     "opacitydouble-ezgif.com-optimize.gif",
     "frontend/Reference/Graphics/Opacity.md",
     "opacity-ezgif.com-video-to-gif-converter.gif",
     "frontend/Reference/Graphics/RGBColor.md",
-    "frontend/Reference/Decorations/Quantity.md",
     "frontend/Reference/Dataset",
-    "frontend/Reference/Decorations/Pane.md",
     "color-ezgif.com-optimize.gif",
-    "frontend/Advanced/Packages.md",
-    "frontend/Reference/Graphics/Show.md",
     "gauge-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2024-05-20 at 18.48.35.png",
     "Screenshot 2024-05-20 at 18.48.20.png",
     "Screenshot 2024-05-20 at 18.47.30.png",
-    "frontend/Reference/Decorations/BoxBox.md",
-    "frontend/Reference/GUI/HTMLView.md",
-    "frontend/Reference/Decorations/TableForm.md",
-    "frontend/Symbolic programming.md",
-    "frontend/Advanced/Events system/Notebook, cells and windows.md",
     "Screenshot 2024-05-12 at 21.16.13.png",
     "lights-ezgif.com-optimize.gif",
-    "gauss-ezgif.com-optimize.gif",
     "blog/2023-10-10-esm/index._mdx",
     "blog/2023-10-10-esm/index.mdx",
     "blog/2023-10-10-esm/NintendoPro.wln",

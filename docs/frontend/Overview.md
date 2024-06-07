@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-The whole notebook interface is made using plain Javascript, HTML powered by a [Wolfram WebServer](https://github.com/KirillBelovTest/HTTPHandler)  and [WLX](https://jerryi.github.io/wlx-docs/) running locally on a Wolfram Kernel. It means you can work remotely by running a server anywhere you want. 
+The whole notebook interface is made using plain Javascript, HTML powered by a [Wolfram WebServer](https://github.com/KirillBelovTest/HTTPHandler)  and [WLX](https://jerryi.github.io/wlx-docs/) running locally on a Wolfram Kernel. It means you can work remotely by running a server anywhere you want (see how at [instruction](frontend/instruction.md)).
 
 Some calculations are performed partially by your browser, you can have a control over it, [if you want](frontend/Dynamics.md) . All UI elements, cells operations are written in Javascript and Wolfram Language and performed by WLJS Interpreter
 
@@ -81,6 +81,24 @@ To help in writing matrixes, colors, and some other useful stuff are accessible 
 
 All snippets are just special kind of notebooks including all UI elements.
 
+## AI Copilot
+See it in action on Youtube Shorts
+
+
+<iframe width="315" height="560"
+src="https://youtube.com/embed/6s9m5ZGPkdE?si=bB5h28zAHb7r6Nmh"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+
+<iframe width="315" height="560"
+src="https://youtube.com/embed/B_ZVjN9cvQM?si=UTclXIdPiB3HydPI"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+
 
 ## Editor of Power
 A single input cell can produce Wolfram Language output, HTML page, Javascript window or a slide of a presentation
@@ -111,6 +129,25 @@ __Dynamics? We have a lot of it__
 ![](./../WLXwidget-ezgif.com-video-to-apng-converter%201.png)
 
 ![](./../RotationMatriix3D-ezgif.com-optipng.png)
+
+### Short videos
+
+
+<iframe width="315" height="560"
+src="https://youtube.com/embed/T-ryDA1Sb3g?si=enz0K6jAu2xv5hAK"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+
+<iframe width="315" height="560"
+src="https://youtube.com/embed/Z76dMHK8POM?si=YX01RdvzDlM97Wpy"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+
+
 
 Or even with polygons in 3D
 
