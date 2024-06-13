@@ -35,8 +35,24 @@
             "id": "03b4e2e45761d838",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "2024-04-22-gauge.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b3bb6d94b551607c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2024-05-13-json-llm.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -70,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -136,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-04-19-spider/index.md",
+                "file": "2024-05-13-json-llm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-04-19-spider/index.md",
+                "file": "2024-05-13-json-llm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-04-19-spider/index.md"
+                "file": "2024-05-13-json-llm.md"
               }
             }
           }
@@ -197,8 +213,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "03b4e2e45761d838",
+  "active": "b3bb6d94b551607c",
   "lastOpenFiles": [
+    "2024-04-22-gauge.md",
+    "2024-05-13-json-llm.md",
     "Screenshot 2024-06-01 at 22.22.27.png",
     "2024-05-01-badapple/index.md.md",
     "Screenshot 2024-06-01 at 21.03.19.png",
@@ -208,7 +226,6 @@
     "test-path-4.svg",
     "path-test-1.svg",
     "Screenshot 2024-06-01 at 21.00.13.png",
-    "2024-04-22-gauge.md",
     "2024-05-01-badapple",
     "2024-04-24-dynamic-env/index.md",
     "gauge4-ezgif.com-video-to-gif-converter.gif",

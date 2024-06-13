@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "30c9abc4d71c6580",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.2"
+              }
+            }
+          },
+          {
             "id": "2e0f97191d38ce12",
             "type": "leaf",
             "state": {
@@ -55,7 +65,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,7 +206,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9240cc80492be2e6",
+  "active": "30c9abc4d71c6580",
   "lastOpenFiles": [
     "frontend/Dynamics.md",
     "frontend/Command palette.md",
