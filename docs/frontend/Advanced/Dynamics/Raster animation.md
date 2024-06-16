@@ -18,20 +18,20 @@ or this one
 *[Stackoverflow](https://stackoverflow.com/questions/36174431/how-to-make-a-wave-warp-effect-in-shader) OpenGL*
 
 ### Implementation
-Let us take an example image firstly. Drag and drop it to an editor
+Let us take an example image firstly. Drag and drop it to an editor 
 
-![](./../../../Screenshot%202024-05-14%20at%2015.10.37.png)
+![](./../../../Screenshot%202024-06-16%20at%2011.17.10.png)
 
-and take a raw data from it
+and take a raw data from it as a sequence of bytes
 
 ```mathematica
-img = (* image *) // ImageData;
+img = ImageData[(* image *), "Byte"];
 ```
 
 Now we can apply map function to it, which stretches and shrinks pixels periodically
 
 ```mathematica
-shader = Compile[{{img, _Real, 3}, {phase, _Real}}, Module[{iter},
+shader = Compile[{{img, _Integer, 3}, {phase, _Real}}, Module[{iter},
   With[{
     ysize = Length[img],
     xsize = Length[img[[1]]]
@@ -45,7 +45,7 @@ shader = Compile[{{img, _Real, 3}, {phase, _Real}}, Module[{iter},
 
       iter = iter + (1.0 + 0.7 Sin[6 Pi x / xsize + phase]);
 
-      Floor[255 img[[yr, xr]]]
+      img[[yr, xr]]
       
       
     ],  {x, xsize}], {y, ysize}] 
@@ -53,30 +53,34 @@ shader = Compile[{{img, _Real, 3}, {phase, _Real}}, Module[{iter},
 ]];
 ```
 
-Here we use `Compile` to speed the process up, since there are only real arrays are involved. We do not apply any antialiasing filters, it does it in the nearest neighbors approximation. Let's check the result
+Here we use `Compile` to speed the process up, since there are only real arrays are involved. We do not apply any antialiasing filters, it does it in the nearest neighbors approximation. Let's check the result using the original `Byte` encoding
 
 ```mathematica
-shader[img, 0] // Image 
+Image[NumericArray[shader[img, 0], "UnsignedInteger8"], "Byte"] 
 ```
 
 ![](./../../../Screenshot%202024-05-14%20at%2015.18.05.png)
 
+:::tip
+Always provide a typed numeric array as a first argument to [Image](frontend/Reference/Graphics/Image.md). By the default it assumes `Real` format of pixels data. Therefore we explicitly tell the encoding by sending `Byte` as a second argument.
+
+The most efficient way is to use
+- `UnsignedInteger8` : `Byte`
+
+:::
+
 Since a performance is it great with raster graphics, we can rely on fixed time intervals while animating or a straight `Do` loop
 
 ```mathematica title="cell 1"
-imageFrame = img;
-Image[imageFrame // Offload]
+imageFrame = NumericArray[img, "UnsignedInteger8"];
+Image[imageFrame // Offload, "Byte"]
 ```
 
 ```mathematica title="cell 2"
 Do[
-  imageFrame = shader[img, angle] // NumericArray;
-, {angle, 0, 2Pi, 0.1}]
+  imageFrame = NumericArray[shader[img, angle], "UnsignedInteger8"];
+, {angle, 0, 4Pi, 2Pi/30.0}]
 ```
-
-:::tip
-Use `NumericArray` wrapper to speed up the parsing for numerical arrays on the frontend and Wolfram Kernel
-:::
 
 The resulting animation
 

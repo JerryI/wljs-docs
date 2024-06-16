@@ -13,19 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Reference/Graphics/Image.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "30c9abc4d71c6580",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.2"
               }
             }
           },
@@ -65,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,10 +84,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Ctrl",
+                "query": "Image",
                 "matchingCase": true,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -112,7 +101,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -132,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Reference/Graphics/Image.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Reference/Graphics/Image.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/instruction.md"
+                "file": "frontend/Reference/Graphics/Image.md"
               }
             }
           },
@@ -206,11 +196,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "30c9abc4d71c6580",
+  "active": "9240cc80492be2e6",
   "lastOpenFiles": [
+    "frontend/Advanced/Dynamics/Raster animation.md",
+    "Screenshot 2024-06-16 at 11.17.10.png",
+    "frontend/instruction.md",
     "frontend/Dynamics.md",
     "frontend/Command palette.md",
-    "frontend/instruction.md",
     "frontend/Overview.md",
     "frontend/Symbolic programming.md",
     "frontend/Troubleshooting/Troubleshooting.md",
@@ -236,7 +228,6 @@
     "opacitydouble-ezgif.com-optimize.gif",
     "frontend/Reference/Graphics/Opacity.md",
     "opacity-ezgif.com-video-to-gif-converter.gif",
-    "frontend/Reference/Graphics/RGBColor.md",
     "frontend/Reference/Dataset",
     "color-ezgif.com-optimize.gif",
     "gauge-ezgif.com-video-to-gif-converter.gif",
@@ -244,7 +235,6 @@
     "Screenshot 2024-05-20 at 18.48.20.png",
     "Screenshot 2024-05-20 at 18.47.30.png",
     "Screenshot 2024-05-12 at 21.16.13.png",
-    "lights-ezgif.com-optimize.gif",
     "blog/2023-10-10-esm/index._mdx",
     "blog/2023-10-10-esm/index.mdx",
     "blog/2023-10-10-esm/NintendoPro.wln",

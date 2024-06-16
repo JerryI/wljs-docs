@@ -56,6 +56,16 @@
             }
           },
           {
+            "id": "3d1899c6666f1590",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.3"
+              }
+            }
+          },
+          {
             "id": "9ed093e4b2841877",
             "type": "leaf",
             "state": {
@@ -86,7 +96,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -213,7 +223,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b3bb6d94b551607c",
+  "active": "3d1899c6666f1590",
   "lastOpenFiles": [
     "2024-04-22-gauge.md",
     "2024-05-13-json-llm.md",
