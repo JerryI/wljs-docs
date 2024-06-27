@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Image.md",
+                "file": "frontend/Dynamics.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Image",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -101,8 +101,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -122,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Image.md",
+                "file": "frontend/Dynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Image.md",
+                "file": "frontend/Dynamics.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Image.md"
+                "file": "frontend/Dynamics.md"
               }
             }
           },
@@ -198,7 +197,17 @@
   },
   "active": "9240cc80492be2e6",
   "lastOpenFiles": [
+    "frontend/Advanced/Dynamics/Prototyping.md",
     "frontend/Advanced/Dynamics/Raster animation.md",
+    "frontend/Reference/Plotly/PlotlyExtendTraces.md",
+    "frontend/Reference/Interpreter/Refresh.md",
+    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+    "frontend/Reference/Graphics3D/Point.md",
+    "frontend/Advanced/Events system/Mouse and keyboard.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Advanced/Javascript/Canvas.md",
+    "frontend/Reference/Decorations/Pane.md",
+    "frontend/Reference/Graphics/Image.md",
     "Screenshot 2024-06-16 at 11.17.10.png",
     "frontend/instruction.md",
     "frontend/Dynamics.md",
@@ -216,17 +225,7 @@
     "frontend/Reference/Sound/ListPlay.md",
     "frontend/Reference/Sound/Play.md",
     "frontend/Reference/Sound/PCMPlayer.md",
-    "frontend/Guidelines.md",
-    "frontend/Advanced/Cells manipulation.md",
-    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
-    "frontend/Reference/Cells and Notebook/RemoteCellObj.md",
-    "frontend/Reference/Graphics/Offset.md",
-    "frontend/Reference/Interpreter/FrontEndVirtual.md",
-    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
-    "frontend/Reference/GUI/TableView.md",
-    "frontend/Advanced/Dynamics/Advanced animation.md",
     "opacitydouble-ezgif.com-optimize.gif",
-    "frontend/Reference/Graphics/Opacity.md",
     "opacity-ezgif.com-video-to-gif-converter.gif",
     "frontend/Reference/Dataset",
     "color-ezgif.com-optimize.gif",

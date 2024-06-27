@@ -28,6 +28,14 @@ There is a short cut, if you need to see how your curves changes with different 
 
 ![](./../Manipulate-ezgif.com-video-to-gif-converter%202.gif)
 
+For small expression needed to be reevaluated by a trigger or a timer (not often), one can also use [Refresh](frontend/Reference/Interpreter/Refresh.md) wrapper
+
+```mathematica
+Refresh[Now // TextString, 1]
+```
+
+It will update the current time in the output cell every second.
+
 ## Automatic tracking of held symbols
 It does not mean, that your `Set` statements will be reevaluated on change of a nested symbol, however, for most graphics primitives it works out of the box. Use [Offload](frontend/Reference/Interpreter/Offload.md) wrapper to hold symbols for the frontend
 

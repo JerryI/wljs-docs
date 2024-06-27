@@ -42,7 +42,7 @@ values={[
 - [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.2/WLJS.Notebook.Setup.2.4.2.exe)
 </TabItem>  
 <TabItem value="Linux">
-- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.2/wljs-notebook_2.3.5_amd64.deb)
+- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.2/wljs-notebook_2.4.2_amd64.deb)
 - [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.2/WLJS.Notebook-2.4.2.AppImage)
 </TabItem> 
 <TabItem value="Mac">

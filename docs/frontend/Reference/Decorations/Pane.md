@@ -14,6 +14,14 @@ Pane[expr_, {w_, h_}]
 
 displays with a given container size.
 
+## Methods
+### `EventHandler`
+It supports `Click` event
+
+```mathematica
+EventHandler[Pane["Click on me"], {"Click" -> Print}]
+```
+
 ## Options
 ### `ImageSize`
 The effect is the same as if `{w_, h_}` or `w` were specified as a second argument.
