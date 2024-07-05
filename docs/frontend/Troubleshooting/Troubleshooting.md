@@ -20,10 +20,15 @@ Sometimes after an update browser's cache is still outdated. Please run (dependi
 - `Clear cache and reload`
 
 ## Browsers console
-Please locate the developer console (typically `Window` $\rightarrow$  `Toggle Developer Tools` or using a right click with a mouse `Inspect element`) and copy the error messages and a few above it (5-10).
+Any errors caused by a cell evaluation will be shown below
+
+![](./../../346045552-c7261f1b-5e6d-48e2-aa1a-f4b11d50d9c9.png)
+
+By clicking on a bug sign you open JS dev tools
 
 ## Logs dump
 If it does not violate your privacy, there is a `DEBUG` mode, which can be enabled at the startup. Follow the steps
+
 1. Restart an app and click `DEBUG` in the launcher window
 2. Do particular actions, which leads to your error
 3. Close an App normally

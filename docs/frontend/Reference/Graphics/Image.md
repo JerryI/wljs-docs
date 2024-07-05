@@ -11,12 +11,26 @@ Represents a raster image and plots the list of pixel's colors to a canvas used 
 Image[{row1_List, row2_List...} | n_NumericArray, encoding_:"Real32"]
 ```
 
-where each `row` is a list of pixel colors. The color format can be
+where each `row` is a list of pixel colors. It it better to pass `NumericArray` for the best performance.
 
-- gray-scale `0. - 1.`
-- RGB `{255,255,255}` or `{1,1,1,1}` depending on encoding
+The following `encoding` is supported
 
-See more information on Image [here](https://reference.wolfram.com/language/ref/Image)
+- `"Real32"` each pixel is encoded using a real value from 0 up-to 1. Corresponding `NumericArray` format is `"Real32"` (if applicable).
+- `"Byte"` each pixel is encoded using integer value from 0 up-to 255. Corresponding `NumericArray` format is `"UnsignedInteger8"`.
+- `"Bit"` each pixel is either `1` or `0` (integer). Corresponding `NumericArray` is `"UnsignedInteger8"`
+
+__The first two__ can be divided into groups by pixel format
+- `{R,G,B}` - each pixel is a list of numbers
+- `{R,G,B,A}` - each pixel is a list of numbers
+- `I` grayscale - each pixel is a single number
+
+## Options
+### `Magnification`
+Magnifies by an integer factor original pixels provided by an array
+### `ImageSize`
+Acts similar to `Magnification` and scales an image to match the width of provided size
+### `Antialiasing`
+By the default is `True`, which forces to use bilinear approximation when an image is shown scaled.
 
 ## Examples
 

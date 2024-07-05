@@ -1,3 +1,6 @@
+> Type `.wlx` in the first line of an input cell
+
+
 It allows to use [Wolfram Language XML](https://jerryi.github.io/wlx-docs/docs/Reference/WLX/) in your cell. It comes handy when making a a complex cell structure or stylizing it using the power of HTML/CSS/JS.
 
 

@@ -139,6 +139,8 @@ for 3D graphics the following events are provided
 Event handlers wrapped around graphics primitives are parts of [wljs-graphics-d3](https://github.com/JerryI/wljs-graphics-d3) library.
 :::
 
+See more in [Mouse and keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
+
 ### Autogeneration of dynamic symbols
 There is also an extension [OffloadFromEventObject](frontend/Reference/Interpreter/OffloadFromEventObject.md) that allows to turn event objects into dynamic symbols
 

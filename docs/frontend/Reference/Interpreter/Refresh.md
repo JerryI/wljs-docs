@@ -23,6 +23,13 @@ produces a dynamic window with `expr` reevaluated each `interval` specified in s
 Refresh[Now // TextString, 1]
 ```
 
+or even as a widget
+
+```mathematica
+Refresh[Now, 1]
+```
+
+
 
 :::caution
 Do not put `Plot` or any other functions inside with a fast refresh rate (< 1 second). In general the reevaluation cause a large overhead to the system with graphics.

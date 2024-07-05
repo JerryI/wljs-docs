@@ -260,3 +260,5 @@ Plot[Sinc[x], {x, 0, 10}, Axes -> False]
 
 
 
+## Dynamics
+Consider to use [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) for manipulating parameters of a function in real time

@@ -8,7 +8,7 @@ context: Notebook`EditorUtils`
 ---
 A view component to spawn an code-editor (fully functional) 
 ```mathematica
-EditorView[expr_String, opts___]
+EditorView[expr_String | expr_Offload, opts___]
 ```
 where `expr` is a string, that represents an expression. It can receive updates and emit, when a user change the inner content.
 
@@ -24,6 +24,9 @@ Specifies an `uid` of an event-object, that will be fired on-change.
 
 ### `"ReadOnly"`
 Blocks the editing mode. The default value is `False`
+
+### `"ForceUpdate"`
+Fully updates an editor when `expr` changes (rebuilds all widgets). By the default it is set to `False`, which simplifies an update strategy and has less overhead. 
 
 ## Application
 If you want to show the dynamic symbols content, use it together with `ToString[expr, StandardForm]`

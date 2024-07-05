@@ -1,7 +1,7 @@
 ---
 sidebar_position: 12
 ---
-## Image viewer
+## Image preview
 You can drop any image available in the folder of your notebook and type in a new cell its filename
 
 ```shell

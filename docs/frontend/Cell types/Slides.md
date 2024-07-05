@@ -1,3 +1,4 @@
+> Type `.slide` in the first line of an input cell
 
 
 
@@ -8,8 +9,6 @@ One can also make presentations using WLJS Frontend. This is provided by [wljs-r
 ![](../../imgs/ezgif.com-optimize-15.gif)
 
 </div>
-
-see full demo video [here](https://www.youtube.com/watch?si=IzYInhddG66pNUHp&v=7cEYJG7nk7U&feature=youtu.be).
 
 ## See [slides tutorial](frontend/Advanced/Slides/Slides.md)
 
@@ -43,9 +42,42 @@ Use projector feature
 to show slides in a separate window
 :::
 
-## Autoupload images
-Drag and drop a file to the editor
+## Plain HTML
+By the default slides cells do support plain HTML mixed with Markdown syntax and WLX. For example one can embed a website on a slide
 
+```markdown
+.slide
+
+<iframe
+  style="margin-left:auto; margin-right:auto; border-radius: 10px"
+  width="600"
+  height="500"
+  src="https://jerryi.github.io/wljs-docs/">
+</iframe>
+```
+
+## LaTeX
+We use KaTeX as a render engine, to type a equation wrap it inside `$` or `$$` (for equation block)
+
+```markdown
+.slide
+
+$$
+E = \\hbar \\omega
+$$
+```
+
+:::warning
+Unfortunately, you have to escape all backslashes, i.e. instead of `\alpha` you need to write `\\alpha`.
+:::
+
+## WLX
+Slides integrates some features of [WLX](frontend/Cell%20types/WLX.md) cell types similar to [Markdown](frontend/Cell%20types/Markdown.md) cells. Please see [Slides](frontend/Advanced/Slides/Slides.md) tutorial for more information on how to use its power.
+
+## Autoupload images
+### Drop a file
+
+### Paste media file
 
 ## Plugins
 The package uses also some external plugins

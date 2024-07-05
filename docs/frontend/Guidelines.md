@@ -13,7 +13,7 @@ It improves user experience drastically
 - Open file `Cmd+O`, `Ctrl+O`
 - Save `Cmd+S`, `Ctrl+S`
 - Enter command palette `Cmd+P`, `Ctrl+P` 
-- Hide/Unhide current cell `Cmd+2`, `Ctrl+W`
+- Hide/Unhide current cell `Cmd+2`, `Alt+2`
 - Clear outputs `Cmd+U`, `Alt+U`
 ### Evaluation
 - Evaluate `Shift+Enter`
@@ -33,7 +33,7 @@ It improves user experience drastically
 Various functions may produce [Iconize](frontend/Reference/Decorations/Iconize.md) objects, for storing large chunks of data, which are copied to `./.iconized/` folder in the notebook directory. Any dropped images or files will be uploaded to `./attachments/` directory. Therefore it is important to have a clear separation between your projects.
 
 ## Use `NotebookStore` for portability 
-If you want your notebook to be exported to a single editable `.html` [HTML file](frontend/Export/HTML%20file.md), use [NotebookStore](frontend/Reference/Cells%20and%20Notebook/NotebookStore.md) as a persistent storage for your raw data. In such case all images, graphs, and stored data will be kept.
+If you want your notebook to be exported to a single editable `.html` [HTML](frontend/Export/HTML.md), use [NotebookStore](frontend/Reference/Cells%20and%20Notebook/NotebookStore.md) as a persistent storage for your raw data. In such case all images, graphs, and stored data will be kept.
 
 ## Install everything locally
 We promote the idea of storing libraries or paclets for Wolfram Language locally for each project. There is no other way to provide the reliable way of computing, storing data, reproducibility and independence from any remote resources

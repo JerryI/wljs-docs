@@ -1,6 +1,9 @@
 ---
 sidebar_position: 4
 ---
+> Type `.js` in the first line of an input cell
+
+
 Try to evaluate
 
 ```js title="cell"
@@ -89,8 +92,8 @@ return canvas;
 ![](./../../Balls-ezgif.com-video-to-apng-converter.png)
 
 
-## Handlers
-There is a few quite useful built-in objects accesible from the cell. 
+## Context
+There is a few quite useful built-in objects accessible from the cell. 
 
 ### this.ondestroy
 This object is called when a cell has been destroyed. Assign any clean-up function to the given object

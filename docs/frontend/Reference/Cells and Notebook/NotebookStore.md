@@ -5,7 +5,7 @@ context: Notebook`Storage`
 package: wljs-editor
 source: https://github.com/JerryI/wljs-editor/blob/dev/src/StoreKernel.wl
 ---
-An access to a permanent local notebook storage. You can carry the raw data within the notebook, ***regardless if it has been exported*** to [HTML file](frontend/Export/HTML%20file.md) and imported back.
+An access to a permanent local notebook storage. You can carry the raw data within the notebook, ***regardless if it has been exported*** to [HTML](frontend/Export/HTML.md) and imported back.
 
 ```mathematica
 NotebookStore[key_String, opts___] _

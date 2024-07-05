@@ -51,6 +51,20 @@ There are a few snippets used for uploading ASCII data or any arbitrary files to
 
 This snippet was built using regular Wolfram Language.
 
+## Special characters
+A toolbar with templates for symbolic integration, series and etc is also available from the command palette
+
+![](./../plattte-ezgif.com-optimize.gif)
+
+However, it is recommended to use keyboard shortcuts for
+
+- fractions `Ctrl+/`
+- subscripts `Ctrl+-`
+- power `Ctrl+6`
+- square roots `Ctrl+2`
+- greek symbols `ESC+al`, `ESC+be`, `ESC+ga`, `ESC+o` ...
+
+
 ## Matrix helper
 To make it easier for typing matrixes, one can use the following snippet
 

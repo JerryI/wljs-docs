@@ -188,7 +188,7 @@ FrontEndExecutable --MakeBoxes--> ViewBox
 ## Properties
 1. Despite the fact, that this is separate entity, it can still be evaluated again on Wolfram Kernel. [FrontEndRef](frontend/Reference/Frontend%20Objects/FrontEndRef.md) will be replaced back to its normal form once you submit a cell for evaluation. 
 2. All working objects are synchronized between the notebook and a Kernel. Once you __saved__ a notebook they are serialized to a file as well. So that even with no running Wolfram Kernel they can be displayed.
-3. All working objects are exported to [HTML file](frontend/Export/HTML%20file.md)
+3. All working objects are exported to [HTML](frontend/Export/HTML.md)
 4. All objects are embedded automatically to [Slides](frontend/Cell%20types/Slides.md) or [WLX](frontend/Cell%20types/WLX.md)
 5. [StandardForm](frontend/Reference/Decorations/StandardForm.md) for all [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) is [ViewBox](frontend/Reference/Decorations/ViewBox.md) 
 6. [WLXForm](frontend/Reference/Decorations/WLXForm.md) for all [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) is a sort of view-box as well
