@@ -70,6 +70,10 @@ The most useful commands are listed below
 - `Ctrl`+`-` subscript
 - `Ctrl`+`2` square root
 
+Or using a special toolbar (snippet)
+
+![](./../plattte-ezgif.com-optimize%201.gif)
+
 Now let us move to some other gems
 
 ## Snippets
@@ -86,14 +90,14 @@ See it in action on Youtube Shorts
 
 
 <iframe width="315" height="560"
-src="https://youtube.com/embed/6s9m5ZGPkdE?si=bB5h28zAHb7r6Nmh"
+src="https://youtube.com/embed/wenBdDRpD4g?si=bB5h28zAHb7r6Nmh"
 title="YouTube video player"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
 
 <iframe width="315" height="560"
-src="https://youtube.com/embed/B_ZVjN9cvQM?si=UTclXIdPiB3HydPI"
+src="https://youtube.com/embed/pXe1mSir47Q?si=UTclXIdPiB3HydPI"
 title="YouTube video player"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -121,6 +125,8 @@ Try to drag and pan using your mouse!
 Graphics elements are not exported SVG. All primitives are recreated using d3.js and THREE.js from scratch
 :::
 
+![](./../rerer-ezgif.com-video-to-gif-converter.gif)
+
 ## Realtime calculations
 
 __Dynamics? We have a lot of it__
@@ -134,19 +140,11 @@ __Dynamics? We have a lot of it__
 
 
 <iframe width="315" height="560"
-src="https://youtube.com/embed/T-ryDA1Sb3g?si=enz0K6jAu2xv5hAK"
+src="https://youtube.com/embed/ItXbjNtGlew?si=enz0K6jAu2xv5hAK"
 title="YouTube video player"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
-
-<iframe width="315" height="560"
-src="https://youtube.com/embed/Z76dMHK8POM?si=YX01RdvzDlM97Wpy"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen></iframe>
-
 
 
 Or even with polygons in 3D

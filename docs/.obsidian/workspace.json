@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Export/PDF.md",
+                "file": "frontend/Overview.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Export/PDF.md",
+                "file": "frontend/Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Export/PDF.md",
+                "file": "frontend/Overview.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Export/PDF.md"
+                "file": "frontend/Overview.md"
               }
             }
           },
@@ -185,6 +185,9 @@
   },
   "active": "2e0f97191d38ce12",
   "lastOpenFiles": [
+    "plattte-ezgif.com-optimize 1.gif",
+    "rerer-ezgif.com-video-to-gif-converter.gif",
+    "frontend/Export/PDF.md",
     "frontend/Cell types/Slides.md",
     "frontend/Export/Untitled.md",
     "frontend/Cell types/Javascript.md",
@@ -207,13 +210,11 @@
     "frontend/Reference/Decorations/Quantity.md",
     "frontend/Reference/Decorations/MatrixForm.md",
     "frontend/Reference/Dataset/Dataset.md",
-    "frontend/Export/PDF.md",
     "frontend/Reference/Graphics/Image.md",
     "frontend/Troubleshooting/Troubleshooting.md",
     "346045552-c7261f1b-5e6d-48e2-aa1a-f4b11d50d9c9.png",
     "frontend/Command palette.md",
     "frontend/Dynamics.md",
-    "frontend/Expressions representation.md",
     "plattte-ezgif.com-optimize.gif",
     "frontend/Reference/Video",
     "Screenshot 2024-06-16 at 11.17.10.png",
@@ -222,7 +223,6 @@
     "opacity-ezgif.com-video-to-gif-converter.gif",
     "frontend/Reference/Dataset",
     "color-ezgif.com-optimize.gif",
-    "gauge-ezgif.com-video-to-gif-converter.gif",
     "blog/2023-10-10-esm/index._mdx",
     "blog/2023-10-10-esm/index.mdx",
     "blog/2023-10-10-esm/NintendoPro.wln",
