@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Export/PDF.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Export/PDF.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Export/PDF.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/instruction.md"
+                "file": "frontend/Export/PDF.md"
               }
             }
           },
@@ -185,12 +185,17 @@
   },
   "active": "2e0f97191d38ce12",
   "lastOpenFiles": [
-    "frontend/Overview.md",
-    "frontend/instruction.md",
-    "frontend/Cell types/Markdown.md",
-    "frontend/Cell types/Javascript.md",
-    "frontend/Cell types/Many more.md",
     "frontend/Cell types/Slides.md",
+    "frontend/Export/Untitled.md",
+    "frontend/Cell types/Javascript.md",
+    "frontend/Export/HTML.md",
+    "frontend/Export/Markdown.md",
+    "Screenshot 2024-07-07 at 16.29.33.png",
+    "Screenshot 2024-07-07 at 16.27.55.png",
+    "frontend/instruction.md",
+    "frontend/Overview.md",
+    "frontend/Cell types/Markdown.md",
+    "frontend/Cell types/Many more.md",
     "frontend/Cell types/Wolfram Language.md",
     "frontend/Cell types/WLX.md",
     "frontend/Cell types/HTML.md",
@@ -203,15 +208,12 @@
     "frontend/Reference/Decorations/MatrixForm.md",
     "frontend/Reference/Dataset/Dataset.md",
     "frontend/Export/PDF.md",
-    "frontend/Export/Markdown.md",
-    "frontend/Export/HTML.md",
     "frontend/Reference/Graphics/Image.md",
     "frontend/Troubleshooting/Troubleshooting.md",
     "346045552-c7261f1b-5e6d-48e2-aa1a-f4b11d50d9c9.png",
     "frontend/Command palette.md",
     "frontend/Dynamics.md",
     "frontend/Expressions representation.md",
-    "frontend/Guidelines.md",
     "plattte-ezgif.com-optimize.gif",
     "frontend/Reference/Video",
     "Screenshot 2024-06-16 at 11.17.10.png",
@@ -221,8 +223,6 @@
     "frontend/Reference/Dataset",
     "color-ezgif.com-optimize.gif",
     "gauge-ezgif.com-video-to-gif-converter.gif",
-    "Screenshot 2024-05-20 at 18.48.35.png",
-    "Screenshot 2024-05-20 at 18.48.20.png",
     "blog/2023-10-10-esm/index._mdx",
     "blog/2023-10-10-esm/index.mdx",
     "blog/2023-10-10-esm/NintendoPro.wln",

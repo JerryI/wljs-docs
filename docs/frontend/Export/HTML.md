@@ -7,6 +7,10 @@ Since the interpretation of the output cells happens in a browser, then we can p
 Do not forget to save your notebook before exporting! It is important for garbage collecting
 :::
 
+Example
+
+![](./../../Screenshot%202024-07-07%20at%2016.29.33.png)
+
 ## Portability 
 Once exported, an `.html` file can be __unpacked back to a normal notebook__ once opened using WLJS Notebook app. There are some limitations
 
