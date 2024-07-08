@@ -75,7 +75,7 @@ Unfortunately, you have to escape all backslashes, i.e. instead of `\alpha` you 
 Slides integrates some features of [WLX](frontend/Cell%20types/WLX.md) cell types similar to [Markdown](frontend/Cell%20types/Markdown.md) cells. Please see [Slides](frontend/Advanced/Slides/Slides.md) tutorial for more information on how to use its power.
 
 ## Export
-Slides with no dynamics involved can be exported using [HTML](frontend/Export/HTML.md) exporter.
+Slides can be exported using [HTML](frontend/Export/HTML.md) exporter or static export using [Slides exporter](frontend/Reference/Slides/Slides.md) for printing for example
 
 ## Autoupload images
 ### Drop a file
