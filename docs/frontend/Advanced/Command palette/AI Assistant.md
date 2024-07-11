@@ -81,7 +81,7 @@ in the worst case
 ## Note on cell types
 An assistant is aware of being in a notebook environment. The following cell types are described well in the initial system prompt
 
-- [Wolfram Language](frontend/Cell%20types/Wolfram%20Language.md)
+- [Input cell](frontend/Cell%20types/Input%20cell.md)
 - [Javascript](frontend/Cell%20types/Javascript.md)
 - [HTML](frontend/Cell%20types/HTML.md)
 - [Slides](frontend/Cell%20types/Slides.md)

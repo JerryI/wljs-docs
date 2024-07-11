@@ -44,6 +44,13 @@ If you need to apply `Simplify` or highlight selected expressions in the code
 
 Highlighting text is not destructive and will not alter an initial expression you had.
 
+## Notebook Templates
+The is a relatively new feature, that allows to create a new notebook based on a given template
+
+![](./../Screenshot%202024-07-10%20at%2022.00.55.png)
+
+![](./../Screenshot%202024-07-10%20at%2021.55.50.png)
+
 ## Uploading data
 There are a few snippets used for uploading ASCII data or any arbitrary files to the folder of your notebook
 
@@ -148,3 +155,11 @@ If you past a url to a Github repository into command palette, which contains `P
 ![](./../Screenshot%202024-05-10%20at%2021.35.19.png)
 
 it will automatically install it locally in the folder of the current notebook.
+
+## Terminal
+A direct access to the master or any evaluation kernel
+
+![](./../Screenshot%202024-07-10%20at%2021.56.40.png)
+
+The output is formatted and colored. The default form is `InputForm`
+

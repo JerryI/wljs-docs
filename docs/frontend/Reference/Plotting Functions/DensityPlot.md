@@ -14,6 +14,13 @@ makes a density plot of `f` as a function of `x` and `y`
 Only a flat-shading is supported for now
 :::
 
+:::tip
+For better performance use this option
+```mathematica
+PerformanceGoal->"Speed"
+```
+:::
+
 
 ```mathematica
 DensityPlot[x y, {x,0,1}, {y,0,1}]

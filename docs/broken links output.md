@@ -11,7 +11,7 @@ Don't forget that creating the file from here may create the file in the wrong d
 - [[../../Reference/Tools/LeakyModule]] in [[frontend/Advanced/Slides/animations]]
 - [[../Development/Evaluation/Dynamic]] in [[frontend/Cell types/Javascript]]
 - [[../Development/Plugins/Known packages]] in [[frontend/Cell types/Many more]]
-- [[../Development/Evaluation/Static]] in [[frontend/Cell types/Wolfram Language]]
+- [[../Development/Evaluation/Static]] in [[frontend/Cell types/Input cell]]
 - [[Outdated/Development/Decorations]] in [[frontend/Expressions representation]]
 - [[../../../Development/Decorations]] in [[frontend/Reference/Decorations/ViewBox]]
 - [[../../Javascript API/core]] in [[frontend/Reference/Decorations/ViewBox]]

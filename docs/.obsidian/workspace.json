@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Cell types/Input cell.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Cell types/Input cell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Cell types/Input cell.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/instruction.md"
+                "file": "frontend/Cell types/Input cell.md"
               }
             }
           },
@@ -186,6 +186,20 @@
   "active": "2e0f97191d38ce12",
   "lastOpenFiles": [
     "frontend/Overview.md",
+    "frontend/Advanced/Command palette/Templates.md",
+    "frontend/Advanced/Command palette/Snippets.md",
+    "frontend/Cell types/Input cell.md",
+    "Screenshot 2024-07-11 at 10.04.50.png",
+    "frontend/Command palette.md",
+    "Screenshot 2024-07-10 at 22.00.55.png",
+    "Screenshot 2024-07-10 at 21.55.50.png",
+    "Screenshot 2024-07-10 at 21.56.40.png",
+    "frontend/Reference/Plotting Functions/DensityPlot.md",
+    "frontend/Reference/Region",
+    "frontend/Reference/Plotting Functions/ContourPlot.md",
+    "frontend/Reference/Plotting Functions/ListContourPlot.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/instruction.md",
     "frontend/Cell types/Markdown.md",
     "frontend/Export/Slides.md",
     "frontend/Export/PDF.md",
@@ -204,24 +218,10 @@
     "plattte-ezgif.com-optimize 1.gif",
     "rerer-ezgif.com-video-to-gif-converter.gif",
     "frontend/Cell types/Javascript.md",
-    "Screenshot 2024-07-07 at 16.29.33.png",
-    "Screenshot 2024-07-07 at 16.27.55.png",
-    "frontend/instruction.md",
     "frontend/Cell types/Many more.md",
-    "frontend/Cell types/Wolfram Language.md",
     "frontend/Cell types/WLX.md",
     "frontend/Cell types/HTML.md",
     "frontend/Cell types/Files.md",
-    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
-    "frontend/Advanced/Objects/Creating new type.md",
-    "frontend/Reference/Decorations/WLXForm.md",
-    "frontend/Reference/Decorations/Row.md",
-    "frontend/Reference/Decorations/Quantity.md",
-    "frontend/Reference/Decorations/MatrixForm.md",
-    "frontend/Reference/Graphics/Image.md",
-    "frontend/Troubleshooting/Troubleshooting.md",
-    "346045552-c7261f1b-5e6d-48e2-aa1a-f4b11d50d9c9.png",
-    "plattte-ezgif.com-optimize.gif",
     "frontend/Reference/Video",
     "frontend/Reference/Dataset",
     "blog/2023-10-10-esm/index._mdx",
@@ -229,7 +229,6 @@
     "blog/2023-10-10-esm/NintendoPro.wln",
     "blog/2023-08-19-advanced-events/Greyness.wln",
     "blog/2023-07-25-transform-3d/FMO.wl",
-    "blog/2023-07-22-pratical-integration/Archive.zip",
-    "blog/2023-07-21-polygon/Cinematographer.wln"
+    "blog/2023-07-22-pratical-integration/Archive.zip"
   ]
 }
