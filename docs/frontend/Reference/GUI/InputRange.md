@@ -48,6 +48,28 @@ emits `name` for each time when user drags a slider
 ```
 emits `oninput` when any changes occur, while `onchange` is __emitted after__ the users action
 
+## Chaining events
+One can reuse another event for a new element
+
+```mathematica
+InputRange[event_EventObject, min_, max_, step_:1, initial_:(min+max)/2, opts___]
+```
+
+for example
+
+```mathematica
+ev = EventObject[];
+
+InputButton[ev, "Topic"->"Button"]
+InputRange[ev, 0,1,0.1, "Topic"->"Slider"]
+
+EventHandler[ev, {
+	"Button" -> Beep,
+	"Slider" -> Print
+}];
+```
+
+
 ## Applications
 Control properties using knob
 

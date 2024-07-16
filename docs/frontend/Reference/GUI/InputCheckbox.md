@@ -33,6 +33,13 @@ tg = InputCheckbox[False];
 EventHandler[tg, Print]
 ```
 
+## Chaining events
+One can reuse another event
+
+```mathematica
+InputCheckbox[event_EventObject, rest__]
+```
+
 
 
 ## TODO

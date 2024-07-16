@@ -33,6 +33,16 @@ It accepts single or multiple files. The whole pipeline is separated into two st
 <|"Transaction"->uid_String, "Name"->filename_String, "Data"->base64_String|>
 ```
 
+
+## Chaining events
+One can reuse another event
+
+```mathematica
+InputFile[event_EventObject, rest__]
+```
+
+
+
 ## Example
 A simple file-form to plot the data from the uploaded file
 

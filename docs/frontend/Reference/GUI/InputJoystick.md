@@ -42,5 +42,13 @@ Graphics[
 
 ![](./../../../Joystikc%20video%20to%20gif.gif)
 
+## Chaining events
+One can reuse another event
+
+```mathematica
+InputJoystick[event_EventObject, rest___]
+```
+
+
 ## Options
 No options are available

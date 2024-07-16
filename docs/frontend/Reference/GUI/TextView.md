@@ -2,7 +2,7 @@
 env:
   - WLJS
 update: true
-needsContainer: true
+needsContainer: false
 source: https://github.com/JerryI/wljs-inputs/
 registered: false
 package: wljs-inputs

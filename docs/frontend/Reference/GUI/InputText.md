@@ -53,5 +53,13 @@ text = InputText["Hi"]
 EventHandler[text, Print];
 ```
 
+## Chaining events
+One can reuse another event
+
+```mathematica
+InputText[event_EventObject, rest__]
+```
+
+
 ## Dev notes
 This is a wrapper for [TextView](frontend/Reference/GUI/TextView.md) view-component

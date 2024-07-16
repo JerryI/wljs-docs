@@ -5,6 +5,11 @@ context: System`
 source: https://github.com/JerryI/wl-misc/blob/main/Assets/ServerAPI.js
 package: JerryI`Misc`
 ---
+:::caution
+Deprecated in 2024. Please consider to use [HTMLView](frontend/Reference/GUI/HTMLView.md)
+:::
+
+
 ```mathematica
 WLXEmbed[html_String | {html__String}, opts___]
 ``` 

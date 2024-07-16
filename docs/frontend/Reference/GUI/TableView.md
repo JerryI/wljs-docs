@@ -22,6 +22,10 @@ specifies the maximum width and hight or just width in pixels
 ### `TableHeadings`
 accepts a list of headings
 
+
+## Notes
+It effectively transforms the data into [Dataset](frontend/Reference/Dataset/Dataset.md)
+
 ## TODO
 Developers notes
 - [ ] Allows dynamic updates

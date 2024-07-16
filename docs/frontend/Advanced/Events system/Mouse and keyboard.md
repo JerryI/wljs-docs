@@ -122,6 +122,73 @@ It merges an association (as in example above) or list of `EventObjects` into a 
 ```
 
 
+#### Join different events
+One can also merge event objects underneath of UI elements using `Join`. Let us have a look at the simples example
+
+```mathematica
+button = InputButton[]
+slider = InputRange[0,1,0.1]
+
+EventHandler[Join[button, slider], Function[data,
+	Print[data]
+]];
+```
+
+As a result you will get something like this
+
+```mathematica
+True
+```
+ 
+ or
+ 
+```mathematica
+0.5
+```
+
+depending which element it generated. In order to resolve this issue, one can utilize patterns (or topics see [`EventObject`](frontend/Reference/Misc/Events.md#`EventObject`))
+
+```mathematica
+button = InputButton["Topic"->"Button"]
+slider = InputRange[0,1,0.1, "Topic"->"Slider"]
+
+EventHandler[Join[button, slider], {type_ :> Function[data,
+	Print[type<>":"<>ToString[data]]
+]}];
+```
+
+or capture them individually
+
+```mathematica
+button = InputButton["Topic"->"Button"]
+slider = InputRange[0,1,0.1, "Topic"->"Slider"]
+
+EventHandler[Join[button, slider], {
+	"Button" -> Beep,
+	"Slider" -> Print
+}];
+```
+
+A slider will print a message, while a button will make *beep* sound.
+
+#### Chaining events
+Most of GUI elements do support chaining, when each of them reuse the same `EventObject`. It comes as a first argument
+
+```mathematica
+ev = EventObject[];
+
+InputButton[ev, "Topic"->"Button"]
+InputRange[ev, 0,1,0.1, "Topic"->"Slider"]
+
+EventHandler[ev, {
+	"Button" -> Beep,
+	"Slider" -> Print
+}];
+```
+
+In such case, there is no need in creating new events and joining them. In the end this approach leaves less footprint as well as less overhead to the system.
+
+
 
 ## 2D Graphics
 Some of the primitives as well as entire canvas support `EventHandler` method. Let us start with a canvas - ``Graphics`Canvas[]``

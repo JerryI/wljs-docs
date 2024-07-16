@@ -13,6 +13,12 @@ Actual binding happens with only `"Id"` field, therefore a string equivalent is 
 _String
 ```
 
+To generate a new unique object, one can also use this constructor
+
+```mathematica
+newEvent = EventObject[]
+```
+
 ### `"Initial"`
 Stores initial data, which makes sense if an event object was produced by some sliders, toggle switches or other UI elements. 
 
@@ -122,6 +128,10 @@ Join[ev__EventObject] _EventObject
 ```
 
 is also valid.
+
+:::info
+It does not clone original objects
+:::
 
 ## `EventFire`
 Fires an event with provided data and pattern

@@ -29,3 +29,9 @@ Adds a label
 ### `"Topic"`
 Specifies which topic or pattern of an event is used
 
+## Chaining events
+One can reuse another event
+
+```mathematica
+InputSelect[event_EventObject, rest__]
+```

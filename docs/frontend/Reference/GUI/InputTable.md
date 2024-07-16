@@ -80,5 +80,13 @@ If you have a large list of rows, project the cell to a new window with a bigger
 value. It will bring similar experience to Excel-like programs. 
 :::
 
+## Chaining events
+One can reuse another event
+
+```mathematica
+InputTable[event_EventObject, rest__]
+```
+
+
 ## Dev notes
 A [handsontable](https://handsontable.com) engine is used as the cells manager. 

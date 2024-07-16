@@ -40,3 +40,25 @@ or click to make sound
 ```mathematica
 EventHandler[InputButton[], Beep]
 ```
+
+
+## Chaining events
+One can reuse another event when creating a button
+
+```mathematica
+InputButton[event_EventObject, label_String, opts___]
+```
+
+for example
+
+```mathematica
+ev = EventObject[];
+
+InputButton[ev, "Topic"->"Button"]
+InputRange[ev, 0,1,0.1, "Topic"->"Slider"]
+
+EventHandler[ev, {
+	"Button" -> Beep,
+	"Slider" -> Print
+}];
+```
