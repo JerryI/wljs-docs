@@ -39,16 +39,16 @@ values={[
 {label: 'Mac', value: 'Mac'},  
 ]}>  
 <TabItem value="Windows">
-- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.5/WLJS.Notebook.Setup.2.4.5.exe)
+- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.0/WLJS.Notebook.Setup.2.5.0.exe)
 </TabItem>  
 <TabItem value="Linux">
-- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.5/wljs-notebook_2.4.5_amd64.deb)
-- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.5/WLJS.Notebook-2.4.5.AppImage)
+- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.0/wljs-notebook_2.5.0_amd64.deb)
+- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.0/WLJS.Notebook-2.5.0.AppImage)
 </TabItem> 
 <TabItem value="Mac">
 
-- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.5/WLJS.Notebook-2.4.5-arm64.dmg)
-- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.4.5/WLJS.Notebook-2.4.5.dmg)
+- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.0/WLJS.Notebook-2.5.0-arm64.dmg)
+- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.0/WLJS.Notebook-2.5.0.dmg)
 
 </TabItem>  
 </Tabs>
