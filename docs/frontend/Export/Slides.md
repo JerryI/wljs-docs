@@ -10,7 +10,7 @@ Any presentation made using [Slides](frontend/Cell%20types/Slides.md) cells can 
 Do not forget to save your notebook before exporting! It is important for garbage collecting
 :::
 
-:::note
+:::tip
 Make sure to save you notebook beforehand and evaluate your slide cell. *If you have many slide cells - merge them by creating `.slides` cell at the top of your notebook*
 :::
 

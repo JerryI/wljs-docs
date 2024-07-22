@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Command palette/AI Assistant.md",
+                "file": "frontend/Export/Figures.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Command palette/AI Assistant.md",
+                "file": "frontend/Export/Figures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Command palette/AI Assistant.md",
+                "file": "frontend/Export/Figures.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Command palette/AI Assistant.md"
+                "file": "frontend/Export/Figures.md"
               }
             }
           },
@@ -185,6 +185,12 @@
   },
   "active": "2e0f97191d38ce12",
   "lastOpenFiles": [
+    "Screenshot 2024-07-22 at 10.59.15.png",
+    "frontend/Export/HTML.md",
+    "frontend/Export/Figures.md",
+    "frontend/Export/Slides.md",
+    "frontend/Advanced/Slides/Slides.md",
+    "frontend/Advanced/Command palette/AI Assistant.md",
     "frontend/Advanced/Command palette/Snippets.md",
     "frontend/Advanced/Command palette/Templates and styling.md",
     "Screenshot 2024-07-19 at 10.11.03.png",
@@ -197,7 +203,6 @@
     "frontend/Reference/Cells and Notebook/EvaluationCell.md",
     "frontend/Advanced/Events system/Cells and windows.md",
     "frontend/Reference/Frontend IO/WindowObj.md",
-    "frontend/Advanced/Command palette/AI Assistant.md",
     "frontend/Reference/Misc/Events.md",
     "frontend/Reference/GUI/InputGroup.md",
     "frontend/Reference/GUI/WLXEmbed.md",
@@ -210,10 +215,6 @@
     "frontend/Reference/GUI/InputCheckbox.md",
     "frontend/Reference/GUI/InputRange.md",
     "frontend/Reference/GUI/InputButton.md",
-    "frontend/Reference/GUI/EditorView.md",
-    "frontend/Advanced/Events system/Mouse and keyboard.md",
-    "frontend/Advanced/Events system/event-generators.md",
-    "frontend/Reference/GUI/HTMLView.md",
     "Screenshot 2024-07-11 at 10.04.50.png",
     "Screenshot 2024-07-10 at 22.00.55.png",
     "Screenshot 2024-07-10 at 21.55.50.png",
