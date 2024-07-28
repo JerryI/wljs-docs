@@ -64,6 +64,21 @@ Embed images using `![alt text](URL)`:
 Files can be remote or local (in the notebook folder). __Try to drag and drop any image inside markdown cell__
 :::
 
+### Drawings
+We use an amazing [Excalidraw](https://excalidraw.com/) editor for any complex drawings right inside the markdown input cell. Try to type
+
+```markdown
+.md
+
+!![]
+```
+
+In the output cell a corresponding SVG image will be generated.
+
+*See GIF animation below*
+
+![](./../../Excalidraw-ezgif.com-speed.gif)
+
 ### Blockquotes
 Create blockquotes using `>`:
 
@@ -135,8 +150,29 @@ Unfortunately, you have to escape all backslashes, i.e. instead of `\alpha` you 
 
 
 ## WLX
-Markdown cells supports features of [WLX](frontend/Cell%20types/WLX.md) similar to how it is done in [Slides](frontend/Reference/Slides/Slides.md)
+Markdown cells supports many features of [WLX](frontend/Cell%20types/WLX.md) similar to how it is done in [Slides](frontend/Reference/Slides/Slides.md)
 ### Embed figures
+For example you created a nice 3D plot
+
+```mathematica title="cell 1"
+Figure = Plot3D[Sin[x] Cos[y], {x,-5,5}, {y,-5,5}];
+```
+
+:::tip
+Make first letter in the name of a symbol capital, this is required by the syntax of WLX language.
+:::
+
+then one can embed it into markdown cell as if it was a custom tag
+
+```markdown
+.md
+
+Hello there! Here is my plot
+
+<br/>
+
+<Figure/>
+```
 
 
 ## Autoupload

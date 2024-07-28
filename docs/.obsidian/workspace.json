@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Export/Figures.md",
+                "file": "frontend/Export/HTML.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Export/Figures.md",
+                "file": "frontend/Export/HTML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Export/Figures.md",
+                "file": "frontend/Export/HTML.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Export/Figures.md"
+                "file": "frontend/Export/HTML.md"
               }
             }
           },
@@ -185,14 +185,22 @@
   },
   "active": "2e0f97191d38ce12",
   "lastOpenFiles": [
-    "Screenshot 2024-07-22 at 10.59.15.png",
+    "frontend/Overview.md",
+    "Excalidraw-ezgif.com-speed 1.gif",
+    "frontend/Symbolic programming.md",
+    "frontend/Advanced/Command palette/Templates and styling.md",
+    "frontend/Cell types/Markdown.md",
+    "Excalidraw-ezgif.com-speed.gif",
+    "frontend/Export/URL Protocol.md",
     "frontend/Export/HTML.md",
+    "Screenshot 2024-07-28 at 19.11.13.png",
+    "URLProtocol-ezgif.com-optimize.gif",
     "frontend/Export/Figures.md",
+    "Screenshot 2024-07-22 at 10.59.15.png",
     "frontend/Export/Slides.md",
     "frontend/Advanced/Slides/Slides.md",
     "frontend/Advanced/Command palette/AI Assistant.md",
     "frontend/Advanced/Command palette/Snippets.md",
-    "frontend/Advanced/Command palette/Templates and styling.md",
     "Screenshot 2024-07-19 at 10.11.03.png",
     "Screenshot 2024-07-19 at 10.10.34.png",
     "Screenshot 2024-07-19 at 09.58.57.png",
@@ -212,17 +220,9 @@
     "frontend/Reference/GUI/InputRadio.md",
     "frontend/Reference/GUI/InputJoystick.md",
     "frontend/Reference/GUI/InputFile.md",
-    "frontend/Reference/GUI/InputCheckbox.md",
-    "frontend/Reference/GUI/InputRange.md",
-    "frontend/Reference/GUI/InputButton.md",
     "Screenshot 2024-07-11 at 10.04.50.png",
-    "Screenshot 2024-07-10 at 22.00.55.png",
-    "Screenshot 2024-07-10 at 21.55.50.png",
-    "Screenshot 2024-07-10 at 21.56.40.png",
     "frontend/Reference/Region",
-    "Screenshot 2024-07-08 at 22.05.34.png",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",
-    "Screenshot 2024-07-08 at 21.57.00.png",
     "frontend/Reference/Video",
     "frontend/Reference/Dataset",
     "blog/2023-10-10-esm/index._mdx",

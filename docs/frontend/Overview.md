@@ -109,6 +109,10 @@ A single input cell can produce Wolfram Language output, HTML page, Javascript w
 
 ![](./../imgs/Dropfiles-ezgif.com-optipng.png)
 
+Or just draw something inside the code editor
+
+![](./../Excalidraw-ezgif.com-speed%201.gif)
+
 
 ## Graphics 2D & 3D
 Most Mathematica's plotting functions produces lower-level primitives. The major part of them are supported

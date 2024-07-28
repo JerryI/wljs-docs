@@ -17,6 +17,23 @@ Example
 All dynamic content will be *frozen* at the latest state you have evaluated
 :::
 
+## Hosting notebooks
+### Offline mode
+This is a default behavior, when it packs all libraries for graphics and ui into a single HTML file. It results in a quite bulky file *~5-15 mb* depending how many things were included (see [Portability](#Portability)), that can work **fully offline**.
+
+### CDN mode
+This is can be enabled form the settings menu
+
+![](./../../Screenshot%202024-07-28%20at%2019.11.13.png)
+
+Then the bare minimum of data will be compressed into a single HTML, mostly an actual data of the notebook. It results in a much smaller file size, however, requires an internet connection. We use [JSDelivr](https://www.jsdelivr.com/) to ship all libraries from the corresponding Github repositories. 
+
+Then one can embed a notebook as `<iframe>` into your blog or as a normal static page using services such as [Static App](https://static.app/) for example.
+
+
+## URL Protocol
+See more in [URL Protocol](frontend/Export/URL%20Protocol.md)
+
 ## Portability 
 Once exported, an `.html` file can be __unpacked back to a normal notebook__ once opened using WLJS Notebook app. There are some limitations
 
