@@ -25,13 +25,7 @@ export function CodeMirror({children, data}) {
     window.CMInitialized = true;
 
     if (window.CMInitialized) {
-      window.EditorExtensions.push(() => {
-        return window.EditorState.readOnly.of(true)
-      });
-    
-      window.EditorExtensionsMinimal.push(() => {
-        return window.EditorState.readOnly.of(true)
-      });
+
     }
 
     const s = new window.SupportedCells['codemirror'].view({element: element}, children);
