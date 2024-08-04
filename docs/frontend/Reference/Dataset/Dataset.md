@@ -22,4 +22,4 @@ Use numerical data or `DateObject` or boolean type for an entire column to get b
 ## Notes
 It supports lazy loading for a large set with many rows. The data is stored partially on Kernel if it exceeds 0.5 mB.
 
-The data is saved, when exported using [HTML](frontend/Export/HTML.md)
+The data is saved, when exported using [Static HTML](frontend/Exporting/Static%20HTML.md)

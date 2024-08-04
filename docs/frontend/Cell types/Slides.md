@@ -74,8 +74,19 @@ Unfortunately, you have to escape all backslashes, i.e. instead of `\alpha` you 
 ## WLX
 Slides integrates some features of [WLX](frontend/Cell%20types/WLX.md) cell types similar to [Markdown](frontend/Cell%20types/Markdown.md) cells. Please see [Slides](frontend/Advanced/Slides/Slides.md) tutorial for more information on how to use its power.
 
+## Drawings
+We use an amazing [Excalidraw](https://excalidraw.com/) editor for any complex drawings right inside the slides and markdown input cells. Try to type
+
+```markdown
+.slide
+
+!![]
+```
+
+In the output cell a corresponding SVG image will be generated.
+
 ## Export
-Slides can be exported using [HTML](frontend/Export/HTML.md) exporter or static export using [Slides exporter](frontend/Reference/Slides/Slides.md) for printing for example
+Slides can be exported using [Static HTML](frontend/Exporting/Static%20HTML.md) exporter or static export using [Slides exporter](frontend/Reference/Slides/Slides.md) for printing for example
 
 ## Autoupload images
 ### Drop a file

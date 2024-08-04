@@ -5,10 +5,10 @@ sidebar_class_name: green
 slug: /
 ---
 # Quick start
-Wolfram Language Notebook __requires  `wolframscript` (see Freeware [Wolfram Engine](https://www.wolfram.com/engine/) or Wolfram Kernel)__ installed on your PC/Mac. 
+Wolfram Language Notebook __requires  `wolframscript` (see Freeware [Wolfram Engine](https://www.wolfram.com/engine/) or Wolfram Kernel)__ installed on your PC/Mac. *If not, WLJS application will redirect you to the official page*
 
 :::note
-Tested with Wolfram Engine 13.X - 14.X
+Tested with Wolfram Engine 13.1 - 14.0
 :::
 
 ![](./../1_oEnvgJSyL-PNDTW8arOehw.webp)
@@ -98,6 +98,9 @@ wolframscript -f Scripts/start.wls noautolaunch True
 wolframscript -f Scripts/start.wls bypasstest True
 ```
 
+
+## Docker container
+This is also provided, please follow [the instructions](https://github.com/JerryI/wolfram-js-frontend/blob/main/container/README.md)
 
 ## Sponsorship
 To help maintain this project ❤️

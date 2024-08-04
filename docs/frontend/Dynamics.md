@@ -36,6 +36,15 @@ Refresh[Now // TextString, 1]
 
 It will update the current time in the output cell every second.
 
+### ... or `Animate`
+There is a similar version of [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) meant for standalone animations, which unlike other dynamic features can also be safely exported or embedded to a web-page (see more in [Static HTML](frontend/Exporting/Static%20HTML.md))
+
+```mathematica
+AnimatePlot[{Sin[x c], Sinc[x c]}, {x,-10,10}, {c,1,10,0.1}]
+```
+
+![](./../StiticExport-ezgif.com-optimize.gif)
+
 ## Automatic tracking of held symbols
 It does not mean, that your `Set` statements will be reevaluated on change of a nested symbol, however, for most graphics primitives it works out of the box. Use [Offload](frontend/Reference/Interpreter/Offload.md) wrapper to hold symbols for the frontend
 
@@ -230,6 +239,9 @@ All examples shown here are shipped together with an app . Locate
 or from the top-bar menu
 
 :::
+
+## How to embed to it a web-page?
+There is no need in having Wolfram Kernel connected. [AnimatePlot](frontend/Reference/Plotting%20Functions/AnimatePlot.md) can store animations within the notebook and works completely offline. More complicated dynamics can also be exported using [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md)
 
 :::tip
 Check out our __Blog__ section 📻 for more examples and dev notes.

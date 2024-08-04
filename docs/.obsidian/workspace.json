@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Export/HTML.md",
+                "file": "frontend/instruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Frontend IO/WindowObj.md",
+                "file": "frontend/Reference/Plotting Functions/AnimatePlot.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "window",
+                "query": "Graphics3D",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Export/HTML.md",
+                "file": "frontend/instruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Export/HTML.md",
+                "file": "frontend/instruction.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Export/HTML.md"
+                "file": "frontend/instruction.md"
               }
             }
           },
@@ -185,42 +185,42 @@
   },
   "active": "2e0f97191d38ce12",
   "lastOpenFiles": [
+    "frontend/Exporting/Dynamic HTML.md",
+    "frontend/instruction.md",
+    "frontend/Reference/Plotting Functions/ListAnimatePlot.md",
+    "frontend/Reference/Plotting Functions/AnimatePlot.md",
+    "frontend/Cell types/Slides.md",
+    "frontend/Cell types/Markdown.md",
+    "frontend/Reference/Graphics3D/Graphics3D.md",
+    "frontend/Dynamics.md",
+    "saved-ezgif.com-cut.gif",
+    "sampled-ezgif.com-optimize.gif",
+    "Screenshot 2024-08-03 at 15.49.58.png",
+    "Screenshot 2024-08-03 at 15.47.04.png",
+    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+    "Screenshot 2024-08-03 at 13.58.42.png",
+    "frontend/Exporting/Figures.md",
+    "frontend/Exporting/PDF.md",
+    "frontend/Exporting/Slides.md",
+    "frontend/Exporting/Markdown.md",
+    "frontend/Exporting/Static HTML.md",
+    "frontend/Exporting/URL Protocol.md",
+    "frontend/Reference/Frontend IO/WindowObj.md",
+    "frontend/Reference/Plotting Functions/AnimateParametericPlot.md",
+    "frontend/Reference/Plotting Functions/ManipulateParametricPlot.md",
+    "StiticExport-ezgif.com-optimize.gif",
+    "frontend/Reference/Dataset/Dataset.md",
     "frontend/Overview.md",
     "Excalidraw-ezgif.com-speed 1.gif",
     "frontend/Symbolic programming.md",
     "frontend/Advanced/Command palette/Templates and styling.md",
-    "frontend/Cell types/Markdown.md",
     "Excalidraw-ezgif.com-speed.gif",
-    "frontend/Export/URL Protocol.md",
-    "frontend/Export/HTML.md",
     "Screenshot 2024-07-28 at 19.11.13.png",
     "URLProtocol-ezgif.com-optimize.gif",
-    "frontend/Export/Figures.md",
-    "Screenshot 2024-07-22 at 10.59.15.png",
-    "frontend/Export/Slides.md",
     "frontend/Advanced/Slides/Slides.md",
     "frontend/Advanced/Command palette/AI Assistant.md",
     "frontend/Advanced/Command palette/Snippets.md",
-    "Screenshot 2024-07-19 at 10.11.03.png",
-    "Screenshot 2024-07-19 at 10.10.34.png",
-    "Screenshot 2024-07-19 at 09.58.57.png",
-    "Screenshot 2024-07-18 at 16.45.40.png",
     "frontend/Reference/Cells and Notebook/RemoteCellObj.md",
-    "frontend/Reference/Cells and Notebook/RemoteNotebook.md",
-    "frontend/Reference/Cells and Notebook/EvaluationNotebook.md",
-    "frontend/Reference/Cells and Notebook/EvaluationCell.md",
-    "frontend/Advanced/Events system/Cells and windows.md",
-    "frontend/Reference/Frontend IO/WindowObj.md",
-    "frontend/Reference/Misc/Events.md",
-    "frontend/Reference/GUI/InputGroup.md",
-    "frontend/Reference/GUI/WLXEmbed.md",
-    "frontend/Reference/GUI/InputText.md",
-    "frontend/Reference/GUI/InputTable.md",
-    "frontend/Reference/GUI/InputSelect.md",
-    "frontend/Reference/GUI/InputRadio.md",
-    "frontend/Reference/GUI/InputJoystick.md",
-    "frontend/Reference/GUI/InputFile.md",
-    "Screenshot 2024-07-11 at 10.04.50.png",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",
     "frontend/Reference/Video",
