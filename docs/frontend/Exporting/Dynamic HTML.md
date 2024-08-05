@@ -77,23 +77,7 @@ After all connections are known, the idea is to sample the data of symbol mutati
 
 After all data has been harvested, it is translated into a big hash map with each entity corresponding to single state of a system - sort of a loop-up table. The state is determined by the sum of hashes (fingerprints) of all fired events including the their payload. 
 
-On the first glance it seems impossible to mimic Markov chains or other systems with a internal state and a history. However, we create new state on each call of `.emitt()` using the data from the previous  state and adding data from the fired event object. This can result in the following situation
-
-``` title="case 1"
-*.emitt('A', 1)  //fired
-		{A: 1}   //created state (final)
-```
-
-``` title="case 2"
-*.emitt('A', 1)            //fired
-		{A: 1}             //created state
-*.emitt('B', true)         //checkbox on
-		{A: 1, B:true}     //created state
-*.emitt('B', false)        //checkbox off (initial state)
-		{A: 1, B:false}    //created state (final)
-```
-
-Hash value of the those two final states will not match, i.e. the corresponding changes in dynamic symbols will differ as well. __All states are immutable__, the system can only create a new state based on the previous one and incoming events.
+In this implementation it is impossible to mimic Markov chains or other systems with internal state and a history (hysteresis loops). 
 
 Then a sampler compresses all data using `zlib` and packs it together with an exported notebook to a single HTML file including the supporting code for .
 
