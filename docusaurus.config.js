@@ -164,6 +164,7 @@ const config = {
           },
           {to: 'blog', label: 'Blog', position: 'left'}, // or position: 'right'
           {to: "https://github.com/JerryI/wolfram-js-frontend/discussions", label: "Discuss", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
+          {to: 'https://jerryi.github.io/wljs-demo/', label: 'Demonstration Project', style: {"border": 0, "border-radius": "6px"} , position: 'right'},
           {
             href: 'https://github.com/JerryI/wolfram-js-frontend',
             label: 'GitHub',
