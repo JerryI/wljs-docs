@@ -645,7 +645,14 @@ bottom:auto;
 }
 
 
+.frontend-object {
+  position: relative;
+  font-size:small;
+}
 
+.g3d-label {
+  font-size: x-small;
+}
 
 .sr-only {
   position: absolute;

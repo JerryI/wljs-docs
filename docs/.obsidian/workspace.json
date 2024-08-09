@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Advanced/Events system/Mouse and keyboard.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Graphics3D",
+                "query": "mousedown",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -89,7 +89,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Advanced/Events system/Mouse and keyboard.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Advanced/Events system/Mouse and keyboard.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/instruction.md"
+                "file": "frontend/Advanced/Events system/Mouse and keyboard.md"
               }
             }
           },
@@ -185,8 +186,11 @@
   },
   "active": "2e0f97191d38ce12",
   "lastOpenFiles": [
-    "frontend/Exporting/Dynamic HTML.md",
+    "frontend/Guidelines.md",
+    "frontend/Cell types/Input cell.md",
+    "frontend/Command palette.md",
     "frontend/instruction.md",
+    "frontend/Exporting/Dynamic HTML.md",
     "frontend/Reference/Plotting Functions/ListAnimatePlot.md",
     "frontend/Reference/Plotting Functions/AnimatePlot.md",
     "frontend/Cell types/Slides.md",
@@ -218,9 +222,6 @@
     "Screenshot 2024-07-28 at 19.11.13.png",
     "URLProtocol-ezgif.com-optimize.gif",
     "frontend/Advanced/Slides/Slides.md",
-    "frontend/Advanced/Command palette/AI Assistant.md",
-    "frontend/Advanced/Command palette/Snippets.md",
-    "frontend/Reference/Cells and Notebook/RemoteCellObj.md",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",
     "frontend/Reference/Video",

@@ -82,6 +82,8 @@ The following shortcuts are often used for equations typing
 - `Ctrl-6` - make a superscript (power)
 - `ESC+..` - to enter greek characters
 
+- `Cmd+/` - comment a line
+
 For integrals, derivatives and series use [Command palette](frontend/Command%20palette.md) tool for entering special characters.
 
 :::note
