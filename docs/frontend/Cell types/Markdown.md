@@ -148,6 +148,8 @@ $$
 Unfortunately, you have to escape all backslashes, i.e. instead of `\alpha` you need to write `\\alpha`.
 :::
 
+__See [here](https://katex.org/docs/supported.html) all supported function for LaTeX equations.__
+
 
 ## WLX
 Markdown cells supports many features of [WLX](frontend/Cell%20types/WLX.md) similar to how it is done in [Slides](frontend/Reference/Slides/Slides.md)

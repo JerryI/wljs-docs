@@ -15,6 +15,7 @@ It improves user experience drastically
 - Enter command palette `Cmd+P`, `Ctrl+P` 
 - Hide/Unhide current cell `Cmd+2`, `Alt+2`
 - Clear outputs `Cmd+U`, `Alt+U`
+- Search inside cell `Cmd+f`, `Ctrl+f`
 ### Evaluation
 - Evaluate `Shift+Enter`
 - Abort `Cmd+.`, `Alt+.`

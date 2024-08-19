@@ -47,13 +47,14 @@ It will mutate the given symbol `list` according to the transactions. One has to
 ```mathematica
 list = Table[i j, {i,5}, {j,5}];
 handler = InputTable`EventHelper[list];
-textstr = "";
+textstr = ToString[Style["Change something in the table", Italic], StandardForm];
 EventHandler[InputTable[list, "Height"->150], Function[data, 
   handler[data];
+  textstr = "";
   textstr = ToString[list // TableForm, StandardForm];
 ]]
 
-EditorView[textstr // Offload] // CreateFrontEndObject
+EditorView[textstr // Offload]
 ```
 
 the result should look like this

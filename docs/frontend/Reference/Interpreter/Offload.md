@@ -67,10 +67,6 @@ Graphics[{PointSize[0.02], Point[pts // Offload]}, ImageSize->500]
 
 <Wl >{`Graphics[{PointSize[0.02], Point[RandomReal[{-1,1}, {64, 2}] // Offload]}, ImageSize->500]`}</Wl>
 
-:::note
-Try to update the page. Each time the distribution of points will be different 
-:::
-
 Now the symbol was actually evaluated on the frontend (browser/ client) using fetched data from the server.
 
 And then, change the variable from the separate task

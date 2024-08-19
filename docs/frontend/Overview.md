@@ -39,6 +39,7 @@ Project to a window is the most interesting feature here, that allows to evaluat
 - `Alt+.`, `Cmd+.` abort evaluation
 - `Ctrl+P`, `Cmd+P` open command palette
 - `Shift+Enter` evaluate current cell
+- `Ctrl/Cmd + f` search in the cell
 #### Cells
 - `Ctrl+W`, `Cmd+2` hide/show input cell
 - `Ctrl+/` make fraction on selected

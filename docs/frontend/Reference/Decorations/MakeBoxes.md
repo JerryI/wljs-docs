@@ -19,6 +19,7 @@ an output handler expression acting as `UpValues` for other expression converts 
 ## Supported forms
 - [StandardForm](frontend/Reference/Decorations/StandardForm.md)
 - [WLXForm](frontend/Reference/Decorations/WLXForm.md)
+- [InputForm](frontend/Reference/Decorations/InputForm.md)
 
 ## Used together with
 - [BoxBox](frontend/Reference/Decorations/BoxBox.md)
@@ -37,7 +38,7 @@ It is a core concept of the Notebook interface
 - [EventObject](frontend/Reference/Misc/Events.md#`EventObject`)
 - many more
 
-All graphics and interactive objects are running on WLJS interpreter, which is browser'a minimal Wolfram Language interpreter running on Javascript. It draws graphics, handles users interaction via JS. To explicitly run an expression on browser's side you need to apply [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md). This is done automatically using [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) 
+All graphics and interactive objects are running on WLJS interpreter, which is browser'a minimal Wolfram Language interpreter running on Javascript. It draws graphics, handles users interaction via JS. To explicitly run an expression on browser's side you need to apply [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md) or use [ViewBox](frontend/Reference/Decorations/ViewBox.md). This can be done automatically using [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) 
 
 for example
 ```mathematica
@@ -78,7 +79,7 @@ dataHolder[RandomReal[{-1,1}, 100]] // ListLinePLot
 ![](../../../Screenshot%202024-03-27%20at%2021.03.24.png)
 
 :::info
-[ViewBox](frontend/Reference/Decorations/ViewBox.md) __is more performant  compared to__ [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md), when it comes to replacing symbols with [Graphics](frontend/Reference/Graphics/Graphics.md) or other interactive objects.
+[ViewBox](frontend/Reference/Decorations/ViewBox.md) __creates less overhead  compared to__ [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md), when it comes to replacing symbols with [Graphics](frontend/Reference/Graphics/Graphics.md) or other interactive objects.
 :::
 
 :::tip

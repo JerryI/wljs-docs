@@ -13,7 +13,7 @@ Depending on where an expression is displayed, one can change its visual represe
 
 ```mathematica
 SpecialOne /: MakeBoxes[SpecialOne, StandardForm] := With[{
-	o = Graphics[{Red, Disk[]}] // CreateFrontEndObject
+	o = Graphics[{Red, Disk[]}] 
 },
 	ViewBox[SpecialOne, o]
 ]

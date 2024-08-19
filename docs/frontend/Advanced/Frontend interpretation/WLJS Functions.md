@@ -35,7 +35,7 @@ Firstly one need to understand the way how it was called. There are a few differ
 - direct calls as it is
 - indirect using containers
 
-The first one is rather straighforward, where basically most UI functions and core built-in functions are written.
+The first one is rather straightforward, where basically most UI functions and core built-in functions are written.
 
 ### Simple direct call
 As simple as that
@@ -197,7 +197,7 @@ core.ListLinePlotly.update = (args, env) => {
 }
 ```
 
-__Destroy and update methods are usually features of [Containers Executables](#Containers%20Executables)__
+__Destroy and update methods are usually features of [Containers](#Containers%20Executables)__
 
 #### Contexts
 To prevent the mess of duplicated function names and etc, you can specify the context or let's say library of symbols using
@@ -226,43 +226,49 @@ If you have multiple prioritized contexts, you __can pass them as an array__
 core.GrantSymbol = (args, env) => {
 	const data = interpretate(args, {...env, context: [library1, library2]});
 	//...
-	//first match should be in `library` object
+	//first match should be in `library1` object, if not
+	//then in `library2`, if not, then in `core` context
 }
 ```
 
-### Containers | Executables
+### Containers | Virtualization
 Each time interpreter faces a container it creates an unique object, that scopes `env` variable and provides local memory for all tree of Wolfram Expressions located inside the container. 
+
+An interpreter can automatically create a container for any WLJS symbols, when it sees a special property defined
+
+```js
+core.MySymbol.virtual = true
+```
+
+then `MySymbol` takes all benefits of containers even if it was called anonymously from [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md). However, it can also be done manually using [FrontEndVirtual](frontend/Reference/Interpreter/FrontEndVirtual.md) wrapper
 
 Most importantly containers or executables can be destroyed or updated (see [A remark about sub symbols Methods](#A%20remark%20about%20sub%20symbols%20Methods)) unlike expressions under normal evaluation. 
 
-Another feature is that it automatically binds to other nested containers, which allows to reevaluate expressions from the parent container once a change was made to a child. The last one is a fundament for [Dynamics](frontend/Dynamics.md)
+Another feature is that it automatically binds to a child container, which allows to reevaluate expressions from the parent container once a change was made to a child. 
 
-__TLDR How to create?__
-- [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md)
-- [Virtual functions](#Virtual%20containers)
-
+The last one is a fundament for [Dynamics](frontend/Dynamics.md)
 
 #### Properties
-The expression inside the container is held in JSON format for possible reevaluation. Containerized execution provides much more flexibility since each call creates a separate instance with its local memory.
+Containerized execution provides much more flexibility since each call creates a separate instance with its local memory.
 
 For the convenience all extra features are provided in `env` variable
 
 ```js
 core.MyFunction = (args, env) => {
 	env.local  = {} //pointer to the local memory of the instance
-	env.global = {} //pointer to the global memory of the three
-	env //sharable memory 
+	env.global      //pointer to the global memory of the call tree
+	env.exposed     //pointer to the memory outside the instance
+	env //sharable memory within the instance
 }
 ```
 
-Global memory is created at each widget creating in the cell editor or scope of [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md). Local memory is scoped for each instance of a container.
+Global memory is created at each widget creating in the cell editor or scope of [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md). Local memory is scoped for each instance.
 
-Depending, where it is supposed to be executed, one can have an access to various page elements. For instance, if it is called from the editor it provides `env.element` - an access to DOM placeholder in the editor.
+Depending, where it is supposed to be executed, one can have an access to various page elements. For instance, if it is called from the editor it provides `env.element` - an access to DOM placeholder in the editor or a DOM placeholder on a [Slide](frontend/Cell%20types/Slides.md)
 
 __Let's make an example that can demonstrate local memory usage__
 
-#### Frontend objects
-One of the possible way on how to execute a given function inside a container is to create a frontend object [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md). Read more about [Frontend Objects](frontend/Advanced/Frontend%20interpretation/Frontend%20Objects.md)
+For example [Sphere](frontend/Reference/Graphics3D/Sphere.md), [Line](frontend/Reference/Graphics/Line.md) are virtual function or symbols, since for each instance of a `Sphere` we need to store its data, position in order to be able to update them correctly and couple to dynamic symbols.
 
 ##### 🎡 Example 2: Clocks
 
@@ -282,9 +288,11 @@ core.PlaceholderClock.destroy = async (args, env) => {
 	const passed = (new Date() - env.local.start);
 	alert(passed+' passed');
 }
+
+core.PlaceholderClock.virtual = true
 ```
 
-Then we can execute in inside the container like any piece of data (see [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md))
+Then we can execute in inside on the frontend using [ViewBox](frontend/Reference/Decorations/ViewBox.md) or  [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md)
 
 ```mathematica
 CreateFrontEndObject[PlaceholderClock[]]
@@ -320,6 +328,14 @@ PlaceholderClock /: MakeBoxes[m_PlaceholderClock, StandardForm] := With[{
 ```mathematica
 PlaceholderClock[] (* no need in CreateFrontEndObject anymore *)
 ```
+
+or __even better__ with less overhead coming from `CreateFrontEndObject`
+
+```mathematica title="better solution"
+PlaceholderClock /: MakeBoxes[m_PlaceholderClock, StandardForm] := ViewBox[m, m]
+```
+
+This approach will keep the original expression as well
 
 
 #### Default methods
@@ -364,12 +380,16 @@ core.MyFunction = async (args, env) => {
   env.local.old = old;
   env.local.ctx = context;
 }
+
+core.MyFunction.virtual = true //enable containers
 ```
 
 here this line
+
 ```js
 const data = await interpretate(args[0], env);
 ```
+
 is very important, even if we wont use `data` variable, to make the call-tree aware of the presence of other symbols to which we need to call at least `await interpretate(args[0], env);`.
 
 Now we can store all data in `env.local`, that belongs to our instance.
@@ -441,19 +461,7 @@ Then you will see a nice animation and each instance you copied will be updated 
 
 ![](../../../GOL-ezgif.com-optimize.gif)
 
-
-#### Virtual symbols
-An interpreter can automatically create a container for any WLJS symbols, when it sees a special property defined
-
-```js
-core.MySymbol.virtual = true
-```
-
-then `MySymbol` takes all benefits of containers even if it was called anonymously from [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md). 
-
-For example [Sphere](frontend/Reference/Graphics3D/Sphere.md), [Line](frontend/Reference/Graphics/Line.md) are virtual function or symbols, since for each instance of a `Sphere` we need to store its data, position in order to be able to update them correctly and couple to dynamic symbols.
-
-##### Dynamic symbols
+#### Dynamic symbols
 Any defined Wolfram Language symbol with `OwnValue` like
 
 ```mathematica
@@ -467,16 +475,16 @@ Graphics[Disk[{0.,0.}, Offload[radius]]]
 ```
 
 ::info
-Wolfram Kernel __tracks any changes of a symbol with own-values put inside `Offload` wrapper automatically__.
+Wolfram Kernel __tracks any changes of own-values__.
 ::
 
-Since [Disk](frontend/Reference/Graphics/Disk.md) is also __virtual symbol__, then two containers created for `Disk` and `radius` will be coupled together, i.e.
+Since [Disk](frontend/Reference/Graphics/Disk.md) is also a __virtual symbol__, then two instances created for `Disk` and `radius` will be coupled together, i.e.
 
 ```mathematica
 EventHandler[InputRange[0,1,0.1], Function[r, radius = r]]
 ```
 
-will cause `.update` method on `Disk`
+will cause `.update` method to be called on `Disk` at any changes of `radius`
 
 ![](../../../Disk-ezgif.com-video-to-gif-converter.gif)
 

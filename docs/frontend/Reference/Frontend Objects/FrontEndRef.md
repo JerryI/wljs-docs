@@ -11,4 +11,6 @@ package: wljs-editor
 FrontEndRef[uid_String]
 ```
 
-An executable reference to a frontend object (see [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md)), that converts JSON expression back to Wolfram Language
+An executable reference to a frontend object (see [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md)), which does not have output forms defined.
+
+After evaluation it is converted back to a normal Wolfram Language expression and is executed on Kernel.

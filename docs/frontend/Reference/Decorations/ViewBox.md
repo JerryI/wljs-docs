@@ -64,7 +64,7 @@ Let us make a special symbol with a single property
 boxObject /: MakeBoxes[boxObject[s_], StandardForm] := With[{
   g = Graphics[{Blue, Disk[{0,0},1], Opacity[0.5], Red,Disk[{0,0},s]}, ImageSize->80, Controls->False, ImagePadding->None]
 },
-  ViewBox[boxObject[s], g // CreateFrontEndObject]
+  ViewBox[boxObject[s], g ]
 ]
 ```
 
@@ -88,7 +88,7 @@ boxObject /: MakeBoxes[boxObject[s_], StandardForm] := With[{
 },
   EventHandler[uid, {"Destroy"->Beep}];
   
-  ViewBox[boxObject[s], g // CreateFrontEndObject, "Event"->uid]
+  ViewBox[boxObject[s], g, "Event"->uid]
 ]
 ```
 

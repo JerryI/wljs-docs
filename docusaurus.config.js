@@ -27,14 +27,17 @@ const scripts = [
   "/wljs-editor/src/objects.js",
   "/wljs-sharedlib-d3/dist/kernel.js",
   "/wljs-graphics-d3/dist/kernel.js",
-  "/wljs-graphics3d-threejs/dist/kernel.js"
+  "/wljs-graphics3d-threejs/dist/kernel.js"*/
   
-  */"https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/interpreter.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/interpreter.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/core.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-cells@dev/src/module.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/boxes.js",  
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/objects.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@dev/src/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@dev/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-html-support@dev/src/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-sharedlib-d3@master/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@dev/dist/kernel.js",
   "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@dev/dist/kernel.js",
@@ -202,7 +205,32 @@ const config = {
     }),
     plugins: [[ require.resolve('docusaurus-lunr-search'), {
       disableVersioning: true
-    }]]
+    }],
+    function myCustomPlugin(context, options) {
+      return {
+        name: 'custom-webpack-plugin',
+        configureWebpack(config, isServer, utils, content) {
+          return {
+            module: {
+              rules: [
+                {
+                  test: /\.pdf$/,
+                  use: ["file-loader"],
+                },
+                {
+                  test: /\.txt$/,
+                  use: ["file-loader"],
+                },                
+                {
+                  test: /\.wln$/,
+                  use: ["file-loader"],
+                }
+              ],
+            },
+          };
+        },
+      };
+    }]
 };
 
 export default config;

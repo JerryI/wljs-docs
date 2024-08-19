@@ -16,7 +16,7 @@ Stylize an output form of a symbol
 specialSymbol /: MakeBoxes[specialSymbol, StandardForm] := With[{
 	o = Graphics[Disk[], ImageSize->100, ImagePadding->None]
 },
-	ViewBox[specialSymbol, CreateFrontEndObject[o]]
+	ViewBox[specialSymbol, o]
 ]
 ```
 

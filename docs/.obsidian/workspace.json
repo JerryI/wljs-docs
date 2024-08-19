@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2e0f97191d38ce12",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Advanced/Events system/Mouse and keyboard.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6c07b6313b5cd247",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotting Functions/AnimatePlot.md",
+                "file": "frontend/Cell types/Slides.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Graphics/Complex.md",
+                "file": "frontend/Advanced/Events system/Cells and windows.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,11 +60,11 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mousedown",
+                "query": "objects",
                 "matchingCase": true,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": true,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               }
             }
@@ -89,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -110,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Events system/Mouse and keyboard.md",
+                "file": "frontend/Cell types/Slides.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Events system/Mouse and keyboard.md",
+                "file": "frontend/Cell types/Slides.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Events system/Mouse and keyboard.md"
+                "file": "frontend/Cell types/Slides.md"
               }
             }
           },
@@ -184,44 +171,45 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "2e0f97191d38ce12",
+  "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
-    "frontend/Guidelines.md",
-    "frontend/Cell types/Input cell.md",
-    "frontend/Command palette.md",
-    "frontend/instruction.md",
-    "frontend/Exporting/Dynamic HTML.md",
-    "frontend/Reference/Plotting Functions/ListAnimatePlot.md",
-    "frontend/Reference/Plotting Functions/AnimatePlot.md",
-    "frontend/Cell types/Slides.md",
     "frontend/Cell types/Markdown.md",
-    "frontend/Reference/Graphics3D/Graphics3D.md",
+    "frontend/Guidelines.md",
+    "frontend/instruction.md",
+    "frontend/Overview.md",
+    "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
+    "frontend/Advanced/Events system/Cells and windows.md",
+    "interpreter/Advanced/architecture.md",
+    "frontend/Reference/Frontend Objects/CreateFrontEndObject.md",
+    "frontend/Advanced/Dynamics/Advanced animation.md",
+    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
+    "frontend/Reference/Decorations/WLXForm.md",
+    "frontend/Reference/Graphics/ZoomAt.md",
+    "frontend/Reference/Graphics/AbsoluteThickness.md",
+    "frontend/Advanced/Graphics/Complex.md",
+    "frontend/Reference/Sound/Audio.md",
+    "frontend/Reference/Frontend Objects/FrontEndExecutable.md",
+    "frontend/Reference/Frontend Objects/FrontEndRef.md",
+    "frontend/Reference/Interpreter/FrontEndVirtual.md",
+    "frontend/Reference/Plotting Functions/AnimatePlot.md",
+    "Excalidraw/working-with-frontend-object.excalidraw.md",
+    "frontend/Advanced/Slides/Widgets.md",
+    "frontend/Reference/Decorations/ViewBox.md",
+    "interpreter/Advanced/symbols.md",
     "frontend/Dynamics.md",
+    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+    "frontend/Advanced/Objects/Static decorations.md",
+    "frontend/Reference/Tree",
     "saved-ezgif.com-cut.gif",
     "sampled-ezgif.com-optimize.gif",
     "Screenshot 2024-08-03 at 15.49.58.png",
     "Screenshot 2024-08-03 at 15.47.04.png",
-    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
     "Screenshot 2024-08-03 at 13.58.42.png",
-    "frontend/Exporting/Figures.md",
-    "frontend/Exporting/PDF.md",
-    "frontend/Exporting/Slides.md",
-    "frontend/Exporting/Markdown.md",
-    "frontend/Exporting/Static HTML.md",
-    "frontend/Exporting/URL Protocol.md",
-    "frontend/Reference/Frontend IO/WindowObj.md",
-    "frontend/Reference/Plotting Functions/AnimateParametericPlot.md",
-    "frontend/Reference/Plotting Functions/ManipulateParametricPlot.md",
     "StiticExport-ezgif.com-optimize.gif",
-    "frontend/Reference/Dataset/Dataset.md",
-    "frontend/Overview.md",
     "Excalidraw-ezgif.com-speed 1.gif",
-    "frontend/Symbolic programming.md",
-    "frontend/Advanced/Command palette/Templates and styling.md",
     "Excalidraw-ezgif.com-speed.gif",
     "Screenshot 2024-07-28 at 19.11.13.png",
     "URLProtocol-ezgif.com-optimize.gif",
-    "frontend/Advanced/Slides/Slides.md",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",
     "frontend/Reference/Video",
@@ -230,7 +218,6 @@
     "blog/2023-10-10-esm/index.mdx",
     "blog/2023-10-10-esm/NintendoPro.wln",
     "blog/2023-08-19-advanced-events/Greyness.wln",
-    "blog/2023-07-25-transform-3d/FMO.wl",
-    "blog/2023-07-22-pratical-integration/Archive.zip"
+    "blog/2023-07-25-transform-3d/FMO.wl"
   ]
 }
