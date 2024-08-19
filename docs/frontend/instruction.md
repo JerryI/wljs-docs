@@ -7,14 +7,6 @@ slug: /
 # Quick start
 Wolfram Language Notebook __requires  `wolframscript` (see Freeware [Wolfram Engine](https://www.wolfram.com/engine/) or Wolfram Kernel)__ installed on your PC/Mac. *If not, WLJS application will redirect you to the official page*
 
-
-export function Thing({children}) {
-   return <div dangerouslySetInnerHTML={{__html: children}} />;
-}
-
-
-<Thing>{`<p>Hello</p>`}</Thing>
-
 :::note
 Tested with Wolfram Engine 13.1 - 14.0
 :::
