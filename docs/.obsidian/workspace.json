@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Cell types/Slides.md",
+                "file": "frontend/instruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "objects",
+                "query": "Animate",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Cell types/Slides.md",
+                "file": "frontend/instruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Cell types/Slides.md",
+                "file": "frontend/instruction.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Cell types/Slides.md"
+                "file": "frontend/instruction.md"
               }
             }
           },
@@ -173,10 +173,24 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
-    "frontend/Cell types/Markdown.md",
-    "frontend/Guidelines.md",
-    "frontend/instruction.md",
     "frontend/Overview.md",
+    "frontend/Exporting/Dynamic HTML.md",
+    "frontend/Reference/Plotting Functions/AnimatePlot.md",
+    "fluid-ezgif.com-video-to-webp-converter.webp",
+    "fluid-ezgif.com-optimize.gif",
+    "frontend/Dynamics.md",
+    "frontend/Exporting/Static HTML.md",
+    "frontend/Reference/Interpreter/Manipulate.md",
+    "frontend/Reference/Interpreter/Offload.md",
+    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+    "frontend/Reference/Interpreter/Refresh.md",
+    "frontend/Guidelines.md",
+    "frontend/Advanced/Command palette/AI Assistant.md",
+    "Screenshot 2024-08-20 at 12.34.02.png",
+    "Screenshot 2024-08-20 at 12.31.29.png",
+    "frontend/Cell types/Slides.md",
+    "frontend/Cell types/Markdown.md",
+    "frontend/instruction.md",
     "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
     "frontend/Advanced/Events system/Cells and windows.md",
     "interpreter/Advanced/architecture.md",
@@ -189,16 +203,6 @@
     "frontend/Advanced/Graphics/Complex.md",
     "frontend/Reference/Sound/Audio.md",
     "frontend/Reference/Frontend Objects/FrontEndExecutable.md",
-    "frontend/Reference/Frontend Objects/FrontEndRef.md",
-    "frontend/Reference/Interpreter/FrontEndVirtual.md",
-    "frontend/Reference/Plotting Functions/AnimatePlot.md",
-    "Excalidraw/working-with-frontend-object.excalidraw.md",
-    "frontend/Advanced/Slides/Widgets.md",
-    "frontend/Reference/Decorations/ViewBox.md",
-    "interpreter/Advanced/symbols.md",
-    "frontend/Dynamics.md",
-    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
-    "frontend/Advanced/Objects/Static decorations.md",
     "frontend/Reference/Tree",
     "saved-ezgif.com-cut.gif",
     "sampled-ezgif.com-optimize.gif",
@@ -206,10 +210,6 @@
     "Screenshot 2024-08-03 at 15.47.04.png",
     "Screenshot 2024-08-03 at 13.58.42.png",
     "StiticExport-ezgif.com-optimize.gif",
-    "Excalidraw-ezgif.com-speed 1.gif",
-    "Excalidraw-ezgif.com-speed.gif",
-    "Screenshot 2024-07-28 at 19.11.13.png",
-    "URLProtocol-ezgif.com-optimize.gif",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",
     "frontend/Reference/Video",

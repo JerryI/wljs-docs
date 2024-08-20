@@ -5,15 +5,15 @@ The whole notebook interface is made using plain Javascript, HTML powered by a [
 
 Some calculations are performed partially by your browser, you can have a control over it, [if you want](frontend/Dynamics.md) . All UI elements, cells operations are written in Javascript and Wolfram Language and performed by WLJS Interpreter
 
+> **WLJS Interpreter** is a tiny (3 kB) Wolfram Language Interpreter running in a browser and written in vanilla Javascript. It fully interconnects Javascript world with Wolfram Language on the server (backend). We will also reference it as *frontend*. 
+
 ![](./../imgs/Interface-1.png)
 
 :::info
-Compared to Mathematica the cell design has mostly flat structure similar to Jupyter Notebook. Only `input` and `output` cells are joined into groups.
+Compared to Mathematica the cell design has mostly flat structure similar to Jupyter Notebook. Only `input` and `output` cells are joined into groups. 
 :::
 
-:::info
-Output cells are editable
-:::
+Output cells are editable. We do not separate them explicitly unlike in Mathematica or Jupyter, since the whole document is a **notebook**, notebooks do not have inputs and outputs. You can freely edit, copy, reevaluate in place any output expression. Therefore we distinguish them only formally.
 
 ### Cell control buttons
 All cells are grouped by parent input cell, apart from that the structure of the notebook is flat. The controls are applied to the whole group
@@ -39,7 +39,7 @@ Project to a window is the most interesting feature here, that allows to evaluat
 - `Alt+.`, `Cmd+.` abort evaluation
 - `Ctrl+P`, `Cmd+P` open command palette
 - `Shift+Enter` evaluate current cell
-- `Ctrl/Cmd + f` search in the cell
+- `Ctrl/Cmd + f` search in the focused cell
 #### Cells
 - `Ctrl+W`, `Cmd+2` hide/show input cell
 - `Ctrl+/` make fraction on selected
@@ -57,7 +57,7 @@ When you start typing the language you are using assumed to be WL. By pressing `
 Output cells are joined to the input and the last one can be hidden by clicking on the $\rightarrow$ sign on the left side from the cell.
 
 :::note
-Once you change something inside the output cell, it loses its parent and becomes new input cell, like in Mathematica.
+Once you change something inside the output cell, it loses its formal parent and becomes new input cell, like in Mathematica.
 :::
 
 Syntax sugar, fractions and other 2D input are supported 
@@ -141,6 +141,10 @@ __Dynamics? We have a lot of it__
 
 ![](./../RotationMatriix3D-ezgif.com-optipng.png)
 
+__Or may be even fluid simulation?__
+
+![](./../fluid-ezgif.com-video-to-webp-converter.webp)
+
 ### Short videos
 
 
@@ -156,6 +160,17 @@ Or even with polygons in 3D
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LNP1S4-rX3k?si=CcmzvBy2rNlHpajR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Portability
+You will probably need to share your notes with someone. Here we have a bunch of options:
+
+1. Export entire notebook as a web-page [Static HTML](frontend/Exporting/Static%20HTML.md), [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) 
+2. Export individual figures [Figures](frontend/Exporting/Figures.md)
+3. Make a presentation [Slides](frontend/Exporting/Slides.md)
+
+![](./../StiticExport-ezgif.com-optimize.gif)
+
+**No internet dependency, it will work permanently and will not be broken by any update in the future** You can always convert back the exported notebook if needed, which is perfect if you want to share your notes on your personal blog.
+
 ## Other languages
 Of course the notebook interface is impossible to use without text annotation, here you do not need to switch to a different cell type. To use you favorite (or not) Markdown type in the first line of a cell `.md` and magic happens
 
@@ -166,3 +181,14 @@ By clicking on an arrow on the right, you can hide the source cell and only the 
 Or combine WL together with Javascript to visualize your data in incredible way
 
 ![](./../imgs/Spark-ezgif.com-speed.png)
+
+The core plugins provides the following cells
+
+- [Javascript](frontend/Cell%20types/Javascript.md)
+- [Markdown](frontend/Exporting/Markdown.md)
+- [Slides](frontend/Reference/Slides/Slides.md)
+- [WLX](frontend/Cell%20types/WLX.md)
+- [Files](frontend/Cell%20types/Files.md)
+- [HTML](frontend/Cell%20types/HTML.md)
+- [Many more](frontend/Cell%20types/Many%20more.md) (Mermaid)
+

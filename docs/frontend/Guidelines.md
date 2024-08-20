@@ -49,8 +49,10 @@ PacletRepositories[{
 
 this will create a folder with all used paclets and keep them up to date if needed
 
-## Do not use `Dynamic`, `Manipulate`
-We rely on *a completely different architecture* to handle interactivity and graphics updates compared to Wolfram Mathematica.
+## Do not use `Dynamic`
+We rely on *a completely different architecture* to handle interactivity and graphics updates compared to Wolfram Mathematica. 
+
+> In general [Manipulate](frontend/Reference/Interpreter/Manipulate.md) is implemented as well, but it is not recommend to use often due to its impact to the system performance.
 
 ### Dynamic
 [Buttons](frontend/Reference/GUI/InputButton.md), [sliders](frontend/Reference/GUI/InputRange.md) are event-driven, i.e. you need to subscribe to them using [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`). All dynamic updates are handled using [Offload](frontend/Reference/Interpreter/Offload.md) approach. For example
@@ -64,4 +66,6 @@ Graphics[Rectangle[{-1,-1}, {length // Offload, 1}]]
 
 ### Manipulate
 In general there is built-in function for simple 2D plots - [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), however, for something more complicated - *you need to craft it by yourself* using building [Offset](frontend/Reference/Graphics/Offset.md) and simple graphics primitives such as [Line](frontend/Reference/Graphics3D/Line.md), [Polygon](frontend/Reference/Graphics3D/Polygon.md) and etc as building blocks.
+
+
 

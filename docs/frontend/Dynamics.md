@@ -24,9 +24,11 @@ Always keep in mind, which part of code executes on Wolfram Kernel (server) and 
 :::
 
 ## If you are looking for just Manipulate
-There is a short cut, if you need to see how your curves changes with different parameters - see [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md)
+There is a short cut, if you need to see how your curves changes with different parameters - see [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), [ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md) 
 
 ![](./../Manipulate-ezgif.com-video-to-gif-converter%202.gif)
+
+General [Manipulate](frontend/Reference/Interpreter/Manipulate.md) is available, however *we do not recommend to use it for plotting purposes*.
 
 For small expression needed to be reevaluated by a trigger or a timer (not often), one can also use [Refresh](frontend/Reference/Interpreter/Refresh.md) wrapper
 
