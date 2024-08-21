@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Reference/Graphics/Inset.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Animate",
+                "query": "Inset",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -77,7 +77,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Reference/Graphics/Inset.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/instruction.md",
+                "file": "frontend/Reference/Graphics/Inset.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/instruction.md"
+                "file": "frontend/Reference/Graphics/Inset.md"
               }
             }
           },
@@ -173,6 +174,7 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/instruction.md",
     "frontend/Overview.md",
     "frontend/Exporting/Dynamic HTML.md",
     "frontend/Reference/Plotting Functions/AnimatePlot.md",
@@ -190,7 +192,6 @@
     "Screenshot 2024-08-20 at 12.31.29.png",
     "frontend/Cell types/Slides.md",
     "frontend/Cell types/Markdown.md",
-    "frontend/instruction.md",
     "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
     "frontend/Advanced/Events system/Cells and windows.md",
     "interpreter/Advanced/architecture.md",

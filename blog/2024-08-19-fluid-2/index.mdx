@@ -281,7 +281,7 @@ removeDivergence = Compile[{{grid, _Real, 3}}, With[{
 and
 
 ```mathematica
-Interpolation = Compile[{{array, _Real, 3}, {v, _Real, 1}}, Module[
+bilinearInterpolation = Compile[{{array, _Real, 3}, {v, _Real, 1}}, Module[
   {rows, cols, x = v[[2]], y = v[[1]], x1, x2, y1, y2, fQ11, fQ12, fQ21, fQ22},
   
   (* Get the dimensions of the array *)

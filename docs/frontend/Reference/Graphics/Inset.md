@@ -6,12 +6,26 @@ update: true
 source: https://github.com/JerryI/wljs-graphics-d3/blob/dev/src/kernel.js
 ---
 ```mathematica
-Inset[canvas_Graphics, pos_List]
+Inset[canvas_Graphics, pos_List, opts___]
 ```
 
-a graphics object, that allows to put another [Graphics](frontend/Reference/Graphics/Graphics.md) into the canvas. `pos` has to be a 2D vector, that specifies the position of the inset.
+```mathematica
+Inset[canvas_Graphics, pos_List, origin_List, size_List, opts___]
+```
 
-An example
+a graphics object, that allows to put another [Graphics](frontend/Reference/Graphics/Graphics.md) into the canvas. 
+- `pos` has to be a 2D vector, that specifies the position of the inset. 
+- `origin` __is optional__ and specifies the coordinates of the pin point in the local coordinate system of `canvas` object (if it is [Image](frontend/Reference/Graphics/Image.md), then this has to be in pixels units). By the default it takes the center
+- `size` is displayable size in the local coordinate system of parent graphics object (with respect to `Inset`). 
+
+## Options
+### `ViewMatrix`
+*In dev*
+
+If set to `None`, then no linear transformation will be applied to `canvas`, i.e. `origin`, `size`, `pos` will be ignored. Object will be displayed at it is.
+
+
+## Examples
 
 ```mathematica
 inset = Graphics[{

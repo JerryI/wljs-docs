@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-08-18-fluid-1/index.mdx",
+                "file": "2024-08-19-fluid-2/index.mdx",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-08-18-fluid-1/index.mdx",
+                "file": "2024-08-19-fluid-2/index.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-08-18-fluid-1/index.mdx",
+                "file": "2024-08-19-fluid-2/index.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-08-18-fluid-1/index.mdx"
+                "file": "2024-08-19-fluid-2/index.mdx"
               }
             }
           }
@@ -215,12 +215,12 @@
   },
   "active": "b3bb6d94b551607c",
   "lastOpenFiles": [
+    "2024-08-18-fluid-1/index.mdx",
     "2024-08-19-fluid-2/index.mdx",
     "2024-04-22-gauge.md",
     "2024-05-13-json-llm.md",
     "2024-08-19-fluid-2/attachments/notebook-6ec.wln",
     "2024-08-19-fluid-2/attachments/n.wln",
-    "2024-08-18-fluid-1/index.mdx",
     "2024-08-19-fluid-2/attachments/fluidSim.mov",
     "2024-08-18-fluid-1/attachments/testVideo.mov",
     "2024-04-24-dynamic-env/index.md",
