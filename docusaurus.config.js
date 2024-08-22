@@ -106,7 +106,7 @@ const config = {
   ],
 
   themeConfig: {
-    meta: [
+    metadata: [
       {name: 'msvalidate.01', content: '558ACAAD3C892A685EC4981186E3711D'},
     ]
   },
