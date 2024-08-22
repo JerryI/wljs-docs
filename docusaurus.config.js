@@ -29,18 +29,20 @@ const scripts = [
   "/wljs-graphics-d3/dist/kernel.js",
   "/wljs-graphics3d-threejs/dist/kernel.js"*/
   
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/interpreter.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/core.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-cells@dev/src/module.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/boxes.js",  
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/objects.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@dev/src/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@dev/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-html-support@dev/src/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-sharedlib-d3@master/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@dev/dist/kernel.js",
-  "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@dev/dist/kernel.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/interpreter.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-interpreter@dev/src/core.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-cells@dev/src/module.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/dist/kernel.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/boxes.min.js",  
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/objects.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@dev/src/kernel.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-mermaid-support@dev/dist/kernel.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-sound@master/dist/kernel.min.js",  
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@dev/dist/kernel.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-html-support@dev/src/kernel.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-sharedlib-d3@master/dist/kernel.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-graphics-d3@dev/dist/kernel.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/Mathematica-ThreeJS-graphics-engine@dev/dist/kernel.min.js",
 
 ].map((link) => {
   return {tagName: 'script', attributes: {
@@ -48,6 +50,7 @@ const scripts = [
     src: link
   }}
 });
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -101,6 +104,12 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
+
+  themeConfig: {
+    meta: [
+      {name: 'msvalidate.01', content: '558ACAAD3C892A685EC4981186E3711D'},
+    ]
+  },
 
   headTags: scripts,
 
