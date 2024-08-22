@@ -105,11 +105,7 @@ const config = {
     },
   ],
 
-  themeConfig: {
-    metadata: [
-      {name: 'msvalidate.01', content: '558ACAAD3C892A685EC4981186E3711D'},
-    ]
-  },
+
 
   headTags: scripts,
 
@@ -157,6 +153,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {name: 'msvalidate.01', content: '558ACAAD3C892A685EC4981186E3711D'},
+      ],
+
+      
       remarkPlugins: [math],
       rehypePlugins: [katex],
       // Replace with your project's social card
