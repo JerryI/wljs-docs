@@ -784,7 +784,7 @@ Polygon[triangles]],\n  AnimationFrameListener[vertices // Offload, \"Event\" \
 again*)(*,*)(*\"1:eJxTTMoPSmNhYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCS4g4Zyfm5uaV+K\
 UXxEMUqxsbm6exgSSBPGCSnNSg9mAjOCSosy8dLBYSFFpKpoKkDkeqYkpEFXBILO1sCgJSczMQVYC\
 AOFrJEU=\"*)(*]BB*)\nfield0 = Table[0., {i,50}, {j,50}];\nfield1 = \
-field0;\nfield2 = field0;\n\nEventHandler[\"frame calc\", Function[Null, \n\n \
+field0;\nfield2 = field0;\n\n(* initial perturbation *)\n\nfield2[[25,25]] = 0.01;\n\nEventHandler[\"frame calc\", Function[Null, \n\n \
  With[{i = #[[1]], j = #[[2]]}, \n    field0[[i,j]] = update[i,j, field1, \
 field2];\n  ]&/@ RandomSample[mesh];\n  \n  field2 = field1;\n  field1 = \
 field0;\n  \n  vertices = NumericArray[makeVertices[field0, mesh, \
