@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Inset.md",
+                "file": "frontend/Troubleshooting/Troubleshooting.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Inset",
+                "query": "Manipulate",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -77,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Inset.md",
+                "file": "frontend/Troubleshooting/Troubleshooting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Inset.md",
+                "file": "frontend/Troubleshooting/Troubleshooting.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Inset.md"
+                "file": "frontend/Troubleshooting/Troubleshooting.md"
               }
             }
           },
@@ -174,15 +173,19 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
-    "frontend/instruction.md",
+    "frontend/Tutorial/Working with Images.md",
+    "frontend/Command palette.md",
+    "frontend/Dynamics.md",
     "frontend/Overview.md",
+    "nice.gif",
+    "frontend/Reference/Interpreter/Manipulate.md",
+    "frontend/Reference/Graphics/Inset.md",
+    "frontend/instruction.md",
     "frontend/Exporting/Dynamic HTML.md",
     "frontend/Reference/Plotting Functions/AnimatePlot.md",
     "fluid-ezgif.com-video-to-webp-converter.webp",
     "fluid-ezgif.com-optimize.gif",
-    "frontend/Dynamics.md",
     "frontend/Exporting/Static HTML.md",
-    "frontend/Reference/Interpreter/Manipulate.md",
     "frontend/Reference/Interpreter/Offload.md",
     "frontend/Reference/Plotting Functions/ManipulatePlot.md",
     "frontend/Reference/Interpreter/Refresh.md",
@@ -201,16 +204,12 @@
     "frontend/Reference/Decorations/WLXForm.md",
     "frontend/Reference/Graphics/ZoomAt.md",
     "frontend/Reference/Graphics/AbsoluteThickness.md",
-    "frontend/Advanced/Graphics/Complex.md",
-    "frontend/Reference/Sound/Audio.md",
-    "frontend/Reference/Frontend Objects/FrontEndExecutable.md",
     "frontend/Reference/Tree",
     "saved-ezgif.com-cut.gif",
     "sampled-ezgif.com-optimize.gif",
     "Screenshot 2024-08-03 at 15.49.58.png",
     "Screenshot 2024-08-03 at 15.47.04.png",
     "Screenshot 2024-08-03 at 13.58.42.png",
-    "StiticExport-ezgif.com-optimize.gif",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",
     "frontend/Reference/Video",

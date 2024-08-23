@@ -62,7 +62,7 @@ Once you change something inside the output cell, it loses its formal parent and
 
 Syntax sugar, fractions and other 2D input are supported 
 
-![](./../imgs/Mathinput-ezgif.com-optipng.png)
+![](./../nice.gif)
 
 The most useful commands are listed below
 

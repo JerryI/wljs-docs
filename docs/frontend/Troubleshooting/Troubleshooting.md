@@ -19,6 +19,11 @@ Sometimes after an update browser's cache is still outdated. Please run (dependi
 - `Reload window`
 - `Clear cache and reload`
 
+## Cells did not load correctly
+It happens quite rare, when the asynchronous loading failed and scripts were executed in a wrong order.
+
+Do __Force Reload__ of a window/page (from the main top menu or in your browser)
+
 ## Browsers console
 Any errors caused by a cell evaluation will be shown below
 
@@ -49,7 +54,7 @@ This might be connected with `Boxes` or some other decorations did work well, tr
 % // InputForm
 ```
 
-to prevent `DisplayForm` output or
+or `FullForm` to prevent `DisplayForm` output or also try to apply
 
 ```mathematica
 % // Rasterize

@@ -56,6 +56,18 @@
             }
           },
           {
+            "id": "0e712798799c9f8d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2024-08-22-ellipce.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "9ed093e4b2841877",
             "type": "leaf",
             "state": {
@@ -86,7 +98,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -152,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-05-15-triangulation-polygons/index.mdx",
+                "file": "2024-08-22-ellipce.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +181,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-05-15-triangulation-polygons/index.mdx",
+                "file": "2024-08-22-ellipce.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-05-15-triangulation-polygons/index.mdx"
+                "file": "2024-08-22-ellipce.md"
               }
             }
           }
@@ -213,8 +225,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b3bb6d94b551607c",
+  "active": "0e712798799c9f8d",
   "lastOpenFiles": [
+    "2024-05-15-triangulation-polygons/index.mdx",
+    "2024-08-22-ellipce.md",
     "gif2-ezgif.com-crop.gif",
     "gif1_v-ezgif.com-video-to-gif-converter.gif",
     "2024-08-21-fluid-3/index.mdx",
@@ -241,7 +255,6 @@
     "2024-05-01-badapple/index.md",
     "Screenshot 2024-06-01 at 22.22.27.png",
     "2024-05-01-badapple/index.md.md",
-    "Screenshot 2024-06-01 at 21.03.19.png",
     "2024-04-19-spider/index.md",
     "2024-04-13-imagetrace/index.md",
     "2024-04-13-imagetrace/index.md.md"

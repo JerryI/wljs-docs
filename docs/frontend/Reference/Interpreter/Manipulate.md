@@ -38,5 +38,7 @@ Manipulate[Plot3D[Sin[n x] Cos[n y], {x,-1,1}, {y,-1,1}], {n, 1, 5, 1}]
 `Manipulate` reevaluates the whole expression similar to [Refresh](frontend/Reference/Interpreter/Refresh.md), which is a huge overhead for the system. Please, consider to use [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), [AnimatePlot](frontend/Reference/Plotting%20Functions/AnimatePlot.md), [ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md) or general dynamics using [Offload](frontend/Reference/Interpreter/Offload.md) (see [Dynamics](frontend/Dynamics.md)) for any plots, rapidly changing data and smooth transitions instead of `Manipulate`.
 :::
 
+`Manipulate` is caching all results by the default.
+
 ## Portability
 `Manipualte` __cannot be exported__ to [Static HTML](frontend/Exporting/Static%20HTML.md), however, [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) __is possible__ to keep the functionality working, but the file size might be quite large.
