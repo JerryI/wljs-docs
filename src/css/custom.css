@@ -2655,3 +2655,7 @@ bottom:auto;
   }
 
 }
+
+table.container {
+  padding: 0;
+}

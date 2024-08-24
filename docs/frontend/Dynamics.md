@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 8
 ---
 The way how dynamics work is quite different compared to Wolfram Mathematica. The key changes were made for the sake of performance and control (or imagination of  @JerryI - maintainer)
 

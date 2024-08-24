@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 The big power of customization comes with a powerful command palette system. This is provided by a [plugin](https://github.com/JerryI/wljs-snippets) shipped with a core package.

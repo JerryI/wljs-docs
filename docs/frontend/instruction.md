@@ -5,10 +5,10 @@ sidebar_class_name: green
 slug: /
 ---
 # Quick start
-Wolfram Language Notebook __requires  `wolframscript` (see Freeware [Wolfram Engine](https://www.wolfram.com/engine/) or Wolfram Kernel)__ installed on your PC/Mac. *If not, WLJS application will redirect you to the official page*
+Wolfram Language Notebook __requires  `wolframscript` (see Freeware [Wolfram Engine](https://www.wolfram.com/engine/) or Wolfram Kernel)__ installed on your PC/Mac. *If not, WLJS application will redirect you to the official download page*
 
 :::note
-Tested with Wolfram Engine 13.1 - 14.0
+Tested with Wolfram Engine 13.1 - 14.1
 :::
 
 ![](./../1_oEnvgJSyL-PNDTW8arOehw.webp)
@@ -19,7 +19,11 @@ Tested with Wolfram Engine 13.1 - 14.0
 
 </h2>
 
+:::note
+You do not need to have Mathematica, or other paid software installed to run WLJS Notebook. No subscription model, only one-time registration at *wolfram.com* is needed.
+:::
 
+If you are __new to Wolfram Language__, please, check the [corresponding page](./Wolfram%20Language.md).
 
 There are two ways you can choose from
 
@@ -81,9 +85,9 @@ wolframscript -f Scripts/start.wls host 0.0.0.0 http 8080 ws 8081 ws2 8082 docs 
 
 that will open __an HTTP server__ on `8080` port with `8081`, `8082` __used for realtime communication__ and __docs pages__ at `8085`
 
-### Extra arguments
+#### Extra arguments
 
-- set the home folder (overrides settings)
+- set the home folder (overrides the default settings)
 ```
 wolframscript -f Scripts/start.wls folder "Demos"
 ```
@@ -93,19 +97,36 @@ wolframscript -f Scripts/start.wls folder "Demos"
 wolframscript -f Scripts/start.wls noautolaunch True
 ```
 
-- disable autotest
-```
-wolframscript -f Scripts/start.wls bypasstest True
-```
+
+### A side note for servers with no desktop interface
+You might need to install the following (for `Image` and some other graphics to work properly) [libraries](https://support.wolfram.com/59044).
+
 
 
 ## Docker container
-This is also provided, please follow [the instructions](https://github.com/JerryI/wolfram-js-frontend/blob/main/container/README.md)
+*contributed by [@yloose](https://github.com/yloose)*
 
-## Sponsorship
-To help maintain this project ❤️
-- [GitHub Sponsors](https://github.com/sponsors/JerryI)
-- [__PayPal__](https://www.paypal.com/donate/?hosted_button_id=BN9LWUUUJGW54)
+Please follow [the instructions](https://github.com/JerryI/wolfram-js-frontend/blob/main/container/README.md)
+
+> ## Sponsorship
+> *To help maintain this open-source project* ❤️
+> - [__GitHub Sponsors__](https://github.com/sponsors/JerryI)
+> - [__PayPal__](https://www.paypal.com/donate/?hosted_button_id=BN9LWUUUJGW54)
+
+> Any amount (one-time or monthly) is appreciated, and your profile will be permanently displayed on this page. Thank you for helping us!
+
+
+## Showcase
+**[Blog posts](https://jerryi.github.io/wljs-docs/blog)**
+
+[🔗 Link](https://jerryi.github.io/wljs-docs/blog) Pages of real-life problems solved using WLJS Notebook and published as interactive notebooks runnning in your browser. Try it out
+
+
+**[WLJS Notebook Demonstration Project](https://jerryi.github.io/wljs-demo/)**
+
+[🔗 Link](https://jerryi.github.io/wljs-demo/)
+Notebooks posted as static web pages showcase various examples that demonstrate how to use the Wolfram Language and the dynamic features of our frontend. 
+
 
 ## Media
 - YTS 📽️ [You don't need to program your figures manually](https://youtube.com/shorts/Z76dMHK8POM?feature=share)

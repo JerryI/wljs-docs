@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-05-15-triangulation-polygons/index.mdx",
+                "file": "2024-08-22-ellipce.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -225,10 +225,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0e712798799c9f8d",
+  "active": "b3bb6d94b551607c",
   "lastOpenFiles": [
-    "2024-05-15-triangulation-polygons/index.mdx",
+    "2024-05-13-json-llm.md",
     "2024-08-22-ellipce.md",
+    "2024-05-15-triangulation-polygons/index.mdx",
     "gif2-ezgif.com-crop.gif",
     "gif1_v-ezgif.com-video-to-gif-converter.gif",
     "2024-08-21-fluid-3/index.mdx",
@@ -237,14 +238,12 @@
     "2024-08-21-fluid-3/attachments/fluid_raster.mov",
     "2024-08-18-fluid-1/index.mdx",
     "2024-04-22-gauge.md",
-    "2024-05-13-json-llm.md",
     "2024-08-19-fluid-2/attachments/notebook-6ec.wln",
     "2024-08-19-fluid-2/attachments/n.wln",
     "2024-08-19-fluid-2/attachments/fluidSim.mov",
     "2024-08-18-fluid-1/attachments/testVideo.mov",
     "2024-04-24-dynamic-env/index.md",
     "test/attachments/d10a9a95-08dc-43d6-8a35-d32cb321d6f4.docx",
-    "test/attachments/5dfc74a6-0db9-4c58-a7dc-262d0ad96ba3.docx",
     "test/attachments/Slider-ezgif.com-optipng.png",
     "test/attachments/Gizmo-ezgif.com-optipng.png",
     "test/attachments/Dropfiles-ezgif.com-optipng.png",
