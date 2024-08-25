@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Troubleshooting/Troubleshooting.md",
+                "file": "frontend/Advanced/Slides/Animated equations.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Troubleshooting/Troubleshooting.md",
+                "file": "frontend/Advanced/Slides/Animated equations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Troubleshooting/Troubleshooting.md",
+                "file": "frontend/Advanced/Slides/Animated equations.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Troubleshooting/Troubleshooting.md"
+                "file": "frontend/Advanced/Slides/Animated equations.md"
               }
             }
           },
@@ -173,6 +173,12 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Advanced/Slides/Fragments.md",
+    "frontend/Advanced/Slides/Animated equations.md",
+    "aniamtedLatex.mov",
+    "frontend/Advanced/Slides/animations.md",
+    "frontend/Cell types/Slides.md",
+    "frontend/Troubleshooting/Troubleshooting.md",
     "frontend/Tutorial/Working with Images.md",
     "frontend/Command palette.md",
     "frontend/Dynamics.md",
@@ -193,17 +199,11 @@
     "frontend/Advanced/Command palette/AI Assistant.md",
     "Screenshot 2024-08-20 at 12.34.02.png",
     "Screenshot 2024-08-20 at 12.31.29.png",
-    "frontend/Cell types/Slides.md",
     "frontend/Cell types/Markdown.md",
     "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
     "frontend/Advanced/Events system/Cells and windows.md",
     "interpreter/Advanced/architecture.md",
     "frontend/Reference/Frontend Objects/CreateFrontEndObject.md",
-    "frontend/Advanced/Dynamics/Advanced animation.md",
-    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
-    "frontend/Reference/Decorations/WLXForm.md",
-    "frontend/Reference/Graphics/ZoomAt.md",
-    "frontend/Reference/Graphics/AbsoluteThickness.md",
     "frontend/Reference/Tree",
     "saved-ezgif.com-cut.gif",
     "sampled-ezgif.com-optimize.gif",
@@ -217,7 +217,6 @@
     "blog/2023-10-10-esm/index._mdx",
     "blog/2023-10-10-esm/index.mdx",
     "blog/2023-10-10-esm/NintendoPro.wln",
-    "blog/2023-08-19-advanced-events/Greyness.wln",
-    "blog/2023-07-25-transform-3d/FMO.wl"
+    "blog/2023-08-19-advanced-events/Greyness.wln"
   ]
 }

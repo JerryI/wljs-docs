@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-08-22-ellipce.md",
+                "file": "2024-08-18-fluid-1/index.mdx",
                 "mode": "source",
                 "source": false
               }
@@ -164,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-08-22-ellipce.md",
+                "file": "2024-08-18-fluid-1/index.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,7 +181,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-08-22-ellipce.md",
+                "file": "2024-08-18-fluid-1/index.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -204,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-08-22-ellipce.md"
+                "file": "2024-08-18-fluid-1/index.mdx"
               }
             }
           }
@@ -227,8 +227,8 @@
   },
   "active": "b3bb6d94b551607c",
   "lastOpenFiles": [
-    "2024-05-13-json-llm.md",
     "2024-08-22-ellipce.md",
+    "2024-05-13-json-llm.md",
     "2024-05-15-triangulation-polygons/index.mdx",
     "gif2-ezgif.com-crop.gif",
     "gif1_v-ezgif.com-video-to-gif-converter.gif",

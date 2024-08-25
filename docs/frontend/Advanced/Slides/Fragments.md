@@ -67,3 +67,39 @@ Following the [original guide](https://revealjs.com/fragments/) we can craft our
 A sample line <!-- .element: class="fragment blur" data-fragment-index="1" -->
 ```
 
+
+### Replacing transition
+What if you need to replace one content with another one? There is no built-in feature, but we can use HTML and two fading fragments. For example
+
+```markdown
+.slide
+
+# The Art of Material Parameters
+
+<div class="text-left">
+
+Optics is a great tool to describe static and dynamic properties of the medium such as $\\sigma$ (or $\\alpha$), $n$ and their derivatives
+
+</div>
+
+<div>
+
+$$
+\\begin{align*}
+\\mathbf{E}(t,x) &= \\sum_{\\omega} \\mathbf{E}_0^{\\omega} ~ exp\\Big( i\\omega t - \\frac{i\\hat{n}(\\omega) \\omega x}{c}\\Big) \\\\
+&= \\sum\\mathbf{E}_0^{\\omega} \\colorbox{white}{$exp(-\\frac{\\alpha x}{2})$} ~exp\\Big(i\\omega t - \\frac{i n \\omega x}{c}\\Big)
+\\end{align*}
+$$ <!-- .element: class="fragment fade-in-then-out absolute" data-fragment-index="1" -->
+
+$$
+\\begin{align*}
+\\mathbf{E}(t,x) &= \\sum_{\\omega} \\mathbf{E}_0^{\\omega} ~ exp\\Big( i\\omega t - \\frac{i\\hat{n}(\\omega) \\omega x}{c}\\Big) \\\\
+&= \\sum\\mathbf{E}_0^{\\omega} \\colorbox{yellow}{$exp(-\\frac{\\alpha x}{2})$} ~exp\\Big(i\\omega t - \\frac{i n \\omega x}{c}\\Big)
+\\end{align*}
+$$ <!-- .element: class="fragment absolute" data-fragment-index="2" -->
+
+
+</div>
+```
+
+Here we positioned the container relatively (normal way), while both children has `absolute` class set. It makes them overlay each other and stay aligned. Then the transition kicks in, it hides the first one and reveals the second.
