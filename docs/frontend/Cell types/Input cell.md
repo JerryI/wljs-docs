@@ -83,6 +83,7 @@ The following shortcuts are often used for equations typing
 - `ESC+..` - to enter greek characters
 
 - `Cmd+/` - comment a line
+- `Cmd/Ctrl+F` - search in the current cell
 
 For integrals, derivatives and series use [Command palette](frontend/Command%20palette.md) tool for entering special characters.
 
@@ -95,6 +96,11 @@ If an output is too big, it will be truncated or converted into a temporal symbo
 :::
 
 You can also make your own custom representation of your symbol like in Mathematica using `MakeBoxes`. Please see [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md), [Interpretation](frontend/Reference/Decorations/Interpretation.md) and [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) and [ArrangeSummaryBox](frontend/Reference/Decorations/ArrangeSummaryBox.md), [ViewBox](frontend/Reference/Decorations/ViewBox.md), [BoxBox](frontend/Reference/Decorations/BoxBox.md) and an ultimate guide on them in [Decorating symbols](frontend/Advanced/Syntax%20sugar/Decorating%20symbols.md)
+
+### Access to documentation
+Click on 🔎 icon in autocomplete window to open docs on that symbol in a new window
+
+![](./../../Screenshot 2024-08-25 at 17.36.24.png)
 
 ### Morph output cell into input
 If you change something in the output Wolfram Language cell, it will be automatically converted into a new input cell.

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/Animated equations.md",
+                "file": "frontend/Advanced/Projector.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/Animated equations.md",
+                "file": "frontend/Advanced/Projector.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/Animated equations.md",
+                "file": "frontend/Advanced/Projector.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/Animated equations.md"
+                "file": "frontend/Advanced/Projector.md"
               }
             }
           },
@@ -173,20 +173,31 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
-    "frontend/Advanced/Slides/Fragments.md",
+    "Screenshot 2024-08-25 at 17.25.50.png",
+    "Screenshot 2024-08-25 at 17.17.48.png",
+    "Screenshot 2024-08-25 at 17.09.18.png",
+    "Screenshot 2024-08-25 at 17.08.52.png",
+    "frontend/Advanced/Overlay mode.md",
+    "frontend/Advanced/Projector.md",
+    "Screenshot 2024-08-25 at 17.04.34.png",
+    "Screenshot 2024-08-25 at 17.03.18.png",
+    "frontend/Overview.md",
+    "Screenshot 2024-08-25 at 16.52.14.png",
+    "frontend/instruction.md",
+    "frontend/Guidelines.md",
+    "frontend/Command palette.md",
+    "frontend/Advanced/Command palette/Overlay mode.md",
     "frontend/Advanced/Slides/Animated equations.md",
+    "frontend/Advanced/Slides/Fragments.md",
     "aniamtedLatex.mov",
     "frontend/Advanced/Slides/animations.md",
     "frontend/Cell types/Slides.md",
     "frontend/Troubleshooting/Troubleshooting.md",
     "frontend/Tutorial/Working with Images.md",
-    "frontend/Command palette.md",
     "frontend/Dynamics.md",
-    "frontend/Overview.md",
     "nice.gif",
     "frontend/Reference/Interpreter/Manipulate.md",
     "frontend/Reference/Graphics/Inset.md",
-    "frontend/instruction.md",
     "frontend/Exporting/Dynamic HTML.md",
     "frontend/Reference/Plotting Functions/AnimatePlot.md",
     "fluid-ezgif.com-video-to-webp-converter.webp",
@@ -195,21 +206,11 @@
     "frontend/Reference/Interpreter/Offload.md",
     "frontend/Reference/Plotting Functions/ManipulatePlot.md",
     "frontend/Reference/Interpreter/Refresh.md",
-    "frontend/Guidelines.md",
     "frontend/Advanced/Command palette/AI Assistant.md",
     "Screenshot 2024-08-20 at 12.34.02.png",
-    "Screenshot 2024-08-20 at 12.31.29.png",
     "frontend/Cell types/Markdown.md",
     "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
-    "frontend/Advanced/Events system/Cells and windows.md",
-    "interpreter/Advanced/architecture.md",
-    "frontend/Reference/Frontend Objects/CreateFrontEndObject.md",
     "frontend/Reference/Tree",
-    "saved-ezgif.com-cut.gif",
-    "sampled-ezgif.com-optimize.gif",
-    "Screenshot 2024-08-03 at 15.49.58.png",
-    "Screenshot 2024-08-03 at 15.47.04.png",
-    "Screenshot 2024-08-03 at 13.58.42.png",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",
     "frontend/Reference/Video",

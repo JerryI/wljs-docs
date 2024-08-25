@@ -16,6 +16,8 @@ It improves user experience drastically
 - Hide/Unhide current cell `Cmd+2`, `Alt+2`
 - Clear outputs `Cmd+U`, `Alt+U`
 - Search inside cell `Cmd+f`, `Ctrl+f`
+- `Shift + Alt + Space` overlay window (Desktop App only)
+
 ### Evaluation
 - Evaluate `Shift+Enter`
 - Abort `Cmd+.`, `Alt+.`

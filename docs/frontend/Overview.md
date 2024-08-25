@@ -40,6 +40,8 @@ Project to a window is the most interesting feature here, that allows to evaluat
 - `Ctrl+P`, `Cmd+P` open command palette
 - `Shift+Enter` evaluate current cell
 - `Ctrl/Cmd + f` search in the focused cell
+- `Shift + Alt + Space` overlay window (Desktop App only)
+
 #### Cells
 - `Ctrl+W`, `Cmd+2` hide/show input cell
 - `Ctrl+/` make fraction on selected
@@ -114,6 +116,13 @@ Or just draw something inside the code editor
 
 ![](./../Excalidraw-ezgif.com-speed%201.gif)
 
+
+## Overlay mode
+While running WLJS App (in a tray or normally) press `Shift+Alt+Space` to get quick access to WLJS input cell
+
+![](./../Screenshot%202024-08-25%20at%2016.52.14.png)
+
+See more in [Overlay mode](frontend/Advanced/Prompt%20overlay.md)
 
 ## Graphics 2D & 3D
 Most Mathematica's plotting functions produces lower-level primitives. The major part of them are supported
