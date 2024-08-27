@@ -30,6 +30,7 @@ The animation will be applied only if at least one of those attributes is define
 - `data-eq-gradient`
 - `data-eq-color-precess`
 - `data-eq-delay`
+- `data-eq-static` (bypass the animation)
 :::
 
 :::note
@@ -79,6 +80,13 @@ The gradient precesses in a loop
 $$
 m a = F
 $$ <!-- .element: data-eq-gradient="['red', 'gold']" data-eq-color-precess="true" -->
+```
+
+### Bypass the animation (`data-eq-static`)
+It is used to skip animation, but still use Mathjax for rendering instead of standard KaTeX. It can be used for unifying the look of all equation.
+
+```
+data-eq-static="true"
 ```
 
 ## Fragments

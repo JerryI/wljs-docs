@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Projector.md",
+                "file": "frontend/Advanced/Slides/Animated equations.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Projector.md",
+                "file": "frontend/Advanced/Slides/Animated equations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Projector.md",
+                "file": "frontend/Advanced/Slides/Animated equations.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Projector.md"
+                "file": "frontend/Advanced/Slides/Animated equations.md"
               }
             }
           },
@@ -173,12 +173,12 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Advanced/Projector.md",
     "Screenshot 2024-08-25 at 17.25.50.png",
     "Screenshot 2024-08-25 at 17.17.48.png",
     "Screenshot 2024-08-25 at 17.09.18.png",
     "Screenshot 2024-08-25 at 17.08.52.png",
     "frontend/Advanced/Overlay mode.md",
-    "frontend/Advanced/Projector.md",
     "Screenshot 2024-08-25 at 17.04.34.png",
     "Screenshot 2024-08-25 at 17.03.18.png",
     "frontend/Overview.md",
@@ -207,7 +207,6 @@
     "frontend/Reference/Plotting Functions/ManipulatePlot.md",
     "frontend/Reference/Interpreter/Refresh.md",
     "frontend/Advanced/Command palette/AI Assistant.md",
-    "Screenshot 2024-08-20 at 12.34.02.png",
     "frontend/Cell types/Markdown.md",
     "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
     "frontend/Reference/Tree",
