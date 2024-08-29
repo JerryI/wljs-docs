@@ -380,20 +380,23 @@ export function WLJSEditor({children, nid, id, type, display, opts}) {
 
   const {colorMode, setColorMode} = useColorMode();
 
+  const decoded = decodeURIComponent(children);
 
-
-  const [faded, setFaded] = useState(opts.Fade);
+  const [faded, setFaded]   = useState(opts.Fade);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect( () => {
     const element = ref.current;
     console.warn('Create Codemirror');
     console.warn(display);
 
-    const decoded = decodeURIComponent(children);
+    
     console.log(decoded);
     
 
+    setLoaded(true);
     const s = new window.SupportedCells[display].view({element: element}, decoded);
+    
 
     if (s.editor && opts.Fade) {
    
@@ -419,7 +422,10 @@ export function WLJSEditor({children, nid, id, type, display, opts}) {
     <div style={{filter: (colorMode == 'dark' ? 'invert(1) contrast(0.8) hue-rotate(-185deg)' : 'none')}} className="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block">
        <div className={ faded ? "h-fade-20 codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module" : "codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"}>
           <pre tabIndex="0" className="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style={{color: 'rgb(57, 58, 52)', backgroundColor: 'rgb(246, 248, 250)'}}>
-            <code ref={ref} className="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code>
+          {!loaded &&
+            <code style={{'whiteSpace': 'pre-wrap'}} className="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">{decoded}</code>
+          }
+            <code ref={ref} className="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code> 
           </pre>
        </div>
     </div>   
