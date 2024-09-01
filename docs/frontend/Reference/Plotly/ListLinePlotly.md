@@ -5,6 +5,7 @@ registered: true
 needsContainer: true
 update: true
 origin: https://github.com/JerryI/wljs-plotly
+numericArray: true
 ---
 ```mathematica
 ListLinePlotly[{data1_, data2_, ...}]

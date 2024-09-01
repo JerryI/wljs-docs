@@ -5,6 +5,7 @@ env:
 package: wljs-graphics3d-threejs
 source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/src/kernel.js
 update: false
+numericArray: true
 ---
 a 3D version of [Polygon](frontend/Reference/Graphics/Polygon.md) used in [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)
 

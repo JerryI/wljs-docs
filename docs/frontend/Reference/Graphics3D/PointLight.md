@@ -4,6 +4,7 @@ env:
 source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/src/kernel.js
 update: true
 package: wljs-graphics3d-threejs
+numericArray: true
 ---
 ```mathematica
 PointLight[col_RGBColor, position_:{0,0,10}, intensity_:100, distance_:0, decay_:2]

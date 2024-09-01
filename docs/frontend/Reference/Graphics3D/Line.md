@@ -5,6 +5,7 @@ env:
 package: wljs-graphics3d-threejs
 source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/src/kernel.js
 update: true
+numericArray: true
 ---
 ```mathematica
 Line[{{x1_,y1_,z1_}, ..., {xn_, yn_, zn_}} | indexes_List]

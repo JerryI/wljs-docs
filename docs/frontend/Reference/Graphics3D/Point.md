@@ -3,6 +3,7 @@ env:
   - WLJS
 package: wljs-graphics3d-threejs
 update: true
+numericArray: true
 ---
 represents 3D point
 

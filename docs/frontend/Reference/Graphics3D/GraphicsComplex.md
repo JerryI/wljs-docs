@@ -4,6 +4,7 @@ env:
 package: wljs-graphics3d-threejs
 source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/src/kernel.js
 update: true
+numericArray: true
 ---
 ```mathematica
 GraphicsComplex[data_List, primitives_, opts___]

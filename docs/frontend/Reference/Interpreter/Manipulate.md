@@ -41,4 +41,8 @@ Manipulate[Plot3D[Sin[n x] Cos[n y], {x,-1,1}, {y,-1,1}], {n, 1, 5, 1}]
 `Manipulate` is caching all results by the default.
 
 ## Portability
-`Manipualte` __cannot be exported__ to [Static HTML](frontend/Exporting/Static%20HTML.md), however, [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) __is possible__ to keep the functionality working, but the file size might be quite large.
+`Manipualte` __cannot be exported__ to [Static HTML](frontend/Exporting/Static%20HTML.md), ~~however, [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) __is possible__ to keep the functionality working, but the file size might be quite large.~~
+
+:::caution
+Due to garbage collection problem, it is no longer possible to export using dynamic mode. Please write to Github issues, if you consider this problem important. Apart from that, [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) as well as[ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md) will work properly being exported using dynamic mode.
+:::

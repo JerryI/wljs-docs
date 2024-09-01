@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Sphere.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Sphere",
+                "query": "GraphicsC",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Sphere.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Sphere.md",
+                "file": "frontend/Reference/Graphics/Line.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Sphere.md"
+                "file": "frontend/Reference/Graphics/Line.md"
               }
             }
           },
@@ -174,15 +174,22 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
-    "frontend/Reference/Graphics/Arrow.md",
-    "frontend/Reference/Graphics3D/Arrow.md",
     "frontend/Reference/Graphics/Point.md",
-    "frontend/Reference/Graphics3D/Point.md",
-    "frontend/Reference/Graphics/Line.md",
-    "frontend/Reference/Graphics3D/Line.md",
-    "frontend/Reference/Graphics/Polygon.md",
     "frontend/Reference/Graphics3D/Polygon.md",
     "frontend/Reference/Graphics3D/GraphicsComplex.md",
+    "frontend/Reference/Graphics/GraphicsComplex.md",
+    "frontend/Reference/Graphics3D/Sphere.md",
+    "frontend/Reference/Plotly/ListLinePlotly.md",
+    "frontend/Reference/Plotting Functions/ListLinePlot.md",
+    "frontend/Reference/Graphics3D/Line.md",
+    "frontend/Reference/Graphics/Line.md",
+    "frontend/Reference/Graphics3D/PointLight.md",
+    "frontend/Reference/Graphics3D/Point.md",
+    "frontend/Reference/Sound/PCMPlayer.md",
+    "frontend/Reference/Interpreter/Manipulate.md",
+    "frontend/Reference/Graphics/Arrow.md",
+    "frontend/Reference/Graphics3D/Arrow.md",
+    "frontend/Reference/Graphics/Polygon.md",
     "frontend/Advanced/Events system/Cells and windows.md",
     "frontend/Advanced/Slides/Animated equations.md",
     "frontend/Advanced/Projector.md",
@@ -201,14 +208,7 @@
     "frontend/Advanced/Command palette/Overlay mode.md",
     "frontend/Advanced/Slides/Fragments.md",
     "aniamtedLatex.mov",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Cell types/Slides.md",
-    "frontend/Troubleshooting/Troubleshooting.md",
-    "frontend/Tutorial/Working with Images.md",
-    "frontend/Dynamics.md",
     "nice.gif",
-    "frontend/Reference/Interpreter/Manipulate.md",
-    "frontend/Reference/Graphics/Inset.md",
     "fluid-ezgif.com-video-to-webp-converter.webp",
     "fluid-ezgif.com-optimize.gif",
     "frontend/Reference/Tree",
