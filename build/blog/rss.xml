@@ -4,10 +4,197 @@
         <title>WLJS Notebook Blog</title>
         <link>https://jerryi.github.io/wljs-docs/blog</link>
         <description>WLJS Notebook Blog</description>
-        <lastBuildDate>Thu, 22 Aug 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 01 Sep 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Basics of Compute Shaders in WL 1]]></title>
+            <link>https://jerryi.github.io/wljs-docs/blog/2024/09/1/basics-csh-1</link>
+            <guid>https://jerryi.github.io/wljs-docs/blog/2024/09/1/basics-csh-1</guid>
+            <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[A GPU is also a great tool for general-purpose computations. There are a few ways to couple it with Wolfram Language:]]></description>
+            <content:encoded><![CDATA[<p>A GPU is also a great tool for general-purpose computations. There are a few ways to couple it with Wolfram Language:</p>
+<ul>
+<li>CUDALink</li>
+<li>OpenCLLink</li>
+<li>LibraryLink</li>
+</ul>
+<p>The first option requires hardware from Nvidia, which is a massive drawback considering there are many other processors on the market capable of crunching numbers. The last option allows integrating any dynamic library written in C/Rust (probably there are other bindings as well) into our Kernel, but the amount of effort required to write a general-purpose GPU library and deal with cross-platform issues is quite cumbersome and defeats the whole purpose of using WL here.</p>
+<p>We will go with the most cross-platform and hardware-agnostic solution: <code>OpenCL</code> 🚅</p>
+<!-- -->
+<a href="https://jerryi.github.io/wljs-docs/8780c679b5519d9c180825e967f75963.wln" class="p-2 text-xs w-full flex ring-1 ring-inset text-gray-600 shadow ring-gray-300 bg-gray-300 my-2">Download original notebook <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 ml-auto" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17 17h.01m.39-3h.6c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C21 15.602 21 16.068 21 17s0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C19.398 20 18.932 20 18 20H6c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C3 18.398 3 17.932 3 17s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C4.602 14 5.068 14 6 14h.6m5.4 1V4m0 11-3-3m3 3 3-3"></path></svg></a>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Needs["OpenCLLink`"]
+If[!OpenCLQ[], Alert["Report the police, it doest not work"] // FrontSubmit]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">True</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>We assume you already know the OpenCL programming language and its execution model. There are plenty of resources available online.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="drawing-on-canvas">Drawing on Canvas<a href="https://jerryi.github.io/wljs-docs/blog/2024/09/1/basics-csh-1#drawing-on-canvas" class="hash-link" aria-label="Direct link to Drawing on Canvas" title="Direct link to Drawing on Canvas">​</a></h2>
+<p>The most visual way of seeing the work of your tiny GPU kernels is to ask them to generate data and interpret it as an image. Let us define a simple kernel that fills an entire screen.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">test.cl
+
+__kernel void render(
+  __global uchar4* output, 
+  const int width, 
+  const int height
+) {
+    unsigned int work_item_id = get_global_id(0);
+    
+    unsigned int x_coord = work_item_id % width;
+    unsigned int y_coord = work_item_id / width;
+
+    float3 finalcolor = (float3)(0.0f, 0.5f, 0.2f);
+
+    //clamp to 8bits for each channel
+    
+    uchar4 rgba;
+    rgba.x=(uchar)(finalcolor.x*255.0);
+    rgba.y=(uchar)(finalcolor.y*255.0);
+    rgba.z=(uchar)(finalcolor.z*255.0);
+    rgba.w=255;
+
+    output[work_item_id] = rgba;
+}</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>A side note</p>
+<blockquote>
+<p>If you run the cell above, it creates a file named <code>test.cl</code></p>
+</blockquote>
+<p>We added a minor optimization: the resulting color will be normalized to the range of the <code>UnsignedInteger8</code> typed array in Wolfram Language.</p>
+<p>Now let us compile it.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">render = OpenCLFunctionLoad[File["test.cl"], 
+  "render", {{"UnsignedByte[4]", _, "Output"}, _Integer, _Integer}, 256, "ShellOutputFunction"-&gt;Print];</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">" "</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Here we specified the local group size to be <code>256</code>, but at this stage, it does not matter for us. Just make sure that it does not exceed your CL device limitations.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Cases[OpenCLInformation[], Rule["Maximum Work Group Size", r_] :&gt; r, Infinity]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">{256}</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Allocate memory for our generated image. Let it be small for now, <code>128x128</code>.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">image = OpenCLMemoryLoad[Table[{0, 0, 0, 0}, {i, 128}, {j, 128}], "UnsignedByte[4]"];</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>A side note</p>
+<blockquote>
+<p>Do not forget to unload this memory if you no longer need it.</p>
+</blockquote>
+<p>To execute our OpenCL function, we also need to specify the grid size (aka how many kernels we need to run). Since in our case this is a bitmap image and we are running 1 kernel per pixel the number will <code>128^2</code> according the resolution we picked for an image</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">render[image, 128, 128, 128 128];
+image // OpenCLMemoryGet;
+NumericArray[%, "UnsignedInteger8"];
+Image[%, "Byte", Magnification-&gt;3]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["fe0488c4-e676-4a8a-9e38-79950149d078"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKp6UamFhYJJvoppqZm+maJFok6lqmGlvomltamhoYmlimGJhbAACA9RUH"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>It is important to note that <strong>you should always try to utilize</strong> <code>NumericArray</code> when working with raster graphics, since Wolfram's native <code>List</code> is quite slow for this task. The second important thing is to specify the format explicitly in <code>Image</code> as well. There is a 1:1 correspondence:</p>
+<div><br></div>
+<table><thead><tr><th>OpenCL</th><th>NumericArray</th><th>Image</th></tr></thead><tbody><tr><td><code>UnsignedByte</code></td><td><code>UnsignedInteger8</code></td><td><code>Byte</code></td></tr><tr><td><code>Float</code></td><td><code>Real32</code></td><td><code>Real</code></td></tr></tbody></table>
+<p>Let us try something more interesting.</p>
+<p>Here is a very primitive example of what is called Signed-Distance-Fields (SDF). We set the "geometry" using a parametric equation and calculate the color of every pixel based on the distance to vertices or any other control points of our defined geometry. For example, to draw a disk we need only the equation of a circle with two parameters:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>color</mtext><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><mi mathvariant="normal">∣</mi><mi mathvariant="bold">r</mi><mo>−</mo><msub><mi mathvariant="bold">r</mi><mi>c</mi></msub><msup><mi mathvariant="normal">∣</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{color} = R^2 - |\mathbf{r} - \mathbf{r}_c|^2 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em"></span><span class="mord text"><span class="mord">color</span></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em"><span style="top:-3.113em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathbf">r</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em"></span><span class="mord"><span class="mord mathbf">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mord"><span class="mord">∣</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em"><span style="top:-3.113em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>
+<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold">r</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf{r}_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5944em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathbf">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span> is the coordinates of the center and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em"></span><span class="mord mathnormal" style="margin-right:0.00773em">R</span></span></span></span> is the radius. After that, we should clip the resulting color to the range of <code>0.0</code> and <code>1.0</code> to avoid any artifacts.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">test.cl
+
+float clip(float val, const float min, const float max) {
+  if (val &gt; max) return max;
+  if (val &lt; min) return min;
+  return val;
+}
+
+__kernel void render(
+  __global uchar4* output, 
+  const int width, 
+  const int height
+) {
+    unsigned int work_item_id = get_global_id(0);
+    
+    unsigned int x_coord = work_item_id % width;
+    unsigned int y_coord = work_item_id / width;
+
+    //normalize screen coordinates
+    float fx = (float)x_coord / (float)width; 
+	float fy = (float)y_coord / (float)height;
+
+    float3 finalcolor = (float3)(fy * 0.1f, fy * 0.3f, 0.3f); // a nice background
+
+    float dist2 = (fx - 0.5f)*(fx - 0.5f) + (fy - 0.5f)*(fy - 0.5f);
+    finalcolor.x += clip(10.0f*(0.4f*0.4f - dist2), 0.0f, 1.0f);
+
+    //clamp to 8bits for each channel
+    
+    uchar4 rgba;
+    rgba.x=(uchar)(finalcolor.x*255.0);
+    rgba.y=(uchar)(finalcolor.y*255.0);
+    rgba.z=(uchar)(finalcolor.z*255.0);
+    rgba.w=255;
+
+    output[work_item_id] = rgba;
+}</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Reload</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">render = OpenCLFunctionLoad[File["test.cl"], 
+  "render", {{"UnsignedByte[4]", _, "Output"}, _Integer, _Integer}, 256, "ShellOutputFunction"-&gt;Print];
+
+render[image, 128, 128, 128 128];
+image // OpenCLMemoryGet;
+NumericArray[%, "UnsignedInteger8"];
+Image[%, "Byte", Magnification-&gt;3]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">" "</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["402e057f-1586-4e2d-8c5a-504dc17741f1"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKmxgYpRqYmqfpGppamOmapBql6FokmybqmhqYpCQbmpubGKYZAgB3XxUP"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Because our toy SDF function provides a squared distance, it creates a smooth transition on the edges before it starts to clip to 1.0.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="controls">Controls<a href="https://jerryi.github.io/wljs-docs/blog/2024/09/1/basics-csh-1#controls" class="hash-link" aria-label="Direct link to Controls" title="Direct link to Controls">​</a></h2>
+<p>We can hook up some external controls to change the parameters of our disk. The simplest one will be the radius.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">test.cl
+
+float clip(float val, const float min, const float max) {
+  if (val &gt; max) return max;
+  if (val &lt; min) return min;
+  return val;
+}
+
+__kernel void render(
+  __global uchar4* output, 
+  const int width, 
+  const int height,
+  const float radius //&lt;---- HERE
+) {
+    unsigned int work_item_id = get_global_id(0);
+    
+    unsigned int x_coord = work_item_id % width;
+    unsigned int y_coord = work_item_id / width;
+
+    //normalize screen coordinates
+    float fx = (float)x_coord / (float)width; 
+	float fy = (float)y_coord / (float)height;
+
+    float3 finalcolor = (float3)(fy * 0.1f, fy * 0.3f, 0.3f); // a nice background
+
+    float dist2 = (fx - 0.5f)*(fx - 0.5f) + (fy - 0.5f)*(fy - 0.5f);
+    finalcolor.x += clip(10.0f*(radius*radius - dist2), 0.0f, 1.0f); //&lt;---- HERE
+
+    //clamp to 8bits for each channel
+    
+    uchar4 rgba;
+    rgba.x=(uchar)(finalcolor.x*255.0);
+    rgba.y=(uchar)(finalcolor.y*255.0);
+    rgba.z=(uchar)(finalcolor.z*255.0);
+    rgba.w=255;
+
+    output[work_item_id] = rgba;
+}</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Now recompile it once.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">render = OpenCLFunctionLoad[File["test.cl"], 
+  "render", {{"UnsignedByte[4]", _, "Output"}, _Integer, _Integer, "Float"}, 256, "ShellOutputFunction"-&gt;Print];</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">" "</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>To render dynamically, we provide an intermediate symbol to which an <code>Image</code> listener will be assigned.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Module[{buffer},
+  {
+    Image[buffer // Offload, "Byte", Magnification-&gt;3],
+
+    EventHandler[InputRange[0., 1., 0.1, "Label"-&gt;"R"], Function[radius,
+      render[image, 128, 128, radius, 128 128];
+      buffer = NumericArray[image // OpenCLMemoryGet, "UnsignedInteger8"];
+    ]] // EventFire (*BB[*)(* fire once to initialize buffer *)(*,*)(*"1:eJxTTMoPSmNhYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCS4g4Zyfm5uaV+KUXxEMUqxsbm6exgSSBPGCSnNSg9mAjOCSosy8dLBYSFFpKpoKkDkeqYkpEFXBILO1sCgJSczMQVYCAOFrJEU="*)(*]BB*)
+  } // Row 
+]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*GB[*){{(*VB[*)(FrontEndRef["0b6d244d-9e67-4236-90f8-133aa756151a"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKGySZpRiZmKToWqaameuaGBmb6VoapFnoGhobJyaam5oZmhomAgB4zxTh"*)(*]VB*)(*|*),(*|*)(*VB[*)(EventObject[&lt;|"Id" -&gt; "e86d4b59-0c98-45ff-af58-e0d00db0df09", "Initial" -&gt; 0.5, "View" -&gt; "d4225ab7-34a1-4615-8131-947dbbfc6796"|&gt;])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKp5gYGZkmJpnrGpskGuqamBma6loYGhvqWpqYpyQlpSWbmVuaAQB3ohUV"*)(*]VB*)}(*||*),(*||*)}(*]GB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>When you drag the slider, it reruns the OpenCL kernel and provides a new bitmap image to be displayed on the screen.</p>
+<p>In the next part we will go deeper and try to take advantage of local groups, memory and do animations.</p>]]></content:encoded>
+            <category>graphics</category>
+            <category>opencl</category>
+            <category>GPU</category>
+        </item>
         <item>
             <title><![CDATA[Covariant Matrices and Ellipses]]></title>
             <link>https://jerryi.github.io/wljs-docs/blog/2024/08/22/ellipce</link>

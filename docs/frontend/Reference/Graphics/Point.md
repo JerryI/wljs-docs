@@ -4,6 +4,7 @@ env:
 package: wljs-graphics-d3
 update: true
 source: https://github.com/JerryI/wljs-graphics-d3/blob/dev/src/kernel.js
+numericArray: true
 ---
 ```mathematica
 Point[p_List | _Offload]

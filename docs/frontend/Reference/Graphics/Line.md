@@ -4,6 +4,7 @@ env:
 package: wljs-graphics-d3
 update: true
 source: https://github.com/JerryI/wljs-graphics-d3/blob/dev/src/kernel.js
+numericArray: true
 ---
 the representation of a line going though the points `{x1,y1}`, `{x2,y2}`
 

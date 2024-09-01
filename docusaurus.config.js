@@ -36,6 +36,7 @@ const scripts = [
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/boxes.min.js",  
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-editor@dev/src/objects.min.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-js-support@dev/src/kernel.min.js",
+  "https://cdn.jsdelivr.net/gh/JerryI/wljs-magic-support@dev/src/kernel.min.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-mermaid-support@dev/dist/kernel.min.js",
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-sound@master/dist/kernel.min.js",  
   "https://cdn.jsdelivr.net/gh/JerryI/wljs-inputs@dev/dist/kernel.min.js",

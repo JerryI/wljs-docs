@@ -10,6 +10,7 @@
     "needsContainer": "checkbox",
     "registered": "checkbox",
     "internal": "checkbox",
-    "": "checkbox"
+    "": "checkbox",
+    "numericArray": "checkbox"
   }
 }

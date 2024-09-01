@@ -40,6 +40,8 @@ GraphicsComplex[v, Polygon[i]] // Graphics3D
 
 <Wl >{`v = PolyhedronData["Dodecahedron", "Vertices"] // N; i = PolyhedronData["Dodecahedron", "FaceIndices"]; GraphicsComplex[v, {Polygon[i]}] // Graphics3D `}</Wl>
 
+### `Point`
+
 ## Options
 ### `"VertexColors"`
 Defines sets of colors used for shading vertices

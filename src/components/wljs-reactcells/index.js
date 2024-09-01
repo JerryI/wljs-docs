@@ -395,7 +395,11 @@ export function WLJSEditor({children, nid, id, type, display, opts}) {
     
 
     setLoaded(true);
-    const s = new window.SupportedCells[display].view({element: element}, decoded);
+    let s;
+    console.warn('Created: '+display);
+    if (display == 'print') return;
+    if (!window.SupportedCells[display]) new Error('Not found: '+display);    
+    if (window.SupportedCells[display].view) s = new window.SupportedCells[display].view({element: element}, decoded);
     
 
     if (s.editor && opts.Fade) {
@@ -414,7 +418,7 @@ export function WLJSEditor({children, nid, id, type, display, opts}) {
     }
 
     return () => {
-      s.dispose();
+      if (s) s.dispose();
     }
   }, []);
 
@@ -432,42 +436,7 @@ export function WLJSEditor({children, nid, id, type, display, opts}) {
   )
 }
 
-export function WLJS({children, data}) {
-  
-  const ref = useRef(null);
 
-  const {colorMode, setColorMode} = useColorMode();
-
-  useEffect( () => {
-    const element = ref.current;
-    console.log('Create Codemirror');
-
-    window.CMInitialized = true;
-
-    if (window.CMInitialized) {
-
-    }
-
-    const s = new window.SupportedCells['codemirror'].view({element: element}, children);
-
-    return () => {
-      if (s) {
-        //s.destroy();
-        console.log('Remove Codemirror');
-      }
-    }
-  }, []);
-
-  return (
-    <div style={{filter: (colorMode == 'dark' ? 'invert(1) contrast(0.8) hue-rotate(-185deg)' : 'none')}} className="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block">
-       <div className="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">
-          <pre tabIndex="0" className="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style={{color: 'rgb(57, 58, 52)', backgroundColor: 'rgb(246, 248, 250)'}}>
-            <code ref={ref} className="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code>
-          </pre>
-       </div>
-    </div>   
-  )
-}
 
 
 

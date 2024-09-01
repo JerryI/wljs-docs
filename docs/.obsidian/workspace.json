@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/Animated equations.md",
+                "file": "frontend/Reference/Graphics3D/Sphere.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Events system/Cells and windows.md",
+                "file": "frontend/Reference/Graphics3D/Polygon.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Manipulate",
+                "query": "Sphere",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -77,7 +77,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/Animated equations.md",
+                "file": "frontend/Reference/Graphics3D/Sphere.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/Animated equations.md",
+                "file": "frontend/Reference/Graphics3D/Sphere.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/Animated equations.md"
+                "file": "frontend/Reference/Graphics3D/Sphere.md"
               }
             }
           },
@@ -173,6 +174,17 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Reference/Graphics/Arrow.md",
+    "frontend/Reference/Graphics3D/Arrow.md",
+    "frontend/Reference/Graphics/Point.md",
+    "frontend/Reference/Graphics3D/Point.md",
+    "frontend/Reference/Graphics/Line.md",
+    "frontend/Reference/Graphics3D/Line.md",
+    "frontend/Reference/Graphics/Polygon.md",
+    "frontend/Reference/Graphics3D/Polygon.md",
+    "frontend/Reference/Graphics3D/GraphicsComplex.md",
+    "frontend/Advanced/Events system/Cells and windows.md",
+    "frontend/Advanced/Slides/Animated equations.md",
     "frontend/Advanced/Projector.md",
     "Screenshot 2024-08-25 at 17.25.50.png",
     "Screenshot 2024-08-25 at 17.17.48.png",
@@ -187,7 +199,6 @@
     "frontend/Guidelines.md",
     "frontend/Command palette.md",
     "frontend/Advanced/Command palette/Overlay mode.md",
-    "frontend/Advanced/Slides/Animated equations.md",
     "frontend/Advanced/Slides/Fragments.md",
     "aniamtedLatex.mov",
     "frontend/Advanced/Slides/animations.md",
@@ -198,17 +209,8 @@
     "nice.gif",
     "frontend/Reference/Interpreter/Manipulate.md",
     "frontend/Reference/Graphics/Inset.md",
-    "frontend/Exporting/Dynamic HTML.md",
-    "frontend/Reference/Plotting Functions/AnimatePlot.md",
     "fluid-ezgif.com-video-to-webp-converter.webp",
     "fluid-ezgif.com-optimize.gif",
-    "frontend/Exporting/Static HTML.md",
-    "frontend/Reference/Interpreter/Offload.md",
-    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
-    "frontend/Reference/Interpreter/Refresh.md",
-    "frontend/Advanced/Command palette/AI Assistant.md",
-    "frontend/Cell types/Markdown.md",
-    "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
     "frontend/Reference/Tree",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",

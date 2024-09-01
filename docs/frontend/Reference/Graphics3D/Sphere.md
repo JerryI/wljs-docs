@@ -5,6 +5,7 @@ virtual: true
 needsContainer: false
 update: true
 draft: false
+numericArray: true
 ---
 ```mathematica
 Sphere[c_List, radius_:1]
