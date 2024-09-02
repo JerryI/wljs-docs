@@ -352,6 +352,46 @@ core.MyFunction.update = async (args, env) => {}
 core.MyFunction.destroy = async (args, env) => {}
 ```
 
+#### A remark on Packed and Numeric arrays
+Be aware, if you send some large chunks of numerical data Wolfram Kernel might use `PackedArray` instead of a plain `List` (even if you does not explicitly wrap it into `NumericArray`). Both of them are directly translated into `NumericArrayObject` in Javascript, which is a wrapper of `TypedArray`.
+
+Therefore you should always check for this type
+
+```js
+const data = await interpretate(args[0], env); //get it
+
+if (data instance of NumericArrayObject) {
+	... process Typed Array
+} else {
+	... process normal Javascript Array
+}
+```
+
+One can take advantage of `TypedArray` s since they are basically raw and flat memory regions, which is easy to process and store for Javascript or send it further to canvas or to a GPU (WebGL, WebGPU). A class wrapper contains several fields
+
+```ts
+class NumericArrayObject {
+	dims : Array //dimensions of data
+	buffer : TypedArray //actual data
+
+	normal() : Array<Any> //converts back to a normal JS array
+}
+```
+
+Typed arrays are widely used in [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md) primitives, [Image](frontend/Reference/Graphics/Image.md), [Audio](frontend/Reference/Sound/Audio.md) players and etc.
+
+However, if you just want a normal `Array`, you can always convert simply by calling 
+
+```js
+let data = await interpretate(args[0], env); //get it
+
+if (data instance of NumericArrayObject) {
+	data = data.normal()
+}
+
+//works as usual
+```
+
 ##### 🎡 Example 3: Game of Life (improvements)
 Let us define our constructor 
 ```js
@@ -360,7 +400,11 @@ Let us define our constructor
 core.MyFunction = async (args, env) => {
   //just to make second object to be aware of the previous one
   //and fetch initial data
-  const data = await interpretate(args[0], env);
+  let data = await interpretate(args[0], env);
+  if (data instance of NumericArrayObject) {
+	data = data.normal()
+  }
+
   //create js canvas
   const canvas = document.createElement("canvas");
   canvas.width = 400;
@@ -400,7 +444,10 @@ The next thing - a method, that allows us to update the canvas
 .js
 core.MyFunction.update = async (args, env) => {
   //get a new data
-  const data = await interpretate(args[0], env);
+  let data = await interpretate(args[0], env);
+  if (data instance of NumericArrayObject) {
+	data = data.normal()
+  }
   //get the canvas from the local memeory
   const context = env.local.ctx;
   //draw our boxes
@@ -432,6 +479,7 @@ and the destructor
 .js
 core.MyFunction.destroy = (args, env) => {}
 ```
+
 
 Then we can use our function with some dynamic symbols using [Offload](frontend/Reference/Interpreter/Offload.md) wrapper
 

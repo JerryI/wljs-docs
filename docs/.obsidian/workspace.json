@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Line.md",
+                "file": "frontend/Advanced/Javascript/Canvas.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "GraphicsC",
+                "query": "await",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -77,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Line.md",
+                "file": "frontend/Advanced/Javascript/Canvas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Line.md",
+                "file": "frontend/Advanced/Javascript/Canvas.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Line.md"
+                "file": "frontend/Advanced/Javascript/Canvas.md"
               }
             }
           },
@@ -172,8 +171,19 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6c07b6313b5cd247",
+  "active": "06328218290ccda3",
   "lastOpenFiles": [
+    "frontend/Advanced/Objects/Static decorations.md",
+    "frontend/Reference/Interpreter/Offload.md",
+    "interpreter/Basics/js-access.md",
+    "frontend/Reference/Frontend IO/FrontSubmit.md",
+    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+    "frontend/Advanced/Slides/crypto-text.md",
+    "frontend/Advanced/Javascript/Communication.md",
+    "frontend/Advanced/Javascript/Canvas.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
+    "frontend/Reference/Graphics/Line.md",
     "frontend/Reference/Graphics/Point.md",
     "frontend/Reference/Graphics3D/Polygon.md",
     "frontend/Reference/Graphics3D/GraphicsComplex.md",
@@ -182,7 +192,6 @@
     "frontend/Reference/Plotly/ListLinePlotly.md",
     "frontend/Reference/Plotting Functions/ListLinePlot.md",
     "frontend/Reference/Graphics3D/Line.md",
-    "frontend/Reference/Graphics/Line.md",
     "frontend/Reference/Graphics3D/PointLight.md",
     "frontend/Reference/Graphics3D/Point.md",
     "frontend/Reference/Sound/PCMPlayer.md",
@@ -190,23 +199,13 @@
     "frontend/Reference/Graphics/Arrow.md",
     "frontend/Reference/Graphics3D/Arrow.md",
     "frontend/Reference/Graphics/Polygon.md",
-    "frontend/Advanced/Events system/Cells and windows.md",
-    "frontend/Advanced/Slides/Animated equations.md",
-    "frontend/Advanced/Projector.md",
     "Screenshot 2024-08-25 at 17.25.50.png",
     "Screenshot 2024-08-25 at 17.17.48.png",
     "Screenshot 2024-08-25 at 17.09.18.png",
     "Screenshot 2024-08-25 at 17.08.52.png",
-    "frontend/Advanced/Overlay mode.md",
     "Screenshot 2024-08-25 at 17.04.34.png",
     "Screenshot 2024-08-25 at 17.03.18.png",
-    "frontend/Overview.md",
     "Screenshot 2024-08-25 at 16.52.14.png",
-    "frontend/instruction.md",
-    "frontend/Guidelines.md",
-    "frontend/Command palette.md",
-    "frontend/Advanced/Command palette/Overlay mode.md",
-    "frontend/Advanced/Slides/Fragments.md",
     "aniamtedLatex.mov",
     "nice.gif",
     "fluid-ezgif.com-video-to-webp-converter.webp",

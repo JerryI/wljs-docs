@@ -30,8 +30,8 @@ or chaining it with some other WLJS function
 FrontSubmit[MyFunction[ReadClipboard[]]]
 ```
 
-## Execution in the container
-So-called containers gives a DOM element, local memory for our function (see more [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md))
+## Execution in a cell
+So-called [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) gives a DOM element our function because of their [StandardForm](frontend/Reference/Decorations/StandardForm.md) is defined like that. This is the easiest way
 
 ```js title="cell 1"
 .js
@@ -51,7 +51,13 @@ CreateFrontEndObject[MyFunction2["Hello World!"]]
 it behaves like a symbol.
 
 :::tip
-You don't have to always use [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md). It is possible to force Wolfram Kernel to apply it automatically on output using [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) 
+You don't have to always use [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md). It is possible to force Wolfram Kernel to apply it automatically on output using [MakeBoxes](frontend/Reference/Decorations/MakeBoxes.md) or use [ViewBox](frontend/Reference/Decorations/ViewBox.md) directly i.e.
+
+```mathematica
+MyFunction2 /: MakeBoxes[m_MyFunction2, StandardForm] := (
+	ViewBox[m, m]
+)
+```
 :::
 
 __This is basically how [Graphics](frontend/Reference/Graphics/Graphics.md) and others are implemented.__
@@ -126,10 +132,8 @@ core.MyCustomComponent = async (args, env) => {
 Now we can make boxes for it
 
 ```mathematica title="cell 2"
-MyCustomComponent /: MakeBoxes[m_MyCustomComponent, StandardForm] := With[{
-  o = CreateFrontEndObject[m]
-},
-  MakeBoxes[o, StandardForm]
+MyCustomComponent /: MakeBoxes[m_MyCustomComponent, StandardForm] := With[{},
+  ViewBox[m, m]
 ]
 ```
 
@@ -195,7 +199,7 @@ or combining with a previous technic
 
 ```mathematica title="cell 2"
 MyCustomInput2[label_String] := With[{uid = CreateUUID[]},
-  EventObject[<|"Id"->uid, "View"-> WLXEmbed[MyCustomComponent2["Label"->label, "Event"->uid]]|>]
+  EventObject[<|"Id"->uid, "View"-> HTMLView[MyCustomComponent2["Label"->label, "Event"->uid]]|>]
 ]
 ```
 
@@ -206,7 +210,7 @@ EventHandler[MyCustomInput2["Click me"], Print]
 ```
 
 #### Side effects
-To call another function __after an elements was drawn__, use an options of [WLXEmbed](frontend/Reference/GUI/WLXEmbed.md). This is used for dynamic updates in [TextView](frontend/Reference/GUI/TextView.md) and [HTMLView](frontend/Reference/GUI/HTMLView.md) implementations.
+To call another function __after an elements was drawn__ see [HTMLView](frontend/Reference/GUI/HTMLView.md) page.
 
 ### Emit event from WLJS
 One can fire an event also using frontend's function `EventFire`, which is effectively acts like `server.kernel.emitt` being called from the WLJS Interpreter (i.e. using [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) or other and wrapped in [Offload](frontend/Reference/Interpreter/Offload.md))
