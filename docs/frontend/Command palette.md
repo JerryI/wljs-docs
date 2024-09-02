@@ -22,15 +22,14 @@ __See more [detailed guide](frontend/Advanced/Command%20palette/AI%20Assistant.m
 It will ask you for a OpenAI API Key. You need to issue it first on the official openAI website
 :::
 
-:::warning
-An initial system prompt that given AI the knowledge of available cells, details of used libraries and etc costs `4000` tokens
-:::
+We use the concept of a library or [Knowledge on demand](frontend/Advanced/Command%20palette/AI%20Assistant.md#Knowledge%20on%20demand), which means that all additional information about notebook cell types and etc is accessible on demand, and __it won’t use up your tokens if your request doesn’t match the topic__.
 
 In general AI can do the following
 - __create, remove, evaluate, edit cells__ in any language
 - __read notebook structure__ 
-- __see your focused cell__ you dropped a cursor on
-- __see your selection__ in any editor area
+- __see and edit your focused cell__ you dropped a cursor on
+- __see and edit your selection__ in any editor area
+- __check and read the knowledge library__ 
 - ~~google~~ __use WolframAlpha__ to fetch data from the internet
 
 Shorts

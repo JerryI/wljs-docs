@@ -89,9 +89,13 @@ An assistant is aware of being in a notebook environment. The following cell typ
 
 We also include the differences between Wolfram Mathematica and WLJS Notebook to the initial prompt including [Dynamics](frontend/Dynamics.md), [InputButton](frontend/Reference/GUI/InputButton.md), [InputRange](frontend/Reference/GUI/InputRange.md), [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) and some of the [Events](frontend/Reference/Misc/Events.md) system features.
 
-:::warning
-An initial prompt costs $\sim 4000$ tokens. You can disable it in the settings, but the quality of assistance will drop drastically. 
-:::
+## Knowledge on demand
+We sorted out all additional information by topics for AI and placed it in a sort of database, what we call `AI Library`, you can find it in settings menu
+
+![](./../../../Screenshot%202024-09-02%20at%2012.03.25.png)
+
+This means that all those items are accessible on demand, and __it won’t use up your tokens if your request doesn’t match the topic__.
+
 
 ## Prompt examples
 Here is a few typical examples 

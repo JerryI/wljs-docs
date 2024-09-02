@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Javascript/Canvas.md",
+                "file": "frontend/Command palette.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Javascript/Canvas.md",
+                "file": "frontend/Command palette.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Javascript/Canvas.md",
+                "file": "frontend/Command palette.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Javascript/Canvas.md"
+                "file": "frontend/Command palette.md"
               }
             }
           },
@@ -171,8 +171,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "06328218290ccda3",
+  "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Advanced/Command palette/Snippets.md",
+    "frontend/Advanced/Command palette/AI Assistant.md",
+    "frontend/Command palette.md",
+    "Screenshot 2024-09-02 at 12.03.25.png",
+    "frontend/Advanced/Javascript/Canvas.md",
     "frontend/Advanced/Objects/Static decorations.md",
     "frontend/Reference/Interpreter/Offload.md",
     "interpreter/Basics/js-access.md",
@@ -180,7 +185,6 @@
     "frontend/Advanced/Syntax sugar/Decorating symbols.md",
     "frontend/Advanced/Slides/crypto-text.md",
     "frontend/Advanced/Javascript/Communication.md",
-    "frontend/Advanced/Javascript/Canvas.md",
     "frontend/Reference/Graphics/Graphics.md",
     "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
     "frontend/Reference/Graphics/Line.md",
@@ -196,9 +200,6 @@
     "frontend/Reference/Graphics3D/Point.md",
     "frontend/Reference/Sound/PCMPlayer.md",
     "frontend/Reference/Interpreter/Manipulate.md",
-    "frontend/Reference/Graphics/Arrow.md",
-    "frontend/Reference/Graphics3D/Arrow.md",
-    "frontend/Reference/Graphics/Polygon.md",
     "Screenshot 2024-08-25 at 17.25.50.png",
     "Screenshot 2024-08-25 at 17.17.48.png",
     "Screenshot 2024-08-25 at 17.09.18.png",
@@ -209,7 +210,6 @@
     "aniamtedLatex.mov",
     "nice.gif",
     "fluid-ezgif.com-video-to-webp-converter.webp",
-    "fluid-ezgif.com-optimize.gif",
     "frontend/Reference/Tree",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",
