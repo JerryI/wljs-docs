@@ -14,34 +14,34 @@ const FeatureList = [
       <>
       <ul>
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink} to={"wljs-demo/intro-notebook"}><b>Notebook Interface</b> An overview of UI and cell types</Link>
+          <Link className={styles.featureLink} to={"/wljs-demo/intro-notebook"}><b>Notebook Interface</b> An overview of UI and cell types</Link>
         </li>   
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/intro-mathinput"}><b>2D Math Input</b> Learn how to handle equations in a new way</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-mathinput"}><b>2D Math Input</b> Learn how to handle equations in a new way</Link>
         </li> 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/intro-import-plot"}><b>Import & Plot</b> How to drop the data and visualize it</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-import-plot"}><b>Import & Plot</b> How to drop the data and visualize it</Link>
         </li>
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/intro-static-animation"}>Simple animation</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-static-animation"}>Simple animation</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
           </div>          
         </li>
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/intro-image-sym"}>Images as symbols</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-image-sym"}>Images as symbols</Link>
         </li>
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/intro-manipulate"}><b>Manipulation</b> An example on how to rapidly generate controllable plots and other expressions.</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-manipulate"}><b>Manipulation</b> An example on how to rapidly generate controllable plots and other expressions.</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
           </div>
         </li>  
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/math-rick"}>Solving Equations on Rick Astley</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/math-rick"}>Solving Equations on Rick Astley</Link>
         </li>
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/mid-symbolic-quantum"}><b>Solving Quantuum Mechanics Problem</b> with Symbolic Programming from the ground up</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/mid-symbolic-quantum"}><b>Solving Quantuum Mechanics Problem</b> with Symbolic Programming from the ground up</Link>
         </li>        
       </ul>       
         
@@ -61,63 +61,63 @@ const FeatureList = [
       <>
       <ul>
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/intro-atom"}><b>Atom model</b> An example of animated 3D graphics </Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-atom"}><b>Atom model</b> An example of animated 3D graphics </Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
           </div>
         </li>
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/mid-quantum-well"}><b>Quantuum Well</b> Numerical solution to Schrödinger's Equation</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/mid-quantum-well"}><b>Quantuum Well</b> Numerical solution to Schrödinger's Equation</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
           </div>        
         </li>
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/mid-sliders-dynamics"}>Basics of Custom Dynamic Evaluation</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/mid-sliders-dynamics"}>Basics of Custom Dynamic Evaluation</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
           </div>          
         </li>
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/intro-boids-simple"}><b>Tiny Boids Simulation</b> in 4 lines of code</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-boids-simple"}><b>Tiny Boids Simulation</b> in 4 lines of code</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
           </div>        
         </li>
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/mid-inteferogram"}><b>Michelson Interferometer</b> Move mirrors in a virtual experiment and record interferogram</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/mid-inteferogram"}><b>Michelson Interferometer</b> Move mirrors in a virtual experiment and record interferogram</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
           </div>        
         </li>
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/mid-roots"}><b>Limit of algebraic polynomial roots</b> Visualize the beauty on Argand plane</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/mid-roots"}><b>Limit of algebraic polynomial roots</b> Visualize the beauty on Argand plane</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
           </div>          
         </li>      
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/mid-thz-tds"}><b>THz-TDS</b> Model the propagation of THz pulse though the dispersive medium in 15 lines of code</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/mid-thz-tds"}><b>THz-TDS</b> Model the propagation of THz pulse though the dispersive medium in 15 lines of code</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
           </div>          
         </li>          
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/mid-pinkorb"}>Pink Orb</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/mid-pinkorb"}>Pink Orb</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
           </div>          
         </li>
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/numerics-fem"}>Realtime Finite Elements Method</Link>
+          <Link className={styles.featureLink}  to={"/wljs-demo/numerics-fem"}>Realtime Finite Elements Method</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
           </div>          
@@ -140,25 +140,25 @@ const FeatureList = [
       <>
       <ul>
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/plot-1d"}><b>1D Data Visualization</b></Link>         
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-1d"}><b>1D Data Visualization</b></Link>         
         </li>       
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/plot-bars"}><b>Bars, Pies</b> and other charts</Link>         
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-bars"}><b>Bars, Pies</b> and other charts</Link>         
         </li>        
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/plot-2d"}><b>2D Data Visualization</b></Link>         
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-2d"}><b>2D Data Visualization</b></Link>         
         </li>     
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/plot-graph"}>Graphs Visualization</Link>         
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-graphs"}>Graphs Visualization</Link>         
         </li>         
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/plot-3d"}><b>3D Data Visualization</b></Link>         
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-3d"}><b>3D Data Visualization</b></Link>         
         </li>        
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/plot-shadows"}>Polygons & Shadows</Link>         
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-shadows"}>Polygons & Shadows</Link>         
         </li>    
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"wljs-demo/plot-plotly"}><b>Plotly.js Integration</b> A massive library of functions</Link>         
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-plotly"}><b>Plotly.js Integration</b> A massive library of functions</Link>         
         </li> 
         </ul>                   
       </>
@@ -208,21 +208,21 @@ const FeatureList = [
       <>
         <ul>
           <li className={styles.featureLi}>
-            <Link className={styles.featureLink}  to={"wljs-demo/mix-wlx"}>Use HTML & CSS directly to design the output</Link>    
+            <Link className={styles.featureLink}  to={"/wljs-demo/mix-wlx"}>Use HTML & CSS directly to design the output</Link>    
             <div className={styles.badgeHolder}>
               <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
             </div>                 
           </li> 
 
           <li className={styles.featureLi}>
-            <Link className={styles.featureLink}  to={"wljs-demo/mix-blowup"}><b>Blow up cats</b> with OpenCL!</Link>   
+            <Link className={styles.featureLink}  to={"/wljs-demo/mix-blowup"}><b>Blow up cats</b> with OpenCL!</Link>   
             <div className={styles.badgeHolder}>
               <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
             </div>                  
           </li>          
 
           <li className={styles.featureLi}>
-            <Link className={styles.featureLink}  to={"wljs-demo/mix-gauge"}>Use Javascript to make custom UI elements</Link>   
+            <Link className={styles.featureLink}  to={"/wljs-demo/mix-gauge"}>Use Javascript to make custom UI elements</Link>   
             <div className={styles.badgeHolder}>
               <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
             </div>                  
