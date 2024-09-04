@@ -44,7 +44,11 @@ export function WLJSStore({json, notebook, kernel}) {
             });
 
             Object.keys(promises).forEach((key) => {
-              promises[key].resolve(i[key]);
+              if (Array.isArray(promises[key])) {
+                promises[key].forEach((el) => el.resolve(i[key]));
+              } else {
+                promises[key].resolve(i[key]);
+              }
             })
           })
 
@@ -266,7 +270,12 @@ export function WLJSStore({json, notebook, kernel}) {
           return false;
         }
 
-        promises[what.slice(42,-2)] = p;
+        if (Array.isArray(promises[what.slice(42,-2)])) {
+          promises[what.slice(42,-2)].push(p);
+        } else {
+          promises[what.slice(42,-2)] = [p];
+        }
+        
         fetchFile();
         return p.promise;
       }
@@ -398,7 +407,10 @@ export function WLJSEditor({children, nid, id, type, display, opts}) {
     let s;
     console.warn('Created: '+display);
     if (display == 'print') return;
-    if (!window.SupportedCells[display]) new Error('Not found: '+display);    
+    if (!window.SupportedCells[display]) {
+      console.warn('Not found: '+display); 
+      return;
+    }   
     if (window.SupportedCells[display].view) s = new window.SupportedCells[display].view({element: element}, decoded);
     
 

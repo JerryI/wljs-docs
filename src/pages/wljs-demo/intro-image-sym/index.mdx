@@ -1,0 +1,31 @@
+## Images as symbols
+Upload an image and embed it to a page
+
+import { WLJSHTML, WLJSEditor, WLJSStore } from "@site/src/components/wljs-reactcells";
+
+
+
+<WLJSStore json={require('./attachments/67f3b180-70c9-4d26-9de7-17682bc9b3e9.txt').default} notebook={require('./attachments/notebook-67f.wln').default}/>
+
+
+
+
+<WLJSEditor display={"codemirror"} nid={"67f3b180-70c9-4d26-9de7-17682bc9b3e9"} id={"b801782f-6ed0-4be5-ab51-70b16c2b02d0"} type={"Input"} opts={{}} >{`i%3D%20%28%2AVB%5B%2A%29%28FrontEndRef%5B%223269ca35-7d8e-42ed-8f97-226596c0c554%22%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKGxuZWSYnGpvqmqdYpOqaGKWm6FqkWZrrGhmZmVqaJRskm5qaAAB%2BSRUq%22%2A%29%28%2A%5DVB%2A%29%3B%0A`}</WLJSEditor>
+
+Analyze color distribution
+
+<WLJSEditor display={"codemirror"} nid={"67f3b180-70c9-4d26-9de7-17682bc9b3e9"} id={"1f6a19ed-94ad-43b5-8346-f5558258df73"} type={"Input"} opts={{}} >{`BubbleChart%5B%0A%20Append%20%40%40%40%20%0A%20%20Tally%5BRound%5B%0A%20%20%20%20Flatten%5BImageData%5BColorConvert%5Bi%2C%20%22LAB%22%5D%5D%2C%201%5D%5B%5BAll%2C%20%7B2%2C%203%7D%5D%5D%2C%20%0A%20%20%20%2010%5E-1%5D%5D%2C%20ColorFunction%20-%3E%20%28LABColor%5B.6%2C%20%23%23%5D%20%26%29%2C%20%0A%20ColorFunctionScaling%20-%3E%20False%2C%20BubbleSizes%20-%3E%20%7B0.01%2C%200.1%7D%5D`}</WLJSEditor>
+
+<WLJSEditor display={"codemirror"} nid={"67f3b180-70c9-4d26-9de7-17682bc9b3e9"} id={"a290f143-2a29-4e38-b1f3-a077f60d4b59"} type={"Output"} opts={{}} >{`%28%2AVB%5B%2A%29%28FrontEndRef%5B%22943ea2ea-157f-49fc-b107-aba72e8da119%22%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKW5oYpyYapSbqGpqap%2BmaWKYl6yYZGpjrJiYlmhulWqQkGhpaAgCKshX%2B%22%2A%29%28%2A%5DVB%2A%29`}</WLJSEditor>
+
+Negate color
+
+<WLJSEditor display={"codemirror"} nid={"67f3b180-70c9-4d26-9de7-17682bc9b3e9"} id={"9e91f727-3fa8-438b-9f0d-7e85f3587657"} type={"Input"} opts={{}} >{`%28%2AVB%5B%2A%29%28FrontEndRef%5B%223269ca35-7d8e-42ed-8f97-226596c0c554%22%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKGxuZWSYnGpvqmqdYpOqaGKWm6FqkWZrrGhmZmVqaJRskm5qaAAB%2BSRUq%22%2A%29%28%2A%5DVB%2A%29%20%2F%2F%20ColorNegate`}</WLJSEditor>
+
+<WLJSEditor display={"codemirror"} nid={"67f3b180-70c9-4d26-9de7-17682bc9b3e9"} id={"f0ce1b36-e15b-4be1-8cc2-d63def62e58c"} type={"Output"} opts={{}} >{`%28%2AVB%5B%2A%29%28FrontEndRef%5B%2234e96801-bdc0-4f06-be7b-5656fd01a07f%22%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKG5ukWppZGBjqJqUkG%2BiapBmY6SalmifpmpqZmqWlGBgmGpinAQCAwxWf%22%2A%29%28%2A%5DVB%2A%29`}</WLJSEditor>
+
+Perform Radon transformation
+
+<WLJSEditor display={"codemirror"} nid={"67f3b180-70c9-4d26-9de7-17682bc9b3e9"} id={"af7e182d-8b74-4bb5-a7da-03528e3bcb14"} type={"Input"} opts={{}} >{`ColorSeparate%5Bi%2C%20%22L%22%5D%3B%0A%7B%25%2C%20%25%20%2F%2F%20Radon%7D%20%2F%2F%20Row%20%20`}</WLJSEditor>
+
+<WLJSEditor display={"codemirror"} nid={"67f3b180-70c9-4d26-9de7-17682bc9b3e9"} id={"d4542bc1-6680-4431-bc58-9aabd443c15e"} type={"Output"} opts={{}} >{`%28%2AGB%5B%2A%29%7B%7B%28%2AVB%5B%2A%29%28FrontEndRef%5B%223b8746ec-412f-479d-b0f1-3906d889a267%22%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKGydZmJuYpSbrmhgapemamFum6CYZpBnqGlsamKVYWFgmGpmZAwB%2BOBUm%22%2A%29%28%2A%5DVB%2A%29%28%2A%7C%2A%29%2C%28%2A%7C%2A%29%28%2AVB%5B%2A%29%28FrontEndRef%5B%221c16c69d-682d-4cf8-b367-2778ea7a4dc6%22%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKGyYbmiWbWabomlkYpeiaJKdZ6CYZm5nrGpmbW6QmmieapCSbAQCCfxW2%22%2A%29%28%2A%5DVB%2A%29%7D%7D%28%2A%5DGB%2A%29`}</WLJSEditor>

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Command palette.md",
+                "file": "frontend/Advanced/Command palette/AI Assistant.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Command palette.md",
+                "file": "frontend/Advanced/Command palette/AI Assistant.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Command palette.md",
+                "file": "frontend/Advanced/Command palette/AI Assistant.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Command palette.md"
+                "file": "frontend/Advanced/Command palette/AI Assistant.md"
               }
             }
           },
@@ -173,9 +173,11 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Advanced/Slides/Styling.md",
+    "Screenshot 2024-09-03 at 09.16.28.png",
+    "frontend/Command palette.md",
     "frontend/Advanced/Command palette/Snippets.md",
     "frontend/Advanced/Command palette/AI Assistant.md",
-    "frontend/Command palette.md",
     "Screenshot 2024-09-02 at 12.03.25.png",
     "frontend/Advanced/Javascript/Canvas.md",
     "frontend/Advanced/Objects/Static decorations.md",
@@ -199,7 +201,6 @@
     "frontend/Reference/Graphics3D/PointLight.md",
     "frontend/Reference/Graphics3D/Point.md",
     "frontend/Reference/Sound/PCMPlayer.md",
-    "frontend/Reference/Interpreter/Manipulate.md",
     "Screenshot 2024-08-25 at 17.25.50.png",
     "Screenshot 2024-08-25 at 17.17.48.png",
     "Screenshot 2024-08-25 at 17.09.18.png",
@@ -209,7 +210,6 @@
     "Screenshot 2024-08-25 at 16.52.14.png",
     "aniamtedLatex.mov",
     "nice.gif",
-    "fluid-ezgif.com-video-to-webp-converter.webp",
     "frontend/Reference/Tree",
     "frontend/Reference/Region",
     "Screenshot 2024-07-08 at 22.05.34.png.sb-f56d92a2-9XI0sP",

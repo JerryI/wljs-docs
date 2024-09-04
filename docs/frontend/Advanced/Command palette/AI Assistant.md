@@ -13,11 +13,27 @@ When your cursor is inside a cell (no matter *javascript*, *wolfram language* or
 AI can have an access to it. Mention __explicitly__
 > fix my errors in the focused cell
 
+
+### Fix typos in selected text
+When you select something in the cell, you can call AI bot to perform actions on a text. For example `Ctrl/Cmd + P` and 
+
+> Fix selected
+
+or more explicitly
+
+> Fix grammar in selected
+
 ### Read or edit selected text
 AI can also see currently selected text. However, the information about language is not provided. By the default it assumes the the main language is WL. 
 
 Ask for example
 > what is this symbol i selected?
+
+
+### Remove/add cells
+You can drop a cursor in any cell and ask to remove all cells starting from the focused one for instance
+
+> remove all cells starting from the focused
 
 ### Say "do it" in a single message
 if assistant hesitates to apply changes to your cell and prints changes to a chat, just tell

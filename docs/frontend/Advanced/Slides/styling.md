@@ -105,3 +105,80 @@ It might come handy to use RevealJS styling option for individual elements inste
 
 Here `slide` is applied to an entire slide, while `element` is localized to the last markdown element.
 
+## Misc
+
+
+### Align things on a slide
+There are many ways on how to do that, here is one of the examples
+
+#### Local style
+Define your own class inside slide or outside in [HTML](frontend/Cell%20types/HTML.md) cell for example
+
+```md
+.slide
+
+<style>
+  .center-x{
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top: 2rem;
+    border: none; 
+    border-radius: 4px
+  }
+</style>
+
+## Programming Languages
+### Wolfram Language
+
+<iframe class="center-x" width="800" height="500" src="https://www.wolfram.com"/>
+
+```
+
+#### Inline styles
+The same as before, but explicitly as `style` attribute
+
+```md
+...
+
+<iframe style="margin-left: auto; margin-right:auto" width="800" height="500" src="https://www.wolfram.com"/>
+```
+
+#### Tailwind utility classes
+The same as before, but explicitly as `class` attribute
+
+```md
+...
+
+<iframe class="mr-auto ml-auto" width="800" height="500" src="https://www.wolfram.com"/>
+```
+
+
+### Collapse / Expand section
+Use native HTML5 tag for it
+
+```md
+.slide
+
+# Title
+
+<details>
+<summary>Hidden section</summary>
+
+## Subtitle
+
+</details>
+```
+
+![](./../../../Screenshot%202024-09-03%20at%2009.16.28.png)
+
+### Scroll bar
+If the content is too large, but you still want to keep it on a single slide, one can tune the settings for a slide element
+
+```md
+.slide
+
+<!-- .slide: style="height:100%; overflow-y:scroll" -->
+
+...large content goes
+
+```

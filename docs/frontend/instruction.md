@@ -5,13 +5,14 @@ sidebar_class_name: green
 slug: /
 ---
 # Quick start
-Wolfram Language Notebook __requires  `wolframscript` (see Freeware [Wolfram Engine](https://www.wolfram.com/engine/) or Wolfram Kernel)__ installed on your PC/Mac. *If not, WLJS application will redirect you to the official download page*
+WLJS Notebook __requires  `wolframscript` (see Freeware [Wolfram Engine](https://www.wolfram.com/engine/) or Wolfram Kernel)__ installed on your PC/Mac. *If not, WLJS application will redirect you to the official download page*
 
-:::note
-Tested with Wolfram Engine 13.1 - 14.1
-:::
+import img from './../1_oEnvgJSyL-PNDTW8arOehw.webp';
 
-![](./../1_oEnvgJSyL-PNDTW8arOehw.webp)
+> All algorithms, functions, and other components of the Wolfram Language provided by the Wolfram Engine are the intellectual property of Wolfram Research, Inc.
+
+
+<img src={img} style={{marginLeft:'auto', marginRight:'auto', display:'block'}}/>
 
 <h2 style={{'text-align':'center'}}> 
 
@@ -20,10 +21,11 @@ Tested with Wolfram Engine 13.1 - 14.1
 </h2>
 
 :::note
-You do not need to have Mathematica, or other paid software installed to run WLJS Notebook. No subscription model, only one-time registration at *wolfram.com* is needed.
+You do not need to have Mathematica, or other paid software installed to run WLJS Notebook. No subscription model, only one-time registration at *wolfram.com* is needed for a personal use. Please check the [license agreement](https://www.wolfram.com/legal/terms/wolfram-engine.html).
 :::
 
 If you are __new to Wolfram Language__, please, check the [corresponding page](./Wolfram%20Language.md).
+
 
 There are two ways you can choose from
 
