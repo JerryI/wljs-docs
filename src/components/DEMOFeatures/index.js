@@ -117,6 +117,14 @@ const FeatureList = [
         </li>
 
         <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-dynquick"}>Quick and Dirty</Link>
+          <div className={styles.badgeHolder}>
+            <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
+          </div>          
+        </li>
+        
+
+        <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/numerics-fem"}>Realtime Finite Elements Method</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
