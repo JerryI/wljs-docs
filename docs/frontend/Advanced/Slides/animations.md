@@ -81,7 +81,7 @@ Figure[OptionsPattern[]] := With[{event = EventClone[OptionValue["Id"]]},
 		
 		EventHandler[event, {"fragment-1" -> Function[Null, 
 			(* act when the event happend *)
-			points = {Sin[#], Cos[#]} &/@ Range[40]
+			points = {Sin[#], Cos[#]} &/@ Range[40] // N
 		]}];
 		
 		Graphics[
@@ -111,90 +111,228 @@ Sure the state is not reservable in this case. You need to manage it by your own
 However, in practice reports are usually linear and do not require to repeat all animations again.
 
 ### Example 2
-Animating transitions complex figures
+Complex animations are better to prototype firstly inside a normal cell or [WLX](frontend/Cell%20types/WLX.md). Let us make one like that
 
-```mathematica title="cell 1"
-SpinStructure[OptionsPattern[]] := LeakyModule[{t2=0, t0=0, cloned = EventClone[OptionValue["Slide"]]},
-  (* clone and remove for the case if one assigns other handlers to the same patterns *)
-  EventHandler[ResultCell[], {"Destroy" -> Function[Null,
-    Print["Removed!"];
-    EventRemove[cloned];
-  ]}];
+```mathematica @
+LeakyModule[{
+  buffer = {},
+  \[Omega] = 7.,
+  text = "",
+  recalc,
+  target,
+  trigger = 0,
+  ev = CreateUUID[],
+  blocked = True,
+  p = 0.01
+},
+
+  blocked = False;
+
+  recalc[p_] := (
+    text = StringJoin["(*SbB[*)Subscript[ω(*|*),(*|*)0](*]SbB*)  = ", Round[p \[Omega], 0.01] // ToString, "(*SpB[*)Power[s(*|*),(*|*)-1](*]SpB*)"];
+    buffer = {#, Sin[p \[Omega] (*SqB[*)Sqrt[#](*]SqB*)]} &/@ Range[0., 25., 0.1];
+  );
+
+  target = {#, Sin[\[Omega] (*SqB[*)Sqrt[#](*]SqB*)]} &/@ Range[0., 25., 0.1];
+
+  recalc[0.01];
   
-  EventHandler[cloned, {
-    OptionValue["Stage1"] -> Function[Null,
-      t0=1;
-    ],
+  EventHandler[ev, Function[Null,
+    If[blocked, Return[]];
+    trigger += 1;
+    If[Mod[trigger, 2] == 0,
+      recalc[p];
+      p = p + 0.05 (1.0033 - p);
+      If[Abs[p - 1.0] < (*SpB[*)Power[10(*|*),(*|*)-3](*]SpB*), blocked = True; Print["Stopped"]];
+    ];
+  ]];
+
+  {
+    {
+      EditorView["y(t) =  sin((*SbB[*)Subscript[ω(*|*),(*|*)0](*]SbB*)(*SqB[*)Sqrt[t](*]SqB*))  "],
+
+      HTMLView["   "],
+      
+      EditorView[text // Offload]
+      
+    } // Column,
     
-    OptionValue["Stage2"]->Function[Null,
-      t2=1;
+    Graphics[{
+      Blue, Line[target], Red, Line[buffer // Offload],
+      AnimationFrameListener[trigger // Offload, "Event"->ev]
+    }, Axes->True, Frame->True]
+  } // Row
+]
+```
+
+And now we have the following
+
+![](./../../../nice0animation-ezgif.com-video-to-gif-converter.gif)
+
+The next step will be to assign triggers:
+
+- enter the slide : start animation
+- left the slide : stop and reset
+- close presentation : stop and reset
+
+and then turning it into widget using [EditorView](frontend/Reference/GUI/EditorView.md) (since output forms of [Row](frontend/Reference/Decorations/Row.md) and [Column](frontend/Reference/Decorations/Column.md) are not defined in slides environment)
+
+```mathematica @
+Widget[Rule["Event", id_]] := LeakyModule[{
+  buffer = {},
+  \[Omega] = 7.,
+  text = "",
+  recalc,
+  target,
+  trigger = 0,
+  ev = CreateUUID[],
+  blocked = True,
+  p = 0.01
+},
+
+  EventHandler[id, {
+    "Left" -> Function[Null,
+        blocked = True;
     ],
 
-    (* you need to go back to the previous slide to reset *)
-    "Slide"->Function[Null,
-        t0=0; t2=0;
+    "Destroy" -> Function[Null,
+        blocked = True;
+    ],
+
+    "Slide" -> Function[Null,
+        SetTimeout[
+          blocked = False;
+          EventFire[ev, True];
+        , 500];
     ]
   }];
   
-  Graphics[With[{
-  cSpins = ((*GB[*){{{1,-1}(*|*),(*|*){1,-1}(*|*),(*|*){1,1}(*|*),(*|*){1,-1}}(*||*),(*||*){{1,1}(*|*),(*|*){1,-1}(*|*),(*|*){1,1}(*|*),(*|*){1,-1}}(*||*),(*||*){{1,-1}(*|*),(*|*){1,1}(*|*),(*|*){1,-1}(*|*),(*|*){1,1}}(*||*),(*||*){{1,1}(*|*),(*|*){1,1}(*|*),(*|*){1,-1}(*|*),(*|*){1,1}}}(*]GB*))
-  },
-  {
-    Table[{
-      With[{spinPos = (0.23 cSpins[[i,j]] - 0.23 {1,0}), i=i, j=j},
-        Arrow[{{i,j}, ( {i+0.23, j} + t0 spinPos) // Offload}]
-      ],
-      Circle[{i,j}, 0.18]
-    }, {i,1,4}, {j,1,4}],
 
-    Orange,
-    Table[{
-      Circle[{i+0.5,j+0.5}, 0.2],
-      Disk[{i+0.5,j+0.5}, 0.15],
-      Black,
-      Arrow[{{i+0.5,j+0.5}, {-0.3, -0.08 Offload[t2]} + {i+0.5,j+0.5}}]
-    }, {i,1,3,2}, {j,1,3,2}],
+  recalc[p_] := (
+    text = StringJoin["(*SbB[*)Subscript[ω(*|*),(*|*)0](*]SbB*)  = ", Round[p \[Omega], 0.01] // ToString, "(*SpB[*)Power[s(*|*),(*|*)-1](*]SpB*)"];
+    buffer = {#, Sin[p \[Omega] (*SqB[*)Sqrt[#](*]SqB*)]} &/@ Range[0., 25., 0.1];
+  );
 
-    Disk[{1+1.5,1+1.5}, 0.2],
-    Black,
-    Arrow[{{1+1.5,1+1.5}, {-0.3, -0.08 Offload[t2]} + {1+1.5,1+1.5}}]
+  target = {#, Sin[\[Omega] (*SqB[*)Sqrt[#](*]SqB*)]} &/@ Range[0., 25., 0.1];
+
+  recalc[0.01];
   
-  }
-  ], 
-    Axes->True, 
-    AxesLabel->{"a", "c-axis"}, 
-    AxesStyle->Directive[FontSize->18], Ticks->{{-10}, {-10}}, 
-    PlotRange->{{0,5}, {0,5}},
-    ImageSize->550,
-    TransitionType->"CubicInOut",
-    TransitionDuration->500
-  ]
-]
+  EventHandler[ev, Function[Null,
+    If[blocked, Return[]];
+    trigger += 1;
+    If[Mod[trigger, 2] == 0,
+      recalc[p];
+      p = p + 0.05 (1.0033 - p);
+      If[Abs[p - 1.0] < (*SpB[*)Power[10(*|*),(*|*)-3](*]SpB*), blocked = True; Print["Stopped"]];
+    ];
+  ]];
 
-Options[SpinStructure] = {"Stage1"->"", "Stage2"->"", "Slide"->""}
+  ToString[{
+    {
+      EditorView["y(t) =  sin((*SbB[*)Subscript[ω(*|*),(*|*)0](*]SbB*)(*SqB[*)Sqrt[t](*]SqB*))  "],
+
+      HTMLView["   "],
+      
+      EditorView[text // Offload]
+      
+    } // Column,
+    
+    Graphics[{
+      Blue, Line[target], Red, Line[buffer // Offload],
+      AnimationFrameListener[trigger // Offload, "Event"->ev]
+    }, Axes->True, Frame->True, PlotRange->{{0,25}, {-1,1}}]
+  } // Row, StandardForm] // EditorView // CreateFrontEndObject
+]
 ```
 
-The whole animation consists two stages, on which the direction of arrows changes. We can assign each stage to a fragment on our slide
+Now place it on a slide and hook up it to [SlideEventListener](frontend/Reference/Slides/SlideEventListener.md) 
 
-```jsx
+```md
 .slide
 
-# Animation Test
+# Title
 
----
+<Widget Event={"slide-ev-name"}/>
 
-# Spin structure
-
-<SpinStructure Slide={"sslide"} Stage1={"fragment-1"} Stage2={"fragment-2"} />
-
-Reported spin configuration $T < 35K$ <!-- .element: class="fragment fade-in" data-fragment-index="1" -->
-
-Expected low-temperature spin configuration <!-- .element: class="fragment fade-in" data-fragment-index="2" --> 
-
-<SlideEventListener Id={"sslide"}/>
+<SlideEventListener Id={"slide-ev-name"}/>
 ```
 
-![](./../../../SpinAnimation%20from%20ezgif.gif)
+#### Alternative version
+using pure WLX one can stylize more things
+
+```jsx
+.wlx
+
+Widget[Rule["Event", id_]] := LeakyModule[{
+  buffer = {},
+  Omega = 7.,
+  text = "",
+  recalc,
+  target,
+  trigger = 0,
+  ev = CreateUUID[],
+  blocked = True,
+  p = 0.01,
+  EditorPart,
+  CanvasPart
+},
+
+  EventHandler[id, {
+    "Left" -> Function[Null,
+        blocked = True;
+    ],
+
+    "Destroy" -> Function[Null,
+        blocked = True;
+    ],
+
+    "Slide" -> Function[Null,
+        SetTimeout[
+          blocked = False;
+          EventFire[ev, True];
+        , 500];
+    ]
+  }];
+  
+
+  recalc[p_] := (
+    text = StringJoin["(*SbB[*)Subscript[ω(*|*),(*|*)0](*]SbB*)  = ", Round[p Omega, 0.01] // ToString, "(*SpB[*)Power[s(*|*),(*|*)-1](*]SpB*)"];
+    buffer = {#, Sin[p Omega (*SqB[*)Sqrt[#](*]SqB*)]} &/@ Range[0., 25., 0.1];
+  );
+
+  target = {#, Sin[Omega (*SqB[*)Sqrt[#](*]SqB*)]} &/@ Range[0., 25., 0.1];
+
+  recalc[0.01];
+  
+  EventHandler[ev, Function[Null,
+    If[blocked, Return[]];
+    trigger += 1;
+    If[Mod[trigger, 2] == 0,
+      recalc[p];
+      p = p + 0.05 (1.0033 - p);
+      If[Abs[p - 1.0] < (*SpB[*)Power[10(*|*),(*|*)-3](*]SpB*), blocked = True; Print["Stopped"]];
+    ];
+  ]];
+
+  CanvasPart = Graphics[{
+      Blue, Line[target], Red, Line[buffer // Offload],
+      AnimationFrameListener[trigger // Offload, "Event"->ev]
+    }, Axes->True, Frame->True, PlotRange->{{0,25}, {-1,1}}];
+
+  EditorPart[Rule["P", 1]] = EditorView["y(t) =  sin((*SbB[*)Subscript[ω(*|*),(*|*)0](*]SbB*)(*SqB[*)Sqrt[t](*]SqB*))  "] // CreateFrontEndObject;
+
+  EditorPart[Rule["P", 2]] = EditorView[text // Offload] // CreateFrontEndObject;    
+  
+        
+  <div class="flex flex-row" >
+    <div class="flex flex-col text-left" style="padding: 2rem 0">
+      <EditorPart P={1}/>
+      <EditorPart P={2}/>
+    </div>
+    <CanvasPart/>
+  </div>
+]
+```
 
 
 ### Example 3

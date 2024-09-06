@@ -13,8 +13,6 @@ There is a [built-in engine](https://revealjs.com/transitions/) for transitions 
 
 here on the next slide we have a line,  that specifies the transition type
 
-![](./../../../Screen%20Recording%20Apr%2014.gif)
-
 ## Full list
 
 | Name    | Effect                                                                   |
