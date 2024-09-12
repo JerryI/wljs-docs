@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Rasterize.md",
+                "file": "frontend/Reference/Decorations/Rotate.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CurrentWindow",
+                "query": "Rotate",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -77,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Rasterize.md",
+                "file": "frontend/Reference/Decorations/Rotate.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics/Rasterize.md",
+                "file": "frontend/Reference/Decorations/Rotate.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics/Rasterize.md"
+                "file": "frontend/Reference/Decorations/Rotate.md"
               }
             }
           },
@@ -174,9 +173,11 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Reference/Graphics/Rotate.md",
+    "frontend/Reference/Decorations/Rotate.md",
+    "frontend/Reference/Graphics/Rasterize.md",
     "frontend/Reference/Frontend IO/CurrentWindow.md",
     "frontend/Reference/Frontend IO/WindowObj.md",
-    "frontend/Reference/Graphics/Rasterize.md",
     "frontend/Overview.md",
     "frontend/Guidelines.md",
     "frontend/Cell types/Input cell.md",
@@ -201,9 +202,7 @@
     "frontend/Advanced/Command palette/AI Assistant.md",
     "Screenshot 2024-09-03 at 09.16.28.png",
     "frontend/Command palette.md",
-    "frontend/Advanced/Command palette/Snippets.md",
     "Screenshot 2024-09-02 at 12.03.25.png",
-    "frontend/Advanced/Objects/Static decorations.md",
     "Screenshot 2024-08-25 at 17.25.50.png",
     "Screenshot 2024-08-25 at 17.17.48.png",
     "Screenshot 2024-08-25 at 17.09.18.png",
