@@ -82,8 +82,73 @@ The following shortcuts are often used for equations typing
 - `Ctrl-6` - make a superscript (power)
 - `ESC+..` - to enter greek characters
 
-- `Cmd+/` - comment a line
+- `Alt+/` `Cmd+/` - to comment a line
+- Hold `Alt` to create multiple carets
 - `Cmd/Ctrl+F` - search in the current cell
+
+
+As well as the standard layout
+
+- ArrowLeft: `cursorCharLeft` (`selectCharLeft` with Shift)
+- ArrowRight: `cursorCharRight` (`selectCharRight` with Shift)
+- Ctrl-ArrowLeft (Alt-ArrowLeft on macOS): `cursorGroupLeft` (`selectGroupLeft` with Shift)
+- Ctrl-ArrowRight (Alt-ArrowRight on macOS): `cursorGroupRight` (`selectGroupRight` with Shift)
+- Cmd-ArrowLeft (on macOS): `cursorLineStart` (`selectLineStart` with Shift)
+- Cmd-ArrowRight (on macOS): `cursorLineEnd` (`selectLineEnd` with Shift)
+- ArrowUp: `cursorLineUp` (`selectLineUp` with Shift)
+- ArrowDown: `cursorLineDown` (`selectLineDown` with Shift)
+- Cmd-ArrowUp (on macOS): `cursorDocStart` (`selectDocStart` with Shift)
+- Cmd-ArrowDown (on macOS): `cursorDocEnd` (`selectDocEnd` with Shift)
+- Ctrl-ArrowUp (on macOS): `cursorPageUp` (`selectPageUp` with Shift)
+- Ctrl-ArrowDown (on macOS): `cursorPageDown` (`selectPageDown` with Shift)
+- PageUp: `cursorPageUp` (`selectPageUp` with Shift)
+- PageDown: `cursorPageDown` (`selectPageDown` with Shift)
+- Home: `cursorLineBoundaryBackward` (`selectLineBoundaryBackward` with Shift)
+- End: `cursorLineBoundaryForward` (`selectLineBoundaryForward` with Shift)
+- Ctrl-Home (Cmd-Home on macOS): `cursorDocStart` (`selectDocStart` with Shift)
+- Ctrl-End (Cmd-End on macOS): `cursorDocEnd` (`selectDocEnd` with Shift)
+- Enter: `insertNewlineAndIndent`
+- Ctrl-a (Cmd-a on macOS): `selectAll`
+- Backspace: `deleteCharBackward`
+- Delete: `deleteCharForward`
+- Ctrl-Backspace (Alt-Backspace on macOS): `deleteGroupBackward`
+- Ctrl-Delete (Alt-Delete on macOS): `deleteGroupForward`
+- Cmd-Backspace (macOS): `deleteToLineStart`
+- Cmd-Delete (macOS): `deleteToLineEnd`
+
+- Alt-ArrowLeft (Ctrl-ArrowLeft on macOS): `cursorSyntaxLeft` (`selectSyntaxLeft` with Shift)
+- Alt-ArrowRight (Ctrl-ArrowRight on macOS): `cursorSyntaxRight` (`selectSyntaxRight` with Shift)
+- Alt-ArrowUp: `moveLineUp`
+- Alt-ArrowDown: `moveLineDown`
+- Shift-Alt-ArrowUp: `copyLineUp`
+- Shift-Alt-ArrowDown: `copyLineDown`
+- Escape: `simplifySelection`
+- Ctrl-Enter (Cmd-Enter on macOS): `insertBlankLine`
+- Alt-l (Ctrl-l on macOS): `selectLine`
+- Ctrl-i (Cmd-i on macOS): `selectParentSyntax`
+- Ctrl-\[ (Cmd-\[ on macOS): `indentLess`
+- Ctrl-\] (Cmd-\] on macOS): `indentMore`
+- Ctrl-Alt-\\\\ (Cmd-Alt-\\ on macOS): `indentSelection`
+- Shift-Ctrl-k (Shift-Cmd-k on macOS): `deleteLine`
+- Shift-Ctrl-\\\\ (Shift-Cmd-\\ on macOS): `cursorMatchingBracket`
+- Shift-Alt-a: `toggleBlockComment`
+
+The following EMACsy style key-bindings are also available on MacOS
+
+- `Ctrl-b`: `cursorCharLeft`
+- `Ctrl-f`: `cursorCharRight`
+- `Ctrl-p`: `cursorLineUp`
+- `Ctrl-n`: `cursorLineDown`
+- `Ctrl-a`: `cursorLineStart`
+- `Ctrl-e`: `cursorLineEnd`
+- `Ctrl-d`: `deleteCharForward`
+- `Ctrl-h`: `deleteCharBackward`
+- `Ctrl-k`: `deleteToLineEnd`
+- `Ctrl-Alt-h`: `deleteGroupBackward`
+- `Ctrl-o`: `splitLine`
+- `Ctrl-t`: `transposeChars`
+- `Ctrl-v`: `cursorPageDown`
+
 
 For integrals, derivatives and series use [Command palette](frontend/Command%20palette.md) tool for entering special characters.
 

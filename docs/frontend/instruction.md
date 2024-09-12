@@ -17,6 +17,7 @@ import img from './../1_oEnvgJSyL-PNDTW8arOehw.webp';
 <h2 style={{'text-align':'center'}}> 
 
 [Overview 🚀](frontend/Overview.md) 
+[Demo 📺](https://jerryi.github.io/wljs-docs/wljs-demo) 
 
 </h2>
 
@@ -45,16 +46,16 @@ values={[
 {label: 'Mac', value: 'Mac'},  
 ]}>  
 <TabItem value="Windows">
-- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.5/wljs-notebook-2.5.5-x64.exe)
+- [Windows](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.6FIX/wljs-notebook-2.5.6-x64.exe)
 </TabItem>  
 <TabItem value="Linux">
-- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.5/wljs-notebook-2.5.5-amd64.deb)
-- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.5/wljs-notebook-2.5.5-x86_64.AppImage)
+- [Linux (Deb)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.6FIX/wljs-notebook-2.5.6-amd64.deb)
+- [Linux (AppImage)](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.6FIX/wljs-notebook-2.5.6-x86_64.AppImage)
 </TabItem> 
 <TabItem value="Mac">
 
-- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.5/wljs-notebook-2.5.5-arm64.dmg)
-- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.5/wljs-notebook-2.5.5-x64.dmg)
+- [M1](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.6FIX/wljs-notebook-2.5.6-arm64.dmg)
+- [Intel](https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.6FIX/wljs-notebook-2.5.6-x64.dmg)
 
 </TabItem>  
 </Tabs>

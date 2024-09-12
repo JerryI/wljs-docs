@@ -28,8 +28,9 @@ It improves user experience drastically
 - `Ctrl+6` make superscript on selected
 - `Ctrl+2` make square root on selected
 - `Ctrl+-` make subscript on selected
-- `Cmd + /` comment a line
+- `Cmd + /` or `Alt + /` comment a line
 
+See __more keybindings__ in [Input cell](frontend/Cell%20types/Input%20cell.md)
 
 
 ## Keep folders organized

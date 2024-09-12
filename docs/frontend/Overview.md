@@ -48,8 +48,9 @@ Project to a window is the most interesting feature here, that allows to evaluat
 - `Ctrl+6` make superscript on selected
 - `Ctrl+2` make square root on selected
 - `Ctrl+-` make subscript on selected
-- `Ctrl/Cmd+/` comment a line
+- `Alt/Cmd+/` comment a line
 
+See __more keybindings__ in [Input cell](frontend/Cell%20types/Input%20cell.md)
 
 ## Wolfram Language
 When you start typing the language you are using assumed to be WL. By pressing `Shift+Enter` you can start evaluation

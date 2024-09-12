@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Reference/Graphics/Rasterize.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "CurrentWindow",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -77,7 +77,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Reference/Graphics/Rasterize.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Reference/Graphics/Rasterize.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md"
+                "file": "frontend/Reference/Graphics/Rasterize.md"
               }
             }
           },
@@ -173,9 +174,17 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Reference/Frontend IO/CurrentWindow.md",
+    "frontend/Reference/Frontend IO/WindowObj.md",
+    "frontend/Reference/Graphics/Rasterize.md",
+    "frontend/Overview.md",
+    "frontend/Guidelines.md",
+    "frontend/Cell types/Input cell.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Advanced/Javascript/Canvas.md",
+    "frontend/Advanced/Slides/animations.md",
     "frontend/Advanced/Slides/Mermaid Diagrams.md",
     "Screenshot 2024-09-06 at 17.03.23.png",
-    "frontend/Advanced/Slides/animations.md",
     "nice0animation-ezgif.com-video-to-gif-converter.gif",
     "frontend/Reference/GUI/CellView.md",
     "frontend/Reference/Graphics3D/Polygon.md",
@@ -194,14 +203,7 @@
     "frontend/Command palette.md",
     "frontend/Advanced/Command palette/Snippets.md",
     "Screenshot 2024-09-02 at 12.03.25.png",
-    "frontend/Advanced/Javascript/Canvas.md",
     "frontend/Advanced/Objects/Static decorations.md",
-    "frontend/Reference/Interpreter/Offload.md",
-    "interpreter/Basics/js-access.md",
-    "frontend/Reference/Frontend IO/FrontSubmit.md",
-    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
-    "frontend/Advanced/Slides/crypto-text.md",
-    "frontend/Advanced/Javascript/Communication.md",
     "Screenshot 2024-08-25 at 17.25.50.png",
     "Screenshot 2024-08-25 at 17.17.48.png",
     "Screenshot 2024-08-25 at 17.09.18.png",

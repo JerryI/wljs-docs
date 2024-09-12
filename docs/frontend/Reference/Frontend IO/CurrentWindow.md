@@ -11,6 +11,8 @@ CurrentWindow[] _WindowObj
 
 returns a window socket object from the evaluation context. The object corresponds to the current socket channel used for the communication with a window, where a cell is evaluated. 
 
+Provides [WindowObj](frontend/Reference/Frontend%20IO/WindowObj.md)
+
 ### Implementation
 ```mathematica
 CurrentWindow[] := WindowObj[

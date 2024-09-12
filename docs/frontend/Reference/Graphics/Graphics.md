@@ -86,7 +86,7 @@ PrimitivesMisc --> Graphics
 ```
 
 
-## Context
+## Context symbols
 Here is a list of utility symbols used in `Graphics` context
 
 ### ``Graphics`Canvas``
@@ -112,6 +112,16 @@ Graphics[{
 :::tip
 See more in [Mouse and keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
 :::
+
+
+### ``Graphics`DPR``
+Returns device density pixel ratio (for retina-like displays it is more than `1.0`). It comes handy when working with raster graphics - [Image](frontend/Reference/Graphics/Image.md) placed on graphics canvas.
+
+```mathematica
+FrontFetch[Graphics`DPR]
+```
+
+Evaluate it on the frontend using [FrontFetch](frontend/Reference/Frontend%20IO/FrontFetch.md) or [FrontFetchAsync](frontend/Reference/Frontend%20IO/FrontFetchAsync.md) like functions.
 
 
 ## Options
