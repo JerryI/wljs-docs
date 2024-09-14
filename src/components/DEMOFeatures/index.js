@@ -152,7 +152,13 @@ const FeatureList = [
         </li>       
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/plot-bars"}><b>Bars, Pies</b> and other charts</Link>         
-        </li>        
+        </li>   
+        <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-baranimated"}>Custom animated Bar chart</Link>      
+          <div className={styles.badgeHolder}>
+            <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
+          </div>             
+        </li>       
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/plot-2d"}><b>2D Data Visualization</b></Link>         
         </li>     
