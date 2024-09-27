@@ -63,3 +63,7 @@ InputText[event_EventObject, rest__]
 
 ## Dev notes
 This is a wrapper for [TextView](frontend/Reference/GUI/TextView.md) view-component
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

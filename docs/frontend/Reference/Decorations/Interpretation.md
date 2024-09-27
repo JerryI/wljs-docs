@@ -41,5 +41,7 @@ Interpretation[Red, 1]
 ![](../../../Screenshot%202024-03-27%20at%2020.30.45.png)
 
 
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
 
 

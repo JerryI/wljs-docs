@@ -97,3 +97,7 @@ SetTimeout[TaskRemove[task], 5000];
 ```
 
 See more examples in [Raster animation](frontend/Advanced/Dynamics/Raster%20animation.md)
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

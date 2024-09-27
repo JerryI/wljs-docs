@@ -35,3 +35,5 @@ NestList[Framed, x, 6]
 ![](../../../Screenshot%202024-03-27%20at%2020.27.24.png)
 
 
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)

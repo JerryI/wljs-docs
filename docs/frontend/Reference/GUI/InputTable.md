@@ -91,3 +91,8 @@ InputTable[event_EventObject, rest__]
 
 ## Dev notes
 A [handsontable](https://handsontable.com) engine is used as the cells manager. 
+
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

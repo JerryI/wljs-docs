@@ -5,6 +5,10 @@ package: wljs-graphics3d-threejs
 source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/src/kernel.js
 context: JerryI`Notebook`Graphics3DUtils`
 ---
+:::warning
+It is considered to be removed. Please use [Directive](frontend/Reference/Graphics3D/Directive.md) instead
+:::
+
 sets roughness for the current material
 
 ```mathematica

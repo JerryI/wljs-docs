@@ -17,3 +17,6 @@ If an expression exceeds `30000` bytes, it will be serialized to a local file in
 ### `"Label"`
 Specifies a label for an icon. Accepts only `_String`
 
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)

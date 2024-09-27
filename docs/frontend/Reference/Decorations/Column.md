@@ -14,3 +14,6 @@ shows the list of any Wolfram Expressions in a single column acting as a decorat
 
 
 
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

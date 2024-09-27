@@ -65,3 +65,6 @@ Style[(*FB[*)((1)(*,*)/(*,*)((*SqB[*)Sqrt[2](*]SqB*)))(*]FB*), 18, Red]
 ```
 
 ![](./../../../Screenshot%202024-04-07%20at%2018.00.06.png)
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)

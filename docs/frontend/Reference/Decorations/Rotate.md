@@ -15,3 +15,6 @@ Rotate[x+y, 45Degree]
 :::info
 See `Rotate` in other contexts - [Rotate](frontend/Reference/Graphics/Rotate.md) used for graphics primitives
 :::
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)

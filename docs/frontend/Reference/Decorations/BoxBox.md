@@ -46,6 +46,8 @@ Works only if `"String" -> True`. Specifies the opening sequence of a string, th
 ### `"TailString"`
 Works only if `"String" -> True`. The same as above, but for the ending sequence. 
 
+
+
 ## Examples
 ### Change the display value and call arbitrary WLJS function
 This is a dummy example 
@@ -87,3 +89,6 @@ The neat thing is __you can edit the inner expression__
 :::note
 This is how [Ket](frontend/Reference/Decorations/Ket.md), `Bra` are implemented for instance
 :::
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)

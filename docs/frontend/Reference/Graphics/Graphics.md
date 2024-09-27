@@ -413,3 +413,6 @@ The result will look like
 
 ![](../../../imgs/ezgif.com-optimize-7%201.gif)
 
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

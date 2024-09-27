@@ -215,4 +215,9 @@ Please visit [PlotlyJS website](https://plotly.com/javascript/)
 
 ## TODO
 Developers notes
-- [x] Integrate events system with click events and others...
+- [ ] Integrate events system with click events and others...
+
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

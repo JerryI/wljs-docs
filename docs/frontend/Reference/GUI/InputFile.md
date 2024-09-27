@@ -60,3 +60,7 @@ EventHandler[InputFile[], {"File" -> Function[file,
 ]}]
 ```
 
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

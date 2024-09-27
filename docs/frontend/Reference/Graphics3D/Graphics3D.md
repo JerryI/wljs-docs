@@ -51,7 +51,7 @@ Sets the default camera for the scene. Default value is `"Orthographic"`
 - `"Perspective"`
 
 
-### `"TransitionType"`
+### `TransitionType`
 Applies interpolation to time-dependent variables used in the scene like moving boxes, changing geometry. By the default it is `None`, a possible values is `"Linear"` 
 
 :::warning
@@ -79,3 +79,7 @@ RTX feature requires a corresponding hardware to handle such heavy computations
 See primitives [Sphere](frontend/Reference/Graphics3D/Sphere.md), [Polygon](frontend/Reference/Graphics3D/Polygon.md) and etc for it 
 
 ![](../../../imgs/ScreenRecording2024-03-24at20.50.18-ezgif.com-optipng.png)
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

@@ -44,3 +44,7 @@ TextView[pointer // Offload]
 
 ![](../../../imgs/ScreenRecording2024-03-25at13.18.34-ezgif.com-video-to-apng-converter.png)
 
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

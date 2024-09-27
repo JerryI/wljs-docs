@@ -80,3 +80,6 @@ EventHandler[InputRange[0,1,0.1], Function[data, pos = data]];
 Graphics[Rectangle[{-1,0}, {1, Offload[pos]}]]
 ```
 
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

@@ -55,3 +55,7 @@ the data provided to a handler function `Print` will look like
 {5, 7, "Hi"}
 ```
 
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

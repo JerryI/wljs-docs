@@ -55,3 +55,6 @@ __An expression will not be revealed__
 
 ## Dev notes
 This is a wrapper for [ViewBox](frontend/Reference/Decorations/ViewBox.md) with a read-only [EditorView](frontend/Reference/GUI/EditorView.md) inside.
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)

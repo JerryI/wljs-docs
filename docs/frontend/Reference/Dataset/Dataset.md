@@ -19,6 +19,10 @@ To be written. See original [doc](https://reference.wolfram.com/language/ref/Dat
 ## Optimizations
 Use numerical data or `DateObject` or boolean type for an entire column to get better performance.
 
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)
+
 ## Notes
 It supports lazy loading for a large set with many rows. The data is stored partially on Kernel if it exceeds 0.5 mB.
 

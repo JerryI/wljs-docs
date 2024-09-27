@@ -18,6 +18,8 @@ Editor is usually quite slow, when it comes to updates, because of many decorati
 ## Event generation
 When `"Event"` option is provided, it will send a new data in a form of a string.
 
+
+
 ## Options
 ### `"Event"`
 Specifies an `uid` of an event-object, that will be fired on-change.
@@ -39,6 +41,10 @@ EventFire[%, 1];
 
 EditorView[series // Offload]
 ```
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)
 
 ## Dev notes
 This is used in [InterpretationBox](frontend/Reference/Decorations/InterpretationBox.md) implementation to replace a WL expression using a user-provided WL expression in a code editor.

@@ -53,6 +53,29 @@ Heading[OptionsPattern[]]] := With[{Title = OptionValue["Title"]},
 Options[Heading] = {"Title"->"Nope"}
 ```
 
+
+## Decorators
+Decorators with [WLXForm](frontend/Reference/Decorations/WLXForm.md) defined such as [[Row]], [Column](frontend/Reference/Decorations/Column.md) can be used on slides as well natively. [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) is also a combination of those, which make it possible to output it directly without [EditorView](frontend/Reference/GUI/EditorView.md)
+
+
+```mathematica title="cell 1"
+Figure = Plot[x, {x,0,1}];
+Editor = EditorView["Plot[x, {x,0,1}] -> "];
+```
+
+```html title="cell 2"
+.slide
+
+<Row>
+	<Editor/>
+	<Figure/>
+</Row>
+```
+
+![](./../../../Screenshot%202024-09-25%20at%2015.37.02.png)
+
+
+
 ## Layout helpers
 This is a common case, when components comes handy. Imagine a typical situation, when we need to organize columns in the presentation
 

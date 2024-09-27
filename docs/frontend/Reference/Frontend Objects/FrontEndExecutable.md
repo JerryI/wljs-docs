@@ -12,7 +12,7 @@ FrontEndExecutable[uid_String]
 
 A static reference to a frontend object (see [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md))  like [FrontEndRef](frontend/Reference/Frontend%20Objects/FrontEndRef.md).
 
-## Output forms
+## Supported output forms
 [StandardForm](frontend/Reference/Decorations/StandardForm.md) used in the output Wolfram Language cells is defined as [ViewBox](frontend/Reference/Decorations/ViewBox.md) decoration with a corresponding [FrontEndRef](frontend/Reference/Frontend%20Objects/FrontEndRef.md) as an input expression. This decoration is used as a sort of an empty widget to which any nested expression can output ([Graphics](frontend/Reference/Graphics/Graphics.md), [Plot](frontend/Reference/Plotting%20Functions/Plot.md) and etc made using this method)
 
 [WLXForm](frontend/Reference/Decorations/WLXForm.md) produces a widget-like placeholder, which can be populated with a content. This is how [Plot](frontend/Reference/Plotting%20Functions/Plot.md) and other graphics function can output to a [slides](frontend/Cell%20types/Slides.md).

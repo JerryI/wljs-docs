@@ -9,3 +9,6 @@ or just
 ```mathematica
 NumberForm[expr_]
 ```
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)

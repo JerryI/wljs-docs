@@ -52,3 +52,8 @@ InputJoystick[event_EventObject, rest___]
 
 ## Options
 No options are available
+
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)

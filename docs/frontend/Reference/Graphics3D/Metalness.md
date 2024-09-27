@@ -5,6 +5,10 @@ package: wljs-graphics3d-threejs
 context: JerryI`Notebook`Graphics3DUtils`
 source: https://github.com/JerryI/Mathematica-ThreeJS-graphics-engine/blob/dev/src/kernel.js
 ---
+:::warning
+It is considered to be removed. Please use [Directive](frontend/Reference/Graphics3D/Directive.md) instead
+:::
+
 specifies metallic property of a graphics primitive (see [MeshPhysicalMaterial](frontend/Reference/Graphics3D/MeshPhysicalMaterial.md))
 
 ```mathematica

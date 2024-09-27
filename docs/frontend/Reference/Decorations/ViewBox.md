@@ -230,3 +230,6 @@ Table[CheckObject[True], {i, 3}, {j, 3}] // MatrixForm
 ![](../../../imgs/ezgif.com-video-to-gif-6.gif)
 
 
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)

@@ -65,6 +65,9 @@ MyObject[<|
 
 This expression __is still valid for normal coping and evaluating__ 
 
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+
 ## Options
 ### `"Event"`
 A string identifier used for attaching event listeners to a widget. Since this is a wrapper over [ViewBox](frontend/Reference/Decorations/ViewBox.md) and `RowBox`,  see more on its page.

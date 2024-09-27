@@ -7,10 +7,21 @@ source: https://github.com/JerryI/wljs-graphics-d3/blob/dev/src/kernel.js
 Used for styling plots or 2D graphics
 
 ```mathematica
-Directive[opts__]
+Directive[directives___, opts___Rule]
 ```
 
 The support is quite limited compared to Mathematica's implementation
+
+## Directives
+
+### `_RGBColor`
+
+## Options
+### `FontSize`
+### `TransitionType`
+### `TransitionDuration`
+
+
 ## Examples
 ### Ticks of a plot
 One can provide a font-size parameters

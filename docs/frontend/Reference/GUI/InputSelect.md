@@ -35,3 +35,7 @@ One can reuse another event
 ```mathematica
 InputSelect[event_EventObject, rest__]
 ```
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Decorations/StandardForm.md)
+- [WLXForm](frontend/Reference/Decorations/WLXForm.md)
