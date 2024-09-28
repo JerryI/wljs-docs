@@ -32,6 +32,9 @@ const FeatureList = [
           <Link className={styles.featureLink}  to={"/wljs-demo/intro-image-sym"}>Images as symbols</Link>
         </li>
         <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/demo-formatting"}>Formatted output</Link>
+        </li>        
+        <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/intro-manipulate"}><b>Manipulation</b> An example on how to rapidly generate controllable plots and other expressions.</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
