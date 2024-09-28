@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Materials.md",
+                "file": "frontend/Reference/Graphics3D/MeshMaterial.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Materials.md",
+                "file": "frontend/Reference/Graphics3D/MeshMaterial.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Materials.md",
+                "file": "frontend/Reference/Graphics3D/MeshMaterial.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics3D/Materials.md"
+                "file": "frontend/Reference/Graphics3D/MeshMaterial.md"
               }
             }
           },
@@ -184,18 +184,21 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Reference/Graphics3D/MeshFogMaterial.md",
+    "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
+    "frontend/Reference/Graphics3D/MeshMaterial.md",
+    "frontend/Reference/Graphics3D/Materials.md",
+    "fogmaterial.png",
     "irra1.png",
     "glass1.png",
     "Screenshot 2024-09-27 at 15.54.11.png",
     "Screenshot 2024-09-27 at 15.51.53.png",
     "frontend/Reference/Graphics3D/Shadows.md",
-    "frontend/Reference/Graphics3D/Untitled.md",
     "frontend/Reference/Graphics3D/Roughness.md",
     "frontend/Reference/Graphics3D/Metalness.md",
     "frontend/Reference/Graphics3D/Emissive.md",
     "frontend/Reference/Graphics3D/Directive.md",
     "frontend/Reference/Graphics/Directive.md",
-    "frontend/Reference/Graphics3D/Materials.md",
     "frontend/Reference/Graphics3D/Graphics3D.md",
     "frontend/Reference/Decorations/Squiggled.md",
     "frontend/Reference/Decorations/Annotation.md",
@@ -214,12 +217,9 @@
     "frontend/Reference/Decorations/Panel.md",
     "Screenshot 2024-09-26 at 10.12.13.png",
     "frontend/Reference/Decorations/Pane.md",
-    "frontend/Reference/Decorations/Rotate.md",
     "Screenshot 2024-09-25 at 15.37.02.png",
     "Screenshot 2024-09-06 at 17.03.23.png",
     "nice0animation-ezgif.com-video-to-gif-converter.gif",
-    "Screenshot 2024-09-03 at 09.16.28.png",
-    "Screenshot 2024-09-02 at 12.03.25.png",
     "aniamtedLatex.mov",
     "frontend/Reference/Tree",
     "frontend/Reference/Region",

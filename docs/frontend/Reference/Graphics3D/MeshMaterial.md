@@ -18,3 +18,6 @@ __This is scope-type parameter__ like [Opacity](frontend/Reference/Graphics3D/Op
 ### `MeshPhysicalMaterial`
 
 ### `MeshToonMaterial`
+
+### `MeshFogMaterial` 
+See more [MeshFogMaterial](frontend/Reference/Graphics3D/MeshFogMaterial.md)
