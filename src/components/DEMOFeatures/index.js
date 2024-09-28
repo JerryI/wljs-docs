@@ -175,6 +175,12 @@ const FeatureList = [
           <Link className={styles.featureLink}  to={"/wljs-demo/plot-shadows"}>Polygons & Shadows</Link>         
         </li>    
         <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/plot-rtx"}>Path-tracing feature</Link> 
+          <div className={styles.badgeHolder}>
+            <span className={styles.badge} style={{background: 'var(--ifm-color-danger-lighter)'}}>RTX</span>
+          </div>                  
+        </li>        
+        <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/plot-plotly"}><b>Plotly.js Integration</b> A massive library of functions</Link>         
         </li> 
         </ul>                   
