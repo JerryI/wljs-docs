@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
+                "file": "frontend/Advanced/Slides/Widgets.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
+                "file": "frontend/Advanced/Slides/Widgets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
+                "file": "frontend/Advanced/Slides/Widgets.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md"
+                "file": "frontend/Advanced/Slides/Widgets.md"
               }
             }
           },
@@ -184,13 +184,27 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Advanced/Slides/Transitions.md",
+    "frontend/Advanced/Slides/tables.md",
+    "frontend/Advanced/Slides/animations.md",
+    "frontend/Advanced/Slides/Mermaid Diagrams.md",
+    "frontend/Advanced/Slides/Fragments.md",
+    "frontend/Advanced/Slides/embed-wl.md",
+    "frontend/Advanced/Slides/crypto-text.md",
+    "frontend/Advanced/Slides/components.md",
+    "frontend/Advanced/Slides/Backgrounds.md",
+    "frontend/Reference/Decorations/WLXForm.md",
+    "frontend/Reference/GUI/EditorView.md",
+    "frontend/Reference/Video/Video.md",
+    "frontend/Reference/Frontend IO/WindowObj.md",
+    "frontend/Reference/Decorations/Interpretation.md",
+    "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
     "frontend/Reference/Graphics3D/Materials.md",
     "frontend/Reference/Graphics3D/MeshFogMaterial.md",
     "frontend/Reference/Graphics3D/MeshMaterial.md",
     "frontend/Reference/Graphics3D/Graphics3D.md",
     "frontend/Reference/Graphics3D/Directive.md",
     "frontend/Reference/Graphics3D/Emissive.md",
-    "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
     "fogmaterial.png",
     "irra1.png",
     "glass1.png",
@@ -201,22 +215,8 @@
     "frontend/Reference/Graphics3D/Metalness.md",
     "frontend/Reference/Graphics/Directive.md",
     "frontend/Reference/Decorations/Squiggled.md",
-    "frontend/Reference/Decorations/Annotation.md",
-    "frontend/Reference/Decorations/Highlighted.md",
-    "frontend/Reference/Decorations/TableForm.md",
-    "frontend/Advanced/Slides/components.md",
-    "frontend/Reference/Decorations/Row.md",
-    "frontend/Advanced/Slides/tables.md",
-    "frontend/Advanced/Slides/Styling.md",
-    "frontend/Reference/Decorations/Item.md",
-    "frontend/Reference/Decorations/Invisible.md",
-    "frontend/Reference/Decorations/Labeled.md",
-    "frontend/Reference/Decorations/Magnify.md",
     "collapse-ezgif.com-video-to-gif-converter.gif",
-    "frontend/Reference/Decorations/Grid.md",
-    "frontend/Reference/Decorations/Panel.md",
     "Screenshot 2024-09-26 at 10.12.13.png",
-    "frontend/Reference/Decorations/Pane.md",
     "Screenshot 2024-09-25 at 15.37.02.png",
     "Screenshot 2024-09-06 at 17.03.23.png",
     "nice0animation-ezgif.com-video-to-gif-converter.gif",

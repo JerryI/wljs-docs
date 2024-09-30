@@ -12,7 +12,7 @@ Since this is about programming, we need a "widget" for code and syntax highligh
 ```jsx title="cell 1"
 .wlx
 
-CodeBlock[str_String] := With[{Fe = EditorView[str] // CreateFrontEndObject},
+CodeBlock[str_String] := With[{Fe = EditorView[str]},
   <div class="text-left text-sm"><Fe/></div>
 ]
 ```

@@ -9,7 +9,7 @@ Since it support WLX syntax as well, one can combine the copied text from the no
 *prototype*
 ```jsx
 .wlx
-CodeInset[str_String] := With[{Fe = EditorView[str] // CreateFrontEndObject},
+CodeInset[str_String] := With[{Fe = EditorView[str]},
   <div style="text-align: left;"><Fe/></div>
 ]
 ```

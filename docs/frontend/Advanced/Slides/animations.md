@@ -241,7 +241,7 @@ Widget[Rule["Event", id_]] := LeakyModule[{
       Blue, Line[target], Red, Line[buffer // Offload],
       AnimationFrameListener[trigger // Offload, "Event"->ev]
     }, Axes->True, Frame->True, PlotRange->{{0,25}, {-1,1}}]
-  } // Row, StandardForm] // EditorView // CreateFrontEndObject
+  } // Row, StandardForm] // EditorView 
 ]
 ```
 
@@ -319,9 +319,9 @@ Widget[Rule["Event", id_]] := LeakyModule[{
       AnimationFrameListener[trigger // Offload, "Event"->ev]
     }, Axes->True, Frame->True, PlotRange->{{0,25}, {-1,1}}];
 
-  EditorPart[Rule["P", 1]] = EditorView["y(t) =  sin((*SbB[*)Subscript[ω(*|*),(*|*)0](*]SbB*)(*SqB[*)Sqrt[t](*]SqB*))  "] // CreateFrontEndObject;
+  EditorPart[Rule["P", 1]] = EditorView["y(t) =  sin((*SbB[*)Subscript[ω(*|*),(*|*)0](*]SbB*)(*SqB[*)Sqrt[t](*]SqB*))  "] ;
 
-  EditorPart[Rule["P", 2]] = EditorView[text // Offload] // CreateFrontEndObject;    
+  EditorPart[Rule["P", 2]] = EditorView[text // Offload] ;    
   
         
   <div class="flex flex-row" >
