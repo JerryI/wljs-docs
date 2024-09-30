@@ -22,7 +22,7 @@ Accepts `_RGBColor`
 ### `"Emissive"`
 Accepts `_RGBColor`
 
-### `"Emissiveintensity"`
+### `"EmissiveIntensity"`
 Accepts `_Real` from 0 to 1
 
 ### `"Roughness"`
@@ -44,29 +44,29 @@ Accepts `_Real` from 0 to 1
 ### `"Attenuationcolor"`
 Accepts `_RGBColor`
 
-### `"Attenuationdistance"`
+### `"AttenuationDistance"`
 
 ### `"Opacity"`
 Accepts `_Real` from 0 to 1
 
 ### `"Clearcoat"`
 
-### `"Clearcoatroughness"`
+### `"ClearcoatRoughness"`
 
-### `"Sheencolor"`
+### `"SheenColor"`
 
-### `"Sheenroughness"`
+### `"SheenRoughness"`
 
 ### `"Iridescence"`
 
-### `"Iridescenceior"`
+### `"IridescenceIor"`
 
-### `"Iridescencethickness"`
+### `"IridescenceThickness"`
 
 ### `"Specularcolor"`
 Accepts `_RGBColor`
 
-### `"Specularintensity"`
+### `"SpecularIntensity"`
 
 ### `"Matte"`
 

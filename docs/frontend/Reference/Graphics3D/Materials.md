@@ -15,7 +15,7 @@ A set of prebuilt materials using [MeshPhysicalMaterial](frontend/Reference/Grap
 Example
 ```mathematica
 Plot3D[Sin[x] Cos[y], {x,-10,10}, {y,-10,10}][[1]];
-Graphics3D[{%, Graphics3D`Materials["Glass"], Sphere[{0,0,2}, 4]}, RTX->True, ImageSize->600]
+Graphics3D[{%, Graphics3D`Materials["Glass"], Sphere[{0,0,2}, 4]}, "Renderer"->"PathTracing", ImageSize->600]
 ```
 
 ![](./../../../glass1.png)
@@ -25,7 +25,7 @@ Graphics3D[{%, Graphics3D`Materials["Glass"], Sphere[{0,0,2}, 4]}, RTX->True, Im
 Example
 ```mathematica
 Plot3D[Sin[x] Cos[y], {x,-10,10}, {y,-10,10}][[1]];
-Graphics3D[{%, Graphics3D`Materials["Iridescent"], Sphere[{0,0,2}, 4]}, RTX->True, ImageSize->600]
+Graphics3D[{%, Graphics3D`Materials["Iridescent"], Sphere[{0,0,2}, 4]}, "Renderer"->"PathTracing", ImageSize->600]
 ```
 
 ![](./../../../irra1.png)

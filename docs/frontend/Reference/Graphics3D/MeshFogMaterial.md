@@ -5,7 +5,7 @@ env:
 package: wljs-graphics3d-threejs
 ---
 :::warning
-Works only with `"RTX"->True` in [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)
+Works only with `"Renderer"->"PathTracing"` in [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)
 :::
 
 defines a material for volumetric fog effect in [MeshMaterial](frontend/Reference/Graphics3D/MeshMaterial.md)
@@ -21,7 +21,7 @@ Define a sphere-fog and place a [SpotLight](frontend/Reference/Graphics3D/SpotLi
 ```mathematica
 Graphics3D[{
   {MeshMaterial[MeshFogMaterial[0.1]], Sphere[{0,0,0},5]}, {Red, Sphere[{0,0,0}, 1]}, {SpotLight[White, -{5,5,5}]}
-}, "RTX"->True, Background->Black, "Lighting"->None]
+}, "Renderer"->"PathTracing", Background->Black, "Lighting"->None]
 ```
 
 ![](./../../../fogmaterial.png)

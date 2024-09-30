@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics3D/MeshMaterial.md",
+                "file": "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Rotate",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics3D/MeshMaterial.md",
+                "file": "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics3D/MeshMaterial.md",
+                "file": "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics3D/MeshMaterial.md"
+                "file": "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md"
               }
             }
           },
@@ -184,10 +184,13 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
-    "frontend/Reference/Graphics3D/MeshFogMaterial.md",
-    "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
-    "frontend/Reference/Graphics3D/MeshMaterial.md",
     "frontend/Reference/Graphics3D/Materials.md",
+    "frontend/Reference/Graphics3D/MeshFogMaterial.md",
+    "frontend/Reference/Graphics3D/MeshMaterial.md",
+    "frontend/Reference/Graphics3D/Graphics3D.md",
+    "frontend/Reference/Graphics3D/Directive.md",
+    "frontend/Reference/Graphics3D/Emissive.md",
+    "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
     "fogmaterial.png",
     "irra1.png",
     "glass1.png",
@@ -196,10 +199,7 @@
     "frontend/Reference/Graphics3D/Shadows.md",
     "frontend/Reference/Graphics3D/Roughness.md",
     "frontend/Reference/Graphics3D/Metalness.md",
-    "frontend/Reference/Graphics3D/Emissive.md",
-    "frontend/Reference/Graphics3D/Directive.md",
     "frontend/Reference/Graphics/Directive.md",
-    "frontend/Reference/Graphics3D/Graphics3D.md",
     "frontend/Reference/Decorations/Squiggled.md",
     "frontend/Reference/Decorations/Annotation.md",
     "frontend/Reference/Decorations/Highlighted.md",
