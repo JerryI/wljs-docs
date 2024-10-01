@@ -88,6 +88,9 @@ Delay the path-tracer. The default is `100`
 ### `"MinSamples"`
 The default is `5` 
 
+### `"MultipleImportanceSampling"`
+By the default is `False`. Set to `True` to work with [MeshFogMaterial](frontend/Reference/Graphics3D/MeshFogMaterial.md), [PointLight](frontend/Reference/Graphics3D/PointLight.md) and [SpotLight](frontend/Reference/Graphics3D/SpotLight.md) primitives. 
+
 ### `"SamplesPerFrame"`
 The default is `1`
 

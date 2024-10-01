@@ -20,6 +20,9 @@ Graphics3D[{Shadows[True], Polygon[ {{-5,5,-1}, {5,5,-1}, {5,-5,-1}, {-5,-5,-1}}
 
 For the best effect, use [Shadows](frontend/Reference/Graphics3D/Shadows.md) set to `True` 
 
+:::warning
+In the case of `"PathTracing"` renderer, spot light can only work properly if `"MultipleImportanceSampling"` is enabled in the options of [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)
+:::
 
 ## Dynamics
 `position` and `target` do support dynamic updates

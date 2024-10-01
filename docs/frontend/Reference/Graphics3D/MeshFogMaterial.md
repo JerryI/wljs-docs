@@ -14,6 +14,9 @@ defines a material for volumetric fog effect in [MeshMaterial](frontend/Referenc
 MeshFogMaterial[density_:0.01]
 ```
 
+:::tip
+Enable `"MultipleImportanceSampling"` to get the best results
+:::
 
 ## Example
 Define a sphere-fog and place a [SpotLight](frontend/Reference/Graphics3D/SpotLight.md) to light it up from below

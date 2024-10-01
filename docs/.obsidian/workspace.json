@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/Widgets.md",
+                "file": "frontend/Reference/Graphics3D/SpotLight.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/Widgets.md",
+                "file": "frontend/Reference/Graphics3D/SpotLight.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/Widgets.md",
+                "file": "frontend/Reference/Graphics3D/SpotLight.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/Widgets.md"
+                "file": "frontend/Reference/Graphics3D/SpotLight.md"
               }
             }
           },
@@ -184,6 +184,10 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Reference/Graphics3D/PointLight.md",
+    "frontend/Reference/Graphics3D/MeshFogMaterial.md",
+    "frontend/Reference/Graphics3D/Graphics3D.md",
+    "frontend/Advanced/Slides/Widgets.md",
     "frontend/Advanced/Slides/Transitions.md",
     "frontend/Advanced/Slides/tables.md",
     "frontend/Advanced/Slides/animations.md",
@@ -200,9 +204,7 @@
     "frontend/Reference/Decorations/Interpretation.md",
     "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
     "frontend/Reference/Graphics3D/Materials.md",
-    "frontend/Reference/Graphics3D/MeshFogMaterial.md",
     "frontend/Reference/Graphics3D/MeshMaterial.md",
-    "frontend/Reference/Graphics3D/Graphics3D.md",
     "frontend/Reference/Graphics3D/Directive.md",
     "frontend/Reference/Graphics3D/Emissive.md",
     "fogmaterial.png",
@@ -213,8 +215,6 @@
     "frontend/Reference/Graphics3D/Shadows.md",
     "frontend/Reference/Graphics3D/Roughness.md",
     "frontend/Reference/Graphics3D/Metalness.md",
-    "frontend/Reference/Graphics/Directive.md",
-    "frontend/Reference/Decorations/Squiggled.md",
     "collapse-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2024-09-26 at 10.12.13.png",
     "Screenshot 2024-09-25 at 15.37.02.png",
