@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/GUI/TextView.md",
+                "file": "frontend/Reference/Slides/SlideEventListener.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Directive.md",
+                "file": "frontend/Advanced/Slides/animations.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -72,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "TextView",
+                "query": "ResultCell",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/GUI/TextView.md",
+                "file": "frontend/Advanced/Slides/animations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/GUI/TextView.md",
+                "file": "frontend/Advanced/Slides/animations.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/GUI/TextView.md"
+                "file": "frontend/Advanced/Slides/animations.md"
               }
             }
           },
@@ -183,10 +184,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6c07b6313b5cd247",
+  "active": "a0484db54adcc372",
   "lastOpenFiles": [
-    "frontend/Reference/GUI/HTMLView.md",
+    "frontend/Reference/Slides/SlideEventListener.md",
+    "frontend/Advanced/Slides/animations.md",
+    "dynamicstats-ezgif.com-video-to-gif-converter.gif",
+    "frontend/Reference/Cells and Notebook/ResultCell.md",
+    "frontend/Reference/Graphics/Directive.md",
     "frontend/Reference/GUI/TextView.md",
+    "frontend/Reference/GUI/HTMLView.md",
     "frontend/Reference/GUI/InputText.md",
     "frontend/Advanced/Slides/Backgrounds.md",
     "frontend/Advanced/Command palette/AI Assistant.md",
@@ -199,7 +205,6 @@
     "frontend/Advanced/Slides/Widgets.md",
     "frontend/Advanced/Slides/Transitions.md",
     "frontend/Advanced/Slides/tables.md",
-    "frontend/Advanced/Slides/animations.md",
     "frontend/Advanced/Slides/Mermaid Diagrams.md",
     "frontend/Advanced/Slides/Fragments.md",
     "frontend/Advanced/Slides/embed-wl.md",
@@ -208,10 +213,6 @@
     "frontend/Reference/Decorations/WLXForm.md",
     "frontend/Reference/GUI/EditorView.md",
     "frontend/Reference/Video/Video.md",
-    "frontend/Reference/Frontend IO/WindowObj.md",
-    "frontend/Reference/Decorations/Interpretation.md",
-    "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
-    "frontend/Reference/Graphics3D/Materials.md",
     "fogmaterial.png",
     "irra1.png",
     "glass1.png",
@@ -220,7 +221,6 @@
     "collapse-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2024-09-26 at 10.12.13.png",
     "Screenshot 2024-09-25 at 15.37.02.png",
-    "Screenshot 2024-09-06 at 17.03.23.png",
     "aniamtedLatex.mov",
     "frontend/Reference/Tree",
     "frontend/Reference/Region",

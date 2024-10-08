@@ -11,3 +11,8 @@ returns an future output cell identifier as an [RemoteCellObj](frontend/Referenc
 ResultCell[] _RemoteCellObj
 ```
 
+:::note
+Works in all output cells: Wolfram Language, [WLX](frontend/Cell%20types/WLX.md) and [Slides](frontend/Cell%20types/Slides.md)
+:::
+
+

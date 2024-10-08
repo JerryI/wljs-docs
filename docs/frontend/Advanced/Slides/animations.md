@@ -34,7 +34,7 @@ Put [SlideEventListener](frontend/Reference/Slides/SlideEventListener.md) anywhe
 Keep the dynamic variables scoped using [`LeakyModule`](frontend/Reference/Misc/Language.md#`LeakyModule`) and use explicit event routing like in [routing](frontend/Advanced/Events%20system/routing.md). Later it will allow you to reuse your components for other slides much easier.
 :::
 
-### Example 1
+### Example 1 🏜️ Morphing lines
 
 Let us see the simples example
 
@@ -110,7 +110,7 @@ Sure the state is not reservable in this case. You need to manage it by your own
 
 However, in practice reports are usually linear and do not require to repeat all animations again.
 
-### Example 2
+### Example 2 🧬 Fitting animation
 Complex animations are better to prototype firstly inside a normal cell or [WLX](frontend/Cell%20types/WLX.md). Let us make one like that
 
 ```mathematica @
@@ -335,7 +335,7 @@ Widget[Rule["Event", id_]] := LeakyModule[{
 ```
 
 
-### Example 3
+### Example 3 🔎 Zoom
 Zoom in to the graph
 
 ```mathematica title="cell 1"
@@ -372,6 +372,75 @@ Zoom <!-- .element: class="fragment fade-in" data-fragment-index="1" -->
 
 
 ![](./../../../ZoomIn%20video%20to%20gif.gif)
+
+
+### Example 4 🔄 Simple stat counter
+What if you need to add some dynamic stats to your presentation? One can make an independent component for that
+
+```jsx
+.wlx
+
+Stat[Text_, OptionsPattern[]] := LeakyModule[{
+  cnt = 0, 
+  task
+}, With[{
+  ev = CreateUUID[],
+  HTMLCounter = HTMLView[cnt // Offload],
+  max = OptionValue["Count"]
+},
+  EventHandler[ev, {
+    "Destroy" -> Function[Null,
+      EventRemove[ev]; 
+      If[task["TaskStatus"] === "Running", TaskRemove[task]];
+      ClearAll[task];
+    ],
+
+    "Left" -> Function[Null,
+      cnt = 0;
+    ],
+
+    "Slide" -> Function[Null,
+      If[task["TaskStatus"] === "Running", TaskRemove[task]];
+      task = SetInterval[
+        If[cnt < max, cnt = cnt + 1,
+          TaskRemove[task];
+        ];
+      , 15];
+    ]
+  }];
+
+  <div class="text-center text-gray-600 m-4 p-4 rounded bg-gray-100 flex flex-col">
+    <HTMLCounter/>
+    <span class="text-md"><Text/></span>
+    <SlideEventListener Id={ev}/>
+  </div>
+] ]
+
+Options[Stat] = {"Count"->1};
+```
+
+You can put them on any slide (as many as you want)
+
+```jsx
+.slide
+
+# Dynamic stats
+Here is our data
+
+<div class="justify-center flex flex-row ml-auto mr-auto">
+
+<Stat Count={128}>Label 1</Stat>
+<Stat Count={256}>Label 2</Stat>
+
+</div>
+
+```
+
+Here is the result
+
+![](./../../../dynamicstats-ezgif.com-video-to-gif-converter.gif)
+
+
 
 ## Append graphics to a slide
 [MetaMarker](frontend/Reference/Frontend%20IO/MetaMarker.md) can work well in a case if one wants to append some data on the existing graphics canvas
