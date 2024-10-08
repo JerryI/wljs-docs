@@ -23,6 +23,7 @@ This is a core function behind most input elements, such as [InputButton](fronte
 
 ## Options
 ### `Prolog`
+**works only if a string or a list of strings provided as input**
 A function to be executed on the frontend before embedding HTML into DOM. You probably have to define it by yourself (see [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)). It exposes in `env` following fields
 
 ```js
@@ -32,12 +33,18 @@ env.htmlString //mutable HTML expression as string
 There is a built-in feature for modifying the string - see below [Post-template engine](#Post-template%20engine)
 
 ### `Epilog`
+**works only if a string or a list of strings provided as input**
 A function to be executed on the frontend after embedding HTML into DOM. The exposed fields are
 
 ```js
 env.element //access to DOM element created
 ```
 
+### `"Style"`
+a string, which sets CSS style attribute
+
+### `"Class"`
+a string, which sets CSS class attribute
 
 ## Post-template engine
 There is built-in tool for post-processing HTML elements before embedding them into DOM. It can be included to the pipeline using `Prolog` option

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics3D/SpotLight.md",
+                "file": "frontend/Reference/GUI/TextView.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "TextView",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -89,7 +89,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics3D/SpotLight.md",
+                "file": "frontend/Reference/GUI/TextView.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Graphics3D/SpotLight.md",
+                "file": "frontend/Reference/GUI/TextView.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Graphics3D/SpotLight.md"
+                "file": "frontend/Reference/GUI/TextView.md"
               }
             }
           },
@@ -184,6 +185,14 @@
   },
   "active": "6c07b6313b5cd247",
   "lastOpenFiles": [
+    "frontend/Reference/GUI/HTMLView.md",
+    "frontend/Reference/GUI/TextView.md",
+    "frontend/Reference/GUI/InputText.md",
+    "frontend/Advanced/Slides/Backgrounds.md",
+    "frontend/Advanced/Command palette/AI Assistant.md",
+    "Screenshot 2024-10-03 at 10.27.35.png",
+    "frontend/Reference/Graphics3D/Tube.md",
+    "frontend/Reference/Graphics3D/SpotLight.md",
     "frontend/Reference/Graphics3D/PointLight.md",
     "frontend/Reference/Graphics3D/MeshFogMaterial.md",
     "frontend/Reference/Graphics3D/Graphics3D.md",
@@ -196,7 +205,6 @@
     "frontend/Advanced/Slides/embed-wl.md",
     "frontend/Advanced/Slides/crypto-text.md",
     "frontend/Advanced/Slides/components.md",
-    "frontend/Advanced/Slides/Backgrounds.md",
     "frontend/Reference/Decorations/WLXForm.md",
     "frontend/Reference/GUI/EditorView.md",
     "frontend/Reference/Video/Video.md",
@@ -204,22 +212,15 @@
     "frontend/Reference/Decorations/Interpretation.md",
     "frontend/Reference/Graphics3D/MeshPhysicalMaterial.md",
     "frontend/Reference/Graphics3D/Materials.md",
-    "frontend/Reference/Graphics3D/MeshMaterial.md",
-    "frontend/Reference/Graphics3D/Directive.md",
-    "frontend/Reference/Graphics3D/Emissive.md",
     "fogmaterial.png",
     "irra1.png",
     "glass1.png",
     "Screenshot 2024-09-27 at 15.54.11.png",
     "Screenshot 2024-09-27 at 15.51.53.png",
-    "frontend/Reference/Graphics3D/Shadows.md",
-    "frontend/Reference/Graphics3D/Roughness.md",
-    "frontend/Reference/Graphics3D/Metalness.md",
     "collapse-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2024-09-26 at 10.12.13.png",
     "Screenshot 2024-09-25 at 15.37.02.png",
     "Screenshot 2024-09-06 at 17.03.23.png",
-    "nice0animation-ezgif.com-video-to-gif-converter.gif",
     "aniamtedLatex.mov",
     "frontend/Reference/Tree",
     "frontend/Reference/Region",

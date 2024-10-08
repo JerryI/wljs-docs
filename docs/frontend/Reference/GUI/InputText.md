@@ -32,6 +32,9 @@ Text placeholder
 ### `"Description"`
 adds description field to a widget
 
+### `ImageSize`
+sets the width in pixels
+
 ### `"Topic"`
 Specifies which topic or pattern of an event is used
 

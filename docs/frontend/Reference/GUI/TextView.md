@@ -24,6 +24,9 @@ adds description label
 ## `"Placeholder"`
 adds placeholder of the given `string` is empty
 
+### `ImageSize`
+sets the width in pixels
+
 ### `"Label"`
 adds a label at the left side to the text field
 

@@ -327,6 +327,42 @@ please modify it so that when i remove a cell it will also stop streaming
 ```
 :::
 
+### Make a linear gradient for a div
+We have some [WLX](frontend/Cell%20types/WLX.md) cell with the following content
+
+```jsx
+.wlx
+
+<div class="flex w-full flex-row gap-x-4" style="align-items: center">
+  <img width="60" src="/attachments/image-a79.png"/>
+  <h1>Title of the talk</h1>
+  <div></div>
+</div>
+```
+
+then we select the last div
+
+```
+<div></div>
+```
+
+and use a prompt
+
+> make a linear gradient from the selected text with 3 colors (red, blue, green) horizontally. Height is 2rem
+
+AI applies the changes
+
+```jsx
+.wlx
+
+<div class="flex w-full flex-row gap-x-4" style="align-items: center">
+  <img width="60" src="/attachments/image-a79.png"/>
+  <h1>Title of the talk</h1>
+  <div style="background: linear-gradient(to right, red, blue, green); width: 100%; height: 2rem;"></div>
+</div>
+```
+
+![](./../../../Screenshot%202024-10-03%20at%2010.27.35.png)
 
 ### Restart session
 If you need to flush the session, simply type in the chat window
