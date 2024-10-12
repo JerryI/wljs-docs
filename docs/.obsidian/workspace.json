@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Reference/Plotting Functions/Plot.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ResultCell",
+                "query": "Offset",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -90,8 +90,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Reference/Plotting Functions/Plot.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md",
+                "file": "frontend/Reference/Plotting Functions/Plot.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/animations.md"
+                "file": "frontend/Reference/Plotting Functions/Plot.md"
               }
             }
           },
@@ -184,10 +183,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a0484db54adcc372",
+  "active": "06328218290ccda3",
   "lastOpenFiles": [
-    "frontend/Reference/Slides/SlideEventListener.md",
+    "frontend/Reference/Graphics/Offset.md",
+    "frontend/Reference/Graphics/Graphics.md",
+    "frontend/Reference/Plotting Functions/Plot.md",
+    "frontend/Reference/Frontend IO/SystemOpen.md",
     "frontend/Advanced/Slides/animations.md",
+    "frontend/Reference/Slides/SlideEventListener.md",
     "dynamicstats-ezgif.com-video-to-gif-converter.gif",
     "frontend/Reference/Cells and Notebook/ResultCell.md",
     "frontend/Reference/Graphics/Directive.md",
@@ -210,9 +213,6 @@
     "frontend/Advanced/Slides/embed-wl.md",
     "frontend/Advanced/Slides/crypto-text.md",
     "frontend/Advanced/Slides/components.md",
-    "frontend/Reference/Decorations/WLXForm.md",
-    "frontend/Reference/GUI/EditorView.md",
-    "frontend/Reference/Video/Video.md",
     "fogmaterial.png",
     "irra1.png",
     "glass1.png",

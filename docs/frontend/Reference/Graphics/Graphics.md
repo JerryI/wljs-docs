@@ -264,7 +264,7 @@ Graphics[Circle[], Axes->True, Frame->True]
 #### `FrameTicks`
 The same as [`Ticks`](#`Ticks`), but for this regime.
 
-#### `FrameLabels` 
+#### `FrameLabel` 
 The same as [`AxesLabel`](#`AxesLabel`)
 
 ```mathematica
@@ -273,6 +273,11 @@ FrameLabel->{{"yy", None}, {"xx", None}}
 
 <Wl >{`Graphics[Circle[], ImageSize->350, Axes->True, Frame->True, FrameLabel->{{"yy", None}, {"xx", None}}]`}</Wl>
 
+to specify __an absolute offset__ for each label, provide a list instead of a string
+
+```mathematica
+FrameLabel->{{{"yy", {xoffset, yoffset}}, None}, {"xx", None}}
+```
 
 #### `FrameStyle`
 Affects the style of [`FrameLabels`](#`FrameLabels`). Use `Directive` for changing the style

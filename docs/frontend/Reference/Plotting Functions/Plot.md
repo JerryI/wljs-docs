@@ -40,13 +40,11 @@ Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {"wavenumber (
 
 <Wl >{`Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {"wavenumber (cm^{-1})", "absorption \\alpha"}, PlotRange->Full, ImageSize->500]`}</Wl>
 
-It also supports [Offset](frontend/Reference/Graphics/Offset.md) attribute
+It also supports absolute positioning using offset
 
 ```mathematica
-Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {Offset["wavenumber (cm^{-1})", {0,0.05}], "absorption \\alpha"}, PlotRange->Full]
+Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {"wavenumber (cm^{-1})", {"absorption \\alpha", {112,0}}}, PlotRange->Full]
 ```
-
-<Wl >{`Plot[PDF[NormalDistribution[0, 1], x], {x, -10, 10}, AxesLabel -> {Offset["wavenumber (cm^{-1})", {0,0.05}], "absorption \\alpha"}, PlotRange->Full, ImageSize->500]`}</Wl>
 
 ### `Ticks`
 Customize ticks by providing an array of numbers for both axes
@@ -87,13 +85,25 @@ Plot[x, {x, 0, 1}, Frame->True]
 #### `FrameTicks`
 The same as [`Ticks`](#`Ticks`), but for this regime.
 
-#### `FrameLabels` 
+#### `FrameLabel` 
 The same as [`AxesLabel`](#`AxesLabel`)
 ```mathematica
-Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{"x-axis", "y-axis"}]
+Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{
+	"x-axis", 
+	"y-axis"
+}]
 ```
 
 <Wl >{`Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{"x-axis", "y-axis"}, ImageSize->500]`}</Wl>
+
+one can specify an absolute offset for a label by wrapping it into a list
+
+```mathematica
+Plot[x, {x, 0, 1}, Frame->True, FrameLabel->{
+	"x-axis", 
+	{"y-axis", {0,50}}
+}]
+```
 
 #### `FrameStyle`
 Affects the style of [`FrameLabels`](#`FrameLabels`). Use `Directive` for changing the style
