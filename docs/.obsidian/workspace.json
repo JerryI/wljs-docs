@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/Widgets and components/Widgets.md",
+                "file": "frontend/Reference/GUI/EditorView.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Advanced/Slides/Widgets and components/Widgets.md",
+                "file": "frontend/Reference/GUI/EditorView.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Advanced/Slides/Widgets and components/Widgets.md",
+                "file": "frontend/Reference/GUI/EditorView.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Advanced/Slides/Widgets and components/Widgets.md"
+                "file": "frontend/Reference/GUI/EditorView.md"
               }
             }
           },
@@ -185,9 +185,11 @@
   },
   "active": "a0484db54adcc372",
   "lastOpenFiles": [
-    "frontend/Advanced/Slides/Widgets and components/tables.md",
-    "frontend/Advanced/Slides/Widgets and components/Widgets.md",
+    "frontend/Reference/GUI/CellView.md",
     "frontend/Advanced/Slides/Widgets and components/Mermaid Diagrams.md",
+    "frontend/Reference/GUI/EditorView.md",
+    "frontend/Advanced/Slides/Widgets and components/Widgets.md",
+    "frontend/Advanced/Slides/Widgets and components/tables.md",
     "frontend/Advanced/Slides/Widgets and components/embed-wl.md",
     "frontend/Advanced/Slides/Widgets and components/crypto-text.md",
     "frontend/Advanced/Slides/Widgets and components/Building components.md",
@@ -212,7 +214,6 @@
     "frontend/Reference/GUI/TextView.md",
     "frontend/Reference/GUI/HTMLView.md",
     "frontend/Reference/GUI/InputText.md",
-    "frontend/Advanced/Command palette/AI Assistant.md",
     "Screenshot 2024-10-03 at 10.27.35.png",
     "fogmaterial.png",
     "irra1.png",

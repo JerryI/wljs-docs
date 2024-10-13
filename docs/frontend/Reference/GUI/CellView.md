@@ -49,7 +49,7 @@ graph LR
     B --> C1[240 byte 1-st trace header] --> T1[samples of 1-st trace]
     B --> C2[240 byte 2-st trace header] --> T2[samples of 1-st trace]
     B --> CN[240 byte n-st trace header] --> T3[samples of 1-st trace] 
-", ImageSize->650, "Display"->"mermaid"] // CreateFrontEndObject
+", ImageSize->650, "Display"->"mermaid"] 
 ```
 
 *make a slide*
