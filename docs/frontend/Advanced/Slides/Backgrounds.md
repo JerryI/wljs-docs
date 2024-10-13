@@ -85,7 +85,7 @@ curveDynamicGenerator[center_, radius_] := With[{cell = ResultCell[]}, LeakyModu
 
       phase = phase + 0.02;
       modulation = Sin[phase/2];
-  , 100];
+  , 50];
 
   (* remove task if cell has been destroyed *)
   EventHandler[cell, {"Destroy" -> Function[Null, Print["Removed"]; TaskRemove[task]]}];

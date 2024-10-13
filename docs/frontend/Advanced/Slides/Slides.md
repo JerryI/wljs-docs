@@ -180,7 +180,7 @@ And some content
 The result will be the same. Additional tags we used `div` are necessary to help WLX to differentiate between the first and the second arguments of `Columns` similar to how `li` and `ul` tags are used to make lists.
 
 :::note
-See advanced guide on components by the link [components](frontend/Advanced/Slides/components.md)
+See advanced guide on components by the link [Building components](frontend/Advanced/Slides/Widgets%20and%20components/Building%20components.md)
 :::
 
 ## Images
@@ -244,7 +244,7 @@ m \\mathbf{a} = \\mathbf{F}
 $$
 ```
 
-If you need to highlight WL code, or JS, or HTML - see [embed-wl](frontend/Advanced/Slides/embed-wl.md). 
+If you need to highlight WL code, or JS, or HTML - see [embed-wl](frontend/Advanced/Slides/Widgets%20and%20components/embed-wl.md). 
 
 ## Embedding PDF or websites
 We have a full power of HTML. To embed a local PDF document from the folder of your notebook
@@ -275,6 +275,19 @@ and to make a __nicer corners__
 <iframe style="border: none; border-radius: 4px" width="800" height="500" src="https://chat.openai.com"/>
 ```
 
+## Javascript code
+Any provided `script` tag will be executed after slides have been mounted
+
+```md
+.slide
+
+<div id="dtext">Hello World</div>
+
+<script>
+  document.getElementById('dtext').style.background = "yellow"
+</script>
+```
+
 
 ## Transitions and fragments
 Revealing the content is an art. You can specify some fragments to appear later, or disappear or change the color. RevealJS uses HTML comments in the form
@@ -302,7 +315,7 @@ Fragment changes the color <!-- .element: class="fragment highlight-red" data-fr
 See more available transitions at [RevealJS](https://revealjs.com/fragments/).
 
 :::note
-Custom transitions are not supported, unless it is made using [Graphics](frontend/Reference/Graphics/Graphics.md) using [animations](frontend/Advanced/Slides/animations.md) approach
+Custom transitions are not supported, unless it is made using [Graphics](frontend/Reference/Graphics/Graphics.md) using [animations](frontend/Advanced/Slides/Widgets%20and%20components/animations.md) approach
 :::
 
 ### Events
@@ -341,7 +354,7 @@ The identifier of [SlideEventListener](frontend/Reference/Slides/SlideEventListe
 - `"fragment-INDEX"` - is fired when a fragment number `INDEX` has been revealed
 
 :::info
-To learn more about on how to utilize it for animations and etc, please, read [animations](frontend/Advanced/Slides/animations.md) section.
+To learn more about on how to utilize it for animations and etc, please, read [animations](frontend/Advanced/Slides/Widgets%20and%20components/animations.md) section.
 :::
 
 ## WL expressions and data-driven slides
@@ -400,7 +413,7 @@ Compute and plot the shortest tour through 100 random points:
 
 ![](../../../imgs/ezgif.com-optimize-3.gif)
 
-For more advanced stuff see [animations](frontend/Advanced/Slides/animations.md)
+For more advanced stuff see [animations](frontend/Advanced/Slides/Widgets%20and%20components/animations.md)
 
 ## Pointer
 Pointer is provided by a separate [plugin](https://github.com/burnpiro/reveal-pointer) used by RevealJS. To toggle it press `q` when the focus is on a slide

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotting Functions/Plot.md",
+                "file": "frontend/Advanced/Slides/Widgets and components/Widgets.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Plotting Functions/Plot.md",
+                "file": "frontend/Advanced/Slides/Widgets and components/Widgets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/Reference/Plotting Functions/Plot.md",
+                "file": "frontend/Advanced/Slides/Widgets and components/Widgets.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/Reference/Plotting Functions/Plot.md"
+                "file": "frontend/Advanced/Slides/Widgets and components/Widgets.md"
               }
             }
           },
@@ -183,36 +183,37 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "06328218290ccda3",
+  "active": "a0484db54adcc372",
   "lastOpenFiles": [
+    "frontend/Advanced/Slides/Widgets and components/tables.md",
+    "frontend/Advanced/Slides/Widgets and components/Widgets.md",
+    "frontend/Advanced/Slides/Widgets and components/Mermaid Diagrams.md",
+    "frontend/Advanced/Slides/Widgets and components/embed-wl.md",
+    "frontend/Advanced/Slides/Widgets and components/crypto-text.md",
+    "frontend/Advanced/Slides/Widgets and components/Building components.md",
+    "frontend/Advanced/Slides/Widgets and components/animations.md",
+    "frontend/Advanced/Slides/Slides.md",
+    "aniamtion_dummy-ezgif.com-optimize.gif",
+    "frontend/Advanced/Events system/routing.md",
+    "frontend/Advanced/Slides/Fragments.md",
+    "frontend/Advanced/Slides/Backgrounds.md",
+    "frontend/Advanced/Slides/Styling.md",
+    "frontend/Advanced/Slides/Transitions.md",
+    "frontend/Advanced/Slides/Animated equations.md",
+    "frontend/Advanced/Slides/Widgets and components",
+    "frontend/Reference/Slides/SlideEventListener.md",
     "frontend/Reference/Graphics/Offset.md",
     "frontend/Reference/Graphics/Graphics.md",
     "frontend/Reference/Plotting Functions/Plot.md",
     "frontend/Reference/Frontend IO/SystemOpen.md",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Reference/Slides/SlideEventListener.md",
     "dynamicstats-ezgif.com-video-to-gif-converter.gif",
     "frontend/Reference/Cells and Notebook/ResultCell.md",
     "frontend/Reference/Graphics/Directive.md",
     "frontend/Reference/GUI/TextView.md",
     "frontend/Reference/GUI/HTMLView.md",
     "frontend/Reference/GUI/InputText.md",
-    "frontend/Advanced/Slides/Backgrounds.md",
     "frontend/Advanced/Command palette/AI Assistant.md",
     "Screenshot 2024-10-03 at 10.27.35.png",
-    "frontend/Reference/Graphics3D/Tube.md",
-    "frontend/Reference/Graphics3D/SpotLight.md",
-    "frontend/Reference/Graphics3D/PointLight.md",
-    "frontend/Reference/Graphics3D/MeshFogMaterial.md",
-    "frontend/Reference/Graphics3D/Graphics3D.md",
-    "frontend/Advanced/Slides/Widgets.md",
-    "frontend/Advanced/Slides/Transitions.md",
-    "frontend/Advanced/Slides/tables.md",
-    "frontend/Advanced/Slides/Mermaid Diagrams.md",
-    "frontend/Advanced/Slides/Fragments.md",
-    "frontend/Advanced/Slides/embed-wl.md",
-    "frontend/Advanced/Slides/crypto-text.md",
-    "frontend/Advanced/Slides/components.md",
     "fogmaterial.png",
     "irra1.png",
     "glass1.png",
@@ -220,7 +221,6 @@
     "Screenshot 2024-09-27 at 15.51.53.png",
     "collapse-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2024-09-26 at 10.12.13.png",
-    "Screenshot 2024-09-25 at 15.37.02.png",
     "aniamtedLatex.mov",
     "frontend/Reference/Tree",
     "frontend/Reference/Region",
@@ -229,7 +229,6 @@
     "frontend/Reference/Dataset",
     "blog/2023-10-10-esm/index._mdx",
     "blog/2023-10-10-esm/index.mdx",
-    "blog/2023-10-10-esm/NintendoPro.wln",
-    "blog/2023-08-19-advanced-events/Greyness.wln"
+    "blog/2023-10-10-esm/NintendoPro.wln"
   ]
 }

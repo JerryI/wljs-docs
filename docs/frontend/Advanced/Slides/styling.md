@@ -182,3 +182,16 @@ If the content is too large, but you still want to keep it on a single slide, on
 ...large content goes
 
 ```
+
+### Align content
+
+```md
+.slide
+
+<!-- .slide: style="text-align:left" -->
+
+# Heading
+
+Some text
+
+```

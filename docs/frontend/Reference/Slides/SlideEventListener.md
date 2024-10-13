@@ -31,7 +31,7 @@ EventHandler["event", Echo]
 ```
 
 :::info
-There is no restrictions on the number of attached listeners to a single slide. One can generate them on-fly from components. See [Example 4 🔄 Simple stat counter](frontend/Advanced/Slides/animations.md#Example%204%20🔄%20Simple%20stat%20counter)
+There is no restrictions on the number of attached listeners to a single slide. One can generate them on-fly from components. See [Example 4 🔄 Simple stat counter](frontend/Advanced/Slides/Widgets%20and%20components/animations.md#Example%204%20🔄%20Simple%20stat%20counter)
 :::
 
 ## Options
