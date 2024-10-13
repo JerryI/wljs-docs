@@ -164,6 +164,7 @@ const config = {
     ({
       metadata: [
         {name: 'msvalidate.01', content: '558ACAAD3C892A685EC4981186E3711D'},
+        {name: 'google-site-verification', content: "v5kHeI8IZCb5bfzZug5GQ7uRZOeo2VIdj8tcUXpaLTk"}
       ],
 
       
