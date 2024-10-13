@@ -105,12 +105,21 @@ const FeatureList = [
           </div>          
         </li>      
 
+        
+
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/mid-thz-tds"}><b>THz-TDS</b> Model the propagation of THz pulse though the dispersive medium in 15 lines of code</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
           </div>          
         </li>          
+
+        <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/animation-coasce"}><b>Coalesce</b> Deforming an isometric pattern</Link>
+          <div className={styles.badgeHolder}>
+            <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
+          </div>          
+        </li> 
 
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/mid-pinkorb"}>Pink Orb</Link>
