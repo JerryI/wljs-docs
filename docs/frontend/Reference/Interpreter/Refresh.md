@@ -10,10 +10,10 @@ Implementation differs from Mathematica
 :::
 
 ```mathematica
-Refresh[expr_, opts___]
+Refresh[expr_, interval_]
 ```
 
-produces a dynamic window with `expr` reevaluated each interval of time specified in seconds or in `Quantity` provided in options
+produces a dynamic window with `expr` reevaluated each interval of time specified in seconds or in `Quantity` provided in `interval`
 
 ```mathematica
 Refresh[expr_, trigger_EventObject | trigger_String]
@@ -23,20 +23,17 @@ produces a dynamic window with `expr` reevaluated by `trigger` event (see [Event
 
 `Referesh` has `HoldFirst` attribute.
 
-## Options
-### `UpdateInterval`
-Sets an update interval in seconds or in `Quantity`. By the default is `1`.
 
 ## Example
 
 ```mathematica
-Refresh[Now // TextString]
+Refresh[Now // TextString, 1]
 ```
 
 or even for decorated symbols
 
 ```mathematica
-Refresh[Now]
+Refresh[Now, 1]
 ```
 
 
