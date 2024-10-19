@@ -122,7 +122,7 @@ Please follow [the instructions](https://github.com/JerryI/wolfram-js-frontend/b
 ## Showcase
 **[Blog posts](https://jerryi.github.io/wljs-docs/blog)**
 
-[🔗 Link](https://jerryi.github.io/wljs-docs/blog) Pages of real-life problems solved using WLJS Notebook and published as interactive notebooks runnning in your browser. Try it out
+[🔗 Link](https://jerryi.github.io/wljs-docs/blog) Pages of real-life problems solved using WLJS Notebook and published as interactive notebooks running in your browser. Try it out
 
 
 **[WLJS Notebook Demonstration Project](https://jerryi.github.io/wljs-demo/)**
@@ -132,6 +132,7 @@ Notebooks posted as static web pages showcase various examples that demonstrate 
 
 
 ## Media
+- WL R&D 📽️ [WL Javascript Notebook](https://www.youtube.com/watch?v=Hen5qWfm6P0)
 - YTS 📽️ [You don't need to program your figures manually](https://youtube.com/shorts/Z76dMHK8POM?feature=share)
 - YTS 📽️ [How to do Dynamics in Computation Notebook](https://youtube.com/shorts/T-ryDA1Sb3g?feature=share)
 - YTS 📽️ [We made AI Copilot in your Notebook 🤖](https://youtube.com/shorts/6s9m5ZGPkdE?feature=share)
