@@ -15,9 +15,15 @@ Inset[_Graphics | _Graphics3D | _Image | _EditorView | _, pos_List, origin_List,
 
 a graphics object, that allows to put another [Graphics](frontend/Reference/Graphics/Graphics.md), [Image](frontend/Reference/Graphics/Image.md), [EditorView](frontend/Reference/GUI/EditorView.md), [CellView](frontend/Reference/GUI/CellView.md) or anything else __for which WLJS execution environment makes sense__ into the canvas. 
 - `pos` has to be a 2D vector, that specifies the position of the inset in the local coordination system
-- `origin` __is optional__ and specifies the coordinates of the pin point in the local coordinate system of `inset` object (if it is [Image](frontend/Reference/Graphics/Image.md), then this has to be in pixels units) (absolute coordination system). By the default it takes the center of calculated size
+- `origin` __is optional__ and specifies the coordinates of the pin point in the local coordinate system of `inset` object (if it is [Image](frontend/Reference/Graphics/Image.md), then this has to be in pixels units) (absolute coordination system). By the default __it takes the center of calculated size__
 - `size` is displayable size in the local coordinate system of parent graphics object (with respect to `Inset`). 
 
+
+:::warning
+By the default __if only `pos` parameters is provided__, it tries to set the rest based on the DOM size of the inner element. Sometimes if you use [CellView](frontend/Reference/GUI/CellView.md) or [EditorView](frontend/Reference/GUI/EditorView.md), which relies on asynchronous evaluation, it becomes tricky to predict the size and it might show nothing. 
+
+Please for this case provide `origin` and `size` manually
+:::
 
 
 ## Options

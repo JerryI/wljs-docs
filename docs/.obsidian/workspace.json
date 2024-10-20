@@ -55,16 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/GUI/CellView.md",
+                "file": "frontend/Reference/Graphics/Inset.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CellView"
+              "title": "Inset"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -95,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Refresh",
+                "query": "Inset",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -116,7 +116,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -136,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Guidelines.md",
+                "file": "frontend/Reference/Graphics/Inset.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Guidelines"
+              "title": "Backlinks for Inset"
             }
           },
           {
@@ -219,13 +220,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d2e3fbcb5f245f87",
+  "active": "0563ddd8d7105d7a",
   "lastOpenFiles": [
+    "frontend/Reference/GUI/CellView.md",
+    "frontend/Guidelines.md",
     "frontend/instruction.md",
     "frontend/Reference/Frontend IO/FrontEndRuntime.md",
     "frontend/Reference/Interpreter/Refresh.md",
     "frontend/Reference/Neural Networks",
-    "frontend/Reference/GUI/CellView.md",
     "frontend/Reference/GUI/EditorView.md",
     "frontend/Reference/Graphics/Inset.md",
     "frontend/Advanced/Javascript/Communication.md",
@@ -249,7 +251,6 @@
     "frontend/Reference/Graphics/Offset.md",
     "frontend/Reference/Graphics/Graphics.md",
     "frontend/Reference/Plotting Functions/Plot.md",
-    "frontend/Reference/Frontend IO/SystemOpen.md",
     "dynamicstats-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2024-10-03 at 10.27.35.png",
     "fogmaterial.png",
