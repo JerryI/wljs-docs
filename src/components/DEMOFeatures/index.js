@@ -45,7 +45,10 @@ const FeatureList = [
         </li>
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/mid-symbolic-quantum"}><b>Solving Quantuum Mechanics Problem</b> with Symbolic Programming from the ground up</Link>
-        </li>        
+        </li>    
+        <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/neuralnet-1"}>Neural networks</Link>
+        </li>            
       </ul>       
         
       </>
