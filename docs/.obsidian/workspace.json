@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Dataset/Dataset.md",
+                "file": "frontend/Reference/Plotting Functions/TimelinePlot.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dataset"
+              "title": "TimelinePlot"
             }
           }
         ],
@@ -95,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Datas",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -116,8 +116,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -137,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Dataset/Dataset.md",
+                "file": "frontend/Reference/Plotting Functions/TimelinePlot.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +146,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Dataset"
+              "title": "Backlinks for TimelinePlot"
             }
           },
           {
@@ -222,6 +221,9 @@
   },
   "active": "0563ddd8d7105d7a",
   "lastOpenFiles": [
+    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+    "frontend/Reference/Plotting Functions/TimelinePlot.md",
+    "frontend/Reference/Dataset/Dataset.md",
     "frontend/Exporting/Static HTML.md",
     "frontend/Exporting/Dynamic HTML.md",
     "frontend/Overview.md",
@@ -247,9 +249,6 @@
     "frontend/Advanced/Events system/routing.md",
     "frontend/Advanced/Slides/Fragments.md",
     "frontend/Advanced/Slides/Backgrounds.md",
-    "frontend/Advanced/Slides/Styling.md",
-    "frontend/Advanced/Slides/Transitions.md",
-    "frontend/Advanced/Slides/Animated equations.md",
     "frontend/Advanced/Slides/Widgets and components",
     "dynamicstats-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2024-10-03 at 10.27.35.png",

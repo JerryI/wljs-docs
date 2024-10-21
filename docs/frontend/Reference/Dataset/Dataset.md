@@ -1,6 +1,5 @@
 ---
 env:
-  - WLJS
   - Wolfram Kernel
 package: wljs-editor
 source: https://github.com/JerryI/wljs-editor/blob/dev/src/Boxes.wl
@@ -13,7 +12,7 @@ Dataset[list_List | a_Association]
 represents a structured dataset based on a hierarchy of lists and associations.
 
 :::warning
-To be written. See original [doc](https://reference.wolfram.com/language/ref/Dataset.html)
+Docs are not complete. See original [page](https://reference.wolfram.com/language/ref/Dataset.html)
 :::
 
 ## Optimizations
@@ -95,6 +94,6 @@ RandomSample[data, 2]
 
 
 ## Notes
-It supports lazy loading for a large set with many rows. The data is stored partially on Kernel if it exceeds 0.5 mB.
+It supports lazy loading for a large set with many rows. The data is stored partially on Kernel if it exceeds 0.5 Mb.
 
 The data is saved, when exported using [Static HTML](frontend/Exporting/Static%20HTML.md)
