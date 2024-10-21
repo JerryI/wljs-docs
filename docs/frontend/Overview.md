@@ -123,7 +123,7 @@ While running WLJS App (in a tray or normally) press `Shift+Alt+Space` to get qu
 
 ![](./../Screenshot%202024-08-25%20at%2016.52.14.png)
 
-See more in [Overlay mode](frontend/Advanced/Prompt%20overlay.md)
+See more in [Overlay mode](frontend/Advanced/Overlay%20mode.md)
 
 ## Graphics 2D & 3D
 Most Mathematica's plotting functions produces lower-level primitives. The major part of them are supported

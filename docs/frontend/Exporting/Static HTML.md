@@ -13,6 +13,7 @@ Do not forget to save your notebook before exporting! It is important for garbag
 ## Use cases
 - Share a notebook with a colleague (no WLJS App installed)
 - Share your work on the internet or embed it to a blog post. Using [URL Protocol](frontend/Exporting/URL%20Protocol.md) other users can convert it back to a normal WLJS notebook
+- Lecture notes & offline presentations
 - Make a report on data analysis, experiment
 - Documentation 
 - Cross-platform personal notes

@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Graphics/Inset.md",
+                "file": "frontend/Reference/Dataset/Dataset.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Inset"
+              "title": "Dataset"
             }
           }
         ],
@@ -95,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Inset",
+                "query": "Datas",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "frontend/Reference/Graphics/Inset.md",
+                "file": "frontend/Reference/Dataset/Dataset.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Inset"
+              "title": "Backlinks for Dataset"
             }
           },
           {
@@ -222,6 +222,11 @@
   },
   "active": "0563ddd8d7105d7a",
   "lastOpenFiles": [
+    "frontend/Exporting/Static HTML.md",
+    "frontend/Exporting/Dynamic HTML.md",
+    "frontend/Overview.md",
+    "frontend/Advanced/Overlay mode.md",
+    "frontend/Reference/Graphics/Inset.md",
     "frontend/Reference/GUI/CellView.md",
     "frontend/Guidelines.md",
     "frontend/instruction.md",
@@ -229,7 +234,6 @@
     "frontend/Reference/Interpreter/Refresh.md",
     "frontend/Reference/Neural Networks",
     "frontend/Reference/GUI/EditorView.md",
-    "frontend/Reference/Graphics/Inset.md",
     "frontend/Advanced/Javascript/Communication.md",
     "frontend/Advanced/Slides/Widgets and components/Mermaid Diagrams.md",
     "frontend/Advanced/Slides/Widgets and components/Widgets.md",
@@ -247,10 +251,6 @@
     "frontend/Advanced/Slides/Transitions.md",
     "frontend/Advanced/Slides/Animated equations.md",
     "frontend/Advanced/Slides/Widgets and components",
-    "frontend/Reference/Slides/SlideEventListener.md",
-    "frontend/Reference/Graphics/Offset.md",
-    "frontend/Reference/Graphics/Graphics.md",
-    "frontend/Reference/Plotting Functions/Plot.md",
     "dynamicstats-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2024-10-03 at 10.27.35.png",
     "fogmaterial.png",
