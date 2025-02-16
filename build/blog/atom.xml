@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jerryi.github.io/wljs-docs/blog</id>
-    <title>WLJS Notebook Blog</title>
+    <title>WLJS Notebook | A Next-Generation Dynamic Notebook Interface Blog</title>
     <updated>2025-01-08T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jerryi.github.io/wljs-docs/blog"/>
-    <subtitle>WLJS Notebook Blog</subtitle>
+    <subtitle>WLJS Notebook | A Next-Generation Dynamic Notebook Interface Blog</subtitle>
     <icon>https://jerryi.github.io/wljs-docs/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Modeling Earth]]></title>

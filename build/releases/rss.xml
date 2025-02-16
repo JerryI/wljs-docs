@@ -1,13 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>WLJS Notebook Blog</title>
+        <title>WLJS Notebook | A Next-Generation Dynamic Notebook Interface Blog</title>
         <link>https://jerryi.github.io/wljs-docs/releases</link>
-        <description>WLJS Notebook Blog</description>
-        <lastBuildDate>Tue, 28 Jan 2025 00:00:00 GMT</lastBuildDate>
+        <description>WLJS Notebook | A Next-Generation Dynamic Notebook Interface Blog</description>
+        <lastBuildDate>Sat, 15 Feb 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release notes *2.6.8*]]></title>
+            <link>https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8</link>
+            <guid>https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8</guid>
+            <pubDate>Sat, 15 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[- Code Refactor: Improved organization of extensions and streamlined context handling for better usability.]]></description>
+            <content:encoded><![CDATA[<ul>
+<li><strong>Code Refactor:</strong> Improved organization of extensions and streamlined context handling for better usability.</li>
+<li><strong>Graphics Enhancements:</strong> Extra padding in framed mode, grid lines added (limited to <code>Automatic</code> for now).</li>
+<li><strong>3D Plots:</strong> Progress made towards full support for ticks and labels.</li>
+</ul>
+<div>
+<style>
+  .balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+  from {transform: translateY(100vh);
+  opacity: 1;}
+  to {transform: translateY(-300vh);
+  opacity: 0;}
+}
+#balloon-container {
+  height: 100vh;
+  top: 0;
+  position:fixed;
+  bottom: 0;
+  z-index: -99;  
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+}
+</style>
+
+<div id="balloon-container">
+</div></div>
+<!-- -->
+<a href="https://jerryi.github.io/wljs-docs/71f9e76d419745835534fa1c38bc3338.wln" class="p-2 text-xs w-full flex ring-1 ring-inset text-gray-600 shadow ring-gray-300 bg-gray-300 my-2">Download original notebook <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 ml-auto" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17 17h.01m.39-3h.6c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C21 15.602 21 16.068 21 17s0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C19.398 20 18.932 20 18 20H6c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C3 18.398 3 17.932 3 17s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C4.602 14 5.068 14 6 14h.6m5.4 1V4m0 11-3-3m3 3 3-3"></path></svg></a>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">
+const balloonContainer = document.getElementById("balloon-container");
+
+function random(num) {
+  return Math.floor(Math.random() * num);
+}
+
+function getRandomStyles() {
+  var r = random(255);
+  var g = random(255);
+  var b = random(255);
+  var mt = random(200);
+  var ml = random(50);
+  var dur = random(5) + 5;
+  return `
+  background-color: rgba(${r},${g},${b},0.7);
+  color: rgba(${r},${g},${b},0.7); 
+  box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite
+  `;
+}
+
+function createBalloons(num) {
+  for (var i = num; i &gt; 0; i--) {
+    var balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.cssText = getRandomStyles();
+    balloonContainer.append(balloon);
+  }
+}
+
+function removeBalloons() {
+  balloonContainer.style.opacity = 0;
+  setTimeout(() =&gt; {
+    balloonContainer.remove()
+  }, 500)
+}
+
+createBalloons(10);
+setTimeout(removeBalloons, 15000);
+
+return '';
+</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="massive-code-base-refactor">Massive Code-base Refactor<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8#massive-code-base-refactor" class="hash-link" aria-label="Direct link to Massive Code-base Refactor" title="Direct link to Massive Code-base Refactor">​</a></h2>
+<p>We reorganized all extensions and the main repository, rewired connections, and reorganized all defined contexts. It should be much more friendly for the developers as well as for the end users. If one needs to see all public symbols from this or that extension, it should be as easy as calling <code>Names</code> on it. No more context hell!</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Context[FrontSubmit]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">"CoffeeLiqueur`Extensions`Communication`"</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Names["CoffeeLiqueur`Extensions`Communication`*"]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">{"CurrentWindow","FrontEndInstanceGroup","FrontEndInstanceGroupDestroy","FrontFetch","FrontFetchAsync","FrontInstanceGroup","FrontInstanceReference","FrontSubmit","WindowObj"}</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Here is how to list all contexts from the extensions (if you want to use them later in your external package)</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Select[$Packages, StringMatchQ[#, "CoffeeLiqueur`Extensions`*"]&amp;] // TableForm </code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="h-fade-20 codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*GB[*){{"CoffeeLiqueur`Extensions`MarkdownCells`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`RevealCells`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`WLXCells`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Video`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`PrintRedirect`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`NeuralNet`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Manipulate`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`SlidesTools`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Sound`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`InputsOutputs`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Graphics`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Plotly`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Graphics3D`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`FrontProxy`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`RuntimeTools`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`System`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Rasterize`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Autocomplete`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`MetaMarkers`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Notifications`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`NotebookStorage`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`FrontendObject`MissingFetcher`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Communication`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`RemoteCells`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`NotebookDirectory`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`OffloadTools`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`Boxes`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`EditorView`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`FrontendObject`"}(*||*),(*||*){"CoffeeLiqueur`Extensions`WLJSInterpreter`"}}(*]GB*) </code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tutorials-on-making-wljs-extensions">Tutorials on making WLJS Extensions<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8#tutorials-on-making-wljs-extensions" class="hash-link" aria-label="Direct link to Tutorials on making WLJS Extensions" title="Direct link to Tutorials on making WLJS Extensions">​</a></h2>
+<p>We have prepared such section in the documentation!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="objects-compression">Objects Compression<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8#objects-compression" class="hash-link" aria-label="Direct link to Objects Compression" title="Direct link to Objects Compression">​</a></h2>
+<p>We have probably noticed, that saving a notebook with a lot of 3D objects, or raster images might take ages. However, <strong>this is no longer an issue</strong>! Using basic compression for frontend objects allows to reduce the files size ==by 10 times==. For example</p>
+<p><img decoding="async" loading="lazy" src="https://jerryi.github.io/wljs-docs/assets/images/Screenshot%202025-02-01%20at%2021.58.38-9a2-975ffe15906524aa977c3f5429b00f71.png" width="1468" height="96" class="img_ev3q"></p>
+<p>You don't have to do anything extra. A compression is acting like a wrapper and sends compressed object to Javascript side, where it is decompressed using a tiny subset of <code>fflate</code> library. Compression is applied only for the objects larger than 0.5 Megabytes.</p>
+<p>It <strong>also works with exported notebook</strong> (HTML, MDX and etc)!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="safer-and-easier-javascript-api">Safer and easier Javascript API<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8#safer-and-easier-javascript-api" class="hash-link" aria-label="Direct link to Safer and easier Javascript API" title="Direct link to Safer and easier Javascript API">​</a></h2>
+<p>The API used to communicate from JS to Kernel is now finally shaped. <em>The old way is still be valid, but we don't recommend to use it</em></p>
+<p>New API allows seamless convertion from JS objects to Wolfram Expression</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">cell = EvaluationCell[];
+
+EventHandler["test", 
+  CellPrint[
+    ToString[#, StandardForm]
+  , "After" -&gt; cell]&amp;
+];</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">&lt;|"array"-&gt;{1,2,3,4},"value"-&gt;"Hello World"|&gt;</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Now run the script</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">.js
+
+server.kernel.io.fire('test', {
+  array: [1,2,3,4],
+  value: "Hello World"
+});
+</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="markdown-and-slides-are-interchangeable">Markdown and Slides are Interchangeable<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8#markdown-and-slides-are-interchangeable" class="hash-link" aria-label="Direct link to Markdown and Slides are Interchangeable" title="Direct link to Markdown and Slides are Interchangeable">​</a></h2>
+<p>There is full compatibility between slides and markdown cells. If you want to turn your slides into continuous pages in the notebook, simply replace .slide with .md.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="graphics-improvements">Graphics improvements<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8#graphics-improvements" class="hash-link" aria-label="Direct link to Graphics improvements" title="Direct link to Graphics improvements">​</a></h2>
+<p>We added extra padding in framed mode and grid lines</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Plot[{Sin[x], Cos[x]}, {x,0,10}, Frame-&gt;True, GridLines-&gt;Automatic]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["fe3afc3f-4df7-46e7-ae78-8c3a58f76ba9"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKp6UaJ6YlG6fpmqSkmeuamKWa6yammlvoWiQbJ5papJmbJSVaAgCa8hZ/"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p><code>GridLines</code> option is limited to <code>Automatic</code> for now.</p>
+<div><br></div>
+<p>We are somewhat closed to fully support ticks and labels in 3D plots</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["20d99c9e-9ddc-4af4-9db3-170b2023cdf0"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKGxmkWFomW6bqWqakJOuaJKaZAFlJxrqG5gZJRgZGxskpaQYAjOQV/w=="*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p><em>Ballon animation by Jemima (codepen)</em></p>
+<div>
+<style>
+  [transparency="false"] .bg-g-trans {
+    background: transparent !important;
+  }
+
+  [transparency="true"] .bg-g-trans {
+    background: transparent !important;
+  }
+</style></div>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Release notes *2.6.7*]]></title>
             <link>https://jerryi.github.io/wljs-docs/releases/2025/01/28/2.6.7</link>
