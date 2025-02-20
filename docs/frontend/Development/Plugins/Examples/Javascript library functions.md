@@ -80,7 +80,7 @@ Create a new file in `src/Kernel.wl`, which is going to be our package for evalu
 ApexCharts[<|
     "series" -> {44, 55, 67, 83},
     "labels" -> {"Apples", "Oranges", "Bananas", "Berries"},
-    "charts" -> <|
+    "chart" -> <|
         "height" -> 350, 
         "type" -> "radialBar"
     |>
@@ -113,6 +113,31 @@ ApexCharts::notassoc = "Input is not an association"
 ApexCharts[_?nonAssocHeadQ ] := (Message[ApexCharts::notassoc]; $Failed)
 ```
 
+Now we can think about `ApexCharts` as if it was a new entity, and the interpretation of this entity will be our graphs. To draw actual graphs instead of a symbolic representation we need to define an output form. For that [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md) comes in hand, which is provided in ``CoffeeLiqueur`Extensions`Boxes` `` context
+
+```mathematica
+BeginPackage["CoffeeLiqueur`Extensions`ApexCharts`", {
+    "CoffeeLiqueur`Extensions`Boxes`"
+}]
+
+(* Public context *)
+
+...
+
+(* Output forms *)
+
+ApexCharts /: MakeBoxes[a: ApexCharts[_Association], StandardForm ] := With[{},
+    ViewBox[a, a]
+]
+```
+
+First `a` will be an underlying expression (behind the graph), while second `a` is going to be rendered instead of it. However, if you try to evaluate this with defined output form, you get a similar error
+
+![](./../../../../Screenshot%202025-02-10%20at%2023.27.26.png)
+
+[ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md) tries to execute the expression provided as the second argument in the browser, but `ApexCharts` does not exist there.
+
+## Javascript Library
 Now we need to implement `ApexCharts` on the frontend. The idea is simple: take the provided data and using Apex API render a graph on the given DOM element
 
 ```js title="src/kernel.js"
@@ -142,6 +167,68 @@ npm run build
 After the restart, it should work with our extension like a charm
 
 ![](./../../../../radial-ezgif.com-optimize.gif)
+
+However, after several evaluation dead instances of `ApexCharts` will pile up as a garbage in Javascript memory. It is recommended to properly remove them. For that we need to identify each instance of `ApexCharts` and assign destructor function
+
+```js title="src/kernel.js"
+let ApexCharts;
+
+core.ApexCharts = async (args, env) => {
+    if (!ApexCharts) ApexCharts = (await import('apexcharts')).default; //lazy loading
+
+    const options = await interpretate(args[0], env);
+    const chart = new ApexCharts(env.element, options);
+    chart.render();
+
+    env.local.chart = chart;
+}
+
+core.ApexCharts.destroy = (args, env) => {
+    env.local.chart.destroy();
+} 
+
+core.ApexCharts.virtual = true
+```
+
+Now we need to bundle this
+
+```bash
+npm run build
+```
+
+After the restart it should work with our extension like a charm
+
+![](./../../../../radial-ezgif.com-optimize.gif)
+
+
+## Polishing
+We might do a few more tweaks. If our `ApexCharts` expression becomes too big, it might slow down the editor. For that reason we use [Frontend Objects](frontend/Advanced/Frontend%20interpretation/Frontend%20Objects.md)
+
+```mathematica
+BeginPackage["CoffeeLiqueur`Extensions`ApexCharts`", {
+    "CoffeeLiqueur`Extensions`Boxes`",
+    "CoffeeLiqueur`Extensions`FrontendObject`"
+}]
+
+(* Public context *)
+```
+
+```mathematica
+ApexCharts /: MakeBoxes[a: ApexCharts[_Association], StandardForm ] := With[{o = CreateFrontEndObject[a]},
+    MakeBoxes[o, form]
+] /; ByteCount[a] > 1024*4 
+```
+
+Frontend objects has a special predefined StandardForm (and WLXForm), where it uses a reference to a Wolfram Expression stored separately.
+
+Another improvement can be [WLXForm](frontend/Reference/Formatting/WLXForm.md), if we decide to use those charts on [Slides](frontend/Cell%20types/Slides.md) 
+
+```mathematica
+ApexCharts /: MakeBoxes[a: ApexCharts[_Association], form: WLXForm ] := With[{o = CreateFrontEndObject[a]},
+    MakeBoxes[o, form]
+]
+```
+
 
 :::tip
 Full source code can be found in [this repository](https://github.com/JerryI/wljs-plugin-example-1)

@@ -67,7 +67,7 @@ This defines an action button placed in the top-bar menu. When clicked, it trigg
 ## Main Kernel Package
 
 ### UI Element
-To inject new UI elements, we use the `CoffeeLiqueur`Notebook`AppExtensions` interface:
+To inject new UI elements, we use the `` CoffeeLiqueur`Notebook`AppExtensions` `` interface:
 
 ```mathematica title="src/Frontend.wl"
 BeginPackage["CoffeeLiqueur`Extensions`EvalAllButton`", {
@@ -155,33 +155,75 @@ After restarting the app, you should see a new icon in the top bar and a new men
 
 ![](./../../../../Screenshot%202025-02-09%20at%2018.04.45.png)
 
-### Processing Cells
-To evaluate all cells when the user clicks the button, we modify `Frontend.wl`:
+
+### Processing cells
+As it was mentioned, we want to evaluate all cells, when a user clicks on an icon. Let us go back to `Frontend.wl` and add more packages to work with cells and notebooks
 
 ```mathematica
 Needs["CoffeeLiqueur`Notebook`Cells`" -> "cell`"];
 Needs["CoffeeLiqueur`Notebook`" -> "nb`"];
 ```
 
-Define `processRequest`:
+Next define `processRequest`
+
+```mathematica
+processRequest[globalControls_String, modals_String, messager_String, client_] := With[{
+    notebookOnline = findNotebook[globalControls]
+},
+
+...
+```
+
+To find a notebook available in the current window one can *echo-locate* it using a global controls event pool
+
+```mathematica
+findNotebook[messagesPort_] := EventFire[messagesPort, "NotebookQ", True] /. {{___, n_nb`NotebookObj, ___} :> n};
+```
+
+**If at least one notebook component is attached to the global events network, it will respond to this pattern.**
+
+Then we can sort out input cells and synchronously one by another  
 
 ```mathematica
 processRequest[globalControls_String, modals_String, messager_String, client_] := With[{
     notebookOnline = findNotebook[globalControls]
 },
     If[!MatchQ[notebookOnline, _nb`NotebookObj], 
-        EventFire[messager, "Warning", "No active notebooks"];
+        EvetFire[messager, "Warning", "No active notebooks"];
         Return[];
     ];
-    
+
+    Echo["Processing!"];
+
     With[{
         inputCells = Select[notebookOnline["Cells"], cell`InputCellQ]
     },
-        runNext[inputCells, Function[cell, EventFire[globalControls, "NotebookCellEvaluate", cell]]]
+    
+        (* If you don't want to handle Kernel requests and prepare the rest -> use Notebooks public API *)
+        runNext[inputCells, Function[cell, EventFire[globalControls, "NotebookCellEvaluate", cell] ] ];
     ]
 ]
+
+runNext[l_List, f_] := With[{rest = Drop[l, 1]}, 
+    Then[f[l // First], Function[Null,
+        runNext[rest, f]
+    ] ]
+] /; Length[l] > 0
+
+runNext[_List, f_] := Echo["Done!"];
 ```
 
+We took a shortcut here. To avoid complexity with requesting kernels, showing dialogs we evaluate cells indirectly using Notebook API interface by firing pattern
+
+```mathematica
+EventFire[globalControls, "NotebookCellEvaluate", cell] _Promise
+```
+
+as a result an attached notebook (if any) on the events network returns `Promise`, which we can handle using `Then` and propagate to other cell and etc. Global controls event network interconnects modules and temporary exposes end-points of different services.
+
+
+
+
 :::tip
-The full source code is available in [this repository](https://github.com/JerryI/wljs-plugin-example-2).
+Full source code can be found in [this repository](https://github.com/JerryI/wljs-plugin-example-2)
 :::
