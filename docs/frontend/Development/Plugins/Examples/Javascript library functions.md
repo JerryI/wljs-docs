@@ -214,7 +214,7 @@ BeginPackage["CoffeeLiqueur`Extensions`ApexCharts`", {
 ```
 
 ```mathematica
-ApexCharts /: MakeBoxes[a: ApexCharts[_Association], StandardForm ] := With[{o = CreateFrontEndObject[a]},
+ApexCharts /: MakeBoxes[a: ApexCharts[_Association], form: StandardForm ] := With[{o = CreateFrontEndObject[a]},
     MakeBoxes[o, form]
 ] /; ByteCount[a] > 1024*4 
 ```
