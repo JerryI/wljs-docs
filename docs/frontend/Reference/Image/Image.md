@@ -74,6 +74,16 @@ x + y // Rasterize
 <Wl >{`x + y // Rasterize`}</Wl>
 
 
+## Notes on DPR
+`Image` is pixel-perfect. Depending on the pixel-density of the device the visible image size might differ from machine to machine. 
+
+To compensate for than, one can request DPR and calculate magnification in-place
+
+```mathematica
+Image[img_Image, Magnification->Offload[Graphics`DPR[]]]
+```
+
+Here ``Graphics`DPR `` will be executed on the frontend (WLJS Interpreter), there is no need in revaluation. 
 
 ## Dynamics
 It does support dynamic variables. 

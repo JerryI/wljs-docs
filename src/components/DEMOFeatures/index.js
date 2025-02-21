@@ -227,6 +227,9 @@ const FeatureList = [
           <Link className={styles.featureLink}  to={"/wljs-demo/plot-plotly"}><b>Plotly.js Integration</b> A massive library of functions</Link>         
         </li> 
         <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/apex-charts"}><b>Apex Charts</b> Build and use 3rd-party libraries within the notebook</Link>         
+        </li> 
+        <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/mix-graph"}><b>3D Force-Directed Graph</b> Hook up a Javascript library right in the notebook</Link>         
         </li> 
         </ul>                   
