@@ -194,7 +194,7 @@ The core plugins provides the following cells
 
 - [Javascript](frontend/Cell%20types/Javascript.md)
 - [Markdown](frontend/Exporting/Markdown.md)
-- [Slides](frontend/Reference/Slides/Slides.md)
+- [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md)
 - [WLX](frontend/Cell%20types/WLX.md)
 - [Files](frontend/Cell%20types/Files.md)
 - [HTML](frontend/Cell%20types/HTML.md)

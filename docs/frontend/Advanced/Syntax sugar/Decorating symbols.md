@@ -505,7 +505,7 @@ gauge /: MakeBoxes[g_gauge, StandardForm] := With[{},
 ```
 
 :::note
-If you plan to use it with [Slides](frontend/Reference/Slides/Slides.md) or [WLX](frontend/Cell%20types/WLX.md), define [WLXForm](frontend/Reference/Formatting/WLXForm.md) instead of [StandardForm](frontend/Reference/Formatting/StandardForm.md) in `MakeBoxes` or both.
+If you plan to use it with [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md) or [WLX](frontend/Cell%20types/WLX.md), define [WLXForm](frontend/Reference/Formatting/WLXForm.md) instead of [StandardForm](frontend/Reference/Formatting/StandardForm.md) in `MakeBoxes` or both.
 :::
 
 Now an actual implementation for our decorator

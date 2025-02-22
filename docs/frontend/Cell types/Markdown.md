@@ -196,7 +196,7 @@ __See [here](https://katex.org/docs/supported.html) all supported function for L
 
 
 ## WLX
-Markdown cells supports many features of [WLX](frontend/Cell%20types/WLX.md) similar to how it is done in [Slides](frontend/Reference/Slides/Slides.md)
+Markdown cells supports many features of [WLX](frontend/Cell%20types/WLX.md) similar to how it is done in [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md)
 ### Embed figures
 For example you created a nice 3D plot
 

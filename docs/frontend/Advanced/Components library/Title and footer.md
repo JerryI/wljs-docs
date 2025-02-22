@@ -3,7 +3,7 @@ tags:
   - text
   - layout
 ---
-A simple layout helpers to stylize your [Slides](frontend/Reference/Slides/Slides.md) 
+A simple layout helpers to stylize your [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md) 
 
 ![](./../../../Screenshot%202024-11-26%20at%2020.13.52.png)
 

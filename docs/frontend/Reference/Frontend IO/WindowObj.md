@@ -7,7 +7,7 @@ env:
 WindowObj[assoc_Association]
 ```
 
-an internal representation of a current window (can be a notebook or projected cell), that contains the information of a live connection to it used by [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md), [FrontFetch](frontend/Reference/Frontend%20IO/FrontFetch.md), [Slides](frontend/Reference/Slides/Slides.md) and other functions.
+an internal representation of a current window (can be a notebook or projected cell), that contains the information of a live connection to it used by [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md), [FrontFetch](frontend/Reference/Frontend%20IO/FrontFetch.md), [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md) and other functions.
 
 It is produced by [CurrentWindow](frontend/Reference/Frontend%20IO/CurrentWindow.md).
 

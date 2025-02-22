@@ -2,7 +2,7 @@
 tags:
   - text
 ---
-A simple wrapper for placing QR codes on [Slides](frontend/Reference/Slides/Slides.md)
+A simple wrapper for placing QR codes on [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md)
 
 ![](./../../../Screenshot%202024-11-26%20at%2020.19.08.png)
 

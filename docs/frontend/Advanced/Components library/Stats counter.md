@@ -2,7 +2,7 @@
 tags:
   - animation
 ---
-It provides an intuitive counter for some stats  to be used on [Slides](frontend/Reference/Slides/Slides.md). This component is designed to incrementally count up to a specified value
+It provides an intuitive counter for some stats  to be used on [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md). This component is designed to incrementally count up to a specified value
 
 ![](./../../../dynamicstats-ezgif.com-video-to-gif-converter.gif)
 

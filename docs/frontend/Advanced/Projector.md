@@ -74,7 +74,7 @@ The result looks like
 You can project the controls to a new window as well. There is no limitations on the number of windows.
 
 ## Making a slideshow
-If you are working with [Slides](frontend/Reference/Slides/Slides.md) cells, you can always go fullscreen by pressing `F` key on the output cell in the notebook. Here is a second option
+If you are working with [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md) cells, you can always go fullscreen by pressing `F` key on the output cell in the notebook. Here is a second option
 
 ![](./../../Screenshot%202024-08-25%20at%2017.25.50.png)
 

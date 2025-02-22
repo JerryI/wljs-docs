@@ -90,7 +90,7 @@ We use an amazing [Excalidraw](https://excalidraw.com/) editor for any complex d
 In the output cell a corresponding SVG image will be generated.
 
 ## Export
-Slides can be exported using [Static HTML](frontend/Exporting/Static%20HTML.md) exporter or static export using [Slides exporter](frontend/Reference/Slides/Slides.md) for printing for example
+Slides can be exported using [Static HTML](frontend/Exporting/Static%20HTML.md) exporter or static export using [Slides exporter](frontend/Reference/Slides/FrontSlidesSelected.md) for printing for example
 
 ## Autoupload images
 ### Drop a file
