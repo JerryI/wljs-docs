@@ -41,7 +41,7 @@ If it does not violate your privacy, there is a `DEBUG` mode, which can be enabl
 5. Send it to us (direct message on Telegram, email or Github Issues)
 
 ## Hot line & general discussion chat
-Please feel free to join [Telegram Group](https://t.me/+PBotB9UJw-hiZDEy).
+Please feel free to join [Telegram Group](https://t.me/wljs_support).
 
 
 :::tip

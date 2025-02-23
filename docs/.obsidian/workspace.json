@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Slides/FrontSlidesSelected.md",
+                "file": "frontend/Troubleshooting/Troubleshooting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FrontSlidesSelected"
+              "title": "Troubleshooting"
             }
           },
           {
@@ -233,6 +233,7 @@
   },
   "active": "d56f995295699f60",
   "lastOpenFiles": [
+    "frontend/Reference/Slides/FrontSlidesSelected.md",
     "frontend/Reference/Image/Image.md",
     "frontend/Development/Plugins/Examples/Javascript library functions.md",
     "frontend/Development/Plugins/Examples/New cell type and Kernel evaluation.md",
@@ -269,7 +270,6 @@
     "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
     "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
     "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
-    "frontend/Symbolic programming.md",
     "Screenshot 2025-02-12 at 19.25.50.png",
     "Screenshot 2025-02-09 at 18.04.45.png",
     "radial-ezgif.com-optimize.gif",

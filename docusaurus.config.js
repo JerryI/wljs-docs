@@ -209,8 +209,16 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Github',
+                href: 'https://github.com/JerryI/wolfram-js-frontend',
+              },
+              {
+                label: 'Discussions',
+                href: 'https://github.com/JerryI/wolfram-js-frontend/discussions',
+              },                            
+              {
                 label: 'Telegram',
-                href: 'https://t.me/+PBotB9UJw-hiZDEy',
+                href: 'https://t.me/wljs_support',
               },
             ],
           },
