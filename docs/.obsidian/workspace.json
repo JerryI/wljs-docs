@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Troubleshooting/Troubleshooting.md",
+                "file": "frontend/Cell types/Input cell.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Troubleshooting"
+              "title": "Input cell"
             }
           },
           {
@@ -106,7 +106,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Image",
+                "query": "vanish",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -231,8 +231,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d56f995295699f60",
+  "active": "06328218290ccda3",
   "lastOpenFiles": [
+    "Screenshot 2025-02-24 at 11.48.04.png",
+    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+    "frontend/Reference/GUI/InputRange.md",
+    "frontend/Troubleshooting/Troubleshooting.md",
     "frontend/Reference/Slides/FrontSlidesSelected.md",
     "frontend/Reference/Image/Image.md",
     "frontend/Development/Plugins/Examples/Javascript library functions.md",
@@ -266,10 +270,6 @@
     "frontend/Development/FAQ.md",
     "interpreter/Advanced/containers.md",
     "frontend/Advanced/Javascript/Communication.md",
-    "frontend/Advanced/Events system/Mouse and keyboard.md",
-    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
-    "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
-    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
     "Screenshot 2025-02-12 at 19.25.50.png",
     "Screenshot 2025-02-09 at 18.04.45.png",
     "radial-ezgif.com-optimize.gif",

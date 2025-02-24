@@ -48,6 +48,24 @@ emits `name` for each time when user drags a slider
 ```
 emits `oninput` when any changes occur, while `onchange` is __emitted after__ the users action
 
+### `"TrackedExpression"`
+Adds expression to track (usually a symbol) and update the slider position
+
+```mathematica
+var = 0.3;
+EventHandler[InputRange[0,2,0.1, var, "TrackedExpression"->Offload[var], Print]
+```
+
+Now you can overwrite slider position by setting
+
+```mathematica
+var = 0.6;
+```
+
+:::note
+Your slider effectively acquires an initialization value because of tracked expression 
+:::
+
 ## Chaining events
 One can reuse another event for a new element
 

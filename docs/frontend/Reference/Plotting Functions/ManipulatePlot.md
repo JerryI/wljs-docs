@@ -69,6 +69,22 @@ Specifies colors for each curve
 ### `Prolog`
 Appends graphics primitives to the plot. See [Graphics](frontend/Reference/Graphics/Graphics.md)
 
+
+### `"TrackedExpression"`
+Similar to the option of [InputRange](frontend/Reference/GUI/InputRange.md). It provides an external control over the sliders. Your expression must be an array of values with a length equal to the number of controlling parameters. For example
+
+```mathematica
+woo = {0.5, 0.6};
+
+ManipulatePlot[Sin[ w x^2 + u], {x,0,10}, {w, 0, 1},{u, 0,1}, "TrackedExpression"->Offload[woo]]
+```
+
+now you can update it by setting a new value
+
+```mathematica
+woo = {0.3, 0.2, 1.3}
+```
+
 ## Example
 Plot the simplest sine function
 

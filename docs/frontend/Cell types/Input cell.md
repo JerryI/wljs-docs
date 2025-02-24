@@ -34,12 +34,13 @@ When you __start typing__, the following happens
 ## Cell properties
 By clicking on `...` (more icon) located on the right side of a cell group, you can change the properties of an input cell
 
-![](./../../Screenshot%202024-07-11%20at%2010.04.50.png)
+![](./../../Screenshot%202025-02-24%20at%2011.48.04.png)
 
 It affects the whole cell group, i.e. input cell & all children output cells. The following transformations are possible
 
 - _Project to a window_ - evaluates a cell and shows the first output result in a separate window
 - *Make initialization cell* - marks an input cell as initialization cell, which will be evaluated once a notebook has been opened (appears as a <span style={{color:'green'}}>green</span> dot in the top-right corner)
+- *Copy* - compresses cell group into a gzip-compressed string expression. Paste it to a new empty input cell
 - *Hide / Show* - hides an input cell keeping only its output cells. There is a shortcut `Cmd+2 / Alt+2` or an arrow symbol on the left side of the group.
 - *Shrink / Expand* - fades out the large text keeping only the preview of it. A cursor can still be navigated into it.
 - *Lock / Unlock* - makes an input read-only and limits the controls of the given input cell
@@ -50,9 +51,9 @@ It affects the whole cell group, i.e. input cell & all children output cells. Th
 ### Syntax highlighting symbols tracking
 Wolfram Language autocomplete and highlighting can be extended using external packages.
 
-Once you have defined something in Wolfram Kernel session in ``Global` `` context, the corresponding symbol appears in the autocomplete window and is shared between all opened notebooks.
+Once you have defined something in Wolfram Kernel session in ``Global` ``, the corresponding symbol appears in the autocomplete window and is shared between all opened notebooks.
 
-On the startup Wolfram Kernel reads all packages imported and fetches `::usage` directives for defined symbols.
+On the startup Wolfram Kernel reads all packages imported and fetches `::usage` directives for defined symbols and periodically repeats this if upon any `Get` or `Needs` command has been fired.
 
 ### Syntax sugar
 All equations typed in the editor are compatible with any WL kernels,  i.e. can be used in `wolframscript`, since the syntax sugar and the structure is localized inside comments
@@ -165,7 +166,7 @@ You can also make your own custom representation of your symbol like in Mathemat
 ### Access to documentation
 Click on 🔎 icon in autocomplete window to open docs on that symbol in a new window
 
-![](./../../Screenshot 2024-08-25 at 17.36.24.png)
+![](./../../Screenshot%202024-08-25%20at%2017.36.24.png)
 
 ### Morph output cell into input
 If you change something in the output Wolfram Language cell, it will be automatically converted into a new input cell.

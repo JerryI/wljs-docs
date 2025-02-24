@@ -301,6 +301,10 @@ const FeatureList = [
           </li>    
 
           <li className={styles.featureLi}>
+            <Link className={styles.featureLink}  to={"/wljs-demo/test-joycon"}><b>Nintendo JoyCon</b> Use as a presenter tool</Link>         
+          </li>           
+
+          <li className={styles.featureLi}>
             <Link className={styles.featureLink}  to={"/wljs-demo/mix-esm"}><b>Siri animation</b> using NPM libraries</Link>   
             <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
