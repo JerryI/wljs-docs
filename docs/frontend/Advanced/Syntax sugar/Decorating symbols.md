@@ -718,10 +718,10 @@ handler[state_String, ref_, window_] := Module[{
 slider /: MakeBoxes[slider[initial_:0.5], StandardForm] := With[{
   uid = CreateUUID[]
 },
-  EventHandler[uid, {"Mounted" :> Function[ref,
+  EventHandler[uid, {"Mounted" :> Function[assoc,
     With[{},
-	  Then[FrontFetchAsync[ViewBox`InnerExpression[], FrontInstanceReference[ref]], Function[payload,
-        FrontSubmit[handler[{payload}//Flatten//First, FrontInstanceReference[ref]], FrontInstanceReference[ref]];
+	  Then[FrontFetchAsync[ViewBox`InnerExpression[], FrontInstanceReference[assoc["Instance"]]], Function[payload,
+        FrontSubmit[handler[{payload}//Flatten//First, FrontInstanceReference[assoc["Instance"]]], FrontInstanceReference[assoc["Instance"]]];
       ]]
     ]
    ]

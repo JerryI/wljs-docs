@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Cell types/Input cell.md",
+                "file": "frontend/Advanced/Javascript/Communication.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Input cell"
+              "title": "Communication"
             }
           },
           {
@@ -106,8 +106,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "vanish",
-                "matchingCase": false,
+                "query": "InnerExpre",
+                "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": true,
@@ -231,8 +231,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "06328218290ccda3",
+  "active": "d56f995295699f60",
   "lastOpenFiles": [
+    "frontend/Reference/Formatting/Low-level/ViewBox.md",
+    "frontend/Advanced/Syntax sugar/Decorating symbols.md",
+    "frontend/Reference/Cells and Notebook/CellPrint.md",
+    "frontend/Exporting/Standalone Widgets.md",
+    "frontend/Cell types/Input cell.md",
     "Screenshot 2025-02-24 at 11.48.04.png",
     "frontend/Reference/Plotting Functions/ManipulatePlot.md",
     "frontend/Reference/GUI/InputRange.md",
@@ -253,7 +258,6 @@
     "frontend/Cell types/ESM.md",
     "frontend/Overview.md",
     "manipulatePlot-ezgif.com-optimize.gif",
-    "frontend/Reference/Cells and Notebook/CellPrint.md",
     "nice0animation-ezgif.com-video-to-gif-converter-79bc0c7f8a4ee716eba6da5840c45688.gif",
     "Isingspins-ezgif.com-optipng.png",
     "Bubbles video to gif-e6769380f627f9aeca39fa8709b4461c.gif",
@@ -267,12 +271,8 @@
     "frontend/Advanced/Command palette/AI Assistant.md",
     "frontend/Advanced/Command palette/Debugger.md",
     "frontend/Development/Overview.md",
-    "frontend/Development/FAQ.md",
-    "interpreter/Advanced/containers.md",
-    "frontend/Advanced/Javascript/Communication.md",
     "Screenshot 2025-02-12 at 19.25.50.png",
     "Screenshot 2025-02-09 at 18.04.45.png",
-    "radial-ezgif.com-optimize.gif",
     "frontend/Development/Plugins/Examples",
     "frontend/Development/Plugins/Reference",
     "frontend/Development/API",

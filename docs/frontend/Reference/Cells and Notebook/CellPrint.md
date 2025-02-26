@@ -11,7 +11,11 @@ Creates a new cell with a given content in a notebook
 CellPrint[str_String, opts___] _RemoteCellObj
 ```
 
-where `str` is a text representation of an expression to be inserted into a new cell. 
+```mathematica
+CellPrint[any_, opts___] _RemoteCellObj
+```
+
+where `str` is a text representation of an expression to be inserted into a new cell or `any` is an arbitrary expression, which will be converted to string automatically using [StandardForm](frontend/Reference/Formatting/StandardForm.md).
 
 ## Options
 By the default it prints an output Wolfram Language cell after a current parent input cell, but you can override it

@@ -4,10 +4,189 @@
         <title>WLJS Notebook | A Next-Generation Dynamic Notebook Interface Blog</title>
         <link>https://jerryi.github.io/wljs-docs/releases</link>
         <description>WLJS Notebook | A Next-Generation Dynamic Notebook Interface Blog</description>
-        <lastBuildDate>Sat, 15 Feb 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Feb 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release notes *2.7.0*]]></title>
+            <link>https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0</link>
+            <guid>https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0</guid>
+            <pubDate>Wed, 26 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[- Insert a cell by moving with arrow keys and typing any letter.]]></description>
+            <content:encoded><![CDATA[<ul>
+<li>Insert a cell by moving with arrow keys and typing any letter.</li>
+<li>Copy cell groups as a single string and paste into a new input cell.</li>
+<li>Improved <code>Short</code> function for better formatting in outputs.</li>
+<li>New controls for navigating presentation slides using RevealJS API.</li>
+<li><code>InputRange</code> sliders can be updated programmatically while maintaining state.</li>
+<li><code>Manipulate</code> supports programmatic control with persistent state.</li>
+</ul>
+<div>
+<style>
+  .balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+  from {transform: translateY(100vh);
+  opacity: 1;}
+  to {transform: translateY(-300vh);
+  opacity: 0;}
+}
+#balloon-container {
+  height: 100vh;
+  top: 0;
+  position:fixed;
+  bottom: 0;
+  z-index: -99;  
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+}
+</style>
+
+<div id="balloon-container">
+</div></div>
+<!-- -->
+<a href="https://jerryi.github.io/wljs-docs/6f3c0dc5f2e70552a673568c6ff4adb4.wln" class="p-2 text-xs w-full flex ring-1 ring-inset text-gray-600 shadow ring-gray-300 bg-gray-300 my-2">Download original notebook <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 ml-auto" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17 17h.01m.39-3h.6c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C21 15.602 21 16.068 21 17s0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C19.398 20 18.932 20 18 20H6c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C3 18.398 3 17.932 3 17s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C4.602 14 5.068 14 6 14h.6m5.4 1V4m0 11-3-3m3 3 3-3"></path></svg></a>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">
+const balloonContainer = document.getElementById("balloon-container");
+
+function random(num) {
+  return Math.floor(Math.random() * num);
+}
+
+function getRandomStyles() {
+  var r = random(255);
+  var g = random(255);
+  var b = random(255);
+  var mt = random(200);
+  var ml = random(50);
+  var dur = random(5) + 5;
+  return `
+  background-color: rgba(${r},${g},${b},0.7);
+  color: rgba(${r},${g},${b},0.7); 
+  box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite
+  `;
+}
+
+function createBalloons(num) {
+  for (var i = num; i &gt; 0; i--) {
+    var balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.cssText = getRandomStyles();
+    balloonContainer.append(balloon);
+  }
+}
+
+function removeBalloons() {
+  balloonContainer.style.opacity = 0;
+  setTimeout(() =&gt; {
+    balloonContainer.remove()
+  }, 500)
+}
+
+createBalloons(10);
+setTimeout(removeBalloons, 15000);
+
+return '';
+</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ui-improvements">UI Improvements<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#ui-improvements" class="hash-link" aria-label="Direct link to UI Improvements" title="Direct link to UI Improvements">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-add-a-cell-between-others">How to Add a Cell Between Others<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#how-to-add-a-cell-between-others" class="hash-link" aria-label="Direct link to How to Add a Cell Between Others" title="Direct link to How to Add a Cell Between Others">​</a></h3>
+<p>We have changed the method for creating a cell between other cells. <em>Simply move with the arrows down and type any letter.</em></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="copy-cell-group">Copy Cell Group<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#copy-cell-group" class="hash-link" aria-label="Direct link to Copy Cell Group" title="Direct link to Copy Cell Group">​</a></h3>
+<p>There is a new feature in the cell properties.</p>
+<p><img decoding="async" loading="lazy" src="https://jerryi.github.io/wljs-docs/assets/images/Screenshot%202025-02-24%20at%2022.33.02-af0-8757c0ca04523b32e63d1689b7cfeffe.png" width="836" height="359" class="img_ev3q"></p><div><br></div><p></p>
+<p>It compresses input and all output cells into a single string.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Paste the copied content into a new empty input cell.</p></div></div>
+<p>You can also copy non-Wolfram Language outputs in the same way.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="boxes-or-decorations">Boxes or Decorations<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#boxes-or-decorations" class="hash-link" aria-label="Direct link to Boxes or Decorations" title="Direct link to Boxes or Decorations">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reimplementation-of-short">Reimplementation of <code>Short</code><a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#reimplementation-of-short" class="hash-link" aria-label="Direct link to reimplementation-of-short" title="Direct link to reimplementation-of-short">​</a></h3>
+<p>This expression is designed to shorten the output and is used in many outputs of Wolfram Language expressions, such as <code>NonLinearModelFit</code>, series outputs, and others. The native version often broke our internal formatting, but now we have replaced it with our implementation. It can be used directly.</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Table[RandomColor[], {100}] // Short 
+Table[RandomColor[], {100}, {3}, {30}] // Short </code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">{(*VB[*)(RGBColor[0.4285740492163317, 0.7913909357229074, 0.7217959017443194])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8qWiAZfPNg7m37oi2/M0SFg1/aF2nI8ez4LPHcHgBoWBk5"*)(*]VB*),(*VB[*)(RGBColor[0.3890298402552268, 0.018771935566063824, 0.5120042572841128])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8q6pF1ybr79IZ9EcP/KNfPFpPti3zC+g6EJT2wBwBoExmp"*)(*]VB*),(*VB[*)(RGBColor[0.16936020587613765, 0.9017860121159591, 0.6366193309657833])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8qerBmb8KMtUfti+49PxCWd/uNfVHG7/MN+vFP7AGa6hy7"*)(*]VB*),&lt;&lt;96&gt;&gt;}</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">{{{(*VB[*)(RGBColor[0.7325831065134378, 0.5979894508466139, 0.1719085829570397])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8qsqtsUggqfG5fNGX59aO7lB7bFwU8vLlNkvGYPQBpXxoN"*)(*]VB*),(*VB[*)(RGBColor[0.44795698759189584, 0.044087058186223826, 0.8720488878983641])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8qUjB+dyJ49R37ooREHaMpk5bZFxnoHBS8/Py1PQBfqRl1"*)(*]VB*),(*VB[*)(RGBColor[0.6606665033903807, 0.9586376332282864, 0.9336369327142091])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8q2vfLWERP5al9kdfR3Csaa9/ZF3XxdPdHPXhrDwBlZRn0"*)(*]VB*),&lt;&lt;26&gt;&gt;},&lt;&lt;1&gt;&gt;},&lt;&lt;98&gt;&gt;}</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="programmatic-controls-of-presentation">Programmatic Controls of Presentation<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#programmatic-controls-of-presentation" class="hash-link" aria-label="Direct link to Programmatic Controls of Presentation" title="Direct link to Programmatic Controls of Presentation">​</a></h2>
+<p>Similar to <code>FrontEditorSelected</code>, we have added a method to interact with a selected set of slides in the notebook. For example:</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">.slide
+
+# First
+
+---
+
+# Second</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Now try to run this</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">FrontSlidesSelected["navigateNext", 1] // FrontSubmit;</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>We directly forward your commands to RevealJS API. Please see it for more available commands.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="programmatic-controls-of-sliders">Programmatic Controls of Sliders<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#programmatic-controls-of-sliders" class="hash-link" aria-label="Direct link to Programmatic Controls of Sliders" title="Direct link to Programmatic Controls of Sliders">​</a></h2>
+<p>We added an extra option to control <code>InputRange</code> programmatically</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">sliderPos = 0.4;
+InputRange[0,1,0.1, "TrackedExpression"-&gt;Offload[sliderPos]]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(EventObject[&lt;|"Id" -&gt; "f903686f-d40c-4727-a3c7-dd83755ecf57", "Initial" -&gt; 0.5, "View" -&gt; "776c46e6-7c4a-480c-b713-dac670eac7f0"|&gt;])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKm5ubJZuYpZrpmiebJOqaWBgk6yaZGxrrpiQmm5kbpCYmm6cZAACBvBXV"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>If you set <code>sliderPos</code> symbol to a new value, it will move the slider above</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">sliderPos = RandomReal[];</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>It will still trigger an event and revert to the set value even if you refresh the page. In this sense, you give your slider a persistent state.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="programmatic-controls-of-manipulate">Programmatic Controls of Manipulate*<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#programmatic-controls-of-manipulate" class="hash-link" aria-label="Direct link to Programmatic Controls of Manipulate*" title="Direct link to Programmatic Controls of Manipulate*">​</a></h2>
+<p>One can do the same for <code>Manipulate</code> or <code>ManipulatePlot</code>. Keep in mind to use lists for them</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">manList = {0.3, 0.8};
+ManipulatePlot[Sinc[w x + b (*SpB[*)Power[x(*|*),(*|*)2](*]SpB*)], {x,-10,10}, {w,0,1}, {b,0,1}, "TrackedExpression"-&gt;Offload[manList]]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*GB[*){{(*VB[*)(Graphics[{AbsoluteThickness[2], RGBColor[0.368417, 0.506779, 0.709798], Line[Offload[pts$273899]]}, ImageSize -&gt; {400, 300}, PlotRange -&gt; Automatic, Axes -&gt; True, TransitionType -&gt; "Linear", TransitionDuration -&gt; 50, Epilog -&gt; {}, Prolog -&gt; {}, AxesLabel -&gt; {}, "TrackedExpression" -&gt; Offload[manList], PlotRange -&gt; {{-11., 11.}, {-0.27646932615223113, 1.0607842536262968}}])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWncIB4HkHAvSizIyEwuTmOGyftkFpdAVAsCCcek4vyc0pLUEKCi7LzU4uJMJqAoRDVIf5C7k3N+Tn5RUcG0SU9Vply3LzKc9nJ6h/kD+6LjLTO8V217Zo+w2iczLxXCYwcS/mlpOfmJKcVcQHZBSbGKkbmxhaVlGhNMdVBpTmoxJ5DhmZuYnhqcWZWKkAM5MnMC0KhMHSCBRU9ATn5JUGJeOoTnWFqSn5tYkpmMphLEcKwA+grECCkqTUWT5wMLJ+YVZ5Zk5ueFVBakBrNB/ZFYhKZWCEWtS2lRIojONGLAcB/ICNeCzJz89DQGlFDHVBZQlE9IGSfUDz6JSak5+FQGC0JcmJydmuJaUVAEisz8PMz4ALFzE/NwWAUPWNTIQOUVMYCB2gEYwwFNvvFjV9qajRf3F534c+3Fjx8f7AHOOqZd"*)(*]VB*)(*|*),(*|*)(*VB[*)(EventObject[&lt;|"Id" -&gt; "b8afcf15-6d9d-4e5f-812b-1963cf0cbcbc", "Initial" -&gt; {0.5, 0.5}, "View" -&gt; "52c74b0c-1029-4b9c-8c74-a7b1b6ed6cf1"|&gt;])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKmxolm5skGSTrGhoYWeqaJFkm61oARXQTzZMMk8xSU8yS0wwBf0UVzQ=="*)(*]VB*)}}(*]GB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">manList = RandomReal[{0,1}, 2];</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="minor-bug-fixes">Minor bug fixes<a href="https://jerryi.github.io/wljs-docs/releases/2025/02/26/2.7.0#minor-bug-fixes" class="hash-link" aria-label="Direct link to Minor bug fixes" title="Direct link to Minor bug fixes">​</a></h2>
+<ul>
+<li>Contexts aliases</li>
+<li>HID devices plists for MacOS</li>
+<li>Better control over <code>ViewBox</code></li>
+<li>CD/CI for CSockets library</li>
+</ul>
+<p><em>Ballon animation by Jemima (codepen)</em></p>
+<div>
+<style>
+  [transparency="false"] .bg-g-trans {
+    background: transparent !important;
+  }
+
+  [transparency="true"] .bg-g-trans {
+    background: transparent !important;
+  }
+</style></div>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Release notes *2.6.8*]]></title>
             <link>https://jerryi.github.io/wljs-docs/releases/2025/02/15/2.6.8</link>

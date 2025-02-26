@@ -42,11 +42,11 @@ ViewBox[.., "Event"->uid]
 ```
 
 There are following patterns available to be attached to
-- `"Mounted"` fires once a widget is visible. A unique identifier is provided as a payload
+- `"Mounted"` fires once a widget is visible. A unique identifier is provided as a payload in a form of association
 - `"Destroy"` fires once it was removed
 
 
-Once it has been mounted it provides a unique ID as a string in `"Mounted"` event, which can be used in the constructor [FrontInstanceReference](frontend/Reference/Frontend%20IO/FrontInstanceReference.md). You can also apply [``ViewBox`InnerExpression``](#``ViewBox`InnerExpression``) and [``ViewBox`OuterExpression``](#``ViewBox`OuterExpression``) as well.
+Once it has been mounted it provides a unique ID as a string from the key `Instance` in `"Mounted"` event, which can be used in the constructor [FrontInstanceReference](frontend/Reference/Frontend%20IO/FrontInstanceReference.md). You can also apply [``ViewBox`InnerExpression``](#``ViewBox`InnerExpression``) and [``ViewBox`OuterExpression``](#``ViewBox`OuterExpression``) as well.
 
 
 
@@ -140,7 +140,7 @@ For example, lets make a dummy view-box, which covers a simple string with a dis
 ```mathematica
 dummy /: MakeBoxes[_dummy, StandardForm] := With[{uid = CreateUUID[]},
 	EventHandler[uid, {
-		"Mounted" -> Function[res, ref = res]
+		"Mounted" -> Function[res, ref = res["Instance"]]
 	}];
 	
 	ViewBox["Covered", Graphics[Disk[]], "Event"->uid]

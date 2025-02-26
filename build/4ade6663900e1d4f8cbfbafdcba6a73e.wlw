@@ -1,7 +1,8 @@
-<|"Notebook" -> <|"Controller" -> "c563d478-1d70-4545-ac1d-deba4a3cafe1", 
-   "FocusedCell" -> CellObj[JerryI`Notebook`CellObj`$2403], 
-   "HaveToSaveAs" -> False, "MessangerChannel" -> Messanger, 
-   "ModalsChannel" -> "379f0bd5-3a17-4cab-ac3b-41b4ef047822", 
+<|"Notebook" -> <|"Controller" -> "f6300315-ff63-4312-bc49-dbc30d206f7b", 
+   "FocusedCell" -> CoffeeLiqueur`Notebook`Cells`CellObj[
+     CoffeeLiqueur`Notebook`Cells`CellObj`$332], "HaveToSaveAs" -> False, 
+   "MessangerChannel" -> Messanger, "ModalsChannel" -> 
+    "45d6a684-5535-4fb3-bcd5-9551ef067a9b", 
    "Objects" -> <|"532235e0-ff61-4965-a2a8-164886fc87e2" -> 
       <|"Public" -> Hold[CellView[
           "<div \
@@ -285,6 +286,80 @@ container.classList.remove('hidden');\n      server.kernel.emitt('bullshit', \
                Rational[11, 6]*Pi, {0, 0}]}}}, Circle[{0, 0}, 0.25], 
            Circle[{0, 0}, 0.625]}, "Controls" -> False, 
           ImageSize -> {250, 250}]]|>, 
+     "7970ec24-94e9-4686-9ba4-ffac9c2f81de" -> 
+      <|"Public" -> Hold[Graphics[{FrontInstanceReference[
+            1524674792206635800], {GrayLevel[1], EdgeForm[GrayLevel[0.5]], 
+            {Annotation[Rectangle[{1.5, 0}, {2.5, 1}], 0, 1], 
+             Annotation[Rectangle[{2.5, 0}, {3.5, 1}], 0, 3], 
+             Annotation[Rectangle[{3.5, 0}, {4.5, 1}], 0, 5], 
+             Annotation[Rectangle[{4.5, 0}, {5.5, 1}], 0, 6], 
+             Annotation[Rectangle[{5.5, 0}, {6.5, 1}], 0, 8], 
+             Annotation[Rectangle[{6.5, 0}, {7.5, 1}], 0, 10], 
+             {RGBColor[1, 0.6862745098039216, 0.47843137254901963], 
+              Annotation[Rectangle[{7.5, 0}, {8.5, 1}], 0, 12]}, 
+             Annotation[Rectangle[{8.5, 0}, {9.5, 1}], 0, 13], 
+             Annotation[Rectangle[{9.5, 0}, {10.5, 1}], 0, 15], 
+             Annotation[Rectangle[{10.5, 0}, {11.5, 1}], 0, 17], 
+             Annotation[Rectangle[{11.5, 0}, {12.5, 1}], 0, 18], 
+             {RGBColor[1, 0.6862745098039216, 0.47843137254901963], 
+              Annotation[Rectangle[{12.5, 0}, {13.5, 1}], 0, 20]}, 
+             {RGBColor[1, 0.6862745098039216, 0.47843137254901963], 
+              Annotation[Rectangle[{13.5, 0}, {14.5, 1}], 0, 22]}, 
+             Annotation[Rectangle[{14.5, 0}, {15.5, 1}], 0, 24], 
+             Annotation[Rectangle[{15.5, 0}, {16.5, 1}], 0, 25]}, 
+            RGBColor[0.3333333333333333, 0.3333333333333333, 
+             0.3333333333333333], {Annotation[Rectangle[{2.2, 0.5}, {2.8, 
+                1}], 1, 2], Annotation[Rectangle[{3.2, 0.5}, {3.8, 1}], 1, 
+              4], Annotation[Rectangle[{5.2, 0.5}, {5.8, 1}], 1, 7], 
+             Annotation[Rectangle[{6.2, 0.5}, {6.8, 1}], 1, 9], 
+             Annotation[Rectangle[{7.2, 0.5}, {7.8, 1}], 1, 11], 
+             Annotation[Rectangle[{9.2, 0.5}, {9.8, 1}], 1, 14], 
+             Annotation[Rectangle[{10.2, 0.5}, {10.8, 1}], 1, 16], 
+             Annotation[Rectangle[{12.2, 0.5}, {12.8, 1}], 1, 19], 
+             Annotation[Rectangle[{13.2, 0.5}, {13.8, 1}], 1, 21], 
+             Annotation[Rectangle[{14.2, 0.5}, {14.8, 1}], 1, 23]}}, 
+           {RGBColor[1, 1, 0], Opacity[0.3]}, {GrayLevel[0], 
+            {Text["G", {13, 0.4}, {0, 0}], Text["A", {14, 0.4}, {0, 0}], 
+             Text["B", {8, 0.4}, {0, 0}]}}, EventListener[Graphics`Canvas[], 
+            {"click" -> "550d29c9-fefb-4b4f-812c-dc90f97e27ca"}]}, 
+          ImageSize -> {500, 200}, "Controls" -> False]]|>, 
+     "1658f480-2dd5-407e-a6e7-786a8d2eded0" -> 
+      <|"Public" -> Hold[Graphics[{FrontInstanceReference[
+            315864363497754200], EventListener[Graphics`Canvas[], 
+            {"click" -> "c0213d25-e2cb-415b-aec0-92eb3f12c6a7"}], 
+           {Line[{{0, 1}, {12, 1}}], Line[{{0, 2}, {12, 2}}], 
+            Line[{{0, 3}, {12, 3}}], Line[{{0, 4}, {12, 4}}], 
+            Line[{{0, 5}, {12, 5}}], Line[{{0, 6}, {12, 6}}]}, 
+           {Line[{{0.5, 0.8}, {0.5, 6.2}}], Line[{{1.5, 0.8}, {1.5, 6.2}}], 
+            Line[{{2.5, 0.8}, {2.5, 6.2}}], Line[{{3.5, 0.8}, {3.5, 6.2}}], 
+            Line[{{4.5, 0.8}, {4.5, 6.2}}], Line[{{5.5, 0.8}, {5.5, 6.2}}], 
+            Line[{{6.5, 0.8}, {6.5, 6.2}}], Line[{{7.5, 0.8}, {7.5, 6.2}}], 
+            Line[{{8.5, 0.8}, {8.5, 6.2}}], Line[{{9.5, 0.8}, {9.5, 6.2}}], 
+            Line[{{10.5, 0.8}, {10.5, 6.2}}], Line[{{11.5, 0.8}, 
+              {11.5, 6.2}}]}, {Text["E", {-0.4, 0.8}, {-1, -1}], 
+            Text["A", {-0.4, 1.8}, {-1, -1}], Text["D", {-0.4, 2.8}, 
+             {-1, -1}], Text["G", {-0.4, 3.8}, {-1, -1}], 
+            Text["B", {-0.4, 4.8}, {-1, -1}], Text["E", {-0.4, 5.8}, 
+             {-1, -1}]}, {AbsoluteThickness[4], Line[{{0.5, 1}, {0.5, 6}}], 
+            GrayLevel[0.5], {Disk[{3, 0.3}, {0.075, 0.21}], 
+             Disk[{5, 0.3}, {0.075, 0.21}], Disk[{7, 0.3}, {0.075, 0.21}], 
+             Disk[{9, 0.3}, {0.075, 0.21}]}, Disk[{11.9, 0.3}, 
+             {0.075, 0.21}], Disk[{12.1, 0.3}, {0.075, 0.21}]}, 
+           {{RGBColor[0.9215686274509803, 0.49411764705882355, 
+              0.43137254901960786], {Annotation[Disk[{0, 1}, {0.15, 0.42}], 
+               4, "E"]}}, {RGBColor[1, 0.7215686274509804, 
+              0.2196078431372549], {Annotation[Disk[{0, 4}, {0.15, 0.42}], 
+               19, "G"], {Annotation[Disk[{5, 3}, {0.15, 0.42}], 19, "G"], 
+               GrayLevel[1], Text["G", {5, 2.84}, {0, -1}]}, 
+              {Annotation[Disk[{10, 2}, {0.15, 0.42}], 19, "G"], GrayLevel[
+                1], Text["G", {10, 1.84}, {0, -1}]}}}, 
+            {RGBColor[0.9490196078431372, 0.8627450980392157, 
+              0.43529411764705883], {{Annotation[Disk[{2, 2}, {0.15, 0.42}], 
+                11, "B"], GrayLevel[1], Text["B", {2, 1.84}, {0, -1}]}, 
+              {Annotation[Disk[{7, 1}, {0.15, 0.42}], 11, "B"], GrayLevel[
+                1], Text["B", {7, 0.84}, {0, -1}]}}}}}, 
+          ImageSize -> {600, 120}, "Controls" -> False, ImagePadding -> None, 
+          PlotRange -> {{-0.5, 12.5}, {0, 6.5}}]]|>, 
      "93190ffa-364f-4471-893e-31274e5d9abc" -> 
       <|"Public" -> Hold[HTMLView["<div ><label class=\"ml-1 block \
 text-gray-600 sm-controls\"></label><div class=\"relative mt-2\"><input \
@@ -633,159 +708,66 @@ outOfFocus = (ev) => {\n                            console.log(ev.target);\n \
                        close();\n                            }\n\n            \
                 ev.stopPropagation();\n    };</script></div>", 
           Prolog -> HTMLView`TemplateProcessor[Association["instanceId" -> 
-              CreateUUID[]]]]]|>, "7970ec24-94e9-4686-9ba4-ffac9c2f81de" -> 
-      <|"Public" -> Hold[Graphics[{FrontInstanceReference[
-            1524674792206635800], {GrayLevel[1], EdgeForm[GrayLevel[0.5]], 
-            {Annotation[Rectangle[{1.5, 0}, {2.5, 1}], 0, 1], 
-             Annotation[Rectangle[{2.5, 0}, {3.5, 1}], 0, 3], 
-             Annotation[Rectangle[{3.5, 0}, {4.5, 1}], 0, 5], 
-             Annotation[Rectangle[{4.5, 0}, {5.5, 1}], 0, 6], 
-             Annotation[Rectangle[{5.5, 0}, {6.5, 1}], 0, 8], 
-             Annotation[Rectangle[{6.5, 0}, {7.5, 1}], 0, 10], 
-             {RGBColor[1, 0.6862745098039216, 0.47843137254901963], 
-              Annotation[Rectangle[{7.5, 0}, {8.5, 1}], 0, 12]}, 
-             Annotation[Rectangle[{8.5, 0}, {9.5, 1}], 0, 13], 
-             Annotation[Rectangle[{9.5, 0}, {10.5, 1}], 0, 15], 
-             Annotation[Rectangle[{10.5, 0}, {11.5, 1}], 0, 17], 
-             Annotation[Rectangle[{11.5, 0}, {12.5, 1}], 0, 18], 
-             {RGBColor[1, 0.6862745098039216, 0.47843137254901963], 
-              Annotation[Rectangle[{12.5, 0}, {13.5, 1}], 0, 20]}, 
-             {RGBColor[1, 0.6862745098039216, 0.47843137254901963], 
-              Annotation[Rectangle[{13.5, 0}, {14.5, 1}], 0, 22]}, 
-             Annotation[Rectangle[{14.5, 0}, {15.5, 1}], 0, 24], 
-             Annotation[Rectangle[{15.5, 0}, {16.5, 1}], 0, 25]}, 
-            RGBColor[0.3333333333333333, 0.3333333333333333, 
-             0.3333333333333333], {Annotation[Rectangle[{2.2, 0.5}, {2.8, 
-                1}], 1, 2], Annotation[Rectangle[{3.2, 0.5}, {3.8, 1}], 1, 
-              4], Annotation[Rectangle[{5.2, 0.5}, {5.8, 1}], 1, 7], 
-             Annotation[Rectangle[{6.2, 0.5}, {6.8, 1}], 1, 9], 
-             Annotation[Rectangle[{7.2, 0.5}, {7.8, 1}], 1, 11], 
-             Annotation[Rectangle[{9.2, 0.5}, {9.8, 1}], 1, 14], 
-             Annotation[Rectangle[{10.2, 0.5}, {10.8, 1}], 1, 16], 
-             Annotation[Rectangle[{12.2, 0.5}, {12.8, 1}], 1, 19], 
-             Annotation[Rectangle[{13.2, 0.5}, {13.8, 1}], 1, 21], 
-             Annotation[Rectangle[{14.2, 0.5}, {14.8, 1}], 1, 23]}}, 
-           {RGBColor[1, 1, 0], Opacity[0.3]}, {GrayLevel[0], 
-            {Text["G", {13, 0.4}, {0, 0}], Text["A", {14, 0.4}, {0, 0}], 
-             Text["B", {8, 0.4}, {0, 0}]}}, EventListener[Graphics`Canvas[], 
-            {"click" -> "550d29c9-fefb-4b4f-812c-dc90f97e27ca"}]}, 
-          ImageSize -> {500, 200}, "Controls" -> False]]|>, 
-     "d47df2d3-2ee4-4420-a24d-43a329d8e885" -> 
-      <|"Public" -> Hold[Graphics[{{RGBColor[0.9215686274509803, 
-             0.49411764705882355, 0.43137254901960786], 
-            EdgeForm[Opacity[0.1]], Rectangle[{1, 0}, Offset[{-1, -1}, 
-              {2, 1}]]}, {RGBColor[1, 0.7215686274509804, 
-             0.2196078431372549], EdgeForm[Opacity[0.1]], Rectangle[{2, 0}, 
-             Offset[{-1, -1}, {3, 1}]]}, {RGBColor[0.9490196078431372, 
-             0.8627450980392157, 0.43529411764705883], 
-            EdgeForm[Opacity[0.1]], Rectangle[{3, 0}, Offset[{-1, -1}, 
-              {4, 1}]]}, {RGBColor[0.6705882352941176, 0.8784313725490196, 
-             0.9372549019607843], EdgeForm[Opacity[0.1]], Rectangle[{4, 0}, 
-             Offset[{-1, -1}, {5, 1}]]}, {RGBColor[0.3176470588235294, 
-             0.6549019607843137, 0.7529411764705882], EdgeForm[Opacity[0.1]], 
-            Rectangle[{5, 0}, Offset[{-1, -1}, {6, 1}]]}, 
-           {RGBColor[0.12941176470588237, 0.5176470588235295, 
-             0.6313725490196078], EdgeForm[Opacity[0.1]], Rectangle[{6, 0}, 
-             Offset[{-1, -1}, {7, 1}]]}, {RGBColor[0.09019607843137255, 
-             0.33725490196078434, 0.49411764705882355], 
-            EdgeForm[Opacity[0.1]], Rectangle[{7, 0}, Offset[{-1, -1}, 
-              {8, 1}]]}, {RGBColor[0.7058823529411765, 0.49411764705882355, 
-             0.5450980392156862], EdgeForm[Opacity[0.1]], Rectangle[{8, 0}, 
-             Offset[{-1, -1}, {9, 1}]]}, {RGBColor[0.5333333333333333, 
-             0.23529411764705882, 0.3058823529411765], 
-            EdgeForm[Opacity[0.1]], Rectangle[{9, 0}, Offset[{-1, -1}, 
-              {10, 1}]]}, {RGBColor[0.8941176470588236, 0.7098039215686275, 
-             0.7490196078431373], EdgeForm[Opacity[0.1]], Rectangle[{10, 0}, 
-             Offset[{-1, -1}, {11, 1}]]}}, {ImageSize -> 65, 
-           BaselinePosition -> Bottom, PlotRangePadding -> None, 
-           AspectRatio -> Rational[1, 10]}]]|>, 
-     "1658f480-2dd5-407e-a6e7-786a8d2eded0" -> 
-      <|"Public" -> Hold[Graphics[{FrontInstanceReference[
-            315864363497754200], EventListener[Graphics`Canvas[], 
-            {"click" -> "c0213d25-e2cb-415b-aec0-92eb3f12c6a7"}], 
-           {Line[{{0, 1}, {12, 1}}], Line[{{0, 2}, {12, 2}}], 
-            Line[{{0, 3}, {12, 3}}], Line[{{0, 4}, {12, 4}}], 
-            Line[{{0, 5}, {12, 5}}], Line[{{0, 6}, {12, 6}}]}, 
-           {Line[{{0.5, 0.8}, {0.5, 6.2}}], Line[{{1.5, 0.8}, {1.5, 6.2}}], 
-            Line[{{2.5, 0.8}, {2.5, 6.2}}], Line[{{3.5, 0.8}, {3.5, 6.2}}], 
-            Line[{{4.5, 0.8}, {4.5, 6.2}}], Line[{{5.5, 0.8}, {5.5, 6.2}}], 
-            Line[{{6.5, 0.8}, {6.5, 6.2}}], Line[{{7.5, 0.8}, {7.5, 6.2}}], 
-            Line[{{8.5, 0.8}, {8.5, 6.2}}], Line[{{9.5, 0.8}, {9.5, 6.2}}], 
-            Line[{{10.5, 0.8}, {10.5, 6.2}}], Line[{{11.5, 0.8}, 
-              {11.5, 6.2}}]}, {Text["E", {-0.4, 0.8}, {-1, -1}], 
-            Text["A", {-0.4, 1.8}, {-1, -1}], Text["D", {-0.4, 2.8}, 
-             {-1, -1}], Text["G", {-0.4, 3.8}, {-1, -1}], 
-            Text["B", {-0.4, 4.8}, {-1, -1}], Text["E", {-0.4, 5.8}, 
-             {-1, -1}]}, {AbsoluteThickness[4], Line[{{0.5, 1}, {0.5, 6}}], 
-            GrayLevel[0.5], {Disk[{3, 0.3}, {0.075, 0.21}], 
-             Disk[{5, 0.3}, {0.075, 0.21}], Disk[{7, 0.3}, {0.075, 0.21}], 
-             Disk[{9, 0.3}, {0.075, 0.21}]}, Disk[{11.9, 0.3}, 
-             {0.075, 0.21}], Disk[{12.1, 0.3}, {0.075, 0.21}]}, 
-           {{RGBColor[0.9215686274509803, 0.49411764705882355, 
-              0.43137254901960786], {Annotation[Disk[{0, 1}, {0.15, 0.42}], 
-               4, "E"]}}, {RGBColor[1, 0.7215686274509804, 
-              0.2196078431372549], {Annotation[Disk[{0, 4}, {0.15, 0.42}], 
-               19, "G"], {Annotation[Disk[{5, 3}, {0.15, 0.42}], 19, "G"], 
-               GrayLevel[1], Text["G", {5, 2.84}, {0, -1}]}, 
-              {Annotation[Disk[{10, 2}, {0.15, 0.42}], 19, "G"], GrayLevel[
-                1], Text["G", {10, 1.84}, {0, -1}]}}}, 
-            {RGBColor[0.9490196078431372, 0.8627450980392157, 
-              0.43529411764705883], {{Annotation[Disk[{2, 2}, {0.15, 0.42}], 
-                11, "B"], GrayLevel[1], Text["B", {2, 1.84}, {0, -1}]}, 
-              {Annotation[Disk[{7, 1}, {0.15, 0.42}], 11, "B"], GrayLevel[
-                1], Text["B", {7, 0.84}, {0, -1}]}}}}}, 
-          ImageSize -> {600, 120}, "Controls" -> False, ImagePadding -> None, 
-          PlotRange -> {{-0.5, 12.5}, {0, 6.5}}]]|>|>, 
-   "Path" -> "/Users/kirill/Library/CloudStorage/OneDrive-Personal/\:0414\
-\:043e\:043a\:0443\:043c\:0435\:043d\:0442\:044b/WLJS Notebooks/Scales and \
-chords.wlw", "Quick" -> True, "TOC" -> {Notebook`Editor`TOC`Private`heading[
+              CreateUUID[]]]]]|>|>, "Path" -> "/Users/kirill/Github/wljs-demo\
+s-archive/Demos/17 - Apps/Scales and chords.wln", "Quick" -> True, 
+   "Symbols" -> <||>, "TOC" -> {CoffeeLiqueur`Extensions`TOC`Private`heading[
       1, "Musical scales on piano and guitar", 
-      CellObj[JerryI`Notebook`CellObj`$1482]], 
-     Notebook`Editor`TOC`Private`heading[2, "Internal framework", 
-      CellObj[JerryI`Notebook`CellObj`$1485]], 
-     Notebook`Editor`TOC`Private`heading[2, "Components", 
-      CellObj[JerryI`Notebook`CellObj`$1551]], 
-     Notebook`Editor`TOC`Private`heading[3, "Circle of 5s", 
-      CellObj[JerryI`Notebook`CellObj`$1551]], 
-     Notebook`Editor`TOC`Private`heading[2, "Windows", 
-      CellObj[JerryI`Notebook`CellObj`$1569]], 
-     Notebook`Editor`TOC`Private`heading[3, "Main window with search", 
-      CellObj[JerryI`Notebook`CellObj`$1569]], 
-     Notebook`Editor`TOC`Private`heading[2, "Circle5 window", 
-      CellObj[JerryI`Notebook`CellObj`$1574]], 
-     Notebook`Editor`TOC`Private`heading[2, "Piano View", 
-      CellObj[JerryI`Notebook`CellObj`$2133]], 
-     Notebook`Editor`TOC`Private`heading[2, "Guitar view", 
-      CellObj[JerryI`Notebook`CellObj`$2341]], 
-     Notebook`Editor`TOC`Private`heading[2, "Output widget", 
-      CellObj[JerryI`Notebook`CellObj`$2402]]}|>, 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$284]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Internal framework", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$286]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Components", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$289]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[3, "Circle of 5s", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$289]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Windows", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$294]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[3, 
+      "Main window with search", CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$294]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Circle5 window", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$302]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Piano View", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$313]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Guitar view", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$318]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Output widget", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$326]]}|>, 
  "Cells" -> {<|"Data" -> ".md\n# Musical scales on piano and guitar\nA small \
 widget, which allows to build chords from scales, play them and show on both: \
 strings and keys. ", "Display" -> "codemirror", 
-    "Hash" -> "d3795b00-5553-4cea-b398-506db1fa7ae7", "Invisible" -> False, 
+    "Hash" -> "4a9dc253-c12b-465c-b95a-8e8c686f77eb", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "# Musical scales on piano and guitar\nA small widget, which \
 allows to build chords from scales, play them and show on both: strings and \
 keys. ", "Display" -> "markdown", "Hash" -> 
-     "cf00191c-08c5-4159-811d-9c5b2cc70c17", "Invisible" -> False, 
+     "765d8483-ecc1-405b-8b06-ba9373512220", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> 
      ".md\n## Internal framework\nAllows to work with notes easier", 
     "Display" -> "codemirror", "Hash" -> 
-     "08085fe0-fbe7-4f59-b196-7468771afc01", "Invisible" -> False, 
+     "d5d97e41-b74c-489f-8d10-6f5d012ae00e", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "## Internal framework\nAllows to work with notes easier", 
     "Display" -> "markdown", "Hash" -> 
-     "714600b0-db44-4c25-90bd-a32ebeac822e", "Invisible" -> False, 
+     "34ca0a63-76bc-4582-bb59-e4f4cbecf538", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "convertToSemitones[s_String] := With[{c = StringCases[s, \
 {a__~~b:DigitCharacter :> {a,ToExpression[b]}, a__ :> {a,4}}]//First},\n  \
 semitone[c[[1]]] + (c[[2]] - 4) 12\n]\nconvertToSemitones[s_] := \
@@ -839,21 +821,21 @@ SoundNote @ Table[  s[i + offset], {i, 1, 2 ext, 2}] \
 convertToSemitones @ l},\n  SoundNote[With[{mod = Mod[#, max]}, If[mod < min, \
 mod + min, mod]] &/@ notes // DeleteDuplicates]\n]", 
     "Display" -> "codemirror", "Hash" -> 
-     "31a2659b-578c-4e3b-978d-c31f47faed7a", "Invisible" -> False, 
+     "79df484a-7dbe-4880-b7ee-7ba0d3dde317", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".md\n## Components\n\n### Circle of 5s", 
     "Display" -> "codemirror", "Hash" -> 
-     "90caa113-31ce-4457-b671-b2835744481f", "Invisible" -> False, 
+     "de75f8fa-fa8e-436b-bbbd-3bdc2d48484c", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "## Components\n\n### Circle of 5s", "Display" -> "markdown", 
-    "Hash" -> "07673978-bbf5-4945-b8d6-b4ceacb2843a", "Invisible" -> False, 
+    "Hash" -> "4e15b9b4-895a-41c8-a3dd-0db4c0f17453", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "pad2 = With[{\nc2 = {Cos[ Pi/2 - Pi/12], Sin[ Pi/2 - Pi/12]} \
 // N,\nc3 = {Cos[1 2Pi/12 + Pi/2 - Pi/12], Sin[1 2Pi/12 + Pi/2 - Pi/12]} //N \
 \n},\n  RegionIntersection[RegionDifference[Polygon[{c2 0.1, 1.5 c2, 1.5 c3, \
@@ -880,33 +862,33 @@ Text[semitone[chord[[1,1]]] <> \"m\", pad2 // RegionCentroid, {0,0}]\n  }], i \
 2 Pi/12, {0,0}]}\n}], {i, 0,11}],\n\nCircle[{0,0}, 0.25],\nCircle[{0,0}, \
 (0.75+0.5)/2]\n\n}, \"Controls\"->False, ImageSize->{250,250}]", 
     "Display" -> "codemirror", "Hash" -> 
-     "9174d126-8690-41fb-a52b-6a0643d0d3b2", "Invisible" -> False, 
+     "b849509f-2921-4201-a5a1-6b7eb0423241", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "", "Display" -> "codemirror", 
-    "Hash" -> "40c8f396-8b96-4f5f-8b1b-cede988074da", "Invisible" -> False, 
+    "Hash" -> "625b06b3-6f3e-4f22-bd56-ffa5387dbc8f", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "", "Display" -> "codemirror", 
-    "Hash" -> "975fda15-baa6-45bf-bd10-69bb248607a9", "Invisible" -> False, 
+    "Hash" -> "584f945f-db10-4a21-8e8e-19820bd07dbf", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> 
      ".md\n## Windows\n### Main window with search\nHelper functions", 
     "Display" -> "codemirror", "Hash" -> 
-     "fd6f74df-ed9d-47f1-afb0-6aa52dd8813c", "Invisible" -> False, 
+     "1d0a1d72-66d8-4631-914a-db34734c77cd", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "## Windows\n### Main window with search\nHelper functions", 
     "Display" -> "markdown", "Hash" -> 
-     "f0d224ad-5d9e-41cc-89bc-6636e524d3ab", "Invisible" -> False, 
+     "1dd4c91e-998b-4ef3-a8fd-6e6d49f13c84", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "searchScale[text_] := With[{\n  scales = \
 DownValues[scale][[All,1,1,1]],\n  semitones = \
 DownValues[semitone][[All,1,1,1]]\n},\n  With[{words = StringTrim /@ \
@@ -931,20 +913,20 @@ Length[data[\"Scales\"]]]][[All,1]]},\n  If[MissingQ[data[\"Key\"]],\n    \
 Table[k -> {\"C\", k}, {k, scales}] // Association\n  ,\n    \
 Table[StringTemplate[\"`` ``\"][data[\"Key\"], k] -> {data[\"Key\"], k}, {k, \
 scales}] // Association\n  ]\n]", "Display" -> "codemirror", 
-    "Hash" -> "a3c91551-2bf7-4083-863a-f27f52de78e3", "Invisible" -> False, 
+    "Hash" -> "411cb189-2826-4591-8bd6-df3967bee249", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".md\nWidget", "Display" -> "codemirror", 
-    "Hash" -> "8ecbe6e4-43c8-4354-aa51-a03b0d35d198", "Invisible" -> False, 
+    "Hash" -> "772bad76-5f57-45c1-8056-7b9dd00f16fe", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, <|"Data" -> "Widget", 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, <|"Data" -> "Widget", 
     "Display" -> "markdown", "Hash" -> 
-     "7e85ac98-4e31-4ce1-8b26-121aec3d755f", "Invisible" -> False, 
+     "9ff90440-fa4c-4f41-b6b1-217c65a8fd5b", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".wlx\n\nmainWindow[callback_] := Module[{pick = Null}, \
 With[{\n  InputField = InputAutocomplete[Function[{text, cbk},\n    pick = \
 pickScales[searchScale[text]];\n    pick//Keys//cbk;\n  ], \
@@ -953,36 +935,36 @@ Function[selected,\n    If[MissingQ[pick[selected]] || pick === Null,\n      \
 Notify[\"Key / Scale does not exist\", \"Type\"->\"Warning\"];\n      \
 Return[];\n    ];\n\n    callback @ (pick[selected]) \n  ]];\n\n  <div>\n    \
 <InputField/>\n  </div>\n\n]\n]", "Display" -> "codemirror", 
-    "Hash" -> "e8f129d8-fd94-4901-994c-4c3b25d3fbf1", "Invisible" -> False, 
+    "Hash" -> "c7752d85-adcd-451a-a26f-d689907c575c", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "CellView[mainWindow[Print[{##}]&], \"Display\"->\"wlx\"]", 
     "Display" -> "codemirror", "Hash" -> 
-     "79f36c90-4c44-4607-b54a-f86f3e55faa5", "Invisible" -> False, 
+     "71375333-744a-4482-8ce1-8ec1bd0e11ad", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "(*VB[*)(FrontEndRef[\"532235e0-ff61-4965-a2a8-164886fc87e2\"]\
 )(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKmxobG\
 RmbphropqWZGeqaWJqZ6iYaJVroGpqZWFiYpSVbmKcaAQBzhBTz\"*)(*]VB*)", 
     "Display" -> "codemirror", "Hash" -> 
-     "8cfe28a6-0ab5-4d8f-a71d-36306f0e3e5e", "Invisible" -> False, 
+     "8b8cb056-4fed-4ec2-b52f-1b83ccbedcce", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".md\n## Circle5 window\n\nTuning component", 
     "Display" -> "codemirror", "Hash" -> 
-     "cdb913c0-683c-4f9f-8214-138a902375ab", "Invisible" -> False, 
+     "6fcf877c-c677-467f-98ad-45b9bdb2404f", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "## Circle5 window\n\nTuning component", 
     "Display" -> "markdown", "Hash" -> 
-     "67ac8246-8342-4519-8ce1-64bd0f550824", "Invisible" -> False, 
+     "7bf0ec48-7221-4480-9466-c8b585d211a9", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".wlx\n\nOptions[TuningComponent] = \
 {\"Event\"->\"\"}\nTuningComponent[OptionsPattern[]] := Module[{\n  Event = \
 OptionValue[\"Event\"],\n  UId = CreateUUID[],\n  tunings = \
@@ -1023,41 +1005,41 @@ ring-inset ring-gray-200 bg-white'.split(' ')));\n      \
 container.classList.remove('hidden');\n      server.kernel.emitt('<Event/>', \
 '\"Strings\"', 'Instrument');\n    })\n  </script>\n</div>\n]]", 
     "Display" -> "codemirror", "Hash" -> 
-     "80075866-129d-4009-b12c-d1dc4c6631a7", "Invisible" -> False, 
+     "1e16a94a-6ee5-423f-857d-e9abcb61e552", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "CellView[TuningComponent[\"Event\"->\"bullshit\"] , \
 \"Display\"->\"wlx\"]", "Display" -> "codemirror", 
-    "Hash" -> "ad8eab74-dca1-4023-a9f2-43156120ccf2", "Invisible" -> False, 
+    "Hash" -> "c0e22276-ddcc-4f6d-9a2c-e79d44d3c76c", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "(*VB[*)(FrontEndRef[\"8b2319a0-4025-4f50-96b5-be8bc20c09ea\"]\
 )(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKWyQZG\
 RtaJhromhgYmeqapJka6FqaJZnqJqVaJCUbGSQbWKYmAgB2NxVl\"*)(*]VB*)", 
     "Display" -> "codemirror", "Hash" -> 
-     "a58d42ce-0380-4738-8dcb-111f2bbc06a0", "Invisible" -> False, 
+     "922abeec-0f00-446e-8c4e-71d2087a8b37", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> 
      "Notify[\"Tuning must be like E5 D5 ... form\", \"Type\"->\"Warning\"];"\
 , "Display" -> "codemirror", "Hash" -> 
-     "a882424e-7802-455a-a8d3-c01236864b78", "Invisible" -> False, 
+     "3be4c7ed-a250-45a4-aa70-0f261e81675a", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".md\nMain window", "Display" -> "codemirror", 
-    "Hash" -> "c488a680-5a6a-435d-b14c-db268d2a476b", "Invisible" -> False, 
+    "Hash" -> "921eb9bf-7ca6-4717-a02a-bd9190e41413", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, <|"Data" -> "Main window", 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, <|"Data" -> "Main window", 
     "Display" -> "markdown", "Hash" -> 
-     "1cb1b8ff-5fb0-4a30-8822-825c2b7c5073", "Invisible" -> False, 
+     "b136faeb-6da3-42c7-b5f9-409c3a067d32", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".wlx\n\nOptions[LandingWindow] = {\"Key\"->\"C\", \
 \"Scale\"->\"Major\"}\nLandingWindow[callback_, OptionsPattern[]] := \
 Module[{\n  stringTuning = tuning[\"Standard\"],\n  localControls = \
@@ -1078,27 +1060,27 @@ stringTuning = t]}];\n\nEventHandler[ChordChart, Function[Null,\n  \
 callback[\"Chord\", {currentKey, currentScale}, instrument, \
 \"Tuning\"->stringTuning];\n]];\n\nEventHandler[ScaleChart, Function[Null,\n  \
 callback[\"Scale\", {currentKey, currentScale}, instrument, \
-\"Tuning\"->stringTuning];\n]];\n\n<div>\n  <div class=\"px-4 sm:px-0\">\n    \
-<h3 class=\"text-base/7 font-semibold text-gray-900\"><Title/></h3>\n    <p \
-class=\"mt-1 max-w-2xl text-sm/6 text-gray-500\"><Mood/></p>\n  </div>\n  \
-<div class=\"mt-6 border-t border-gray-100 flex flex-row gap-x-5\">\n    <dl \
-class=\"divide-y divide-gray-100 gap-y-3 flex flex-col\">\n      \
-<CircleFifth/>\n    </dl>    \n    <dl class=\"divide-y divide-gray-100 \
-gap-y-3 flex flex-col\">\n      <div class=\"flex flex-row gap-x-3\">\n       \
- <ChordChart/>\n        <ScaleChart/>\n      </div>\n      <p class=\"mt-1 \
-max-w-2xl text-sm/6 text-gray-500\">Select the instrument</p>\n      \
-<TuningComponent/>\n    </dl>\n  </div>\n</div>\n] ]", 
-    "Display" -> "codemirror", "Hash" -> 
-     "756299e8-daaa-4b9e-9fd7-ee336c9d94c4", "Invisible" -> False, 
+\"Tuning\"->stringTuning];\n]];\n\n<div class=\"p-4 bg-white h-full \
+w-full\">\n  <div class=\"px-4 sm:px-0\">\n    <h3 class=\"text-base/7 \
+font-semibold text-gray-900\"><Title/></h3>\n    <p class=\"mt-1 max-w-2xl \
+text-sm/6 text-gray-500\"><Mood/></p>\n  </div>\n  <div class=\"mt-6 border-t \
+border-gray-100 flex flex-row gap-x-5\">\n    <dl class=\"divide-y \
+divide-gray-100 gap-y-3 flex flex-col\">\n      <CircleFifth/>\n    </dl>    \
+\n    <dl class=\"divide-y divide-gray-100 gap-y-3 flex flex-col\">\n      \
+<div class=\"flex flex-row gap-x-3\">\n        <ChordChart/>\n        \
+<ScaleChart/>\n      </div>\n      <p class=\"mt-1 max-w-2xl text-sm/6 \
+text-gray-500\">Select the instrument</p>\n      <TuningComponent/>\n    \
+</dl>\n  </div>\n</div>\n] ]", "Display" -> "codemirror", 
+    "Hash" -> "e18944c1-300d-4085-ad4e-0ca922dcce69", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".wlx\n\nLandingWindow[Print[{##}]&, \"Scale\"->\"Major\", \
 \"Key\"->\"C\"]", "Display" -> "codemirror", 
-    "Hash" -> "5053cd14-00c2-4229-978d-26fa67f4455b", "Invisible" -> False, 
+    "Hash" -> "cff0aeb8-3009-4fc7-b996-f0d303f61d9b", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "<div ><div class=\"px-4 sm:px-0\"><h3 class=\"text-base/7 \
 font-semibold text-gray-900\">C Major</h3><p class=\"mt-1 max-w-2xl text-sm/6 \
 text-gray-500\">Bright and upbeat feeling</p></div><div class=\"mt-6 border-t \
@@ -1136,20 +1118,20 @@ ring-inset ring-gray-200 bg-white'.split(' ')));\n      \
 container.classList.remove('hidden');\n      \
 server.kernel.emitt('a0a75235-0d80-4b89-92a3-dde4d02f5c7b', '\"Strings\"', \
 'Instrument');\n    })</script></div></dl></div></div>", "Display" -> "wlx", 
-    "Hash" -> "5a5c3f60-64f9-4c3e-8e35-229752492e81", "Invisible" -> False, 
+    "Hash" -> "449e5bcb-e9a7-4691-a298-5c492b78b0da", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".md\n## Piano View", "Display" -> "codemirror", 
-    "Hash" -> "863ed1e8-484b-4a44-ad94-c977f1efd21e", "Invisible" -> False, 
+    "Hash" -> "279937e4-a77f-4505-a6d0-b83e34adb45e", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, <|"Data" -> "## Piano View", 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, <|"Data" -> "## Piano View", 
     "Display" -> "markdown", "Hash" -> 
-     "08ffc8ca-cf62-4837-ba56-a492a1a55b61", "Invisible" -> False, 
+     "0983e949-c907-4a8a-995b-7306a1da8840", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "keyLevels = {0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, \
 0};\ngenerateKeys[keyCount_] := Module[\n  {index = 1, position = 1, \
 keyWidth, keyOffset},\n  Table[\n    With[\n      {\n        cycleIndex = \
@@ -1212,35 +1194,35 @@ clicker[scene, separated, keys, notes, names, scaleMode]}]\n  }, \
 ImageSize->OptionValue[ImageSize], \
 \"Controls\"->False]\n]\n\nOptions[PianoView] = {ImageSize->{500,200}, \
 \"Size\"->25, \"Mode\"->\"Play\"};\n\n", "Display" -> "codemirror", 
-    "Hash" -> "0d84753c-d30f-40f9-bc24-f745f7897054", "Invisible" -> False, 
+    "Hash" -> "256b1bde-f2f4-4023-bd9e-f3cd0c12da67", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> 
      "PianoView[SoundNote[{\"G5\", \"A5\", \"B\" }], \"Mode\"->\"Scale\"]", 
     "Display" -> "codemirror", "Hash" -> 
-     "4c691766-b5cc-48f2-9e6d-9996a2a2998c", "Invisible" -> False, 
+     "f2a511f8-80c2-430b-88bb-cc568464ab2d", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "(*VB[*)(FrontEndRef[\"7970ec24-94e9-4686-9ba4-ffac9c2f81de\"]\
 )(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKm1uaG\
 6QmG5noWpqkWuqamFmY6VomJZropqUlJlsmG6VZGKakAgB+/BXx\"*)(*]VB*)", 
     "Display" -> "codemirror", "Hash" -> 
-     "3706c963-e0d8-4b7d-a3fc-27e614b4346f", "Invisible" -> False, 
+     "b6085ae5-85d5-4ce2-92dc-e025f90c91ff", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".md\n## Guitar view", "Display" -> "codemirror", 
-    "Hash" -> "a7fc82a9-a9c8-4a51-b62a-9565ca015526", "Invisible" -> False, 
+    "Hash" -> "b0e1d51f-ed42-4f03-94b6-bbb0aeb298ed", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, <|"Data" -> "## Guitar view", 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, <|"Data" -> "## Guitar view", 
     "Display" -> "markdown", "Hash" -> 
-     "100b218e-6de4-4d7e-afff-8ec0c88c2010", "Invisible" -> False, 
+     "c530dd97-98a6-47c0-bca4-96750905770e", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "plucker[scene_, board_, highlighted_, additional_, \
 scaleQ_][xy_] := With[{\n  match = SelectFirst[board//Values//Flatten, \
 With[{reg = Disk[#[[1,1]], #[[1,2]] * 2] },\n    RegionMember[reg, xy]\n  \
@@ -1289,52 +1271,52 @@ PlotRange->{{0 - 0.5, 12 + 0.5}, {0, Length[tuning] + \
 .5}}]\n]\n\nOptions[GuitarView] = {\"Tuning\"->({\"E4\", \"A4\", \"D5\", \
 \"G5\", \"B5\", \"E6\"}//Reverse), \"Mode\"->\"Play\", ImageSize->(1.2 \
 {500,100})}\n\n", "Display" -> "codemirror", 
-    "Hash" -> "1ed35d1a-5d64-423a-9fce-44f340890fa6", "Invisible" -> False, 
+    "Hash" -> "16929ca2-35ca-4d93-9ddd-4cd4969fb70d", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "{\"Tuning\"->{\"E6\",\"B5\",\"G5\",\"D5\",\"A4\",\"E4\"},\"Mo\
 de\"->\"Play\",ImageSize->{600.`,120.`}}", "Display" -> "codemirror", 
-    "Hash" -> "c6abf7eb-82d8-4ba6-8bbb-daf3275bafa3", "Invisible" -> False, 
+    "Hash" -> "53d9c3ea-121f-42f7-a21b-4e9cb52b4bd6", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> 
      "GuitarView[SoundNote[{\"E4\", \"G5\", \"B4\"}], \"Mode\"->\"Scale\"]", 
     "Display" -> "codemirror", "Hash" -> 
-     "fb99c05b-d1c2-4bfc-9f80-bed76a02e030", "Invisible" -> False, 
+     "828af6ac-3e05-48e7-9f33-b69215a9560f", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "(*VB[*)(FrontEndRef[\"1658f480-2dd5-407e-a6e7-786a8d2eded0\"]\
 )(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKG5qZW\
 qSZWBjoGqWkmOqaGJin6iaapZrrmluYJVqkGKWmpKYYAAB7NBWx\"*)(*]VB*)", 
     "Display" -> "codemirror", "Hash" -> 
-     "f5aa9678-c536-40db-a1aa-b72c1b1a6076", "Invisible" -> False, 
+     "2dabddaf-9dc0-40a6-b3fd-e092efeb312a", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "EvaluationNotebook[]", "Display" -> "codemirror", 
-    "Hash" -> "7f9eb91b-fb75-4090-a93b-a036879eda44", "Invisible" -> False, 
+    "Hash" -> "ebfe350c-6221-4f56-9ac5-a3e2e837e883", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "RemoteNotebook[\"68d64a5d-d727-419f-8a86-e9665e84a280\"]", 
     "Display" -> "codemirror", "Hash" -> 
-     "d68f2ab1-dd8b-4d1a-9644-a9f52c588233", "Invisible" -> False, 
+     "7fd1f989-8fc1-42a9-9e82-b6fdc8f41ee9", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".md\n## Output widget", "Display" -> "codemirror", 
-    "Hash" -> "ee566a1a-7df0-49d0-b1e3-f719f5615c87", "Invisible" -> False, 
+    "Hash" -> "36ef0a4a-ef93-41bd-a4d9-9f60fed1c7f6", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "## Output widget", "Display" -> "markdown", 
-    "Hash" -> "c0263e7a-9382-4d09-81bb-af4abbeab281", "Invisible" -> False, 
+    "Hash" -> "362ad76d-94bc-4046-94b7-5b3cca0754d8", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".wlx\n\ninternalMiddleware[notebook_][rest__] := \
 internalHandler[rest, \"Notebook\"->notebook];\n\ninternalHandler[\"Scale\", \
 {currentKey_, currentScale_}, \"Keys\", OptionsPattern[]] := \
@@ -1342,9 +1324,10 @@ CellPrint[With[{\n  Widget = PianoView[\n    With[{scaleMaker = \
 makeScale[currentKey, scale[currentScale]]},\n      scaleMaker /@ \
 Range[12-4]\n    ] // SoundNote\n  , \"Mode\"->\"Scale\"],\n  Title = \
 StringTemplate[\"`` ``\"][currentKey, currentScale],\n  Mood = \
-mood[currentScale]\n},\n<div>\n  <div class=\"pb-2\">\n    <h3 \
-class=\"text-base/7 font-semibold text-gray-900\"><Title/></h3>\n  </div>\n  \
-<Widget/>\n</div>\n], \"Notebook\"->OptionValue[\"Notebook\"], \"Target\"->_, \
+mood[currentScale]\n},\n<div class=\"p-4 bg-white h-full w-full\">\n  <div \
+class=\"pb-2\">\n    <h3 class=\"text-base/7 font-semibold \
+text-gray-900\"><Title/></h3>\n  </div>\n  <Widget/>\n</div>\n], \
+\"Notebook\"->OptionValue[\"Notebook\"], \"Target\"->_, \
 \"Display\"->\"wlx\"]\n\n\ninternalHandler[\"Scale\", {currentKey_, \
 currentScale_}, \"Strings\", OptionsPattern[]] := CellPrint[With[{\n  Widget \
 = GuitarView[\n    With[{scaleMaker = makeScale[currentKey, \
@@ -1352,67 +1335,69 @@ scale[currentScale]]},\n      With[{notes = scaleMaker /@ Range[12-4] // \
 SoundNote},\n        NoteMerge[NoteTranspose[notes, 12], NoteTranspose[notes, \
 12 2], NoteTranspose[notes, 12 3]]\n      ]\n    ] \n  , \"Mode\"->\"Scale\", \
 \"Tuning\"->(OptionValue[\"Tuning\"])],\n  Title = StringTemplate[\"`` \
-``\"][currentKey, currentScale],\n  Mood = mood[currentScale]\n},\n<div>\n  \
-<div class=\"pb-2\">\n    <h3 class=\"text-base/7 font-semibold \
-text-gray-900\"><Title/></h3>\n  </div>\n  <Widget/>\n</div>\n], \
-\"Notebook\"->OptionValue[\"Notebook\"], \"Target\"->_, \
+``\"][currentKey, currentScale],\n  Mood = mood[currentScale]\n},\n<div \
+class=\"p-4 bg-white h-full w-full\">\n  <div class=\"pb-2\">\n    <h3 \
+class=\"text-base/7 font-semibold text-gray-900\"><Title/></h3>\n  </div>\n  \
+<Widget/>\n</div>\n], \"Notebook\"->OptionValue[\"Notebook\"], \"Target\"->_, \
 \"Display\"->\"wlx\"]\n\nOptions[internalHandler] = {\"Notebook\"->\"\", \
 \"Tuning\"->\"\"};", "Display" -> "codemirror", 
-    "Hash" -> "c425bbb3-2dd7-4303-9910-5d2faf096d35", "Invisible" -> False, 
+    "Hash" -> "82ba2342-fb42-4e36-bf42-1cfd34d3f0bc", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".md\nChord maker", "Display" -> "codemirror", 
-    "Hash" -> "77301208-489f-4031-806f-92ad12ccf632", "Invisible" -> False, 
+    "Hash" -> "f3311481-777c-4f8b-82a5-70082aafc4e5", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, <|"Data" -> "Chord maker", 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, <|"Data" -> "Chord maker", 
     "Display" -> "markdown", "Hash" -> 
-     "98891b76-ec59-4d29-97a1-8b472383b9b8", "Invisible" -> False, 
+     "3e434468-c105-4e0e-9ad0-8afeabe687ac", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Output", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".wlx\n\ninternalHandler[\"Chord\", {CurrentKey_, \
 CurrentScale_}, \"Keys\", OptionsPattern[]] := CellPrint[With[{m = \
 makeChord[CurrentKey, CurrentScale, 3]},\n  With[{TableList = Table[With[{\n  \
   Widget = PianoView[m[r], ImageSize->{270,100}], \n    Roman = r\n  },\n    \
 <div class=\"flex flex-row gap-x-2 items-center\">\n      <Widget/>\n      \
 <h3><Roman/></h3>\n    </div>\n  ], {r, {\"I\", \"II\", \"III\", \"IV\", \
-\"V\", \"VI\"}}]},\n\n    <div class=\"flex flex-col gap-y-2\">\n      <p \
-class=\"mt-1 max-w-2xl text-sm/6 text-gray-500\"><CurrentKey/><span> \
-</span><CurrentScale/></p>\n      <TableList/>\n    </div>\n  ]\n], \
-\"Notebook\"->OptionValue[\"Notebook\"], \"Target\"->_, \
-\"Display\"->\"wlx\"]\n\ninternalHandler[\"Chord\", {CurrentKey_, \
-CurrentScale_}, \"Strings\", OptionsPattern[]] := CellPrint[With[{m = \
-makeChord[CurrentKey, CurrentScale, 3]},\n  With[{TableList = Table[With[{\n  \
-  Widget = GuitarView[NoteMerge[NoteTranspose[m[r], 12], NoteTranspose[m[r], \
-24], NoteTranspose[m[r], 12 3]], ImageSize->( {500,100}), \
+\"V\", \"VI\"}}]},\n\n    <div class=\"flex flex-col gap-y-2 p-4 \
+bg-white\">\n      <p class=\"mt-1 max-w-2xl text-sm/6 \
+text-gray-500\"><CurrentKey/><span> </span><CurrentScale/></p>\n      \
+<TableList/>\n    </div>\n  ]\n], \"Notebook\"->OptionValue[\"Notebook\"], \
+\"Target\"->_, \"Display\"->\"wlx\"]\n\ninternalHandler[\"Chord\", \
+{CurrentKey_, CurrentScale_}, \"Strings\", OptionsPattern[]] := \
+CellPrint[With[{m = makeChord[CurrentKey, CurrentScale, 3]},\n  \
+With[{TableList = Table[With[{\n    Widget = \
+GuitarView[NoteMerge[NoteTranspose[m[r], 12], NoteTranspose[m[r], 24], \
+NoteTranspose[m[r], 12 3]], ImageSize->( {500,100}), \
 \"Tuning\"->OptionValue[\"Tuning\"]], \n    Roman = r\n  },\n    <div \
 class=\"flex flex-row gap-x-2 items-center\">\n      <Widget/>\n      \
 <h3><Roman/></h3>\n    </div>\n  ], {r, {\"I\", \"II\", \"III\", \"IV\", \
-\"V\", \"VI\"}}]},\n\n    <div class=\"flex flex-col gap-y-2\">\n      <p \
-class=\"mt-1 max-w-2xl text-sm/6 text-gray-500\"><CurrentKey/><span> \
-</span><CurrentScale/></p>\n      <TableList/>\n    </div>\n  ]\n], \
-\"Notebook\"->OptionValue[\"Notebook\"], \"Target\"->_, \
-\"Display\"->\"wlx\"]", "Display" -> "codemirror", 
-    "Hash" -> "68cde4bb-dc9a-4a60-8d3b-9d741c9276c0", "Invisible" -> False, 
+\"V\", \"VI\"}}]},\n\n    <div class=\"flex flex-col gap-y-2 p-4 \
+bg-white\">\n      <p class=\"mt-1 max-w-2xl text-sm/6 \
+text-gray-500\"><CurrentKey/><span> </span><CurrentScale/></p>\n      \
+<TableList/>\n    </div>\n  ]\n], \"Notebook\"->OptionValue[\"Notebook\"], \
+\"Target\"->_, \"Display\"->\"wlx\"]", "Display" -> "codemirror", 
+    "Hash" -> "0d1e1bf0-fbce-45f4-ad6f-28d81bb2edeb", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> "", "Display" -> "codemirror", 
-    "Hash" -> "f3d1fea7-a72c-4238-9975-fbb1d2b639d1", "Invisible" -> False, 
+    "Hash" -> "2e51346f-6b18-4de4-bc9b-91afc6ffae22", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <||>, "State" -> "Idle", 
     "Type" -> "Input", "UID" -> Null, "Notebook" -> 
-     "68d64a5d-d727-419f-8a86-e9665e84a280"|>, 
+     "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>, 
    <|"Data" -> ".wlx\n\nWith[{notebook = EvaluationNotebook[]},\n  \
 With[{MainWindow = mainWindow[Function[keyScale,\n    \
 CellPrint[LandingWindow[internalMiddleware[notebook], \"Key\"->keyScale[[1]], \
 \"Scale\"->keyScale[[2]]], \"Notebook\"->notebook, \"Target\"->_, \
-\"Display\"->\"wlx\"];\n  ]]\n  },\n<div>\n  <div class=\"px-4 sm:px-0\">\n   \
- <p class=\"mt-1 max-w-2xl text-sm/6 text-gray-500\">Pick scale and key</p>\n \
- </div>\n  <MainWindow/>\n</div>\n  ]\n]", "Display" -> "codemirror", 
-    "Hash" -> "174a2300-5e56-43ec-a91f-5aec71a1be8a", "Invisible" -> False, 
+\"Display\"->\"wlx\"];\n  ]]\n  },\n<div class=\"p-4 bg-white h-full \
+w-full\">\n  <div class=\"px-4 sm:px-0\">\n    <p class=\"mt-1 max-w-2xl \
+text-sm/6 text-gray-500\">Pick scale and key</p>\n  </div>\n  \
+<MainWindow/>\n</div>\n  ]\n]", "Display" -> "codemirror", 
+    "Hash" -> "677f4f54-1f24-4980-9ebb-a795ae3e1af5", "Invisible" -> False, 
     "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
     "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
-    "Notebook" -> "68d64a5d-d727-419f-8a86-e9665e84a280"|>}, 
+    "Notebook" -> "a7352ca2-aa7f-4e29-860d-98cd43b6081a"|>}, 
  "serializer" -> "jsfn4"|>

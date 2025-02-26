@@ -46,18 +46,18 @@ Utilize [WLX](frontend/Cell%20types/WLX.md) cells for the best customization of 
 :::
 
 :::tip
-When working with low-level [Dynamics](frontend/Dynamics.md) (dynamic symbols), define all dynamic symbols in ``System` `` context and scope them using `Module` or [`LeakyModule`](frontend/Reference/Misc/Language.md#`LeakyModule`).  This limitation comes from the bug of the context communication between the frontend and Wolfram Kernel. For example
+Scope your dynamic symbols
 
 ```mathematica title="Last input cell"
 Module[{
-	System`text = "Hello World"
+	text = "Hello World"
 },
 	Column[{
-		EventHandler[InputText[System`text], (System`text = #)&],
+		EventHandler[InputText[text], (text = #)&],
 		Graphics[Table[{
 			RandomColor[], 
 			Rotate[
-				Text[System`text // Offload, RandomReal[{-1,1}, 2]],
+				Text[text // Offload, RandomReal[{-1,1}, 2]],
 				RandomReal[{0, 3.14}]
 			]
 		}, {40}]]
@@ -65,7 +65,7 @@ Module[{
 ]
 ```
 
-Here `text` is still unique for each instance due to lexical scoping of `Module`, while its context fixed to `System`.
+Here `text` is unique for each instance due to lexical scoping of `Module`. 
 
 ![](./../../Screenshot%202024-12-25%20at%2020.47.41.png)
 :::
