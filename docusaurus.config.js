@@ -167,11 +167,11 @@ const config = {
     ({
       metadata: [
         {name: 'msvalidate.01', content: '558ACAAD3C892A685EC4981186E3711D'},
-        {name: 'google-site-verification', content: "v5kHeI8IZCb5bfzZug5GQ7uRZOeo2VIdj8tcUXpaLTk"},
+        {name: 'google-site-verification', content: "EfqZCis7_qdi7v5e_xZFG-q1I2nGROZLaqCDsVDlt0Y"},
         {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'}
       ],
 
-      
+  
       remarkPlugins: [math],
       rehypePlugins: [katex],
       // Replace with your project's social card
