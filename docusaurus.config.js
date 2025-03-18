@@ -19,7 +19,7 @@ const math = require('remark-math');
 const katex = require('rehype-katex');
 
 const scripts = [
-  /*"/wljs-interpreter/src/interpreter.js",
+  /*"/wljs-interpreter/dist/interpreter.js",
   "/wljs-interpreter/src/core.js",
   "/wljs-cells/src/module.js",
   "/wljs-editor/dist/kernel.js",
