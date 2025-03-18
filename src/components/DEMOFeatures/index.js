@@ -106,27 +106,12 @@ const FeatureList = [
         </li>
 
         <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"/wljs-demo/intro-boids-simple"}><b>Tiny Boids Simulation</b> in 4 lines of code</Link>
-          <div className={styles.badgeHolder}>
-            <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
-          </div>        
-        </li>
-
-        <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/mid-inteferogram"}><b>Michelson Interferometer</b> Move mirrors in a virtual experiment and record interferogram</Link>
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
           </div>        
         </li>
-
-        <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"/wljs-demo/mid-roots"}><b>Limit of algebraic polynomial roots</b> Visualize the beauty on Argand plane</Link>
-          <div className={styles.badgeHolder}>
-            <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
-          </div>          
-        </li>      
-
-        
+           
 
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/mid-thz-tds"}><b>THz-TDS</b> Model the propagation of THz pulse though the dispersive medium in 15 lines of code</Link>
@@ -140,14 +125,7 @@ const FeatureList = [
           <div className={styles.badgeHolder}>
             <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
           </div>          
-        </li> 
-
-        <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"/wljs-demo/mid-tesseract"}>Tesseract</Link>
-          <div className={styles.badgeHolder}>
-            <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
-          </div>          
-        </li>        
+        </li>  
 
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/mid-pinkorb"}>Pink Orb</Link>
@@ -163,13 +141,6 @@ const FeatureList = [
           </div>          
         </li>
         
-
-        <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"/wljs-demo/numerics-fem"}>Realtime Finite Elements Method</Link>
-          <div className={styles.badgeHolder}>
-            <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
-          </div>          
-        </li> 
       </ul>      
         
       </>
@@ -207,13 +178,7 @@ const FeatureList = [
         </li>         
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/plot-3d"}><b>3D Data Visualization</b></Link>         
-        </li>   
-        <li className={styles.featureLi}>
-          <Link className={styles.featureLink}  to={"/wljs-demo/plot-3d-d"}>Parameteric shapes morphing</Link>   
-          <div className={styles.badgeHolder}>
-            <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
-          </div>      
-        </li>     
+        </li>       
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/plot-shadows"}>Polygons & Shadows</Link>         
         </li>    
@@ -284,14 +249,7 @@ const FeatureList = [
             <div className={styles.badgeHolder}>
               <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
             </div>                 
-          </li> 
-
-          <li className={styles.featureLi}>
-            <Link className={styles.featureLink}  to={"/wljs-demo/mix-blowup"}><b>Blow up cats</b> with OpenCL!</Link>   
-            <div className={styles.badgeHolder}>
-              <span className={styles.badge} style={{background: 'var(--ifm-color-warning-light)'}}>Animated</span>
-            </div>                  
-          </li>          
+          </li>         
 
           <li className={styles.featureLi}>
             <Link className={styles.featureLink}  to={"/wljs-demo/mix-gauge"}>Use Javascript to make custom UI elements</Link>   

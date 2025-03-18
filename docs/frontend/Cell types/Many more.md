@@ -3,15 +3,8 @@ sidebar_position: 22
 ---
 You can extend output cell types via a few lines of code and you favorite framework / package
 
-:::info
-Package system docs are still in development. Please request on Github issues to give it priority
-:::
 
 #### Shell
-
-:::danger
-Currently not supported on Windows
-:::
 
 You can type commands to your system shell. PATH is imported from your terminal automatically, and a working directory is set to [NotebookDirectory](frontend/Reference/Cells%20and%20Notebook/NotebookDirectory.md)
 

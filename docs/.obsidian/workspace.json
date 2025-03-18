@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Exporting/Dynamic HTML.md",
+                "file": "frontend/Cell types/Many more.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dynamic HTML"
+              "title": "Many more"
             }
           },
           {
@@ -221,6 +221,8 @@
   },
   "active": "d56f995295699f60",
   "lastOpenFiles": [
+    "frontend/Cell types/ESM.md",
+    "frontend/Exporting/Dynamic HTML.md",
     "frontend/attachments/kernel.txt",
     "frontend/attachments/81ca8f84-ffea-48c5-ab2d-6d126bc315d1.txt",
     "statemachine-ezgif.com-optimize.gif",
@@ -257,7 +259,6 @@
     "Screenshot 2025-03-18 at 13.00.33.png",
     "frontend/Reference/Formatting/Labeled.md",
     "frontend/Advanced/Projector.md",
-    "frontend/Advanced/Overlay mode.md",
     "frontend/attachments/notebook-0fd.wln",
     "frontend/attachments/0fdbd52d-d4fd-417d-9481-f43d158acf84.txt",
     "frontend/attachments",
@@ -265,7 +266,6 @@
     "frontend/Development/Plugins/Reference",
     "frontend/Development/API",
     "frontend/Development/Paclets",
-    "frontend/Development/Plugins",
-    "frontend/Development"
+    "frontend/Development/Plugins"
   ]
 }

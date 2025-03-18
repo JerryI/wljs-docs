@@ -1,9 +1,7 @@
 ---
 sidebar_position: 5
 ---
-:::danger
-Currently not supported on Windows
-:::
+
 
 > Type `.esm` in the first line of an input cell
 
