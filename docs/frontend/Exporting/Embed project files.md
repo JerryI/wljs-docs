@@ -7,7 +7,7 @@ It allows to compress the whole project folder and create a self-extracting note
 ![](./../../Screenshot%202024-12-13%20at%2016.07.40.png)
 
 :::note
-It does not export anything to a new file, but modifies your notebook with embedded data. __Don't forget to save it afterwards__
+It does not export anything to a new file, but modifies your notebook with embedded data. __Don't forget to save it after__
 :::
 
 It uses a basic `gzip` and stored the data as base64 string inside the internal fields of the notebook. On the next fresh launch it will unpack the data and remove the archive from the notebook.

@@ -58,16 +58,16 @@ WLJS Notebook is an interactive, web-based environment for running **Wolfram Lan
 
 WLJS Notebook is optimized for **interactive computing and is friendly for mathematicians, physicists** and anyone else, who likes **to write equations**
 
-<WLJSEditor display={"codemirror"} nid={"0fdbd52d-d4fd-417d-9481-f43d158acf84"} id={"2d86cc33-046d-49fa-b303-14b5248c6a35"} type={"Input"} opts={{}} >{`ManipulatePlot%5B%7B%0A%20%20%28%2ATB%5B%2A%29Sum%5B%28%2A%7C%2A%29%28%2AFB%5B%2A%29%28%28Sin%5B2%CF%80%282j%20-%201%29%20x%5D%29%28%2A%2C%2A%29%2F%28%2A%2C%2A%29%282j-1%29%29%28%2A%5DFB%2A%29%28%2A%7C%2A%29%2C%20%7B%28%2A%7C%2A%29j%28%2A%7C%2A%29%2C%28%2A%7C%2A%291.0%28%2A%7C%2A%29%2C%28%2A%7C%2A%29n%28%2A%7C%2A%29%7D%5D%28%2A%7C%2A%29%28%2A1%3AeJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ%3D%3D%2A%29%28%2A%5DTB%2A%29%2C%0A%20%20%28%2ATB%5B%2A%29Sum%5B%28%2A%7C%2A%29%28%2AFB%5B%2A%29%28%28Cos%5B2%CF%80%282j%20-%201%29%20x%5D%29%28%2A%2C%2A%29%2F%28%2A%2C%2A%29%282j-1%29%29%28%2A%5DFB%2A%29%28%2A%7C%2A%29%2C%20%7B%28%2A%7C%2A%29j%28%2A%7C%2A%29%2C%28%2A%7C%2A%291.0%28%2A%7C%2A%29%2C%28%2A%7C%2A%29n%28%2A%7C%2A%29%7D%5D%28%2A%7C%2A%29%28%2A1%3AeJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ%3D%3D%2A%29%28%2A%5DTB%2A%29%0A%20%20%0A%7D%2C%20%7Bx%2C%20-1%2C1%7D%2C%20%7B%7Bn%2C1%7D%2C%201%2C10%2C%201%7D%5D`}</WLJSEditor>
 
-import { WLJSHTML, WLJSEditor, WLJSStore } from "@site/src/components/wljs-reactcells";
-
+import { WLJSHTML, WLJSEditor, WLJSStore } from "@site/src/components/wljs-notebook-react";
 
 
-<WLJSStore kernel={require('./attachments/kernel.txt').default} json={require('./attachments/0fdbd52d-d4fd-417d-9481-f43d158acf84.txt').default}/>
+<WLJSStore kernel={require('./attachments/kernel.txt').default} json={require('./attachments/81ca8f84-ffea-48c5-ab2d-6d126bc315d1.txt').default} />
 
+<WLJSEditor display={"codemirror"} nid={"81ca8f84-ffea-48c5-ab2d-6d126bc315d1"} id={"832dd62a-4235-4330-a3d7-c7e431823949"} type={"Input"} opts={{}} >{`ManipulatePlot%5B%7B%0A%20%20%28%2ATB%5B%2A%29Sum%5B%28%2A%7C%2A%29%28%2AFB%5B%2A%29%28%28Sin%5B2%CF%80%282j%20-%201%29%20x%5D%29%28%2A%2C%2A%29%2F%28%2A%2C%2A%29%282j-1%29%29%28%2A%5DFB%2A%29%28%2A%7C%2A%29%2C%20%7B%28%2A%7C%2A%29j%28%2A%7C%2A%29%2C%28%2A%7C%2A%291.0%28%2A%7C%2A%29%2C%28%2A%7C%2A%29n%28%2A%7C%2A%29%7D%5D%28%2A%7C%2A%29%28%2A1%3AeJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ%3D%3D%2A%29%28%2A%5DTB%2A%29%2C%0A%20%20%28%2ATB%5B%2A%29Sum%5B%28%2A%7C%2A%29%28%2AFB%5B%2A%29%28%28Cos%5B2%CF%80%282j%20-%201%29%20x%5D%29%28%2A%2C%2A%29%2F%28%2A%2C%2A%29%282j-1%29%29%28%2A%5DFB%2A%29%28%2A%7C%2A%29%2C%20%7B%28%2A%7C%2A%29j%28%2A%7C%2A%29%2C%28%2A%7C%2A%291.0%28%2A%7C%2A%29%2C%28%2A%7C%2A%29n%28%2A%7C%2A%29%7D%5D%28%2A%7C%2A%29%28%2A1%3AeJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ%3D%3D%2A%29%28%2A%5DTB%2A%29%0A%20%20%0A%7D%2C%20%7Bx%2C%20-1%2C1%7D%2C%20%7B%7Bn%2C4%7D%2C%201%2C7%2C%201%7D%5D`}</WLJSEditor>
 
-<WLJSEditor display={"codemirror"} nid={"0fdbd52d-d4fd-417d-9481-f43d158acf84"} id={"f292f7b8-0f6a-4b82-8d3e-200b81d9d65a"} type={"Output"} opts={{}} >{`%28%2AGB%5B%2A%29%7B%7B%28%2AVB%5B%2A%29%28FrontEndRef%5B%22bf43fd89-46c9-440b-aa55-f87aaa5603d5%22%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKJ6WZGKelWFjqmpglAwkTgyTdxERTU900C%2FNEIMPMwDjFFACLERXY%22%2A%29%28%2A%5DVB%2A%29%28%2A%7C%2A%29%2C%28%2A%7C%2A%29%28%2AVB%5B%2A%29%28EventObject%5B%3C%7C%22Id%22%20-%3E%20%228f1baba4-d37b-4637-b599-897fa6b3c990%22%2C%20%22Initial%22%20-%3E%20%7B1%7D%2C%20%22View%22%20-%3E%20%2291f576d4-d1f6-49fb-97ed-566158c1c7c3%22%7C%3E%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKWxqmmZqbpZjophimmemaWKYl6Vqap6bompqZGZpaJBsmmycbAwCCmRWP%22%2A%29%28%2A%5DVB%2A%29%7D%7D%28%2A%5DGB%2A%29`}</WLJSEditor>
+<WLJSEditor display={"codemirror"} nid={"81ca8f84-ffea-48c5-ab2d-6d126bc315d1"} id={"7d84084a-20d8-4d10-9d93-2a4298f495af"} type={"Output"} opts={{}} >{`%28%2AGB%5B%2A%29%7B%7B%28%2AVB%5B%2A%29%28FrontEndRef%5B%229f6389d2-fd17-40da-92d3-08113e9bf0ff%22%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKW6aZGVtYphjppqUYmuuaGKQk6loapRjrGlgYGhqnWialGaSlAQCAvxWu%22%2A%29%28%2A%5DVB%2A%29%28%2A%7C%2A%29%2C%28%2A%7C%2A%29%28%2AVB%5B%2A%29%28EventObject%5B%3C%7C%22Id%22%20-%3E%20%2258c0627b-34f6-42af-948d-9091f5347a10%22%2C%20%22Initial%22%20-%3E%20%7B4%7D%2C%20%22View%22%20-%3E%20%2274516ccf-fb83-47b8-88ce-5328891d77a9%22%7C%3E%5D%29%28%2A%2C%2A%29%28%2A%221%3AeJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKm5uYGpolJ6fppiVZGOuamCdZ6FpYJKfqmhobWVhYGqaYmydaAgCCjhVm%22%2A%29%28%2A%5DVB%2A%29%7D%7D%28%2A%5DGB%2A%29`}</WLJSEditor>
+
 
 <div style={{textAlign: 'center', display: 'flex', gap: '2rem', justifyContent: 'center'}}>
 
@@ -135,7 +135,7 @@ And most common narrative tools are included
 
 Here is a regular paragraph, which can __be styled__. 
 
-:::tip
+:::note
 $\\LaTeX$ is also supported
 :::
 ```
@@ -144,7 +144,7 @@ $\\LaTeX$ is also supported
 
 Here is a regular paragraph, which can __be styled__.
 
-:::tip
+:::note
 $\\LaTeX$ is also supported
 :::
 
@@ -162,11 +162,25 @@ $\\LaTeX$ is also supported
 
 <div style={{textAlign: 'center'}}>
 
-### Server Mode
+### Run on Server / Docker
 
 </div>
 
-You can use just a normal **browser** to work with your notes. Just start it using `wolframscript`—no extra dependencies needed.
+Use just a normal **browser** to work with your notes. Deploy WLJS Notebook in a single line of code to any machine!
+
+```bash
+docker run -it \
+  -v wljs_data:/wljs \
+  -v ~/wljs:"/home/wljs/WLJS Notebooks" \
+  -v ~/wljs/Licensing:/home/wljs/.WolframEngine/Licensing \
+  -e PUID=$(id -u) \
+  -e PGID=$(id -g) \
+  -p 8000:3000 \
+  --name wljs \
+  ghcr.io/jerryi/wolfram-js-frontend:main
+```
+
+Then open `http://127.0.0.1:8000` 
 
 **🛠️ [GitHub Repo](https://github.com/JerryI/wolfram-js-frontend)**  
 [📦 Docker Container Setup](https://github.com/JerryI/wolfram-js-frontend/blob/main/container/README.md)

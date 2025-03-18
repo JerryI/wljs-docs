@@ -184,6 +184,25 @@ GetTime := With[{p = Promise[]},
 
 :::
 
+#### Fetch Downvalues of a symbol
+Similar to the previous one, but allows to pass arguments
+
+```mathematica
+GetTimeAt[year_String] := TextString[DateObject[year]];
+```
+
+```js
+.js
+const dom = document.createElement('span');
+
+server.kernel.io.fetch('GetTimeAt', ["2025"]).then(async (res) => {
+  dom.innerHTML = await interpretate(res, {});
+})
+
+return dom;
+```
+
+
 #### Fire event and fetch the result
 WLJS event system provides extra features to mimic full-duplex architecture. If one fires and event, it is possible to read the results of all subscribed listeners (if provided) or their handler functions
 

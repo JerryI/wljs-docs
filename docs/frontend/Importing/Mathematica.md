@@ -15,6 +15,7 @@ There is a problem with styling of the text, which is tricky to convert and rend
 If we summarize, what might not work
 
 - complex text formatting
+- __output cells__
 - multilayer nested structure
 - iconized expressions
 - some styling options for `Graphics` and `Graphics3D`
