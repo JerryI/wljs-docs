@@ -27,6 +27,8 @@ const scripts = [
   "/wljs-editor/src/objects.js",
   "/wljs-sharedlib-three/dist/kernel.js"
   "/wljs-sharedlib-d3/dist/kernel.js",
+  "/wljs-inputs/dist/kernel.js",
+  "/wljs-manipulate/kernel.js",
   "/wljs-graphics-d3/dist/kernel.js",
   "/wljs-graphics3d-threejs/dist/kernel.js"*/
   
