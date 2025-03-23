@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Components library/JoyCon presenter tool.md",
+                "file": "frontend/Exporting/Standalone Widgets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JoyCon presenter tool"
+              "title": "Standalone Widgets"
             }
           },
           {
@@ -221,6 +221,23 @@
   },
   "active": "d56f995295699f60",
   "lastOpenFiles": [
+    "frontend/Advanced/Dynamics/Transform native plot functions/index.mdx",
+    "frontend/Reference/Plotting Functions/ContourPlot.md",
+    "frontend/Advanced/Dynamics/Transform native plot functions/attachments/6e7341c7-2708-4730-a4f7-78f8fb75193c.txt",
+    "frontend/Advanced/Dynamics/Transform native plot functions/attachments/notebook-6e7.wln",
+    "frontend/Advanced/Dynamics/Transform native plot functions/attachments",
+    "frontend/Advanced/Dynamics/Transform native plot functions",
+    "frontend/Reference/Plotting Functions/DensityPlot.md",
+    "frontend/Reference/Graphics/GraphicsComplex.md",
+    "frontend/Reference/Plotting Functions/ComplexPlot.md",
+    "Screenshot 2025-03-23 at 11.44.05.png",
+    "frontend/Reference/Plotting Functions/ParametricPlot.md",
+    "Screenshot 2025-03-23 at 11.42.34.png",
+    "frontend/Reference/Image/LinearGradientImage.md",
+    "Screenshot 2025-03-23 at 11.42.01.png",
+    "Screenshot 2025-03-23 at 11.32.01.png",
+    "frontend/instruction.md",
+    "frontend/Advanced/Components library/JoyCon presenter tool.md",
     "frontend/Cell types/Many more.md",
     "frontend/Cell types/ESM.md",
     "frontend/Exporting/Dynamic HTML.md",
@@ -243,29 +260,11 @@
     "frontend/Exporting/Figures.md",
     "frontend/Exporting/Embed project files.md",
     "frontend/Exporting/Deploy to Github Pages.md",
-    "frontend/Reference/Frontend IO/MessageDialog.md",
-    "frontend/Reference/Frontend IO/MetaMarker.md",
-    "frontend/Reference/Slides/FrontSlidesSelected.md",
-    "frontend/Reference/Formatting/BarLegend.md",
-    "frontend/Reference/Formatting/LineLegend.md",
-    "frontend/Reference/Formatting/PointLegend.md",
-    "frontend/Reference/Formatting/SwatchLegend.md",
     "Screenshot 2025-03-18 at 13.10.33.png",
     "Screenshot 2025-03-18 at 13.09.12.png",
     "Screenshot 2025-03-18 at 13.08.05.png",
-    "Screenshot 2025-03-18 at 13.05.52.png",
-    "Screenshot 2025-03-18 at 13.04.53.png",
-    "Screenshot 2025-03-18 at 13.04.01.png",
-    "frontend/Reference/Formatting/Legended.md",
-    "Screenshot 2025-03-18 at 13.00.33.png",
-    "frontend/Reference/Formatting/Labeled.md",
     "frontend/attachments/notebook-0fd.wln",
     "frontend/attachments/0fdbd52d-d4fd-417d-9481-f43d158acf84.txt",
-    "frontend/attachments",
-    "frontend/Development/Plugins/Examples",
-    "frontend/Development/Plugins/Reference",
-    "frontend/Development/API",
-    "frontend/Development/Paclets",
-    "frontend/Development/Plugins"
+    "frontend/attachments"
   ]
 }

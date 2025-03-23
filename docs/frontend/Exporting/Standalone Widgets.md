@@ -72,3 +72,4 @@ Here `text` is unique for each instance due to lexical scoping of `Module`.
 
 ## Examples
 __See Widgets section in the top navigation menu__
+- [Transform Native Plot Functions: Bonus section](frontend/Advanced/Dynamics/Transform%20native%20plot%20functions/index.mdx)

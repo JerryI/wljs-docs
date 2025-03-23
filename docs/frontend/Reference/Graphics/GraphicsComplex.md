@@ -15,7 +15,7 @@ represents a graphics complex in which coordinates given as integers $i$ in gr
 `GraphicsComplex` provides faster rendering for a complex primitives with many vertices and colors. It looks similar to an interfaces of OpenGL or other graphics framework, where buffers with coordinates are provided separately from the object instances.
 :::
 
-:::danger
+:::warning
 Limited functionality
 :::
 
@@ -29,14 +29,19 @@ GraphicsComplex[{{0,0}, {1,0}, {1,1}}, Line[{{1,2,3}}]] // Graphics
 vertex colors are not supported
 
 ### `Polygon`
+:::note
+Uses WebGL graphics acceleration for rendering
+:::
 
 ```mathematica
 GraphicsComplex[{{0,0}, {1,0}, {1,1}}, Polygon[{1,2,3}], "VertexColors"->{{1,1,0}, {0,1,1}, {0,1,1}}] // Graphics
 ```
 
-vertex colors supports only the flat shading
 
 ### `Point`
+:::note
+Uses WebGL graphics acceleration for rendering
+:::
 
 ```mathematica
 GraphicsComplex[{{0,0}, {1,0}, {1,1}}, Point[{{1,2,3}}]] // Graphics

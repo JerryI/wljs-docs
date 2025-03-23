@@ -19,12 +19,10 @@ ContourPlot[x^2 - y^2 == x^3, {x, -2, 2}, {y, -2, 2}]
 
 <Wl >{`ContourPlot[x^2 - y^2 == x^3, {x, -2, 2}, {y, -2, 2}, ImageSize->500]`}</Wl>
 
-:::tip
-For better performance use this option
-```mathematica
-PerformanceGoal->"Speed"
-```
+:::note
+Hardware accelerated
 :::
+
 
 ## Options
 Styling is limited to the current implementation of [Graphics](frontend/Reference/Graphics/Graphics.md)

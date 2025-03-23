@@ -10,8 +10,8 @@ DensityPlot[f, {x, xmin, xmax}, {y, ymin, ymax}]
 ```
 makes a density plot of `f` as a function of `x` and `y`
 
-:::warning
-Only a flat-shading is supported for now
+:::note
+Hardware accelerated
 :::
 
 :::tip
