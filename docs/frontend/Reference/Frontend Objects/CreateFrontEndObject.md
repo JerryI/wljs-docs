@@ -35,5 +35,5 @@ It is mostly used for storing *heavy* expressions to be executed as [WLJS Functi
 Other use cases are provided by its derivative - [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md), which has an UpValue for [StandardForm](frontend/Reference/Formatting/StandardForm.md) and [WLXForm](frontend/Reference/Formatting/WLXForm.md) used for printing the data for output wolfram language cells and [Slides](frontend/Cell%20types/Slides.md).
 
 ## Exporting
-Created stored objects are fully portable and can be automatically exported to [Static HTML](frontend/Exporting/Static%20HTML.md), [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md), [Slides](frontend/Exporting/Slides.md) or as [Figures](frontend/Exporting/Figures.md)
+Created stored objects are fully portable and can be automatically exported to [Static HTML](frontend/Exporting/Static%20HTML.md), [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md), [Static Slides](frontend/Exporting/Static%20Slides.md) or as [Figures](frontend/Exporting/Figures.md)
 

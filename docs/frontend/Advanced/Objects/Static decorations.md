@@ -55,7 +55,7 @@ StateMachine /: MakeBoxes[s: StateMachine[symbol_Symbol?AssociationQ], form: (St
 			, {i, 0, 6Pi, Pi}]
 		}, ImageSize->{100,100}, ImagePadding->None]
 	},
-		ViewBox[s, g]
+		InterpretationBox[MakeBoxes[g, StandardForm], s]
 	]
 ] 
 ```

@@ -1,14 +1,14 @@
 ---
 draft: false
 ---
-Imagine we want to recreate this background used in some presentation
+Imagine we want to recreate this background used in a presentation:
 
 ![](./../../../Screenshot%202024-05-12%20at%2021.16.13.png)
 
-From the first sight, it looks like a few circles with a huge radius with dashed lines and three [Disk](frontend/Reference/Graphics/Disk.md) s. To program this manually would be cumbersome, however, we can create our own tools for this specific task in a few lines.
+At first glance, it looks like a few circles with a large radius, dashed lines, and three [Disk](frontend/Reference/Graphics/Disk.md) elements. Programming this manually would be cumbersome. However, we can create our own tools for this specific task in just a few lines.
 
-### Placing objects
-Here we use [Navigation gizmo](frontend/Command%20palette.md#Navigation%20gizmo) to assist us in placing straight lines and disks
+### Placing Objects
+We use the [Navigation gizmo](frontend/Command%20palette.md#Navigation%20gizmo) to assist in placing straight lines and disks.
 
 ```mathematica @
 Graphics[{
@@ -20,22 +20,23 @@ Graphics[{
 }, ImagePadding->0, ImageSize->{960,700}/2, PlotRange->{{0,1}, {0,1}}]
 ```
 
-then select the highlighted regions and run in the command palette `navigation ...` on the selected 
+Then, select the highlighted regions and run `navigation ...` from the command palette.
 
 ![](./../../../NaviGizmo-ezgif.com-crop.gif)
 
-It is better to add offsets to the positions, like we did with `Disk`
+It is better to add offsets to the positions, like we did with `Disk`:
 
 ```mathematica @
 ({0.2,0.2} + (*BB[*)({0.1,0.1})(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRAeB5AILqnMSXXKr0hjgskHleakFnMBGU6JydnpRfmleSlpzDDlQe5Ozvk5+UVFDGDwwR6dwcAAAAHdFiw="*)(*]BB*))//Offload
 ```
 
-then your navigation gizmo will not overlap with an actual graphics primitives you are positioning. 
+This prevents the navigation gizmo from overlapping with the actual graphic primitives being positioned.
 
-### Parameterized curves
-Let us have a look at some curves
+### Parameterized Curves
+Let’s examine some curves.
 
-*a prototype for circles*
+*A prototype for circles:*
+
 ```mathematica
 curveGenerator[pt1_, pt2_] := Line[With[{
   radius = pt1,
@@ -45,9 +46,9 @@ curveGenerator[pt1_, pt2_] := Line[With[{
 ] // Offload]
 ```
 
-what it does, it will produce a circle defined by two points. The feature here is it accepts any symbol as `pt1` / `pt2` including [dynamic one](frontend/Dynamics.md). Since all internals of [Line](frontend/Reference/Graphics3D/Line.md) including `Table` is wrapped into [Offload](frontend/Reference/Interpreter/Offload.md) it will be calculated directly on the frontend (aka WLJS Interpreter), while Wolfram Kernel only provides the values for those two control points.
+This function produces a circle defined by two points. The key feature is that it accepts any symbol as `pt1` / `pt2`, including [dynamic ones](frontend/Dynamics.md). Since all internals of [Line](frontend/Reference/Graphics3D/Line.md), including `Table`, are wrapped in [Offload](frontend/Reference/Interpreter/Offload.md), the calculation occurs directly on the frontend (WLJS Interpreter), while the Wolfram Kernel only provides values for the control points.
 
-To assist us, one can use [Navigation gizmo](frontend/Command%20palette.md#Navigation%20gizmo) snippet form the command line palette, which automatically generates temporal dynamic symbol and a gizmo for it
+To assist with placement, use the [Navigation gizmo](frontend/Command%20palette.md#Navigation%20gizmo) snippet from the command palette. It automatically generates a temporary dynamic symbol and a gizmo for it:
 
 ```mathematica @
 Graphics[{
@@ -56,18 +57,17 @@ Graphics[{
   Disk[({0.2,0.2} + {0.529545, 0.722472}), 0.013],
 
   curveGenerator[(*BB[*)({0.2,0.2})(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRAeB5AILqnMSXXKr0hjgskHleakFnMBGU6JydnpRfmleSlpzDDlQe5Ozvk5+UVFDGDwwR6dwcAAAAHdFiw="*)(*]BB*), (*BB[*)({0.3,0.3})(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRAeB5AILqnMSXXKr0hjgskHleakFnMBGU6JydnpRfmleSlpzDDlQe5Ozvk5+UVFDGDwwR6dwcAAAAHdFiw="*)(*]BB*)]
-  
 }, Controls->True, ImagePadding->0, ImageSize->{960,700}/2, PlotRange->{{0,1}, {0,1}}]
 ```
 
-apply it from the command palette to selected as it is demonstrated on a GIF below
+Apply it from the command palette to the selection, as shown below:
 
 ![](./../../../navi2-ezgif.com-speed.gif)
 
-Once we placed all objects, why not to animate them as well?
+Once we have placed all objects, why not animate them?
 
 ### Animation
-For this case we need to alter `curveGenerator` a little bit
+To animate the curves, we need to modify `curveGenerator` slightly:
 
 ```mathematica
 ClearAll[curveGenerator];
@@ -99,33 +99,17 @@ curveGenerator[radius_, center_, dashed_:False] := With[{
   , 100];  
   
   If[dashed // TrueQ, 
-  
     {SVGAttribute[Line[pts // Offload],"stroke-dasharray"->"10"], Disk[pt // Offload, 0.013]} 
   ,
-  
     {Line[pts // Offload], Disk[pt // Offload, 0.013]} 
   ]
 ] ]
-
 ```
 
-Now it uses [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) to animate the curves with `100 ms` interval and removes the task if an output cell got destroyed. If we put all together as follows
+Now, using [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`), the curves animate at `100 ms` intervals and remove the task if the output cell is destroyed.
 
-```mathematica
-Graphics[{
-  Black, Rectangle[{0,0}, {1,1}],
-  Gray//Lighter, Line[{{0.993182, 0.797794}, {0.572727, 0.997794}}], 
-  Disk[({0.2,0.2} + {0.529545, 0.722472}), 0.013],
-  
-  curveGenerator[{0.990909, 0.545221}, {1.19545, 1.03346}, False], 
-  Red, curveGenerator[{0.584091, 0.861075}, {0.934091, 1.19931}, True],
-  curveGenerator[{0.305086, -0.0154444}, {0.00942938, -0.189671}, False]
-  
-}, Controls->True, ImagePadding->None, ImageSize->{960,700}/2, PlotRange->{{0,1}, {0,1}}]
-```
-
-we will get a nice animation for a title slide of your presentation
+By putting everything together, we achieve a smooth animated title slide for your presentation.
 
 ![](./../../../balls-ezgif.com-optimize.gif)
 
-You can also play with an interval and [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) option of [Graphics](frontend/Reference/Graphics/Graphics.md) to get smoother animation. 
+You can experiment with the interval and the [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) option of [Graphics](frontend/Reference/Graphics/Graphics.md) for smoother animation.

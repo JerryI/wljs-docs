@@ -229,7 +229,44 @@ Change the initial sampling points
 
 
 ### `PlotLegends`
-Is quite limited. Accepts `Automatic`, `"Expressions"` or `List` of expressions to show
+Accepts `Automatic`, `"Expressions"` or `List` of expressions to show or explicit legend function, i.e. [SwatchLegend](frontend/Reference/Formatting/SwatchLegend.md), [LineLegend](frontend/Reference/Formatting/LineLegend.md) or [PointLegend](frontend/Reference/Formatting/PointLegend.md)
+
+```mathematica
+Plot[{Sin[x], Cos[x]}, {x, 0, 5}, 
+ PlotLegends -> {"Sin", "Cos"}]
+```
+
+```mathematica
+Plot[{Sin[x], Cos[x]}, {x, 0, 5}, 
+ PlotLegends -> {Sin, Cos}]
+```
+
+```mathematica
+Plot[{Sin[x], Cos[x]}, {x, 0, 5}, 
+ PlotLegends -> SwatchLegend["Expressions"]]
+```
+
+```mathematica
+Plot[{Sin[x], Cos[x]}, {x, 0, 5}, 
+ PlotLegends -> SwatchLegend[Automatic, {Sin, Cos}]]
+```
+
+or 
+
+```mathematica @
+legend = PointLegend[{Red, Green, Blue}, {"red", "green", "blue"}];
+Plot[{x, (*SpB[*)Power[x(*|*),(*|*)2](*]SpB*), (*SpB[*)Power[x(*|*),(*|*)3](*]SpB*)}, {x,0,3}, PlotStyle->{(*VB[*)(RGBColor[1, 0, 0])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8qYgCDD/ZQBgMDnAEA4iUPRg=="*)(*]VB*), (*VB[*)(RGBColor[0, 1, 0])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8qYoACKOODPVwEANd+D0Y="*)(*]VB*), (*VB[*)(RGBColor[0, 0, 1])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8qYoACdMYHewDM1w9G"*)(*]VB*)}, PlotLegends->legend]
+```
+
+#### Legend placement 
+Use [Placed](frontend/Reference/Formatting/Placed.md) to adjust the position of your legend, i.e.
+
+```mathematica
+Plot[
+  {x,x^2}, {x,0,1}, 
+  PlotLegends->Placed[SwatchLegend[Automatic], {0.2,0.2}]
+]
+```
 
 
 ### `PlotRange`
@@ -257,9 +294,6 @@ Plot[Sin[x], {x, 0, 8 Pi}, RegionFunction -> Function[{x, y}, Abs[y] > 0.5]]
  RegionFunction -> Function[{x, y}, Abs[y] > 0.5], ImageSize->500, MaxRecursion->0]`}</Wl>
 
 ### `Axes`
-:::caution
-Currently is not supported by [Graphics](frontend/Reference/Graphics/Graphics.md) ;(
-:::
 Show or hide axes of the plot
 
 ```mathematica

@@ -19,7 +19,7 @@ An actual expression now is shared between the frontend and the Kernel. Both can
 
 Such objects are also saved to the notebook internally.
 
-Defined [StandardForm](frontend/Reference/Formatting/StandardForm.md) and [WLX](frontend/Cell%20types/WLX.md) on `FrontEndExecutable` uses [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md) to replace it with an empty widget. This widget later is populated by the content produced by the original expression, for example [Graphics](frontend/Reference/Graphics/Graphics.md) or [Image](frontend/Reference/Image/Image.md).
+Defined [StandardForm](frontend/Reference/Formatting/StandardForm.md) and [WLX](frontend/Cell%20types/WLX.md) on `FrontEndExecutable` uses [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md) to replace it with an empty widget. This widget later is populated by the content produced by the original expression, for example [Graphics](frontend/Reference/Graphics/Graphics.md), [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md) or [Image](frontend/Reference/Image/Image.md).
 
 :::note
 On especially large objects we apply `zlib` compression.
@@ -31,7 +31,7 @@ On especially large objects we apply `zlib` compression.
 3. All active objects are exported to [Static HTML](frontend/Exporting/Static%20HTML.md) or [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) or [Figures](frontend/Exporting/Figures.md)
 4. All objects are embedded automatically to [Slides](frontend/Cell%20types/Slides.md) or [WLX](frontend/Cell%20types/WLX.md)
 5. [StandardForm](frontend/Reference/Formatting/StandardForm.md) for all [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) is [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md) 
-6. [WLXForm](frontend/Reference/Formatting/WLXForm.md) for all [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) is a sort of view-box as well, but displayed on a slide / HTML output element
+6. [WLXForm](frontend/Reference/Formatting/WLXForm.md) for all [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) is a sort of view-box as well, but displayed on a slide / WLX output
 
 
 

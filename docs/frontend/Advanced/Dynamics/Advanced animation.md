@@ -3,17 +3,17 @@ draft: false
 ---
 ## Basics
 ### Way 1
-Consider to use __to get the highest frame-rate__ and __smooth animations__
+Consider using __to achieve the highest frame rate__ and __smooth animations__.
 - [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md) for [Graphics](frontend/Reference/Graphics/Graphics.md) 
 - [AnimationFrameListener](frontend/Reference/Graphics3D/AnimationFrameListener.md) for [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md)
 
-with [TransitionType](frontend/Reference/Graphics/TransitionType.md) set to `None` if the calculation time does not exceed the `1/60` of the second. Otherwise consider to use `"Linear"` interpolation option and a small amount of [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) around 10-100 depending on how long it takes to update the data.
+Use [TransitionType](frontend/Reference/Graphics/TransitionType.md) set to `None` if the calculation time does not exceed `1/60` seconds. Otherwise, consider using the `"Linear"` interpolation option and a small value for [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md), around 10-100, depending on how long it takes to update the data.
 
 :::tip
-If you animation looks sloppy, you can always cheat asking Javascript to interpolate between data portions over the time. Use [TransitionType](frontend/Reference/Graphics/TransitionType.md) and [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md)
+If your animation looks choppy, you can use JavaScript to interpolate between data changes over time. Use [TransitionType](frontend/Reference/Graphics/TransitionType.md) and [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md).
 :::
 
-For example
+For example:
 
 ```mathematica title="cell 1"
 balls = RandomReal[{-1,1}, {100,3}];
@@ -30,16 +30,16 @@ Graphics3D[{
 }]
 ```
 
-*evaluate the cell above. It will create a canvas with randomly scattered balls*
+*Evaluate the cell above. It will create a canvas with randomly scattered balls.*
 
-At the start of the browser's frame, an event `"frame"` is triggered to request an update of data from the Kernel. However, after this, you'll need to "recharge" an `AnimationFrameListener`, otherwise it will not trigger the event again. This can be automated to occur whenever a change in the `balls` symbol is detected.
+At the start of the browser's frame, an event `"frame"` is triggered to request an update of data from the Kernel. However, after this, you'll need to "recharge" `AnimationFrameListener`, or else it will not trigger the event again. This can be automated to occur whenever a change in the `balls` symbol is detected.
 
 This process ensures the following benefits:
 
 - Synchronization of animation with the browser's engine (eliminating flickering).
-- Ability to skip frames if recalculations take longer than one frame of your browser, adapting to your computing power.
+- The ability to skip frames if recalculations take longer than one frame of your browser, adapting to your computing power.
 
-Here is our update function
+Here is our update function:
 
 ```mathematica
 EventHandler["frame", Function[Null,
@@ -52,57 +52,56 @@ EventHandler["frame", Function[Null,
 ]];
 ```
 
-To start an animation - reevaluate *cell 1* or use this "kickstarter"
+To start the animation, reevaluate *cell 1* or use this "kickstarter":
+
 ```mathematica
 EventFire["frame", Null]
 ```
 
 ![](./../../../ani-ezgif.com-optimize.gif)
 
-
-
 ### Way 2
-Consider to use [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) for simple or resource intensive animation. Set [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) and [TransitionType](frontend/Reference/Graphics/TransitionType.md) to a proper value to interpolate the values.
+Consider using [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) for resource-intensive animations. Set [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) and [TransitionType](frontend/Reference/Graphics/TransitionType.md) to appropriate values for interpolation.
 
-Usually if your [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) is let's say `100 ms`, then [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) should be around `100 ms` as well to get *the smoothest animation*.
+Usually, if your [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) is, let's say, `100 ms`, then [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md) should also be around `100 ms` to achieve *the smoothest animation*.
 
 :::tip
-If you animation looks sloppy, you can always cheat asking Javascript to interpolate between data portions over the time. Use [TransitionType](frontend/Reference/Graphics/TransitionType.md) and [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md)
+If your animation looks choppy, you can use JavaScript to interpolate between data portions over time. Use [TransitionType](frontend/Reference/Graphics/TransitionType.md) and [TransitionDuration](frontend/Reference/Graphics/TransitionDuration.md).
 :::
 
-For example 
+For example:
 
 ```mathematica
 ParametricAnimator[equation_, variable_:t, range_:{0, Infinity, 0.1}] := LeakyModule[{time = range[[1]], task, scale = 1, array = {}, scaledArray={}, cell = ResultCell[]},
 
-    (* sample the equation each frame and rescale if needed *)
-	animate := Block[{variable = time},
+    (* Sample the equation each frame and rescale if needed *)
+    animate := Block[{variable = time},
         With[{e = {Sin[t], Cos[t]} equation},
-    		scale = If[Norm[e scale] > 1.4, scale 0.95, scale 1];
+            scale = If[Norm[e scale] > 1.4, scale 0.95, scale 1];
             array = Append[array, e];
-    		scaledArray = scale array; 
+            scaledArray = scale array; 
             pointer = e scale;
         ];
 
-		time += range[[3]];
-		If[time >= range[[2]], TaskRemove[task]];
-	];
+        time += range[[3]];
+        If[time >= range[[2]], TaskRemove[task]];
+    ];
 
     animate;
 
-    (* async task to animate every 50 ms *)
-	task = SetInterval[animate, 50];
+    (* Async task to animate every 50 ms *)
+    task = SetInterval[animate, 50];
 
-    (* stop the task if cell was destroyed or reevaluated *)
-	EventHandler[cell, {"Destroy"->Function[Null, TaskRemove[task]; Print["removed"]]}];
+    (* Stop the task if the cell is destroyed or reevaluated *)
+    EventHandler[cell, {"Destroy"->Function[Null, TaskRemove[task]; Print["removed"]]}];
 
-	Graphics[{Red, PointSize[0.05], Point[pointer // Offload],
+    Graphics[{Red, PointSize[0.05], Point[pointer // Offload],
  Opacity[0.5], Line[scaledArray // Offload]
   }, TransitionDuration->50, TransitionType->"Linear", Controls->False, PlotRange->{{-1,1}, {-1,1}}]
 ]
 ```
 
-This will sample a given parametric equation and animate it with `50 ms` time step, while on Javascript's side it will interpolate between frames, so that overall animation will look smooth and will be rendered at 60FPS
+This will sample a given parametric equation and animate it with a `50 ms` time step, while on JavaScript's side, it will interpolate between frames so that the overall animation appears smooth and is rendered at 60FPS.
 
 ```mathematica
 ParametricAnimator[Exp[Sin[t]] - 2 Cos[4t] + Sin[(2t - Pi)/24], t, {0,16, 0.05}]
@@ -110,179 +109,134 @@ ParametricAnimator[Exp[Sin[t]] - 2 Cos[4t] + Sin[(2t - Pi)/24], t, {0,16, 0.05}]
 
 ![](./../../../buterfly-ezgif.com-optimize.gif)
 
-
 ### Way 3
-If you animation depends on some interaction with a user, it might be a good idea to run it and update objects attributes only, when some event is fired.
+If your animation depends on user interaction, it might be best to update object attributes only when an event occurs.
 
-For example
+For example:
 
 ```mathematica
 pt = {0,0};
 Graphics[{
-	White,
-	EventHandler[
-		Rectangle[{-2,-2}, {2,2}],
-		{"mousemove"->Function[xy, pt = xy]}
-	],
-	PointSize[0.05], Cyan,
-	Point[pt // Offload]
+    White,
+    EventHandler[
+        Rectangle[{-2,-2}, {2,2}],
+        {"mousemove"->Function[xy, pt = xy]}
+    ],
+    PointSize[0.05], Cyan,
+    Point[pt // Offload]
 }]
 ```
 
-*a mouse follower*
+*A mouse follower.*
 
 ![](./../../../mours-ezgif.com-crop.gif)
 
 ## A remark on color and opacity
-[RGBColor](frontend/Reference/Graphics/RGBColor.md) as well as [Opacity](frontend/Reference/Graphics/Opacity.md) do support updates in the context of [Graphics](frontend/Reference/Graphics/Graphics.md). Here it is a bit tricky, since all graphics symbols sharing the same scope should bind to them indirectly. The good news, you do not have to think about and just
+[RGBColor](frontend/Reference/Graphics/RGBColor.md) and [Opacity](frontend/Reference/Graphics/Opacity.md) support updates in the context of [Graphics](frontend/Reference/Graphics/Graphics.md). However, all graphics symbols sharing the same scope should bind to them indirectly. The good news is that you do not have to worry about this—just use them normally.
 
 ```mathematica
 color = {1,0,0};
 Graphics[{RGBColor[color // Offload], Disk[{0,0}, 1]}]
 
 EventHandler[InputJoystick[], Function[xy,
-	color = Normalize[{xy[[1]], xy[[2]], 0.5}] // Abs;
+    color = Normalize[{xy[[1]], xy[[2]], 0.5}] // Abs;
 ]]
 ```
 
 ![](./../../../color-ezgif.com-optimize.gif)
 
-Or even more complicated - combining it together with traditional dynamics with nested variables
+### Animating Bubbles
+We can go further and animate bubbles. The problem arises when we create a bubble. In fact, we need to provide a graphical primitive (let’s say `Disk`) and a dynamic symbol to control its properties (see [Dynamics](frontend/Dynamics.md)). Creating 1000 dynamic symbols is a significant overhead for the system, especially if we want to update all of them.
+
+#### Pool of Objects
+Let us use a limited number of dynamic symbols—buffers—and bind each animated `Disk` or bubble to one of its parts.
 
 ```mathematica
-opacity = 0.5;
-Graphics[{Opacity[Offload[opacity]], Red, Disk[{0,0}, Offload[1-opacity]], Blue, Opacity[Offload[1.0 - opacity]], Disk[{0,0}, Offload[opacity]]}, ImagePadding->None]
+cPool = Table[{0., 0.}, {i, 100}]; (* Positions *)
+vPool = cPool; (* Velocities *)
+rPool = Table[0., {i, 100}]; (* Radius or lifetime *)
 
-EventHandler[InputRange[0,1,0.1], Function[value,
-	opacity = value;
-]]
+oPool = Table[Null, {i, 100}]; (* References to objects *)
 ```
 
-![](./../../../opacitydouble-ezgif.com-optimize.gif)
+The general idea is not to allocate new variables for each new object but rather to reuse objects from the pool.
 
-## Creating and removing objects
-The most examples given on the pages [Dynamics](frontend/Dynamics.md), [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md) considers only changing the attributes of created graphics primitives on the screen. One can also use pure raster graphics together with [Image](frontend/Reference/Image/Image.md), however, this is quite cumbersome to deal with. 
+The graphical output remains the same:
 
-Wolfram Language is *mostly* immutable by the design, the same is true for all graphics primitives. We can violate this rule, by injecting new expressions into existing one dynamically and evaluate them in-place. Since our frontend (browser) actually has OOP structure inside, we can refer to the particular instance of some object on the screen using [FrontInstanceReference](frontend/Reference/Frontend%20IO/FrontInstanceReference.md).
-
-### Simple example
-Here we will append colorful [Disk](frontend/Reference/Graphics/Disk.md) s to a [Graphics](frontend/Reference/Graphics/Graphics.md) symbol context following the mouse position. As usual the best way to do it is to use white [Rectangle](frontend/Reference/Graphics/Rectangle.md) 😀
-
-```mathematica title="cell 1"
+```mathematica
 scene = FrontInstanceReference[];
-Graphics[{White, EventHandler[Rectangle[{-1,-1}, {1,1}], {"mousemove"->handler}], scene}, ImagePadding->None]
+Graphics[{White, EventHandler[Rectangle[{-1, -1}, {1, 1}], {"mousemove" -> handler[scene]}], scene}, ImagePadding -> None]
 ```
 
-The last thing is to define `handler` function
+Our future animation loop will look like this:
 
 ```mathematica
-With[{win = CurrentWindow[]},
-  handler = Function[xy, 
-    FrontSubmit[{
-      Hue[RandomReal[{0,1}], 1,1],
-      Disk[xy, RandomReal[{0.01,0.1}]]
-    }, scene]
-  ];
+handler[scene_] := Function[xy, 
+  If[!created[xy, scene], update[]];
 ];
-```
-
-Here we use created reference `scene`, which makes sure, that new expressions will be evaluated __in existing context__ of our graphics object. 
-
-![](./../../../Canvas%20Buggles1.gif)
-
-### Animating bubbles
-We can go further and animate bubbles. The problem comes, when we create a bubble, in fact, we need to provide some graphics primitive (lets say `Disk`) and a dynamic symbol to control its properties (see in [Dynamics](frontend/Dynamics.md)). Creating 1000 dynamic symbols is a big overhead to the system, especially if we want to update all of them.
-
-#### Pool of objects
-Let us use a limited number of dynamic symbols - buffers and bind each animated `Disk` or bubble to one of its part
-
-```mathematica
-cPool = Table[{0.,0.}, {i,100}]; (* positions *)
-vPool = cPool; (* velocities *)
-rPool = Table[0., {i,100}]; (* radius or lifetime *)
-
-oPool = Table[Null, {i,100}]; (* references to objects *)
-```
-
-The general idea is not to allocate new variables for new object, but rather reuse objects from the pool.
-
-Graphical output is going to be the same
-
-```mathematica
-scene = FrontInstanceReference[];
-Graphics[{White, EventHandler[Rectangle[{-1,-1}, {1,1}], {"mousemove"->handler[scene]}], scene}, ImagePadding->None]
-```
-
-Our future animation loop is going to look like this
-
-```mathematica
-  handler[scene_] := Function[xy, 
-    If[!created[xy, scene], update[]];
-  ];
 ```
 
 We don't need to evaluate it now.
 
-An update functions - just go over our arrays and produce new
+The update function iterates over our arrays and produces new values:
 
 ```mathematica
 update[] := With[{},
   {cPool, rPool} = Transpose[MapIndexed[Function[{a, index},
-    (* if slot is not empty - recalculate *)
-    If[oPool[[index//First]] =!= Null,
-        
+    (* If the slot is not empty, recalculate *)
+    If[oPool[[index // First]] =!= Null,
+      
       If[a[[2]] <= 0.002, 
-        (* if radius is too small - remove an object *)
-        remove[index//First];
+        (* If the radius is too small, remove the object *)
+        remove[index // First];
         a
       ,
-        (* if ok - animate *)
-        {a[[1]] + 0.05 vPool[[index//First]], 0.9 a[[2]]}
+        (* Otherwise, animate *)
+        {a[[1]] + 0.05 vPool[[index // First]], 0.9 a[[2]]}
       ]
     ,
       a
     ]
-    
   ], {cPool, rPool} // Transpose]];
 ];
 ```
 
-if a lifetime is close to zero, we need to remove created instance and free some slots in our buffers for new objects
+If the lifetime is close to zero, we need to remove the created instance and free up slots in our buffers for new objects:
 
 ```mathematica
 remove[index_] := (
-  (* destroy instance on the frontend *)
+  (* Destroy the instance on the frontend *)
   Delete[oPool[[index]]]; 
   oPool[[index]] = Null
 );
 ```
 
-And finally a function to create new objects
+And finally, a function to create new objects:
 
 ```mathematica
 created[xy_, scene_] := With[{
-  (* find empty slot *)
+  (* Find an empty slot *)
   slot = FirstPosition[oPool, Null]
 },
   If[!MissingQ[slot],
     With[{s = slot // First},
 
-      (* initial positions and etc *)
+      (* Initialize positions, radius, etc. *)
       cPool[[s]] = xy;
       rPool[[s]] = 0.05;
-      vPool[[s]] = RandomReal[{-1,1}, 2];
+      vPool[[s]] = RandomReal[{-1, 1}, 2];
       oPool[[s]] = True;
 
-      (* update so that object wont appear in an odd way *)
+      (* Update so the object doesn't appear abruptly *)
       update[];
 
-      (* create an instance of Disk on a graph *)
+      (* Create an instance of Disk in the graphics *)
       With[{
-	    group = FrontInstanceGroup[],
+        group = FrontInstanceGroup[],
         o = {
-          Hue[RandomReal[{0,1}],1,1],
-                                                (* prevent double updates *)
-          Disk[Offload[cPool[[s]]], Offload[rPool[[s]], "Static"->True]]
+          Hue[RandomReal[{0, 1}], 1, 1],
+          (* Prevent double updates *)
+          Disk[Offload[cPool[[s]]], Offload[rPool[[s]], "Static" -> True]]
         }
       },
         oPool[[s]] = group;
@@ -297,9 +251,8 @@ created[xy_, scene_] := With[{
 ]
 ```
 
-The big difference to the previous example [Simple example](#Simple%20example) is that we track our created instances [FrontInstanceGroup](frontend/Reference/Frontend%20IO/FrontInstanceGroup.md), so that we can remove them later for our SVG canvas (aka [Graphics](frontend/Reference/Graphics/Graphics.md))
+The key difference from the previous example [Simple Example](#Simple%20example) is that we track our created instances using [FrontInstanceGroup](frontend/Reference/Frontend%20IO/FrontInstanceGroup.md), allowing us to remove them later from our SVG canvas (also known as [Graphics](frontend/Reference/Graphics/Graphics.md)).
 
 ![](./../../../Bubbles%20video%20to%20gif.gif)
 
-All positions and radiuses are passed in two solid symbols `cPool` and `rPool`, then we only need to perform two data transactions to our frontend, which saves a lot of resources, when it comes to make objects flying on the screen. Because of the payload matters less, than each act of transactions in terms of the transport load. 
-
+All positions and radii are stored in two solid symbols, `cPool` and `rPool`. This means we only need to perform two data transactions with our frontend, significantly saving resources when animating objects on the screen. The payload size matters less than the number of transactions in terms of transport load.

@@ -31,7 +31,7 @@ FrontSubmit[MyFunction[ReadClipboard[]]]
 ```
 
 ## Execution in a cell
-So-called [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) gives a DOM element our function because of their [StandardForm](frontend/Reference/Formatting/StandardForm.md) is defined like that. This is the easiest way
+So-called [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md) gives a DOM element our function because of their [StandardForm](frontend/Reference/Formatting/StandardForm.md) is defined like that. This is the easiest way
 
 ```js title="cell 1"
 .js
@@ -42,23 +42,20 @@ core.MyFunction2 = async (args, env) => {
 }
 ```
 
-Now we can call it from our cell
-
-```mathematica title="cell 2"
-CreateFrontEndObject[MyFunction2["Hello World!"]]
-```
-
-it behaves like a symbol.
-
-:::tip
-You don't have to always use [CreateFrontEndObject](frontend/Reference/Frontend%20Objects/CreateFrontEndObject.md). It is possible to force Wolfram Kernel to apply it automatically on output using [MakeBoxes](frontend/Reference/Formatting/MakeBoxes.md) or use [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md) directly i.e.
-
+Define the output form of our expression
 ```mathematica
 MyFunction2 /: MakeBoxes[m_MyFunction2, StandardForm] := (
 	ViewBox[m, m]
 )
 ```
-:::
+
+Now we can call it from our cell
+
+```mathematica title="cell 2"
+MyFunction2["Hello World!"]
+```
+
+it behaves like a symbol.
 
 __This is basically how [Graphics](frontend/Reference/Graphics/Graphics.md) and others are implemented.__
 
@@ -445,17 +442,4 @@ EventHandler[event, {
 
 ![](./../../../fields-ezgif.com-video-to-gif-converter.gif)
 
-### Emit event from WLJS
-One can fire an event also using frontend's function `EventFire`, which is effectively acts like `server.kernel.io.fire` being called from the WLJS Interpreter (i.e. using [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) or other and wrapped in [Offload](frontend/Reference/Interpreter/Offload.md))
-
-:::danger
-Not implemented! PR
-:::
-
-```mathematica
-EventHandler["internalEvent", Print];
-FrontSubmit[EventFire["internalEvent", ReadClipboard[]] // Offload]
-```
-
-It will send an expression to be executed on the frontend, that reads a clipboard and fires back an event with a fetched data.
 

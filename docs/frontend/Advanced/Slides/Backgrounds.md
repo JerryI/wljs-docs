@@ -47,30 +47,71 @@ One can put a giant [Graphics](frontend/Reference/Graphics/Graphics.md) or [Grap
 The standard size of a slide is `960x700`
 :::
 
-Let us firstly make a draft
+Let us firstly make a draft of our component
 
 ```mathematica title="cell 1"
-BackImageDynamic := Graphics[{
-  Black, Rectangle[{0,0}, {1,1}], Red,
-  curveDynamicGenerator[{0.5,0.5}, 0.8], Blue,
-  curveDynamicGenerator[{0.5,0.5}, 0.3]
-}, Controls->False, ImagePadding->0, ImageSize->{960,700}, PlotRange->{{0,1}, {0,1}}];
+.wlx
+
+BackImageDynamic := Module[{
+  frameEvent = CreateUUID[],
+  animationEvent = CreateUUID[],
+  slideEvent = CreateUUID[],
+  allowedQ = False,
+  trigger = 1
+}, With[{
+
+  Canvas = Graphics[{
+    Black, Rectangle[{0,0}, {1,1}], Red,
+    curveDynamicGenerator[{0.5,0.5}, 0.8, animationEvent], Blue,
+    curveDynamicGenerator[{0.5,0.5}, 0.3, animationEvent],
+
+    AnimationFrameListener[trigger // Offload, "Event"->frameEvent]
+  }, "Controls"->False, ImagePadding->0, TransitionDuration->200, ImageSize->{960,700}, PlotRange->{{0,1}, {0,1}}]
+},
+
+  EventHandler[frameEvent, Function[Null,
+    If[!allowedQ, Return[]];
+    If[Mod[trigger, 5] == 0, EventFire[animationEvent, True]];
+    trigger = trigger + 1;
+  ]];
+
+  EventHandler[slideEvent, {
+    "Slide" -> Function[Null,
+      allowedQ = True;
+      trigger = trigger + 1;
+      Print["Animation started"];
+    ],
+
+    ("Destroy" | "Left") -> Function[Null,
+      allowedQ = False;
+      Print["Animation stopped"];
+    ]
+  }];
+
+  <div>
+    <SlideEventListener Id={slideEvent}/>
+    <Canvas/>
+  </div>
+] ]
 ```
 
-here `curveDynamicGenerator` will be our animated fragment
+Here, we artificially slow down the Kernel's responses using the `trigger` variable by a factor of 5, so that our background doesn't consume too many resources. Interpolation on the browser side with `TransitionDuration->200` is usually a bit "cheaper." Another concern is not to waste CPU resources, when the slide is not shown, that we solve using `allowedQ` symbol.
+
+ `curveDynamicGenerator` will be our animated fragment
 
 ```mathematica title="cell 2"
-curveDynamicGenerator[center_, radius_] := With[{cell = ResultCell[]}, LeakyModule[{
+curveDynamicGenerator[center_, radius_, ev_] := With[{}, 
+Module[{
   pts = Table[Norm[center - radius] {Sin[i], Cos[i]} +
          center, {i, 0, 2 Pi + 0.1, 0.1}],
          
   disk = {10,10},
   modulation = 0.,
   phase = 0.,
-  initial = 12. RandomInteger[{0,10}],
-  task
+  initial = 12. RandomInteger[{0,10}]
 },
-  task = SetInterval[
+
+  EventHandler[EventClone[ev], Function[Null,
       pts = Table[(
         Norm[center - radius] 
         + 0.02 modulation Sin[50. i + 30 phase]
@@ -85,16 +126,14 @@ curveDynamicGenerator[center_, radius_] := With[{cell = ResultCell[]}, LeakyModu
 
       phase = phase + 0.02;
       modulation = Sin[phase/2];
-  , 50];
-
-  (* remove task if cell has been destroyed *)
-  EventHandler[cell, {"Destroy" -> Function[Null, Print["Removed"]; TaskRemove[task]]}];
+  ]];
   
-  {Line[pts // Offload], Disk[disk // Offload, 0.013]}
+  {
+    Line[pts // Offload], 
+    Disk[disk // Offload, 0.013]
+  }
 ]]
 ```
-
-Since our animation is quite simple, therefore we use [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) instead of frame-by-frame animation via [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md)
 
 :::tip
 To make sure that the slide heigh is `100%` of the window, add the attribute
@@ -105,30 +144,39 @@ To make sure that the slide heigh is `100%` of the window, add the attribute
 ```
 :::
 
-In order to put it under the content, we need to use an absolute positioning 
+Let's place our background on the slide and ensure it doesn't take up space there using the `position` property in CSS.
 
 ```jsx
 .slide
 
 <!-- .element: data-background-color="black" -->
-<!-- .slide: style="height:100%" -->
+<!-- .slide: style="height:100vh; color: white;" -->
 
-<div class="w-full h-full flex flex-col text-white">
-  <div class="absolute w-full h-full" style="scale: 1.1; left:-30px; z-index:-100"><BackImageDynamic/></div>
+<div class="flex flex-col h-full"> 
+
+<div class="absolute w-full h-full" style="scale: 1.1; left:-30px; z-index:-100">
+  <BackImageDynamic/>
+</div>
 
 <div class="mt-auto mb-auto">
     
   
-# Title of a slide
+# Procedural background
 
-This is just an example
-
-</div>
+It will be animated till slide is visible
 
 </div>
+</div>
+
+---
+
+<!-- .element: data-background-color="black" -->
+<!-- .slide: style="height:100vh; color: white;" -->
+
+Now the animation stops
 ```
 
-The demonstration
+Demonstration
 
 ![](./../../../SlideDynBackground.png)
 

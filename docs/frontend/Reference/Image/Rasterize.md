@@ -23,6 +23,9 @@ By the default it uses [CurrentWindow](frontend/Reference/Frontend%20IO/CurrentW
 ### `"ExposureTime"`
 Sets the time in seconds for possible async processes to settle down on displayed expression before the rasterization. By the default is `1`.
 
+### `"ImageUpscaling"`
+Upscales the render canvas by `_Integer` times. Default value is `1` (no upscaling, it renders as it is)
+
 ## Application
 Can be used to export graphics to raster format try
 
@@ -30,7 +33,7 @@ Can be used to export graphics to raster format try
 Rasterize[x+y]
 ```
 
-And then you can freely export it
+And then you can freely export it to an image file
 
 ```mathematica
 Export["image.png", %]

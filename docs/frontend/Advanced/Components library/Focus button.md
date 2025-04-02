@@ -9,7 +9,7 @@ A small [HTML](frontend/Cell%20types/HTML.md) code snippet, which helps to focus
 
 A little button will be added to the right-bottom corner to control this feature
 
-__Source code__
+## Source code
 Run this cell
 
 ```html

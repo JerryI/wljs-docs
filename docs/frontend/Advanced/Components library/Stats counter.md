@@ -24,7 +24,7 @@ Here is our data
 
 It automatically tracks the slides and resets the counter if needed.
 ## Source code
-Copy and paste this into an input cell
+Copy and paste this into an input cell and evaluate
 
 ```jsx
 .wlx

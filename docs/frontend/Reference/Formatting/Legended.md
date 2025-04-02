@@ -31,3 +31,11 @@ Plot[{BesselJ[2, x], BesselJ[3, x]}, {x, 0, 20},
 ![](./../../../Screenshot%202025-03-18%20at%2013.00.33.png)
 
 :::
+
+## Legend placement 
+Use [Placed](frontend/Reference/Formatting/Placed.md) to adjust the position of your legend, i.e.
+
+```mathematica
+Legended[1/2, Placed[SwatchLegend[{Red}, {"Number"}], Before]]
+```
+

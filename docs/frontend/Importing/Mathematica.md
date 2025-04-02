@@ -1,23 +1,24 @@
-__Open .nb files__
+# Mathematica
+
+__Open `.nb` Files__
 
 :::warning
-This feature is still in $\alpha$ stage
+This feature is still in the $\alpha$ stage.
 :::
 
-We provide an automatic conversion of Wolfram Mathematica's `.nb` notebook files to WLJS Notebook `.wln`. It transfers input cells with almost no changes, while output cells are transcoded to a suitable for WLJS format
+We provide automatic conversion of Wolfram Mathematica `.nb` notebook files to WLJS Notebook `.wln` format. Input cells are transferred with minimal changes, while output cells are transcoded to a format suitable for WLJS.
 
 ![](./../../Screenshot%202024-12-19%20at%2019.04.41.png)
 
-There is a problem with styling of the text, which is tricky to convert and render. As one can see on the screenshot it is still far from being perfect
+Text styling can be difficult to convert and render accurately. As shown in the screenshot, it is still far from perfect.
 
 ![](./../../Screenshot%202024-12-19%20at%2019.08.58.png)
 
-If we summarize, what might not work
+### Known Limitations
 
-- complex text formatting
-- __output cells__
-- multilayer nested structure
-- iconized expressions
-- some styling options for `Graphics` and `Graphics3D`
-- stored image / video / audio data inside cells
-
+- Complex text formatting
+- __Output cells__
+- Deeply nested structures
+- Iconized expressions
+- Certain `Graphics` and `Graphics3D` styling options
+- Embedded image / video / audio data inside cells

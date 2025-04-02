@@ -51,7 +51,7 @@ Due to performance reasons we published a static version here (docs you are read
 :::
 
 ## Bonus 1: export as STL
-If this is running on the web, you might need to implement a download function in JavaScript, since there will be no files API available. However, here we will stick to the easiest way
+If this is running on the web, you might need to implement a download function in JavaScript, since there will be no files API available. However, here we shall stick to the easiest way
 
 <WLJSEditor display={"codemirror"} nid={"6e7341c7-2708-4730-a4f7-78f8fb75193c"} id={"647be50d-2f72-4cad-99bf-b7ca416f8ea7"} type={"Input"} opts={{"InitGroup":true}} >{`export%5B_%5D%20%3A%3D%20Then%5BSystemDialogInputAsync%5B%22FileSave%22%2C%20%7BNull%2C%20%7B%22STL%20Formats%22%20-%3E%20%7B%22%2A.stl%22%7D%7D%7D%5D%2C%20Function%5Bpath%2C%0A%20%20If%5BStringQ%5Bpath%5D%2C%0A%20%20%20%20Export%5Bpath%2C%20model%5D%3B%0A%20%20%20%20Beep%5B%5D%3B%0A%20%20%5D%0A%5D%5D%3B`}</WLJSEditor>
 

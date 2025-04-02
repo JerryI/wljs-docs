@@ -1,48 +1,49 @@
 ---
 sidebar_position: 7
 ---
+# Guidelines
+
 :::warning
-Still populating with a content
+This section is still being populated with content.
 :::
 
+## Use Shortcuts
+Shortcuts drastically improve user experience.
 
-## Use shortcuts
-It improves user experience drastically
 ### UI Operations
-- New notebook `Cmd+N`, `Ctrl+N`
-- Open file `Cmd+O`, `Ctrl+O`
-- Save `Cmd+S`, `Ctrl+S`
-- Enter command palette `Cmd+P`, `Ctrl+P` 
-- Hide/Unhide current cell `Cmd+2`, `Alt+2`
-- Clear outputs `Cmd+U`, `Alt+U`
-- Search inside cell `Cmd+f`, `Ctrl+f`
-- `Shift + Alt + Space` overlay window (Desktop App only)
+- New notebook: `Cmd+N`, `Ctrl+N`
+- Open file: `Cmd+O`, `Ctrl+O`
+- Save: `Cmd+S`, `Ctrl+S`
+- Open command palette: `Cmd+P`, `Ctrl+P`
+- Hide/Unhide current cell: `Cmd+2`, `Alt+2`
+- Clear outputs: `Cmd+U`, `Alt+U`
+- Search inside cell: `Cmd+F`, `Ctrl+F`
+- Overlay window (Desktop App only): `Shift+Alt+Space`
 
 ### Evaluation
-- Evaluate `Shift+Enter`
-- Abort `Cmd+.`, `Alt+.`
-- Evaluate initialization cells `Cmd+I`, `Alt+I`
+- Evaluate: `Shift+Enter`
+- Abort: `Cmd+.`, `Alt+.`
+- Evaluate initialization cells: `Cmd+I`, `Alt+I`
 
 ### Cells
-- `Ctrl+/` make fraction on selected
-- `Ctrl+6` make superscript on selected
-- `Ctrl+2` make square root on selected
-- `Ctrl+-` make subscript on selected
-- `Cmd + /` or `Alt + /` comment a line
+- `Ctrl+/`: Make fraction from selection
+- `Ctrl+6`: Make superscript from selection
+- `Ctrl+2`: Make square root from selection
+- `Ctrl+-`: Make subscript from selection
+- `Cmd+/` or `Alt+/`: Comment a line
 
-See __more keybindings__ in [Input cell](frontend/Cell%20types/Input%20cell.md)
+See __more keybindings__ in the [Input cell](frontend/Cell%20types/Input%20cell.md) section.
 
+## Keep Folders Organized
+Various functions may produce [Iconize](frontend/Reference/Formatting/Iconize.md) objects, used for storing large data chunks, which are saved in the `./.iconized/` folder within the notebook directory. Any dropped images or files are uploaded to the `./attachments/` directory. It's important to maintain a clean folder structure to keep projects organized.
 
-## Keep folders organized
-Various functions may produce [Iconize](frontend/Reference/Formatting/Iconize.md) objects, for storing large chunks of data, which are copied to `./.iconized/` folder in the notebook directory. Any dropped images or files will be uploaded to `./attachments/` directory. Therefore it is important to have a clear separation between your projects.
+## Use `NotebookStore` for Portability
+To export your notebook as a single editable `.html` using [Static HTML](frontend/Exporting/Static%20HTML.md), use [NotebookStore](frontend/Reference/Cells%20and%20Notebook/NotebookStore.md) for storing raw data. This ensures all images, graphs, and stored data are preserved.
 
-## Use `NotebookStore` for portability 
-If you want your notebook to be exported to a single editable `.html` [Static HTML](frontend/Exporting/Static%20HTML.md), use [NotebookStore](frontend/Reference/Cells%20and%20Notebook/NotebookStore.md) as a persistent storage for your raw data. In such case all images, graphs, and stored data will be kept.
+## Install Everything Locally
+We recommend storing all Wolfram Language libraries and paclets locally for each project. This ensures reliability, reproducibility, and independence from remote resources.
 
-## Install everything locally
-We promote the idea of storing libraries or paclets for Wolfram Language locally for each project. There is no other way to provide the reliable way of computing, storing data, reproducibility and independence from any remote resources
-
-```mathematica title="example of a built-in package manager"
+```mathematica title="Example of a built-in package manager"
 PacletRepositories[{
     Github -> "https://github.com/KirillBelovTest/GPTLink"
 }]
@@ -50,25 +51,28 @@ PacletRepositories[{
 <<KirillBelov`GPTLink`
 ```
 
-this will create a folder with all used paclets and keep them up to date if needed
+This creates a folder with all the required paclets and keeps them up to date if needed.
 
-## Do not use `Dynamic`
-We rely on *a completely different architecture* to handle interactivity and graphics updates compared to Wolfram Mathematica. 
+## Do Not Use `Dynamic`
+We use a *completely different architecture* to handle interactivity and graphic updates compared to Wolfram Mathematica.
 
-> In general [Manipulate](frontend/Reference/Interpreter/Manipulate.md) is implemented as well, but it is not recommend to use often due to its impact to the system performance.
+> While [Manipulate](frontend/Reference/Interpreter/Manipulate.md) is implemented, frequent use is discouraged due to its impact on system performance.
 
 ### Dynamic
-[Buttons](frontend/Reference/GUI/InputButton.md), [sliders](frontend/Reference/GUI/InputRange.md) are event-driven, i.e. you need to subscribe to them using [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`). All updates are handled using [Offload](frontend/Reference/Interpreter/Offload.md) approach. For example
+[Buttons](frontend/Reference/GUI/InputButton.md) and [sliders](frontend/Reference/GUI/InputRange.md) are event-driven. You must subscribe to them using [`EventHandler`](frontend/Reference/Misc/Events.md#`EventHandler`). All updates are handled via the [Offload](frontend/Reference/Interpreter/Offload.md) mechanism. Example:
 
 ```mathematica
 length = 1.0;
-EventHandler[InputRange[-1,1,0.1], Function[l, length = l]]
+EventHandler[InputRange[-1, 1, 0.1], Function[l, length = l]]
 
-Graphics[Rectangle[{-1,-1}, {length // Offload, 1}]]
+Graphics[Rectangle[{-1, -1}, {length // Offload, 1}]]
 ```
 
 ### Manipulate
-In general there is built-in function for simple 2D plots - [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), however, for something more complicated - *you need to craft it by yourself* using building [Offload](frontend/Reference/Interpreter/Offload.md) and simple graphics primitives such as [Line](frontend/Reference/Graphics3D/Line.md), [Polygon](frontend/Reference/Graphics3D/Polygon.md) and etc as building blocks.
+For basic 2D plots, you can use the built-in [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) or general-purpose [Manipulate](frontend/Reference/Interpreter/Manipulate.md) function.
+
+For more complex and fast dynamics, you’ll need to build your own using [Offload](frontend/Reference/Interpreter/Offload.md) along with simple graphic primitives like [Line](frontend/Reference/Graphics3D/Line.md), [Polygon](frontend/Reference/Graphics3D/Polygon.md), and others as building blocks.
+
 
 
 

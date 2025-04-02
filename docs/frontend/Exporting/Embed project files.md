@@ -1,20 +1,23 @@
-__Keep the filesystem within the notebook__
+# Embed Project Files
+
+__Keep the entire file system within the notebook__
 
 ![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
 
-It allows to compress the whole project folder and create a self-extracting notebook
+This feature allows you to compress your entire project folder and create a self-extracting notebook.
 
 ![](./../../Screenshot%202024-12-13%20at%2016.07.40.png)
 
 :::note
-It does not export anything to a new file, but modifies your notebook with embedded data. __Don't forget to save it after__
+This process does not export anything to a new file—it modifies your current notebook by embedding the data. __Don't forget to save the notebook afterward.__
 :::
 
-It uses a basic `gzip` and stored the data as base64 string inside the internal fields of the notebook. On the next fresh launch it will unpack the data and remove the archive from the notebook.
+It uses basic `gzip` compression and stores the data as a base64 string within the notebook's internal fields. Upon the next fresh launch, the data is automatically unpacked and the archive is removed from the notebook.
 
 :::warning
-Do not put ~1Gb files into the notebook folder, otherwise it will probably crash WLJS Notebook app.
+Avoid embedding files around ~1GB or larger into the notebook folder, as this may cause the WLJS Notebook app to crash.
 :::
 
-## Use cases
-- Share your notebook with all pictures, iconized data, raw project files maintaining the folder structure.
+## Use Cases
+- Share your notebook with all images, iconized data, and raw project files while preserving the folder structure.
+

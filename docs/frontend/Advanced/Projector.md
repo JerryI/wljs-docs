@@ -1,20 +1,21 @@
-There is an option to unpin the output cell to a new window
+There is an option to unpin the output cell to a new window.
 
 ![](./../../Screenshot%202024-08-25%20at%2017.09.18.png)
 
-> It does two things
-> 1. Evaluates the cell in the context of notebook
-> 2. Projects the last output result to a new window
+> It does two things:
+> 1. Evaluates the cell in the context of the notebook.
+> 2. Projects the last output result to a new window.
 
 :::info
-[CurrentWindow](frontend/Reference/Frontend%20IO/CurrentWindow.md) will refer to a new window, but [NotebookStore](frontend/Reference/Cells%20and%20Notebook/NotebookStore.md) will still be assigned to the source notebook.
+[CurrentWindow](frontend/Reference/Frontend%20IO/CurrentWindow.md) will refer to the new window, but [NotebookStore](frontend/Reference/Cells%20and%20Notebook/NotebookStore.md) will still be assigned to the source notebook.
 :::
 
+## Detaching controls / output graphics
 
-## Detaching controls / output graphics 
-It comes handy if you have interactive elements in different cells and you want to arrange them
+This feature is handy if you have interactive elements in different cells and want to arrange them.
 
-*boids simulation*
+*Boids simulation*
+
 ```mathematica title="evaluate normally"
 n = 100;
 r := RandomInteger[{1, n}];
@@ -35,7 +36,7 @@ EventHandler["frame", Function[Null,
     v = {5 #[[1]], 5 #[[1]] + 30 #[[2]]} &/@ Transpose[{new, new - x}] // NumericArray;
     x = new;
   ];
-  
+
   If[r < 100, s];
 
   (* FPS counter *)
@@ -67,17 +68,22 @@ EventHandler[InputGroup[<|
 |>], Function[assoc, defaults = assoc]] 
 ```
 
-The result looks like
+The result looks like this:
 
 ![](./../../Screenshot%202024-08-25%20at%2017.17.48.png)
 
-You can project the controls to a new window as well. There is no limitations on the number of windows.
+You can project the controls to a new window as well. There are no limitations on the number of windows.
 
 ## Making a slideshow
-If you are working with [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md) cells, you can always go fullscreen by pressing `F` key on the output cell in the notebook. Here is a second option
+
+If you are working with [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md) cells, you can always go fullscreen by pressing the `F` key on the output cell in the notebook. Here is a second option:
 
 ![](./../../Screenshot%202024-08-25%20at%2017.25.50.png)
 
 :::warning
 All your custom [JavaScript](frontend/Cell%20types/Javascript.md) cells, as well as custom styles for your presentation defined in [HTML](frontend/Cell%20types/HTML.md) cells, will not be accessible in the projected window.
 :::
+
+## Programmatic control
+See [CellPrint](frontend/Reference/Cells%20and%20Notebook/CellPrint.md)
+

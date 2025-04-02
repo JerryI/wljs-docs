@@ -1,10 +1,12 @@
-__Export to .nb format__
+# Mathematica
+
+__Export to `.nb` format__
 
 :::warning
-This feature is quite experimental.
+This feature is experimental.
 :::
 
-It is possible to convert `wln` notebook to `nb` with some limitations
+It is possible to convert a `wln` notebook to a `.nb` file, with some limitations.
 
 ![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
 
@@ -12,8 +14,7 @@ It is possible to convert `wln` notebook to `nb` with some limitations
 
 ## Limitations
 
-1. __Only input cells__ will be transferred 
-2. Input cells will be converted to [InputForm](frontend/Reference/Formatting/InputForm.md) 
-3. Markdown formatting is not fully supported in the context of the Wolfram Language text cells (only sections, titles and etc)
-4. LaTeX, Excalidraw, mermaid cells, HTML and WLX output will not be shown 
-
+1. __Only input cells__ will be transferred.
+2. Input cells will be converted to [InputForm](frontend/Reference/Formatting/InputForm.md).
+3. Markdown formatting is not fully supported in Wolfram Language text cells (only sections, titles, etc. are preserved).
+4. LaTeX, Excalidraw, Mermaid, HTML, and WLX output cells will not be displayed.

@@ -64,8 +64,8 @@ const scripts = [
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'WLJS Notebook | A Next-Generation Dynamic Notebook Interface',
-  tagline: 'A lightweight alternative to Mathematica built ontop of Wolfram Engine',
+  title: 'WLJS Notebook',
+  tagline: 'WLJS Notebook is an interactive web-based computing platform, a lightweight alternative to Mathematica, built on top of the Wolfram Engine.',
   favicon: 'img/favicon.ico',
 
   staticDirectories: ['static'],

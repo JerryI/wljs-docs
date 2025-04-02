@@ -1,13 +1,12 @@
 ---
 sidebar_position: 2
 ---
+> This was not supposed to be a separate category in this section, but for the sake of providing more diverse examples, we created it.
 
-> This was not supposed to be a separate category in this section, but for the sake providing more diverse examples we created it. 
-
-Here I (@JerryI) would like to show a simple example on how to make a slide about hot to ~~make slides~~ animate things in WLJS, if it was a tutorial or a lecture.
+Here, I (@JerryI) would like to show a simple example of how to make a slide about how to ~~make slides~~ animate things in WLJS, as if it were part of a tutorial or lecture.
 
 ### Code blocks
-Since this is about programming, we need a "widget" for code and syntax highlighting, we directly steal it from [here](frontend/Advanced/Components%20library/Code%20insets.md)
+Since this is about programming, we need a "widget" for code and syntax highlighting. We directly borrow it from [here](frontend/Advanced/Components%20library/Code%20insets.md).
 
 ```jsx title="cell 1"
 .wlx
@@ -17,7 +16,7 @@ CodeBlock[str_String] := With[{Fe = EditorView[str]},
 ]
 ```
 
-and for my case I needed a layout fix, that forces text in code block to be align to the left side
+In my case, I needed a layout fix that forces text in the code block to be aligned to the left side.
 
 ```jsx title="cell 2"
 .wlx
@@ -28,7 +27,7 @@ and for my case I needed a layout fix, that forces text in code block to be alig
 </style>
 ```
 
-Now if anything on a slide is wrapped using this tag
+Now, if anything on a slide is wrapped using this tag:
 
 ```jsx
 .slide
@@ -40,12 +39,12 @@ Now if anything on a slide is wrapped using this tag
 </CodeBlock>
 ```
 
-will be rendered as in a normal code-editor
+It will be rendered as in a normal code editor.
 
 ![](./../../../Screenshot%202024-05-05%20at%2014.25.27.png)
 
 ### Animation widget
-In my virtual lecture there must be something, what I can do lively and show to people. Let it be some simple animated graphics with sliders
+In my virtual lecture, there must be something I can do live and show to people. Let it be some simple animated graphics with sliders.
 
 ```jsx title="cell 3"
 .wlx
@@ -75,9 +74,9 @@ AnimationWidget := LeakyModule[{
 ]
 ```
 
-here [WLX](frontend/Cell%20types/WLX.md) is used only to have more control over the layout (add shadows to elements, dividers and so on). In principle one could do almost the same by using using [Row](frontend/Reference/Formatting/Row.md) or [TableForm](frontend/Reference/Formatting/TableForm.md). In general HTML is much easier to use when it comes to the design.
+Here, [WLX](frontend/Cell%20types/WLX.md) is used only to have more control over the layout (adding shadows to elements, dividers, and so on). In principle, one could do almost the same using [Row](frontend/Reference/Formatting/Row.md) or [TableForm](frontend/Reference/Formatting/TableForm.md). In general, HTML is much easier to use when it comes to design.
 
-You can test it in a separate cell
+You can test it in a separate cell:
 
 ```jsx
 .wlx
@@ -88,7 +87,7 @@ You can test it in a separate cell
 ![](./../../../Widgettest%20video%20to%20gif.gif)
 
 ### Layout of the presentation
-I should probably make at least two slides. One is for the title and the second one is for my tricks...
+I should probably make at least two slides—one for the title and the second one for my tricks.
 
 ```jsx title="cell 4"
 .slide
@@ -99,12 +98,10 @@ I should probably make at least two slides. One is for the title and the second 
 
 # Use Offload
 
-
 <div class="columns-2">
   <div class="text-left mt-2">
 
-Define own values of some symbol and assign it to graphics primitives you want
-
+Define your own values for a symbol and assign them to the graphics primitives you want.
 
 <CodeBlock>
 symbol = 0.1;
@@ -114,12 +111,12 @@ Graphics[{
 }]
 </CodeBlock>
 
-then create a slider and assign handler to it
+Then create a slider and assign a handler to it:
 
 <CodeBlock>
 EventHandler[InputRange[0.1, 1, 0.05], (symbol = #)&]
 </CodeBlock>
-  
+
   </div>
 
   <AnimationWidget/>
@@ -127,6 +124,6 @@ EventHandler[InputRange[0.1, 1, 0.05], (symbol = #)&]
 </div>
 ```
 
-Since I am lazy to make my own classes, I relied on Tailwind's `columns-2` to make it easier. In the end we have following
+Since I was too lazy to create my own classes, I relied on Tailwind's `columns-2` to make it easier. In the end, we get the following:
 
 ![](./../../../Ppt.gif)

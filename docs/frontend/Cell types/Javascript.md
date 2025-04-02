@@ -3,12 +3,11 @@ sidebar_position: 4
 ---
 > Type `.js` in the first line of an input cell
 
-
-Try to evaluate
+Try evaluating:
 
 ```js title="cell"
 .js
-return 1+1
+return 1 + 1;
 ```
 
 or
@@ -22,28 +21,26 @@ dom.style.color = 'lightblue';
 return dom;
 ```
 
-
-__[Github repo](https://github.com/JerryI/wljs-js-support)__
-Javascript code is evaluated as a module, i.e. __all defined variables are isolated to the cell__.
+__[GitHub repo](https://github.com/JerryI/wljs-js-support)__  
+JavaScript code is evaluated as a module, which means __all defined variables are isolated to the cell__.
 
 :::tip
-To define global variables, use `window` or `core` object.
+To define global variables, use the `window` or `core` object:
 ```js
-window.variable = 1
+window.variable = 1;
 ```
 :::
 
-## Output cell
-The returned value from the function can be a Javascript object or DOM element. The last one will be displayed in the output cell
+## Output Cell
+The return value from the function can be a JavaScript object or a DOM element. DOM elements will be rendered in the output cell.
 
 ```js
 .js
 const canvas = document.createElement('canvas');
-var ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d');
 
 canvas.width = 500;
 canvas.height = 500;
-
 
 const ballRadius = 10;
 let x = canvas.width / 2;
@@ -74,53 +71,50 @@ function draw() {
 
   x += dx;
   y += dy;
-  
+
   uid = requestAnimationFrame(draw);
 }
 
 uid = requestAnimationFrame(draw);
 
 this.ondestroy = () => {
-	cancelAnimationFrame(uid);
-}
-
-
+  cancelAnimationFrame(uid);
+};
 
 return canvas;
 ```
 
 ![](./../../Balls-ezgif.com-video-to-apng-converter.png)
 
-
 ## Context
-There is a few quite useful built-in objects accessible from the cell. 
+There are a few useful built-in objects accessible from within a cell.
 
-### this.ondestroy
-This object is called when a cell has been destroyed. Assign any clean-up function to the given object
+### `this.ondestroy`
+This property is called when a cell is destroyed. Assign a clean-up function to it:
 
 ```js
 this.ondestroy = () => {
-	//clean up the stuff
-}
+  // Clean up resources
+};
 ```
 
 :::danger
-Always clean up any timers using `this.ondestroy` property. Otherwise those timers and animation loops will continue to work even after reevaluating the cell.
+Always clean up any timers or animation loops using the `this.ondestroy` property. Otherwise, they will continue running even after the cell is reevaluated.
 :::
 
-### requestAnimationFrame
-It is well-common method used in Javascript to synchronize with a framerate of the browser and render some graphics
-
-
+### `requestAnimationFrame`
+This is a commonly used JavaScript method to sync with the browser’s framerate and render graphics smoothly.
 
 :::danger
-Do not forget to `cancelAnimationFrame` using `this.ondestroy` method
+Don’t forget to `cancelAnimationFrame` using the `this.ondestroy` method.
 :::
 
-## Communication with Wolfram Kernel
-In general one can define any function for WLJS Interpreter using Javascript cells, please see guide here [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) and [Integration with server / client via WebSockets](frontend/Advanced/Events%20system/event-generators.md#Integration%20with%20server%20/%20client%20via%20WebSockets)
+## Communication with the Wolfram Kernel
+You can define any function for the WLJS interpreter using JavaScript cells. Please refer to these guides:
 
-Also see [Communication](frontend/Advanced/Javascript/Communication.md)
+- [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)
+- [Integration with server/client via WebSockets](frontend/Advanced/Events%20system/event-generators.md#Integration%20with%20server%20/%20client%20via%20WebSockets)
 
-For the most applications event-based system is used, see [Dynamics](frontend/Dynamics.md)
-
+Also see:
+- [Communication](frontend/Advanced/Javascript/Communication.md)
+- [Dynamics](frontend/Dynamics.md)

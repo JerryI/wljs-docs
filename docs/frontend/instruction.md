@@ -28,7 +28,7 @@ title: Quick Start
 
 </div>
 
-WLJS Notebook is an interactive, web-based environment for running **Wolfram Language (WL)** scripts using the **freeware** Wolfram Engine. No Mathematica installation is required—just **register once** at [wolfram.com](https://www.wolfram.com/engine/) for personal use.
+WLJS Notebook is an interactive computing platform, web-based environment for running **Wolfram Language (WL)** scripts using the **freeware** Wolfram Engine. No Mathematica installation is required—just **register once** at [wolfram.com](https://www.wolfram.com/engine/) for personal use. The notebook combines live code in WL, JS, Mermaid and many more, GUI blocks for user input, equations, narrative text, visualizations, interactive widgets
 
 - [x] Write reproducible notebooks with no external dependencies
 - [x] Publish interactive notebooks online or give to a college on a thumb-drive

@@ -3,9 +3,9 @@ sidebar_position: 1
 ---
 > One Ring to rule them all...
 
-An input cell is a multi tool. __By the default it assumes Wolfram Language as an input__, however, it can be altered by the directive in the first line. See [Markdown](frontend/Cell%20types/Markdown.md), [Javascript](frontend/Cell%20types/Javascript.md), [WLX](frontend/Cell%20types/WLX.md), [HTML](frontend/Cell%20types/HTML.md), [Slides](frontend/Cell%20types/Slides.md), and so on.
+An input cell is a multi-tool. __By default, it assumes Wolfram Language as input__; however, this can be changed using a directive in the first line. See [Markdown](frontend/Cell%20types/Markdown.md), [JavaScript](frontend/Cell%20types/Javascript.md), [WLX](frontend/Cell%20types/WLX.md), [HTML](frontend/Cell%20types/HTML.md), [Slides](frontend/Cell%20types/Slides.md), and others.
 
-For example
+For example:
 
 ```mathematica @
 1+1
@@ -21,163 +21,152 @@ For example
 return 1+1;
 ```
 
-*Think about it if it was an anonymous file*
-Then whatever you typed, you should press `Shift-Enter` to make magic happen.
+*Think of it like an anonymous file.*
+After typing, press `Shift-Enter` to make the magic happen.
 
-When you __start typing__, the following happens
-1. each character is send to a server and updates the cell (autosaving every 300 ms)
-2. editor tries to figure out the language or a cell type 
-3. considering (2) it changes the syntax highlighting, autocomplete / other plugins
+When you __start typing__, the following occurs:
+1. Each character is sent to a server and the cell is updated (autosaving every 300 ms).
+2. The editor attempts to detect the language or cell type.
+3. Based on (2), it applies syntax highlighting, autocompletion, and other plugins.
 
 ![](../../imgs/Mathinput-ezgif.com-optipng%201.png)
 
-## Cell properties
-By clicking on `...` (more icon) located on the right side of a cell group, you can change the properties of an input cell
+## Cell Properties
+Click on the `...` (more icon) on the right side of a cell group to access input cell properties.
 
 ![](./../../Screenshot%202025-02-24%20at%2011.48.04.png)
 
-It affects the whole cell group, i.e. input cell & all children output cells. The following transformations are possible
+This affects the entire cell group (input + output cells). The following transformations are available:
 
-- _Project to a window_ - evaluates a cell and shows the first output result in a separate window
-- *Make initialization cell* - marks an input cell as initialization cell, which will be evaluated once a notebook has been opened (appears as a <span style={{color:'green'}}>green</span> dot in the top-right corner)
-- *Copy* - compresses cell group into a gzip-compressed string expression. Paste it to a new empty input cell
-- *Hide / Show* - hides an input cell keeping only its output cells. There is a shortcut `Cmd+2 / Alt+2` or an arrow symbol on the left side of the group.
-- *Shrink / Expand* - fades out the large text keeping only the preview of it. A cursor can still be navigated into it.
-- *Lock / Unlock* - makes an input read-only and limits the controls of the given input cell
-- *Vanish* - makes a cell group completely invisible and uneditable. If an output cell has JS or HTML code, it will anyway be executed, however not visible explicitly. Invisible cells can only be viewed using `Expert Mode` (located in the settings menu). It comes useful for making templates.
-
+- _Project to a window_ – evaluates the cell and displays the first output in a separate window.
+- *Make initialization cell* – marks an input cell to evaluate automatically when the notebook opens (shown with a <span style={{color:'green'}}>green</span> dot in the top-right corner).
+- *Copy* – compresses the cell group into a gzip-compressed string expression. Paste it into a new input cell.
+- *Hide / Show* – hides the input cell while keeping the output visible. Shortcut: `Cmd+2 / Alt+2`, or use the arrow icon on the left.
+- *Shrink / Expand* – fades large text to show only a preview. The cursor can still enter the area.
+- *Lock / Unlock* – makes the input read-only and limits editing options.
+- *Vanish* – makes the entire cell group invisible and uneditable. Output code (JS/HTML) still runs but is hidden. Only visible in `Expert Mode` (found in Settings). Useful for templates.
 
 ## Wolfram Language
-### Syntax highlighting symbols tracking
+### Syntax Highlighting & Symbol Tracking
 Wolfram Language autocomplete and highlighting can be extended using external packages.
 
-Once you have defined something in Wolfram Kernel session in ``Global` ``, the corresponding symbol appears in the autocomplete window and is shared between all opened notebooks.
+Once a symbol is defined in the `Global`` context of a Wolfram Kernel session, it appears in the autocomplete window and is shared across open notebooks.
 
-On the startup Wolfram Kernel reads all packages imported and fetches `::usage` directives for defined symbols and periodically repeats this if upon any `Get` or `Needs` command has been fired.
+At startup, the Wolfram Kernel loads all imported packages, reads `::usage` directives for defined symbols, and periodically refreshes this info upon `Get` or `Needs` commands.
 
-### Syntax sugar
-All equations typed in the editor are compatible with any WL kernels,  i.e. can be used in `wolframscript`, since the syntax sugar and the structure is localized inside comments
+### Syntax Sugar
+All equations typed in the editor are compatible with WL kernels, including `wolframscript`. Syntax sugar is localized within comments.
 
-For example
+For example:
 
 $$\sqrt{2\pi}$$
-becomes 
+becomes:
 
 ```mathematica
 (*SqB[*)Sqrt[2\[Pi]](*]SqB*)
 ```
 
-which is safe for copying to anywhere outside the WLJS ecosystem.
+This ensures compatibility outside the WLJS ecosystem.
 
-**You do not need a mouse to construct and edit complex equations.**
+**You don't need a mouse to construct or edit complex equations.**
 
 :::info
-Unlike Wolfram Mathematica our `StandardForm` output is always compatible with `InputForm`.
+Unlike Wolfram Mathematica, our `StandardForm` output is always compatible with `InputForm`.
 :::
 
-The following shortcuts are often used for equations typing
+Common equation editing shortcuts:
 
-- `Ctrl-2` - place a square root on the selected text
-- `Ctrl-/` - make a fraction
-- `Ctrl--` - make a subscript
-- `Ctrl-6` - make a superscript (power)
-- `ESC+..` - to enter greek characters
+- `Ctrl-2` – square root
+- `Ctrl-/` – fraction
+- `Ctrl--` – subscript
+- `Ctrl-6` – superscript
+- `ESC + ..` – Greek letters
 
-- `Alt+/` `Cmd+/` - to comment a line
-- Hold `Alt` to create multiple carets
-- `Cmd/Ctrl+F` - search in the current cell
+Editor shortcuts:
+- `Alt+/`, `Cmd+/` – comment line
+- Hold `Alt` – multiple carets
+- `Cmd/Ctrl+F` – search current cell
 
+Cursor navigation:
 
-As well as the standard layout
+- `ArrowLeft` / `ArrowRight` – character movement
+- `Ctrl-ArrowLeft` / `Ctrl-ArrowRight` – word movement
+- `Cmd-ArrowLeft` / `Cmd-ArrowRight` – start/end of line
+- `ArrowUp` / `ArrowDown` – move lines
+- `Cmd-ArrowUp` / `Cmd-ArrowDown` – start/end of document
+- `Ctrl-ArrowUp` / `Ctrl-ArrowDown` – page up/down
+- `Home` / `End` – line boundaries
+- `Ctrl-Home` / `Ctrl-End` – document boundaries
+- `Enter` – new line with indent
+- `Ctrl-a` / `Cmd-a` – select all
+- `Backspace` / `Delete` – delete characters
+- `Ctrl-Backspace` / `Ctrl-Delete` – delete words
+- `Cmd-Backspace` / `Cmd-Delete` – delete to line start/end
 
-- ArrowLeft: `cursorCharLeft` (`selectCharLeft` with Shift)
-- ArrowRight: `cursorCharRight` (`selectCharRight` with Shift)
-- Ctrl-ArrowLeft (Alt-ArrowLeft on macOS): `cursorGroupLeft` (`selectGroupLeft` with Shift)
-- Ctrl-ArrowRight (Alt-ArrowRight on macOS): `cursorGroupRight` (`selectGroupRight` with Shift)
-- Cmd-ArrowLeft (on macOS): `cursorLineStart` (`selectLineStart` with Shift)
-- Cmd-ArrowRight (on macOS): `cursorLineEnd` (`selectLineEnd` with Shift)
-- ArrowUp: `cursorLineUp` (`selectLineUp` with Shift)
-- ArrowDown: `cursorLineDown` (`selectLineDown` with Shift)
-- Cmd-ArrowUp (on macOS): `cursorDocStart` (`selectDocStart` with Shift)
-- Cmd-ArrowDown (on macOS): `cursorDocEnd` (`selectDocEnd` with Shift)
-- Ctrl-ArrowUp (on macOS): `cursorPageUp` (`selectPageUp` with Shift)
-- Ctrl-ArrowDown (on macOS): `cursorPageDown` (`selectPageDown` with Shift)
-- PageUp: `cursorPageUp` (`selectPageUp` with Shift)
-- PageDown: `cursorPageDown` (`selectPageDown` with Shift)
-- Home: `cursorLineBoundaryBackward` (`selectLineBoundaryBackward` with Shift)
-- End: `cursorLineBoundaryForward` (`selectLineBoundaryForward` with Shift)
-- Ctrl-Home (Cmd-Home on macOS): `cursorDocStart` (`selectDocStart` with Shift)
-- Ctrl-End (Cmd-End on macOS): `cursorDocEnd` (`selectDocEnd` with Shift)
-- Enter: `insertNewlineAndIndent`
-- Ctrl-a (Cmd-a on macOS): `selectAll`
-- Backspace: `deleteCharBackward`
-- Delete: `deleteCharForward`
-- Ctrl-Backspace (Alt-Backspace on macOS): `deleteGroupBackward`
-- Ctrl-Delete (Alt-Delete on macOS): `deleteGroupForward`
-- Cmd-Backspace (macOS): `deleteToLineStart`
-- Cmd-Delete (macOS): `deleteToLineEnd`
+Advanced movements:
 
-- Alt-ArrowLeft (Ctrl-ArrowLeft on macOS): `cursorSyntaxLeft` (`selectSyntaxLeft` with Shift)
-- Alt-ArrowRight (Ctrl-ArrowRight on macOS): `cursorSyntaxRight` (`selectSyntaxRight` with Shift)
-- Alt-ArrowUp: `moveLineUp`
-- Alt-ArrowDown: `moveLineDown`
-- Shift-Alt-ArrowUp: `copyLineUp`
-- Shift-Alt-ArrowDown: `copyLineDown`
-- Escape: `simplifySelection`
-- Ctrl-Enter (Cmd-Enter on macOS): `insertBlankLine`
-- Alt-l (Ctrl-l on macOS): `selectLine`
-- Ctrl-i (Cmd-i on macOS): `selectParentSyntax`
-- Ctrl-\[ (Cmd-\[ on macOS): `indentLess`
-- Ctrl-\] (Cmd-\] on macOS): `indentMore`
-- Ctrl-Alt-\\\\ (Cmd-Alt-\\ on macOS): `indentSelection`
-- Shift-Ctrl-k (Shift-Cmd-k on macOS): `deleteLine`
-- Shift-Ctrl-\\\\ (Shift-Cmd-\\ on macOS): `cursorMatchingBracket`
-- Shift-Alt-a: `toggleBlockComment`
+- `Alt-ArrowLeft` / `Alt-ArrowRight` – move by syntax element
+- `Alt-ArrowUp` / `Alt-ArrowDown` – move lines
+- `Shift-Alt-ArrowUp` / `Down` – copy lines
+- `Escape` – simplify selection
+- `Ctrl-Enter` – insert blank line
+- `Alt-l` – select line
+- `Ctrl-i` – select parent syntax
+- `Ctrl-[` / `Ctrl-]` – indent less/more
+- `Ctrl-Alt-\\` – indent selection
+- `Shift-Ctrl-k` – delete line
+- `Shift-Ctrl-\\` – go to matching bracket
+- `Shift-Alt-a` – toggle block comment
 
-The following EMACsy style key-bindings are also available on MacOS
+EMACS-style bindings (macOS):
 
-- `Ctrl-b`: `cursorCharLeft`
-- `Ctrl-f`: `cursorCharRight`
-- `Ctrl-p`: `cursorLineUp`
-- `Ctrl-n`: `cursorLineDown`
-- `Ctrl-a`: `cursorLineStart`
-- `Ctrl-e`: `cursorLineEnd`
-- `Ctrl-d`: `deleteCharForward`
-- `Ctrl-h`: `deleteCharBackward`
-- `Ctrl-k`: `deleteToLineEnd`
-- `Ctrl-Alt-h`: `deleteGroupBackward`
-- `Ctrl-o`: `splitLine`
-- `Ctrl-t`: `transposeChars`
-- `Ctrl-v`: `cursorPageDown`
+- `Ctrl-b` – move left
+- `Ctrl-f` – move right
+- `Ctrl-p` – move up
+- `Ctrl-n` – move down
+- `Ctrl-a` – start of line
+- `Ctrl-e` – end of line
+- `Ctrl-d` – delete forward
+- `Ctrl-h` – delete backward
+- `Ctrl-k` – delete to line end
+- `Ctrl-Alt-h` – delete word backward
+- `Ctrl-o` – split line
+- `Ctrl-t` – transpose characters
+- `Ctrl-v` – page down
 
-
-For integrals, derivatives and series use [Command palette](frontend/Command%20palette.md) tool for entering special characters.
+For integrals, derivatives, and series, use the [Command Palette](frontend/Command%20palette.md) to insert special characters.
 
 :::note
-`DateObject`, `Graphics` and many things you probably got used in Mathematica are implemented. Please see the overview in [Symbolic programming](frontend/Symbolic%20programming.md)
+Features like `DateObject`, `Graphics`, and many other familiar Mathematica features are supported. See [Symbolic Programming](frontend/Symbolic%20programming.md) for details.
 :::
 
 :::info
-If an output is too big, it will be truncated or converted into a temporal symbol (if possible) to reduce the load on the editor
+If an output is too large, it may be truncated or converted into a temporary symbol to reduce editor load.
 :::
 
-You can also make your own custom representation of your symbol like in Mathematica using `MakeBoxes`. Please see [InterpretationBox](frontend/Reference/Formatting/Low-level/InterpretationBox.md), [Interpretation](frontend/Reference/Formatting/Interpretation.md) and [MakeBoxes](frontend/Reference/Formatting/MakeBoxes.md) and [ArrangeSummaryBox](frontend/Reference/Formatting/ArrangeSummaryBox.md), [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md), [BoxBox](frontend/Reference/Formatting/Low-level/BoxBox.md) and an ultimate guide on them in [Decorating symbols](frontend/Advanced/Syntax%20sugar/Decorating%20symbols.md)
+Custom symbol representations (like in Mathematica) are possible via `MakeBoxes`. See:
+- [InterpretationBox](frontend/Reference/Formatting/Low-level/InterpretationBox.md)
+- [Interpretation](frontend/Reference/Formatting/Interpretation.md)
+- [MakeBoxes](frontend/Reference/Formatting/MakeBoxes.md)
+- [ArrangeSummaryBox](frontend/Reference/Formatting/ArrangeSummaryBox.md)
+- [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md)
+- [BoxBox](frontend/Reference/Formatting/Low-level/BoxBox.md)
+- [Decorating Symbols](frontend/Advanced/Syntax%20sugar/Decorating%20symbols.md)
 
-### Access to documentation
-Click on 🔎 icon in autocomplete window to open docs on that symbol in a new window
+### Access to Documentation
+Click the 🔎 icon in the autocomplete window to open the documentation for a symbol in a new tab.
 
 ![](./../../Screenshot%202024-08-25%20at%2017.36.24.png)
 
-### Morph output cell into input
-If you change something in the output Wolfram Language cell, it will be automatically converted into a new input cell.
+### Morph Output Cell into Input
+If you modify a Wolfram Language output cell, it will automatically be converted into a new input cell.
 
-### Auto-upload files
-Drag and drop a file to the editor and paste a media from a clipboard. *By the way you can always have an access to clipboard using [ReadClipboard](frontend/Reference/Interpreter/ReadClipboard.md)*
+### Auto-upload Files
+Drag and drop files into the editor or paste media from the clipboard. *You can always access clipboard contents using [ReadClipboard](frontend/Reference/Interpreter/ReadClipboard.md)*.
 
-
-## Other languages
-Most of other languages used as input do support
-- auto-upload files or importing media from a clipboard
-- autocomplete
-- highlighting and code parsing (more than just tokenizing)
+## Other Languages
+Most other languages supported as input also provide:
+- File auto-upload or clipboard media import
+- Autocomplete
+- Syntax highlighting and code parsing (beyond tokenizing)
 

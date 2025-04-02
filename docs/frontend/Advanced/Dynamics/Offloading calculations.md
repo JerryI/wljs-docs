@@ -1,9 +1,9 @@
 ---
 draft: false
 ---
-Leaving some calculations to the frontend's side can reduce an overhead from the communication between the frontend and the Kernel and also make your code much cleaner at the same time.
+Leaving some calculations to the frontend can reduce the overhead from communication between the frontend and the Kernel while also making your code much cleaner.
 
-The idea is to reduce the amount of dynamic symbols to the minimum (see [Dynamics](frontend/Dynamics.md)). Let us start with a simples example of a Bezier curves
+The idea is to minimize the number of dynamic symbols (see [Dynamics](frontend/Dynamics.md)). Let us start with a simple example of Bezier curves:
 
 ```mathematica
 autoLine[t_, p1_, p2_, p3_] := 
@@ -12,9 +12,9 @@ autoLine[t_, p1_, p2_, p3_] :=
  ]
 ```
 
-To make it *dynamic* we just need to pass our symbols like
+To make it *dynamic*, we just need to pass our symbols like this:
 
-```matheamtica
+```mathematica
 p1 = ...;
 p2 = ...;
 p3 = ...;
@@ -22,9 +22,9 @@ p3 = ...;
 autoLine[t, p1 // Offload, p2 // Offload, p3 // Offload]
 ```
 
-Imagine if we have many of those lines, and then... __Do we need to define the same number of symbols to control them?__ No, we need just `3` points and the rest can be calculated. Let us bound our `Line` to those 3 and only 3
+Imagine if we have many such lines. __Do we need to define the same number of symbols to control them?__ No, we need just `3` points, and the rest can be calculated. Let us bind our `Line` to those 3 and only 3:
 
-```mathematica title="optimized version"
+```mathematica title="Optimized Version"
 autoLine[t_, p1_, p2_, p3_] := 
  Line[
    With[{pc = p2, pi = p1, pf = p3}, 
@@ -35,25 +35,25 @@ autoLine[t_, p1_, p2_, p3_] :=
 SetAttributes[Line, HoldRest]
 ```
 
-Here we used a trick with `With` so that `p1, p2, p3` are external symbol bounded to `Line` and will cause its reevaluation, while `pc, pi, pf` entering the list multiple times are just numbers calculated locally.
+Here, we used a trick with `With` so that `p1, p2, p3` are external symbols bound to `Line` and will cause its reevaluation, while `pc, pi, pf`, which enter the list multiple times, are just numbers calculated locally.
 
 :::tip
-Avoid multiple copies of the same dynamic symbol entering the arguments of the same expression. For example
+Avoid multiple copies of the same dynamic symbol entering the arguments of the same expression. For example:
 
 ```mathematica
 Line[{Offload[a], Offload[a] + b}]
 ```
 
-a single change in `a` will cause the reevaluation of `Line` __two times__, while
+A single change in `a` will cause the reevaluation of `Line` __two times__, whereas:
 
 ```mathematica
 Line[With[{p = a}, {p, p + b}] // Offload]
 ```
 
-a single change in `a` will cause the reevaluation of `Line` only __one time__ 👍🏼 
+A single change in `a` will cause the reevaluation of `Line` only __one time__ 👍🏼
 :::
 
-The last thing is to generate a list of those curves connected to three draggable points on a graph
+The final step is to generate a list of curves connected to three draggable points on a graph:
 
 ```mathematica
 curve[p1_, p2_, p3_] := LeakyModule[{pi = p1, pc = p2, pf = p3},
@@ -68,18 +68,17 @@ curve[p1_, p2_, p3_] := LeakyModule[{pi = p1, pc = p2, pf = p3},
 ]
 ```
 
-Here we used [`LeakyModule`](frontend/Reference/Misc/Language.md#`LeakyModule`), which is just a regular `Module`, but with a disabled garbage collector.
+Here, we used [`LeakyModule`](frontend/Reference/Misc/Language.md#`LeakyModule`), which is just a regular `Module` but with the garbage collector disabled.
 
-Now lets us draw
+Now, let us draw:
 
 ```mathematica
 curve[{0.2,0.2}, {0.3,0.5}, {0.6,0.1}] // Graphics
 ```
 
-
 ![](./../../../Curves%20video%20to%20gif.gif)
 
-### A side note
-Computations on the frontend side does not cost much. Since everything happens within a browser. One can put many more curves and it would still work perfectly, since all of them are recalculated independently and bounded to __3 symbols__ only
+### A Side Note
+Frontend computations do not cost much since everything happens within a browser. One can add many more curves, and they will still work perfectly, as all of them are recalculated independently and bound to only __3 symbols__.
 
 ![](./../../../Many_many.svg)

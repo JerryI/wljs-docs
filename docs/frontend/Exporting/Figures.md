@@ -1,5 +1,9 @@
 __Embed nice interactive figures to your blog__
 
+:::danger
+No longer supported due to low interest rates of the community. Please use [Static HTML](frontend/Exporting/Static%20HTML.md) or [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) 
+:::
+
 There is a way to embed individual graphs from your notebook to a web. You need just a little knowledge about HTML technology.
 
 ![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)

@@ -1,28 +1,29 @@
-It is possible to host your interactive notebook on Github pages, so that everyone can view it, drag some sliders and download the original notebook in a one click.
+It is possible to host your interactive notebook on GitHub Pages, allowing everyone to view it, interact with sliders, and download the original notebook with a single click.
 
 ## Exporting
-We assume you exported it using [Static HTML](frontend/Exporting/Static%20HTML.md) or [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md)
+We assume you exported it using [Static HTML](frontend/Exporting/Static%20HTML.md) or [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md).
 
 :::info
-Exported notebooks do not require any building procedure, __only hosting__.
+Exported notebooks do not require any build process—__only hosting__.
 :::
+
 ## Publishing
-It involves creating a repository, uploading `.html` documents and settings up Github Pages. Follow the steps
+This involves creating a repository, uploading your `.html` documents, and setting up GitHub Pages. Follow these steps:
 
-1. Create a __public__ repository (if you have `git` installed, run `git init`) and add there your HTML documents. You can form a folder structure and make navigation links using [Markdown](frontend/Cell%20types/Markdown.md) cells
+1. Create a __public__ repository. If you have `git` installed, run `git init`, and add your HTML documents. You can organize them into folders and create navigation links using [Markdown](frontend/Cell%20types/Markdown.md) cells.
 
-#### Using Github Pages
+#### Using GitHub Pages
 
-2. Open `Settings` of the repository, then `Code and automation` and locate `Pages`. For example
+2. Open the repository `Settings`, navigate to `Code and automation`, and locate `Pages`. For example:
 
 ![](./../../Screenshot%202024-12-16%20at%2013.06.45.png)
 
-#### Using Github Actions
-Or alternatively use Github Actions and explicitly select `Pages`, `Static HTML`
+#### Using GitHub Actions
+Alternatively, you can use GitHub Actions and explicitly select `Pages` and `Static HTML`.
 
 ![](./../../Screenshot%202024-12-16%20at%2013.07.52.png)
 
-Here is sample configuration file for it, which serves static pages from `build` folder and `main` branch of the repository
+Here is a sample configuration file that serves static pages from the `build` folder and the `main` branch of the repository:
 
 ```yaml
 # Simple workflow for deploying static content to GitHub Pages
@@ -71,14 +72,14 @@ jobs:
 ```
 
 ## Licensing
-Since the exported notebook or presentation do not contain any of Wolfram technologies, but pure Javascript, HTML, CSS, open-source and custom written libraries, __there is in fact no restriction on the end-usage__. 
+Since the exported notebook or presentation does not contain any Wolfram technologies—only pure JavaScript, HTML, CSS, open-source, and custom-written libraries—__there are no restrictions on end usage__.
 
-It is an equivalent of printing figures from the notebook to PDF and posting on a your website.
+This is equivalent to printing figures from the notebook to a PDF and posting it on your website.
 
-
-## Alternative hosting options
-There are plenty of them. Search for `static html hosting`
+## Alternative Hosting Options
+There are plenty of alternatives. Search for `static HTML hosting`.
 
 - [Static Website Hosting](https://static.app/)
 - [TinyHost](https://tiiny.host/free-static-website-hosting/)
-- [Cloud Flare](https://pages.cloudflare.com/)
+- [Cloudflare](https://pages.cloudflare.com/)
+- Some quick file sharing services renders HTML files by the default

@@ -1,12 +1,11 @@
 ---
 sidebar_position: 22
 ---
-You can extend output cell types via a few lines of code and you favorite framework / package
-
+You can extend output cell types with just a few lines of code using your favorite framework or package.
 
 #### Shell
 
-You can type commands to your system shell. PATH is imported from your terminal automatically, and a working directory is set to [NotebookDirectory](frontend/Reference/Cells%20and%20Notebook/NotebookDirectory.md)
+You can type commands directly into your system shell. The `PATH` is automatically imported from your terminal, and the working directory is set to [NotebookDirectory](frontend/Reference/Cells%20and%20Notebook/NotebookDirectory.md).
 
 ```bash
 .sh
@@ -17,7 +16,8 @@ ls
 
 #### Mermaid
 
-Draw beautiful diagrams by code 
+Draw beautiful diagrams using code:
+
 ```bash
 .mermaid
 pie title NETFLIX
@@ -27,7 +27,7 @@ pie title NETFLIX
 
 ![](../../imgs/Screenshot%202023-03-31%20at%2016.01.28.png)
 
-Styling is also available
+You can also apply custom styling:
 
 ```md
 .mermaid
@@ -41,4 +41,3 @@ graph TD;
 ```
 
 ![](./../../Screenshot%202024-11-29%20at%2017.33.48.png)
-

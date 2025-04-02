@@ -57,9 +57,22 @@ Manipulate[Plot3D[Sin[n x] Cos[n y], {x,-1,1}, {y,-1,1}], {n, 1, 5, 1}]
 
 `Manipulate` is caching all results by the default.
 
+Example with mixed symbolics and graphics
+
+```mathematica @
+Manipulate[
+  Row[{
+    "m", "==", MatrixForm[m], 
+    StreamPlot[Evaluate[m . {x, y}], {x, -1, 1}, {y, -1, 1}, 
+      StreamScale -> Large, ImageSize -> Small
+    ]
+  }], {{m, ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)2}}(*]GB*))}, { ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)2}}(*]GB*)) -> "Nodal source",  ((*GB[*){{1(*|*),(*|*)1}(*||*),(*||*){0(*|*),(*|*)1}}(*]GB*))  -> "Degenerate source",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)1}}(*]GB*)) -> "Spiral source",  ((*GB[*){{-1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)-2}}(*]GB*))  -> "Nodal sink",  ((*GB[*){{-1(*|*),(*|*)1}(*||*),(*||*){0(*|*),(*|*)-1}}(*]GB*)) -> "Degenerate sink",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)-1}}(*]GB*)) -> "Spiral sink",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)0}}(*]GB*)) -> "Center",  ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)-2}}(*]GB*))  -> "Saddle"}}]
+```
+
+![](./../../../Screenshot%202025-04-02%20at%2010.11.33.png)
 ## Portability
 `Manipualte` __cannot be exported__ to [Static HTML](frontend/Exporting/Static%20HTML.md), ~~however, [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) __is possible__ to keep the functionality working, but the file size might be quite large.~~
 
 :::caution
-Due to garbage collection problem, it is no longer possible to export using dynamic mode. Please write to Github issues, if you consider this problem important. Apart from that, [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) as well as[ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md) will work properly being exported using dynamic mode.
+Due to garbage collection problem, it is no longer possible to export using dynamic mode. Please write to Github issues, if you consider this problem important. Apart from that, [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) as well as [ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md) will work properly being exported using dynamic mode.
 :::

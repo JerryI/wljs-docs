@@ -3,12 +3,11 @@ sidebar_position: 2
 ---
 > Type `.md` in the first line of an input cell
 
-
 ![](../../imgs/Screenshot%202024-03-13%20at%2019.29.44.png)
 
 ![](../../imgs/Screenshot%202024-03-13%20at%2019.29.21.png)
 
-## Markdown syntax
+## Markdown Syntax
 
 ### Headings
 Use `#` for headings, increasing the number of `#` for smaller headings:
@@ -34,14 +33,13 @@ Create unordered lists with `*`, `+`, or `-`, and ordered lists with numbers fol
 
 ```markdown
 .md
-
 - Item 1
 - Item 2
   - Subitem 1
 
 1. First item
 2. Second item
-   1. Subitem 1
+   3. Subitem 1
 ```
 
 ### Links
@@ -61,11 +59,11 @@ Embed images using `![alt text](URL)`:
 ```
 
 :::note
-Files can be remote or local (in the notebook folder). __Try to drag and drop any image inside markdown cell__
+Files can be remote or local (in the notebook folder). __Try dragging and dropping any image into a markdown cell.__
 :::
 
 ### Drawings
-We use an amazing [Excalidraw](https://excalidraw.com/) editor for any complex drawings right inside the markdown input cell. Try to type
+We use the amazing [Excalidraw](https://excalidraw.com/) editor for complex drawings, right inside a markdown input cell. Try typing:
 
 ```markdown
 .md
@@ -73,9 +71,9 @@ We use an amazing [Excalidraw](https://excalidraw.com/) editor for any complex d
 !![]
 ```
 
-In the output cell a corresponding SVG image will be generated.
+A corresponding SVG image will be generated in the output cell.
 
-*See GIF animation below*
+*See the GIF animation below:*
 
 ![](./../../Excalidraw-ezgif.com-speed.gif)
 
@@ -88,7 +86,7 @@ Create blockquotes using `>`:
 ```
 
 ### Code
-Inline code uses backticks, and code blocks are wrapped with triple backticks:
+Use backticks for inline code and triple backticks for code blocks:
 
 ```markdown
 .md
@@ -99,6 +97,7 @@ Inline code uses backticks, and code blocks are wrapped with triple backticks:
 code block
 ```
 .md
+```
 
 ### Horizontal Rule
 Create a horizontal rule with three or more dashes, asterisks, or underscores:
@@ -114,7 +113,6 @@ Create tables using pipes `|` and dashes `-`:
 
 ```markdown
 .md
-
 | Header 1 | Header 2 |
 |----------|----------|
 | Cell 1   | Cell 2   |
@@ -122,97 +120,88 @@ Create tables using pipes `|` and dashes `-`:
 ```
 
 ### Highlighter
-Use `==` wrapper to highlight text, i.e.
+Use `==` to highlight text:
 
 ```mathematica
 .md
 ==Hello World==
 ```
 
-
 ### Admonitions
-Use the following syntax
+Use the following syntax:
 
-```md
+```markdown
 .md
-
 :::tip
 Use admonitions!
 :::
 ```
 
-The following types have special highlighting `tip`, `info`, `warning`, `danger`, `todo`. Unknown types will be treated as `info`. 
+The following types have special highlighting: `tip`, `info`, `warning`, `danger`, and `todo`. Unknown types will be treated as `info`.
 
-You can always define your custom one
+You can also define your own custom type:
 
 ```html
 .html
-
 <style>
 .admonition.yourtype {
-	background-color: pink;
+  background-color: pink;
 }
 </style>
 ```
 
 #### TODO Lists
-`todo` tag has a special effect, it inserts a live button-counter at the top of a page
+The `todo` tag adds a live button-counter at the top of the page, serving as a reminder.
 
 ![](./../../Screenshot%202025-01-14%20at%2009.29.53.png)
 
-which serves a purpose of a reminder.
-
-
 ### Bookmarks
-You can put a bookmark on the page of your notebook
+You can place a bookmark on the page using:
 
 ```markdown
 .md
-
 @bookmark
 ```
 
-It will appear as an icon at the top. By clicking on it you can scroll to the content.
+It will appear as an icon at the top. Clicking it will scroll to the bookmarked content.
 
 ## Pure HTML
-One can also use plain HTML tags to stylize markdown or embed media objects
+You can use plain HTML tags to stylize markdown or embed media objects.
 
 ## LaTeX
-We use KaTeX as a render engine, to type a equation wrap it inside `$` or `$$` (for equation block)
+We use KaTeX as the render engine. To write an equation, wrap it inside `$` for inline or `$$` for a block:
 
 ```markdown
 .md
-
 $$
 E = \\hbar \\omega
 $$
 ```
 
 :::warning
-Unfortunately, you have to escape all backslashes, i.e. instead of `\alpha` you need to write `\\alpha`.
+Unfortunately, you have to escape all backslashes. For example, write `\\alpha` instead of `\alpha`.
 :::
 
-__See [here](https://katex.org/docs/supported.html) all supported function for LaTeX equations.__
-
+__See [here](https://katex.org/docs/supported.html) for all supported LaTeX functions.__
 
 ## WLX
-Markdown cells supports many features of [WLX](frontend/Cell%20types/WLX.md) similar to how it is done in [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md)
-### Embed figures
-For example you created a nice 3D plot
+Markdown cells support many features of [WLX](frontend/Cell%20types/WLX.md), similar to how it is done in [FrontSlidesSelected](frontend/Reference/Slides/FrontSlidesSelected.md).
+
+### Embed Figures
+For example, if you create a 3D plot:
 
 ```mathematica title="cell 1"
-Figure = Plot3D[Sin[x] Cos[y], {x,-5,5}, {y,-5,5}];
+Figure = Plot3D[Sin[x] Cos[y], {x, -5, 5}, {y, -5, 5}];
 ```
 
 :::tip
-Make first letter in the name of a symbol capital, this is required by the syntax of WLX language.
+Make sure the first letter in a symbol name is capitalized. This is required by WLX syntax.
 :::
 
-then one can embed it into markdown cell as if it was a custom tag
+Then you can embed it into a markdown cell using a custom tag:
 
 ```markdown
 .md
-
 Hello there! Here is my plot
 
 <br/>
@@ -220,19 +209,12 @@ Hello there! Here is my plot
 <Figure/>
 ```
 
-
 ## Autoupload
-### Drop a file
+### Drop a File
 
-### Paste media file
+### Paste a Media File
 
-
-
-
-__[Github repo](https://github.com/JerryI/wljs-markdown-support)__
-To switch to Markdown language use `.md` prefix on the first line
-
-
-
+__[GitHub repo](https://github.com/JerryI/wljs-markdown-support)__
+To switch to Markdown language, use the `.md` prefix on the first line.
 
 

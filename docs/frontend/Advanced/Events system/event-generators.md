@@ -2,27 +2,28 @@
 draft: false
 sidebar_position: 1
 ---
-# Event system
-As a short summary - where you can use event-handlers 
+# Event System
 
-- on `Graphics2D` elements to listen users interactions 
-	- `drag`, `click`, `zoom`, `mousemove`, ...
-- on `Graphics3D` elements
-	- `transform`
-- on any `EventObject` or its string equivalent 
-- many more - see [Mouse and keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
+### Where You Can Use Event Handlers
 
-An event-driven approach was inspired by Javascript language, where one can subscribe to any changes of any objects. Here it was expanded in a way to utilize the full power of pattern matching features of Wolfram Language.
+- On `Graphics2D` elements to listen for user interactions:
+  - `drag`, `click`, `zoom`, `mousemove`, ...
+- On `Graphics3D` elements:
+  - `transform`
+- On any `EventObject` or its string equivalent
+- Many more — see [Mouse and Keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md)
+
+The event-driven approach is inspired by JavaScript and NodeJS, where one can subscribe to changes in any object. Here, it is expanded to utilize the full power of Wolfram Language's pattern-matching features.
 
 :::tip
-See reference section [Events](frontend/Reference/Misc/Events.md) as well
+See the reference section: [Events](frontend/Reference/Misc/Events.md)
 :::
 
-## Thumb rule
-__One event-object__ - __one handler__ function
+## Thumb Rule
+**One event object** — **one handler function**
 
 ```mathematica
-ev = EventObject[<|"Id"->"evid"|>]
+ev = EventObject[]
 EventHandler[ev, Print]
 ```
 
@@ -39,40 +40,43 @@ subgraph EventHandler
 	Print
 end
 
-EventObject --"By Id"-->EventHandler
+EventObject --"By Id"--> EventHandler
 ```
-And then to fire 
+
+To fire the event:
 ```mathematica
 EventFire[ev, "Hello World!"];
 ```
-In order to remove handler from event object use
+
+To remove the handler from the event object, use:
 ```mathematica
 Delete[ev]
 ```
-or more universal
+Or the more universal:
 ```mathematica
 EventRemove[ev]
 ```
-where it deletes a handler function, but not an `EventObject`.
+This deletes the handler function but not the `EventObject`.
 
 :::tip
-To assign more event handlers, you need to __clone an event object__ or use different pattern on the same event object (see [Pattern matching](#Pattern%20matching)).
+To assign more event handlers, you need to **clone the event object** or use a different pattern on the same event object (see [Pattern Matching](#pattern-matching)).
 :::
 
-### String equivalent
-The actual binding is done only by `"Id"` field, therefore, one can omit `EventObject` head
+### String Equivalent
+Since binding is based solely on the `"Id"` field, one can omit the `EventObject` head:
+
 ```mathematica
 ev = "evid";
 EventHandler[ev, Print]
 ```
-is the same as
+Is equivalent to:
 ```mathematica
-ev = EventObject[<|"Id"->"evid"|>]
+ev = EventObject[<|"Id" -> "evid"|>]
 EventHandler[ev, Print]
 ```
 
-## Pattern matching
-In general an event entity can carry an additional information using Wolfram Language Patterns. It can distribute messages across different handler functions based on type of event fired (or its topic lets say). Using regular syntax for replacing patterns with `Rule` and `RuleDelayed` one can write a much more detailed handler function
+## Pattern Matching
+An event can carry additional information using Wolfram Language patterns. This allows messages to be distributed across different handler functions based on the type of event fired. Using standard pattern-matching syntax with `Rule` and `RuleDelayed`, you can write more specific handler functions:
 
 ```mathematica
 EventHandler["evid", {
@@ -87,19 +91,18 @@ EventHandler["evid", {
 }];
 ```
 
-And to fire an event on a specific pattern - add extra argument to the middle of a sequence
+To fire an event for a specific pattern, add an extra argument:
 ```mathematica
 EventFire["evid", "Topic", "Hi!"];
 EventFire["evid", "Whatever", "Hi!"];
 ```
-However, it is not limited to `String`
 
+Pattern matching is not limited to strings:
 ```mathematica
 EventHandler["evid", {
 	_Abrakadabra -> Function[Null,
 		Echo["Got it!"];
 	],
-	
 	_ -> Function[Null,
 		Echo["Wrong one"];
 	]
@@ -108,34 +111,31 @@ EventHandler["evid", {
 EventFire["evid", Abrakadabra[], Null]
 ```
 
-One should note, that effectively those are the same records
+Note that the following are effectively the same:
 ```mathematica
 EventHandler[ev, Print]
 EventHandler[ev, {_ -> Print}]
 ```
-while
+And:
 ```mathematica
 EventFire[ev, data]
 EventFire[ev, "Default", data]
 ```
-are also the same.
 
-## Cloning events
-In the previous examples we had only one handler function per pattern. If you want more, there is a way to clone an `EventObject` or its string equivalent 
+## Cloning Events
+If you want multiple handlers per pattern, clone the `EventObject` or its string equivalent:
 
 ```mathematica
-ev = EventObject[<|"Id"->"evid"|>]
-(* first handler *)
+ev = EventObject[<|"Id" -> "evid"|>]
+(* First handler *)
 EventHandler[ev, Print]; 
 
-(* second handler *)
-{ /* highlight-start */ }
+(* Second handler *)
 cloned = EventClone[ev];
-{ /* highlight-end */ }
 EventHandler[cloned, Print];
 ```
 
-What it does, it creates something like an event router subscribed to the original event-object, a router, then, is populated by the two new event-objects
+This creates an event router subscribed to the original event object, which is then connected to multiple new event objects:
 
 ```mermaid
 flowchart LR
@@ -162,23 +162,21 @@ subgraph EventHandler2[EventHandler]
 end
 
 EventObject --"By id"--> EventRouter
-
-id2 --"By id"-->EventHandler1
-id3 --"By id"-->EventHandler2
+id2 --"By id"--> EventHandler1
+id3 --"By id"--> EventHandler2
 ```
 
-Anything you do with `cloned` event will not affect the original entitiy
-
+Operations on `cloned` will not affect the original event:
 ```mathematica
 Delete[cloned] or EventRemove[cloned]
 ```
 
 :::info
-Cloned object inherits all properties (i.e. initial data), that the original object has.
+Cloned objects inherit all properties (e.g., initial data) from the original object.
 :::
 
 :::tip
-If you are sure, that two `EventHandler` function does not intersect with their patterns attached to the same event-object, there is no need in cloning, i.e.
+If you're sure two `EventHandler` functions won't conflict, you can attach them to the same event object without cloning:
 
 ```mathematica
 EventHandler[ev, {
@@ -191,11 +189,11 @@ EventHandler[ev, {
 EventFire[ev, ..., data];
 ```
 
-is valid. Patterns will be merged.
+The patterns will be merged.
 :::
 
-## Return value
-Each handling function can return some value back, that again carries extra information
+## Return Value
+Each handler function can return a value, allowing you to pass information back:
 
 ```mathematica
 EventHandler[ev, Function[Null,
@@ -205,40 +203,34 @@ EventHandler[ev, Function[Null,
 EventFire[ev, Null] // Echo
 ```
 
-an `Echo` from the last line will print current date. The same can be done with a chain of cloned events, i.e.
+The `Echo` will print the current date. This works with a chain of cloned events too:
 
 ```mathematica
-EventHandler[ev, Function[Null,
-	Now
-]];
-EventHandler[ev // EventClone, Function[Null,
-	Now
-]];
-EventHandler[ev // EventClone, Function[Null,
-	Now
-]];
+EventHandler[ev, Function[Null, Now]];
+EventHandler[EventClone[ev], Function[Null, Now]];
+EventHandler[EventClone[ev], Function[Null, Now]];
 
 EventFire[ev, Null] // Echo
 ```
 
-The returned value will be a list of three semi-identical dates.
+The returned value will be a list of three nearly identical timestamps.
 
 :::tip
-Use return values to provide [Promise](frontend/Reference/Misc/Promise.md) objects, when one or more of your chained handlers asks the side, which fired a chain, to wait for some deferred event be happen (see [`Then`](frontend/Reference/Misc/Promise.md#`Then`)). 
+Use return values to pass [Promise](frontend/Reference/Misc/Promise.md) objects when chained handlers need to wait for a deferred event (see [`Then`](frontend/Reference/Misc/Promise.md#`Then`)).
 :::
 
-## Merging
-For example you want to update the state of something based on two events, that may happen independently, then use
+## Merging Events
+To update the state based on two independently occurring events:
 
 ```mathematica
-ev1 = EventObject[<|"Id"->"evid1"|>]
-ev2 = EventObject[<|"Id"->"evid2"|>]
+ev1 = EventObject[<|"Id" -> "evid1"|>]
+ev2 = EventObject[<|"Id" -> "evid2"|>]
 
 joined = Join[ev1, ev2]
 ```
 
 :::tip
-You do not have to clone your events before joining them, since it does it automatically keeping all other connections intact
+You don't need to clone events before joining — `Join` does this automatically and preserves all other connections.
 :::
 
 ```mermaid
@@ -267,57 +259,48 @@ EventObject2 --> EventRouter
 
 EventRouter --Fire--> EventObject3
 ```
+
 ## Properties
-There is a possibility to carry an additional keys wrapped inside `EventObject`. By its nature this is not a classical object in the sense of OOP, since the handler function has no access to the their properties and only `Id`  field is stored in global a memory. 
+`EventObject` can include additional keys. However, it is not a classical OOP object — handler functions can't access these properties. Only the `"Id"` is globally stored.
+
 ### Inheritable
-There is a property `"Initial"`, that specifies the initial value of the data shipped when the event is fired, when you apply `Join` or `EventClone` the final initial conditions will be merged from the different event objects or just copied
+The `"Initial"` property specifies data to ship when the event is fired. When you apply `Join` or `EventClone`, the final initial values are merged:
 
 ```mathematica
-ev1 = EventObject[<|"Id"->"ev1", "Initial"-><|"x"->1|>|>]
-ev2 = EventObject[<|"Id"->"ev1", "Initial"-><|"y"->2|>|>]
+ev1 = EventObject[<|"Id" -> "ev1", "Initial" -> <|"x" -> 1|>|>]
+ev2 = EventObject[<|"Id" -> "ev1", "Initial" -> <|"y" -> 2|>|>]
 
 Join[ev1, ev2]
 ```
-
-the result will be
-
+Results in:
 ```mathematica
-EventObject[<|"Id"->"generatedId", "Initial"-><|"x"->1, "y"->2|>|>]
+EventObject[<|"Id" -> "generatedId", "Initial" -> <|"x" -> 1, "y" -> 2|>|>]
 ```
-
-What also makes field `"Initial"` so special is that it can be automatically substituted to `EventFire` method, when no other data is provided
-
+If no data is passed to `EventFire`, the `"Initial"` value is used:
 ```mathematica
 EventFire[ev]
 ```
-
-is effectively 
-
+Is equivalent to:
 ```mathematica
 EventFire[ev, ev[[1]]["Initial"]]
 ```
 
-### Non-inheritable
-A very useful property, that comes handy when making GUI elements `"View"`
-
+### Non-Inheritable
+The `"View"` property is useful in GUIs:
 ```mathematica
-EventObject[<|"Id"->"evid", "View"->Graphics3D[Sphere[]]|>]
+EventObject[<|"Id" -> "evid", "View" -> Graphics3D[Sphere[]]|>]
 ```
+It renders the graphic when displayed, instead of showing the raw `EventObject`.
 
-it acts only when the object is printed to the output cell or displayed on a page, then, we will see `Graphics3D` output instead of  `EventObject`.
-
-### Integration with server / client via WebSockets
-A framework of [WLJSTransport](https://jerryi.github.io/wlx-docs/docs/Reference/Misc/WLJSTransport) redirects calls from Javascript code to event system as well. A global `server` object provides a corresponding method
+## Integration with Server/Client
+The [WLJSTransport](https://jerryi.github.io/wlx-docs/docs/Reference/Misc/WLJSTransport) framework lets JavaScript code trigger events. Use the global `server` object:
 
 ```js
-server.kernel.io.fire('evid', 'message')
-//or
-server.kernel.io.fire('evid', 'message', 'pattern')
+server.kernel.io.fire('evid', 'message');
+// or
+server.kernel.io.fire('evid', 'message', 'pattern');
 ```
-
-and on server's side one can do as usual
-
+On the server side, handle it as usual:
 ```mathematica
 EventHandler["evid", Print]
 ```
-

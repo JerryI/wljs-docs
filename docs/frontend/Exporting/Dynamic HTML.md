@@ -1,146 +1,148 @@
-__A user does not need any app installed to drag some sliders in your notebook__
+
+
+__A user doesn't need any app installed to interact with sliders in your notebook__
 
 :::tip
-Please, read the manual carefully
+Please read the manual carefully.
 :::
 
-This is a dynamic version of exporter [Static HTML](frontend/Exporting/Static%20HTML.md), which is aimed to recreate full interactivity of the normal notebooks
+This is a dynamic version of the [Static HTML](frontend/Exporting/Static%20HTML.md) exporter, designed to recreate the full interactivity of normal notebooks.
 
 ![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
 
 ![](./../../Screenshot%202024-08-03%20at%2013.58.42.png)
 
-## Use cases
-- All use cases of [Static HTML](frontend/Exporting/Static%20HTML.md)
-- Demonstration project
-- Live animation of some physical process
+## Use Cases
+- All use cases from [Static HTML](frontend/Exporting/Static%20HTML.md)
+- Demonstration projects
+- Live animations of physical processes
 - Interactive presentations / lecture notes
 
-## How it works
-It order to make the system more general and be able to capture the effects of [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), any combinations of [InputRange](frontend/Reference/GUI/InputRange.md), [InputButton](frontend/Reference/GUI/InputButton.md), [Offload](frontend/Reference/Interpreter/Offload.md), [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md), [EmitSound](frontend/Reference/Sound/EmitSound.md) and many more it is abstracted by the design from the controlling elements and purely analyses the events in the system, mutations of symbols and etc.
+## How It Works
+To make the system more general and support features like [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), combinations of [InputRange](frontend/Reference/GUI/InputRange.md), [InputButton](frontend/Reference/GUI/InputButton.md), [Offload](frontend/Reference/Interpreter/Offload.md), [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md), [EmitSound](frontend/Reference/Sound/EmitSound.md), and many more are abstracted from their controlling elements. The system purely analyzes events and symbol mutations.
 
-> It requires the architecture of your dynamic system, which follows the principle of *call and response*, i.e. it must generate (by a user or automatically) an event from the input element or any other code on the frontend and then generate the corresponding response as a mutations of symbols or sent command ([FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)).
+> Your dynamic system must follow a *call and response* architecture. That means it must generate events (via user interaction or code) and produce a response (e.g., symbol mutation or [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)).
 
 :::note
-TLDR; We record the calculated data for all possible combinations of input elements used and store it in a large table. See how to do this in [How to use](#How%20to%20use) section
+**TL;DR:** We record calculated data for all possible combinations of input elements and store them in a large table. See the [How to Use](#how-to-use) section.
 :::
 
 <details>
 
 ### Analysis
-To analyze all binding between the input elements, symbols and commands fired by Wolfram Kernel during the runtime __we inject a spy to the evaluation kernel__ by modifying `DownValues` of symbols standing for WLJS IO transport. It captures all symbols mutations caused by external events as well as submitted commands like [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) or [EmitSound](frontend/Reference/Sound/EmitSound.md) (uses `FrontSubmit` implicitly). For example [PlotlyAnimate](frontend/Reference/Plotly/PlotlyAnimate.md) also relies on [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) and can be captured.
 
-After all data has been collected we forward it to samplers, virtual state machines...
+To analyze the bindings between input elements, symbols, and commands executed by the Wolfram Kernel, __we inject a spy into the evaluation kernel__ by modifying `DownValues` of WLJS I/O symbols. This captures symbol mutations triggered by external events and submitted commands like [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) or [EmitSound](frontend/Reference/Sound/EmitSound.md). For instance, [PlotlyAnimate](frontend/Reference/Plotly/PlotlyAnimate.md) also uses [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) and can be tracked.
+
+After capturing all data, it's forwarded to samplers or virtual state machines.
 
 ### Processing
-Under the hood we use different techniques to process the data depending on the user-case, which are chosen automatically. We call such processors *Black Boxes* or virtual machines.
+We use different processing techniques based on the use case, selected automatically. These are known as *Black Boxes* or virtual machines.
 
-> aka black boxes from air-planes used to records all data to later reconstruct the flight after the crash
+> Similar to airplane black boxes that record all data for post-crash analysis.
 
-There are 3 kinds of virtual machines we use (picked automatically based on the results on analysis) with funny names
+There are three types of virtual machines (automatically chosen) with fun names:
+
 #### State Machine
-It has a state, which is determined by the combination of all input elements. When state changes it dispatches a corresponding symbol mutation. It does automatic sampling of all possible states using the given data before processing it further.
+This tracks system state based on input element combinations. It samples all possible states and dispatches the corresponding symbol mutations.
 
 #### Pavlov Machine
-aka [Pavlov Dog](https://en.wikipedia.org/wiki/Classical_conditioning), it does not have a state. It basically records pairs of *event* - *FrontSubmit calls*.
+Like [Pavlov's Dog](https://en.wikipedia.org/wiki/Classical_conditioning), it doesn't track state but records *event → FrontSubmit* pairs.
 
 #### Animation Machine
-Detects a series of symbols mutations caused by the same event and records the whole series (typically an animation made using `AnimationFrameListener`). It does not have a real state, only an abstract frame number
+Detects series of symbol mutations from the same event, typically used for animations (e.g., via `AnimationFrameListener`). It tracks only abstract frame numbers.
 
-
-> We plan to introduce basic a few kB CNN networks as an option to compress the mutations more efficiently in the future.
+> We're planning to add small CNNs to compress mutations more efficiently in the future.
 
 </details>
 
-## How to use
-Please follow the steps listed below 
-### Prepare notebook
-Connect to Wolfram Kernel, do normal evaluation of your dynamics. Try to minimize the number of input elements and their possible states. For example, do not put 3 slider ([InputRange](frontend/Reference/GUI/InputRange.md)) with 100 steps for each. If you use [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), specify explicitly `step` for your parameters. The same counts for number and size of used dynamic symbols.
+## How to Use
+Please follow the steps below:
+
+### Prepare the Notebook
+Connect to the Wolfram Kernel and evaluate your dynamics. Minimize the number of input elements and their states. For example, avoid 3 sliders ([InputRange](frontend/Reference/GUI/InputRange.md)) with 100 steps each. For [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), explicitly set `step` values. Limit the number and complexity of dynamic symbols.
 
 :::ti[]
-If you record an animation constructed using [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md), start it __right before going to the next step__. Note, that the effects of [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) will not be captured at all. 
+If you're recording an animation with [AnimationFrameListener](frontend/Reference/Graphics/AnimationFrameListener.md), start it __right before the next step__. Note: [`SetInterval`](frontend/Reference/Misc/Async.md#`SetInterval`) effects are not captured.
 :::
 
-For example, we can try [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) with a single slider for the simplicity
+Example using a single slider:
 
-```mathematica @
+```mathematica
 ManipulatePlot[{
-
-  (*TB[*)Sum[(*|*)(*FB[*)((Sin[2\[Pi](2j - 1) x])(*,*)/(*,*)(2j - 1))(*]FB*)(*|*), {(*|*)j(*|*),(*|*)1(*|*),(*|*)n(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ==*)(*]TB*) ,  (*TB[*)Sum[(*|*)(*FB[*)((Cos[2\[Pi](2j - 1) x])(*,*)/(*,*)(2j - 1))(*]FB*)(*|*), {(*|*)j(*|*),(*|*)1(*|*),(*|*)n(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ==*)(*]TB*) 
-
-}//Re, {x, -1,1}, {n, 1,10,1}]
+  Sum[(Sin[2π(2j - 1) x])/(2j - 1), {j, 1, n}],
+  Sum[(Cos[2π(2j - 1) x])/(2j - 1), {j, 1, n}]
+} // Re, {x, -1, 1}, {n, 1, 10, 1}]
 ```
 
-### Sniffing phase
-Click `Share` and pick `Dynamic Notebook`, it will automatically initiate recording. A widget should appear in the top-right corner
+### Sniffing Phase
+Click `Share` → `Dynamic Notebook` to begin recording. A widget will appear in the top-right corner.
 
 :::info
-If you record an animation. Just evaluate the corresponding cell, wait some reasonable number of frames you want to be recorded, then click `Continue` on the widget
+If you're recording an animation, evaluate the cell, wait for your desired number of frames, then click `Continue` in the widget.
 :::
 
 ![](./../../Screenshot%202025-03-18%20at%2013.26.19.png)
 
-Now drag a slider in all ranges. It is important to cover all positions of it, since while sampling phase it will only use values it had during [Sniffing phase](#Sniffing%20phase).
+Move each slider across its full range. This is necessary, as the sampling phase will only use values seen during sniffing.
 
 :::tip
-If you have multiple input elements (2, 3 sliders). Drag each individually in full range __one time__. Cross combinations are not necessary, since they will be sampled automatically recursively on the next stage by the system.
+For multiple inputs (2–3 sliders), move each fully once. Cross-combinations are not needed—they will be sampled recursively.
 :::
-### Sampling phase (State Machine)
-Now it will samples all combinations automatically, it might take some time depending on how many states and symbols were changed
+
+### Sampling Phase (State Machine)
+Now the system automatically samples all input combinations. This may take time, depending on state count and symbol complexity.
 
 ![](./../../Screenshot%202025-03-18%20at%2013.36.29.png)
 
-This is the last stage. On the next step it will export your notebook with this data to your drive if no other recordings are required. Click `Continue`
+This is the final stage. Afterward, the notebook is exported with the collected data to your drive. Click `Continue`.
 
 ### Result
-Depending on how many sampling points you have, the average file size is about `7-20` MB and `3-15` MB of you set `CDN` in the settings (see [Static HTML](frontend/Exporting/Static%20HTML.md)). An example above costs only `165` kB uncompressed and `50` kB compressed data.
+File sizes typically range from `7–20 MB`, or `3–15 MB` with `CDN` settings (see [Static HTML](frontend/Exporting/Static%20HTML.md)). The example above is just `165 kB` uncompressed and `50 kB` compressed.
 
-The result is fully interactive widget working offline without internet connection and  Wolfram Kernel at all ✨
+The result is a fully interactive widget, working offline without an internet connection or the Wolfram Kernel ✨
 
 ![](./../../statemachine-ezgif.com-optimize.gif)
 
 :::note
-It will work on [Slides](frontend/Cell%20types/Slides.md), [WLX](frontend/Cell%20types/WLX.md) cells as well
+This works with [Slides](frontend/Cell%20types/Slides.md) and [WLX](frontend/Cell%20types/WLX.md) cells too.
 :::
 
-## What else can be exported?
-Here is a list of what you can export
+## What Else Can Be Exported?
+Here's a list of supported exports:
 
 ### State Machine
-
 ```mathematica
-Manipulate[Series[Sin[x], {x,0,n}], {n,1,10,1}]
+Manipulate[Series[Sin[x], {x, 0, n}], {n, 1, 10, 1}]
 ```
 
 ```mathematica
-ManipulatePlot[f[w x], {x,-10,10}, {w,0,10}, {f, {Sinc, Sin}}]
+ManipulatePlot[f[w x], {x, -10, 10}, {w, 0, 10}, {f, {Sinc, Sin}}]
 ```
 
-Or custom dynamics
+Or custom dynamics:
 
 ```mathematica
 radius = 1.0;
-Graphics[{Hue[radius // Offload], Disk[{0,0}, radius // Offload]}, ImageSize->Small]
+Graphics[{Hue[radius // Offload], Disk[{0, 0}, radius // Offload]}, ImageSize -> Small]
 
-EventHandler[InputRange[0,1,0.1], (radius = #)&]
+EventHandler[InputRange[0, 1, 0.1], (radius = #)&]
 ```
 
 ### Pavlov Machine
-
 ```mathematica
 EventHandler[InputButton[], (Sound[SoundNote["C5"]] // EmitSound)&]
 ```
 
-And even [Plotly](frontend/Reference/Plotly/Plotly.md)
+Even [Plotly](frontend/Reference/Plotly/Plotly.md):
 
 ```mathematica
 p = Plotly[{<|
-	"values" -> {19, 26, 10}, 
-	"labels" -> {"Residential", "Non-Residential", "Utility"}, 
-	"type" -> "pie"
+  "values" -> {19, 26, 10},
+  "labels" -> {"Residential", "Non-Residential", "Utility"},
+  "type" -> "pie"
 |>}]
 
-EventHandler[InputRange[0,100,10], PlotlyAnimate[p,   
+EventHandler[InputRange[0, 100, 10], PlotlyAnimate[p,   
   <|"data" -> {<|"values" -> {19, 26, #}|>},
     "traces" -> {0}
   |>, <||>]&
@@ -148,8 +150,7 @@ EventHandler[InputRange[0,100,10], PlotlyAnimate[p,
 ```
 
 ### Animation Machine
-
-A balls falling from the staircase
+Example: balls falling down a staircase
 
 ```mathematica @
 ballsteps = 
@@ -184,8 +185,8 @@ Module[{
 ]
 ```
 
-## Online examples
-See some interactive examples from __our blog page__ and demonstration project
+## Online Examples
+Check out some interactive examples from our blog and demo projects:
 - [TDS-THz in 10 lines](https://jerryi.github.io/wljs-docs/wljs-demo/mid-thz-tds/)
-- [Why fitting the raw data is so important](https://jerryi.github.io/wljs-demo/fitting_tds_ppt.html)
+- [Why fitting raw data matters](https://jerryi.github.io/wljs-demo/fitting_tds_ppt.html)
 

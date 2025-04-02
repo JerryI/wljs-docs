@@ -1,17 +1,17 @@
+
+
 > Type `.wlx` in the first line of an input cell
 
+This allows you to use [Wolfram Language XML](https://jerryi.github.io/wlx-docs/docs/Reference/WLX/) in your cell. It's especially useful when creating complex cell structures or enhancing them with the power of HTML, CSS, and JavaScript.
 
-It allows to use [Wolfram Language XML](https://jerryi.github.io/wlx-docs/docs/Reference/WLX/) in your cell. It comes handy when making a a complex cell structure or stylizing it using the power of HTML/CSS/JS.
-
-
-## Embed figures into a custom layout
-Plot a figure into a symbol __starting from the capital letter__
+## Embed Figures into a Custom Layout
+Plot a figure into a symbol **starting with a capital letter**:
 
 ```mathematica
-Figure = Plot[Sinc[5x], {x,-5,5}]
+Figure = Plot[Sinc[5x], {x, -5, 5}]
 ```
 
-then type in a new cell
+Then, in a new cell, type:
 
 ```jsx
 .wlx
@@ -21,7 +21,7 @@ then type in a new cell
     @keyframes tilt-shaking {
       0% { transform: rotate(0deg); }
       25% { transform: rotate(5deg); }
-      50% { transform: rotate(0eg); }
+      50% { transform: rotate(0deg); }
       75% { transform: rotate(-5deg); }
       100% { transform: rotate(0deg); }
     }
@@ -32,22 +32,22 @@ then type in a new cell
 </div>
 ```
 
-Then you plot will shake infinitely ;)
+Now your plot will shake infinitely! ;)
 
-## Making components
-Let us define some hybrid WL function
+## Creating Components
+Let's define a hybrid WL function:
 
 ```jsx
 .wlx
 
 Heading[Text_, OptionPattern[]] := With[{color = OptionValue["Color"]},
-	<h2 style="color: {color}"><Text/></h2>;
+  <h2 style="color: {color}"><Text/></h2>;
 ]
 
-Options[Heading] = {"Color"->"black"}
+Options[Heading] = {"Color" -> "black"}
 ```
 
-then we can use it in our layout
+You can now use it in your layout:
 
 ```jsx
 .wlx
@@ -58,10 +58,10 @@ then we can use it in our layout
 ```
 
 :::tip
-Utilize the power of WLX while making [Slides](frontend/Cell%20types/Slides.md) 
+Leverage the power of WLX when making [Slides](frontend/Cell%20types/Slides.md).
 :::
 
-All WL expressions __are accessible from there as well__
+All WL expressions **are accessible from within WLX**:
 
 ```jsx
 .wlx
@@ -71,17 +71,17 @@ GetTime := TextString[Now]
 <GetTime/>
 ```
 
-## Two-columns layout using Flexbox
-You can fine-tune the layout, since you are dealing with pure HTML and CSS. For example, here we have a slider and a plot aligned to a row
+## Two-Column Layout Using Flexbox
+You can fine-tune the layout since you're working directly with HTML and CSS. For example, here's a slider and a plot aligned in a row:
 
 ```jsx
 .wlx
 
-Module[{Slider = InputRange[0.1,1,0.1,0.5], Figure, lines},
-  EventHandler[Slider, Function[data, lines = {#, Sinc[#/data]}& /@ Range[-5,5,0.1]]];
+Module[{Slider = InputRange[0.1, 1, 0.1, 0.5], Figure, lines},
+  EventHandler[Slider, Function[data, lines = {#, Sinc[#/data]} & /@ Range[-5, 5, 0.1]]];
   Slider // EventFire;
 
-  Figure = Graphics[Line[lines // Offload], ImageSize->350];
+  Figure = Graphics[Line[lines // Offload], ImageSize -> 350];
 
   <div style="display: flex">
     <div><Slider/></div>

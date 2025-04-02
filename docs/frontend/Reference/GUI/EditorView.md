@@ -30,8 +30,8 @@ Blocks the editing mode. The default value is `False`
 ### `"Selectable"`
 Allows or blocks any selection and copying. The default is `True`
 
-### `"ForceUpdate"`
-Fully updates an editor when `expr` changes (rebuilds all widgets). By the default it is set to `False`, which simplifies an update strategy and has less overhead. 
+### `"FullReset"`
+Fully updates an editor when `expr` changes (rebuilds all widgets). By the default it is set to `False`, which simplifies an update strategy and has less overhead. However it might not work on the content with [Row](frontend/Reference/Formatting/Row.md), [Grid](frontend/Reference/Formatting/Grid.md). 
 
 ## Application
 If you want to show the dynamic symbols content, use it together with `ToString[expr, StandardForm]`

@@ -1,124 +1,124 @@
 ## FAQ
 
 ### How to *restart* chat
-Type and send a message
+Type and send the following message:
 
 ```
 reset chat
 ```
 
-### Ask to fix any errors
-When your cursor is inside a cell (no matter *javascript*, *wolfram language* or whatever) it is called `focused cell`.
+### Asking to fix any errors
+When your cursor is inside a cell (whether *JavaScript*, *Wolfram Language*, or any other), it is called the `focused cell`.
 
-AI can have an access to it. Mention __explicitly__
-> fix my errors in the focused cell
+AI can access it. Mention this explicitly:
 
+> Fix my errors in the focused cell
 
-### Fix typos in selected text
-When you select something in the cell, you can call AI bot to perform actions on a text. For example `Ctrl/Cmd + P` and 
+### Fixing typos in selected text
+When you select text inside a cell, you can ask the AI bot to perform actions on it. For example, press `Ctrl/Cmd + P` and type:
 
 > Fix selected
 
-or more explicitly
+or more explicitly:
 
 > Fix grammar in selected
 
-### Read or edit selected text
-AI can also see currently selected text. However, the information about language is not provided. By the default it assumes the the main language is WL. 
+### Reading or editing selected text
+AI can also access currently selected text. However, it does not receive information about the language. By default, it assumes the main language is WL.
 
-Ask for example
-> what is this symbol i selected?
+For example, you can ask:
 
+> What is this symbol I selected?
 
-### Remove/add cells
-You can drop a cursor in any cell and ask to remove all cells starting from the focused one for instance
+### Removing or adding cells
+You can place your cursor in any cell and request to remove all cells starting from the focused one:
 
-> remove all cells starting from the focused
+> Remove all cells starting from the focused
 
-### Say "do it" in a single message
-if assistant hesitates to apply changes to your cell and prints changes to a chat, just tell
-> apply changes
+### Saying "do it" in a single message
+If the assistant hesitates to apply changes and only prints them in chat, simply say:
 
-### Create new cells
-You can simply ask 
-> show me an example in Javascript
+> Apply changes
 
-by the default it will print it to the end of your notebook. To specify the place, one can mention current cell as `focused`
-> show me an example in Javascript and print it to a cell below focused
+### Creating new cells
+You can ask:
 
-### Ask to change attributes of cells
-It can also toggle input cells visibility
-> unhide all input markdown cells
+> Show me an example in JavaScript
 
+By default, it will be added to the end of your notebook. To specify a location, mention the `focused` cell:
 
-### Ask to evaluate something
-You can ask to evaluate specific type of cells. For example
-> evaluate all markdown cells
+> Show me an example in JavaScript and print it in the cell below the focused one
 
-or you can also chain more commands
+### Changing attributes of cells
+AI can toggle input cell visibility:
 
-> evaluate all markdown cells and hide inputs
+> Unhide all input markdown cells
 
-### Ask to redo something
-If an AI made a mistake or you need something different. Tell directly to edit the cell it created, i.e.
-> i need red background instead of white. edit your cell
+### Evaluating cells
+You can ask AI to evaluate specific types of cells. For example:
 
+> Evaluate all markdown cells
 
-### Ask to comment on something
-One can ask AI to check all code cells and print description to the notebook. 
+You can also chain commands:
+
+> Evaluate all markdown cells and hide inputs
+
+### Asking to redo something
+If AI made a mistake or if you want something different, ask it to edit the cell it created:
+
+> I need a red background instead of white. Edit your cell
+
+### Asking for comments
+You can ask AI to check all code cells and add descriptions:
 
 :::warning
-If you have a large cells or many small, consider it will cost you a lot of tokens
+If you have large cells or many small ones, this may use a lot of tokens.
 :::
 
-You can chain multiple commands
-> read all my cells and comment on them using Markdown. Insert your markdown cells at the corresponding places in the notebook. evaluate them and hide
+You can also chain commands:
 
+> Read all my cells and comment on them using Markdown. Insert your Markdown cells at the corresponding places in the notebook. Evaluate them and hide them.
 
-or if it sometimes print code blocks as well, we can mention not to do it directly
-> read all my cells and comment (no code blocks inside) on them using Markdown. Insert your markdown cells at the corresponding places in the notebook. evaluate them and hide
+If the AI prints code blocks as well, you can specify:
 
+> Read all my cells and comment (no code blocks) on them using Markdown. Insert your Markdown cells at the corresponding places in the notebook. Evaluate them and hide them.
 
-### Access to internet
-By the default AI can use Wolfram Alpha to get real-time data.
+### Accessing the internet
+By default, AI can use Wolfram Alpha to retrieve real-time data.
 
-> where am I?
-
+> Where am I?
 
 ### AI is not responding ⌛️
-Sometimes the operation takes 1-2 minutes to complete. If it is not the case, try to wake it up by sending a dummy message
+Sometimes operations take 1-2 minutes to complete. If that's not the case, try waking it up with a dummy message:
 
 > So?
 
-in the worst case
-- type and send `reset chat` to restart session
-- you have probably run out of tokens. Check OpenAI API page, then `Billing`
-
+If that doesn't work:
+- Type and send `reset chat` to restart the session.
+- You may have run out of tokens. Check the OpenAI API page under `Billing`.
 
 ## Note on cell types
-An assistant is aware of being in a notebook environment. The following cell types are described well in the initial system prompt
+The assistant is aware of being in a notebook environment. The following cell types are described in the initial system prompt:
 
 - [Input cell](frontend/Cell%20types/Input%20cell.md)
-- [Javascript](frontend/Cell%20types/Javascript.md)
+- [JavaScript](frontend/Cell%20types/JavaScript.md)
 - [HTML](frontend/Cell%20types/HTML.md)
 - [Slides](frontend/Cell%20types/Slides.md)
-- Mermaid diagrams
+- [Mermaid diagrams](frontend/Cell%20types/Mermaid.md)
 
-We also include the differences between Wolfram Mathematica and WLJS Notebook to the initial prompt including [Dynamics](frontend/Dynamics.md), [InputButton](frontend/Reference/GUI/InputButton.md), [InputRange](frontend/Reference/GUI/InputRange.md), [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) and some of the [Events](frontend/Reference/Misc/Events.md) system features.
+Additionally, differences between Wolfram Mathematica and WLJS Notebook are included in the initial prompt, covering topics such as [Dynamics](frontend/Dynamics.md), [InputButton](frontend/Reference/GUI/InputButton.md), [InputRange](frontend/Reference/GUI/InputRange.md), [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md), and various [Events](frontend/Reference/Misc/Events.md).
 
 ## Library
-We sorted out all additional information by topics for AI and placed it in a sort of database, what we call `AI Library`, you can find it in settings menu
+All additional information is sorted into an `AI Library`, accessible in the settings menu:
 
 ![](./../../../Screenshot%202024-09-02%20at%2012.03.25.png)
 
-This means that all those items are accessible on demand, and __it won’t use up your tokens if your request doesn’t match the topic__.
+This means AI can access relevant topics on demand __without using your tokens if your request does not match the topic__.
 
+## Prompt Examples
 
-## Prompt examples
-Here is a few typical examples 
-
-### Fixing errors
-For instance you typed something
+### Fixing Errors
+For example, if you type:
 
 ```mathematica title="cell"
 Plot[x, {x,0,1,0.1}]
@@ -126,36 +126,40 @@ Plot[x, {x,0,1,0.1}]
                ^^^
 ```
 
-Then, keeping your cursor in the cell, __open command palette__ by `Cmd/Ctrl+P` and typing 
+Then, with your cursor inside the cell, open the command palette with `Cmd/Ctrl+P` and type:
 
 ```
-fix my errors in focused cell
+Fix my errors in the focused cell
 ```
 
-or if an assistant hesitates to make changes, write in addition `apply changes` or `fix it in my cell`
+If the assistant hesitates to apply changes, add:
+
+```
+Apply changes
+```
 
 :::note
-Assistant can help you with any kind of used languages. Make sure that your cursor inside the correct cell
+The assistant can help with any language. Make sure your cursor is inside the correct cell.
 :::
 
-### Fixing grammar
-Simply ask
+### Fixing Grammar
+Simply ask:
 
 ```
-fix my grammar in the focused cell
+Fix my grammar in the focused cell
 ```
 
-and then if it does not apply changes to the current cell - ask as well
+If it does not apply changes, add:
 
 ```
-apply changes
+Apply changes
 ```
 
-### Helping with Dynamics
-An assistant is aware of new libraries used here. For example
+### Working with Dynamics
+The assistant is aware of new libraries. For example:
 
 ```
-make an dynamic example, where a green ball follows your cursor on a 2d graph
+Make a dynamic example where a green ball follows your cursor on a 2D graph
 ```
 
 ```mathematica title="sample output"
@@ -163,9 +167,7 @@ pt = {0.,0.};
 
 Graphics[{
   White, EventHandler[Rectangle[{-10,-10}, {10,10}], {
-    "mousemove" -> Function[pos,
-        pt = pos
-    ]
+    "mousemove" -> Function[pos, pt = pos]
   }],
   Green, Disk[pt // Offload, 0.5]
 }, PlotRange -> {{-10, 10}, {-10, 10}}]
@@ -173,14 +175,14 @@ Graphics[{
 
 ![](./../../../MovingBall%20video%20to%20gif.gif)
 
-### Make *something*
-Ask directly from the command palette what you want
+### Creating Code Examples
+Ask directly in the command palette:
 
 ``` title="prompt"
-make an example slide
+Make an example slide
 ```
 
-it will print a new [Slides](frontend/Cell%20types/Slides.md) cell
+This creates a new [Slides](frontend/Cell%20types/Slides.md) cell.
 
 ```jsx title="sample output"
 .slide
@@ -203,19 +205,14 @@ We hope you found this introduction useful.
 
 ![](./../../../Screenshot%202024-04-20%20at%2021.34.20.png)
 
-Or __to write Javascript code example__
+Or, for a JavaScript example with animation:
 
 ``` title="prompt"
-write some javascript example with animation
+Write some JavaScript with animation
 ```
 
 ```js title="sample output"
 .js
-let canvas = document.createElement('canvas');
-canvas.width = 200;
-canvas.height = 200;
-let ctx = canvas.getContext('2d');
-
 let posX = 0;
 let speed = 2;
 
@@ -227,148 +224,11 @@ function draw() {
   if (posX > canvas.width || posX < 0) speed *= -1;
 }
 
-let animFrame;
-function animate() {
-  draw();
-  animFrame = requestAnimationFrame(animate);
-}
-
 animate();
-
-this.ondestroy = () => {
-    cancelAnimationFrame(animFrame);
-};
-
-return canvas;
 ```
 
-![](./../../../MovingRectJs%20video.gif)
-
-Or HTML
-
-```
-show me example with HTML language. Print it to a new cell
-```
-
-```html title="sample output"
-.html
-<div>
-    <h1 class="text-2xl font-bold">My First Heading</h1>
-    <p>This is a paragraph in a div element.</p>
-</div>
-```
-
-![](./../../../Screenshot%202024-04-20%20at%2021.44.25.png)
-
-Or mermaid diagram
-
-```
-write a mermaid flow-type diagram with the following data: Frontend, which is connected to Backend using Websockets and on the backend Wolfram Language server is running
-```
-
-```mermaid title=".mermaid cell"
-graph TD
-    Frontend -->|Websockets| Backend
-    Backend -->|Runs on| WolframLanguageServer[Wolfram Language server]
-```
-
-
-### Asking to write an entire program
-Quite often it is quite risky, but with more popular languages like Javascript it can work very well. For example
-
-```
-how to capture data from webcam in Javascript and draw it to canvas. Print it to a new cell
-```
-
-which produces a fully working code
-
-```js title="sample output"
-.js
-// First, create elements for the video and canvas
-const video = document.createElement('video');
-const canvas = document.createElement('canvas');
-const context = canvas.getContext('2d');
-
-// Set video constraints
-canvas.width = 640;
-canvas.height = 480;
-
-// Use getUserMedia to access the webcam
-if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function(stream) {
-            video.srcObject = stream;
-            video.play();
-        })
-        .catch(function(error) {
-            console.log("Error accessing webcam: ", error);
-        });
-}
-
-// Draw the video frame to the canvas
-document.body.appendChild(video);
-video.addEventListener('play', function() {
-    (function draw() {
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        requestAnimationFrame(draw);
-    })();
-});
-
-// Return the canvas element to be rendered
-return canvas;
-```
-
-![](./../../../Screenshot%202024-04-20%20at%2022.25.27.png)
-
-:::warning
-This code does not stop even if you remove a cell. Please ask AI in addition
-
-```
-please modify it so that when i remove a cell it will also stop streaming
-```
-:::
-
-### Make a linear gradient for a div
-We have some [WLX](frontend/Cell%20types/WLX.md) cell with the following content
-
-```jsx
-.wlx
-
-<div class="flex w-full flex-row gap-x-4" style="align-items: center">
-  <img width="60" src="/attachments/image-a79.png"/>
-  <h1>Title of the talk</h1>
-  <div></div>
-</div>
-```
-
-then we select the last div
-
-```
-<div></div>
-```
-
-and use a prompt
-
-> make a linear gradient from the selected text with 3 colors (red, blue, green) horizontally. Height is 2rem
-
-AI applies the changes
-
-```jsx
-.wlx
-
-<div class="flex w-full flex-row gap-x-4" style="align-items: center">
-  <img width="60" src="/attachments/image-a79.png"/>
-  <h1>Title of the talk</h1>
-  <div style="background: linear-gradient(to right, red, blue, green); width: 100%; height: 2rem;"></div>
-</div>
-```
-
-![](./../../../Screenshot%202024-10-03%20at%2010.27.35.png)
-
-### Restart session
-If you need to flush the session, simply type in the chat window
+### Restarting the Session
+To flush the session, type:
 
 ```
 reset chat
-```
-

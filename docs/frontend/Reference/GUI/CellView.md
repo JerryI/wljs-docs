@@ -12,7 +12,7 @@ A low-level view component to spawn a cell wrapper (fully functional)
 CellView[content_String, opts___]
 ```
 
-where `content` is a string, that represents an expression needed by a view component of a cell. View-components are provided by different extensions such as [Slides](frontend/Exporting/Slides.md), [WLX](frontend/Cell%20types/WLX.md), [Markdown](frontend/Cell%20types/Markdown.md), [Javascript](frontend/Cell%20types/Javascript.md) and [Many more](frontend/Cell%20types/Many%20more.md) and used by the default to render the notebook in a window.
+where `content` is a string, that represents an expression needed by a view component of a cell. View-components are provided by different extensions such as [Static Slides](frontend/Exporting/Static%20Slides.md), [WLX](frontend/Cell%20types/WLX.md), [Markdown](frontend/Cell%20types/Markdown.md), [Javascript](frontend/Cell%20types/Javascript.md) and [Many more](frontend/Cell%20types/Many%20more.md) and used by the default to render the notebook in a window.
 
 ## Supported output forms
 - [StandardForm](frontend/Reference/Formatting/StandardForm.md)

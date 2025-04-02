@@ -1,8 +1,8 @@
 ---
 sidebar_position: 12
 ---
-## Image preview
-You can drop any image available in the folder of your notebook and type in a new cell its filename
+## Image Preview
+You can drop any image available in the folder of your notebook and type its filename in a new cell.
 
 ```shell
 randompic.png
@@ -10,14 +10,14 @@ randompic.png
 
 ![](../../imgs/Screenshot%202023-03-31%20at%2016.06.38.png)
 
-## Reading and writing files
-In principle you can __print the content of any file__ located in the notebook's folder by typing its name without line breaks
+## Reading and Writing Files
+In principle, you can __print the contents of any file__ located in the notebook's folder by typing its name without line breaks.
 
 ```
 filename.txt
 ```
 
-For writing this is the same, but the actual content goes from the next line
+For writing, the process is the same, but the actual content goes on the next line:
 
 ```
 filename.txt
@@ -26,7 +26,7 @@ Hello World
 
 ![](../../imgs/Screenshot%202023-03-31%20at%2016.07.58.png)
 
-Or, if you are writing a package, it will come handy
+Or, if you are writing a package, this might come in handy:
 
 ```mathematica title="cell 1"
 IR.wl
@@ -45,12 +45,13 @@ SetAttributes[Lexer, HoldAll]
 
 ![](../../imgs/Screenshot%202023-12-05%20at%2010.29.43.png)
 
-And then, it can be imported easily
+And then, it can be imported easily:
 
 ```mathematica title="cell 2"
 Get["IR.wl"];
 ```
 
 :::info
-Frontend detects the file extension and tries to find a proper syntax highlighting scheme.
+The frontend detects the file extension and tries to apply the appropriate syntax highlighting scheme.
 :::
+

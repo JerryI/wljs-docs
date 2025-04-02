@@ -2,11 +2,11 @@
 draft: false
 ---
 
-## Performance tips
-You can explicitly choose what will be interpreted on the frontend or backend. We have a few possibilities for our function inside `Line` expression
+## Performance Tips
+You can explicitly choose what will be interpreted on the frontend or backend. There are a few possibilities for our function inside the `Line` expression.
 
-### All load to Kernel
-For this one need to change code to
+### Full Load on the Kernel
+For this, one needs to modify the code to:
 
 ```mathematica
 EventHandler[InputRange[0,4,0.1], Function[data, 
@@ -14,22 +14,21 @@ EventHandler[InputRange[0,4,0.1], Function[data,
 		Table[{Cos[x], Sin[y x]}, {x,0,2Pi, 0.01}]
 	]
 ]];
-% // EventFire (* just to initialize *)
+% // EventFire (* Just to initialize *)
 ```
 
-The last line manually fires an event to initialize symbol `lines`. Then for the output we can write
+The last line manually fires an event to initialize the symbol `lines`. Then, for the output, we can write:
 
 ```mathematica
 Graphics[{Cyan, Line[lines // Offload]}]
 ```
 
-One can illustrate this binding as on a picture below
+This binding can be illustrated as shown in the image below:
 
 ![](../../../imgs/dynEx1.excalidraw.svg)
 
-
-### Using frontend
-One can move an entire `Table` to the browser's side. Let's discard our changes we made to
+### Using the Frontend
+One can move the entire `Table` computation to the browser's side. Let's discard our previous changes:
 
 ```mathematica
 EventHandler[InputRange[0,4,0.1], Function[data, 
@@ -38,35 +37,35 @@ EventHandler[InputRange[0,4,0.1], Function[data,
 % // EventFire
 ```
 
-##### Naive approach 1
-The obvious solution for output could be
+##### Naive Approach 1
+A straightforward solution for output could be:
 
 ```mathematica
 Graphics[{Cyan, Line[
-	Table[{Cos[x], Sin[Offload[v] x]}, {x,0,2$Pi$, 0.1}]
+	Table[{Cos[x], Sin[Offload[v] x]}, {x,0,2Pi, 0.1}]
 ]}]
 ```
 
-That will be __a horrible solution__ 👎🏼  
+This would be __a terrible solution__ 👎🏼  
 
 ![](../../../imgs/dynEx2.excalidraw.svg)
 
-Imagine, each time `Table` iterator `x` goes through the range of values, it creates a sublist of `Sin` and `Cos` functions, that contains dynamic variable `v`.  Then you end up with many instances of `v`. 
+Each time the `Table` iterator `x` goes through the range of values, it creates a sublist of `Sin` and `Cos` functions that contain the dynamic variable `v`. This results in multiple instances of `v`.
 
 :::danger
 
 ```mathematica
 Line[Table[Expression[Offload[symbol]], {i, 10}]]
 ```
-Creates `10` instances of `symbol`. `Line` function will be called __10__ times on each update of `symbol`!
+Creates `10` instances of `symbol`. The `Line` function will be called __10__ times on each update of `symbol`!
 :::
 
 :::danger
-Do not put dynamic symbols inside large `Table`. Try to minimize the number of its copies made.
+Avoid placing dynamic symbols inside large `Table` expressions. Minimize the number of copies created.
 :::
 
-##### Naive approach 2
-Ok lets try to improve a bit
+##### Naive Approach 2
+Let's try to improve it a bit:
 
 ```mathematica
 Graphics[{Cyan, Line[
@@ -74,12 +73,12 @@ Graphics[{Cyan, Line[
 ]}]
 ```
 
-This is also __horrible__ 👎🏼  Symbol `Table` does the same thing being executed on __browser's side as well__
+This is also __inefficient__ 👎🏼  The `Table` function still runs on the __browser's side__.
 
 ![](../../../imgs/dynEx3.excalidraw.svg)
 
-##### Optimized version
-One can minimize the number of instances to just 1 using `With`, as it was shown in the example above
+##### Optimized Version
+One can reduce the number of instances to just one using `With`, as shown in the example above:
 
 ```mathematica
 Graphics[{Cyan, Line[
@@ -90,7 +89,7 @@ Graphics[{Cyan, Line[
 }]
 ```
 
-This __will save up a lot of resources__ 👍🏼 
+This __saves a lot of resources__ 👍🏼  
 
 ![](../../../imgs/dynEx4.excalidraw.svg)
 
@@ -98,40 +97,40 @@ This __will save up a lot of resources__ 👍🏼
 ```mathematica
 Line[With[{y = symbol}, Table[AnyExpression[y], {i, 10}]]]
 ```
-Creates only 1 instance of `symbol`. A `Line` function will be called __1__ time per update of a `symbol`.
+Creates only 1 instance of `symbol`. The `Line` function will be called __once__ per update of `symbol`.
 :::
 
 :::tip
 ```mathematica
 Line[symbol//Offload], ... Line[symbol//Offload]
 ```
-This is ok, each `Line` is bounded to its own `symbol` instance. Therefore on update of `symbol`, each `Line` expression will be reevaluated once.
+This is acceptable since each `Line` is bound to its own `symbol` instance. Therefore, on an update of `symbol`, each `Line` expression will be reevaluated once.
 :::
 
-### If duplicating is unavoidable
-If you have to update two properties of a dynamic expression such as [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) which are `VertexColors` and list of vertices for this example, it is unavoidable to use two [Offload](frontend/Reference/Interpreter/Offload.md) s there
+### If Duplicating Is Unavoidable
+If you need to update two properties of a dynamic expression, such as [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) (which has `VertexColors` and a list of vertices), it is unavoidable to use two [Offload](frontend/Reference/Interpreter/Offload.md) calls:
 
 ```mathematica
 GraphicsComplex[vertices // Offload, {Polygon[triangles]}, "VertexColors"->Offload[colors]]
 ```
 
-then if later in the code
+If later in the code:
 
 ```mathematica
 vertices = ...;
 colors = ...;
 ```
 
-will cause the reevaluation of [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) __two times__ for the same set of data. However, there is a way on how to suppress the second one using options of [Offload](frontend/Reference/Interpreter/Offload.md)
+Both `vertices` and `colors` will cause the reevaluation of [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) __twice__ for the same data set. However, reevaluation can be reduced using options of [Offload](frontend/Reference/Interpreter/Offload.md):
 
 ```mathematica
 GraphicsComplex[vertices // Offload, {Polygon[triangles]}, "VertexColors"->Offload[colors, "Static"->True]]
 ```
 
-Here `colors` __will not be bounded to__ `GraphicsComplex`. That results in __only a single reevaluation__ per updates of `colors` and `vertices`. However a new values is going to be read anyway once `vertices` has been updated.
+Here, `colors` __will not be bound to__ `GraphicsComplex`. This results in __only a single reevaluation__ per update of `colors` and `vertices`. However, new values will still be read once `vertices` has been updated.
 
-### Possible pitfall with `With`
-There might be temptation to wrap `Line` expression inside `With` as well, like that
+### A Possible Pitfall with `With`
+There might be a temptation to wrap the `Line` expression inside `With`, like this:
 
 ```mathematica
 Graphics[{Cyan, With[{y = v}, 
@@ -141,20 +140,23 @@ Graphics[{Cyan, With[{y = v},
 ] // Offload}]
 ```
 
-__This will not work at all__ 👎🏼 because the binding will occur between `Graphics` and `v` objects
+__This will not work at all__ 👎🏼 because the binding will occur between `Graphics` and `v` objects.
 
 ![](../../../imgs/dynEx5.excalidraw.svg)
 
-*Think about an onion from the Shrek movie*
+*Think of an onion from the Shrek movie!*
 
+## Numeric Arrays
+:::info
+It is usually done automatically by Wolfram Language if the data has been generated using pure functions.
+:::
 
-## Numeric arrays
-When it goes to transfer any points as nested lists, it is better to wrap them into `NumericArray`. It tells WLJS Interpreter on the browser, that we can expect only numbers or lists of numbers, there which reduces the load while parsing them.
+When transferring points as nested lists, it is better to wrap them in `NumericArray`. This informs the WLJS Interpreter in the browser that only numbers or lists of numbers are expected, reducing the load during parsing.
 
-For example - [dynamic](frontend/Reference/Interpreter/Offload.md) symbols
+For example, using [dynamic](frontend/Reference/Interpreter/Offload.md) symbols:
 
 ```mathematica
-(* every update *)
+(* Every update *)
 symbol = someFunctionThatReturnsList
 ```
 
@@ -162,10 +164,10 @@ symbol = someFunctionThatReturnsList
 
 ![](./../../../No%20Numeric%20Array.gif)
 
-then using `NumericArray`
+By using `NumericArray`:
 
 ```mathematica
-(* every update *)
+(* Every update *)
 symbol = NumericArray[someFunctionThatReturnsList]
 ```
 
