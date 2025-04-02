@@ -61,7 +61,7 @@ We use KaTeX as the rendering engine. To write an equation, wrap it inside `$` f
 .slide
 
 $$
-E = \hbar \omega
+E = \\hbar \\omega
 $$
 ```
 

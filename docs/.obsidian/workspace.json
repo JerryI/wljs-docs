@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Wolfram Language.md",
+                "file": "frontend/Cell types/WLX.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Wolfram Language"
+              "title": "WLX"
             }
           },
           {
@@ -133,7 +133,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 294.5
+    "width": 325.5
   },
   "right": {
     "id": "a752dd5ced191c4a",
@@ -235,8 +235,23 @@
   },
   "active": "ad37bb78993555b9",
   "lastOpenFiles": [
-    "frontend/Symbolic programming.md",
+    "frontend/Cell types/Slides.md",
+    "frontend/Cell types/Markdown.md",
+    "frontend/Advanced/Slides/Widgets on slides.md",
+    "frontend/Advanced/Slides/Slides.md",
+    "frontend/Advanced/Slides/Mermaid Diagrams.md",
+    "frontend/Advanced/Slides/Building components.md",
+    "frontend/Advanced/Slides/Backgrounds.md",
+    "frontend/Advanced/Slides/Fragments.md",
+    "frontend/Advanced/Slides/animations.md",
+    "frontend/Advanced/Slides/Animated equations.md",
+    "frontend/Advanced/Dynamics/Prototyping.md",
+    "frontend/Advanced/Dynamics/Offloading calculations.md",
+    "frontend/Advanced/Components library/Focus button.md",
+    "frontend/Advanced/Components library/JoyCon presenter tool.md",
+    "frontend/Advanced/Components library/QR Code.md",
     "frontend/Wolfram Language.md",
+    "frontend/Symbolic programming.md",
     "frontend/Overview.md",
     "frontend/instruction.md",
     "frontend/Guidelines.md",
@@ -247,21 +262,6 @@
     "Screenshot 2025-04-02 at 10.11.33.png",
     "frontend/Command palette.md",
     "frontend/Troubleshooting/Troubleshooting.md",
-    "frontend/Importing/Wolfram Language.md",
-    "frontend/Importing/URL Protocol.md",
-    "frontend/Importing/Mathematica.md",
-    "frontend/Importing/Markdown.md",
-    "frontend/Importing/HTML.md",
-    "frontend/Exporting/Static Slides.md",
-    "frontend/Importing/Regular files.md",
-    "frontend/Exporting/PDF.md",
-    "frontend/Exporting/Regular files.md",
-    "frontend/Exporting/Mathematica.md",
-    "frontend/Exporting/Markdown.md",
-    "frontend/Exporting/Figures.md",
-    "frontend/Exporting/Embed project files.md",
-    "frontend/Exporting/Dynamic HTML.md",
-    "frontend/Exporting/Deploy to Github Pages.md",
     "frontend/Advanced/Dynamics/Transform native plot functions/index.mdx",
     "Screenshot 2025-03-29 at 17.27.13.png",
     "frontend/Reference/GeoGraphics",

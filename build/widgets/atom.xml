@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wljs.io/widgets</id>
-    <title>WLJS Notebook | A Next-Generation Dynamic Notebook Interface Blog</title>
+    <title>WLJS Notebook Blog</title>
     <updated>2025-01-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wljs.io/widgets"/>
-    <subtitle>WLJS Notebook | A Next-Generation Dynamic Notebook Interface Blog</subtitle>
+    <subtitle>WLJS Notebook Blog</subtitle>
     <icon>https://wljs.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Musical scales and chords maker]]></title>

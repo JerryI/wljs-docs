@@ -39,7 +39,7 @@ You can then use it on your slides as if it were a normal tag:
 
 The actual content
 
-Maybe some equations $m \mathbf{a} = \mathbf{F}$
+Maybe some equations $m \\mathbf{a} = \\mathbf{F}$
 ```
 
 Unfortunately, it is tricky to use standard Markdown inside components, because it requires carriage returns between XML/HTML and Markdown tags, which are trimmed by default. However, for equations, it still works:
@@ -161,12 +161,13 @@ But nothing stops you from using plain text:
 # Title
 First column
   
-  <Identity>
+<Identity>
 
 # Other title
 Second one
     
-  </Identity>
+</Identity>
+
 </Columns>
 ```
 
