@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8de808dacd8ee658",
+        "id": "b3a34634895f3b61",
         "type": "tabs",
         "children": [
           {
-            "id": "e5e660c937a34c0b",
+            "id": "7ed5bf79a852e0a4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2025-03-02-ultimate-ppt/index.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "index"
+              "title": "New tab"
             }
           }
         ]
@@ -163,8 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e5e660c937a34c0b",
+  "active": "7ed5bf79a852e0a4",
   "lastOpenFiles": [
+    "2025-03-02-ultimate-ppt/index.md",
+    "partypeople-ezgif.com-video-to-gif-converter.gif",
+    "procedural-ezgif.com-video-to-gif-converter.gif",
+    "dummy-ezgif.com-video-to-gif-converter.gif",
     "Screenshot 2025-04-02 at 16.29.13.png",
     "Screenshot 2025-04-02 at 16.24.19.png",
     "Screenshot 2025-04-02 at 16.19.38.png",
@@ -172,11 +172,6 @@
     "Screenshot 2025-04-02 at 16.16.41.png",
     "Screenshot 2025-04-02 at 16.15.38.png",
     "Screenshot 2025-04-02 at 16.14.46.png",
-    "Screenshot 2025-04-02 at 16.13.38.png",
-    "Screenshot 2025-04-02 at 16.12.39.png",
-    "Screenshot 2025-04-02 at 16.12.11.png",
-    "Screenshot 2025-04-02 at 16.11.11.png",
-    "2025-03-02-ultimate-ppt/index.md",
     "2024-10-25-rtx-logo.md",
     "2025-01-08-earth/index.mdx",
     "2025-03-02-ultimate-ppt",

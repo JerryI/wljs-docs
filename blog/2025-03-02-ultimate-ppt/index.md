@@ -152,7 +152,7 @@ Feels like a cross between Beamer and JSX. Now let’s see how to implement it.
 
 JSX/React means adopting frontend tooling (Vite, bundlers, etc.), which may be too much overhead for quick educational material. Plus, JavaScript isn’t ideal for scientific plotting. Python, R, Julia, or even MATLAB often provide a smoother experience.
 
-But as of 2024, **no platform beats Wolfram Mathematica** for producing clean, precise, interactive plots with minimal setup.
+But as of 2025, **no platform beats Wolfram Mathematica** for producing clean, precise, interactive plots with minimal setup.
 
 ```mathematica
 ContourPlot[Cos[x] + Cos[y], {x, 0, 4 Pi}, {y, 0, 4 Pi}]
@@ -192,7 +192,7 @@ Or make it a reusable component. This is where [Wolfram Language XML](https://je
 
 ---
 
-## TL;DR – How to Code Presentation Slides 🛝
+## TL;DR – How to Code Presentation Slides 
 
 ### Environment: [WLJS Notebook](https://jerryi.github.io/wljs-docs/)
 
@@ -515,10 +515,10 @@ Wolfram supports LaTeX rendering directly. Just avoid single backslashes unless 
 ## LaTeX
 
 $$
-\begin{align*}
-\mathbf{E}(t,x) &= \sum_{\omega} \mathbf{E}_0^{\omega} ~\exp\Big( i\omega t - \frac{i\hat{n}(\omega) \omega x}{c}\Big) \\
-&= \sum\mathbf{E}_0^{\omega} \colorbox{white}{$\exp(-\frac{\alpha x}{2})$} ~\exp\Big(i\omega t - \frac{i n \omega x}{c}\Big)
-\end{align*}
+\\begin{align*}
+\\mathbf{E}(t,x) &= \\sum_{\omega} \\mathbf{E}_0^{\omega} ~\\exp\\Big( i\\omega t - \\frac{i\\hat{n}(\\omega) \\omega x}{c}\\Big) \\\\
+&= \\sum\\mathbf{E}_0^{\\omega} \\colorbox{white}{$\\exp(-\\frac{\\alpha x}{2})$} ~\\exp\\Big(i\\omega t - \\frac{i n \\omega x}{c}\\Big)
+\\end{align*}
 $$
 ```
 
@@ -530,9 +530,9 @@ Use the `data-eq-speed` attribute for animated reveal:
 
 ```markdown
 $$
-\begin{align*}
+\\begin{align*}
 ...your equation here...
-\end{align*}
+\\end{align*}
 $$ <!-- .element: data-eq-speed="0.1" -->
 ```
 
@@ -797,10 +797,11 @@ PlotWidget[OptionsPattern[]] := Module[{
   data = OptionValue["DataA"],
   disk = OptionValue["DataA"] // Last
 },
+
   With[{
     Canvas = Graphics[{
       ColorData[97][1], Line[data // Offload],
-      ColorData[97][3], Disk[disk // Offload, 0.5]
+      ColorData[97][3], Disk[disk // Offload, {0.4,0.05}]
     }, Axes -> True, ImageSize -> 500, PlotRange -> {{-0.2, 1.1 5 Pi}, 1.1 {-1, 1}},
        TransitionDuration -> 500],
     uid = CreateUUID[],
@@ -849,10 +850,10 @@ Options[PlotWidget] = {"DataA" -> {}, "DataB" -> {}};
 
 ---
 
-Going back?
+# Second slide
 ```
 
-![Reactive Slide with Fragment](https://habrastorage.org/getpro/habr/upload_files/040/a5b/af2/040a5baf23ce9272ebc8f48f0767291a.gif)
+![](./../dummy-ezgif.com-video-to-gif-converter.gif)
 
 ---
 
@@ -998,9 +999,16 @@ It will be animated till slide is visible
 Now the animation stops
 ```
 
-![Animated Background](https://habrastorage.org/getpro/habr/upload_files/339/e25/2f5/339e252f5bcdcee2c2c8da886234be53.gif)
+![](./../procedural-ezgif.com-video-to-gif-converter.gif)
 
 Use CSS `filter` to blur it if needed.
+
+It might looks like an overkill, but in this form it does the following
+
+- ensures a low CPU usage;
+- component-like behaviour, i.e. you can copy and paste it to any presentation and reuse;
+- stops animation if slide is not visible or removed;
+- shares a single animation trigger between all curves and moving objects
 
 ---
 
@@ -1063,7 +1071,7 @@ EventHandler[Ev, {
 <Party />
 ```
 
-![Confetti Demo](https://habrastorage.org/getpro/habr/upload_files/7b1/4d8/046/7b14d80461c12afa7059ab98cc76491d.gif)
+![](./../partypeople-ezgif.com-video-to-gif-converter.gif)
 
 ---
 
@@ -1106,7 +1114,7 @@ What’s *not*:
 
 Static HTML is great, but what if you want the sliders and interactivity **without** the kernel?
 
-That’s where **dynamic HTML export** comes in. It works in two phases: sniffing and sampling.
+That’s where [**dynamic HTML export**](https://wljs.io/frontend/Exporting/Dynamic%20HTML) comes in. It works in two phases: sniffing and sampling.
 
 ---
 
@@ -1174,11 +1182,11 @@ This approach blends code and content into a single, powerful system. At a glanc
 - Simpler than PowerPoint for tech-heavy talks
 - Fully reproducible (every visual has traceable code)
 - Runs in any browser—no dependencies
-- Supports dynamic or static export
+- Supports dynamic or static export to a single HTML file (free of the license restrictions)
 
-Markdown becomes your structure, Wolfram Language your engine, and WLJS Notebook your canvas. With a little setup, you can focus on content—not formatting.
+Markdown becomes your structure, Wolfram Language your engine (sometimes with a help of Javascript). With a little setup, you can focus on content—not formatting.
 
-And yes, interactivity makes learning and presenting way more engaging. Your students and colleagues will thank you.
+And yes, interactivity makes learning and presenting way more engaging. Your students and colleagues will thank you ☺️
 
 ---
 
