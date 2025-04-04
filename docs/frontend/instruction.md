@@ -158,7 +158,7 @@ $\\LaTeX$ is also supported
 [⬇️ __Download WLJS Notebook__](https://github.com/JerryI/wolfram-js-frontend/releases)
 
 💻 Available for **Windows, macOS, and Linux**  
-🚀 Comes with an **auto-updater & CLI support**
+🚀 Comes with an **auto-updater**
 
 <div style={{textAlign: 'center'}}>
 
