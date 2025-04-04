@@ -70,7 +70,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -159,7 +160,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7ed5bf79a852e0a4",
+  "active": "5759ed5b994729f8",
   "lastOpenFiles": [
     "2025-03-02-ultimate-ppt/index.md",
     "partypeople-ezgif.com-video-to-gif-converter.gif",

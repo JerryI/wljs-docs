@@ -70,9 +70,3 @@ Manipulate[
 ```
 
 ![](./../../../Screenshot%202025-04-02%20at%2010.11.33.png)
-## Portability
-`Manipualte` __cannot be exported__ to [Static HTML](frontend/Exporting/Static%20HTML.md), ~~however, [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) __is possible__ to keep the functionality working, but the file size might be quite large.~~
-
-:::caution
-Due to garbage collection problem, it is no longer possible to export using dynamic mode. Please write to Github issues, if you consider this problem important. Apart from that, [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) as well as [ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md) will work properly being exported using dynamic mode.
-:::

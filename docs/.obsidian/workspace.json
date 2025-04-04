@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Cell types/WLX.md",
+                "file": "frontend/Advanced/Slides/Building components.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WLX"
+              "title": "Building components"
             }
           },
           {
@@ -108,10 +108,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "InterpretationBox",
+                "query": "Manipulate",
                 "matchingCase": true,
                 "explainSearch": true,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical"
               },
@@ -129,7 +129,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -235,6 +236,14 @@
   },
   "active": "ad37bb78993555b9",
   "lastOpenFiles": [
+    "frontend/Development/API/REST.md",
+    "frontend/Exporting/Dynamic HTML.md",
+    "Untitled.md",
+    "frontend/Exporting/Static HTML.md",
+    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+    "frontend/Reference/Plotting Functions/ManipulateParametricPlot.md",
+    "frontend/Reference/Interpreter/Manipulate.md",
+    "frontend/Cell types/WLX.md",
     "frontend/Cell types/Slides.md",
     "frontend/Cell types/Markdown.md",
     "frontend/Advanced/Slides/Widgets on slides.md",
@@ -253,15 +262,7 @@
     "frontend/Wolfram Language.md",
     "frontend/Symbolic programming.md",
     "frontend/Overview.md",
-    "frontend/instruction.md",
-    "frontend/Guidelines.md",
-    "frontend/Expressions representation.md",
-    "frontend/Dynamics.md",
-    "frontend/Reference/Interpreter/Refresh.md",
-    "frontend/Reference/Interpreter/Manipulate.md",
     "Screenshot 2025-04-02 at 10.11.33.png",
-    "frontend/Command palette.md",
-    "frontend/Troubleshooting/Troubleshooting.md",
     "frontend/Advanced/Dynamics/Transform native plot functions/index.mdx",
     "Screenshot 2025-03-29 at 17.27.13.png",
     "frontend/Reference/GeoGraphics",
