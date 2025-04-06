@@ -241,7 +241,6 @@ const config = {
       
     }),
     plugins: [
-      
       [
         '@docusaurus/plugin-content-blog',
         {

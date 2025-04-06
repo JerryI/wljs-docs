@@ -1,5 +1,7 @@
 ## Motivation
 
+
+
 ### Compress and reuse large expressions
 Is intended to reduce the load to on the frontend by packing a large Wolfram Expressions like [Graphics](frontend/Reference/Graphics/Graphics.md) with all its data to a single line reference [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) or [FrontEndRef](frontend/Reference/Frontend%20Objects/FrontEndRef.md), which can be interpreted later by the editor in the cell. 
 
@@ -24,6 +26,15 @@ Defined [StandardForm](frontend/Reference/Formatting/StandardForm.md) and [WLX](
 :::note
 On especially large objects we apply `zlib` compression.
 :::
+
+### A shortcut for Javascript functions to work
+Following the guide [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md) to run Javascript function, one has to define an output form properly (using [ViewBox](frontend/Reference/Formatting/Low-level/ViewBox.md) or others). Since [FrontEndExecutable](frontend/Reference/Frontend%20Objects/FrontEndExecutable.md) has a predefined output forms for the most cases, it is easier to wrap any
+
+```mathematica
+MyJSFunction[] // CreateFrontEndObject
+```
+
+to quickly see the result of the evaluation.
 
 ## Properties
 1. It does not alter the original expression.

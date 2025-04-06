@@ -39,3 +39,7 @@ Use [Placed](frontend/Reference/Formatting/Placed.md) to adjust the position of 
 Legended[1/2, Placed[SwatchLegend[{Red}, {"Number"}], Before]]
 ```
 
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Formatting/StandardForm.md)
+- [WLXForm](frontend/Reference/Formatting/WLXForm.md)

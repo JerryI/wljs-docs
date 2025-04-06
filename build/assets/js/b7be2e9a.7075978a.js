@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwlx_docs=self.webpackChunkwlx_docs||[]).push([[29152],{23144:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/releases/page/2","page":2,"postsPerPage":15,"totalPages":2,"totalCount":16,"previousPage":"/releases","blogDescription":"Release notes and showcases","blogTitle":"WLJS Notebook Releases"}}')}}]);

@@ -1,7 +1,8 @@
 {
-  "label": "Importing formats",
+  "label": "Import formats",
   "position": 11,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "title": "Import formats"
   }
 }

@@ -44,3 +44,7 @@ Module[{radius = 10.0},
 ```
 
 ![](./../../../collapse-ezgif.com-video-to-gif-converter.gif)
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Formatting/StandardForm.md)
+- [WLXForm](frontend/Reference/Formatting/WLXForm.md)

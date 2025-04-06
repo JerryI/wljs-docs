@@ -16,6 +16,10 @@ In general you can thing about a standalone widget if it was an output of a sing
 
 Apart from that the program for the widget is just a plain WLJS notebook. You can leave there cells for testing, debugging with no impact.
 
+:::tip
+Use [WLX](frontend/Cell%20types/WLX.md) cell as the output
+:::
+
 ### Example 1
 Let's write the simples possible interactive widget 
 

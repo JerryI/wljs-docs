@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Slides/Building components.md",
+                "file": "frontend/Exporting/Standalone Widgets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Building components"
+              "title": "Standalone Widgets"
             }
           },
           {
@@ -108,7 +108,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Manipulate",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -129,8 +129,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -236,6 +235,21 @@
   },
   "active": "ad37bb78993555b9",
   "lastOpenFiles": [
+    "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
+    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
+    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
+    "frontend/Reference/Interpreter/FrontEditorSelected.md",
+    "frontend/Reference/Frontend Objects/CreateFrontEndObject.md",
+    "frontend/Reference/Interpreter/FrontEndVirtual.md",
+    "frontend/Reference/Formatting/TabView.md",
+    "frontend/Reference/Formatting/Placed.md",
+    "frontend/Reference/Formatting/Legended.md",
+    "frontend/Reference/Formatting/Labeled.md",
+    "frontend/Reference/Formatting/BarLegend.md",
+    "frontend/Reference/Formatting/Column.md",
+    "frontend/Reference/Formatting/Bra.md",
+    "frontend/Reference/Formatting/Interpretation.md",
+    "frontend/Advanced/Slides/Building components.md",
     "frontend/Development/API/REST.md",
     "frontend/Exporting/Dynamic HTML.md",
     "Untitled.md",
@@ -247,21 +261,6 @@
     "frontend/Cell types/Slides.md",
     "frontend/Cell types/Markdown.md",
     "frontend/Advanced/Slides/Widgets on slides.md",
-    "frontend/Advanced/Slides/Slides.md",
-    "frontend/Advanced/Slides/Mermaid Diagrams.md",
-    "frontend/Advanced/Slides/Building components.md",
-    "frontend/Advanced/Slides/Backgrounds.md",
-    "frontend/Advanced/Slides/Fragments.md",
-    "frontend/Advanced/Slides/animations.md",
-    "frontend/Advanced/Slides/Animated equations.md",
-    "frontend/Advanced/Dynamics/Prototyping.md",
-    "frontend/Advanced/Dynamics/Offloading calculations.md",
-    "frontend/Advanced/Components library/Focus button.md",
-    "frontend/Advanced/Components library/JoyCon presenter tool.md",
-    "frontend/Advanced/Components library/QR Code.md",
-    "frontend/Wolfram Language.md",
-    "frontend/Symbolic programming.md",
-    "frontend/Overview.md",
     "Screenshot 2025-04-02 at 10.11.33.png",
     "frontend/Advanced/Dynamics/Transform native plot functions/index.mdx",
     "Screenshot 2025-03-29 at 17.27.13.png",

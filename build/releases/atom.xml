@@ -2,11 +2,343 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wljs.io/releases</id>
     <title>WLJS Notebook Blog</title>
-    <updated>2025-03-28T00:00:00.000Z</updated>
+    <updated>2025-04-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wljs.io/releases"/>
     <subtitle>WLJS Notebook Blog</subtitle>
     <icon>https://wljs.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Release notes *2.7.2*]]></title>
+        <id>https://wljs.io/releases/2025/04/06/2.7.2</id>
+        <link href="https://wljs.io/releases/2025/04/06/2.7.2"/>
+        <updated>2025-04-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[🔥 What’s New]]></summary>
+        <content type="html"><![CDATA[<p>🔥 What’s New</p>
+<ul>
+<li>WebGL Hardware Acceleration – Smoother GraphicsComplex rendering for DensityPlot, ContourPlot, and more.</li>
+<li>Experimental Texture Support – 2D GraphicsComplex now supports Texture mapping.</li>
+<li>Placed with Legended – Fully supported for more flexible legend positioning.</li>
+<li>TeXForm Returns – Convert, import, and render TeX in markdown cells.</li>
+<li>GeoGraphics Raster Support – Improved rendering with full rasterization.</li>
+<li>ImageUpscaling Option – Better quality when using Rasterize (Desktop App only).</li>
+<li>WLJS Interpreter Enhancements – Improved support for dynamic/numeric arrays and Offload.</li>
+<li>Improved HTML Export – Manipulate now works offline with better memory management.</li>
+<li>Organized Examples &amp; Guides – Revamped structure for easier learning (more content coming).</li>
+</ul>
+<p>⸻</p>
+<div>
+<style>
+  .balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+  from {transform: translateY(100vh);
+  opacity: 1;}
+  to {transform: translateY(-300vh);
+  opacity: 0;}
+}
+#balloon-container {
+  height: 100vh;
+  top: 0;
+  position:fixed;
+  bottom: 0;
+  z-index: -99;  
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+}
+</style>
+
+<div id="balloon-container">
+</div></div>
+<!-- -->
+<a href="https://wljs.io/0a304d98fd3df668e77562824923e94d.wln" class="p-2 text-xs w-full flex ring-1 ring-inset text-gray-600 shadow ring-gray-300 bg-gray-300 my-2">Download original notebook <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 ml-auto" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17 17h.01m.39-3h.6c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C21 15.602 21 16.068 21 17s0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C19.398 20 18.932 20 18 20H6c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C3 18.398 3 17.932 3 17s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C4.602 14 5.068 14 6 14h.6m5.4 1V4m0 11-3-3m3 3 3-3"></path></svg></a>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">
+const balloonContainer = document.getElementById("balloon-container");
+
+function random(num) {
+  return Math.floor(Math.random() * num);
+}
+
+function getRandomStyles() {
+  var r = random(255);
+  var g = random(255);
+  var b = random(255);
+  var mt = random(200);
+  var ml = random(50);
+  var dur = random(5) + 5;
+  return `
+  background-color: rgba(${r},${g},${b},0.7);
+  color: rgba(${r},${g},${b},0.7); 
+  box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite
+  `;
+}
+
+function createBalloons(num) {
+  for (var i = num; i &gt; 0; i--) {
+    var balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.cssText = getRandomStyles();
+    balloonContainer.append(balloon);
+  }
+}
+
+function removeBalloons() {
+  balloonContainer.style.opacity = 0;
+  setTimeout(() =&gt; {
+    balloonContainer.remove()
+  }, 500)
+}
+
+createBalloons(10);
+setTimeout(removeBalloons, 15000);
+
+return '';
+</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ui-update-resizable-sidebar">UI Update: resizable sidebar!<a href="https://wljs.io/releases/2025/04/06/2.7.2#ui-update-resizable-sidebar" class="hash-link" aria-label="Direct link to UI Update: resizable sidebar!" title="Direct link to UI Update: resizable sidebar!">​</a></h2>
+<p>Just drag ;)</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-acceleration-of-graphicscomplex">Hardware acceleration of GraphicsComplex<a href="https://wljs.io/releases/2025/04/06/2.7.2#hardware-acceleration-of-graphicscomplex" class="hash-link" aria-label="Direct link to Hardware acceleration of GraphicsComplex" title="Direct link to Hardware acceleration of GraphicsComplex">​</a></h2>
+<p>2D version of <code>GraphicsComplex</code> featured in <code>DensityPlot</code> and many others was reimplemented in WebGL. We combine SVG and raster graphics to get the best of both worlds</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">ContourPlot[Cos[x] + Cos[y], {x, 0, 4 Pi}, {y, 0, 4 Pi}, PlotLegends-&gt;Automatic]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(Legended[ToExpression[FrontEndRef["9f76f44f-5efb-451f-87ff-5eaf780d3f86"], InputForm], Placed[BarLegend[{Blend["WL13DefaultDensityGradient", #1] &amp; , {-2., 2.}}, {{-1.5, Directive[GrayLevel[0], Opacity[0.5], CapForm["Butt"]]}, {-1., Directive[GrayLevel[0], Opacity[0.5], CapForm["Butt"]]}, {-0.5, Directive[GrayLevel[0], Opacity[0.5], CapForm["Butt"]]}, {0., Directive[GrayLevel[0], Opacity[0.5], CapForm["Butt"]]}, {0.5, Directive[GrayLevel[0], Opacity[0.5], CapForm["Butt"]]}, {1., Directive[GrayLevel[0], Opacity[0.5], CapForm["Butt"]]}, {1.5, Directive[GrayLevel[0], Opacity[0.5], CapForm["Butt"]]}, {2., Directive[GrayLevel[0], Opacity[0.5], CapForm["Butt"]]}}, LabelStyle -&gt; {}, LegendLayout -&gt; "Column", LegendMarkerSize -&gt; 225, ScalingFunctions -&gt; {Identity, Identity}, Charting`AxisLabel -&gt; None, Charting`TickSide -&gt; Right, ColorFunctionScaling -&gt; True], After, Identity]])(*,*)(*"1:eJzFVE1P3DAQTaF8VVSCilNvSFxXgrKwy4nCfqBK4UNrVK71xuPFwtjIcSjpnys/Bf4BR46diXeXTcS5yWHkGb+Z9yZR3ubQDuR8FEXpZww/FfzuQmId99axJazEMAIjvsk5gnzC0BMK7wgoP1DtC4a+s8b3jOg9QJJ5PtTAtrB8IFv7stmUjT2Qw0Zzb0c22i1JKZet9rbYle39MPgjhkGGbct0AC7Ojc6L6qXLIOhbxHCheQJCrlBO4Zi7IPBtTKxSH5TRrH5mEq+sCfcL1KIRzr7i6Sre2e2C5Jn2XTCp8vmJ40KBGffTNKatV5SVCVwUnsfJ4btcLgl4D/36NyxCwrvKAQq7h0BFJSTPY7gHrQgc6vQFzu94gtrGQ54O3246/K5v3S0jnuPMv8/6UgvrUy2sOKqOXQ9r+a61sL7Wwoq/1/9iJRcqfC7mQ9DM5xpkNCupAl2NJh4Z89xmnpFNdazObk0FuTZFnnJ3A46pP6Ceo1lrmeJYwrUyo4l7peW3UjjbD4FGhduVksoo8ubONXceZ/06elBpsVRxf2YNVNDrs+hLldwwJaDwzIEaXVcX3wh7WjcROdY8de2i80h6cCWJ/wDjPW1m"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>It not only looks smoother (before we only had flat-shading), but also has less impact on the notebook performances</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"> DensityPlot[Cos[x] Sin[y], {x, -4Pi, 4Pi}, {y, -4Pi, 4Pi}, 
+ ColorFunction -&gt; ColorData["Rainbow"]]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["e4f9c851-e183-4a43-9841-1de4cbbd2804"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKp5qkWSZbmBrqphpaGOuaJJoY61pamBjqGqakmiQnJaUYWRiYAACBXhV2"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="texture-support">Texture support<a href="https://wljs.io/releases/2025/04/06/2.7.2#texture-support" class="hash-link" aria-label="Direct link to Texture support" title="Direct link to Texture support">​</a></h3>
+<p>This feature is still experimental and might not work in all cases. Now we do support <code>Texture</code> mapping in 2D <code>GraphicsComplex</code>, which make possible to do complex plots</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">ComplexPlot[(*FB[*)(((*SpB[*)Power[z(*|*),(*|*)2](*]SpB*) + 1)(*,*)/(*,*)((*SpB[*)Power[z(*|*),(*|*)2](*]SpB*) - 1))(*]FB*), {z, -2 - 2 I, 2 + 2 I}, 
+ PlotLegends -&gt; Automatic]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(Legended[ToExpression[FrontEndRef["23eac45f-ae38-4196-b1c3-70a5a35a6e42"], InputForm], Placed[BarLegend[{ColorDataFunction["MidShiftBalancedHue", "ThemeGradients", {0, 1}, Blend["MidShiftBalancedHue", #1] &amp; ][#1] &amp; , {0, 1}}, LabelStyle -&gt; {}, LegendLayout -&gt; "Column", LegendMarkerSize -&gt; 225, "ColorFunctionShading" -&gt; None, OpacityFunction -&gt; (1 - Rescale[#1, {0, 0.9}, {0, 1}] &amp; ), "OpacityFunctionTicks" -&gt; {{0, "0"}, {0.9, 4}, {1, "Infinity"}}, "OpacityFunctionSize" -&gt; Scaled[0.5], "OpacityFunctionRange" -&gt; {0, 1}, Charting`TickLabels -&gt; {"-\[Pi]", "-\[Pi]/2", "0", "\[Pi]/2", "\[Pi]"}, Ticks -&gt; {{0., 0.25, 0.5, 0.75, 1.}, {{0, 1/20, 1/10, 3/20, 1/5}, {1/5, 1/4, 3/10, 7/20, 2/5}, {2/5, 9/20, 1/2, 11/20, 3/5}, {3/5, 13/20, 7/10, 3/4, 4/5}, {4/5, 17/20, 9/10, 19/20, 1}}}, Charting`TickSide -&gt; Right, ColorFunctionScaling -&gt; True], After, Identity]])(*,*)(*"1:eJyNVctu00AUNYmbkEKhJf0BJLYReRboJqJpCkgpRZmIVRfc2NfJqM64Go8F4RtB4hNgx4IFfwDzSNzYTpzMYjy+z3PPncfTcTD0ipZlhQdy+kjx8zk6AQcRcFKWkgFOkLlNr6BM9uXUd6nUKUPvnpI9kdMFD5joM7f/BZ1IwNhH8kyKmy0Ep93xaoCtl7V249VJbdxwWrUXdehAqwMn2F4EtuU0jKTbfbVAcK+YP9fSEY/Q4CvJ6YMPDrqeghpW5HQG3AC8CzOgoTDIVKyLiDmCBkxLPKUPj+TUC/yAn4OApZ5UpfSSumRKPXEGPjCZ522E5JHCMMUZvuHgUmQiTKai8mtRHT2bVFvuKZy+xLgph3FUAYkfiJVYSdGmtAkCdYsGMEafiLmPnpWgJWn6MG7vAOZBJEjJMBPNWMryMLa8BH6DnNCvSH9lkpPjJbUxrVNJGptoi/cBw1Tcx3JxdQsOFfNEo9awaOvuR+FKzYrYEZ1hSP/JYTZJWe+f0AF/La1ZDvn3b2r86e7Gry4xBXlEnZvQpM8yHQcjKlg9qYiTUzuLTtnrllyfNpuNfgpHNYtDdcUUrbyI4sDllh4/u9vLGAKb4I67TGXvTYEL2dxPqn695UJvb9Vb3x+169N6q1cnlbv186bhQh/2WFSKf1K5TJsVxckznsi1qFP203x+dOPKF4vfy8XfbtI1+adLNpn0XQSKGvA1CfQ4R7e/Xlfc5qeypwDlWW7Q2TnZNyAr5yAr7IyskIOssq32wnrdgxy/4s7IijnIDnIylLd1cwPX9s7I7BxkRznIKjnIqku/dcdVP3mrx5VQ1xysIZ1M0+9C9haXV8nyFlfvsfZ87QnkGsM7Vz6L8iL5D4UQwsM="*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Or here is an explicit example</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">texture = Texture[(*VB[*)(FrontEndRef["d86b6f35-0f6f-4159-bf14-6627b1a35523"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKp1iYJZmlGZvqGqSZpemaGJpa6ialGZrompkZmScZJhqbmhoZAwCBcRUY"*)(*]VB*)];
+
+ParametricPlot[{r Cos[\[Theta]], r Sin[\[Theta]]}, {r, 1, 
+  2}, {\[Theta], 0, 2 Pi/3}, PlotRange -&gt; All, Mesh -&gt; 15, PlotStyle-&gt;texture]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["5d4848ee-5af4-42ab-86d4-d673c2e6d349"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKm6aYWJhYpKbqmiammeiaGCUm6VqYpZjoppiZGycbpZqlGJtYAgCHmRW1"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="placed">Placed<a href="https://wljs.io/releases/2025/04/06/2.7.2#placed" class="hash-link" aria-label="Direct link to Placed" title="Direct link to Placed">​</a></h3>
+<p>This key-symbol now will fully work with <code>Legended</code> too</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Plot[
+  {x,x^2}, {x,0,1}, 
+  PlotLegends-&gt;Placed[SwatchLegend[Automatic], {0.2,0.2}]
+]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(Legended[ToExpression[FrontEndRef["a8054f96-296b-4648-ab68-3a3726fb371c"], InputForm], Placed[SwatchLegend[{Directive[Opacity[1.], RGBColor[0.24, 0.6, 0.8], AbsoluteThickness[2]], Directive[Opacity[1.], RGBColor[0.95, 0.627, 0.1425], AbsoluteThickness[2]]}, {HoldForm[Placeholder[Style[1, Smaller]]], HoldForm[Placeholder[Style[2, Smaller]]]}, LegendMarkers -&gt; Automatic, LabelStyle -&gt; {}, LegendLayout -&gt; "Column"], {0.2, 0.2}, Identity]])(*,*)(*"1:eJylUjtOw0AQNf9fkIADICHRRoI4mFBEFpAEkIz4GNGv7VmyYu2N1mvAB+AQ0NJxAmo6GgoaDgANQkJwA/YDQU6DBFM87b6deTM7M3MB28cDlmWlkxIOCZw2IGQcCcb9Ecl4cARJVMH9ymVcQjMi8k054j7FzUhocZaIZhI1zyDMBAoo+POSRrWFpSpeccqVFScoV51qrYwCp1a2kb1ccXBgLy+GRnhQwn4mw0bVAVC0k9Bcswc8A1PfsIRdikKI8JC6lyT4p0iEbVPjj5JHUmFixiQ0CIdQkBMw9apP7XRQSETOLW3vrnHWuTfW1hllnN/Mnr/u3dy73Nb25PLLC2UvrpGZlrAapIxmAg7aJDxOIE2JKuG/mbG2N5dffzxsB1PPLq+PP1516re/Zy52oO9bepPRqMV4bJiJ7z62JQ3cBKmO+iKnQLql+jGiVL7/Taa/V6YwZ71sZmzbiB8DT3XDVjPBYiRIz1bovfNQAFRrY6vwzaJrqSvsoZxlwldrIxubxUmxPV/zvHO7B/3JrQgSISf0CWE7y/I="*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Plot[
+  {x,x^2}, {x,0,1}, 
+  PlotLegends-&gt;Placed[SwatchLegend[Automatic], {Top, Right}]
+]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(Legended[ToExpression[FrontEndRef["79796bff-38a0-4528-849d-2e12e998753e"], InputForm], Placed[SwatchLegend[{Directive[Opacity[1.], RGBColor[0.24, 0.6, 0.8], AbsoluteThickness[2]], Directive[Opacity[1.], RGBColor[0.95, 0.627, 0.1425], AbsoluteThickness[2]]}, {HoldForm[Placeholder[Style[1, Smaller]]], HoldForm[Placeholder[Style[2, Smaller]]]}, LegendMarkers -&gt; Automatic, LabelStyle -&gt; {}, LegendLayout -&gt; "Row"], {Top, Right}, Identity]])(*,*)(*"1:eJylUktOAkEQHfyLmKgHMDFxS6J8hFmQCQqoCQRliPuemRro0EyTnh6RA3gI3brzBKw9gAs3HkA3xsToDexPwAwbE63Fy8zrqldVr3vHoS1/3jCMcF3ABYZhBVzKEKfMXhZMHToQeBl/TqYkBVQ9LM5kop+Q3JaAGqMBrwZe9QrciCOHgL0r6IJZMA8c309ni2gvnctniulizvTSGdjPgGkWC/ksaOEFAa1IlK3ID0BeMyAjxbZZBHq+JQFnBLng+YvyPyXAHiLudvWMP0p1HHJdsyqgghm4HF+Cnlcu1RwgF/MRM1R8WjpZ9T4+PKKEMjbevn4/Hz9aLKvixWK3NzLeLC2zKaDshJREHNpd7PYCCEMsR/hvZ1/Fh8Xuv54azsarxUrJ57tB6eH3znEHEhPpE0q8GmV9zaxNfOwKGpguko7afEQAT0e1+4gQcf43mblZmdg9q8emr62BWA9YqAwrR5z2EcfuTLZ8d3XkAFHavhFbM56amgrX0YhG3JYGt+gw7k0o2TYdqIFbuNPlasNTDwIurucbOVLEog=="*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Plot[
+  {x,x^2}, {x,0,1}, 
+  PlotLegends-&gt;Placed[SwatchLegend[Automatic], After]
+]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(Legended[ToExpression[FrontEndRef["e7fbcf02-69f8-4ecf-8884-ac559efbef1d"], InputForm], Placed[SwatchLegend[{Directive[Opacity[1.], RGBColor[0.24, 0.6, 0.8], AbsoluteThickness[2]], Directive[Opacity[1.], RGBColor[0.95, 0.627, 0.1425], AbsoluteThickness[2]]}, {HoldForm[Placeholder[Style[1, Smaller]]], HoldForm[Placeholder[Style[2, Smaller]]]}, LegendMarkers -&gt; Automatic, LabelStyle -&gt; {}, LegendLayout -&gt; "Column"], After, Identity]])(*,*)(*"1:eJylUktKA0EQHf9/UA8gCG4HNP7iIgzRJCokRB1x39NTbRo706Gnx5gDeAjduvMEWXsAF248gG5EEL2B1d0YiRtBa/GYqa569eqzGMkjNuR5XjqDcMKhXQIqFdFShWPoqcIpJHGODZqQSYRyzPHNBLIB45tHqCiZ6HISly+AZppEAsIldMMmiyhbzvkbWyzvrwFlfj6fX/MJXV/fAhYBW4kd8TDCUYZp4+YDSFxPRMd6j1UGTt8owoEgFGI2Yv6nEcI20bThNH4zVXmqXc4EQokroJqfg9Nrmqq3COW6ozxr74ELtrV3t3ekkEp1Fy5fD7v3gVq19hSo6ytjL4GjmUMoRqkUmYbjBqdnCaQpNxL+W5lZewvU7cdDLZp9DlRh8vGmVbj7vXL/BAa+qPekiCtSNZ1n6muODXSDcklmoqHuCOA9qWGTCIHvf6MZ/EnTt2d7bG5tNaLOQKV2YMVMyybRnP6INndXJREIy828vjb7Q6d7xFXSkZkOzdngYLNmYtUVmcZqpp39GBKNu/gEN8PDUA=="*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="texform-is-back">TeXForm is back!<a href="https://wljs.io/releases/2025/04/06/2.7.2#texform-is-back" class="hash-link" aria-label="Direct link to TeXForm is back!" title="Direct link to TeXForm is back!">​</a></h2>
+<p>We dropped a long time ago this feature, but now it is back</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">TeXForm[Series[Sin[x], {x,0,4}]//Normal]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">"x-\\frac{x^3}{6}"</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Now import it back</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">ToExpression[%, TeXForm]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">x-((*FB[*)((1)(*,*)/(*,*)(6))(*]FB*)) ((*SpB[*)Power[x(*|*),(*|*)3](*]SpB*))</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Now use to draw TeX equations using inline markdown cells</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">CellView[StringJoin[
+  "$$\n",
+  TeXForm[Series[Sin[x], {x,0,7}] // Normal],
+  "\n$$"
+], "Display"-&gt;"markdown"]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["83721a5a-d923-485b-80e5-2ba472fe3dc0"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKWxibGxkmmibqplgaGeuaWJgm6VoYpJrqGiUlmpgbpaUapyQbAAB45xVt"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="geographics">GeoGraphics<a href="https://wljs.io/releases/2025/04/06/2.7.2#geographics" class="hash-link" aria-label="Direct link to GeoGraphics" title="Direct link to GeoGraphics">​</a></h2>
+<p>We added the full support of its rasterized version</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Entity["Country", "Italy"]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(Entity["Country", "Italy"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWnMIB4vkAjLTC13SU3OL0osyS8KZgOKuOaVZJZUBrMDmc75pXklRZXBrEC2Z0liTiUAdDwSUA=="*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">GeoGraphics[{EdgeForm[Black], FaceForm[Red], Polygon[Here]}]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["40b9e75a-753d-4879-aa0d-da04817ceee1"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKmxgkWaaamybqmpsap+iaWJhb6iYmGqTopiQamFgYmienpqYaAgCB7BXV"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="imageupscaling-option">ImageUpscaling option<a href="https://wljs.io/releases/2025/04/06/2.7.2#imageupscaling-option" class="hash-link" aria-label="Direct link to ImageUpscaling option" title="Direct link to ImageUpscaling option">​</a></h2>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p><code>Rasterize</code> is available only for WLJS Desktop App</p></div></div>
+<p>When rasterizing images you can upscale the canvas by an integer factor</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Plot[x, {x,0,1}];
+Rasterize[%, "ImageUpscaling"-&gt;2]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["cc9063ec-cdd2-4809-8a3e-8c29779e2d47"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKJydbGpgZpybrJqekGOmaWBhY6lokGqfqWiQbWZqbW6YapZiYAwCMMRW5"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>This comes handy for exporting hi-rez figures.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="misc-static-graphics">Misc static graphics<a href="https://wljs.io/releases/2025/04/06/2.7.2#misc-static-graphics" class="hash-link" aria-label="Direct link to Misc static graphics" title="Direct link to Misc static graphics">​</a></h2>
+<p>Some of gauges now can be used as static graphics</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">ClockGauge[{14, 42, 56}]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["a82c9249-2e4a-43bc-b9c9-2cdd5b1781b7"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKJ1oYJVsamVjqGqWaJOqaGCcl6yZZJgO5ySkppkmG5haGSeYAhnUV1g=="*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">ThermometerGauge[25, {0, 100}]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["e11ffba1-7ce9-49b2-a9f5-e6cff727e334"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKpxoapqUlJRrqmienWuqaWCYZ6SZappnqppolp6WZG5mnGhubAACVcRZB"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p><strong>WordCloud</strong> can also be used in the same way</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">trigrams = 
+  Tally@*Flatten@*
+    Map[ToLowerCase/*Characters/*(Partition[#, 3, 1] &amp;)/*
+      Map[StringJoin]]@
+   StringSplit[ExampleData[{"Text", "AeneidEnglish"}], 
+    Except[LetterCharacter] ..];
+    
+WordCloud[Take[SortBy[trigrams, Last], -50], 
+ ColorFunction -&gt; (Blend[{GrayLevel[0.5], GrayLevel[0]}, #1] &amp;)]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["877cbb1e-7dc0-4fc2-9f7f-c9f139978ee0"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKW5ibJyclGabqmqckG+iapCUb6VqmmafpJlumGRpbWppbpKYaAACQMhYg"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="wljs-interpreter">WLJS Interpreter<a href="https://wljs.io/releases/2025/04/06/2.7.2#wljs-interpreter" class="hash-link" aria-label="Direct link to WLJS Interpreter" title="Direct link to WLJS Interpreter">​</a></h2>
+<p>We improved dynamics in our wljs-interpreter (<em>quazi Wolfram Language interpreter running on Javascript engine</em>).</p>
+<p>Before depending if you were passing packaged/numerical array to some <code>Offload</code> expression it could throw an exception since nested symbols like <code>List</code> did not work well with numerical arrays. However, now it is safe to use such expressions</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">axes = RandomReal[3, {3,3}]; (*BB[*)(*ensures it is a packed array *)(*,*)(*"1:eJxTTMoPSmNhYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCS4g4Zyfm5uaV+KUXxEMUqxsbm6exgSSBPGCSnNSg9mAjOCSosy8dLBYSFFpKpoKkDkeqYkpEFXBILO1sCgJSczMQVYCAOFrJEU="*)(*]BB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Graphics3D[{
+  Red, Tube[{{0.,0.,0.}, axes[[1]]} // Offload, {0.1, 0.01}],
+  Green, Tube[{{0.,0.,0.}, axes[[2]]} // Offload, {0.1, 0.01}],
+  Blue, Tube[{{0.,0.,0.}, axes[[3]]} // Offload, {0.1, 0.01}]
+}]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(Graphics3D[{RGBColor[1, 0, 0], Tube[Offload[{{0., 0., 0.}, axes[[1]]}], {0.1, 0.01}], RGBColor[0, 1, 0], Tube[Offload[{{0., 0., 0.}, axes[[2]]}], {0.1, 0.01}], RGBColor[0, 0, 1], Tube[Offload[{{0., 0., 0.}, axes[[3]]}], {0.1, 0.01}]}])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRAeF5BwL0osyMhMLjZ2SWODqfDJLC5JYwbxOIBEkLuTc35OflEmSE8mA4xIY4IpDylNSoUYyA4k/NPScvITUxDSCNNgvCIGKMBkILQFJBaVgBmJFanFYLtRjSyaNRMEdtoXVYusc39Y1WKPxclg18LdTV8nM1HgZLi76etkZiKcDADSfHB2"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Here it is used as a mixure of dynamic symbol <code>axes</code> (which is a numeric array due to Wolfram Engine optimizations) and external <code>List</code>.</p>
+<p>Try to update, it should work</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">axes = Map[(# + 0.1 Cross[{1.,1.,1.}, #])&amp;, axes];</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Operations such as <code>Plus</code>, <code>Times</code> shall work like normal as well.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="better-export-to-interactive-html">Better export to interactive HTML<a href="https://wljs.io/releases/2025/04/06/2.7.2#better-export-to-interactive-html" class="hash-link" aria-label="Direct link to Better export to interactive HTML" title="Direct link to Better export to interactive HTML">​</a></h2>
+<p>We managed to make <code>Manipulate</code> work offline! Before it was only possible for custom dynamics or <code>ManipulatePlot</code> to function properly, since it does not involve dynamic frontend object creation. Now we turn off garbage collector before processing the notebook, let it accumulate objects and turn it back on after the exporting process has been finished.</p>
+<p>The good news, you don't need to think about it. See it in action</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Manipulate[
+  Row[{
+    "m", "==", MatrixForm[m], 
+    StreamPlot[Evaluate[m . {x, y}], {x, -1, 1}, {y, -1, 1}, 
+      StreamScale -&gt; Large, ImageSize -&gt; Small
+    ]
+  }], {{m, ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)2}}(*]GB*))}, { ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)2}}(*]GB*)) -&gt; "Nodal source",  ((*GB[*){{1(*|*),(*|*)1}(*||*),(*||*){0(*|*),(*|*)1}}(*]GB*))  -&gt; "Degenerate source",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)1}}(*]GB*)) -&gt; "Spiral source",  ((*GB[*){{-1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)-2}}(*]GB*))  -&gt; "Nodal sink",  ((*GB[*){{-1(*|*),(*|*)1}(*||*),(*||*){0(*|*),(*|*)-1}}(*]GB*)) -&gt; "Degenerate sink",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)-1}}(*]GB*)) -&gt; "Spiral sink",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)0}}(*]GB*)) -&gt; "Center",  ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)-2}}(*]GB*))  -&gt; "Saddle"}}]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*GB[*){{(*VB[*)(EventObject[&lt;|"Id" -&gt; "509758da-8e51-4178-a5af-e81893425030", "Initial" -&gt; {{{1, 0}, {0, 2}}}, "View" -&gt; "8d3d8778-6b99-41b3-9af7-6c93fbbecfb8"|&gt;])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKW6QYp1iYm1vomiVZWuqaGCYZ61omppnrmiVbGqclJaUmpyVZAACCUhYm"*)(*]VB*)}(*||*),(*||*){(*VB[*)(FrontEndRef["7220da85-6156-4421-8fdc-b4d0178f7d66"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKmxsZGaQkWpjqmhmamumamBgZ6lqkpSTrJpmkGBiaW6SZp5iZAQB03RUZ"*)(*]VB*)}}(*]GB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="better-structured-examples">Better structured examples<a href="https://wljs.io/releases/2025/04/06/2.7.2#better-structured-examples" class="hash-link" aria-label="Direct link to Better structured examples" title="Direct link to Better structured examples">​</a></h2>
+<p>We sorted out all examples and guides we had. Some sections are sill populating with the content.</p>
+<div><p>We need your help</p></div>
+<p><strong>Preview</strong></p>
+<ul>
+<li>
+<p><strong>Introduction to WLJS</strong> - a brief overview of notebook interface and WL</p>
+</li>
+<li>
+<p><strong>Data Visualization</strong> - showcases of the most essential plotting functions and charts in 2D and 3D, including path-tracing and PBR materials.</p>
+</li>
+<li>
+<p><strong>For Data Scientists</strong></p>
+</li>
+<li>
+<p><strong>For Julia Users</strong></p>
+</li>
+<li>
+<p><strong>For Jupyter Users</strong></p>
+</li>
+<li>
+<p><strong>For MATLAB Users</strong></p>
+</li>
+<li>
+<p><strong>For Python Users</strong></p>
+</li>
+<li>
+<p><strong>For Mathematica Users</strong></p>
+</li>
+<li>
+<p><strong>For Machine Learning (ML)</strong></p>
+</li>
+<li>
+<p><strong>For Physicists</strong></p>
+</li>
+<li>
+<p><strong>Numerical Data Handling</strong></p>
+</li>
+<li>
+<p><strong>Differential Calculus</strong></p>
+</li>
+<li>
+<p><strong>Media Formats</strong></p>
+</li>
+<li>
+<p><strong>Geographical Data</strong></p>
+</li>
+<li>
+<p><strong>Symbolic Programming</strong></p>
+</li>
+<li>
+<p><strong>Animation</strong></p>
+</li>
+<li>
+<p><strong>Dynamics and Interactivity</strong></p>
+</li>
+<li>
+<p><strong>GUI Building Blocks</strong></p>
+</li>
+<li>
+<p><strong>OpenCL</strong></p>
+</li>
+<li>
+<p><strong>Slides and Presentations</strong></p>
+</li>
+<li>
+<p><strong>Advanced Syntax Sugar</strong></p>
+</li>
+<li>
+<p><strong>JavaScript Bindings</strong></p>
+</li>
+<li>
+<p><strong>Mixing Languages</strong></p>
+</li>
+<li>
+<p><strong>Frontend Interpreter</strong></p>
+</li>
+<li>
+<p><strong>Notebook Utilities</strong></p>
+</li>
+<li>
+<p><strong>Standalone Widgets</strong></p>
+</li>
+<li>
+<p><strong>Experimental</strong></p>
+</li>
+<li>
+<p><strong>Release Notes</strong></p>
+</li>
+</ul>
+<p><em>Ballon animation by Jemima (codepen)</em></p>
+<div>
+<style>
+  [transparency="false"] .bg-g-trans {
+    background: transparent !important;
+  }
+
+  [transparency="true"] .bg-g-trans {
+    background: transparent !important;
+  }
+</style></div>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Release notes *2.7.1*]]></title>
         <id>https://wljs.io/releases/2025/03/28/2.7.1</id>
