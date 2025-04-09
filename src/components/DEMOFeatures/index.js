@@ -196,7 +196,7 @@ const FeatureList = [
         </li> 
         <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/mix-graph"}><b>3D Force-Directed Graph</b> Hook up a Javascript library right in the notebook</Link>         
-        </li> 
+        </li>         
         </ul>                   
       </>
     ),
@@ -250,7 +250,12 @@ const FeatureList = [
               <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
             </div>                 
           </li>         
-
+          <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/webgl-heatmap"}><b>Animated heatmap</b> Combined SVG and raster graphics with GPU.js</Link>         
+          <div className={styles.badgeHolder}>
+            <span className={styles.badge} style={{background: 'var(--ifm-color-success-light)'}}>Interactive</span>
+          </div> 
+        </li> 
           <li className={styles.featureLi}>
             <Link className={styles.featureLink}  to={"/wljs-demo/mix-gauge"}>Use Javascript to make custom UI elements</Link>   
             <div className={styles.badgeHolder}>
