@@ -31,12 +31,12 @@ Using [EditorView](frontend/Reference/GUI/EditorView.md) inside [Inset](frontend
 Plot[x, {x, 0, 10}, Epilog -> {
     Inset[
         EditorView["(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)"],
-        {3, 5}, {10, 30}, {1, 3}
+        {3, 5}
     ]
 }]
 ```
 
-<Wl>{`Plot[x, {x, 0, 10}, Epilog->{Inset[EditorView["(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)"], {3,5}, {10,30}, {1,3}]}]`}</Wl>
+<Wl>{`Plot[x, {x, 0, 10}, Epilog->{Inset[EditorView["(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)"], {3,5}]}]`}</Wl>
 
 These *symbols in the string* are just copied text from a standard input or output Wolfram cell (see [Introduction](frontend/Symbolic%20programming.md#Introduction)). You can also render expressions in-place:
 
@@ -44,7 +44,7 @@ These *symbols in the string* are just copied text from a standard input or outp
 Plot[Sin[x]/x, {x, 0, 10}, Epilog -> {
     Inset[
         EditorView @ ToString[Sin[x]/x, StandardForm],
-        {3, 0.5}, {0, 400}, {3, 3}
+        {3, 0.5}
     ]
 }]
 ```
@@ -59,12 +59,12 @@ Using [CellView](frontend/Reference/GUI/CellView.md), you can insert an entire o
 Plot[Sin[x]/x, {x, 0, 10}, Epilog -> {
     Inset[
         CellView["$\\hat{T} = i \\hbar \\frac{\\partial}{\\partial t}$", "Display" -> "markdown"],
-        {3, 0.5}, {0, 400}, {3, 3}
+        {3, 0.5}
     ]
 }]
 ```
 
-<Wl>{`Plot[Sin[x]/x, {x, 0, 10}, Epilog->{Inset[CellView["$\\hat{T} = i \\hbar \\frac{\\partial}{\\partial t}$", "Display"->"markdown"], {3,0.5}, {0,400}, {3,3}]}]`}</Wl>
+<Wl>{`Plot[Sin[x]/x, {x, 0, 10}, Epilog->{Inset[CellView["$\\hat{T} = i \\hbar \\frac{\\partial}{\\partial t}$", "Display"->"markdown"], {3,0.5}]}]`}</Wl>
 
 ### Option 2
 
