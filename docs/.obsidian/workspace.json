@@ -8,17 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "32f506b6464e2e07",
+            "id": "169c9c88173f07a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotting Functions/AnimatePlot.md",
+                "file": "frontend/Advanced/Dynamics/Animation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AnimatePlot"
+              "title": "Animation"
+            }
+          },
+          {
+            "id": "a6e708c5f3f61d2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Dynamics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dynamics"
             }
           },
           {
@@ -108,10 +122,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Panel",
+                "query": "Animate",
                 "matchingCase": true,
-                "explainSearch": true,
-                "collapseAll": true,
+                "explainSearch": false,
+                "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical"
               },
@@ -129,8 +143,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -234,8 +247,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ad37bb78993555b9",
+  "active": "a6e708c5f3f61d2b",
   "lastOpenFiles": [
+    "mananiaa-ezgif.com-optimize.gif",
+    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
+    "frontend/Dynamics.md",
+    "frontend/Advanced/Dynamics/Animation.md",
+    "basicRing-ezgif.com-video-to-gif-converter.gif",
+    "frontend/Reference/GUI/Animate.md",
+    "animatedsn-ezgif.com-video-to-gif-converter.gif",
+    "ScreenRecording2025-04-11at19.13.52-ezgif.com-optimize.gif",
+    "frontend/Reference/Plotting Functions/AnimatePlot.md",
+    "frontend/Reference/GUI/Manipulate.md",
+    "frontend/Reference/Plotting Functions/AnimateParametericPlot.md",
+    "frontend/Reference/GUI/Refresh.md",
+    "frontend/Reference/Interpreter/OffloadFromEventObject.md",
+    "frontend/Reference/Plotting Functions/ManipulateParametricPlot.md",
+    "frontend/Reference/Formatting/Panel.md",
     "frontend/Advanced/Graphics/Inset expressions.md",
     "frontend/Reference/Graphics/Inset.md",
     "frontend/Reference/Graphics/Graphics.md",
@@ -250,18 +278,6 @@
     "frontend/Reference/Formatting/Placed.md",
     "frontend/Reference/Formatting/Legended.md",
     "frontend/Reference/Formatting/Labeled.md",
-    "frontend/Reference/Formatting/BarLegend.md",
-    "frontend/Reference/Formatting/Column.md",
-    "frontend/Reference/Formatting/Bra.md",
-    "frontend/Reference/Formatting/Interpretation.md",
-    "frontend/Advanced/Slides/Building components.md",
-    "frontend/Development/API/REST.md",
-    "frontend/Exporting/Dynamic HTML.md",
-    "Untitled.md",
-    "frontend/Exporting/Static HTML.md",
-    "frontend/Reference/Plotting Functions/ManipulatePlot.md",
-    "frontend/Reference/Plotting Functions/ManipulateParametricPlot.md",
-    "frontend/Reference/Interpreter/Manipulate.md",
     "Screenshot 2025-04-02 at 10.11.33.png",
     "frontend/Advanced/Dynamics/Transform native plot functions/index.mdx",
     "Screenshot 2025-03-29 at 17.27.13.png",
@@ -271,13 +287,10 @@
     "Screenshot 2025-03-29 at 17.19.40.png",
     "Screenshot 2025-03-29 at 17.18.58.png",
     "Screenshot 2025-03-29 at 17.18.12.png",
-    "imgs/Drawing 2025-02-08 23.24.35.excalidraw.svg",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments/6e7341c7-2708-4730-a4f7-78f8fb75193c.txt",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments/notebook-6e7.wln",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments",
     "frontend/Advanced/Dynamics/Transform native plot functions",
-    "Screenshot 2025-03-23 at 11.44.05.png",
-    "Screenshot 2025-03-23 at 11.42.34.png",
     "frontend/attachments/kernel.txt",
     "frontend/attachments/81ca8f84-ffea-48c5-ab2d-6d126bc315d1.txt",
     "frontend/attachments/notebook-0fd.wln",

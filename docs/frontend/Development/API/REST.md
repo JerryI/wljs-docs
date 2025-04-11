@@ -5,7 +5,7 @@ API is provided by a core extension `wljs-api`. All communication is done via HT
 - fetch [Frontend Objects](frontend/Advanced/Frontend%20interpretation/Frontend%20Objects.md) used for 3D, 2D graphics
 - fetch extensions, assets
 
-In principle public REST API is rich __enough to write your own small notebook interface with full support of all available cell types, 3D graphics, sound and etc__. However, this is a natural limitation - dynamics or event-based expressions such as [InputRange](frontend/Reference/GUI/InputRange.md) or [Manipulate](frontend/Reference/Interpreter/Manipulate.md) __are not going to work__.
+In principle public REST API is rich __enough to write your own small notebook interface with full support of all available cell types, 3D graphics, sound and etc__. However, this is a natural limitation - dynamics or event-based expressions such as [InputRange](frontend/Reference/GUI/InputRange.md) or [Manipulate](frontend/Reference/GUI/Manipulate.md) __are not going to work__.
 
 ![](./../../../Screenshot%202025-01-21%20at%2010.27.46.png)
 

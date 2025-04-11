@@ -24,11 +24,15 @@ Always keep track of which parts of your code execute on the Wolfram Kernel (ser
 
 If you want to see how curves change with parameters, check out [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) or [ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md).
 
+```mathematica
+ManipulatePlot[Sin[w z + p], {z,0,10}, {w, 0, 15.1, 1}, {p, 0, Pi, 0.1}]
+```
+
 ![](./../Manipulate-ezgif.com-video-to-gif-converter%202.gif)
 
-A general-purpose [Manipulate](frontend/Reference/Interpreter/Manipulate.md) is available, but *not recommended* for plotting.
+A general-purpose [Manipulate](frontend/Reference/GUI/Manipulate.md) is available, but *not recommended* for plotting.
 
-For small expressions that need to update on a timer or trigger, use [Refresh](frontend/Reference/Interpreter/Refresh.md):
+For small expressions that need to update on a timer or trigger, use [Refresh](frontend/Reference/GUI/Refresh.md):
 
 ```mathematica
 Refresh[Now // TextString, 1]
@@ -46,8 +50,16 @@ AnimatePlot[{Sin[x c], Sinc[x c]}, {x, -10, 10}, {c, 1, 10, 0.1}]
 
 ![](./../StiticExport-ezgif.com-optimize.gif)
 
-## Automatic Tracking of Held Symbols
+Using Wolfram Language and WLJS you can animate *anything* - see [Animation](frontend/Advanced/Dynamics/Animation.md)
 
+```mathematica
+Animate[Row[{Sin[x], "==", Series[Sin[x], {x,0,n}], Invisible[1/2]}], {n, 1, 10, 1}, AnimationRate->3]
+```
+
+![](./../animatedsn-ezgif.com-video-to-gif-converter.gif)
+
+
+## Automatic Tracking of Held Symbols
 This doesn’t mean `Set` will automatically reevaluate on nested symbol changes, but many graphics primitives work out of the box. Use [Offload](frontend/Reference/Interpreter/Offload.md) to send symbols to the frontend:
 
 ```mathematica
@@ -164,6 +176,27 @@ Graphics primitive handlers are part of the [wljs-graphics-d3](https://github.co
 :::
 
 More info in [Mouse and Keyboard](frontend/Advanced/Events%20system/Mouse%20and%20keyboard.md).
+
+### Combination of manual and automated dynamics
+Our built-in [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) function allows to make basic interactive plots in a single line of code, however, you can add your own dynamic features manually if needed. 
+
+For example
+
+```mathematica
+Module[{label, pos},
+  ManipulatePlot[x w, {x,0,1}, {w,0,2},
+    Epilog->Text[Style[label // Offload, FontSize->14], pos // Offload],
+    "UpdateFunction" -> Function[input,
+      label = StringTemplate["w = ``"][SetPrecision[input,2]];
+      pos = {0.5, input 0.5 + 0.2};
+      True
+    ]
+  ]
+]
+```
+
+![](./../mananiaa-ezgif.com-optimize.gif)
+
 
 ### Auto-Generating Dynamic Symbols
 

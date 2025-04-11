@@ -35,7 +35,7 @@ With[{win = CurrentWindow[]},
 
 
 :::tip
-Please have a look at this guide - [Advanced animation](frontend/Advanced/Dynamics/Advanced%20animation.md)
+Please have a look at this guide - [Animation](frontend/Advanced/Dynamics/Animation.md)
 :::
 
 ## Examples

@@ -9,7 +9,7 @@ source: https://github.com/JerryI/wljs-manipulate/blob/main/Kernel.wl
 AnimatePlot[f_, {x, min, max}, {t, min, max}, opts___]
 ```
 
-a dynamic alternative to [Plot](frontend/Reference/Plotting%20Functions/Plot.md) and Mathematica's `Animate`, that samples all frames and creates live animation from them.
+a dynamic alternative to [Plot](frontend/Reference/Plotting%20Functions/Plot.md) and Mathematica's `Animate`, that samples all frames and creates live animation using them.
 
 `f` has return `_Real` or `{__Real}` (in a case of multiple curves)
 
@@ -62,8 +62,12 @@ AnimatePlot[(*TB[*)Sum[(*|*)(*FB[*)((Sin[2π(2j - 1) x])(*,*)/(*,*)(2j))(*]FB*)(
 ```
 
 :::tip
-Here it is important to keep `n=1.0`, otherwise it will be converted into a symbolic sum with `LerchPhi` function, which is not defined at some points.
+Here it is important to keep `n` integer, otherwise it will be converted into a symbolic sum with `LerchPhi` function, which is not defined at some points.
 :::
+
+## Supported output forms
+- [StandardForm](frontend/Reference/Formatting/StandardForm.md)
+- [WLXForm](frontend/Reference/Formatting/WLXForm.md)
 
 ## Issues
 

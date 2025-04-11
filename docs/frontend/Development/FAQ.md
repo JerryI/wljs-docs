@@ -73,7 +73,7 @@ We reply on [Code Mirror 6](https://codemirror.net/) in the combination with a f
 ## Dynamics
 
 ### Dynamics Works Differently Compared to Mathematica 
-We have a [Manipulate](frontend/Reference/Interpreter/Manipulate.md) expression that is semi-compatible with Mathematica. However, in general, we enforce different approaches for interactive evaluation, such as an event-based approach and partial reevaluation (see [Dynamics](frontend/Dynamics.md)). Our methods provide much faster and more efficient dynamic evaluation compared to Mathematica, though they are more limited in terms of supported symbols. In this sense, we see no point in replicating the same architecture using open-source tools.  
+We have a [Manipulate](frontend/Reference/GUI/Manipulate.md) expression that is semi-compatible with Mathematica. However, in general, we enforce different approaches for interactive evaluation, such as an event-based approach and partial reevaluation (see [Dynamics](frontend/Dynamics.md)). Our methods provide much faster and more efficient dynamic evaluation compared to Mathematica, though they are more limited in terms of supported symbols. In this sense, we see no point in replicating the same architecture using open-source tools.  
 
 ## General
 ### Would you join Mathics to go fully open-source
