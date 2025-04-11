@@ -44,3 +44,4 @@ Panel[123, Style["Title", 10]]
 
 ## Supported output forms
 - [StandardForm](frontend/Reference/Formatting/StandardForm.md)
+- [WLXForm](frontend/Reference/Formatting/WLXForm.md) limited
