@@ -45,6 +45,17 @@ WLJS Notebook is an interactive computing platform, web-based environment for ru
 
 </div>
 
+<div style={{textAlign: 'center'}}>
+
+### Cross-Platform Desktop App
+
+</div>
+
+[💾 __Download WLJS Notebook__](https://github.com/JerryI/wolfram-js-frontend/releases)
+
+💻 Available for **Windows, macOS, and Linux**  
+🚀 Comes with an **auto-updater**
+
 ---
 
 <div style={{textAlign: 'center'}}>
@@ -149,16 +160,7 @@ $\\LaTeX$ is also supported
 :::
 
 
-<div style={{textAlign: 'center'}}>
 
-### Cross-Platform Desktop App
-
-</div>
-
-[⬇️ __Download WLJS Notebook__](https://github.com/JerryI/wolfram-js-frontend/releases)
-
-💻 Available for **Windows, macOS, and Linux**  
-🚀 Comes with an **auto-updater**
 
 <div style={{textAlign: 'center'}}>
 
@@ -192,6 +194,8 @@ Then open `http://127.0.0.1:8000`
 ## <span style={{color:'var(--ifm-color-primary)'}}> 📥 Installation Guide</span>
 
 </div>
+
+__Visit our [releases page 💾]((https://github.com/JerryI/wolfram-js-frontend/releases))__
 
 ### Windows
 - Download and install the latest `.exe` from the [Releases](https://github.com/JerryI/wolfram-js-frontend/releases).
