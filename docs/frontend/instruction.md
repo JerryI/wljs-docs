@@ -162,13 +162,51 @@ $\\LaTeX$ is also supported
 
 
 
+---
+
 <div style={{textAlign: 'center'}}>
 
-### Run on Server / Docker
+## <span style={{color:'var(--ifm-color-primary)'}}> 📥 Installation Guide</span>
 
 </div>
 
-Use just a normal **browser** to work with your notes. Deploy WLJS Notebook in a single line of code to any machine!
+__Visit our [releases page 💾]((https://github.com/JerryI/wolfram-js-frontend/releases))__
+
+### Windows
+- Download and install the latest `.exe` from the [Releases](https://github.com/JerryI/wolfram-js-frontend/releases).
+
+### Linux
+##### Using `.deb` Package (Recommended)
+```bash
+sudo apt install ./wljs-notebook.deb
+```
+⚠ *Ubuntu 24.04 users*: If you encounter AppArmor issues, run:
+```bash
+sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+```
+
+##### Using `.zip` Archive
+Extract and run the `wljs-notebook` executable.
+
+### macOS
+##### Using `.dmg` Installer
+- Apple Silicon users: Download the `-arm64.dmg` version.
+- Intel Mac users: Use the regular `.dmg` version.
+
+##### Using Homebrew
+```bash
+brew install --cask wljs-notebook
+```
+
+---
+
+
+<div style={{textAlign: 'center'}}>
+
+## 🚢 Running using Docker
+
+</div>
+Deploy WLJS Notebook in a single line of code to any machine!
 
 ```bash
 docker run -it \
@@ -187,43 +225,17 @@ Then open `http://127.0.0.1:8000`
 **🛠️ [GitHub Repo](https://github.com/JerryI/wolfram-js-frontend)**  
 [📦 Docker Container Setup](https://github.com/JerryI/wolfram-js-frontend/blob/main/container/README.md)
 
----
+In the case if you do not have `docker`, clone it directly from the repository as follows.
 
-<div style={{textAlign: 'center'}}>
+:::warning
+Some features require WLJS Desktop App:
+- `Export[_, _, "PDF"]` - export to PDF
+- `Rasterize` - expressions rasterization
+- `SystemOpen` - open files/folders using OS system calls
+- `SystemInputDialog` - open system file dialog
+- automatic core updates
+:::
 
-## <span style={{color:'var(--ifm-color-primary)'}}> 📥 Installation Guide</span>
-
-</div>
-
-__Visit our [releases page 💾]((https://github.com/JerryI/wolfram-js-frontend/releases))__
-
-### Windows
-- Download and install the latest `.exe` from the [Releases](https://github.com/JerryI/wolfram-js-frontend/releases).
-
-### Linux
-#### Using `.deb` Package (Recommended)
-```bash
-sudo apt install ./wljs-notebook.deb
-```
-⚠ *Ubuntu 24.04 users*: If you encounter AppArmor issues, run:
-```bash
-sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
-```
-
-#### Using `.zip` Archive
-Extract and run the `wljs-notebook` executable.
-
-### macOS
-#### Using `.dmg` Installer
-- Apple Silicon users: Download the `-arm64.dmg` version.
-- Intel Mac users: Use the regular `.dmg` version.
-
-#### Using Homebrew
-```bash
-brew install --cask wljs-notebook
-```
-
----
 
 <div style={{textAlign: 'center'}}>
 
@@ -261,7 +273,8 @@ wolframscript -f Scripts/start.wls noautolaunch True  # Disable autolaunch
 
 WLJS Notebook has been featured in various tech communities:
 
-- __Wolfram Research and Development__ ([Video](https://www.youtube.com/watch?v=Hen5qWfm6P0))
+- __[Towards Data Science: How to Use Gyroscope in Presentations, or Why Take a JoyCon to DPG2025](https://towardsdatascience.com/how-to-use-gyroscope-in-presentations-or-why-take-a-joycon-to-dpg2025/)__
+- __Wolfram Research and Development: WLJS Notebook__ ([Video](https://www.youtube.com/watch?v=Hen5qWfm6P0))
 - **[DPG2024 Berlin, March 2024](https://www.dpg-verhandlungen.de/year/2024/conference/berlin/part/agi/session/4/contribution/4)** ([Slides](https://www.dpg-physik.de/vereinigungen/fachuebergreifend/ag/agi/veranstaltungen/tagungen-und-workshops/berlin_2024/agi-4_4-kirill-vasin.pdf))
 - **[Habrahabr (Russian), October 2024](https://habr.com/ru/articles/853496/)** – Dynamic presentations with WLJS
 -  **[Medium, May 2024](https://medium.com/@krikus.ms/reinventing-dynamic-and-portable-notebooks-with-javascript-and-wolfram-language-22701d38d651)**

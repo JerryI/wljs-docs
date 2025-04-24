@@ -178,9 +178,39 @@ E = \\hbar \\omega
 $$
 ```
 
-:::warning
-Unfortunately, you have to escape all backslashes. For example, write `\\alpha` instead of `\alpha`.
+
+:::tip
+If you don't want to escape Markdown commands in your LaTeX code, please, consider to use [LaTeX](frontend/Cell%20types/Many%20more.md#LaTeX) cell type
 :::
+
+### Backslashes
+To have full compatibility with Markdown syntax you have to escape all backslashes. For example, write `\\alpha` instead of `\alpha`.
+
+### Trailing underscores
+To avoid misinterpretation for `__` markdown command, you need to escape such cases. For example, instead of __this__
+
+```md
+$$
+\hat{\alpha}_{x} - \hat{\beta}_{}
+$$
+```
+
+as a minimal patch one can escape the very last one ⤵️
+
+```md
+$$
+\hat{\alpha}_{x} - \hat{\beta}\_{}
+$$
+```
+
+And the best solution would be 👍🏼
+
+```md
+$$
+\\hat{\alpha}\_{x} - \\hat{\\beta}\_{}
+$$
+```
+
 
 __See [here](https://katex.org/docs/supported.html) for all supported LaTeX functions.__
 

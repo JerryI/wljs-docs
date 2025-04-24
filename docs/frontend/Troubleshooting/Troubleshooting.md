@@ -36,6 +36,15 @@ Any errors caused by cell evaluation will appear here:
 
 Clicking the bug icon opens the JavaScript developer tools.
 
+## Bypass WLJS Renderer and use MMA's
+To bypass the standard form of expression used in WLJS Notebook, use [MMAView](frontend/Reference/GUI/MMAView.md)
+
+```mathematica
+
+```
+
+WLJS Notebook does not cover all possible styling options for plots, graphics and diagram types. For that reason we give an option to use the default renderer of Wolfram Engine.
+
 ## Logs Dump
 If you're comfortable sharing logs (and it doesn't violate your privacy), you can enable `DEBUG` mode at startup:
 

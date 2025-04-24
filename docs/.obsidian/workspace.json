@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Dynamics.md",
+                "file": "frontend/Overview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dynamics"
+              "title": "Overview"
             }
           },
           {
@@ -122,7 +122,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Animate",
+                "query": "shortcuts",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -249,9 +249,21 @@
   },
   "active": "a6e708c5f3f61d2b",
   "lastOpenFiles": [
+    "frontend/Command palette.md",
+    "frontend/Cell types/Input cell.md",
+    "frontend/Overview.md",
+    "frontend/Troubleshooting/Troubleshooting.md",
+    "frontend/Reference/GUI/MMAView.md",
+    "Screenshot 2025-04-22 at 14.56.18.png",
+    "frontend/Cell types/Many more.md",
+    "frontend/Cell types/Slides.md",
+    "frontend/Cell types/Markdown.md",
+    "frontend/instruction.md",
+    "DynamicsFast-ezgif.com-optimize.gif",
+    "frontend/Dynamics.md",
+    "frontend/Guidelines.md",
     "mananiaa-ezgif.com-optimize.gif",
     "frontend/Reference/Plotting Functions/ManipulatePlot.md",
-    "frontend/Dynamics.md",
     "frontend/Advanced/Dynamics/Animation.md",
     "basicRing-ezgif.com-video-to-gif-converter.gif",
     "frontend/Reference/GUI/Animate.md",
@@ -269,24 +281,12 @@
     "frontend/Reference/Graphics/Graphics.md",
     "frontend/Exporting/Standalone Widgets.md",
     "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
-    "frontend/Advanced/Frontend interpretation/WLJS Functions.md",
-    "frontend/Advanced/Frontend interpretation/Editor manipulation.md",
-    "frontend/Reference/Interpreter/FrontEditorSelected.md",
-    "frontend/Reference/Frontend Objects/CreateFrontEndObject.md",
-    "frontend/Reference/Interpreter/FrontEndVirtual.md",
-    "frontend/Reference/Formatting/TabView.md",
-    "frontend/Reference/Formatting/Placed.md",
-    "frontend/Reference/Formatting/Legended.md",
-    "frontend/Reference/Formatting/Labeled.md",
     "Screenshot 2025-04-02 at 10.11.33.png",
     "frontend/Advanced/Dynamics/Transform native plot functions/index.mdx",
     "Screenshot 2025-03-29 at 17.27.13.png",
     "frontend/Reference/GeoGraphics",
     "Screenshot 2025-03-29 at 17.23.35.png",
     "Screenshot 2025-03-29 at 17.20.37.png",
-    "Screenshot 2025-03-29 at 17.19.40.png",
-    "Screenshot 2025-03-29 at 17.18.58.png",
-    "Screenshot 2025-03-29 at 17.18.12.png",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments/6e7341c7-2708-4730-a4f7-78f8fb75193c.txt",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments/notebook-6e7.wln",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments",

@@ -14,6 +14,18 @@ ls
 
 ![](./../../Screenshot%202024-11-17%20at%2023.08.09.png)
 
+#### LaTeX
+There is a dedicated cell type solely to render LaTeX equations. You can still do it using [Markdown](frontend/Cell%20types/Markdown.md), but if for some reason you have troubles mixing MD and TeX, here you go
+
+```
+.latex
+
+\alpha^2 + \beta^2
+```
+
+This also does not require escaping TeX code with double slashes unlike other cell types.
+
+
 #### Mermaid
 
 Draw beautiful diagrams using code:

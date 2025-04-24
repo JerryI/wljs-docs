@@ -81,6 +81,7 @@ Common equation editing shortcuts:
 - `Ctrl--` – subscript
 - `Ctrl-6` – superscript
 - `ESC + ..` – Greek letters
+- `Ctrl-=` - Semantic interpretation
 
 Editor shortcuts:
 - `Alt+/`, `Cmd+/` – comment line

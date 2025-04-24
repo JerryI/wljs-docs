@@ -45,6 +45,7 @@ However, it's recommended to use keyboard shortcuts for:
 - Subscripts: `Ctrl+-`
 - Power: `Ctrl+6`
 - Square roots: `Ctrl+2`
+- Semantic interpretation: `Ctrl+=`
 - Greek symbols: `ESC+al`, `ESC+be`, `ESC+ga`, `ESC+o`, ...
 
 ## Matrix Helper

@@ -77,6 +77,7 @@ Useful shortcuts include:
 - `Ctrl+^`: Power
 - `Ctrl+-`: Subscript
 - `Ctrl+2`: Square root
+- `Ctrl+=`: Semantic interpretation 
 
 Or use the special toolbar (snippet palette):
 
@@ -101,6 +102,10 @@ Partial support for [Mathematica](frontend/Importing/Mathematica.md) `.nb` forma
 - Markdown is the main language for text cells ([Markdown](frontend/Cell%20types/Markdown.md))
 - No extended evaluation history (only the last output)
 - Not all graphics primitives are implemented (gradually improving)
+
+:::tip
+If something does not look like as it should, try [MMAView](frontend/Reference/GUI/MMAView.md)
+:::
 
 ## Why Not Jupyter Ecosystem?
 We chose to build our own system because:
@@ -159,6 +164,8 @@ Try dragging and panning with your mouse!
 ![](./../Isingspins-ezgif.com-optipng.png)
 
 ![](./../manipulatePlot-ezgif.com-optimize.gif)
+
+![](./../DynamicsFast-ezgif.com-optimize.gif)
 
 ![](./../RotationMatriix3D-ezgif.com-optipng.png)
 
