@@ -13,45 +13,65 @@
         <link href="https://wljs.io/releases/2025/04/24/2.7.3"/>
         <updated>2025-04-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🔄 New Features & Enhancements]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-new-features--enhancements">🔄 New Features &amp; Enhancements<a href="https://wljs.io/releases/2025/04/24/2.7.3#-new-features--enhancements" class="hash-link" aria-label="Direct link to 🔄 New Features &amp; Enhancements" title="Direct link to 🔄 New Features &amp; Enhancements">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-export-to-pdf-desktop-only">🖨️ Export to PDF (Desktop Only)<a href="https://wljs.io/releases/2025/04/24/2.7.3#%EF%B8%8F-export-to-pdf-desktop-only" class="hash-link" aria-label="Direct link to 🖨️ Export to PDF (Desktop Only)" title="Direct link to 🖨️ Export to PDF (Desktop Only)">​</a></h3>
+        <content type="html"><![CDATA[<p>🔄 New Features &amp; Enhancements</p>
+<ul>
+<li>
+<p>🖨️ Export to PDF (Desktop Only)</p>
 <ul>
 <li>Full support for rendering notebooks as high-quality PDFs using Electron (Chromium) engine.</li>
 <li>Smart whitespace trimming via offscreen rendering and pixel analysis.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-semantic-interpretation-shortcut">🤖 Semantic Interpretation Shortcut<a href="https://wljs.io/releases/2025/04/24/2.7.3#-semantic-interpretation-shortcut" class="hash-link" aria-label="Direct link to 🤖 Semantic Interpretation Shortcut" title="Direct link to 🤖 Semantic Interpretation Shortcut">​</a></h3>
+</li>
+<li>
+<p>🤖 Semantic Interpretation Shortcut</p>
 <ul>
 <li>New shortcut: <code>Ctrl =</code> to auto-convert natural language to Wolfram code.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-latex-cells">📚 LaTeX Cells<a href="https://wljs.io/releases/2025/04/24/2.7.3#-latex-cells" class="hash-link" aria-label="Direct link to 📚 LaTeX Cells" title="Direct link to 📚 LaTeX Cells">​</a></h3>
+</li>
+<li>
+<p>📚 LaTeX Cells</p>
 <ul>
 <li>Improved LaTeX and Markdown compatibility using proper environment handling.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-optional-mathematica-rendering">🖼️ Optional Mathematica Rendering<a href="https://wljs.io/releases/2025/04/24/2.7.3#%EF%B8%8F-optional-mathematica-rendering" class="hash-link" aria-label="Direct link to 🖼️ Optional Mathematica Rendering" title="Direct link to 🖼️ Optional Mathematica Rendering">​</a></h3>
+</li>
+<li>
+<p>🖼️ Optional Mathematica Rendering</p>
 <ul>
 <li>Use <code>MMAView</code> to render static previews via Mathematica engine.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-graph3d-support">🔺 Graph3D Support<a href="https://wljs.io/releases/2025/04/24/2.7.3#-graph3d-support" class="hash-link" aria-label="Direct link to 🔺 Graph3D Support" title="Direct link to 🔺 Graph3D Support">​</a></h3>
+</li>
+<li>
+<p>🔺 Graph3D Support</p>
 <ul>
 <li>Added support for <code>GraphPlot3D</code>, <code>Graph3D</code>, and related primitives.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-2d-graphics-improvements">🎨 2D Graphics Improvements<a href="https://wljs.io/releases/2025/04/24/2.7.3#-2d-graphics-improvements" class="hash-link" aria-label="Direct link to 🎨 2D Graphics Improvements" title="Direct link to 🎨 2D Graphics Improvements">​</a></h3>
+</li>
+<li>
+<p>🎨 2D Graphics Improvements</p>
 <ul>
 <li>Implemented missing primitives and symbols (e.g., <code>FaceForm</code>, <code>RegularPolygon</code>).</li>
 <li>Support for date histograms and flag visuals.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-3d-graphics-upgrades">🧊 3D Graphics Upgrades<a href="https://wljs.io/releases/2025/04/24/2.7.3#-3d-graphics-upgrades" class="hash-link" aria-label="Direct link to 🧊 3D Graphics Upgrades" title="Direct link to 🧊 3D Graphics Upgrades">​</a></h3>
+</li>
+<li>
+<p>🧊 3D Graphics Upgrades</p>
 <ul>
 <li>New primitives: <code>Cone</code>, <code>Icosahedron</code> and others added</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-enhanced-graph-styling">🕸️ Enhanced Graph Styling<a href="https://wljs.io/releases/2025/04/24/2.7.3#%EF%B8%8F-enhanced-graph-styling" class="hash-link" aria-label="Direct link to 🕸️ Enhanced Graph Styling" title="Direct link to 🕸️ Enhanced Graph Styling">​</a></h3>
+</li>
+<li>
+<p>🕸️ Enhanced Graph Styling</p>
 <ul>
 <li>Inspired by <a href="http://szhorvat.net/pelican/igraphm-a-mathematica-interface-for-igraph.html" target="_blank" rel="noopener noreferrer">IGraphM</a>.</li>
 <li>Improved layout options, styling themes, and large graph support.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-more-tutorials">📖 More Tutorials<a href="https://wljs.io/releases/2025/04/24/2.7.3#-more-tutorials" class="hash-link" aria-label="Direct link to 📖 More Tutorials" title="Direct link to 📖 More Tutorials">​</a></h3>
+</li>
+<li>
+<p>📖 More Tutorials</p>
 <ul>
 <li>Integrated examples from <em>An Elementary Introduction to the Wolfram Language</em> for beginners.</li>
+</ul>
+</li>
 </ul>
 <p>Our project was published in <a href="https://towardsdatascience.com/how-to-use-gyroscope-in-presentations-or-why-take-a-joycon-to-dpg2025/" target="_blank" rel="noopener noreferrer">Towards Data Science</a> (TDS) ✨</p>
 <div>
