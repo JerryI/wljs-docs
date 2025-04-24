@@ -1,4 +1,4 @@
-## By default, the following packages **are loaded into the Kernel on startup**
+__By default, the following packages **are loaded into the Kernel on startup**__
 
 ### Wolfram Language Packages
 These are standard packages that can be installed on any WL system:

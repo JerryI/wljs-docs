@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Overview.md",
+                "file": "frontend/Advanced/Manipulating Notebooks/Import notebook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Overview"
+              "title": "Import notebook"
             }
           },
           {
@@ -249,9 +249,16 @@
   },
   "active": "a6e708c5f3f61d2b",
   "lastOpenFiles": [
+    "Screenshot 2025-04-24 at 17.36.27.png",
+    "frontend/Advanced/Manipulating Notebooks/Cells.md",
+    "frontend/Advanced/Manipulating Notebooks/Import notebook.md",
+    "frontend/Advanced/Cells manipulation.md",
+    "frontend/Advanced/Projector.md",
+    "frontend/Advanced/Manipulating Notebooks",
+    "frontend/Advanced/Packages.md",
+    "frontend/Overview.md",
     "frontend/Command palette.md",
     "frontend/Cell types/Input cell.md",
-    "frontend/Overview.md",
     "frontend/Troubleshooting/Troubleshooting.md",
     "frontend/Reference/GUI/MMAView.md",
     "Screenshot 2025-04-22 at 14.56.18.png",
@@ -275,12 +282,6 @@
     "frontend/Reference/GUI/Refresh.md",
     "frontend/Reference/Interpreter/OffloadFromEventObject.md",
     "frontend/Reference/Plotting Functions/ManipulateParametricPlot.md",
-    "frontend/Reference/Formatting/Panel.md",
-    "frontend/Advanced/Graphics/Inset expressions.md",
-    "frontend/Reference/Graphics/Inset.md",
-    "frontend/Reference/Graphics/Graphics.md",
-    "frontend/Exporting/Standalone Widgets.md",
-    "frontend/Advanced/Frontend interpretation/Frontend Objects.md",
     "Screenshot 2025-04-02 at 10.11.33.png",
     "frontend/Advanced/Dynamics/Transform native plot functions/index.mdx",
     "Screenshot 2025-03-29 at 17.27.13.png",
@@ -293,7 +294,6 @@
     "frontend/Advanced/Dynamics/Transform native plot functions",
     "frontend/attachments/kernel.txt",
     "frontend/attachments/81ca8f84-ffea-48c5-ab2d-6d126bc315d1.txt",
-    "frontend/attachments/notebook-0fd.wln",
-    "frontend/attachments/0fdbd52d-d4fd-417d-9481-f43d158acf84.txt"
+    "frontend/attachments/notebook-0fd.wln"
   ]
 }
