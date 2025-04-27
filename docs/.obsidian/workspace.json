@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Manipulating Notebooks/Import notebook.md",
+                "file": "frontend/Reference/GUI/Button.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Import notebook"
+              "title": "Button"
             }
           },
           {
@@ -122,11 +122,11 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "shortcuts",
+                "query": "Button",
                 "matchingCase": true,
                 "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": true,
+                "collapseAll": true,
+                "extraContext": false,
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
@@ -249,9 +249,13 @@
   },
   "active": "a6e708c5f3f61d2b",
   "lastOpenFiles": [
+    "Screenshot 2025-04-27 at 15.24.30.png",
+    "Screenshot 2025-04-27 at 15.14.22.png",
+    "frontend/Reference/GUI/InputButton.md",
+    "frontend/Reference/GUI/Button.md",
+    "frontend/Advanced/Manipulating Notebooks/Import notebook.md",
     "Screenshot 2025-04-24 at 17.36.27.png",
     "frontend/Advanced/Manipulating Notebooks/Cells.md",
-    "frontend/Advanced/Manipulating Notebooks/Import notebook.md",
     "frontend/Advanced/Cells manipulation.md",
     "frontend/Advanced/Projector.md",
     "frontend/Advanced/Manipulating Notebooks",
@@ -280,14 +284,10 @@
     "frontend/Reference/GUI/Manipulate.md",
     "frontend/Reference/Plotting Functions/AnimateParametericPlot.md",
     "frontend/Reference/GUI/Refresh.md",
-    "frontend/Reference/Interpreter/OffloadFromEventObject.md",
-    "frontend/Reference/Plotting Functions/ManipulateParametricPlot.md",
     "Screenshot 2025-04-02 at 10.11.33.png",
     "frontend/Advanced/Dynamics/Transform native plot functions/index.mdx",
     "Screenshot 2025-03-29 at 17.27.13.png",
     "frontend/Reference/GeoGraphics",
-    "Screenshot 2025-03-29 at 17.23.35.png",
-    "Screenshot 2025-03-29 at 17.20.37.png",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments/6e7341c7-2708-4730-a4f7-78f8fb75193c.txt",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments/notebook-6e7.wln",
     "frontend/Advanced/Dynamics/Transform native plot functions/attachments",
