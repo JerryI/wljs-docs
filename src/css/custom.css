@@ -2753,6 +2753,7 @@ margin-right: auto;
 
 .reveal-fixed-height {
 height: 20rem;
+display: block;
 }
 
 .reveal h1 {
