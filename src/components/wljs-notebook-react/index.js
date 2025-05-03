@@ -341,6 +341,8 @@ export function WLJSStore({json, notebook, kernel}) {
     
       return interpretate(args[0], env);
     }
+
+    core.Medium = () => 0.7
     
     core.Offload.update = (args, env) => {
       if (args.length > 1) {

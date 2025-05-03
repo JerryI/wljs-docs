@@ -3,6 +3,7 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  background-color: var(--docusaurus-collapse-button-bg-hover);
 }
 
 .featureSvg {
@@ -14,12 +15,14 @@
   border-radius: 4px;
   display: block;
   width: 100%;
-  outline: 1px solid #dad5cb;
-  text-decoration: none !important;
+  outline: 1px solid var(--ifm-background-surface-color);
+  text-decoration: dotted !important;
+  color: var(--ifm-color-content) !important;
   text-align: left;
   line-height: 1.2;
   padding: 0.5rem;
   padding-top: 0.85rem;
+  background-color: var(--ifm-background-surface-color)
 }
 
 .row {
