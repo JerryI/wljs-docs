@@ -9,13 +9,13 @@
     <icon>https://wljs.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Basic Verlet Integration implementation]]></title>
-        <id>https://wljs.io/blog/2025/05/01/index</id>
-        <link href="https://wljs.io/blog/2025/05/01/index"/>
+        <id>https://wljs.io/blog/2025/05/01/rim</id>
+        <link href="https://wljs.io/blog/2025/05/01/rim"/>
         <updated>2025-05-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Using the power of Newton's equations and numerics to solve dynamics of arbitary planar meshes in real-time]]></summary>
         <content type="html"><![CDATA[<p><em>Using the power of Newton's equations and numerics to solve dynamics of arbitary planar meshes in real-time</em></p>
 <h2><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/Screenshot%202025-05-01%20at%2015.56.21-343b8270bd94d8b3789dfd6e760e9ebe.png" width="1180" height="660" class="img_ev3q"></h2>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bunch-of-points">Bunch of points<a href="https://wljs.io/blog/2025/05/01/index#bunch-of-points" class="hash-link" aria-label="Direct link to Bunch of points" title="Direct link to Bunch of points">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bunch-of-points">Bunch of points<a href="https://wljs.io/blog/2025/05/01/rim#bunch-of-points" class="hash-link" aria-label="Direct link to Bunch of points" title="Direct link to Bunch of points">​</a></h2>
 <p>Define a set of random points</p>
 <!-- -->
 <a href="https://wljs.io/d576a816bc02a6b5084ee2da542b11cc.wln" class="p-2 text-xs w-full flex ring-1 ring-inset text-gray-600 shadow ring-gray-300 bg-gray-300 my-2">Download original notebook <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 ml-auto" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17 17h.01m.39-3h.6c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C21 15.602 21 16.068 21 17s0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C19.398 20 18.932 20 18 20H6c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C3 18.398 3 17.932 3 17s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C4.602 14 5.068 14 6 14h.6m5.4 1V4m0 11-3-3m3 3 3-3"></path></svg></a>
@@ -109,55 +109,11 @@ Do[With[{\[Delta]t = 0.05},
   Pause[0.01];
   
 ], {i, 200}]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="animation-widget">Animation widget<a href="https://wljs.io/blog/2025/05/01/index#animation-widget" class="hash-link" aria-label="Direct link to Animation widget" title="Direct link to Animation widget">​</a></h3>
-<p>To avoid extra steps in evaluation, we can make a widget out of that with scoped variables</p>
-<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="h-fade-20 codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Module[{pts0, pts1, pts2, trigger, button, bonds, lengths, pairs, cache = &lt;||&gt;},
- trigger = EventObject[];
- button = InputButton["Restart"];
-
- EventHandler[button, Function[Null,
-    pts0 = RandomReal[{-1,1}, {10, 2}];
-    pts1 = pts0; pts2 = pts0;
-    cache = &lt;||&gt;;
-
-    bonds = EdgeList[RandomGraph[Length[pts0]{1, 3}]];
-    lengths = Norm /@ getDir[bonds, pts0];
-    pairs = {bonds, lengths} // Transpose;
- ]];
-
- button // EventFire;
-
- {
-  button,
-  "","",
-  Animate[showGeometry[pts0, EdgeList @ bonds], {n,1,150,1}, 
-
-    "UpdateFunction"-&gt;Function[n,
-      
-      pts0 = If[ListQ[cache[n]], cache[n], With[{\[Delta]t = 0.05},
-        With[{new = Clip[applyBond[pairs, 1.0][
-          2 pts1 - pts2 + Table[{0,-1}, {i, Length[pts0]}] (*SpB[*)Power[\[Delta]t(*|*),(*|*)2](*]SpB*)
-        ], {-5,5}]},
-  
-          pts2 = pts1;
-          pts1 = new;
-          cache[n] = new;
-          new
-        ]
-      ]];
-      (* prevent default action of Animate*)
-      False
-    ], 
-  
-    "TriggerEvent"-&gt;EventClone[button], AnimationRate-&gt;30
-  ]
- } // Column // Panel 
-]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
-<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*BB[*)(Panel[(*GB[*){{(*VB[*)(EventObject[&lt;|"Id" -&gt; "f30a5e37-4894-433c-8159-a730d15e720b", "Initial" -&gt; False, "View" -&gt; "db3b5dba-7a14-43d5-8883-ce7e057168d7"|&gt;])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKpyQZJ5mmJCXqmicamuiaGKeY6lpYWBjrJqeapxqYmhuaWaSYAwCOHhWs"*)(*]VB*)}(*||*),(*||*){""}(*||*),(*||*){""}(*||*),(*||*){(*VB[*)(FrontEndRef["6adb460d-58a4-40d2-badf-2d7649313d7d"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKmyWmJJmYGaTomlokmuiaGKQY6SYlpqTpGqWYm5lYGhsap5inAACJzxXN"*)(*]VB*)}}(*]GB*)])(*,*)(*"1:eJxTTMoPSmNiYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCV4gEZaZWu6SmpxflFiSXxTMClKamJeaA9HJAiSCSnNSg0EMj9TEFIQCAH5qF00="*)(*]BB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="procedurally-generated-structures">Procedurally generated structures<a href="https://wljs.io/blog/2025/05/01/index#procedurally-generated-structures" class="hash-link" aria-label="Direct link to Procedurally generated structures" title="Direct link to Procedurally generated structures">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/falling-ezgif.com-video-to-gif-converter-e522b1bca9f0861b6e42b84e1d483a3b.gif" width="792" height="598" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="procedurally-generated-structures">Procedurally generated structures<a href="https://wljs.io/blog/2025/05/01/rim#procedurally-generated-structures" class="hash-link" aria-label="Direct link to Procedurally generated structures" title="Direct link to Procedurally generated structures">​</a></h2>
 <p>Even without any optimizations of present code (normally you would need to use vectorization tricks or <code>Compile</code> or switch to <code>OpenCLLink</code>) we can still try to model some more complex than random graph of 10 points and add interaction with a user's mouse.</p>
 <div><br></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rim">Rim<a href="https://wljs.io/blog/2025/05/01/index#rim" class="hash-link" aria-label="Direct link to Rim" title="Direct link to Rim">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rim">Rim<a href="https://wljs.io/blog/2025/05/01/rim#rim" class="hash-link" aria-label="Direct link to Rim" title="Direct link to Rim">​</a></h3>
 <p>Here is a quick way of making this using just tables</p>
 <div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">rim = Join @@
   (Table[#{Sin[x], Cos[x]}, {x,-Pi, Pi, Pi/6}] &amp;/@ {1, 0.9} // Transpose);
@@ -214,7 +170,7 @@ Button["Stop", EventRemove["anim"]]
 
 Button["Reset", With[{}, rim0 = 2.0 rim; rim1 = rim0; rim2 = rim0;
 rimR = rim0;]]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="generate-a-mesh-from-an-image">Generate a Mesh from an Image<a href="https://wljs.io/blog/2025/05/01/index#generate-a-mesh-from-an-image" class="hash-link" aria-label="Direct link to Generate a Mesh from an Image" title="Direct link to Generate a Mesh from an Image">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="generate-a-mesh-from-an-image">Generate a Mesh from an Image<a href="https://wljs.io/blog/2025/05/01/rim#generate-a-mesh-from-an-image" class="hash-link" aria-label="Direct link to Generate a Mesh from an Image" title="Direct link to Generate a Mesh from an Image">​</a></h2>
 <p>The more challenging, the more fun! It would be great to sketch a bitmap image using a brush and transform it into a mesh that can be modeled.</p>
 <div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">mask = NotebookStore["carnivorous-284"];
 EventHandler[InputRaster[mask], (mask = #)&amp;]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
