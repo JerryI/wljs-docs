@@ -16,7 +16,12 @@ import Link from '@docusaurus/Link';
 
 import styles from './styles.module.css'
 
-All binaries are hosted at Github and homebrew
+
+__Step 1__: download and install [freeware Wolfram Engine](https://www.wolfram.com/engine/) for developers.
+
+__Step 2__: install WLJS from the binaries hosted at Github or homebrew.
+
+Alternatively you can skip __steps 1, 2__ and use a __complete Docker Image__ (see further).
 
 <Link className={styles.link} to="https://github.com/JerryI/wolfram-js-frontend/releases">Releases</Link>
 
@@ -54,8 +59,9 @@ brew install --cask wljs-notebook
 
 ## 🚢 Running using Docker
 
+__Step 1__: register and get developer license for [freeware Wolfram Engine](https://www.wolfram.com/engine/) at wolfram.com
 
-Deploy WLJS Notebook in a single line of code to any machine!
+__Step 2__: deploy WLJS Notebook in a single line of code to any machine!
 
 ```bash
 docker run -it \
