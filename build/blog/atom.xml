@@ -8,13 +8,12 @@
     <subtitle>WLJS Notebook Blog</subtitle>
     <icon>https://wljs.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[glass]]></title>
+        <title type="html"><![CDATA[Interactive Magnifying Glass Effect]]></title>
         <id>https://wljs.io/blog/2025/05/04/glass</id>
         <link href="https://wljs.io/blog/2025/05/04/glass"/>
         <updated>2025-05-04T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Interactive Magnifying Glass Effect]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="interactive-magnifying-glass-effect">Interactive Magnifying Glass Effect<a href="https://wljs.io/blog/2025/05/04/glass#interactive-magnifying-glass-effect" class="hash-link" aria-label="Direct link to Interactive Magnifying Glass Effect" title="Direct link to Interactive Magnifying Glass Effect">​</a></h2>
-<p>This code creates a magnifying glass effect over an image in Wolfram Language. As the mouse moves over the image, a zoomed-in circular region follows the cursor, simulating a magnifying lens.</p>
+        <summary type="html"><![CDATA[This code creates a magnifying glass effect over an image in Wolfram Language. As the mouse moves over the image, a zoomed-in circular region follows the cursor, simulating a magnifying lens.]]></summary>
+        <content type="html"><![CDATA[<p>This code creates a magnifying glass effect over an image in Wolfram Language. As the mouse moves over the image, a zoomed-in circular region follows the cursor, simulating a magnifying lens.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="-how-it-works">🔧 How it works:<a href="https://wljs.io/blog/2025/05/04/glass#-how-it-works" class="hash-link" aria-label="Direct link to 🔧 How it works:" title="Direct link to 🔧 How it works:">​</a></h3>
 <ul>
 <li><code>takeImagePart</code>: Extracts and resizes a square region of the image around a given position.</li>
