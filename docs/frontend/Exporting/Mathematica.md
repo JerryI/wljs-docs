@@ -3,7 +3,7 @@
 __Export to `.nb` format__
 
 :::warning
-This feature is experimental.
+This feature is quite experimental.
 :::
 
 It is possible to convert a `wln` notebook to a `.nb` file, with some limitations.
