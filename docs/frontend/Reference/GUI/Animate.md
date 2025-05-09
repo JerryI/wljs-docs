@@ -29,6 +29,17 @@ Animate[Row[{Sin[x], "==", Series[Sin[x], {x,0,n}], Invisible[1/2]}], {n, 1, 10,
 ## Portability
 The same as for [Manipulate](frontend/Reference/GUI/Manipulate.md), i.e. can be fully exported as [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md)
 
+
+## MMAView
+[MMAView](frontend/Reference/GUI/MMAView.md) wrapper allows to use **native Wolfram Engine rendering engine** for animating expressions, **any expression**. It uses a parallel kernel to rasterize the provided expression and stream updates to the frontend.
+
+
+```mathematica
+Animate[Plot[Sin[x y], {x,0,1}], {y,0,5}] // MMAView
+```
+
+![](./../../../aniamtett-ezgif.com-optimize.gif)
+
 ## Options
 ### `AnimationRate`
 Specifies frames per second. The default is `6`

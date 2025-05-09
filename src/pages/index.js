@@ -340,6 +340,12 @@ export default function Home() {
               to="/sponsorship">
               Donate
             </Link>
+            <Link
+              className="button button--secondary button--lg" style={{"background": "var(--ifm-color-primary-button)", "box-shadow": "0 0 31px -14px rgba(0, 0, 0, 0.8)", "color": "var(--ifm-color-primary-text-alt)", "textDecoration":"none !important", display: "flex"}}
+              to="https://opencollective.com/wljs-notebook">
+                <img class="mt-auto mb-auto pr-2" width="30" src="https://next-images.opencollective.com/_next/image?url=%2Fstatic%2Fimages%2Foc-logo-watercolor-256.png&amp;w=64&amp;q=75"/>
+                <span>Open Collective</span>
+            </Link>
             </div>
           </div>
         </section>    

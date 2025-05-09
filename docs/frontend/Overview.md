@@ -105,6 +105,15 @@ Partial support for [Mathematica](frontend/Importing/Mathematica.md) `.nb` forma
 
 :::tip
 If something does not look like as it should, try [MMAView](frontend/Reference/GUI/MMAView.md)
+
+```mathematica
+With[{p = Plot3D[f[x] y, {x,0,10}, {y,0,10}]},
+  MMAView[p]
+]
+```
+
+![](./../neverasked-ezgif.com-optimize.gif)
+
 :::
 
 ## Why Not Jupyter Ecosystem?

@@ -102,6 +102,21 @@ Manipulate[
 
 ![](./../../../Screenshot%202025-04-02%20at%2010.11.33.png)
 
+## MMAView
+[MMAView](frontend/Reference/GUI/MMAView.md) wrapper allows to use **native Wolfram Engine rendering engine** for manipulate expressions, **any expression**. It uses a parallel kernel to rasterize the provided expression and stream updates to the frontend.
+
+```mathematica
+Manipulate[Plot3D[Sin[n x] Cos[n y], {x,-1,1}, {y,-1,1}], {n, 1, 5, 1}] // MMAView
+```
+
+![](./../../../manipulate-ezgif.com-optimize.gif)
+
+**Try to drag and rotate the plot** We automatically detect if the manipulate expression is [[Graphics3D]] and if so, we provide additional mouse controls.
+
+:::warning
+It literally streams uncompressed raster images in real-time. Please do not overuse it, and try to use WLJS dynamics in general if possible.
+:::
+
 ## Supported output forms
 - [StandardForm](frontend/Reference/Formatting/StandardForm.md)
 - [WLXForm](frontend/Reference/Formatting/WLXForm.md)

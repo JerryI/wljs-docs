@@ -37,6 +37,22 @@ Graphics3D[ Table[With[{p = {i, j, k}/5}, {RGBColor[p], Opacity[.75], Cuboid[p, 
 
 <Wl >{`Graphics3D[ Table[With[{p = {i, j, k}/5}, {RGBColor[p], Opacity[.75], Cuboid[p, p + .15]}], {i, 5}, {j, 5}, {k, 5}]]`}</Wl>
 
+
+## Mathematica's native renderer
+Using [MMAView](frontend/Reference/GUI/MMAView.md), you can bypass the WLJS pipeline and directly render an expression as it would appear in Wolfram Mathematica **keeping interactivity intact for 3D plots**
+
+```mathematica
+With[{p = Plot3D[f[x] y, {x,0,10}, {y,0,10}]},
+  MMAView[p]
+]
+```
+
+:::note
+Note, that it is important to pass it using `With`, since `MMAView` has `HoldFirst` attribute. Otherwise the direct pass will give your a static plot
+:::
+
+![](./../../../neverasked-ezgif.com-optimize.gif)
+
 ## Options
 
 ### `ImageSize`

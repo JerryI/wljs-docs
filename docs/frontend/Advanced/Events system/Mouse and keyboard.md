@@ -13,7 +13,6 @@ The following elements are available out of the box:
 - [InputRange](frontend/Reference/GUI/InputRange.md)
 - [InputText](frontend/Reference/GUI/InputText.md)
 - [InputSelect](frontend/Reference/GUI/InputSelect.md)
-- [InputTable](frontend/Reference/GUI/InputTable.md)
 - [InputFile](frontend/Reference/GUI/InputFile.md)
 - [InputCheckbox](frontend/Reference/GUI/InputCheckbox.md)
 - [InputEditor](frontend/Reference/GUI/InputEditor.md)

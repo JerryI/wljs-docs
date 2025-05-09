@@ -7,6 +7,10 @@ Here is a FAQ list for the design choices
 
 ## Notebook interface
 
+### Something isn't working like in Mathematica
+If you don't like how WLJS Notebook renders your figures, please, try a fallback option [MMAView](frontend/Reference/GUI/MMAView.md)
+
+![](./../../neverasked-ezgif.com-optimize.gif)
 
 ### Why Not Jupyter Notebook, VSCode, Pluto, etc.  
 
@@ -15,6 +19,10 @@ Our primary focus was to bring easy, fast, and snappy dynamics to Wolfram Notebo
 We initially experimented with the Jupyter API and later with Observable, but neither provided enough flexibility to implement syntax sugar, editable math expressions, and interactive output cells. Storing and rendering elements like interactive 3D plots with embedded JavaScript is particularly challenging. The official Wolfram Language Extension only supports rasterized static images as output. While it's possible to embed JavaScript in output cells, this approach is highly inefficient for dynamic evaluation.  
 
 In contrast, WLJS stores raw Wolfram Language (WL) data in the notebook, which the frontend then interprets as plots or 2D/3D images. This increases file size but enables more functionality, such as panning or rotating a plot and adjusting some sliders entirely offline without a working kernel.  
+
+### Why in Jupyter WL Extension this or that looks different
+The main difference between Jupyter and WLJS is that Jupyter rasterizes all plots into static images. (You can do that in WLJS too—just use [MMAView](frontend/Reference/GUI/MMAView.md)) In contrast, WLJS reimplements most graphical primitives one by one using JavaScript, SVG, custom WebGL shaders, and other technologies, allowing everything to run directly in the browser in-place. As a result, plots remain interactive and vector-based, fully compatible with features like [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) , [AnimatePlot](frontend/Reference/Plotting%20Functions/AnimatePlot.md), and more (see [Dynamics](frontend/Dynamics.md)). 
+
 
 ### Summary of Limitations in Existing Solutions  
 
@@ -77,7 +85,7 @@ We have a [Manipulate](frontend/Reference/GUI/Manipulate.md) expression that is 
 
 ## General
 ### Would you join Mathics to go fully open-source
-It is possible in the future 🧙🏼‍♂️ since [Mathics project](https://mathics.org/) reimplement the core features of Wolfram Language in Python.
+It is possible in the future 🧙🏼‍♂️ since [Mathics project](https://mathics.org/) reimplement the core features of Wolfram Language in Python. We should try it at some point.
 
 ### Our goals
 We make our decisions based on the considerations
@@ -103,4 +111,4 @@ We do use ESM and JavaScript bundlers within a dedicated component. Each compone
 
 To address this, all interconnections are handled through a few global objects and classes, such as `interpretate`, `server`, `SupportedCells`, `CellWrapper`.
 
-__Another reason we use the global scope__ is to provide users with easy access to the WLJS Interpreter (see [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)).  
+__Another reason we use the global scope__ is to provide users with easy access to the WLJS Interpreter (see [WLJS Functions](frontend/Advanced/Frontend%20interpretation/WLJS%20Functions.md)).  Call it __user-first__ approach and __developers-second__ 

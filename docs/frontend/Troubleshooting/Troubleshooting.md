@@ -40,7 +40,7 @@ Clicking the bug icon opens the JavaScript developer tools.
 To bypass the standard form of expression used in WLJS Notebook, use [MMAView](frontend/Reference/GUI/MMAView.md)
 
 ```mathematica
-
+Plot[x, {x,0,1}] // MMAView
 ```
 
 WLJS Notebook does not cover all possible styling options for plots, graphics and diagram types. For that reason we give an option to use the default renderer of Wolfram Engine.

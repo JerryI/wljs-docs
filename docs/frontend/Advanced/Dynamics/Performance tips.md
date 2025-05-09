@@ -2,11 +2,101 @@
 draft: false
 ---
 
-## Performance Tips
+# Performance Tips
+
+## Post processing on frontend
+For instance you are passing some symbol `vec` to `Graphics` primitive and would like to change the order of elements or rescale it.
+
+The naive approach ❌
+
+```mathematica
+vec = {1,1};
+
+Graphics[{
+	Arrow[{{0,0}, vec, 2 {vec[[1]], 0.8 vec[[2]]}} // Offload]
+}]
+```
+![](./../../../Screenshot%202025-05-09%20at%2010.10.55.png)
+
+This will still work, but inefficient. Each update of `vec` will cause **3 subsequent reevaluation of Arrow primitive**.
+
+Try to minimize to a single instance of `vec` ✅
+
+```mathematica
+vec = {1,1};
+
+Graphics[{
+	Arrow[With[{x = vec}, {{0,0}, x, {2 x[[1]], 1.6 x[[2]]}}] // Offload]
+}]
+```
+
+Then if you set `vec = RandomReal[{0,1}, 2]` it will **only cause 1 revaluation** of `Arrow`.
+
+*Think of an onion from the Shrek movie!*
+
+<details>
+<summary>Another possible wrong solution</summary>
+
+You might try to do the following ❌
+
+```mathematica
+Graphics[{
+	With[{x = vec}, Arrow[{{0,0}, x, {2 x[[1]], 1.6 x[[2]]}}]] // Offload
+}]
+```
+
+It won't work, since the binding between `vec` and `Arrow` isn't possible. `Arrow` simply does not see its outer expressions.
+
+</details>
+
+:::note
+The syntax 
+
+```mathematica
+{2, 1.6} x }]] // Offload
+```
+
+**is not yet supported by WLJS Interpreter**, but absolutely valid for Wolfram Language. Please do **this instead if you place it inside `Offload`**
+
+```mathematica
+{2 x[[1]], 1.6 x[[2]]} }]] // Offload
+```
+
+:::
+
+## Multiple symbols to 1 primitive
+Sometimes you need to controls two parameters at the same time. Then one can write something like this 
+
+```mathematica
+Graphics[{
+	Disk[pos // Offload, radius // Offload]
+}]
+```
+
+It will still work, but it depends how you update `pos` and `radius`. If they are completely independent in terms on time it makes sense to couple them to `Disk` equally.
+
+However, if you always update `pos` and `radius` **at the same time**, you might rewrite it as follows ✅
+
+```mathematica
+Graphics[{
+	Disk[pos // Offload, Offload[radius, "Static"->True]]
+}]
+```
+
+It might be misleading, but here setting a new value to `radius` won't cause re-evaluation of `Disk`, but `pos` will. It does not mean, that new values of `radius` are not in-sync with the frontend, only re-evaluation is not triggered. Then you can update two as
+
+```mathematica
+radius = newRadius; (* only sync *)
+pos = newPos; (* sync + re-evalaution of Disk *)
+```
+
+Here order matters, if you flip it `Disk` might still use `radius` values from the previous update (1 step lagging behind `pos`). 
+
+## Tables of data
 You can explicitly choose what will be interpreted on the frontend or backend. There are a few possibilities for our function inside the `Line` expression.
 
-### Full Load on the Kernel
-For this, one needs to modify the code to:
+### Full Load on the Kernel ✅
+The simplest, universal and robust solution
 
 ```mathematica
 EventHandler[InputRange[0,4,0.1], Function[data, 
@@ -27,8 +117,17 @@ This binding can be illustrated as shown in the image below:
 
 ![](../../../imgs/dynEx1.excalidraw.svg)
 
+#### Math operations for free
+You can apply any basic operation on the data on the frontend almost for free
+
+```mathematica
+Graphics[{Cyan, Line[2 lines // Offload], Line[lines // Offload]}]
+```
+
+Then you have two sets of lines, each binds to its own instance of `lines` symbol. It won't cost extra in terms of bandwidth of the communication channel between frontend and backend.
+
 ### Using the Frontend
-One can move the entire `Table` computation to the browser's side. Let's discard our previous changes:
+One can move the entire `Table` computation to the browser's side (WLJS Interpreter). Let's discard our previous changes:
 
 ```mathematica
 EventHandler[InputRange[0,4,0.1], Function[data, 
@@ -37,7 +136,7 @@ EventHandler[InputRange[0,4,0.1], Function[data,
 % // EventFire
 ```
 
-##### Naive Approach 1
+##### Naive Approach 1 ❌
 A straightforward solution for output could be:
 
 ```mathematica
@@ -64,7 +163,7 @@ Creates `10` instances of `symbol`. The `Line` function will be called __10__ ti
 Avoid placing dynamic symbols inside large `Table` expressions. Minimize the number of copies created.
 :::
 
-##### Naive Approach 2
+##### Naive Approach 2 ❌
 Let's try to improve it a bit:
 
 ```mathematica
@@ -73,11 +172,11 @@ Graphics[{Cyan, Line[
 ]}]
 ```
 
-This is also __inefficient__ 👎🏼  The `Table` function still runs on the __browser's side__.
+This is also __inefficient__ 👎🏼  The `Table` function still runs on the __browser's side__ and each time `v` gets an update it re-evaluates the whole table
 
 ![](../../../imgs/dynEx3.excalidraw.svg)
 
-##### Optimized Version
+##### Optimized Version ✅
 One can reduce the number of instances to just one using `With`, as shown in the example above:
 
 ```mathematica
@@ -95,7 +194,7 @@ This __saves a lot of resources__ 👍🏼
 
 :::tip
 ```mathematica
-Line[With[{y = symbol}, Table[AnyExpression[y], {i, 10}]]]
+Line[With[{y = symbol}, Table[AnyBasicExpression[y], {i, 10}]]]
 ```
 Creates only 1 instance of `symbol`. The `Line` function will be called __once__ per update of `symbol`.
 :::
@@ -107,27 +206,6 @@ Line[symbol//Offload], ... Line[symbol//Offload]
 This is acceptable since each `Line` is bound to its own `symbol` instance. Therefore, on an update of `symbol`, each `Line` expression will be reevaluated once.
 :::
 
-### If Duplicating Is Unavoidable
-If you need to update two properties of a dynamic expression, such as [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) (which has `VertexColors` and a list of vertices), it is unavoidable to use two [Offload](frontend/Reference/Interpreter/Offload.md) calls:
-
-```mathematica
-GraphicsComplex[vertices // Offload, {Polygon[triangles]}, "VertexColors"->Offload[colors]]
-```
-
-If later in the code:
-
-```mathematica
-vertices = ...;
-colors = ...;
-```
-
-Both `vertices` and `colors` will cause the reevaluation of [GraphicsComplex](frontend/Reference/Graphics3D/GraphicsComplex.md) __twice__ for the same data set. However, reevaluation can be reduced using options of [Offload](frontend/Reference/Interpreter/Offload.md):
-
-```mathematica
-GraphicsComplex[vertices // Offload, {Polygon[triangles]}, "VertexColors"->Offload[colors, "Static"->True]]
-```
-
-Here, `colors` __will not be bound to__ `GraphicsComplex`. This results in __only a single reevaluation__ per update of `colors` and `vertices`. However, new values will still be read once `vertices` has been updated.
 
 ### A Possible Pitfall with `With`
 There might be a temptation to wrap the `Line` expression inside `With`, like this:
@@ -148,7 +226,7 @@ __This will not work at all__ 👎🏼 because the binding will occur between `G
 
 ## Numeric Arrays
 :::info
-It is usually done automatically by Wolfram Language if the data has been generated using pure functions.
+It is usually done automatically by Wolfram Language if the data has been generated using pure functions with `Map`, `RandomReal`, `Table` and etc.
 :::
 
 When transferring points as nested lists, it is better to wrap them in `NumericArray`. This informs the WLJS Interpreter in the browser that only numbers or lists of numbers are expected, reducing the load during parsing.

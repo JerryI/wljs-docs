@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/Dynamics/Animation.md",
+                "file": "frontend/Reference/GUI/MMAView.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Animation"
-            }
-          },
-          {
-            "id": "a6e708c5f3f61d2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend/Exporting/MDX.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MDX"
+              "title": "MMAView"
             }
           },
           {
@@ -41,12 +27,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Formatting/Panel.md",
+                "file": "frontend/Reference/GUI/Animate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Panel"
+              "title": "Animate"
+            }
+          },
+          {
+            "id": "61cfffec9797d1b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Overview"
+            }
+          },
+          {
+            "id": "ddfd43395dc6d1df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "frontend/Advanced/Graphics/mma.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "mma"
             }
           },
           {
@@ -90,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -122,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Manipulate",
+                "query": "Offload",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -247,16 +261,44 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a6e708c5f3f61d2b",
+  "active": "61cfffec9797d1b4",
   "lastOpenFiles": [
-    "frontend/Exporting/Static HTML.md",
-    "frontend/Exporting/MDX.md",
-    "frontend/Exporting/Markdown.md",
-    "Screenshot 2025-05-05 at 20.09.06.png",
-    "frontend/Exporting/Mathematica.md",
-    "frontend/Exporting/Dynamic HTML.md",
+    "frontend/Reference/GUI/MMAView.md",
+    "frontend/Troubleshooting/Troubleshooting.md",
+    "frontend/Symbolic programming.md",
+    "frontend/Guidelines.md",
+    "frontend/Dynamics.md",
+    "frontend/Reference/GUI/Animate.md",
+    "frontend/Advanced/Graphics/mma.md",
     "frontend/Reference/GUI/Manipulate.md",
+    "frontend/Reference/Graphics3D/Graphics3D.md",
+    "aniamtett-ezgif.com-optimize.gif",
+    "manipulate-ezgif.com-optimize.gif",
+    "frontend/Reference/Interpreter/Offload.md",
+    "Screenshot 2025-05-09 at 17.17.28.png",
+    "frontend/Reference/GUI/ListAnimate.md",
+    "frontend/Reference/Plotting Functions/AnimatePlot.md",
+    "frontend/Exporting/PDF.md",
+    "frontend/Development/API/REST.md",
     "frontend/instruction.md",
+    "Screenshot 2025-05-07 at 21.39.38.png",
+    "frontend/Development/API/REST-HTTP.md",
+    "frontend/Advanced/Dynamics/Performance tips.md",
+    "frontend/Advanced/Dynamics/Animation.md",
+    "Screenshot 2025-05-09 at 10.10.55.png",
+    "frontend/Advanced/Dynamics/Prototyping.md",
+    "frontend/Advanced/Dynamics/Arrays.md",
+    "ptsData-ezgif.com-optimize.gif",
+    "Screenshot 2025-05-08 at 20.30.39.png",
+    "432423fgd-ezgif.com-optimize.gif",
+    "pointsanimation-ezgif.com-optimize.gif",
+    "Screenshot 2025-05-08 at 19.54.13.png",
+    "frontend/Reference/Frontend IO/WindowObj.md",
+    "frontend/Advanced/Dynamics/Scoping.md",
+    "frontend/Advanced/Dynamics/Raster animation.md",
+    "frontend/Advanced/Dynamics/Offloading calculations.md",
+    "frontend/Advanced/Dynamics/Indicators.md",
+    "frontend/Advanced/Graphics/Inset expressions.md",
     "frontend/Use cases/for Physicists/attachments/kernel-1884789149829811047.txt",
     "frontend/Use cases/for Physicists/attachments/a35c2ef8-d4c1-48ec-baa4-a49e79739629.txt",
     "frontend/Use cases/for Physicists/attachments/notebook-a35.wln",
@@ -266,34 +308,6 @@
     "frontend/Use cases/for Mathematica users/attachments/kernel-7377487813832338122.txt",
     "frontend/Use cases/for Mathematica users/attachments/36ab3a1a-e620-40a1-ba3c-3825663dd810.txt",
     "frontend/Use cases/for Mathematica users/attachments/notebook-36a.wln",
-    "frontend/Use cases/Sandbox/attachments/kernel-714215149096084936.txt",
-    "frontend/Use cases/Sandbox/attachments/Screenshot 2024-09-12 at 11.31.27-89c.png",
-    "frontend/Use cases/Sandbox/attachments/planar_ik.png",
-    "frontend/Use cases/Sandbox/attachments/Canvas Buggles1.gif",
-    "frontend/Use cases/Sandbox/attachments/Bubbles video to gif.gif",
-    "frontend/Use cases/Sandbox/attachments/UploadACSII-ezgif.com-optipng.png",
-    "frontend/Use cases/Sandbox/attachments/short2.gif",
-    "frontend/Use cases/Sandbox/attachments/short1.gif",
-    "frontend/Use cases/Sandbox/attachments/Screenshot 2024-10-29 at 18.49.50-9df.png",
-    "frontend/Use cases/Sandbox/attachments/Screenshot 2024-10-12 at 13.48.14-ff1.png",
-    "frontend/_instructions.md",
-    "frontend/instruction copy.md",
-    "frontend/Tutorial/Working with Images.md",
-    "frontend/Reference/GUI/Button.md",
-    "frontend/Reference/GUI/InputButton.md",
-    "frontend/Advanced/Manipulating Notebooks/Import notebook.md",
-    "frontend/Advanced/Manipulating Notebooks/Cells.md",
-    "frontend/Advanced/Cells manipulation.md",
-    "frontend/Advanced/Projector.md",
-    "frontend/Advanced/Packages.md",
-    "frontend/Overview.md",
-    "frontend/Command palette.md",
-    "frontend/Cell types/Input cell.md",
-    "frontend/Troubleshooting/Troubleshooting.md",
-    "frontend/Reference/GUI/MMAView.md",
-    "frontend/Cell types/Many more.md",
-    "frontend/Cell types/Slides.md",
-    "frontend/Cell types/Markdown.md",
-    "frontend/Dynamics.md"
+    "frontend/Use cases/Sandbox/attachments/kernel-714215149096084936.txt"
   ]
 }

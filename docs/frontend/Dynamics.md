@@ -22,7 +22,7 @@ Always keep track of which parts of your code execute on the Wolfram Kernel (ser
 
 ## If You're Looking for Just `Manipulate`
 
-If you want to see how curves change with parameters, check out [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) or [ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md).
+If you want to see how curves change with parameters, check out [ManipulatePlot](frontend/Reference/Plotting%20Functions/ManipulatePlot.md) or [ManipulateParametricPlot](frontend/Reference/Plotting%20Functions/ManipulateParametricPlot.md) or general [Manipulate](frontend/Reference/GUI/Manipulate.md)
 
 ```mathematica
 ManipulatePlot[Sin[w z + p], {z,0,10}, {w, 0, 15.1, 1}, {p, 0, Pi, 0.1}]
@@ -57,6 +57,25 @@ Animate[Row[{Sin[x], "==", Series[Sin[x], {x,0,n}], Invisible[1/2]}], {n, 1, 10,
 ```
 
 ![](./../animatedsn-ezgif.com-video-to-gif-converter.gif)
+### Fallback to Mathematica's Rendering
+Using [MMAView](frontend/Reference/GUI/MMAView.md) wrapper allows to rasterize interactive output using Wolfram Engine in real-time keeping the original looks of Mathematica's plots
+
+```mathematica
+Manipulate[Plot3D[Sin[n x] Cos[n y], {x,-1,1}, {y,-1,1}], {n, 1, 5, 1}] // MMAView
+```
+
+![](./../manipulate-ezgif.com-optimize.gif)
+
+The same works for [Animate](frontend/Reference/GUI/Animate.md)
+
+```mathematica
+Animate[Plot[Sin[x y], {x,0,1}], {y,0,5}] // MMAView
+```
+
+![](./../aniamtett-ezgif.com-optimize.gif)
+:::note
+Please do not overuse [MMAView](frontend/Reference/GUI/MMAView.md) since it uses raw raster images streamed in real-time, which is a heavy load to the system. Try to use mostly WLJS's dynamics if possible
+:::
 
 
 ## Automatic Tracking of Held Symbols

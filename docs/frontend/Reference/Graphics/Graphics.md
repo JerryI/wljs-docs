@@ -192,6 +192,9 @@ specifies the actual size in pixels of a canvas
 ImageSize->300 or ImageSize->{300,200}
 ```
 
+### `ImageSizeRaw`
+specifies the size of drawing area in pixels considering pixel density ratio. It comes handy when combining [Graphics](frontend/Reference/Graphics/Graphics.md) with [Image](frontend/Reference/Image/Image.md) using [Inset](frontend/Reference/Graphics/Inset.md). [HighlightImage](frontend/Reference/Image/HighlightImage.md) uses this approach
+
 ### `ImagePadding`
 removes or adds the spacing between the plotted range and the canvas border
 
@@ -206,6 +209,9 @@ ImagePadding->10
 ```
 
 <Wl >{`Graphics[Circle[], ImagePadding->10, ImageSize->350]`}</Wl>
+
+### `PlotRangeClipping`
+Defines if plot range has to be clipped. By the default is `True`, that hides all graphics objects outside the plotting range
 
 ### `PlotLabel`
 Specifies a label for a plot

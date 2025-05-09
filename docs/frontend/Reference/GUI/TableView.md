@@ -12,8 +12,6 @@ TableView[table_List, opts___]
 
 where `table` is a 2D list
 
-Represents a ready-only table preview for an arbitrary 2D set of data. For editable tables, please see [InputTable](frontend/Reference/GUI/InputTable.md)
-
 ## Options
 
 ### `ImageSize`
