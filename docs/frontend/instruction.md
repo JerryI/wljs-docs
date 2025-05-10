@@ -23,7 +23,57 @@ __Step 2__: install WLJS from the binaries hosted at Github or homebrew.
 
 Alternatively you can skip __steps 1, 2__ and use a __complete Docker Image__ (see further).
 
-<Link className={styles.link} to="https://github.com/JerryI/wolfram-js-frontend/releases">Releases</Link>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+<Tabs>
+  <TabItem value="apple" label="Mac" default>
+    <ul>
+      <li><Link to="https://github.com/WLJSTeam/wolfram-js-frontend/releases/download/v2.7.4/wljs-notebook-2.7.4-arm64-macos.dmg">Apple Silicon</Link></li>
+      <li><Link to="https://github.com/WLJSTeam/wolfram-js-frontend/releases/download/v2.7.4/wljs-notebook-2.7.4-x64-macos.dmg">Intel</Link></li>
+    </ul>
+  </TabItem>
+  <TabItem value="orange" label="Window">
+    <ul>
+      <li><Link to="https://github.com/WLJSTeam/wolfram-js-frontend/releases/download/v2.7.4/wljs-notebook-2.7.4-x64-win.exe">x86/64</Link></li>
+    </ul>
+  </TabItem>
+  <TabItem value="banana" label="GNU/Linux">
+    <ul>
+      <li><Link to="https://github.com/WLJSTeam/wolfram-js-frontend/releases/download/v2.7.4/wljs-notebook-2.7.4-amd64-gnulinux.deb">x86/64</Link></li>
+      <li><Link to="https://github.com/WLJSTeam/wolfram-js-frontend/releases/download/v2.7.4/wljs-notebook-2.7.4-arm64-gnulinux.deb">ARM64</Link></li>
+    </ul>
+  </TabItem>
+  <TabItem value="baba" label="Docker">
+
+```bash
+docker run -it \
+  -v wljs_data:/wljs \
+  -v ~/wljs:"/home/wljs/WLJS Notebooks" \
+  -v ~/wljs/Licensing:/home/wljs/.WolframEngine/Licensing \
+  -e PUID=$(id -u) \
+  -e PGID=$(id -g) \
+  -p 8000:3000 \
+  --name wljs \
+  ghcr.io/jerryi/wolfram-js-frontend:main
+```
+
+  </TabItem>
+  <TabItem value="is" label="Homebrew">
+  
+```bash  
+brew install --cask wljs-notebook
+```
+
+  </TabItem>
+</Tabs>
+
+see also
+
+<Link className={styles.link} to="https://github.com/JerryI/wolfram-js-frontend/releases">All releases</Link>
+
 
 
 ### Windows

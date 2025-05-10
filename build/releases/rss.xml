@@ -4,10 +4,278 @@
         <title>WLJS Notebook Blog</title>
         <link>https://wljs.io/releases</link>
         <description>WLJS Notebook Blog</description>
-        <lastBuildDate>Thu, 24 Apr 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 10 May 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release notes *2.7.4*]]></title>
+            <link>https://wljs.io/releases/2025/05/10/2.7.4</link>
+            <guid>https://wljs.io/releases/2025/05/10/2.7.4</guid>
+            <pubDate>Sat, 10 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[👐 Open Source Support]]></description>
+            <content:encoded><![CDATA[<p>👐 Open Source Support</p>
+<ul>
+<li>Now on Open Collective! Support and engage with the project: Join us <a href="https://opencollective.com/wljs-notebook" target="_blank" rel="noopener noreferrer">here</a>.</li>
+</ul>
+<p>📊 Plotting Improvements</p>
+<ul>
+<li>Log plots fixed: LogPlot and LogLogPlot now scale correctly.</li>
+<li>New ImageSizeRaw support: Precisely overlay raster and vector graphics with pixel-perfect control.</li>
+</ul>
+<p>🧱 Dataset Overhaul</p>
+<ul>
+<li>Major upgrade to Dataset support—now handles nested structures, symbolic keys, Entity, Quantity, and more.</li>
+</ul>
+<p>🖼️ UI &amp; Usability</p>
+<ul>
+<li>Added “Insert Cell Before” button (based on GitHub feedback).</li>
+<li>Extended MMAView: Native-style interactive 3D plots, Manipulate, Animate, and even ListAnimate now supported seamlessly.</li>
+</ul>
+<p>🌐 Web &amp; API Enhancements</p>
+<ul>
+<li>Simplified REST API with a JavaScript helper class—build custom notebook interfaces in minutes.</li>
+<li>MDX/React integration: Embed cells or full notebooks into blogs and React apps. See it in action here.</li>
+</ul>
+<!-- -->
+<div>
+<style>
+  .balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+  from {transform: translateY(100vh);
+  opacity: 1;}
+  to {transform: translateY(-300vh);
+  opacity: 0;}
+}
+#balloon-container {
+  height: 100vh;
+  top: 0;
+  position:fixed;
+  bottom: 0;
+  z-index: -99;  
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+}
+</style>
+
+<div id="balloon-container">
+</div></div>
+<a href="https://wljs.io/f178e72dc66759b4c1a2b4b0f6abddd1.wln" class="p-2 text-xs w-full flex ring-1 ring-inset text-gray-600 shadow ring-gray-300 bg-gray-300 my-2">Download original notebook <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 ml-auto" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17 17h.01m.39-3h.6c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C21 15.602 21 16.068 21 17s0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C19.398 20 18.932 20 18 20H6c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C3 18.398 3 17.932 3 17s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C4.602 14 5.068 14 6 14h.6m5.4 1V4m0 11-3-3m3 3 3-3"></path></svg></a>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">
+const balloonContainer = document.getElementById("balloon-container");
+
+function random(num) {
+  return Math.floor(Math.random() * num);
+}
+
+function getRandomStyles() {
+  var r = random(255);
+  var g = random(255);
+  var b = random(255);
+  var mt = random(200);
+  var ml = random(50);
+  var dur = random(5) + 5;
+  return `
+  background-color: rgba(${r},${g},${b},0.7);
+  color: rgba(${r},${g},${b},0.7); 
+  box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite
+  `;
+}
+
+function createBalloons(num) {
+  for (var i = num; i &gt; 0; i--) {
+    var balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.cssText = getRandomStyles();
+    balloonContainer.append(balloon);
+  }
+}
+
+function removeBalloons() {
+  balloonContainer.style.opacity = 0;
+  setTimeout(() =&gt; {
+    balloonContainer.remove()
+  }, 500)
+}
+
+createBalloons(10);
+setTimeout(removeBalloons, 15000);
+
+return '';
+</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-source-community">Open-Source Community<a href="https://wljs.io/releases/2025/05/10/2.7.4#open-source-community" class="hash-link" aria-label="Direct link to Open-Source Community" title="Direct link to Open-Source Community">​</a></h2>
+<p><strong>We joined Open Collective</strong> 🎈</p>
+<p><a href="https://opencollective.com/wljs-notebook" target="_blank" rel="noopener noreferrer">WLJS Notebook - Open Collective</a></p>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/Screenshot%202025-05-09%20at%2017.58.13-a75-cf6c8a506f863f2bcd4ba3669b46670d.png" width="722" height="358" class="img_ev3q"></p>
+<p>Let's dive into release notes</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="log-plots">Log plots<a href="https://wljs.io/releases/2025/05/10/2.7.4#log-plots" class="hash-link" aria-label="Direct link to Log plots" title="Direct link to Log plots">​</a></h2>
+<p>We fixed scaling issues with <code>LogPlot</code> and <code>LogLogPlot</code></p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">LogPlot[(*SpB[*)Power[x(*|*),(*|*)2](*]SpB*), {x,0,1}]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["2ada88d8-e525-4c55-bfbd-d08aab31a0cc"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKGyWmJFpYpFjoppoameqaJJua6ialJaXophhYJCYmGRsmGiQnAwCQsBaC"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="imagesizeraw">ImageSizeRaw<a href="https://wljs.io/releases/2025/05/10/2.7.4#imagesizeraw" class="hash-link" aria-label="Direct link to ImageSizeRaw" title="Direct link to ImageSizeRaw">​</a></h2>
+<p>A new option of <code>Graphics</code> is supported to make it easier to overlay raster graphics with lines and user primitives. The major differences compared to <code>ImageSize</code> are:</p>
+<ul>
+<li>It considers the pixel density ratio of the screen.</li>
+<li>It guarantees that the canvas size will match exactly with <code>ImageSizeRaw</code>.</li>
+</ul>
+<p>For example, it allows for creating complex plots that combine <code>Image</code> and <code>Graphics</code> using <code>Inset</code>:</p>
+<div><br></div>
+<p><em>some interpolated data</em></p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">fmo = { (*VB[*)(Get[FileNameJoin[{".iconized", "None-b5c.wl"}]])(*,*)(*"1:eJxTTMoPSmNhYGAo5gUSYZmp5S6pyflFiSX5RcEcQBHP5Py8zKrUlMyMI0wMaUwghSDVQaU5qcGsQIZPYlJqTjBIyC8/LxVNAYjhlpmTChYJKSpNBQDEQxmP"*)(*]VB*),  (*VB[*)(Get[FileNameJoin[{".iconized", "None-96e.wl"}]])(*,*)(*"1:eJxTTMoPSmNhYGAo5gUSYZmp5S6pyflFiSX5RcEcQBHP5Py8zKrUlMyMI0wMaUwghSDVQaU5qcGsQIZPYlJqTjBIyC8/LxVNAYjhlpmTChYJKSpNBQDEQxmP"*)(*]VB*)};</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">With[{f1 = (*VB[*)(Get[FileNameJoin[{".iconized", "None-b5c.wl"}]])(*,*)(*"1:eJxTTMoPSmNhYGAo5gUSYZmp5S6pyflFiSX5RcEcQBHP5Py8zKrUlMyMI0wMaUwghSDVQaU5qcGsQIZPYlJqTjBIyC8/LxVNAYjhlpmTChYJKSpNBQDEQxmP"*)(*]VB*), f2 = (*VB[*)(Get[FileNameJoin[{".iconized", "None-96e.wl"}]])(*,*)(*"1:eJxTTMoPSmNhYGAo5gUSYZmp5S6pyflFiSX5RcEcQBHP5Py8zKrUlMyMI0wMaUwghSDVQaU5qcGsQIZPYlJqTjBIyC8/LxVNAYjhlpmTChYJKSpNBQDEQxmP"*)(*]VB*)}, NumericArray[255.0 Table[
+  Clip[{f1[{x,y}], 0, f2[{x,y}]}/100.0, {0,1}]
+, {y, 0, 5.0, 0.02}, {x, 10, 120, 0.3}] // Reverse
+, "UnsignedInteger8", "ClipAndRound"]];
+imgWide = Image[%, "Byte"];</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>overlay it with vector graphics</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="h-fade-20 codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Graphics[{
+  Inset[imgWide, {Mean[{10,120}], Mean[{1,5}]}]
+}, 
+  PlotRange-&gt;{{10,120}, {1,5}}, 
+  Frame-&gt;True, Axes-&gt;True, 
+  ImageSizeRaw-&gt;ImageDimensions[imgWide],
+  FrameTicksStyle-&gt;Directive[FontSize-&gt;14],
+  FrameStyle-&gt;Directive[FontSize-&gt;14],
+  FrameLabel-&gt;{"wavenumber (cm^{-1})", "H (T)"},
+  Epilog-&gt;{White, AbsoluteDashing[{4}], 
+    Line[Table[{41.6 + 0.035 x, x}, {x,0,5}]],
+    Line[Table[{41.6 - 0.092 x, x}, {x,0,5}]],
+    Line[Table[{89.0 + 0.466 1.97 x, x}, {x,0,5}]],
+    Line[Table[{89.0 - 0.466 1.90 x, x}, {x,0,5}]],
+    Line[Table[{112.6 + 0.466 2.26 x, x}, {x,0,5}]],
+    Line[Table[{112.6 - 0.466 2.39 x, x}, {x,0,5}]]
+  }
+]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["ff318b33-3e0e-4e16-936e-d9a86e45db7b"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKp6UZG1okGRvrGqcapOqapBqa6Voam6XqplgmWpilmpimJJknAQCF1hXg"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ui-update">UI Update<a href="https://wljs.io/releases/2025/05/10/2.7.4#ui-update" class="hash-link" aria-label="Direct link to UI Update" title="Direct link to UI Update">​</a></h2>
+<p><strong>Insert cell before</strong> button (was requested via Github issues)</p>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/Screenshot%202025-05-06%20at%2019.48.56-e95-6a524006e64c6d359fdd95b136748e6e.png" width="739" height="377" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dataset-full-support">Dataset full support<a href="https://wljs.io/releases/2025/05/10/2.7.4#dataset-full-support" class="hash-link" aria-label="Direct link to Dataset full support" title="Direct link to Dataset full support">​</a></h2>
+<p>We have finnaly fixed the most buggy thing we have in WLJS - <code>Dataset</code>. Now it does support nested structures, symbolic keys, <code>Entity</code>, <code>Quantity</code> and etc</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">ExampleData[{"Dataset","Planets"}]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">(*VB[*)(FrontEndRef["c824ccdc-c573-4b47-b58b-87b196ec5df0"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKJ1sYmSQnpyTrJpuaG+uaJJmY6yaZWiTpWpgnGVqapSabpqQZAACNEBYN"*)(*]VB*)</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="extended-mmaview">Extended MMAView<a href="https://wljs.io/releases/2025/05/10/2.7.4#extended-mmaview" class="hash-link" aria-label="Direct link to Extended MMAView" title="Direct link to Extended MMAView">​</a></h2>
+<p>There was a request for interactive native Mathematica's 3D plot. Well, here you go</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">With[{p = Plot3D[f[x] y, {x,0,10}, {y,0,10}]},
+  MMAView[p]
+]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p><em>Note, that it is important to pass it using <code>With</code>, since MMAView has HoldFirst attribute</em></p>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/neverasked-ezgif.com-optimize-9a8-37bf0759fe16d29770f988354ac7e682.gif" width="354" height="300" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="manipulate">Manipulate<a href="https://wljs.io/releases/2025/05/10/2.7.4#manipulate" class="hash-link" aria-label="Direct link to Manipulate" title="Direct link to Manipulate">​</a></h3>
+<p>Works for 2D, 3D, in general any expression!</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Manipulate[Plot3D[Sin[n x] Cos[n y], {x,-1,1}, {y,-1,1}], {n, 1, 5, 1}] // MMAView</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/manipulate-ezgif.com-optimize-175-23e6c12215a5541a0274622e5b9d9121.gif" width="610" height="434" class="img_ev3q"></p>
+<div><br></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="animate">Animate<a href="https://wljs.io/releases/2025/05/10/2.7.4#animate" class="hash-link" aria-label="Direct link to Animate" title="Direct link to Animate">​</a></h3>
+<p>The same works for it</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">Animate[Plot[Sin[x y], {x,0,1}], {y,0,5}] // MMAView</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="listanimate">ListAnimate<a href="https://wljs.io/releases/2025/05/10/2.7.4#listanimate" class="hash-link" aria-label="Direct link to ListAnimate" title="Direct link to ListAnimate">​</a></h2>
+<p>We added the support for raster <code>ListAnimate</code> (not related to MMAView)</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">ListAnimate[Table[Rasterize[Plot[Table[x^k, {k, 1, n}] // Evaluate, {x,0,10}]], {n,1,6}]]</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="easier-rest-api">Easier REST-API<a href="https://wljs.io/releases/2025/05/10/2.7.4#easier-rest-api" class="hash-link" aria-label="Direct link to Easier REST-API" title="Direct link to Easier REST-API">​</a></h2>
+<p>We refined our <a href="https://wljs.io/frontend/Development/API/REST" target="_blank" rel="noopener noreferrer">REST API</a> and added a helper Javascript class of function to make the process easier. Imagine, you can build up a minimal Notebook interface by youself just in a few lines!</p>
+<div style="filter:none" class="language-mathematica codeBlockContainer_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module theme-code-block"><div class="codeBlockContent_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><pre tabindex="0" class="prism-code language-mathematica codeBlock_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module thin-scrollbar" style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250)"><code style="white-space:pre-wrap" class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module">.html
+
+&lt;script type="module"&gt;
+  const stateField = document.getElementById("stateField"), 
+        submitButton = document.getElementById("submit_button"),
+        codeArea = document.getElementById("code_area"),
+        resultsDiv = document.getElementById("resultsDiv");
+
+  async function start() {
+    stateField.innerText = 'Connecting to Kernel';
+
+    const kernel = await server.findKernel();
+    console.warn('Obtained Kernel', kernel);
+    stateField.innerText = 'Ready!';
+
+    submitButton.addEventListener('click', async () =&gt; {
+      const transaction = await server.createTransaction(kernel, codeArea.value.trim());
+      stateField.innerText = 'Evaluation...';
+
+      const results = await server.getResult(kernel, transaction);
+      console.warn('Ready');
+      stateField.innerText = 'Ready!';
+
+      results.forEach(({ Display = 'codemirror', Data }) =&gt; {
+        const parentelement = document.createElement('div');
+        resultsDiv.appendChild(parentelement);
+        new window.SupportedCells[Display].view({ element: parentelement }, Data);
+      });
+    });
+  }
+
+  (async () =&gt; {
+    await server.waitForConnection();
+    start();
+  })();
+&lt;/script&gt;</code><code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"></code></pre></div></div>
+<p>Yes, apart from header and body parts, that's all you need</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mdxreact-integration">MDX/React Integration<a href="https://wljs.io/releases/2025/05/10/2.7.4#mdxreact-integration" class="hash-link" aria-label="Direct link to MDX/React Integration" title="Direct link to MDX/React Integration">​</a></h2>
+<p>This share option lets you embed cells or an entire notebook to MDX-based websites (personal blog or a React App in general).</p>
+<p>Here is an online demo of a static website made using Next.js</p>
+<div><div class="my-3 mx-2 mt-4"><iframe style="border-radius:0.5rem" width="100%" height="400" src="https://jerryi.github.io/wljs-nextjs-example/"></div></div>
+<p>See our <a href="https://wljs.io/frontend/Exporting/MDX" target="_blank" rel="noopener noreferrer"><strong>docs for more information</strong></a></p>
+<p><strong>See more <a href="https://github.com/JerryI/wljs-nextjs-example" target="_blank" rel="noopener noreferrer">here</a></strong></p>
+<p><em>Ballon animation by Jemima (codepen)</em></p>
+<div>
+<style>
+  img {
+    border-radius: 0.5rem;
+  }
+</style></div>
+<div>
+<style>
+  [transparency="false"] .bg-g-trans {
+    background: transparent !important;
+  }
+
+  [transparency="true"] .bg-g-trans {
+    background: transparent !important;
+  }
+</style></div></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--next" href="/releases/2025/04/24/2.7.3"><div class="pagination-nav__sublabel">Older Post</div><div class="pagination-nav__label">Release notes *2.7.3*</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#open-source-community" class="table-of-contents__link toc-highlight">Open-Source Community</a></li><li><a href="#log-plots" class="table-of-contents__link toc-highlight">Log plots</a></li><li><a href="#imagesizeraw" class="table-of-contents__link toc-highlight">ImageSizeRaw</a></li><li><a href="#ui-update" class="table-of-contents__link toc-highlight">UI Update</a></li><li><a href="#dataset-full-support" class="table-of-contents__link toc-highlight">Dataset full support</a></li><li><a href="#extended-mmaview" class="table-of-contents__link toc-highlight">Extended MMAView</a><ul><li><a href="#manipulate" class="table-of-contents__link toc-highlight">Manipulate</a></li><li><a href="#animate" class="table-of-contents__link toc-highlight">Animate</a></li></ul></li><li><a href="#listanimate" class="table-of-contents__link toc-highlight">ListAnimate</a></li><li><a href="#easier-rest-api" class="table-of-contents__link toc-highlight">Easier REST-API</a></li><li><a href="#mdxreact-integration" class="table-of-contents__link toc-highlight">MDX/React Integration</a></li></ul></div></div></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/JerryI/wolfram-js-frontend" target="_blank" rel="noopener noreferrer" class="footer__link-item">Github<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/JerryI/wolfram-js-frontend/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discussions<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://t.me/wljs_support" target="_blank" rel="noopener noreferrer" class="footer__link-item">Telegram<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">WLJS Notebook Project is open-source and licensed under GPL3</div></div></div></footer></div>
+</body>
+</html></iframe></div></div>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Release notes *2.7.3*]]></title>
             <link>https://wljs.io/releases/2025/04/24/2.7.3</link>

@@ -329,7 +329,7 @@ export default function Home() {
             <br/>
             <h2 style={{"color": "var(--ifm-color-primary)"}}>We need your support</h2>
             <p>As an independent open-source project, we’re unaffiliated with Wolfram or any company. <a href="/sponsorship"><b>Your support keeps this project alive</b></a></p>
-            <div className={clsx(styles.buttons, styles.fadeIn)} >
+            <div className={clsx(styles.buttons, styles.fadeIn)} style={{display:'flex', 'flex-wrap':'wrap'}}>
             <Link
               className="button button--secondary button--lg" style={{"background": "var(--ifm-color-primary-button)", "box-shadow": "0 0 31px -14px rgba(0, 0, 0, 0.8)", "color": "var(--ifm-color-primary-text-alt)", "textDecoration":"none !important"}}
               to="https://github.com/JerryI/wolfram-js-frontend">
