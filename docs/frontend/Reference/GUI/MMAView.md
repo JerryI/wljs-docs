@@ -22,6 +22,8 @@ MMAView[_Graphics3D]
 
 attempts to use Mathematica's frontend (technically backend) to render given expression to a raster [Image](frontend/Reference/Image/Image.md) and return it back.
 
+__Note: `MMAView` has `HoldFirst` attribute__
+
 WLJS Notebook does not support all possible styling and diagram types compared to Wolfram Mathematica. Here we give a user a workaround, which might be suitable for many cases.
 
 For example
@@ -36,7 +38,7 @@ Plot3D[(*SpB[*)Power[x(*|*),(*|*)2](*]SpB*) (*SpB[*)Power[y(*|*),(*|*)2](*]SpB*)
 We have a special wrapper for [Graphics3D](frontend/Reference/Graphics3D/Graphics3D.md) -like plots to make them interactive in the session
 
 ```mathematica
-With[{p = Plot3D[f[x] y, {x,0,10}, {y,0,10}]},
+With[{p = Plot3D[x^2 y, {x,0,10}, {y,0,10}]},
   MMAView[p]
 ]
 ```
@@ -47,6 +49,18 @@ Note, that it is important to pass it using `With`, since `MMAView` has `HoldFir
 
 ![](./../../../neverasked-ezgif.com-optimize.gif)
 
+### How to force static view
+One can bypass `UpValue` for `Graphics3D` by
+
+```mathematica
+With[{p = Plot3D[x^2 y, {x,0,10}, {y,0,10}]},
+  MMAView[p // Rasterize]
+]
+```
+
+:::warning
+Interactive 3D view cannot be exported to [Dynamic HTML](frontend/Exporting/Dynamic%20HTML.md) or [MDX](frontend/Exporting/MDX.md). __Use static only__
+:::
 
 ## Manipulate
 There is a similar wrapper for [[Manipulate]]

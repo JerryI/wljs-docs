@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Advanced/CLI.md",
+                "file": "frontend/Reference/GUI/MMAView.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLI"
+              "title": "MMAView"
             }
           },
           {
@@ -136,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Offload",
+                "query": "MMA",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -157,7 +157,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -263,8 +264,8 @@
   },
   "active": "61cfffec9797d1b4",
   "lastOpenFiles": [
-    "frontend/Advanced/Overlay mode.md",
     "frontend/Advanced/CLI.md",
+    "frontend/Advanced/Overlay mode.md",
     "frontend/Importing/Files.md",
     "frontend/Exporting/Files.md",
     "frontend/Exporting/PDF.md",
