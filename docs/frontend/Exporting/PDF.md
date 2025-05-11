@@ -13,6 +13,8 @@ Plot[x, {x, 0,1}];
 Export["filename.pdf", %]
 ```
 
+See also [Files](frontend/Exporting/Files.md)
+
 :::note
 This requires WLJS Notebook desktop app, since we use a customized Chromium engine feature to produce high-quality vector-based PDFs from any Wolfram Language expression.
 :::

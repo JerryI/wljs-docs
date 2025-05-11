@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 __Embed nice interactive figures to your blog__
 
 :::danger

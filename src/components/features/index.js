@@ -117,6 +117,26 @@ My~equation
     ),
   },
 
+    {
+    title: 'Batteries included',
+    width: 'col col--6',
+    feature: (
+      <>
+ 
+ <div className={clsx('col')}>
+      <CodeMirror>
+{`t = Import["table.tsv"];
+t // TableView`}</CodeMirror>
+</div>
+      </>
+    ),
+    description: (
+      <>
+        <b>More than 200</b> importers/exporters formats. Vast standard library of Wolfram Mathematica (Language) for every computational need, from data analysis to visualization, symbolic computation, and beyond
+      </>
+    ),
+  },  
+
   {
     title: 'Javascript Sandbox',
     width: 'col col--6',
@@ -136,6 +156,7 @@ My~equation
       </>
     ),
   },
+
 
   {
     title: 'Build internal tools',
