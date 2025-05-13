@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/GUI/MMAView.md",
+                "file": "frontend/instruction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MMAView"
+              "title": "instruction"
             }
           },
           {
@@ -157,8 +157,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -264,6 +263,7 @@
   },
   "active": "61cfffec9797d1b4",
   "lastOpenFiles": [
+    "frontend/Reference/GUI/MMAView.md",
     "frontend/Advanced/CLI.md",
     "frontend/Advanced/Overlay mode.md",
     "frontend/Importing/Files.md",
@@ -271,7 +271,6 @@
     "frontend/Exporting/PDF.md",
     "frontend/Exporting/Figures.md",
     "frontend/Overview.md",
-    "frontend/Reference/GUI/MMAView.md",
     "frontend/Troubleshooting/Troubleshooting.md",
     "frontend/Symbolic programming.md",
     "frontend/Guidelines.md",

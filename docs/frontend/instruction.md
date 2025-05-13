@@ -168,6 +168,18 @@ wolframscript -f Scripts/start.wls folder "Demos"  # Set home folder
 wolframscript -f Scripts/start.wls noautolaunch True  # Disable autolaunch
 ```
 
+### On-demand license
+
+If you want to try WLJS Notebook without binding the free license to your machine, you can issue [license entitlement](https://reference.wolfram.com/language/ref/CreateLicenseEntitlement.html) using Wolfram Cloud or a friend. Then
+
+```bash
+git clone https://github.com/JerryI/wolfram-js-frontend
+cd wolfram-js-frontend
+wolframscript -f Scripts/start.wls -entitlement XXX-CODE-OF-ENTITLEMENT-XXX
+```
+
+*Note: in this regime the evaluation kernel works much slower*
+
 ---
 
 <div style={{textAlign: 'center', display: 'flex', gap: '2rem', justifyContent: 'center'}}>

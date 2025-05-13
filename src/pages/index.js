@@ -348,8 +348,13 @@ export default function Home() {
             </Link>
             </div>
           </div>
-        </section>    
+        </section> 
         <section className={clsx('hero hero--primary', styles.heroBanner)} style={{"background-color": "var(--docusaurus-collapse-button-bg-hover)", "color": "var(--ifm-color-primary-text)"}}>
+          <div className="container py-4">
+            <a href="https://scoutforge.net/reviews/wljs-notebook/" title="Trusted and reviewed by Scout Forge"><img src="https://scoutforge.net/wp-content/themes/wp-theme/assets/img/badges/badge-light.webp" style={{"max-width":"300px"}} alt="Trusted and Reviewed by Scout Forge"/></a>  
+          </div>
+        </section>   
+        <section className={clsx('hero hero--primary', styles.heroBanner)} style={{"color": "var(--ifm-color-primary-text)"}}>
           <div className="container">
             <br/>
             <h2 style={{"color": "var(--ifm-color-primary)"}}>Licensing</h2>
