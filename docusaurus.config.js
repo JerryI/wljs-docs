@@ -196,7 +196,7 @@ const config = {
           {to: 'blog', label: 'Blog', position: 'left'}, // or position: 'right'
           {to: 'releases', label: 'Release notes', position: 'left'}, // or position: 'right'
           {to: 'wljs-demo', label: 'Demonstration Project', style: {"border": 0, "border-radius": "6px"} , position: 'left'},
-          {to: 'widgets', label: 'Widgets', position: 'left'}, // or position: 'right'
+          {to: 'widgets', label: 'Mini apps', position: 'left'}, // or position: 'right'
           {to: "https://github.com/JerryI/wolfram-js-frontend/discussions", label: "Discuss", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
           {to: "sponsorship", label: "Support us", style: {"border": 0, "border-radius": "6px"} , position: 'right'},
           {
@@ -290,10 +290,10 @@ const config = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           editLocalizedFiles: false,
-          blogTitle: 'Standalone Widgets',
-          blogDescription: 'Standalone widgets made using WLJS Notebook',
+          blogTitle: 'Mini Apps',
+          blogDescription: 'Mini apps made using WLJS Notebook',
           blogSidebarCount: 50,
-          blogSidebarTitle: 'WLJS Widgets',
+          blogSidebarTitle: 'Mini Apps',
           routeBasePath: 'widgets',
           include: ['**/*.{md,mdx}'],
           postsPerPage: 15,

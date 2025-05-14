@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-01-06-MusicScales/index.md",
+                "file": "2025-05-15-Filter/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -164,9 +165,16 @@
   },
   "active": "f91cd413063829b2",
   "lastOpenFiles": [
+    "2025-01-06-MusicScales/index.md",
+    "2025-05-15-Filter/index.md",
+    "2025-05-15-Filter/Bandblock_v1.wlw",
+    "Untitled design (3).png",
+    "MiniAPP-ezgif.com-optimize.gif",
+    "Screenshot 2025-05-14 at 11.31.36.png",
+    "Screenshot 2025-05-14 at 11.29.35.png",
+    "2025-05-15-Filter",
     "Screenshot 2025-01-06 at 14.29.47.png",
     "2024-12-19-Units/index.md",
-    "2025-01-06-MusicScales/index.md",
     "2025-01-06-MusicScales/Scales and chords.wlw",
     "2025-01-06-MusicScales/Untitled.md",
     "Pasted image 20250106142127.png",

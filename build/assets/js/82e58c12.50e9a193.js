@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwlx_docs=self.webpackChunkwlx_docs||[]).push([[38449],{80584:e=>{e.exports=JSON.parse('{"blogBasePath":"/widgets","blogTitle":"Standalone Widgets"}')}}]);

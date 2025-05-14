@@ -4,10 +4,38 @@
         <title>WLJS Notebook Blog</title>
         <link>https://wljs.io/widgets</link>
         <description>WLJS Notebook Blog</description>
-        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 15 May 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Quick 3 band-stop filter]]></title>
+            <link>https://wljs.io/widgets/2025/05/15/Filter</link>
+            <guid>https://wljs.io/widgets/2025/05/15/Filter</guid>
+            <pubDate>Thu, 15 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[A EQ-like band-stop filter mini app for processing any XY numerical data tables with interactive preview and real-time data manipulation]]></description>
+            <content:encoded><![CDATA[<p>A EQ-like <a href="https://en.wikipedia.org/wiki/Band-stop_filter" target="_blank" rel="noopener noreferrer">band-stop filter</a> mini app for processing any XY numerical data tables with interactive preview and real-time data manipulation</p>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/Untitled%20design%20(3)-6ff9e23bbd495320db8d17b90442baad.png" width="1920" height="1080" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="features">Features<a href="https://wljs.io/widgets/2025/05/15/Filter#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h2>
+<ul>
+<li>Block or amplify bands in real or Fourier space</li>
+<li>See the changes immediately ✨</li>
+<li>Columns selection, importers for <code>csv</code>, <code>tsv</code>, <code>dat</code>, <code>xls</code> data</li>
+<li>Units agnostic</li>
+</ul>
+<a href="https://wljs.io/82a34f56dad7920cd8b5bbc3b39623b0.wlw" class="p-2 text-sm w-full flex ring-1 ring-inset text-gray-600 font-medium shadow ring-gray-300 bg-gray-300 my-2"><p>Download App v.01</p><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 ml-auto" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17 17h.01m.39-3h.6c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C21 15.602 21 16.068 21 17s0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C19.398 20 18.932 20 18 20H6c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C3 18.398 3 17.932 3 17s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C4.602 14 5.068 14 6 14h.6m5.4 1V4m0 11-3-3m3 3 3-3"></path></svg></a>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="in-action">In action<a href="https://wljs.io/widgets/2025/05/15/Filter#in-action" class="hash-link" aria-label="Direct link to In action" title="Direct link to In action">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/MiniAPP-ezgif.com-optimize-aa4d41168740e9decbc124e9dee7f6fb.gif" width="800" height="318" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="workflow">Workflow<a href="https://wljs.io/widgets/2025/05/15/Filter#workflow" class="hash-link" aria-label="Direct link to Workflow" title="Direct link to Workflow">​</a></h2>
+<ol>
+<li>Import and select 2 columns (assumed to be XY)</li>
+</ol>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/Screenshot%202025-05-14%20at%2011.29.35-976796afc1dbc2f6df223a7170ad14f5.png" width="1632" height="932" class="img_ev3q">
+2. Apply band-stoping</p>
+<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/Screenshot%202025-05-14%20at%2011.31.36-75a5bcda14592cae6feccbb3fde33f5a.png" width="2528" height="1172" class="img_ev3q">
+It is designed in the way that your data is filtered in <strong>real space</strong> first (left), then converted to <strong>Fourier space</strong> and filtered there (right), and after that converted back to <strong>real space</strong> with the same sampling used in the original data.</p>
+<p>A user can export from both stages depending on the application.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Musical scales and chords maker]]></title>
             <link>https://wljs.io/widgets/2025/01/06/MusicScales</link>
