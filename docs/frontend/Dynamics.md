@@ -361,5 +361,5 @@ Explore our __Blog__ 📻 for more examples and dev notes.
 
 ## How to Turn It Into an App?
 
-See [Standalone Widgets](frontend/Exporting/Standalone%20Widgets.md).
+See [Mini Apps](frontend/Exporting/Mini%20Apps.md)
 

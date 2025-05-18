@@ -35,6 +35,9 @@ const FeatureList = [
           <Link className={styles.featureLink}  to={"/wljs-demo/intro-image-sym"}>Images as symbols</Link>
         </li>
         <li className={styles.featureLi}>
+          <Link className={styles.featureLink}  to={"/wljs-demo/intro-audio"}>Audio generation and processing</Link>
+        </li>        
+        <li className={styles.featureLi}>
           <Link className={styles.featureLink}  to={"/wljs-demo/intro-image3d"}>Volumetric Data</Link>
         </li>        
         <li className={styles.featureLi}>

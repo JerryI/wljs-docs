@@ -46,7 +46,11 @@ emits `name` for each time when user drags a slider
 ```mathematica
 "Topic" -> {oninput_String, onchange_String}
 ```
-emits `oninput` when any changes occur, while `onchange` is __emitted after__ the users action
+emits `oninput` when any changes occur, while `onchange` is __emitted after__ the users action. `Null` value will suppress event generation, i.e. to make `onchange` only slider
+
+```mathematica
+"Topic" -> {Null, "Default"}
+```
 
 ### `"TrackedExpression"`
 Adds expression to track (usually a symbol) and update the slider position

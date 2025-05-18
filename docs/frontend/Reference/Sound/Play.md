@@ -18,5 +18,5 @@ creates an object that plays as a sound whose amplitude is given by `f` as a f
 The default is `8000`
 
 :::note
-Is effectively generate [SampledSoundList](frontend/Reference/Sound/SampledSoundList.md) and feed it to [[Sound]]
+Is effectively generate [SampledSoundList](frontend/Reference/Sound/SampledSoundList.md) and feed it to [[frontend/Reference/Sound/Sound]]
 :::

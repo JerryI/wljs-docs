@@ -226,7 +226,89 @@ EventHandler[InputJoystick[], Function[xy,
 
 ![](./../../../color-ezgif.com-optimize.gif)
 
-### Animating Bubbles
+## Append or remove object
+### How to remove
+To make a primitive removable, one need to wrap it into [FrontInstanceGroup](frontend/Reference/Frontend%20IO/FrontInstanceGroup.md)
+
+```mathematica
+group = FrontInstanceGroup[];
+Plot[x, {x,0,1}, Prolog->{
+  group[Disk[{0,0}, 1]]
+}]
+```
+
+![](./../../../Screenshot%202025-05-18%20at%2012.35.53.png)
+
+and then to remove it
+
+```mathematica
+Delete[group]
+```
+
+### How to append
+To append you need to track the instance of your graphics canvas using [FrontInstanceReference](frontend/Reference/Frontend%20IO/FrontInstanceReference.md) expression
+
+```mathematica
+ref = FrontInstanceReference[];
+Plot[x, {x,0,1}, Prolog->{
+  ref
+}]
+```
+
+and then you can append anything using [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md)
+
+```mathematica
+FrontSubmit[Disk[{0,0}, 1], ref]
+```
+
+#### Bubbles
+Let's make something more interesting
+```mathematica
+ref = FrontInstanceReference[];
+EventHandler[Plot[x, {x,0,1}, Epilog->{
+  ref
+}], {"mousemove" -> Function[xy,
+  FrontSubmit[{
+    RandomColor[],
+    Disk[xy, {0.7, 1} RandomReal[{0.01, 0.1}]]
+  }, ref]
+]}]
+```
+
+![](./../../../Screenshot%202025-05-18%20at%2012.41.01.png)
+
+### How to append and remove
+Here combines both methods
+
+```mathematica
+ref = FrontInstanceReference[];
+groups = {};
+EventHandler[Plot[x, {x,0,1}, Epilog->{
+  ref
+}], {"mousemove" -> Function[xy, With[{g = FrontInstanceGroup[]},
+  AppendTo[groups, g];
+  
+  FrontSubmit[{
+    RandomColor[],
+    Disk[xy, {0.7, 1} RandomReal[{0.01, 0.1}]]
+  } // g, ref];
+
+  If[Length[groups] > 10, 
+    Delete[groups // First]; 
+    groups = Drop[groups, 1];
+  ];
+]]}]
+```
+
+![](./../../../bubbleseasy-ezgif.com-video-to-gif-converter.gif)
+
+:::note
+[FrontInstanceGroup](frontend/Reference/Frontend%20IO/FrontInstanceGroup.md) does support batch processing as well, which may help to eliminate multiple calls to [FrontSubmit](frontend/Reference/Frontend%20IO/FrontSubmit.md) or `Delete`
+:::
+
+
+
+#### Animating Bubbles
 We can go further and animate bubbles. The problem arises when we create a bubble. In fact, we need to provide a graphical primitive (let’s say `Disk`) and a dynamic symbol to control its properties (see [Dynamics](frontend/Dynamics.md)). Creating 1000 dynamic symbols is a significant overhead for the system, especially if we want to update all of them.
 
 #### Pool of Objects

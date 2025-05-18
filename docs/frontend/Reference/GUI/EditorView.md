@@ -33,6 +33,9 @@ Allows or blocks any selection and copying. The default is `True`
 ### `"FullReset"`
 Fully updates an editor when `expr` changes (rebuilds all widgets). By the default it is set to `False`, which simplifies an update strategy and has less overhead. However it might not work on the content with [Row](frontend/Reference/Formatting/Row.md), [Grid](frontend/Reference/Formatting/Grid.md). 
 
+### `"KeepMaxHeight"`
+Measures and keep the maximum height. By the default is `False`
+
 ## Application
 If you want to show the dynamic symbols content, use it together with `ToString[expr, StandardForm]`
 

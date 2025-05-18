@@ -22,6 +22,11 @@ A text label for an element
 ### `"Description"`
 A description label for an element
 
+### `"Layout"`
+By the default is `"Vertical"`. Possible values:
+- `"Horisontal"`
+- `"Vertical"`
+
 
 ## Event generation
 Every-time user acts on an inner event-view from a group `events`, it will fire an event and send the data from all event objects keeping the original structure
