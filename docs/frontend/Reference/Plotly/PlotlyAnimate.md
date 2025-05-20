@@ -6,7 +6,7 @@ package: wljs-plotly
 source: https://github.com/JerryI/wljs-plotly/blob/dev/src/Kernel.wl
 ---
 ```mathematica
-PlotlyAnimate[p_PlotlyInstance, data_Association, transition_Association]
+PlotlyAnimate[p_PlotlyInstance, data_Association, transition_Association, opts___]
 ```
 
 animates efficiently any [Plotly](frontend/Reference/Plotly/Plotly.md) graph with a new `data` with a specified `transition`. 
@@ -14,6 +14,11 @@ animates efficiently any [Plotly](frontend/Reference/Plotly/Plotly.md) graph wit
 :::tip
 See the [official reference](https://plotly.com/javascript/plotlyjs-function-reference/)
 :::
+
+## Options
+### `"Window"`
+By the default is `Iherited`, which takes window from [PlotlyInstance](frontend/Reference/Plotly/PlotlyInstance.md). You can override it by providing [WindowObj](frontend/Reference/Frontend%20IO/WindowObj.md)
+
 
 ## Example
 An example

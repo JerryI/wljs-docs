@@ -13,6 +13,7 @@ PCMPlayer[data_List | _Offload, type_String, opts___]
 ```
 
 creates a static or dynamic sound emitter. The following data `type`s are supported
+- `"Real32"`
 - `"SignedInteger32"`
 - `"SignedInteger16"`
 - `"SignedInteger8"`
@@ -37,6 +38,9 @@ An `uid` of event to be fired, when a buffer is about to end. It can be used to 
 
 ### `"TimeAhead"`
 The time is milliseconds, which is offset from the end of the sound buffer and used to fire `"Event"`
+
+### `"GUI"`
+By the default is `True`. If set to `False` it won't render anything to the DOM, which makes it great when placed inside `Epilog` or `Prolog` of some other object.
 
 
 ## Dynamics

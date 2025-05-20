@@ -6,7 +6,7 @@ source: https://github.com/JerryI/wljs-plotly/blob/dev/src/Kernel.wl
 package: wljs-plotly
 ---
 ```mathematica
-PlotlyAddTraces[p_PlotInstance, {data_Association} | _Association]
+PlotlyAddTraces[p_PlotInstance, {data_Association} | _Association, opts___]
 ```
 
 appends to a plot `p` new data specified in `data`.
@@ -14,6 +14,10 @@ appends to a plot `p` new data specified in `data`.
 :::tip
 See the [official reference](https://plotly.com/javascript/plotlyjs-function-reference/)
 :::
+
+## Options
+### `"Window"`
+By the default is `Iherited`, which takes window from [PlotlyInstance](frontend/Reference/Plotly/PlotlyInstance.md). You can override it by providing [WindowObj](frontend/Reference/Frontend%20IO/WindowObj.md)
 
 ## Example
 Plot an example data
