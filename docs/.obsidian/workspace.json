@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/Reference/Plotly/PlotlyPrependTraces.md",
+                "file": "frontend/Advanced/Graphics/Custom attributes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PlotlyPrependTraces"
+              "title": "Custom attributes"
             }
           },
           {
@@ -143,8 +143,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -250,6 +249,12 @@
   },
   "active": "ad37bb78993555b9",
   "lastOpenFiles": [
+    "frontend/Advanced/Javascript/Canvas.md",
+    "frontend/Advanced/Graphics/Custom attributes.md",
+    "frontend/Advanced/Javascript/Communication.md",
+    "frontend/Advanced/Javascript/Realtime data capture.md",
+    "frontend/Advanced/Javascript/Shared libraries.md",
+    "frontend/Reference/Plotly/PlotlyPrependTraces.md",
     "frontend/Reference/Plotly/PlotlyExtendTraces.md",
     "frontend/Reference/Plotly/PlotlyDeleteTraces.md",
     "frontend/Reference/Plotly/PlotlyAnimate.md",
@@ -289,12 +294,6 @@
     "frontend/Advanced/Sound/Audio Stream/attachments/Canvas Buggles1.gif",
     "frontend/Advanced/Dynamics/Sound.md",
     "frontend/Dynamics.md",
-    "frontend/Exporting/Mini Apps.md",
-    "frontend/instruction.md",
-    "frontend/Reference/GUI/MMAView.md",
-    "frontend/Advanced/CLI.md",
-    "frontend/Advanced/Overlay mode.md",
-    "frontend/Importing/Files.md",
-    "frontend/Exporting/Files.md"
+    "frontend/Exporting/Mini Apps.md"
   ]
 }
