@@ -15,7 +15,7 @@ Inset[_Graphics | _Graphics3D | _Image | _EditorView | _, pos_List, origin_List,
 
 a graphics object, that allows to put another [Graphics](frontend/Reference/Graphics/Graphics.md), [Image](frontend/Reference/Image/Image.md), [EditorView](frontend/Reference/GUI/EditorView.md), [CellView](frontend/Reference/GUI/CellView.md) or anything else __for which WLJS execution environment makes sense__ into the canvas. 
 - `pos` has to be a 2D vector, that specifies the position of the inset in the local coordination system
-- `origin` __is optional__ and specifies the coordinates of the pin point in the local coordinate system of enclosing graphics. By the default __it takes the center of calculated size__
+- `origin` __is optional__ and specifies the coordinates of the pin point in the local coordinate system of enclosing graphics. By the default __it takes the center of calculated size__. Set it to `Center` to achieve the same effect.
 - `size` is displayable size in the local coordinate system of parent graphics object (with respect to `Inset`). 
 
 
