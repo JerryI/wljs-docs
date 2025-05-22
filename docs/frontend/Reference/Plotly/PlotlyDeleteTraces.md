@@ -17,4 +17,8 @@ See the [official reference](https://plotly.com/javascript/plotlyjs-function-ref
 
 ## Options
 ### `"Window"`
-By the default is `Iherited`, which takes window from [PlotlyInstance](frontend/Reference/Plotly/PlotlyInstance.md). You can override it by providing [WindowObj](frontend/Reference/Frontend%20IO/WindowObj.md)
+By default, the `"Window"` option is set to `"Inherited"`. This setting *dynamically* uses the currently active window associated with the [`PlotlyInstance`](frontend/Reference/Plotly/PlotlyInstance.md).
+
+When set to `"Inherited"`, even if a new window is opened using the same instance, it will be detected automatically. This is possible because all [`PlotlyInstance`](frontend/Reference/Plotly/PlotlyInstance.md) objects perform a handshake after mounting on the page.
+
+To override this behavior, you can provide a specific [`WindowObj`](frontend/Reference/Frontend%20IO/WindowObj.md) as an option.

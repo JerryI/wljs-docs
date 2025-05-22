@@ -31,12 +31,18 @@ This is 1:1 correspondence to a normal Plotly API. Please see [Reference](https:
 ## Constructor
 Once called it returns `PlotlyInstance`
 
+
+
 ## Options
 ### `ImageSize`
 Sets the image size effectively writing `width` and `height` to `layout` properties.
 
 ## Dynamics
 It fully supports dynamics, but in a different way compared to other functions. Please see for that [PlotlyAddTraces](frontend/Reference/Plotly/PlotlyAddTraces.md), [PlotlyAnimate](frontend/Reference/Plotly/PlotlyAnimate.md) and etc.
+
+:::note
+Multiple copies of the same instance cannot be used in dynamics. Only the last one will be updated. `PlotlyInstance` automatically tracks its window.
+:::
 
 ## Examples
 
