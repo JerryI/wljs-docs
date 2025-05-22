@@ -1,4 +1,4 @@
-## Multi-window App
+# Multi-window App
 
 import { WLJSHTML, WLJSEditor, WLJSStore } from "@site/src/components/wljs-notebook-react";
 
@@ -12,7 +12,7 @@ As an example, we use `Plotly` to display rapidly changing data in each opened w
 
 <WLJSHTML>{`%3Cbr%20%2F%3E`}</WLJSHTML>
 
-### App Logic
+## App Logic
 
 We simulate a process by creating a timer that generates a noisy sinusoidal signal.
 
@@ -27,6 +27,8 @@ We simulate a process by creating a timer that generates a noisy sinusoidal sign
 Now we define a handler function, which uses a pool of attached windows and sends new data to all graphs
 
 <WLJSEditor display={"codemirror"} nid={"7f4876b8-e897-4daf-9f27-09bd42ab2496"} id={"fe4d8c2a-57ea-4e94-b52f-3441734cb732"} type={"Input"} opts={{"InitGroup":true}} >{`pool%5B%22Data%22%5D%20%3D%20%7B%7D%3B%0Apool%5B%22Push%22%2C%20el_%5D%20%3A%3D%20pool%5B%22Data%22%5D%20%3D%20Append%5Bpool%5B%22Data%22%5D%2C%20el%5D%3B%0Apool%5B%22Remove%22%2C%20el_%5D%20%3A%3D%20pool%5B%22Data%22%5D%20%3D%20pool%5B%22Data%22%5D%20%2F.%20el%20-%3E%20Nothing%3B%0A%0Ahandler%5Bstate_%5D%20%3A%3D%20PlotlyExtendTraces%5B%23%2C%20%0A%20%20%20%20%3C%7C%22y%22%20-%3E%20%7B%7Bstate%20%2F%2F%20Last%7D%7D%7C%3E%2C%20%7B0%7D%0A%5D%20%26%2F%40%20pool%5B%22Data%22%5D%3B`}</WLJSEditor>
+
+## Child window
 
 Now let's design our child window. It will be handy to track our window connection (retrieved by `CurrentWindow[]`), because if a computer goes to sleep or a user closes a window, we should free the resources associated with it. For this reason, we will use a small JavaScript snippet
 

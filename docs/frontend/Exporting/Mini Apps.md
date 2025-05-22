@@ -20,6 +20,10 @@ Apart from that the program for the widget is just a plain WLJS notebook. You ca
 Use [WLX](frontend/Cell%20types/WLX.md) cell as the output
 :::
 
+:::info
+See more tutorials on making mini apps in __Advanced section__ -  [Advanced/Mini Apps](Advanced/Mini%20Apps)
+:::
+
 ### Example 1
 Let's write the simples possible interactive widget 
 
