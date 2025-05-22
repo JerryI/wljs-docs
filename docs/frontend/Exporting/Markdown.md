@@ -4,7 +4,7 @@ __Import and export Markdown files__
 
 The Markdown format exports all code, images, and comments, but excludes output cells.
 
-![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
+![](./../../Screenshot%202025-05-22%20at%2019.08.07.png)
 
 ![](./../../Screenshot%202024-07-08%20at%2021.56.46.png)
 

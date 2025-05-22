@@ -8,7 +8,7 @@ Please read the manual carefully.
 
 This is a dynamic version of the [Static HTML](frontend/Exporting/Static%20HTML.md) exporter, designed to recreate the full interactivity of normal notebooks.
 
-![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
+![](./../../Screenshot%202025-05-22%20at%2019.08.07.png)
 
 ![](./../../Screenshot%202024-08-03%20at%2013.58.42.png)
 

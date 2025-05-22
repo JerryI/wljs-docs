@@ -8,7 +8,7 @@ If you're looking to export interactive slides, please use [Static HTML](fronten
 
 Any presentation made using [Slides](frontend/Cell%20types/Slides.md) cells can be exported individually, preserving all graphics and styling.
 
-![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
+![](./../../Screenshot%202025-05-22%20at%2019.08.07.png)
 
 ![](./../../Screenshot%202024-07-08%20at%2021.56.30.png)
 

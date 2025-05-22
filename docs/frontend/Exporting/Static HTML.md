@@ -2,7 +2,7 @@ __A user does not need any app installed to view the notebook__
 
 Since the interpretation of the output cells happens in a browser, then we can pack all data into a single `.html` file and easily share it with other people by clicking on the icon
 
-![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
+![](./../../Screenshot%202025-05-22%20at%2019.08.07.png)
 
 ![](./../../Screenshot%202024-07-08%20at%2021.57.00.png)
 

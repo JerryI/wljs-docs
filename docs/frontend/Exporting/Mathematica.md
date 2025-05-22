@@ -8,7 +8,7 @@ This feature is quite experimental.
 
 It is possible to convert a `wln` notebook to a `.nb` file, with some limitations.
 
-![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
+![](./../../Screenshot%202025-05-22%20at%2019.08.07.png)
 
 ![](./../../Screenshot%202025-01-25%20at%2017.24.11.png)
 

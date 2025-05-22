@@ -2,6 +2,8 @@ __Export as React Markdown__
 
 This option lets you embed cells or an entire notebook to [MDX](https://mdxjs.com/)-based websites (personal blog or a React App in general).
 
+![](./../../Screenshot%202025-05-22%20at%2019.08.07.png)
+
 ![](./../../Screenshot%202025-05-05%20at%2020.09.06.png)
 
 ## Where you can use it

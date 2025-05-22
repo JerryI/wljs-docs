@@ -2,7 +2,7 @@
 
 __Keep the entire file system within the notebook__
 
-![](../../imgs/Screenshot%202024-03-13%20at%2019.37.13.png)
+![](./../../Screenshot%202025-05-22%20at%2019.08.07.png)
 
 This feature allows you to compress your entire project folder and create a self-extracting notebook.
 
