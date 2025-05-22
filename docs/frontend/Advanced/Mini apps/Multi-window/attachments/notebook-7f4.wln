@@ -1,0 +1,151 @@
+<|"Notebook" -> <|"Controller" -> "54544189-e6c8-48a3-a661-4d83ec0d7e61", 
+   "FocusedCell" -> CoffeeLiqueur`Notebook`Cells`CellObj[
+     CoffeeLiqueur`Notebook`Cells`CellObj`$934], "HaveToSaveAs" -> False, 
+   "MessangerChannel" -> Messanger, "ModalsChannel" -> 
+    "53c6c28d-4d80-4ae7-a0fd-7e4cbb21797f", 
+   "Objects" -> <|"041d5826-bf35-484f-8476-5d4045aa576d" -> 
+      <|"Public" -> Hold[HTMLView["<button style=\"\" class=\"sm-controls \
+rounded bg-white px-2 py-1 text-xs font-semibold text-gray-900 shadow-sm \
+ring-1 ring-inset ring-gray-300 hover:bg-gray-50 \" type=\"button\" \
+id=\"#instanceId\">Open a widget</button>\n<script type=\"module\"> const el \
+= document.getElementById('#instanceId');\n            \
+el.addEventListener('click', (event)=>{\n                \
+server.kernel.io.fire('0d1c74c9-7c4a-4ed7-a54f-aa39ee526c65', true, \
+'Default');     \n            });</script>", Prolog -> 
+           CoffeeLiqueur`Extensions`InputsOutputs`Tools`TemplateProcessor[
+            Association["instanceId" -> CreateUUID[]]]]]|>|>, 
+   "Path" -> "/Users/kirill/Downloads/Fuck/Multi-window.wlw", 
+   "PublicFields" -> {"Properties"}, "Quick" -> True, "Symbols" -> <||>, 
+   "TOC" -> {CoffeeLiqueur`Extensions`TOC`Private`heading[2, 
+      "Multi-window App", CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$926]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[3, "App Logic", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$926]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Main Window", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$995]]}|>, 
+ "Cells" -> {<|"Data" -> ".md\n## Multi-window App\n\nIn this example, we \
+create a simple multi-window app that tracks and sends data to its child \
+windows.\n\nAs an example, we use `Plotly` to display rapidly changing data \
+in each opened window. For flexibility, we use the WLX type of cell to have \
+more flexible styling options.\n\n<br/>\n\n### App Logic\n\nWe simulate a \
+process by creating a timer that generates a noisy sinusoidal signal.", 
+    "Display" -> "codemirror", "Hash" -> 
+     "cc866521-c099-48ea-a179-f26608b78a93", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> "## Multi-window App\n\nIn this example, we create a simple \
+multi-window app that tracks and sends data to its child windows.\n\nAs an \
+example, we use `Plotly` to display rapidly changing data in each opened \
+window. For flexibility, we use the WLX type of cell to have more flexible \
+styling options.\n\n<br />\n\n### App Logic\n\nWe simulate a process by \
+creating a timer that generates a noisy sinusoidal signal.", 
+    "Display" -> "markdown", "Hash" -> 
+     "7000bdc7-cf01-48f5-8c60-b327e1f851fc", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> "generator := Sin[0.1 AbsoluteTime[] + 0.1 \
+RandomReal[{-1,1}]];\n\nstate = {};\nIf[ScheduledTaskActiveQ[task], \
+TaskRemove[task]];\n\ntask = SetInterval[\n  With[{item = generator},\n    \
+AppendTo[state, item];\n    handler[state];\n  ];\n, 30];", 
+    "Display" -> "codemirror", "Hash" -> 
+     "2133c9a4-3aec-475e-9fbd-7eea4a2c96a1", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> ".md\nNow we define a handler function, which uses a pool of \
+attached windows and sends new data to all graphs", 
+    "Display" -> "codemirror", "Hash" -> 
+     "09e8e5c2-0e29-4766-becf-c025e5912d66", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> "Now we define a handler function, which uses a pool of \
+attached windows and sends new data to all graphs", "Display" -> "markdown", 
+    "Hash" -> "25e718a4-a1ed-48c0-b4e8-e93c54ba5cb0", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> "pool[\"Data\"] = {};\npool[\"Push\", el_] := pool[\"Data\"] = \
+Append[pool[\"Data\"], el];\npool[\"Remove\", el_] := pool[\"Data\"] = \
+pool[\"Data\"] /. el -> Nothing;\n\nhandler[state_] := PlotlyExtendTraces[#, \
+\n    <|\"y\" -> {{state // Last}}|>, {0}\n] &/@ pool[\"Data\"];", 
+    "Display" -> "codemirror", "Hash" -> 
+     "fe4d8c2a-57ea-4e94-b52f-3441734cb732", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> ".md\nNow let's design our child window. It will be handy to \
+track our window connection (retrieved by `CurrentWindow[]`), because if a \
+computer goes to sleep or a user closes a window, we should free the \
+resources associated with it. For this reason, we will use a small JavaScript \
+snippet", "Display" -> "codemirror", 
+    "Hash" -> "79a4edb5-2ba9-4354-a947-50c494253184", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> "Now let's design our child window. It will be handy to track \
+our window connection (retrieved by `CurrentWindow[]`), because if a computer \
+goes to sleep or a user closes a window, we should free the resources \
+associated with it. For this reason, we will use a small JavaScript snippet", 
+    "Display" -> "markdown", "Hash" -> 
+     "dc69134e-ce91-48c9-ad22-fb11620d4743", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> ".wlx\n\nSecondWidget[initial_, pool_] := With[{\n  \
+PlotlyInstance = Plotly[<|\n    \"y\" -> initial, \n\t\"type\" -> \"line\" \n \
+ |>],\n\n  MountedQ = CreateUUID[]\n},\n\n    EventHandler[MountedQ, \
+Function[Null,\n      With[{object = PlotlyInstance},\n        pool[\"Push\", \
+object];\n        EventHandler[CurrentWindow[], {\n          \"Closed\" -> \
+Function[Null, pool[\"Remove\", object]]\n        }];\n      ];\n    ]];\n\n  \
+  <div class=\"px-2 py-2\">\n      <PlotlyInstance/>\n      <script \
+type=\"module\">\n        server.kernel.io.poke('<MountedQ/>')\n      \
+</script>\n    </div>\n]", "Display" -> "codemirror", 
+    "Hash" -> "3182ef68-16e4-4d5b-80eb-91a0c1c95cc6", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"InitGroup" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> ".md\n## Main Window\n\nThis only contains a single button, \
+which creates a new window. It is important to note that you need to provide \
+the `Notebook` object to a `CellPrint` function, since it is evaluated \
+externally by a button click. In this sense, it is no longer connected with \
+the evaluation context of an app.\n\n:::note\nThe last cell of the notebook \
+becomes the main window\n:::", "Display" -> "codemirror", 
+    "Hash" -> "cc7b67f9-e4ca-4755-80ef-16fd90168105", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> "## Main Window\n\nThis only contains a single button, which \
+creates a new window. It is important to note that you need to provide the \
+`Notebook` object to a `CellPrint` function, since it is evaluated externally \
+by a button click. In this sense, it is no longer connected with the \
+evaluation context of an app.\n\n:::note\nThe last cell of the notebook \
+becomes the main window\n:::", "Display" -> "markdown", 
+    "Hash" -> "b4019e92-0053-4a1a-8221-749fa4a427be", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> ".wlx\n\nWith[{\n  Btn = InputButton[\"Open a widget\"],\n  \
+notebook = EvaluationNotebook[]\n},\n\n  EventHandler[CurrentWindow[], \
+{\"Closed\" -> Function[Null,\n    TaskRemove[task];\n  ]}];\n\n  \
+EventHandler[Btn, Function[Null,\n    CellPrint[SecondWidget[state, pool], \
+\"Display\"->\"wlx\", \"Notebook\"->notebook, \"Target\"->_, \
+ImageSize->{600,400}];\n  ]];\n\n  <div class=\"px-2 py-2 flex flex-col\">\n  \
+  <p class=\"text-sm\">Click here</p>\n    <Btn/>\n  </div>\n]", 
+    "Display" -> "codemirror", "Hash" -> 
+     "59a673bf-a799-4680-b62b-d1a12e156375", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>, 
+   <|"Data" -> "<div class=\"px-2 py-2 flex flex-col\"><p \
+class=\"text-sm\">Click \
+here</p>FrontEndExecutable[041d5826-bf35-484f-8476-5d4045aa576d]</div>", 
+    "Display" -> "wlx", "Hash" -> "bcd43366-3764-452c-8047-a27eb13086db", 
+    "Invisible" -> False, "MetaOnly" -> False, "Props" -> <||>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Output", 
+    "UID" -> Null, "Notebook" -> "7f4876b8-e897-4daf-9f27-09bd42ab2496"|>}, 
+ "serializer" -> "jsfn4"|>

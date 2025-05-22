@@ -1,0 +1,45 @@
+## Multi-window App
+
+import { WLJSHTML, WLJSEditor, WLJSStore } from "@site/src/components/wljs-notebook-react";
+
+<WLJSStore json={require('./attachments/7f4876b8-e897-4daf-9f27-09bd42ab2496.txt').default} notebook={require('./attachments/notebook-7f4.wln').default}/>
+
+
+
+In this example, we create a simple multi-window app that tracks and sends data to its child windows.
+
+As an example, we use `Plotly` to display rapidly changing data in each opened window. For flexibility, we use the WLX type of cell to have more flexible styling options.
+
+<WLJSHTML>{`%3Cbr%20%2F%3E`}</WLJSHTML>
+
+### App Logic
+
+We simulate a process by creating a timer that generates a noisy sinusoidal signal.
+
+
+
+
+
+
+
+<WLJSEditor display={"codemirror"} nid={"7f4876b8-e897-4daf-9f27-09bd42ab2496"} id={"2133c9a4-3aec-475e-9fbd-7eea4a2c96a1"} type={"Input"} opts={{"InitGroup":true}} >{`generator%20%3A%3D%20Sin%5B0.1%20AbsoluteTime%5B%5D%20%2B%200.1%20RandomReal%5B%7B-1%2C1%7D%5D%5D%3B%0A%0Astate%20%3D%20%7B%7D%3B%0AIf%5BScheduledTaskActiveQ%5Btask%5D%2C%20TaskRemove%5Btask%5D%5D%3B%0A%0Atask%20%3D%20SetInterval%5B%0A%20%20With%5B%7Bitem%20%3D%20generator%7D%2C%0A%20%20%20%20AppendTo%5Bstate%2C%20item%5D%3B%0A%20%20%20%20handler%5Bstate%5D%3B%0A%20%20%5D%3B%0A%2C%2030%5D%3B`}</WLJSEditor>
+
+Now we define a handler function, which uses a pool of attached windows and sends new data to all graphs
+
+<WLJSEditor display={"codemirror"} nid={"7f4876b8-e897-4daf-9f27-09bd42ab2496"} id={"fe4d8c2a-57ea-4e94-b52f-3441734cb732"} type={"Input"} opts={{"InitGroup":true}} >{`pool%5B%22Data%22%5D%20%3D%20%7B%7D%3B%0Apool%5B%22Push%22%2C%20el_%5D%20%3A%3D%20pool%5B%22Data%22%5D%20%3D%20Append%5Bpool%5B%22Data%22%5D%2C%20el%5D%3B%0Apool%5B%22Remove%22%2C%20el_%5D%20%3A%3D%20pool%5B%22Data%22%5D%20%3D%20pool%5B%22Data%22%5D%20%2F.%20el%20-%3E%20Nothing%3B%0A%0Ahandler%5Bstate_%5D%20%3A%3D%20PlotlyExtendTraces%5B%23%2C%20%0A%20%20%20%20%3C%7C%22y%22%20-%3E%20%7B%7Bstate%20%2F%2F%20Last%7D%7D%7C%3E%2C%20%7B0%7D%0A%5D%20%26%2F%40%20pool%5B%22Data%22%5D%3B`}</WLJSEditor>
+
+Now let's design our child window. It will be handy to track our window connection (retrieved by `CurrentWindow[]`), because if a computer goes to sleep or a user closes a window, we should free the resources associated with it. For this reason, we will use a small JavaScript snippet
+
+<WLJSEditor display={"codemirror"} nid={"7f4876b8-e897-4daf-9f27-09bd42ab2496"} id={"3182ef68-16e4-4d5b-80eb-91a0c1c95cc6"} type={"Input"} opts={{"InitGroup":true}} >{`.wlx%0A%0ASecondWidget%5Binitial_%2C%20pool_%5D%20%3A%3D%20With%5B%7B%0A%20%20PlotlyInstance%20%3D%20Plotly%5B%3C%7C%0A%20%20%20%20%22y%22%20-%3E%20initial%2C%20%0A%09%22type%22%20-%3E%20%22line%22%20%0A%20%20%7C%3E%5D%2C%0A%0A%20%20MountedQ%20%3D%20CreateUUID%5B%5D%0A%7D%2C%0A%0A%20%20%20%20EventHandler%5BMountedQ%2C%20Function%5BNull%2C%0A%20%20%20%20%20%20With%5B%7Bobject%20%3D%20PlotlyInstance%7D%2C%0A%20%20%20%20%20%20%20%20pool%5B%22Push%22%2C%20object%5D%3B%0A%20%20%20%20%20%20%20%20EventHandler%5BCurrentWindow%5B%5D%2C%20%7B%0A%20%20%20%20%20%20%20%20%20%20%22Closed%22%20-%3E%20Function%5BNull%2C%20pool%5B%22Remove%22%2C%20object%5D%5D%0A%20%20%20%20%20%20%20%20%7D%5D%3B%0A%20%20%20%20%20%20%5D%3B%0A%20%20%20%20%5D%5D%3B%0A%0A%20%20%20%20%3Cdiv%20class%3D%22px-2%20py-2%22%3E%0A%20%20%20%20%20%20%3CPlotlyInstance%2F%3E%0A%20%20%20%20%20%20%3Cscript%20type%3D%22module%22%3E%0A%20%20%20%20%20%20%20%20server.kernel.io.poke%28%27%3CMountedQ%2F%3E%27%29%0A%20%20%20%20%20%20%3C%2Fscript%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%5D`}</WLJSEditor>
+
+## Main Window
+
+This only contains a single button, which creates a new window. It is important to note that you need to provide the `Notebook` object to a `CellPrint` function, since it is evaluated externally by a button click. In this sense, it is no longer connected with the evaluation context of an app.
+
+:::note
+The last cell of the notebook becomes the main window
+:::
+
+<WLJSEditor display={"codemirror"} nid={"7f4876b8-e897-4daf-9f27-09bd42ab2496"} id={"59a673bf-a799-4680-b62b-d1a12e156375"} type={"Input"} opts={{}} >{`.wlx%0A%0AWith%5B%7B%0A%20%20Btn%20%3D%20InputButton%5B%22Open%20a%20widget%22%5D%2C%0A%20%20notebook%20%3D%20EvaluationNotebook%5B%5D%0A%7D%2C%0A%0A%20%20EventHandler%5BCurrentWindow%5B%5D%2C%20%7B%22Closed%22%20-%3E%20Function%5BNull%2C%0A%20%20%20%20TaskRemove%5Btask%5D%3B%0A%20%20%5D%7D%5D%3B%0A%0A%20%20EventHandler%5BBtn%2C%20Function%5BNull%2C%0A%20%20%20%20CellPrint%5BSecondWidget%5Bstate%2C%20pool%5D%2C%20%22Display%22-%3E%22wlx%22%2C%20%22Notebook%22-%3Enotebook%2C%20%22Target%22-%3E_%2C%20ImageSize-%3E%7B600%2C400%7D%5D%3B%0A%20%20%5D%5D%3B%0A%0A%20%20%3Cdiv%20class%3D%22px-2%20py-2%20flex%20flex-col%22%3E%0A%20%20%20%20%3Cp%20class%3D%22text-sm%22%3EClick%20here%3C%2Fp%3E%0A%20%20%20%20%3CBtn%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%5D`}</WLJSEditor>
+
+<WLJSEditor display={"wlx"} nid={"7f4876b8-e897-4daf-9f27-09bd42ab2496"} id={"bcd43366-3764-452c-8047-a27eb13086db"} type={"Output"} opts={{}} >{`%3Cdiv%20class%3D%22px-2%20py-2%20flex%20flex-col%22%3E%3Cp%20class%3D%22text-sm%22%3EClick%20here%3C%2Fp%3EFrontEndExecutable%5B041d5826-bf35-484f-8476-5d4045aa576d%5D%3C%2Fdiv%3E`}</WLJSEditor>

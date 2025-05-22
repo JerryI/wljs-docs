@@ -1,0 +1,9 @@
+{
+"objects":[
+	"Association",
+	["Rule","'041d5826-bf35-484f-8476-5d4045aa576d'",["Hold",["HTMLView","'<button style=\"\" class=\"sm-controls rounded bg-white px-2 py-1 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 \" type=\"button\" id=\"#instanceId\">Open a widget<\/button>\n<script type=\"module\"> const el = document.getElementById('#instanceId');\n            el.addEventListener('click', (event)=>{\n                server.kernel.io.fire('0d1c74c9-7c4a-4ed7-a54f-aa39ee526c65', true, 'Default');     \n            });<\/script>'",["Rule","Prolog",["CoffeeLiqueur`Extensions`InputsOutputs`Tools`TemplateProcessor",["Association",["Rule","'instanceId'",["CreateUUID"]]]]]]]]
+], 
+"symbols":[
+	"Association"
+]
+}
