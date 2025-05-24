@@ -2,11 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wljs.io/widgets</id>
     <title>WLJS Notebook Blog</title>
-    <updated>2025-05-15T00:00:00.000Z</updated>
+    <updated>2025-05-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wljs.io/widgets"/>
     <subtitle>WLJS Notebook Blog</subtitle>
     <icon>https://wljs.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[TeraKitchen]]></title>
+        <id>https://wljs.io/widgets/2025/05/24/TK</id>
+        <link href="https://wljs.io/widgets/2025/05/24/TK"/>
+        <updated>2025-05-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[It is an scientific software designed for automated analysis of optical time-domain transmission spectra (see TDS-THz). It features AI-assisted ML based reference/sample matching, Fabry–Pérot deconvolution, interactive phase unwrapping, and material parameter extraction—all integrated into a file-based workflow with automated reporting and metadata management.]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://wljs.io/assets/images/Title-ezgif.com-optimize-f6cdea5afe5ce3ca7c95efc39265c54c.gif" width="800" height="450" class="img_ev3q"></p>
+<p>It is an scientific software designed for automated analysis of optical time-domain transmission spectra (see <a href="https://en.wikipedia.org/wiki/Terahertz_time-domain_spectroscopy" target="_blank" rel="noopener noreferrer">TDS-THz</a>). It features&nbsp;<del>AI-assisted</del>&nbsp;ML based reference/sample matching, Fabry–Pérot deconvolution, interactive phase unwrapping, and material parameter extraction—all integrated into a file-based workflow with automated reporting and metadata management.</p>
+<blockquote>
+<p>Made with WLJS Notebook and TDS-Tools library ❤️</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="details">Details<a href="https://wljs.io/widgets/2025/05/24/TK#details" class="hash-link" aria-label="Direct link to Details" title="Direct link to Details">​</a></h2>
+<p>See more in the <a href="https://github.com/JerryI/TK" target="_blank" rel="noopener noreferrer"><strong>repository JerryI/TK</strong></a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-features">Key-features<a href="https://wljs.io/widgets/2025/05/24/TK#key-features" class="hash-link" aria-label="Direct link to Key-features" title="Direct link to Key-features">​</a></h2>
+<ul>
+<li><strong>works with normal files, stores processed information as meta-data file <code>.TK_Store</code></strong></li>
+<li><strong>automatic reference-sample pairs matching</strong>&nbsp;using ELMo network</li>
+<li><strong>semiautomated advanced material parameters extraction</strong></li>
+<li><strong>Fabry-Pérot deconvolution (GPU accelerated if available)</strong></li>
+<li><strong>interactive phase unwrapping</strong></li>
+<li><strong>automated reports</strong></li>
+<li>easy exports to ASCII format</li>
+</ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Quick 3 band-stop filter]]></title>
         <id>https://wljs.io/widgets/2025/05/15/Filter</id>
